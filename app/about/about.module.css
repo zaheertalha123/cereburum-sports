@@ -1,0 +1,232 @@
+/* ── HERO ──────────────────────────────────────────────── */
+.hero {
+  position: relative;
+  padding: calc(var(--nav-h) + 5rem) 0 5rem;
+  overflow: hidden;
+}
+.heroBg { position: absolute; inset: 0; pointer-events: none; }
+.heroGrad {
+  position: absolute; inset: 0;
+  background: linear-gradient(135deg, var(--ink) 0%, rgba(18,17,74,0.5) 50%, var(--ink) 100%);
+}
+.heroGrid {
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(rgba(187,181,101,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(187,181,101,0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+.heroOrb {
+  position: absolute;
+  top: -100px; right: -100px;
+  width: 500px; height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(18,17,74,0.7) 0%, transparent 70%);
+  animation: float 10s ease-in-out infinite;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+@media (min-width: 900px) {
+  .heroContent { grid-template-columns: 1.2fr 1fr; }
+}
+
+.heroText { display: flex; flex-direction: column; gap: 1rem; }
+.heroTitle { color: var(--white); }
+.heroDesc  { color: rgba(255,255,255,0.7); max-width: 500px; }
+
+.heroStats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: rgba(187,181,101,0.12);
+  border: 1px solid rgba(187,181,101,0.15);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  backdrop-filter: blur(12px);
+}
+.heroStat {
+  background: rgba(7,5,26,0.5);
+  padding: 1.75rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+  text-align: center;
+}
+.heroStatNum { color: var(--sand); line-height: 1; }
+.heroStatLbl { color: rgba(255,255,255,0.6); }
+
+/* ── MISSION ───────────────────────────────────────────── */
+.missionSection { background: var(--ink-soft); }
+
+.missionGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+@media (min-width: 768px) { .missionGrid { grid-template-columns: 1fr 1fr; } }
+
+.missionCard {
+  border: 1px solid rgba(187,181,101,0.12);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: border-color var(--transition-base), box-shadow var(--transition-base);
+}
+.missionCard:hover {
+  border-color: rgba(187,181,101,0.25);
+  box-shadow: var(--shadow-glow);
+}
+
+.mission {
+  background: linear-gradient(145deg, rgba(18,17,74,0.6), rgba(7,5,26,0.9));
+  color: var(--gray-200);
+}
+.vision {
+  background: linear-gradient(145deg, rgba(26,24,112,0.4), rgba(7,5,26,0.9));
+  color: var(--gray-200);
+}
+
+.missionIcon { font-size: 2.5rem; }
+.missionTitle { color: var(--white); }
+
+/* ── VALUES ────────────────────────────────────────────── */
+.valuesSection {
+  background: var(--ink);
+  position: relative;
+  overflow: hidden;
+}
+.valuesSection::before {
+  content: '';
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(rgba(187,181,101,0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(187,181,101,0.025) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+}
+
+.sectionHeader  { margin-bottom: 3.5rem; }
+.sectionTitle   { color: var(--white); margin-bottom: 0.5rem; }
+
+.valuesGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+@media (min-width: 640px)  { .valuesGrid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .valuesGrid { grid-template-columns: repeat(4, 1fr); } }
+
+.valueCard {
+  background: rgba(18,17,74,0.3);
+  border: 1px solid rgba(187,181,101,0.1);
+  border-radius: var(--radius-lg);
+  padding: 2rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  transition: all var(--transition-base);
+}
+.valueCard:hover {
+  border-color: rgba(187,181,101,0.25);
+  box-shadow: var(--shadow-glow);
+  transform: translateY(-4px);
+}
+.valueIcon  { font-size: 2.25rem; }
+.valueTitle { color: var(--white); }
+.valueDesc  { color: var(--gray-400); }
+
+/* ── TIMELINE ──────────────────────────────────────────── */
+.timelineSection { background: var(--ink-soft); }
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  max-width: 840px;
+  margin: 0 auto;
+}
+
+.timelineItem {
+  display: grid;
+  grid-template-columns: 80px 40px 1fr;
+  gap: 0 1rem;
+  align-items: flex-start;
+  padding-bottom: 2.5rem;
+}
+@media (min-width: 640px) {
+  .timelineItem { grid-template-columns: 120px 40px 1fr; }
+}
+
+.timelineLeft {
+  text-align: right;
+  padding-top: 0.2rem;
+}
+.timelineYear { color: var(--sand); }
+
+.timelineCenter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+.timelineDot {
+  width: 14px; height: 14px;
+  border-radius: 50%;
+  background: var(--sand);
+  border: 2px solid var(--ink-soft);
+  box-shadow: 0 0 12px rgba(187,181,101,0.5);
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+.timelineLine {
+  flex: 1;
+  width: 2px;
+  background: linear-gradient(180deg, rgba(187,181,101,0.4) 0%, rgba(187,181,101,0.05) 100%);
+  min-height: 48px;
+}
+.timelineItem:last-child .timelineLine { display: none; }
+
+.timelineRight { padding-bottom: 0.5rem; }
+.timelineEvent {
+  color: var(--sand);
+  display: block;
+  margin-bottom: 0.4rem;
+}
+.timelineDesc { color: var(--gray-400); }
+
+/* ── CTA SECTION ──────────────────────────────────────── */
+.ctaSection { background: var(--ink); }
+
+.ctaCard {
+  position: relative;
+  border: 1px solid rgba(187,181,101,0.15);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  padding: 5rem 3rem;
+  text-align: center;
+}
+.ctaCardBg {
+  position: absolute; inset: 0;
+  background: linear-gradient(135deg, rgba(18,17,74,0.7), rgba(26,24,112,0.5), rgba(7,5,26,0.9));
+  pointer-events: none;
+}
+.ctaCardContent {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+.ctaTitle { color: var(--white); }
+.ctaDesc  { color: var(--gray-400); max-width: 480px; }

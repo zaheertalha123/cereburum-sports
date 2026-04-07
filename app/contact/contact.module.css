@@ -1,0 +1,144 @@
+/* ── HERO ──────────────────────────────────────────────── */
+.hero {
+  position: relative;
+  padding: calc(var(--nav-h) + 5rem) 0 6rem;
+  text-align: center;
+  overflow: hidden;
+}
+.heroBg { position: absolute; inset: 0; pointer-events: none; }
+.heroGrad {
+  position: absolute; inset: 0;
+  background: linear-gradient(135deg, var(--ink) 0%, rgba(18,17,74,0.6) 50%, var(--ink) 100%);
+}
+.heroGrid {
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(rgba(187,181,101,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(187,181,101,0.04) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+.heroTitle { color: var(--white); }
+.heroDesc  { color: rgba(255,255,255,0.7); max-width: 520px; }
+
+.heroCta {
+  font-size: 1.1rem;
+  padding: 1.1rem 2.5rem;
+  box-shadow: 0 8px 40px rgba(37,211,102,0.4);
+  animation: pulse-glow 3s ease infinite;
+}
+
+.phoneNum {
+  color: var(--gray-600);
+}
+.phoneNum a {
+  color: var(--sand);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* ── WHY WHATSAPP ──────────────────────────────────────── */
+.whySection { background: var(--ink-soft); }
+.sectionHeader { margin-bottom: 3.5rem; }
+.sectionTitle  { color: var(--white); margin-bottom: 0.5rem; }
+
+.reasonsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+@media (min-width: 640px)  { .reasonsGrid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .reasonsGrid { grid-template-columns: repeat(4, 1fr); } }
+
+.reasonCard {
+  background: rgba(18,17,74,0.3);
+  border: 1px solid rgba(187,181,101,0.1);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  transition: all var(--transition-base);
+}
+.reasonCard:hover {
+  border-color: rgba(187,181,101,0.25);
+  box-shadow: var(--shadow-glow);
+  transform: translateY(-4px);
+}
+.reasonIcon  { font-size: 2rem; }
+.reasonTitle { color: var(--white); }
+.reasonDesc  { color: var(--gray-400); }
+
+/* ── INFO + FAQ ────────────────────────────────────────── */
+.infoSection { background: var(--ink); }
+
+.infoGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+}
+@media (min-width: 900px) {
+  .infoGrid { grid-template-columns: 1fr 1.4fr; }
+}
+
+.infoCard {
+  background: var(--gradient-card);
+  border: 1px solid rgba(187,181,101,0.12);
+  border-radius: var(--radius-lg);
+  padding: 2.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  height: fit-content;
+}
+
+.infoTitle { color: var(--white); }
+
+.infoList { display: flex; flex-direction: column; gap: 1.25rem; margin-top: 0.5rem; }
+.infoItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+.infoItemIcon {
+  font-size: 1.4rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.infoItemLabel { color: var(--sand); margin-bottom: 0.2rem; }
+.infoItemValue {
+  color: var(--gray-200);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+.infoItemValue:hover { color: var(--sand); }
+
+/* FAQ */
+.faqCol { display: flex; flex-direction: column; gap: 1rem; }
+
+.faqList {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.faqItem {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid rgba(187,181,101,0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.faqItem:first-child { padding-top: 0; }
+.faqItem:last-child  { border-bottom: none; }
+
+.faqQ { color: var(--white); }
+.faqA { color: var(--gray-400); }
