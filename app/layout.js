@@ -49,7 +49,7 @@ export default function RootLayout({ children }) {
         <meta name="theme-color" content="#07051A" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
-      <body>
+      <body suppressHydrationWarning>
         <ScrollReveal />
         <Navbar />
         <main id="main-content">

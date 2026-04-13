@@ -7,7 +7,7 @@
 .heroBg { position: absolute; inset: 0; pointer-events: none; }
 .heroGrad {
   position: absolute; inset: 0;
-  background: linear-gradient(135deg, var(--ink) 0%, rgba(18,17,74,0.5) 50%, var(--ink) 100%);
+  background: var(--gradient-hero);
 }
 .heroGrid {
   position: absolute; inset: 0;
@@ -64,7 +64,7 @@
 .heroStatLbl { color: rgba(255,255,255,0.6); }
 
 /* ── MISSION ───────────────────────────────────────────── */
-.missionSection { background: var(--ink-soft); }
+.missionSection { background: var(--surface-1); }
 
 .missionGrid {
   display: grid;
@@ -101,7 +101,7 @@
 
 /* ── VALUES ────────────────────────────────────────────── */
 .valuesSection {
-  background: var(--ink);
+  background: var(--surface-0);
   position: relative;
   overflow: hidden;
 }
@@ -146,7 +146,7 @@
 .valueDesc  { color: var(--gray-400); }
 
 /* ── TIMELINE ──────────────────────────────────────────── */
-.timelineSection { background: var(--ink-soft); }
+.timelineSection { background: var(--surface-1); }
 
 .timeline {
   display: flex;
@@ -183,7 +183,7 @@
   width: 14px; height: 14px;
   border-radius: 50%;
   background: var(--sand);
-  border: 2px solid var(--ink-soft);
+  border: 2px solid var(--surface-1);
   box-shadow: 0 0 12px rgba(187,181,101,0.5);
   flex-shrink: 0;
   margin-top: 4px;
@@ -205,7 +205,7 @@
 .timelineDesc { color: var(--gray-400); }
 
 /* ── CTA SECTION ──────────────────────────────────────── */
-.ctaSection { background: var(--ink); }
+.ctaSection { background: var(--surface-0); }
 
 .ctaCard {
   position: relative;
@@ -230,3 +230,64 @@
 }
 .ctaTitle { color: var(--white); }
 .ctaDesc  { color: var(--gray-400); max-width: 480px; }
+
+@media (max-width: 767px) {
+  .hero {
+    padding: calc(var(--nav-h) + 3rem) 0 4.5rem;
+  }
+
+  .heroContent {
+    gap: 2.5rem;
+  }
+
+  .heroStats {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .heroStat {
+    padding: 1.25rem 1rem;
+  }
+
+  .missionCard,
+  .valueCard,
+  .ctaCard {
+    padding: 1.75rem 1.25rem;
+  }
+
+  .missionGrid,
+  .valuesGrid {
+    gap: 1rem;
+  }
+
+  .sectionHeader {
+    margin-bottom: 2.5rem;
+  }
+
+  .timelineItem {
+    grid-template-columns: 64px 24px 1fr;
+    gap: 0 0.75rem;
+    padding-bottom: 2rem;
+  }
+
+  .timelineLeft {
+    padding-top: 0.1rem;
+  }
+
+  .timelineYear {
+    font-size: 1.6rem;
+  }
+
+  .ctaCardContent {
+    gap: 1rem;
+  }
+
+  .ctaCard {
+    border-radius: var(--radius-lg);
+  }
+}
+
+@media (max-width: 480px) {
+  .heroStats {
+    grid-template-columns: 1fr;
+  }
+}

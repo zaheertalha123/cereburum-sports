@@ -35,8 +35,8 @@ export default function AboutPage() {
           <div className={styles.heroOrb} />
         </div>
         <div className={`container ${styles.heroContent}`}>
-          <div className={styles.heroText}>
-            <span className="section-label animate-fade-in">Our Story</span>
+          <div className={`animate-fade-in-up ${styles.heroText}`}>
+            <span className="section-label">Our Story</span>
             <h1 className={`display-lg ${styles.heroTitle} animate-fade-in-up`}>
               Built on Quality.<br />
               <span className="text-sand">Driven by Sport.</span>

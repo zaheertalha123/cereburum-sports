@@ -173,7 +173,7 @@ export default function WorksPage() {
           </div>
 
           {/* Bottom CTA */}
-          <div className={`${styles.bottomCta} text-center`}>
+          {/* <div className={`${styles.bottomCta} text-center`}>
             <p className={`body-lg ${styles.ctaText}`}>Interested in a similar project?</p>
             <a
               href={WHATSAPP_URL}
@@ -189,7 +189,7 @@ export default function WorksPage() {
               </svg>
               Discuss Your Project
             </a>
-          </div>
+          </div> */}
         </div>
       </section>
     </>

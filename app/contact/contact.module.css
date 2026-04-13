@@ -8,7 +8,7 @@
 .heroBg { position: absolute; inset: 0; pointer-events: none; }
 .heroGrad {
   position: absolute; inset: 0;
-  background: linear-gradient(135deg, var(--ink) 0%, rgba(18,17,74,0.6) 50%, var(--ink) 100%);
+  background: var(--gradient-hero);
 }
 .heroGrid {
   position: absolute; inset: 0;
@@ -46,7 +46,7 @@
 }
 
 /* ── WHY WHATSAPP ──────────────────────────────────────── */
-.whySection { background: var(--ink-soft); }
+.whySection { background: var(--surface-1); }
 .sectionHeader { margin-bottom: 3.5rem; }
 .sectionTitle  { color: var(--white); margin-bottom: 0.5rem; }
 
@@ -78,7 +78,7 @@
 .reasonDesc  { color: var(--gray-400); }
 
 /* ── INFO + FAQ ────────────────────────────────────────── */
-.infoSection { background: var(--ink); }
+.infoSection { background: var(--surface-0); }
 
 .infoGrid {
   display: grid;
@@ -142,3 +142,49 @@
 
 .faqQ { color: var(--white); }
 .faqA { color: var(--gray-400); }
+
+@media (max-width: 767px) {
+  .hero {
+    padding: calc(var(--nav-h) + 3rem) 0 4.5rem;
+  }
+
+  .heroContent {
+    gap: 1.25rem;
+  }
+
+  .heroCta {
+    width: 100%;
+    justify-content: center;
+    font-size: 1rem;
+    padding: 1rem 1.25rem;
+  }
+
+  .phoneNum {
+    text-align: center;
+  }
+
+  .sectionHeader {
+    margin-bottom: 2.5rem;
+  }
+
+  .reasonsGrid {
+    gap: 1rem;
+  }
+
+  .reasonCard,
+  .infoCard {
+    padding: 1.5rem;
+  }
+
+  .infoGrid {
+    gap: 2rem;
+  }
+
+  .infoItem {
+    gap: 0.75rem;
+  }
+
+  .faqItem {
+    padding: 1.25rem 0;
+  }
+}

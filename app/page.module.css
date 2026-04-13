@@ -66,6 +66,91 @@
   gap: 4rem;
 }
 
+@media (max-width: 767px) {
+  .hero {
+    min-height: auto;
+    padding-bottom: 4rem;
+  }
+
+  .heroContent {
+    padding-top: 2.5rem;
+    gap: 2.5rem;
+  }
+
+  .heroText {
+    max-width: 100%;
+  }
+
+  .heroHeading {
+    margin-bottom: 1rem;
+  }
+
+  .heroSub {
+    margin-bottom: 1.75rem;
+  }
+
+  .heroCtas {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .heroCtas > * {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .statsStrip {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .statItem {
+    padding: 1rem 0.75rem;
+  }
+
+  .sectionHeader {
+    margin-bottom: 2.5rem;
+  }
+
+  .productsGrid,
+  .trustGrid {
+    gap: 1rem;
+  }
+
+  .productCard,
+  .trustCard {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .productBtn {
+    width: 100%;
+    justify-content: center;
+    align-self: stretch;
+  }
+
+  .worksTeaserInner {
+    gap: 2.5rem;
+  }
+
+  .worksTeaserText {
+    align-items: stretch;
+  }
+
+  .worksTeaserText > a {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .heroScrollIndicator {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .statsStrip {
+    grid-template-columns: 1fr;
+  }
+}
+
 .heroText {
   text-align: center;
   max-width: 800px;
@@ -169,7 +254,7 @@
 
 /* ── PRODUCTS ─────────────────────────────────────────── */
 .productsSection {
-  background: linear-gradient(180deg, var(--ink) 0%, var(--ink-soft) 100%);
+  background: var(--gradient-page);
 }
 
 .productsGrid {
@@ -221,7 +306,7 @@
 
 /* ── TRUST ────────────────────────────────────────────── */
 .trustSection {
-  background: var(--ink-soft);
+  background: var(--surface-1);
   position: relative;
   overflow: hidden;
 }
@@ -265,7 +350,7 @@
 
 /* ── WORKS TEASER ─────────────────────────────────────── */
 .worksTeaser {
-  background: linear-gradient(180deg, var(--ink-soft) 0%, var(--ink) 100%);
+  background: var(--gradient-page-reverse);
   overflow: hidden;
 }
 .worksTeaserInner {

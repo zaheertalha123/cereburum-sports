@@ -8,7 +8,7 @@
 .pageHeaderBg { position: absolute; inset: 0; pointer-events: none; }
 .pageHeaderGrad {
   position: absolute; inset: 0;
-  background: linear-gradient(180deg, var(--ink) 0%, var(--ink-soft) 100%);
+  background: var(--gradient-hero);
 }
 .pageHeaderGrid {
   position: absolute; inset: 0;
@@ -22,7 +22,7 @@
 .pageDesc { color: var(--gray-400); max-width: 580px; margin: 0 auto; }
 
 /* ── PRODUCTS GRID ──────────────────────────────────────── */
-.productsSection { background: var(--ink); }
+.productsSection { background: var(--surface-0); }
 
 .productsGrid {
   display: grid;
@@ -146,3 +146,34 @@
 .specValue { color: var(--white); }
 
 .cardCta { width: 100%; justify-content: center; }
+
+@media (max-width: 767px) {
+  .pageHeader {
+    padding: calc(var(--nav-h) + 3rem) 0 4rem;
+  }
+
+  .productsGrid {
+    gap: 1rem;
+  }
+
+  .productCard {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .cardHeader {
+    flex-direction: column;
+  }
+
+  .cardHeaderLeft {
+    align-items: flex-start;
+  }
+
+  .cardTag {
+    align-self: flex-start;
+  }
+
+  .featureList,
+  .specsGrid {
+    grid-template-columns: 1fr;
+  }
+}
