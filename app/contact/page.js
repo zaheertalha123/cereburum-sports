@@ -1,16 +1,11 @@
 import styles from './contact.module.css';
 import FAQAccordion from '@/components/FAQAccordion';
+import { SOCIAL } from '@/data/social';
 
 const WHATSAPP_NUMBER = '923187768296';
 const PHONE_DISPLAY = '+92 318 7768296';
 const PHONE_TEL = `+${WHATSAPP_NUMBER}`;
 const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=Hello%2C%20I%27m%20interested%20in%20your%20sports%20products.%20Please%20share%20more%20details.`;
-
-const SOCIAL = {
-  facebook: 'https://www.facebook.com/cereburum.sports',
-  instagram: 'https://www.instagram.com/cereburum.sports/',
-  tiktok: 'https://www.tiktok.com/@cereburum.sports',
-};
 
 export const metadata = {
   title: 'Contact — Get in Touch via WhatsApp',
