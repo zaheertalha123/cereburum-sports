@@ -13,7 +13,7 @@ export const projects = [
     media: [
       { type: 'image', url: '/images/works/cricket-academy/1.jpg', alt: 'Main nets view' },
       { type: 'image', url: '/images/works/cricket-academy/3.jpg' },
-      { type: 'image', url: '/images/works/cricket-academy/5.jpg' },
+      { type: 'image', url: '/images/works/cricket-academy/4.jpg' },
       { type: 'image', url: '/images/works/cricket-academy/2.jpg' },
       // { type: 'video', url: 'https://res.cloudinary.com/your-cloud/video/upload/demo.mp4', poster: '/images/works/cricket-academy/poster.jpg' }
     ]

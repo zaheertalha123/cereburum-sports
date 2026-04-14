@@ -85,26 +85,10 @@ export default function ContactPage() {
               <div className="divider" />
               <ul className={styles.infoList} role="list">
                 <li className={styles.infoItem}>
-                  <div className={styles.infoItemIcon} aria-hidden="true">📱</div>
+                  <div className={styles.infoItemIcon} aria-hidden="true">📞</div>
                   <div>
                     <p className={`label ${styles.infoItemLabel}`}>WhatsApp & Phone</p>
                     <a href="tel:+923187768296" className={`body-md ${styles.infoItemValue}`}>+92 318 7768296</a>
-                  </div>
-                </li>
-                <li className={styles.infoItem}>
-                  <div className={styles.infoItemIcon} aria-hidden="true">📍</div>
-                  <div>
-                    <p className={`label ${styles.infoItemLabel}`}>Location</p>
-                    <p className={`body-md ${styles.infoItemValue}`}>Street No.3, Deputy Bagh, Green Wood Street, Sialkot, Pakistan</p>
-                    
-                    <div className={styles.mapWrapper}>
-                      <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d841.2977046459647!2d74.53582413313522!3d32.49432867226835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391eeb7d9571ed8f%3A0x97ce0d42c8cfdbca!2sCereburum%20Sports%20%7C%20Net%20%7C%20Net%20Manufacturer%20%7C%20Net%20Customization%20%7C%20Net%20Installation!5e0!3m2!1sen!2s!4v1776159685061!5m2!1sen!2s" 
-                        loading="lazy" 
-                        referrerPolicy="no-referrer-when-downgrade"
-                        title="Cereburum Sports Location"
-                      ></iframe>
-                    </div>
                   </div>
                 </li>
                 <li className={styles.infoItem}>
@@ -112,6 +96,22 @@ export default function ContactPage() {
                   <div>
                     <p className={`label ${styles.infoItemLabel}`}>Business Hours</p>
                     <p className={`body-md ${styles.infoItemValue}`}>Monday – Saturday: 10:00am – 11:00pm</p>
+                  </div>
+                </li>
+                <li className={styles.infoItem}>
+                  <div className={styles.infoItemIcon} aria-hidden="true">📍</div>
+                  <div>
+                    <p className={`label ${styles.infoItemLabel}`}>Location</p>
+                    <p className={`body-md ${styles.infoItemValue}`}>Street # 03, Deputy Bagh, Green Wood St, Sialkot, Pakistan</p>
+
+                    <div className={styles.mapWrapper}>
+                      <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d841.2977046459647!2d74.53582413313522!3d32.49432867226835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391eeb7d9571ed8f%3A0x97ce0d42c8cfdbca!2sCereburum%20Sports%20%7C%20Net%20%7C%20Net%20Manufacturer%20%7C%20Net%20Customization%20%7C%20Net%20Installation!5e0!3m2!1sen!2s!4v1776159685061!5m2!1sen!2s"
+                        loading="lazy"
+                        referrerPolicy="no-referrer-when-downgrade"
+                        title="Cereburum Sports Location"
+                      ></iframe>
+                    </div>
                   </div>
                 </li>
                 <li className={styles.infoItem}>

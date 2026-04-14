@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import styles from './page.module.css';
 
 const WHATSAPP_NUMBER = '923187768296';
@@ -20,7 +21,7 @@ const stats = [
 const products = [
   {
     id: 'barrier-netting',
-    icon: '🏟️',
+    icon: '🥅',
     title: 'Polyester Netting',
     desc: 'Premium polyester netting engineered for safety and durability across all sports environments. Ideal for cricket grounds and stadiums.',
     tag: 'Best Seller',
@@ -210,7 +211,15 @@ export default function HomePage() {
             </div>
             <div className={styles.worksTeaserCards} aria-hidden="true">
               {[1, 2, 3].map((n) => (
-                <div key={n} className={`${styles.worksTeaserCard} ${styles[`card${n}`]}`} />
+                <div key={n} className={`${styles.worksTeaserCard} ${styles[`card${n}`]}`}>
+                  <Image
+                    src={`/images/home/${n}.jpg`}
+                    alt={`Portfolio work ${n}`}
+                    fill
+                    sizes="300px"
+                    className={styles.teaserImage}
+                  />
+                </div>
               ))}
             </div>
           </div>
