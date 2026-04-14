@@ -121,6 +121,34 @@
 }
 .infoItemValue:hover { color: var(--sand); }
 
+.mapWrapper {
+  margin-top: 1.25rem;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid rgba(187,181,101,0.15);
+  line-height: 0;
+  transition: border-color var(--transition-base), box-shadow var(--transition-base);
+}
+.mapWrapper:hover {
+  border-color: rgba(187,181,101,0.3);
+  box-shadow: var(--shadow-glow);
+}
+.mapWrapper iframe {
+  width: 100%;
+  height: 280px;
+  filter: grayscale(0.5) contrast(1.1) brightness(0.9) invert(0.9) hue-rotate(180deg);
+  transition: filter var(--transition-base);
+}
+.mapWrapper:hover iframe {
+  filter: grayscale(0.2) contrast(1.1) brightness(1);
+}
+
+@media (max-width: 767px) {
+  .mapWrapper iframe {
+    height: 220px;
+  }
+}
+
 /* FAQ */
 .faqCol { display: flex; flex-direction: column; gap: 1rem; }
 
@@ -130,18 +158,70 @@
   gap: 0;
 }
 
-.faqItem {
-  padding: 1.5rem 0;
-  border-bottom: 1px solid rgba(187,181,101,0.08);
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+.faqQ { 
+  color: var(--white); 
+  margin: 0;
+  transition: color var(--transition-fast);
 }
-.faqItem:first-child { padding-top: 0; }
-.faqItem:last-child  { border-bottom: none; }
-
-.faqQ { color: var(--white); }
 .faqA { color: var(--gray-400); }
+
+.accordionItem {
+  border-bottom: 1px solid rgba(187,181,101,0.08);
+}
+.accordionItem:last-child {
+  border-bottom: none;
+}
+
+.accordionHeader {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 0;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  gap: 1rem;
+}
+.accordionItem:first-child .accordionHeader {
+  padding-top: 0;
+}
+
+.accordionHeader:hover .faqQ {
+  color: var(--sand);
+}
+
+.accordionIcon {
+  color: var(--gray-400);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.accordionIconActive {
+  transform: rotate(180deg);
+  color: var(--sand);
+}
+
+.accordionContent {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.accordionContentActive {
+  grid-template-rows: 1fr;
+}
+
+.accordionContentInner {
+  overflow: hidden;
+}
+
+.accordionContentInner > p {
+  padding-bottom: 1.5rem;
+}
 
 @media (max-width: 767px) {
   .hero {
