@@ -12,38 +12,38 @@ export const metadata = {
 };
 
 const stats = [
-  { value: '500+', label: 'Projects Completed' },
-  { value: '10+', label: 'Years Experience' },
+  { value: '100+', label: 'Projects Completed' },
+  { value: '8+', label: 'Years Experience' },
   { value: '100%', label: 'Quality Assured' },
   { value: '50+', label: 'Sports Facilities' },
 ];
 
 const products = [
   {
-    id: 'barrier-netting',
-    icon: '🥅',
-    title: 'Polyester Netting',
-    desc: 'Premium polyester netting engineered for safety and durability across all sports environments. Ideal for cricket grounds and stadiums.',
+    id: 'cricket-netting',
+    icon: '🏏',
+    title: 'Cricket Netting',
+    desc: 'Professional-grade cricket nets for academies, clubs, and outdoor grounds. Custom sizing available.',
     tag: 'Best Seller',
   },
   {
-    id: 'cricket-nets',
-    icon: '🏏',
-    title: 'Cricket Practice Nets',
-    desc: 'Professional-grade cricket nets for academies, clubs, and outdoor grounds. Custom sizing available.',
+    id: 'volleyball-nets',
+    icon: '🏐',
+    title: 'Volleyball Nets',
+    desc: 'Tournament-grade volleyball nets for indoor courts and outdoor sand courts. Durable mesh, adjustable height systems available.',
     tag: null,
   },
   {
     id: 'football-nets',
     icon: '⚽',
-    title: 'Football & Goal Nets',
+    title: 'Football Goal Nets',
     desc: 'Premium goal nets and boundary netting for football pitches of all sizes. Weatherproof materials.',
     tag: null,
   },
   {
     id: 'custom',
     icon: '🔧',
-    title: 'Custom Solutions',
+    title: 'Custom Netting Solutions',
     desc: 'Bespoke netting solutions designed to your exact specifications — size, material, color, and installation.',
     tag: 'Tailored',
   },
@@ -51,7 +51,7 @@ const products = [
 
 const trusts = [
   { icon: '✅', title: 'Premium Materials', desc: 'UV-resistant, weatherproof nets built to last for years in all conditions.' },
-  { icon: '🛡️', title: 'Safety Certified', desc: 'All products meet international safety standards for sports facilities.' },
+  { icon: '📏', title: 'Precision Sizing', desc: 'Every net is made to the size you specify — and we often deliver larger or with extra coverage than quoted, never short of what you need.' },
   { icon: '⚡', title: 'Fast Installation', desc: 'Professional installation teams with minimal disruption to your facility.' },
   { icon: '📞', title: 'Direct Support', desc: 'Chat with us on WhatsApp anytime — no middlemen, just fast answers.' },
 ];
