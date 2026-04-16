@@ -17,11 +17,31 @@ const values = [
 ];
 
 const timeline = [
-  { year: '2014', event: 'Founded', desc: 'Cereburum Sports was founded with a focus on quality cricket netting for local academies.' },
-  { year: '2017', event: 'Expansion', desc: 'Expanded product range to include football, tennis, and multi-sport netting solutions.' },
-  { year: '2020', event: 'Scale-Up', desc: 'Scaled operations to handle large-scale stadium and ground installations across major cities.' },
-  { year: '2023', event: '500+ Projects', desc: 'Crossed 500 completed installations, establishing Cereburum as a trusted national brand.' },
-  { year: '2024', event: 'Innovation', desc: 'Introduced custom structural netting for rooftop and complex architectural environments.' },
+  {
+    year: '2019',
+    event: 'Founded & Registered',
+    desc: 'Cereburum Sports was established and formally registered, beginning with premium cricket netting for local academies and a quality-first approach that still guides every job.',
+  },
+  {
+    year: '2020',
+    event: 'Expansion & Scale-Up',
+    desc: 'Broadened our lineup to football, tennis, and multi-sport barrier netting while growing our install capacity — taking on larger grounds, venues, and multi-site projects across major cities.',
+  },
+  {
+    year: '2021',
+    event: 'Innovation',
+    desc: 'Pushed into custom structural netting: rooftop barriers, complex facades, and engineered solutions for facilities where off-the-shelf products fall short.',
+  },
+  {
+    year: '2025',
+    event: '100+ Projects',
+    desc: 'Surpassed one hundred completed installations nationwide — from training academies to professional-grade facilities — reinforcing trust in the Cereburum name.',
+  },
+  {
+    year: '2026',
+    event: 'Forward Momentum',
+    desc: 'We are still moving: refining products, expanding our installation network, and partnering on new projects so Pakistan’s sports infrastructure keeps leveling up.',
+  },
 ];
 
 export default function AboutPage() {
@@ -52,9 +72,9 @@ export default function AboutPage() {
           {/* Stats block */}
           <div className={`${styles.heroStats} animate-fade-in`} style={{ animationDelay: '0.2s' }}>
             {[
-              { v: '10+', l: 'Years Active' },
-              { v: '500+', l: 'Projects Done' },
-              { v: '8+', l: 'Sports Covered' },
+              { v: '8+', l: 'Years Active' },
+              { v: '100+', l: 'Projects Done' },
+              { v: '7+', l: 'Sports Covered' },
               { v: '100%', l: 'Client Focused' },
             ].map(({ v, l }) => (
               <div key={l} className={styles.heroStat}>
