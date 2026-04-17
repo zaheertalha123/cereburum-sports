@@ -3,6 +3,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import WhatsAppFAB from '@/components/WhatsAppFAB';
 import ScrollReveal from '@/components/ScrollReveal';
+import { Analytics } from '@vercel/analytics/next';
 
 export const metadata = {
   metadataBase: new URL('https://cereburumsports.com'),
@@ -57,6 +58,7 @@ export default function RootLayout({ children }) {
         </main>
         <Footer />
         <WhatsAppFAB />
+        <Analytics />
       </body>
     </html>
   );
