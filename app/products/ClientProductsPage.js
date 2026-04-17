@@ -7,7 +7,7 @@ import styles from './products.module.css';
 
 export default function ClientProductsPage({ categories }) {
   // Adding synthetic filter options based on product types
-  const filterOptions = ['All', 'Nets', 'Hardware', 'Custom'];
+  const filterOptions = ['All', 'Cricket', 'Nets', 'Hardware', 'Custom'];
   const [activeFilter, setActiveFilter] = useState('All');
 
   const filteredCategories = activeFilter === 'All'
