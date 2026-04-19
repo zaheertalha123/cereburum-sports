@@ -284,14 +284,19 @@ const categories = [
     title: 'Custom Solutions',
     subtitle: 'Bespoke & Tailored',
     filterGroup: 'Custom',
-    image: null,
+    image: '/images/products/custom-net.jpg',
     tag: 'Tailored',
     tagColor: 'sand',
     desc: 'Got a unique project? We design, manufacture, and install bespoke netting systems for complex architectural spaces, non-standard dimensions, and special requirements.',
-    features: ['Full custom design service', 'CAD drawings provided', 'Any dimension or shape', 'Specialized materials', 'Project management included'],
+    features: [
+      'Custom sizes and shapes',
+      'Custom color matching',
+      'Tailored mesh box sizes',
+      'Complete material selection'
+      ],
     specs: [
       { label: 'Min. Lead Time', value: '5 business days' },
-      { label: 'Design', value: 'CAD-assisted' },
+      { label: 'Box Size', value: 'Fully customizable' },
       { label: 'Materials', value: 'Any grade available' },
       { label: 'Dimensions', value: 'No limit' },
     ],
