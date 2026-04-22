@@ -174,6 +174,24 @@ export const projects = [
       { type: 'image', url: '/images/works/sports-arena-khariyan/sports-arena-khariyan-6.jpg' }
     ]
   },
+  {
+    id: 'sports-arena-wazirabad',
+    title: 'Sports Arena, Wazirabad',
+    category: 'Cricket Nets',
+    type: 'Cricket Nets',
+    desc: 'A massive-scale installation in Wazirabad featuring a sprawling 200ft x 74ft professional playing area. This project required expert manufacturing and precision tensioning to cover over 14,000 square feet of ground, providing a seamless 20-foot high enclosure for high-capacity sports use.',
+    highlights: ['Massive 14,800 sq ft Coverage', '20-ft Full-Perimeter Protection', 'Seamless Large-Span Manufacturing'],
+    year: '2025',
+    badge: null,
+    gradient: 'linear-gradient(135deg, rgba(26,24,112,0.7), rgba(7,5,26,0.95))',
+    coverImage: '/images/works/sports-arena-wazirabad/sports-arena-wazirabad-cover.jpg',
+    media: [
+      { type: 'image', url: '/images/works/sports-arena-wazirabad/sports-arena-wazirabad-1.jpg' },
+      { type: 'image', url: '/images/works/sports-arena-wazirabad/sports-arena-wazirabad-2.jpg' },
+      { type: 'image', url: '/images/works/sports-arena-wazirabad/sports-arena-wazirabad-3.jpg' },
+      { type: 'video', url: '/images/works/sports-arena-wazirabad/sports-arena-wazirabad-4.mp4' }
+    ]
+  },
 ];
 
 export const projectCategories = ['All', 'Cricket Nets', 'Barrier Netting', 'Multi-Sport', 'Court Nets', 'Custom Solution'];
