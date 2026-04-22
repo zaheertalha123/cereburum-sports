@@ -119,17 +119,20 @@ export const projects = [
     ]
   },
   {
-    id: 'stadium-barrier',
-    title: 'Community Cricket Stadium, Rawalpindi',
-    category: 'Barrier Netting',
-    type: 'Stadium',
-    desc: 'Large-scale barrier netting installation for a 5,000-seat community cricket stadium. Spectator safety nets plus sight screens.',
-    highlights: ['5,000 seat capacity', 'Spectator safety nets', 'Sight screens included'],
-    year: '2022',
+    id: 'practice-ground-gujranwala',
+    title: 'Practice Ground, Gujranwala',
+    category: 'Cricket Nets',
+    type: 'Cricket Nets',
+    desc: 'A large-scale practice facility in Gujranwala featuring a 95ft x 74ft footprint and an impressive 30-foot vertical clearance. Our team demonstrated extreme efficiency by completing the full manufacturing and installation process within a tight 6-hour window.',
+    highlights: ['7,030 sq ft Ground Coverage', '30-ft Vertical Height Clearance', 'Record 6-Hour Express Installation'], 
+    year: '2023',
     badge: null,
-    gradient: 'linear-gradient(135deg, rgba(7,5,26,0.95), rgba(18,17,74,0.8))',
-    coverImage: null,
-    media: []
+    gradient: 'linear-gradient(135deg, rgba(26,24,112,0.7), rgba(7,5,26,0.95))',
+    coverImage: '/images/works/practice-ground-gujranwala/practice-ground-gujranwala-cover.jpg',
+    media: [
+      { type: 'video', url: '/images/works/practice-ground-gujranwala/practice-ground-gujranwala-1.mp4' },
+      { type: 'video', url: '/images/works/practice-ground-gujranwala/practice-ground-gujranwala-2.mp4' },
+    ]
   },
 ];
 
