@@ -98,17 +98,25 @@ export const projects = [
     ]
   },
   {
-    id: 'rooftop-cricket',
-    title: 'Rooftop Cricket Facility, Karachi',
-    category: 'Custom Solution',
-    type: 'Rooftop Facility',
-    desc: 'Bespoke structural netting designed for a rooftop cricket net facility. Full safety-rated enclosure with fire escape compliance.',
-    highlights: ['Custom structural design', 'Safety-rated enclosure', 'Rooftop compliant'],
-    year: '2023',
-    badge: 'Custom',
-    gradient: 'linear-gradient(135deg, rgba(26,24,112,0.85), rgba(18,17,74,0.7))',
-    coverImage: null,
-    media: []
+    id: 'sports-arena-peshawar',
+    title: 'Sports Arena, Peshawar',
+    category: 'Cricket Nets',
+    type: 'Cricket Nets',
+    desc: 'An ambitious multi-ground development in Peshawar featuring three interconnected arenas installed at a towering 40-foot height. This project showcases our largest single-span roof installation—a massive 90ft x 112ft section—all manufactured and deployed using premium Parachute 36 netting.',
+    highlights: ['Triple Interconnected Grounds', '90ft x 112ft Single Roof Span', 'Full Parachute 36 Construction', '48-Hour Non-Stop Rapid Deployment'],
+    year: '2026',
+    badge: null,
+    gradient: 'linear-gradient(135deg, rgba(26,24,112,0.7), rgba(7,5,26,0.95))',
+    coverImage: '/images/works/sports-arena-peshawar/sports-arena-peshawar-cover.jpg',
+    media: [
+      { type: 'image', url: '/images/works/sports-arena-peshawar/sports-arena-peshawar-1.jpg' },
+      { type: 'image', url: '/images/works/sports-arena-peshawar/sports-arena-peshawar-2.jpg' },
+      { type: 'image', url: '/images/works/sports-arena-peshawar/sports-arena-peshawar-3.jpg' },
+      { type: 'image', url: '/images/works/sports-arena-peshawar/sports-arena-peshawar-4.jpg' },
+      { type: 'image', url: '/images/works/sports-arena-peshawar/sports-arena-peshawar-5.jpg' },
+      { type: 'video', url: '/images/works/sports-arena-peshawar/sports-arena-peshawar-6.mp4' },
+      { type: 'video', url: '/images/works/sports-arena-peshawar/sports-arena-peshawar-7.mp4' },
+    ]
   },
   {
     id: 'stadium-barrier',
