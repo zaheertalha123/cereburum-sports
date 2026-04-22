@@ -154,6 +154,26 @@ export const projects = [
       { type: 'image', url: '/images/works/roof-top-net-sialkot/roof-top-net-sialkot-6.jpg' }
     ]
   },
+  {
+    id: 'sports-arena-khariyan',
+    title: 'Sports Arena, Khariyan',
+    category: 'Cricket Nets',
+    type: 'Cricket Nets',
+    desc: 'A professional-grade arena installation in Kharian, featuring a high-clearance 32-foot vertical enclosure for a 95ft x 38ft playing area. Our expert team delivered a seamless experience through 8 hours of non-stop onsite manufacturing and installation, ensuring the facility was game-ready in a single shift.',
+    highlights: ['32-ft Vertical High-Clearance', '3,610 sq ft Total Coverage', '8-Hour Non-Stop Rapid Deployment'],
+    year: '2026',
+    badge: null,
+    gradient: 'linear-gradient(135deg, rgba(26,24,112,0.7), rgba(7,5,26,0.95))',
+    coverImage: '/images/works/sports-arena-khariyan/sports-arena-khariyan-cover.jpg',
+    media: [
+      { type: 'image', url: '/images/works/sports-arena-khariyan/sports-arena-khariyan-1.jpg' },
+      { type: 'image', url: '/images/works/sports-arena-khariyan/sports-arena-khariyan-2.jpg' },
+      { type: 'image', url: '/images/works/sports-arena-khariyan/sports-arena-khariyan-3.jpg' },
+      { type: 'image', url: '/images/works/sports-arena-khariyan/sports-arena-khariyan-4.jpg' },
+      { type: 'image', url: '/images/works/sports-arena-khariyan/sports-arena-khariyan-5.jpg' },
+      { type: 'image', url: '/images/works/sports-arena-khariyan/sports-arena-khariyan-6.jpg' }
+    ]
+  },
 ];
 
 export const projectCategories = ['All', 'Cricket Nets', 'Barrier Netting', 'Multi-Sport', 'Court Nets', 'Custom Solution'];
