@@ -1,35 +1,44 @@
 export const projects = [
   {
-    id: 'cricket-academy',
-    title: 'Elite Cricket Academy, Lahore',
+    id: 'cricket-arena-nowshera',
+    title: 'Professional Cricket Arena, Nowshera',
     category: 'Cricket Nets',
-    type: 'Practice Facility',
-    desc: 'Full installation of 8-lane cricket practice nets with HDPE barrier netting around the full perimeter. Three months from design to handover.',
-    highlights: ['8 batting lanes', '30-ft perimeter barrier', '4,200 sq ft coverage'],
+    type: 'Sports Arena',
+    desc: 'A full-scale professional sports arena installation featuring premium Parachute 36 customized netting. Our team executed a rapid-response deployment, completing the complex installation in just 8 hours for a 90ft x 60ft facility.',
+    highlights: ['Parachute 36 Premium Mesh', '35-ft Vertical Height Clearance', '5,400 sq ft Ground Coverage', 'Rapid 8-Hour Expert Installation'],
     year: '2024',
     badge: 'Featured',
     gradient: 'linear-gradient(135deg, rgba(18,17,74,0.9), rgba(7,5,26,0.95))',
-    coverImage: '/images/works/cricket-academy/cover.jpg',
+    coverImage: '/images/works/cricket-arena-nowshera/cricket-arena-nowshera-cover.jpg',
     media: [
-      { type: 'image', url: '/images/works/cricket-academy/1.jpg', alt: 'Main nets view' },
-      { type: 'image', url: '/images/works/cricket-academy/3.jpg' },
-      { type: 'image', url: '/images/works/cricket-academy/4.jpg' },
-      { type: 'image', url: '/images/works/cricket-academy/2.jpg' },
+      { type: 'image', url: '/images/works/cricket-arena-nowshera/cricket-arena-nowshera-1.jpg', alt: 'Main nets view' },
+      { type: 'image', url: '/images/works/cricket-arena-nowshera/cricket-arena-nowshera-2.jpg' },
+      { type: 'image', url: '/images/works/cricket-arena-nowshera/cricket-arena-nowshera-3.jpg' },
+      { type: 'image', url: '/images/works/cricket-arena-nowshera/cricket-arena-nowshera-4.jpg' },
+      { type: 'image', url: '/images/works/cricket-arena-nowshera/cricket-arena-nowshera-5.jpg' },
+      { type: 'image', url: '/images/works/cricket-arena-nowshera/cricket-arena-nowshera-6.jpg' }
       // { type: 'video', url: 'https://res.cloudinary.com/your-cloud/video/upload/demo.mp4', poster: '/images/works/cricket-academy/poster.jpg' }
     ]
   },
   {
-    id: 'football-ground',
-    title: 'District Football Ground, Faisalabad',
-    category: 'Barrier Netting',
-    type: 'Sports Ground',
-    desc: 'High-tensile perimeter netting installed on all four sides of a standard FIFA full-size pitch. Wind-load tested to category 3 standards.',
-    highlights: ['Full 360° perimeter', '25-ft barrier height', 'Wind-rated Category 3'],
+    id: 'sports-complex-sahiwal',
+    title: 'Sports Complex, Sahiwal',
+    category: 'Cricket Nets',
+    type: 'Sports Complex',
+    desc: 'A massive three-ground sports complex development featuring custom-manufactured Parachute 24 netting. We managed the end-to-end process of manufacturing and delivering the nets for all facilities.',
+    highlights: ['Triple Ground Inventory Delivery', 'Parachute 24 Durable Mesh', '35-ft Vertical Height Clearance', 'Rapid 6-Hour Prime Installation'],
     year: '2024',
     badge: null,
     gradient: 'linear-gradient(135deg, rgba(26,24,112,0.7), rgba(7,5,26,0.95))',
-    coverImage: null,
-    media: []
+    coverImage: '/images/works/sports-complex-sahiwal/sports-complex-sahiwal-cover.jpeg',
+    media: [
+      { type: 'image', url: '/images/works/sports-complex-sahiwal/sports-complex-sahiwal-1.jpeg' },
+      { type: 'image', url: '/images/works/sports-complex-sahiwal/sports-complex-sahiwal-2.jpeg' },
+      { type: 'image', url: '/images/works/sports-complex-sahiwal/sports-complex-sahiwal-3.jpeg' },
+      { type: 'image', url: '/images/works/sports-complex-sahiwal/sports-complex-sahiwal-4.jpeg' },
+      { type: 'video', url: '/images/works/sports-complex-sahiwal/sports-complex-sahiwal-5.mp4', poster: '/images/works/sports-complex-sahiwal/sports-complex-sahiwal-5-poster.jpeg' },
+      { type: 'video', url: '/images/works/sports-complex-sahiwal/sports-complex-sahiwal-6.mp4', poster: '/images/works/sports-complex-sahiwal/sports-complex-sahiwal-6-poster.jpeg' },
+    ]
   },
   {
     id: 'school-sports',
