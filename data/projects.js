@@ -6,7 +6,7 @@ export const projects = [
     type: 'Sports Arena',
     desc: 'A full-scale professional sports arena installation featuring premium Parachute 36 customized netting. Our team executed a rapid-response deployment, completing the complex installation in just 8 hours for a 90ft x 60ft facility.',
     highlights: ['Parachute 36 Premium Mesh', '35-ft Vertical Height Clearance', '5,400 sq ft Ground Coverage', 'Rapid 8-Hour Expert Installation'],
-    year: '2024',
+    year: '2025',
     badge: 'Featured',
     gradient: 'linear-gradient(135deg, rgba(18,17,74,0.9), rgba(7,5,26,0.95))',
     coverImage: '/images/works/cricket-arena-nowshera/cricket-arena-nowshera-cover.jpg',
@@ -59,17 +59,22 @@ export const projects = [
     ]
   },
   {
-    id: 'school-sports',
-    title: 'Beacon House School Sports Complex',
-    category: 'Multi-Sport',
-    type: 'School Facility',
-    desc: 'Multi-sport netting system covering cricket, football, and basketball court areas, designed to retract between sports sessions.',
-    highlights: ['3 sports covered', 'Retractable design', 'Child-safe specifications'],
-    year: '2023',
+    id: 'sports-arena-gujranwala',
+    title: 'Sports Arena, Gujranwala',
+    category: 'Cricket Nets',
+    type: 'Sports Arena',
+    desc: 'A full-scale professional sports arena installation featuring premium Parachute 36 customized netting. Our team executed a rapid-response deployment, completing the complex installation in just 8 hours for a 90ft x 60ft facility.',
+    highlights: ['Parachute 36 Premium Mesh', '35-ft Vertical Height Clearance', '5,400 sq ft Ground Coverage', 'Rapid 8-Hour Expert Installation'],
+    year: '2024',
     badge: null,
-    gradient: 'linear-gradient(135deg, rgba(18,17,74,0.8), rgba(26,24,112,0.7))',
-    coverImage: null,
-    media: []
+    gradient: 'linear-gradient(135deg, rgba(26,24,112,0.7), rgba(7,5,26,0.95))',
+    coverImage: '/images/works/sports-arena-gujranwala/sports-arena-gujranwala-cover.jpg',
+    media: [
+      { type: 'image', url: '/images/works/sports-arena-gujranwala/sports-arena-gujranwala-1.jpg' },
+      { type: 'image', url: '/images/works/sports-arena-gujranwala/sports-arena-gujranwala-2.jpg' },
+      { type: 'image', url: '/images/works/sports-arena-gujranwala/sports-arena-gujranwala-3.jpg' },
+      { type: 'image', url: '/images/works/sports-arena-gujranwala/sports-arena-gujranwala-4.jpg' },
+    ]
   },
   {
     id: 'tennis-club',
