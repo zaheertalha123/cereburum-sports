@@ -134,6 +134,26 @@ export const projects = [
       { type: 'video', url: '/images/works/practice-ground-gujranwala/practice-ground-gujranwala-2.mp4' },
     ]
   },
+  {
+    id: 'roof-top-net-sialkot',
+    title: 'Roof Top Net, Sialkot',
+    category: 'Cricket Nets',
+    type: 'Cricket Nets',
+    desc: 'A precision-engineered rooftop installation in Sialkot, designed to maximize high-altitude playing space while ensuring total ball retention. Utilizing lightweight yet durable Parachute 24, we manufactured and installed this custom net to cover an 84ft x 38ft area with full 20-foot vertical protection.',
+    highlights: ['Parachute 24 High-Tenacity Mesh', '3,192 sq ft Playing Area', '20-ft Full-Perimeter Enclosure'],
+    year: '2025',
+    badge: null,
+    gradient: 'linear-gradient(135deg, rgba(26,24,112,0.7), rgba(7,5,26,0.95))',
+    coverImage: '/images/works/roof-top-net-sialkot/roof-top-net-sialkot-cover.jpg',
+    media: [
+      { type: 'image', url: '/images/works/roof-top-net-sialkot/roof-top-net-sialkot-1.jpg' },
+      { type: 'image', url: '/images/works/roof-top-net-sialkot/roof-top-net-sialkot-2.jpg' },
+      { type: 'image', url: '/images/works/roof-top-net-sialkot/roof-top-net-sialkot-3.jpg' },
+      { type: 'image', url: '/images/works/roof-top-net-sialkot/roof-top-net-sialkot-4.jpg' },
+      { type: 'image', url: '/images/works/roof-top-net-sialkot/roof-top-net-sialkot-5.jpg' },
+      { type: 'image', url: '/images/works/roof-top-net-sialkot/roof-top-net-sialkot-6.jpg' }
+    ]
+  },
 ];
 
 export const projectCategories = ['All', 'Cricket Nets', 'Barrier Netting', 'Multi-Sport', 'Court Nets', 'Custom Solution'];
