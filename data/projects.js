@@ -41,6 +41,24 @@ export const projects = [
     ]
   },
   {
+    id: 'folding-net-islamabad',
+    title: 'Folding Net, Islamabad',
+    category: 'Cricket Nets',
+    type: 'Folding Net',
+    desc: 'A specialized 40ft x 80ft ground installation in Bahria Town, Islamabad, featuring a unique foldable net design. This custom-engineered system allows the 80ft and 40ft side sections to be retracted, offering maximum flexibility for multi-use spaces without compromising on security.',
+    highlights: ['Dual-Side Foldable System', '20-ft Vertical Height Clearance', 'Retractable Perimeter Mesh', '3,200 sq ft Ground Coverage'],
+    year: '2022',
+    badge: null,
+    gradient: 'linear-gradient(135deg, rgba(26,24,112,0.7), rgba(7,5,26,0.95))',
+    coverImage: '/images/works/folding-net-islamabad/folding-net-islamabad-cover.jpg',
+    media: [
+      { type: 'image', url: '/images/works/folding-net-islamabad/folding-net-islamabad-1.jpg' },
+      { type: 'image', url: '/images/works/folding-net-islamabad/folding-net-islamabad-2.jpg' },
+      { type: 'image', url: '/images/works/folding-net-islamabad/folding-net-islamabad-3.jpg' },
+      { type: 'image', url: '/images/works/folding-net-islamabad/folding-net-islamabad-4.jpg' },
+    ]
+  },
+  {
     id: 'school-sports',
     title: 'Beacon House School Sports Complex',
     category: 'Multi-Sport',
