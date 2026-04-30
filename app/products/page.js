@@ -331,6 +331,23 @@ const categories = [
     ],
   },
   {
+    id: 'hockey-net-parachute',
+    title: 'Hockey Net Parachute',
+    subtitle: 'Professional Hockey Goal Net',
+    filterGroup: 'Hockey',
+    image: '/images/products/hockey-net-parachute.jpeg',
+    tag: 'Durable',
+    tagColor: 'sand',
+    desc: 'The Parachute Series hockey net is engineered for high-impact resistance and long-term durability. Featuring a reinforced weave, it is designed to withstand heavy puck strikes in both professional and recreational settings.',
+    features: [ 'Heavy-duty 1-inch box mesh size', 'Weather-resistant parachute material', 'Reinforced perimeter edges for easy attachment', 'High-velocity impact absorption'],
+    specs: [
+      { label: 'Material', value: 'Parachute 24' },
+      { label: 'Mesh Size', value: '1 inch (Standard)' },
+      { label: 'Dimensions', value: '6 ft x 4 ft (Standard Regulation)' },
+      { label: 'Customizable', value: 'Color & Thickness' },
+    ],
+  },
+  {
     id: 'custom',
     title: 'Custom Solutions',
     subtitle: 'Bespoke & Tailored',
