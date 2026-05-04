@@ -52,6 +52,13 @@ export default function ContactForm() {
         body: JSON.stringify(data),
       });
 
+      if (response.status === 429) {
+        setServerError(
+          'Too many messages were sent in a short period. Please wait a few minutes and try sending your message again, or reach us on WhatsApp.'
+        );
+        return;
+      }
+
       const payload = await response.json().catch(() => ({}));
 
       if (response.ok) {
