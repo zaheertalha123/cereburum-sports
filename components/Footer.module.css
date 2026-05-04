@@ -18,6 +18,13 @@
 }
 .ctaLabel { color: var(--sand); margin-bottom: 0.5rem; }
 .ctaHeading { color: var(--white); }
+.ctaBtnRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  flex-shrink: 0;
+}
 .ctaBtn { flex-shrink: 0; }
 
 /* ── Main ── */
