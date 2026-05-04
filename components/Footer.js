@@ -165,6 +165,11 @@ export default function Footer() {
                   WhatsApp Us
                 </a>
               </li>
+              <li>
+                <Link href={CONTACT_FORM_HREF} className={styles.footerLink}>
+                  Send us a message
+                </Link>
+              </li>
               <li className={`body-sm ${styles.contactItem}`}>Sialkot, Pakistan</li>
             </ul>
           </div>
