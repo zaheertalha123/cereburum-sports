@@ -1,5 +1,6 @@
 import styles from './contact.module.css';
 import FAQAccordion from '@/components/FAQAccordion';
+import ContactForm from '@/components/ContactForm';
 import { SOCIAL } from '@/data/social';
 
 const WHATSAPP_NUMBER = '923187768296';
@@ -8,9 +9,9 @@ const PHONE_TEL = `+${WHATSAPP_NUMBER}`;
 const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=Hello%2C%20I%27m%20interested%20in%20your%20sports%20products.%20Please%20share%20more%20details.`;
 
 export const metadata = {
-  title: 'Contact — Get in Touch via WhatsApp',
+  title: 'Contact — WhatsApp & Email',
   description:
-    'Contact Cereburum Sports directly via WhatsApp for product enquiries, project consultations, and quotes. Fast response guaranteed.',
+    'Contact Cereburum Sports via WhatsApp or our email form for product enquiries, project consultations, and quotes.',
 };
 
 const faqs = [
@@ -61,8 +62,8 @@ export default function ContactPage() {
           </h1>
           <div className="divider divider-center" style={{ margin: '1.25rem auto 1.75rem' }} />
           <p className={`body-lg ${styles.heroDesc} animate-fade-in`}>
-            We don&apos;t do complicated contact forms. Just tap the button below and chat directly
-            with our team — we&apos;re ready to help with any enquiry.
+            Prefer WhatsApp? Tap below to chat with our team instantly. You can also send us a message
+            using the email form further down the page — we respond as quickly as we can.
           </p>
 
           {/* Primary CTA */}
@@ -135,6 +136,28 @@ export default function ContactPage() {
                 </a>
               </li>
             </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* Email contact form */}
+      <section className={`section-pad ${styles.formSection}`} aria-labelledby="email-form-heading">
+        <div className="container">
+          <div className={styles.formSectionInner}>
+            <div className={`${styles.formSectionIntro} reveal`}>
+              <span className="section-label">Email Us</span>
+              <h2 className={`heading-lg ${styles.formSectionTitle}`} id="email-form-heading">
+                Send a <span className="text-sand">message</span>
+              </h2>
+              <div className="divider divider-center" style={{ margin: '1rem auto 1.25rem' }} />
+              <p className={`body-md ${styles.formSectionDesc}`}>
+                Share your enquiry below and we&apos;ll reply by email. For the fastest reply, WhatsApp
+                works great too.
+              </p>
+            </div>
+            <div className={`${styles.formCard} reveal`}>
+              <ContactForm />
+            </div>
           </div>
         </div>
       </section>
