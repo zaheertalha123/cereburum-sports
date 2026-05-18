@@ -4,9 +4,12 @@ import Footer from '@/components/Footer';
 import WhatsAppFAB from '@/components/WhatsAppFAB';
 import ScrollReveal from '@/components/ScrollReveal';
 import { Analytics } from '@vercel/analytics/next';
+import { getSiteUrl } from '@/lib/siteUrl';
+
+const siteUrl = getSiteUrl();
 
 export const metadata = {
-  metadataBase: new URL('https://cereburumsports.com'),
+  metadataBase: new URL(siteUrl),
   title: {
     default: 'Cereburum Sports — Premium Sports Barrier Netting & Equipment',
     template: '%s | Cereburum Sports',
@@ -23,7 +26,7 @@ export const metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_PK',
-    url: 'https://cereburumsports.com',
+    url: siteUrl,
     siteName: 'Cereburum Sports',
     title: 'Cereburum Sports — Premium Sports Barrier Netting & Equipment',
     description:

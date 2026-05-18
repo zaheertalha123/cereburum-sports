@@ -1,7 +1,7 @@
 import { projects } from '@/data/projects';
+import { getSiteUrl } from '@/lib/siteUrl';
 
-/** Same origin as `metadataBase` in app/layout.js */
-const BASE_URL = 'https://cereburumsports.com';
+const BASE_URL = getSiteUrl();
 
 export default function sitemap() {
   const staticEntries = [
