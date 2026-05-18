@@ -3,7 +3,7 @@ import ClientProductsPage from './ClientProductsPage';
 export const metadata = {
   title: 'Products — Sports Barrier Netting & Equipment',
   description:
-    'Browse Cereburum Sports\'s full range of sports barrier netting, cricket nets, football nets, and custom netting solutions for sports facilities across Pakistan.',
+    'Sports net manufacturer and custom net maker — browse barrier netting, cricket nets, football nets, badminton and goal nets, and bespoke solutions for facilities across Pakistan.',
 };
 
 const categories = [

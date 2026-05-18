@@ -12,10 +12,11 @@ export const metadata = {
     template: '%s | Cereburum Sports',
   },
   description:
-    'Cereburum Sports specializes in premium sports barrier nettings, cricket nets, football nets, and custom sports equipment for facilities across Pakistan.',
+    'Sports net manufacturer and custom net maker: premium barrier nettings, cricket nets, football nets, and installations for facilities across Pakistan.',
   keywords: [
     'sports barrier netting', 'cricket nets', 'football netting', 'sports equipment Pakistan',
     'barrier netting installation', 'sports facility netting', 'Cereburum Sports',
+    'net maker', 'net manufacturer', 'custom net maker', 'sports net manufacturer',
   ],
   authors: [{ name: 'Cereburum Sports' }],
   creator: 'Cereburum Sports',
@@ -26,13 +27,14 @@ export const metadata = {
     siteName: 'Cereburum Sports',
     title: 'Cereburum Sports — Premium Sports Barrier Netting & Equipment',
     description:
-      'Specialists in sports barrier nettings and custom sports equipment. Quality installations for grounds, academies, and sports facilities.',
+      'Net manufacturer and custom net maker. Specialists in sports barrier nettings and custom equipment — quality installations for grounds, academies, and sports facilities.',
     images: [{ url: '/logo.png', width: 800, height: 600, alt: 'Cereburum Sports Logo' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Cereburum Sports — Premium Sports Barrier Netting',
-    description: 'Quality sports barrier nettings and equipment for sports facilities.',
+    description:
+      'Sports net maker and manufacturer — premium barrier nettings and equipment for facilities.',
   },
   robots: {
     index: true,

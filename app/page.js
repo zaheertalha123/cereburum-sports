@@ -8,7 +8,7 @@ const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=Hello%2C%20I%27m%20i
 export const metadata = {
   title: 'Cereburum Sports — Premium Sports Barrier Netting & Equipment',
   description:
-    'Specialists in premium sports barrier nettings, cricket nets, football netting, and custom sports equipment installations across Pakistan.',
+    'Net maker and manufacturer: premium sports barrier nettings, cricket nets, football netting, and custom net solutions with professional installation across Pakistan.',
 };
 
 const stats = [
