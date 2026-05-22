@@ -10,6 +10,7 @@ export default function sitemap() {
     { path: '/contact', changeFrequency: 'monthly', priority: 0.85 },
     { path: '/products', changeFrequency: 'weekly', priority: 0.9 },
     { path: '/works', changeFrequency: 'weekly', priority: 0.9 },
+    { path: '/guides', changeFrequency: 'monthly', priority: 0.85 },
   ].map(({ path, changeFrequency, priority }) => ({
     url: `${BASE_URL}${path}`,
     lastModified: new Date(),
