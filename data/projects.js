@@ -219,6 +219,27 @@ export const projects = [
       { type: 'image', url: '/images/works/roof-top-net-daska-road-sialkot/roof-top-net-daska-road-sialkot-2.jpg' },
       { type: 'video', url: '/images/works/roof-top-net-daska-road-sialkot/roof-top-net-daska-road-sialkot-3.mp4' }
     ]
+  },
+  {
+    id: 'mian-indoor-cricket-club-pasrur',
+    title: 'Mian Indoor Cricket Club, Pasrur',
+    category: 'Sports Arena',
+    type: 'Sports Arena',
+    desc: 'A state-of-the-art indoor sports arena installation featuring an 80ft x 40ft playing area with 20ft vertical coverage. Utilizing high-quality Parachute 36 netting, our team completed the full custom manufacturing and installation process within a tight 6-hour window.',
+    highlights: ['80ft x 40ft Playing Area', '20-ft Vertical Height', 'Record 6-Hour Express Installation'],
+    year: '2026',
+    badge: 'Custom',
+    gradient: 'linear-gradient(135deg, rgba(26,24,112,0.7), rgba(7,5,26,0.95))',
+    coverImage: '/images/works/mian-indoor-cricket-club-pasru/mian-indoor-cricket-club-pasru-cover.jpg',
+    media: [
+      { type: 'image', url: '/images/works/mian-indoor-cricket-club-pasru/mian-indoor-cricket-club-pasru-cover.jpg' },
+      { type: 'image', url: '/images/works/mian-indoor-cricket-club-pasru/mian-indoor-cricket-club-pasru-1.jpg' },
+      { type: 'image', url: '/images/works/mian-indoor-cricket-club-pasru/mian-indoor-cricket-club-pasru-2.jpg' },
+      { type: 'image', url: '/images/works/mian-indoor-cricket-club-pasru/mian-indoor-cricket-club-pasru-3.jpg' },
+      { type: 'image', url: '/images/works/mian-indoor-cricket-club-pasru/mian-indoor-cricket-club-pasru-4.jpg' },
+      { type: 'image', url: '/images/works/mian-indoor-cricket-club-pasru/mian-indoor-cricket-club-pasru-5.jpg' },
+      { type: 'image', url: '/images/works/mian-indoor-cricket-club-pasru/mian-indoor-cricket-club-pasru-6.jpg' },
+    ]
   }
 ];
 
