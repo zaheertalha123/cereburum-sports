@@ -143,7 +143,7 @@ export const projects = [
   },
   {
     id: 'roof-top-net-sialkot',
-    title: 'Roof Top Net, Sialkot',
+    title: 'Roof Top Net, Gohadpur, Sialkot',
     category: 'Rooftop Net',
     type: 'Rooftop Net',
     desc: 'A precision-engineered rooftop installation in Sialkot, designed to maximize high-altitude playing space while ensuring total ball retention. Utilizing lightweight yet durable Parachute 24, we manufactured and installed this custom net to cover an 84ft x 38ft area with full 20-foot vertical protection.',
@@ -202,6 +202,27 @@ export const projects = [
       { type: 'video', url: '/images/works/sports-arena-wazirabad/sports-arena-wazirabad-4.mp4' }
     ]
   },
+  {
+    id: 'roof-top-net-sialkot-daska-road',
+    title: 'Roof Top Net, Sialkot Daska Road',
+    category: 'Rooftop Net',
+    type: 'Rooftop Net',
+    desc: 'Precision-engineered in Sialkot, this rooftop net maximizes playing space with total ball retention. Custom-manufactured from durable Parachute 60, it covers a 60ft x 20ft area with full 15ft vertical protection.',
+    highlights: ['Parachute 60 High-Tenacity Mesh', '1,200 sq ft Playing Area', '15-ft Full-Perimeter Enclosure'],
+    year: '2026',
+    badge: 'Custom',
+    gradient: 'linear-gradient(135deg, rgba(26,24,112,0.7), rgba(7,5,26,0.95))',
+    coverImage: '/images/works/roof-top-net-sialkot/roof-top-net-sialkot-cover.jpg',
+    media: [
+      { type: 'image', url: '/images/works/roof-top-net-sialkot/roof-top-net-sialkot-cover.jpg' },
+      { type: 'image', url: '/images/works/roof-top-net-sialkot/roof-top-net-sialkot-1.jpg' },
+      { type: 'image', url: '/images/works/roof-top-net-sialkot/roof-top-net-sialkot-2.jpg' },
+      { type: 'image', url: '/images/works/roof-top-net-sialkot/roof-top-net-sialkot-3.jpg' },
+      { type: 'image', url: '/images/works/roof-top-net-sialkot/roof-top-net-sialkot-4.jpg' },
+      { type: 'image', url: '/images/works/roof-top-net-sialkot/roof-top-net-sialkot-5.jpg' },
+      { type: 'image', url: '/images/works/roof-top-net-sialkot/roof-top-net-sialkot-6.jpg' }
+    ]
+  }
 ];
 
 export const projectCategories = ['All', 'Sports Complex', 'Sports Arena', 'Cricket Pitch', 'Folding Net', 'Rooftop Net'];
