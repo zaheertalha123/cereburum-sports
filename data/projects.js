@@ -230,15 +230,14 @@ export const projects = [
     year: '2026',
     badge: 'Custom',
     gradient: 'linear-gradient(135deg, rgba(26,24,112,0.7), rgba(7,5,26,0.95))',
-    coverImage: '/images/works/mian-indoor-cricket-club-pasru/mian-indoor-cricket-club-pasru-cover.jpg',
+    coverImage: '/images/works/mian-indoor-cricket-club-pasrur/mian-indoor-cricket-club-pasrur-cover.jpg',
     media: [
-      { type: 'image', url: '/images/works/mian-indoor-cricket-club-pasru/mian-indoor-cricket-club-pasru-cover.jpg' },
-      { type: 'image', url: '/images/works/mian-indoor-cricket-club-pasru/mian-indoor-cricket-club-pasru-1.jpg' },
-      { type: 'image', url: '/images/works/mian-indoor-cricket-club-pasru/mian-indoor-cricket-club-pasru-2.jpg' },
-      { type: 'image', url: '/images/works/mian-indoor-cricket-club-pasru/mian-indoor-cricket-club-pasru-3.jpg' },
-      { type: 'image', url: '/images/works/mian-indoor-cricket-club-pasru/mian-indoor-cricket-club-pasru-4.jpg' },
-      { type: 'image', url: '/images/works/mian-indoor-cricket-club-pasru/mian-indoor-cricket-club-pasru-5.jpg' },
-      { type: 'image', url: '/images/works/mian-indoor-cricket-club-pasru/mian-indoor-cricket-club-pasru-6.jpg' },
+      { type: 'image', url: '/images/works/mian-indoor-cricket-club-pasrur/mian-indoor-cricket-club-pasrur-cover.jpg' },
+      { type: 'image', url: '/images/works/mian-indoor-cricket-club-pasrur/mian-indoor-cricket-club-pasrur-1.jpg' },
+      { type: 'image', url: '/images/works/mian-indoor-cricket-club-pasrur/mian-indoor-cricket-club-pasrur-2.jpg' },
+      { type: 'image', url: '/images/works/mian-indoor-cricket-club-pasrur/mian-indoor-cricket-club-pasrur-3.jpg' },
+      { type: 'video', url: '/images/works/mian-indoor-cricket-club-pasrur/mian-indoor-cricket-club-pasrur-4.mp4' },
+      { type: 'video', url: '/images/works/mian-indoor-cricket-club-pasrur/mian-indoor-cricket-club-pasrur-5.mp4' }
     ]
   }
 ];
