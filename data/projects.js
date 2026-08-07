@@ -212,15 +212,12 @@ export const projects = [
     year: '2026',
     badge: 'Custom',
     gradient: 'linear-gradient(135deg, rgba(26,24,112,0.7), rgba(7,5,26,0.95))',
-    coverImage: '/images/works/roof-top-net-sialkot/roof-top-net-sialkot-cover.jpg',
+    coverImage: '/images/works/roof-top-net-daska-road-sialkot/roof-top-net-daska-road-sialkot-cover.jpg',
     media: [
-      { type: 'image', url: '/images/works/roof-top-net-sialkot/roof-top-net-sialkot-cover.jpg' },
-      { type: 'image', url: '/images/works/roof-top-net-sialkot/roof-top-net-sialkot-1.jpg' },
-      { type: 'image', url: '/images/works/roof-top-net-sialkot/roof-top-net-sialkot-2.jpg' },
-      { type: 'image', url: '/images/works/roof-top-net-sialkot/roof-top-net-sialkot-3.jpg' },
-      { type: 'image', url: '/images/works/roof-top-net-sialkot/roof-top-net-sialkot-4.jpg' },
-      { type: 'image', url: '/images/works/roof-top-net-sialkot/roof-top-net-sialkot-5.jpg' },
-      { type: 'image', url: '/images/works/roof-top-net-sialkot/roof-top-net-sialkot-6.jpg' }
+      { type: 'image', url: '/images/works/roof-top-net-daska-road-sialkot/roof-top-net-daska-road-sialkot-cover.jpg' },
+      { type: 'image', url: '/images/works/roof-top-net-daska-road-sialkot/roof-top-net-daska-road-sialkot-1.jpg' },
+      { type: 'image', url: '/images/works/roof-top-net-daska-road-sialkot/roof-top-net-daska-road-sialkot-2.jpg' },
+      { type: 'video', url: '/images/works/roof-top-net-daska-road-sialkot/roof-top-net-daska-road-sialkot-3.mp4' }
     ]
   }
 ];
