@@ -151,15 +151,15 @@ export const projects = [
     year: '2025',
     badge: 'Custom',
     gradient: 'linear-gradient(135deg, rgba(26,24,112,0.7), rgba(7,5,26,0.95))',
-    coverImage: '/images/works/roof-top-net-sialkot/roof-top-net-sialkot-cover.jpg',
+    coverImage: '/images/works/roof-top-net-gohadpur-sialkot/roof-top-net-sialkot-cover.jpg',
     media: [
-      { type: 'image', url: '/images/works/roof-top-net-sialkot/roof-top-net-sialkot-cover.jpg' },
-      { type: 'image', url: '/images/works/roof-top-net-sialkot/roof-top-net-sialkot-1.jpg' },
-      { type: 'image', url: '/images/works/roof-top-net-sialkot/roof-top-net-sialkot-2.jpg' },
-      { type: 'image', url: '/images/works/roof-top-net-sialkot/roof-top-net-sialkot-3.jpg' },
-      { type: 'image', url: '/images/works/roof-top-net-sialkot/roof-top-net-sialkot-4.jpg' },
-      { type: 'image', url: '/images/works/roof-top-net-sialkot/roof-top-net-sialkot-5.jpg' },
-      { type: 'image', url: '/images/works/roof-top-net-sialkot/roof-top-net-sialkot-6.jpg' }
+      { type: 'image', url: '/images/works/roof-top-net-gohadpur-sialkot/roof-top-net-sialkot-cover.jpg' },
+      { type: 'image', url: '/images/works/roof-top-net-gohadpur-sialkot/roof-top-net-sialkot-1.jpg' },
+      { type: 'image', url: '/images/works/roof-top-net-gohadpur-sialkot/roof-top-net-sialkot-2.jpg' },
+      { type: 'image', url: '/images/works/roof-top-net-gohadpur-sialkot/roof-top-net-sialkot-3.jpg' },
+      { type: 'image', url: '/images/works/roof-top-net-gohadpur-sialkot/roof-top-net-sialkot-4.jpg' },
+      { type: 'image', url: '/images/works/roof-top-net-gohadpur-sialkot/roof-top-net-sialkot-5.jpg' },
+      { type: 'image', url: '/images/works/roof-top-net-gohadpur-sialkot/roof-top-net-sialkot-6.jpg' }
     ]
   },
   {
@@ -204,7 +204,7 @@ export const projects = [
   },
   {
     id: 'roof-top-net-sialkot-daska-road',
-    title: 'Roof Top Net, Sialkot Daska Road',
+    title: 'Roof Top Net,Daska Road, Sialkot',
     category: 'Rooftop Net',
     type: 'Rooftop Net',
     desc: 'Precision-engineered in Sialkot, this rooftop net maximizes playing space with total ball retention. Custom-manufactured from durable Parachute 60, it covers a 60ft x 20ft area with full 15ft vertical protection.',
