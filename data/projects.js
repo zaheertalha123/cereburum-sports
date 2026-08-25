@@ -239,6 +239,27 @@ export const projects = [
       { type: 'video', url: '/images/works/mian-indoor-cricket-club-pasrur/mian-indoor-cricket-club-pasrur-4.mp4' },
       { type: 'video', url: '/images/works/mian-indoor-cricket-club-pasrur/mian-indoor-cricket-club-pasrur-5.mp4' }
     ]
+  },
+  {
+    id: 'circket-arena-mirpur',
+    title: 'Circket Arena, Mirpur',
+    category: 'Sports Arena',
+    type: 'Sports Arena',
+    desc: 'A state-of-the-art indoor sports ground installation featuring a 100ft x 65ft playing area with 30ft vertical coverage. Built for maximum durability, the facility features high-grade Parachute 36 side netting and Parachute 24 roof coverage, custom-manufactured and precision-installed by our team.',
+    highlights: ['100ft x 65ft Playing Area', '30ft Vertical Height', 'Parachute 36 & 24 Netting', 'Custom Manufacture & Fast Installation'],
+    year: '2026',
+    badge: 'Custom',
+    gradient: 'linear-gradient(135deg, rgba(26,24,112,0.7), rgba(7,5,26,0.95))',
+    coverImage: '/images/works/circket-arena-mirpur/circket-arena-mirpur-1.jpg',
+    media: [
+      { type: 'image', url: '/images/works/circket-arena-mirpur/circket-arena-mirpur-1.jpg' },
+      { type: 'image', url: '/images/works/circket-arena-mirpur/circket-arena-mirpur-2.jpg' },
+      { type: 'image', url: '/images/works/circket-arena-mirpur/circket-arena-mirpur-3.jpg' },
+      { type: 'image', url: '/images/works/circket-arena-mirpur/circket-arena-mirpur-4.jpg' },
+      { type: 'image', url: '/images/works/circket-arena-mirpur/circket-arena-mirpur-5.jpg' },
+      { type: 'video', url: '/images/works/circket-arena-mirpur/circket-arena-mirpur-6.mp4' },
+      { type: 'video', url: '/images/works/circket-arena-mirpur/circket-arena-mirpur-7.mp4' }
+    ]
   }
 ];
 
