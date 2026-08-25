@@ -304,6 +304,25 @@ export const projects = [
       { type: 'video', url: '/images/works/sports-complex-mardan/sports-complex-mardan-6.mp4' },
       { type: 'video', url: '/images/works/sports-complex-mardan/sports-complex-mardan-7.mp4' }
     ]
+  },
+  {
+    id: 'house-roof-top-net-sialkot',
+    title: 'House Roof Top Net, Sialkot',
+    category: 'Rooftop Net',
+    type: 'Rooftop Net',
+    desc: 'A heavy-duty rooftop sports enclosure custom-manufactured in Sialkot, featuring a specialized L-shaped layout tailored to maximize roof surface area. Built to withstand high wind exposure and harsh outdoor conditions, the entire setup utilizes ultra-durable Parachute 60 netting to deliver maximum tensile strength, impact absorption, and long-lasting safety for rooftop play.',
+    highlights: ["Custom L-Shaped Roof Layout", "Parachute 60 Netting", "High Wind & Weather Resistant", "Rooftop Safety Enclosure"],
+    year: '2025',
+    badge: 'Custom',
+    gradient: 'linear-gradient(135deg, rgba(26,24,112,0.7), rgba(7,5,26,0.95))',
+    coverImage: '/images/works/house-roof-top-net-sialkot/house-roof-top-net-sialkot-1.jpg',
+    media: [
+      { type: 'image', url: '/images/works/house-roof-top-net-sialkot/house-roof-top-net-sialkot-1.jpg' },
+      { type: 'image', url: '/images/works/house-roof-top-net-sialkot/house-roof-top-net-sialkot-2.jpg' },
+      { type: 'image', url: '/images/works/house-roof-top-net-sialkot/house-roof-top-net-sialkot-3.jpg' },
+      { type: 'image', url: '/images/works/house-roof-top-net-sialkot/house-roof-top-net-sialkot-4.jpg' },
+      { type: 'video', url: '/images/works/house-roof-top-net-sialkot/house-roof-top-net-sialkot-5.mp4' }
+    ]
   }
 ];
 
