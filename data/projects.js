@@ -283,6 +283,27 @@ export const projects = [
       { type: 'video', url: '/images/works/bloomfield-hall-school-khariyan/bloomfield-hall-school-khariyan-8.mp4' },
       { type: 'video', url: '/images/works/bloomfield-hall-school-khariyan/bloomfield-hall-school-khariyan-9.mp4' }
     ]
+  },
+  {
+    id: 'sports-complex-mardan',
+    title: 'Sports Complex, Mardan',
+    category: 'Sports Complex',
+    type: 'Sports Complex',
+    desc: 'A state-of-the-art sports arena enclosure installed at a sports complex in Mardan, featuring a 90ft x 45ft playing area with 30ft vertical height coverage. Engineered for high-impact durability and safety, the complete netting system was custom-manufactured and fully installed overnight in a single-night express execution by our expert team.',
+    highlights: ["90ft x 45ft Playing Area", "30ft Vertical Height", "Overnight Express Installation", "Custom Heavy-Duty Netting"],
+    year: '2026',
+    badge: 'Custom',
+    gradient: 'linear-gradient(135deg, rgba(26,24,112,0.7), rgba(7,5,26,0.95))',
+    coverImage: '/images/works/sports-complex-mardan/sports-complex-mardan-1.jpg',
+    media: [
+      { type: 'image', url: '/images/works/sports-complex-mardan/sports-complex-mardan-1.jpg' },
+      { type: 'image', url: '/images/works/sports-complex-mardan/sports-complex-mardan-2.jpg' },
+      { type: 'image', url: '/images/works/sports-complex-mardan/sports-complex-mardan-3.jpg' },
+      { type: 'image', url: '/images/works/sports-complex-mardan/sports-complex-mardan-4.jpg' },
+      { type: 'video', url: '/images/works/sports-complex-mardan/sports-complex-mardan-5.mp4' },
+      { type: 'video', url: '/images/works/sports-complex-mardan/sports-complex-mardan-6.mp4' },
+      { type: 'video', url: '/images/works/sports-complex-mardan/sports-complex-mardan-7.mp4' }
+    ]
   }
 ];
 
