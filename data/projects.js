@@ -260,6 +260,29 @@ export const projects = [
       { type: 'video', url: '/images/works/circket-arena-mirpur/circket-arena-mirpur-6.mp4' },
       { type: 'video', url: '/images/works/circket-arena-mirpur/circket-arena-mirpur-7.mp4' }
     ]
+  },
+  {
+    id: 'bloomfield-hall-school-khariyan',
+    title: 'Bloomfield Hall School, Khariyan',
+    category: 'Sports Complex',
+    type: 'Sports Complex',
+    desc: 'A professional indoor sports enclosure installation designed for school grounds, featuring a 40ft x 40ft playing area with 20ft vertical height. Built to withstand continuous daily student use, the setup utilizes durable Parachute 36 netting for high-impact side protection and lightweight Parachute 24 netting for full roof coverage—ensuring maximum safety and ball retention.',
+    highlights: ["40ft x 40ft Footprint", "20ft Height", "Parachute 36 Sides", "Parachute 24 Roof", "School Safety Approved"],
+    year: '2026',
+    badge: 'Custom',
+    gradient: 'linear-gradient(135deg, rgba(26,24,112,0.7), rgba(7,5,26,0.95))',
+    coverImage: '/images/works/bloomfield-hall-school-khariyan/bloomfield-hall-school-khariyan-1.jpg',
+    media: [
+      { type: 'image', url: '/images/works/bloomfield-hall-school-khariyan/bloomfield-hall-school-khariyan-1.jpg' },
+      { type: 'image', url: '/images/works/bloomfield-hall-school-khariyan/bloomfield-hall-school-khariyan-2.jpg' },
+      { type: 'image', url: '/images/works/bloomfield-hall-school-khariyan/bloomfield-hall-school-khariyan-3.jpg' },
+      { type: 'image', url: '/images/works/bloomfield-hall-school-khariyan/bloomfield-hall-school-khariyan-4.jpg' },
+      { type: 'image', url: '/images/works/bloomfield-hall-school-khariyan/bloomfield-hall-school-khariyan-5.jpg' },
+      { type: 'image', url: '/images/works/bloomfield-hall-school-khariyan/bloomfield-hall-school-khariyan-6.jpg' },
+      { type: 'video', url: '/images/works/bloomfield-hall-school-khariyan/bloomfield-hall-school-khariyan-7.mp4' },
+      { type: 'video', url: '/images/works/bloomfield-hall-school-khariyan/bloomfield-hall-school-khariyan-8.mp4' },
+      { type: 'video', url: '/images/works/bloomfield-hall-school-khariyan/bloomfield-hall-school-khariyan-9.mp4' }
+    ]
   }
 ];
 
