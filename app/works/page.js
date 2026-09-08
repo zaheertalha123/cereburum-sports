@@ -1,3 +1,4 @@
+import { Suspense } from 'react';
 import ClientWorksPage from './ClientWorksPage';
 import { projects, projectCategories as categories } from '../../data/projects';
 
@@ -8,5 +9,9 @@ export const metadata = {
 };
 
 export default function WorksPage() {
-  return <ClientWorksPage projects={projects} categories={categories} />;
+  return (
+    <Suspense fallback={null}>
+      <ClientWorksPage projects={projects} categories={categories} />
+    </Suspense>
+  );
 }

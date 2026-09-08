@@ -1,16 +1,42 @@
 'use client';
 
-import { useState } from 'react';
+import { useCallback } from 'react';
+import { useSearchParams, useRouter, usePathname } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from './works.module.css';
 
-export default function ClientWorksPage({ projects, categories }) {
-  const [activeCategory, setActiveCategory] = useState('All');
+const FILTER_PARAM = 'filter';
 
-  const filteredProjects = activeCategory === 'All' 
-    ? projects 
-    : projects.filter(p => p.category === activeCategory);
+function resolveFilter(value, categories) {
+  return value && categories.includes(value) ? value : 'All';
+}
+
+export default function ClientWorksPage({ projects, categories }) {
+  const searchParams = useSearchParams();
+  const router = useRouter();
+  const pathname = usePathname();
+
+  const activeCategory = resolveFilter(searchParams.get(FILTER_PARAM), categories);
+
+  const setActiveCategory = useCallback(
+    (cat) => {
+      const params = new URLSearchParams(searchParams.toString());
+      if (cat === 'All') {
+        params.delete(FILTER_PARAM);
+      } else {
+        params.set(FILTER_PARAM, cat);
+      }
+      const query = params.toString();
+      router.replace(query ? `${pathname}?${query}` : pathname, { scroll: false });
+    },
+    [pathname, router, searchParams],
+  );
+
+  const filteredProjects =
+    activeCategory === 'All'
+      ? projects
+      : projects.filter((p) => p.category === activeCategory);
 
   return (
     <>
