@@ -1,18 +1,42 @@
 'use client';
 
-import { useState } from 'react';
+import { useCallback } from 'react';
+import { useSearchParams, useRouter, usePathname } from 'next/navigation';
 import Image from 'next/image';
 import styles from './products.module.css';
 
+const FILTER_OPTIONS = ['All', 'Cricket', 'Football', 'Badminton', 'Futsal', 'Hockey', 'Custom'];
+const FILTER_PARAM = 'filter';
+
+function resolveFilter(value) {
+  return FILTER_OPTIONS.includes(value) ? value : 'All';
+}
 
 export default function ClientProductsPage({ categories }) {
-  // Adding synthetic filter options based on product types
-  const filterOptions = ['All', 'Cricket', 'Football', 'Badminton', 'Futsal', "Hockey", 'Custom'];
-  const [activeFilter, setActiveFilter] = useState('All');
+  const searchParams = useSearchParams();
+  const router = useRouter();
+  const pathname = usePathname();
 
-  const filteredCategories = activeFilter === 'All'
-    ? categories
-    : categories.filter(cat => cat.filterGroup === activeFilter);
+  const activeFilter = resolveFilter(searchParams.get(FILTER_PARAM));
+
+  const setActiveFilter = useCallback(
+    (opt) => {
+      const params = new URLSearchParams(searchParams.toString());
+      if (opt === 'All') {
+        params.delete(FILTER_PARAM);
+      } else {
+        params.set(FILTER_PARAM, opt);
+      }
+      const query = params.toString();
+      router.replace(query ? `${pathname}?${query}` : pathname, { scroll: false });
+    },
+    [pathname, router, searchParams],
+  );
+
+  const filteredCategories =
+    activeFilter === 'All'
+      ? categories
+      : categories.filter((cat) => cat.filterGroup === activeFilter);
 
   return (
     <>
@@ -34,7 +58,7 @@ export default function ClientProductsPage({ categories }) {
           </p>
 
           <div className={styles.filterRow} role="list" aria-label="Product categories">
-            {filterOptions.map((opt) => (
+            {FILTER_OPTIONS.map((opt) => (
               <button
                 key={opt}
                 onClick={() => setActiveFilter(opt)}

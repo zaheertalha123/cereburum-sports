@@ -1,3 +1,4 @@
+import { Suspense } from 'react';
 import ClientProductsPage from './ClientProductsPage';
 
 export const metadata = {
@@ -372,5 +373,9 @@ const categories = [
 ];
 
 export default function ProductsPage() {
-  return <ClientProductsPage categories={categories} />;
+  return (
+    <Suspense fallback={null}>
+      <ClientProductsPage categories={categories} />
+    </Suspense>
+  );
 }
