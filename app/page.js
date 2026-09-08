@@ -25,13 +25,15 @@ const products = [
     title: 'Cricket Netting',
     desc: 'Professional-grade cricket nets for academies, clubs, and outdoor grounds. Custom sizing available.',
     tag: 'Best Seller',
+    filter: 'Cricket',
   },
   {
-    id: 'volleyball-nets',
-    icon: '🏐',
-    title: 'Volleyball Nets',
-    desc: 'Tournament-grade volleyball nets for indoor courts and outdoor sand courts. Durable mesh, adjustable height systems available.',
+    id: 'badminton-nets',
+    icon: '🏸',
+    title: 'Badminton Nets',
+    desc: 'Tournament-grade badminton nets for indoor courts and clubs. Regulation mesh, steel wire options, and custom colors available.',
     tag: null,
+    filter: 'Badminton',
   },
   {
     id: 'football-nets',
@@ -39,6 +41,7 @@ const products = [
     title: 'Football Goal Nets',
     desc: 'Premium goal nets and boundary netting for football pitches of all sizes. Weatherproof materials.',
     tag: null,
+    filter: 'Football',
   },
   {
     id: 'custom',
@@ -46,6 +49,7 @@ const products = [
     title: 'Custom Netting Solutions',
     desc: 'Bespoke netting solutions designed to your exact specifications — size, material, color, and installation.',
     tag: 'Tailored',
+    filter: 'Custom',
   },
 ];
 
@@ -145,7 +149,10 @@ export default function HomePage() {
                 <div className={styles.productIcon} aria-hidden="true">{product.icon}</div>
                 <h3 className={`heading-md ${styles.productTitle}`}>{product.title}</h3>
                 <p className={`body-md ${styles.productDesc}`}>{product.desc}</p>
-                <Link href="/products" className={`btn btn-outline btn-sm ${styles.productBtn}`}>
+                <Link
+                  href={product.filter ? `/products?filter=${encodeURIComponent(product.filter)}` : '/products'}
+                  className={`btn btn-outline btn-sm ${styles.productBtn}`}
+                >
                   Learn More
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true">
                     <path d="M5 12h14M12 5l7 7-7 7" />
