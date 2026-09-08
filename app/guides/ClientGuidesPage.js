@@ -1,13 +1,36 @@
 'use client';
 
-import { useState } from 'react';
+import { useCallback } from 'react';
+import { useSearchParams, useRouter, usePathname } from 'next/navigation';
 import Image from 'next/image';
 import styles from './guides.module.css';
 
-const filterOptions = ['All', 'Installation', 'Making', 'Lights', 'Ground'];
+const FILTER_PARAM = 'filter';
 
-export default function ClientGuidesPage({ guides }) {
-  const [activeFilter, setActiveFilter] = useState('All');
+function resolveFilter(value, categories) {
+  return value && categories.includes(value) ? value : 'All';
+}
+
+export default function ClientGuidesPage({ guides, categories }) {
+  const searchParams = useSearchParams();
+  const router = useRouter();
+  const pathname = usePathname();
+
+  const activeFilter = resolveFilter(searchParams.get(FILTER_PARAM), categories);
+
+  const setActiveFilter = useCallback(
+    (opt) => {
+      const params = new URLSearchParams(searchParams.toString());
+      if (opt === 'All') {
+        params.delete(FILTER_PARAM);
+      } else {
+        params.set(FILTER_PARAM, opt);
+      }
+      const query = params.toString();
+      router.replace(query ? `${pathname}?${query}` : pathname, { scroll: false });
+    },
+    [pathname, router, searchParams],
+  );
 
   const filtered =
     activeFilter === 'All'
@@ -45,7 +68,7 @@ export default function ClientGuidesPage({ guides }) {
             role="list"
             aria-label="Guide categories"
           >
-            {filterOptions.map((opt) => (
+            {categories.map((opt) => (
               <button
                 key={opt}
                 onClick={() => setActiveFilter(opt)}
