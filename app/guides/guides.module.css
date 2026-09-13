@@ -94,6 +94,12 @@
 }
 
 /* ── GUIDE CARD ──────────────────────────────────────────── */
+.guideCardLink {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
 .guideCard {
   background: var(--gradient-card);
   border: 1px solid rgba(187, 181, 101, 0.12);
@@ -114,7 +120,6 @@
   transform: translateY(-4px);
 }
 
-/* Image area — not a link, just display */
 .guideVisual {
   position: relative;
   width: 100%;
@@ -167,44 +172,6 @@
 .cardDesc {
   color: var(--gray-400);
   margin: 0;
-}
-
-/* Steps */
-.stepList {
-  display: flex;
-  flex-direction: column;
-  gap: 0.65rem;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.stepItem {
-  display: flex;
-  gap: 0.75rem;
-  align-items: flex-start;
-}
-
-.stepNum {
-  flex-shrink: 0;
-  width: 22px;
-  height: 22px;
-  border-radius: 50%;
-  background: rgba(187, 181, 101, 0.12);
-  border: 1px solid rgba(187, 181, 101, 0.3);
-  color: var(--sand);
-  font-size: 0.7rem;
-  font-weight: 700;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 1px;
-}
-
-.stepText {
-  font-size: 0.855rem;
-  color: var(--gray-200);
-  line-height: 1.55;
 }
 
 /* ── MOBILE ──────────────────────────────────────────────── */

@@ -2,6 +2,7 @@
 
 import { useCallback } from 'react';
 import { useSearchParams, useRouter, usePathname } from 'next/navigation';
+import Link from 'next/link';
 import Image from 'next/image';
 import styles from './guides.module.css';
 
@@ -90,55 +91,37 @@ export default function ClientGuidesPage({ guides, categories }) {
         <div className="container">
           <div className={styles.guidesGrid}>
             {filtered.map((guide, i) => (
-              <article
+              <Link
                 key={guide.id}
-                id={guide.id}
-                className={`${styles.guideCard} reveal`}
+                href={`/guides/${guide.id}`}
+                className={`${styles.guideCardLink} reveal`}
                 style={{ transitionDelay: `${(i % 3) * 0.1}s` }}
-                aria-label={guide.title}
+                aria-label={`View guide: ${guide.title}`}
               >
-                {/* Image — displayed inline, not clickable */}
-                <div className={styles.guideVisual}>
-                  <Image
-                    src={guide.image}
-                    alt={guide.title}
-                    fill
-                    className={styles.guideImage}
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                  />
-                </div>
-
-                {/* Card body */}
-                <div className={styles.cardBody}>
-                  <div className={styles.cardMeta}>
-                    <span className={styles.categoryBadge}>
-                      {guide.category}
-                    </span>
+                <article className={styles.guideCard}>
+                  <div className={styles.guideVisual}>
+                    <Image
+                      src={guide.image}
+                      alt={guide.title}
+                      fill
+                      className={styles.guideImage}
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                    />
                   </div>
-                  <h2 className={`heading-md ${styles.cardTitle}`}>
-                    {guide.title}
-                  </h2>
-                  <p className={`body-sm ${styles.cardDesc}`}>{guide.desc}</p>
 
-                  {/* Steps */}
-                  <ol
-                    className={styles.stepList}
-                    aria-label={`${guide.title} steps`}
-                  >
-                    {guide.steps.map((step, si) => (
-                      <li key={si} className={styles.stepItem}>
-                        <span
-                          className={styles.stepNum}
-                          aria-hidden="true"
-                        >
-                          {si + 1}
-                        </span>
-                        <span className={styles.stepText}>{step}</span>
-                      </li>
-                    ))}
-                  </ol>
-                </div>
-              </article>
+                  <div className={styles.cardBody}>
+                    <div className={styles.cardMeta}>
+                      <span className={styles.categoryBadge}>
+                        {guide.category}
+                      </span>
+                    </div>
+                    <h2 className={`heading-md ${styles.cardTitle}`}>
+                      {guide.title}
+                    </h2>
+                    <p className={`body-sm ${styles.cardDesc}`}>{guide.desc}</p>
+                  </div>
+                </article>
+              </Link>
             ))}
           </div>
         </div>

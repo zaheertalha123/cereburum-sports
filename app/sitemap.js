@@ -1,4 +1,5 @@
 import { projects } from '@/data/projects';
+import { guides } from '@/data/guides';
 import { getSiteUrl } from '@/lib/siteUrl';
 
 const BASE_URL = getSiteUrl();
@@ -25,5 +26,12 @@ export default function sitemap() {
     priority: 0.75,
   }));
 
-  return [...staticEntries, ...projectEntries];
+  const guideEntries = guides.map((guide) => ({
+    url: `${BASE_URL}/guides/${guide.id}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly',
+    priority: 0.7,
+  }));
+
+  return [...staticEntries, ...projectEntries, ...guideEntries];
 }
