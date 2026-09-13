@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "upload:guides-r2": "node --env-file=.env scripts/upload-guides-to-r2.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
@@ -16,5 +17,8 @@
     "react-dom": "19.2.4",
     "react-hook-form": "^7.75.0",
     "zod": "^4.4.2"
+  },
+  "devDependencies": {
+    "@aws-sdk/client-s3": "^3.1131.0"
   }
 }
