@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "upload:guides-r2": "node --env-file=.env scripts/upload-guides-to-r2.mjs"
+    "upload:guides-r2": "node --env-file=.env scripts/upload-guides-to-r2.mjs",
+    "upload:products-r2": "node --env-file=.env scripts/upload-products-to-r2.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
