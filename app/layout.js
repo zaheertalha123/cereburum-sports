@@ -4,6 +4,7 @@ import Footer from '@/components/Footer';
 import WhatsAppFAB from '@/components/WhatsAppFAB';
 import ScrollReveal from '@/components/ScrollReveal';
 import { Analytics } from '@vercel/analytics/next';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import { getSiteUrl } from '@/lib/siteUrl';
 
 const siteUrl = getSiteUrl();
@@ -64,6 +65,7 @@ export default function RootLayout({ children }) {
         <Footer />
         <WhatsAppFAB />
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
