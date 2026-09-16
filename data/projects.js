@@ -1,4 +1,6 @@
-export const projects = [
+import { mediaUrl } from '../lib/mediaUrl';
+
+const rawProjects = [
   {
     id: 'cricket-arena-nowshera',
     title: 'Professional Cricket Arena, Nowshera',
@@ -325,5 +327,19 @@ export const projects = [
     ]
   }
 ];
+
+function withMediaUrls(project) {
+  return {
+    ...project,
+    coverImage: project.coverImage ? mediaUrl(project.coverImage) : project.coverImage,
+    media: project.media.map((item) => ({
+      ...item,
+      url: mediaUrl(item.url),
+      ...(item.poster ? { poster: mediaUrl(item.poster) } : {}),
+    })),
+  };
+}
+
+export const projects = rawProjects.map(withMediaUrls);
 
 export const projectCategories = ['All', 'Sports Complex', 'Sports Arena', 'Cricket Pitch', 'Folding Net', 'Rooftop Net'];
