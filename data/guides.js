@@ -5,7 +5,7 @@ export const guides = [
     id: 'corner-door-installation',
     title: 'Corner Door',
     category: 'Installation',
-    image: mediaUrl('/images/guides/corner-door/corner-door-02.jpg'),    
+    image: mediaUrl('/images/guides/corner-door/corner-door-02.webp'),    
     desc: 'A step-by-step walkthrough for building, framing, and netting a heavy-duty tubular steel corner entrance door for sports arenas.',
     steps: [
       'Measure the corner span and fabricate an outer support post frame aligned with the corner netting structure.',
@@ -16,11 +16,11 @@ export const guides = [
     ],
     images: [
       {
-        url: mediaUrl('/images/guides/corner-door/corner-door-01.jpg'),
+        url: mediaUrl('/images/guides/corner-door/corner-door-01.webp'),
         alt: 'Corner door steel frame with fabrication inner view',
       },
       {
-        url: mediaUrl('/images/guides/corner-door/corner-door-02.jpg'),
+        url: mediaUrl('/images/guides/corner-door/corner-door-02.webp'),
         alt: 'Corner door steel frame with fabrication outer view',
       },
     ],

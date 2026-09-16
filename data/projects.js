@@ -9,15 +9,15 @@ export const projects = [
     year: '2025',
     badge: 'Featured',
     gradient: 'linear-gradient(135deg, rgba(18,17,74,0.9), rgba(7,5,26,0.95))',
-    coverImage: '/images/works/cricket-arena-nowshera/cricket-arena-nowshera-cover.jpg',
+    coverImage: '/images/works/cricket-arena-nowshera/cricket-arena-nowshera-cover.webp',
     media: [
-      { type: 'image', url: '/images/works/cricket-arena-nowshera/cricket-arena-nowshera-cover.jpg' },
-      { type: 'image', url: '/images/works/cricket-arena-nowshera/cricket-arena-nowshera-1.jpg', alt: 'Main nets view' },
-      { type: 'image', url: '/images/works/cricket-arena-nowshera/cricket-arena-nowshera-2.jpg' },
-      { type: 'image', url: '/images/works/cricket-arena-nowshera/cricket-arena-nowshera-3.jpg' },
-      { type: 'image', url: '/images/works/cricket-arena-nowshera/cricket-arena-nowshera-4.jpg' },
-      { type: 'image', url: '/images/works/cricket-arena-nowshera/cricket-arena-nowshera-5.jpg' },
-      { type: 'image', url: '/images/works/cricket-arena-nowshera/cricket-arena-nowshera-6.jpg' }
+      { type: 'image', url: '/images/works/cricket-arena-nowshera/cricket-arena-nowshera-cover.webp' },
+      { type: 'image', url: '/images/works/cricket-arena-nowshera/cricket-arena-nowshera-1.webp', alt: 'Main nets view' },
+      { type: 'image', url: '/images/works/cricket-arena-nowshera/cricket-arena-nowshera-2.webp' },
+      { type: 'image', url: '/images/works/cricket-arena-nowshera/cricket-arena-nowshera-3.webp' },
+      { type: 'image', url: '/images/works/cricket-arena-nowshera/cricket-arena-nowshera-4.webp' },
+      { type: 'image', url: '/images/works/cricket-arena-nowshera/cricket-arena-nowshera-5.webp' },
+      { type: 'image', url: '/images/works/cricket-arena-nowshera/cricket-arena-nowshera-6.webp' }
       // { type: 'video', url: 'https://res.cloudinary.com/your-cloud/video/upload/demo.mp4', poster: '/images/works/cricket-academy/poster.jpg' }
     ]
   },
@@ -31,15 +31,15 @@ export const projects = [
     year: '2024',
     badge: 'Custom',
     gradient: 'linear-gradient(135deg, rgba(26,24,112,0.7), rgba(7,5,26,0.95))',
-    coverImage: '/images/works/sports-complex-sahiwal/sports-complex-sahiwal-cover.jpeg',
+    coverImage: '/images/works/sports-complex-sahiwal/sports-complex-sahiwal-cover.webp',
     media: [
-      { type: 'image', url: '/images/works/sports-complex-sahiwal/sports-complex-sahiwal-cover.jpeg' },
-      { type: 'image', url: '/images/works/sports-complex-sahiwal/sports-complex-sahiwal-1.jpeg' },
-      { type: 'image', url: '/images/works/sports-complex-sahiwal/sports-complex-sahiwal-2.jpeg' },
-      { type: 'image', url: '/images/works/sports-complex-sahiwal/sports-complex-sahiwal-3.jpeg' },
-      { type: 'image', url: '/images/works/sports-complex-sahiwal/sports-complex-sahiwal-4.jpeg' },
-      { type: 'video', url: '/images/works/sports-complex-sahiwal/sports-complex-sahiwal-5.mp4', poster: '/images/works/sports-complex-sahiwal/sports-complex-sahiwal-5-poster.jpeg' },
-      { type: 'video', url: '/images/works/sports-complex-sahiwal/sports-complex-sahiwal-6.mp4', poster: '/images/works/sports-complex-sahiwal/sports-complex-sahiwal-6-poster.jpeg' },
+      { type: 'image', url: '/images/works/sports-complex-sahiwal/sports-complex-sahiwal-cover.webp' },
+      { type: 'image', url: '/images/works/sports-complex-sahiwal/sports-complex-sahiwal-1.webp' },
+      { type: 'image', url: '/images/works/sports-complex-sahiwal/sports-complex-sahiwal-2.webp' },
+      { type: 'image', url: '/images/works/sports-complex-sahiwal/sports-complex-sahiwal-3.webp' },
+      { type: 'image', url: '/images/works/sports-complex-sahiwal/sports-complex-sahiwal-4.webp' },
+      { type: 'video', url: '/images/works/sports-complex-sahiwal/sports-complex-sahiwal-5.mp4', poster: '/images/works/sports-complex-sahiwal/sports-complex-sahiwal-5-poster.webp' },
+      { type: 'video', url: '/images/works/sports-complex-sahiwal/sports-complex-sahiwal-6.mp4', poster: '/images/works/sports-complex-sahiwal/sports-complex-sahiwal-6-poster.webp' },
     ]
   },
   {
@@ -52,13 +52,13 @@ export const projects = [
     year: '2022',
     badge: 'Custom',
     gradient: 'linear-gradient(135deg, rgba(26,24,112,0.7), rgba(7,5,26,0.95))',
-    coverImage: '/images/works/folding-net-islamabad/folding-net-islamabad-cover.jpg',
+    coverImage: '/images/works/folding-net-islamabad/folding-net-islamabad-cover.webp',
     media: [
-      { type: 'image', url: '/images/works/folding-net-islamabad/folding-net-islamabad-cover.jpg' },
-      { type: 'image', url: '/images/works/folding-net-islamabad/folding-net-islamabad-1.jpg' },
-      { type: 'image', url: '/images/works/folding-net-islamabad/folding-net-islamabad-2.jpg' },
-      { type: 'image', url: '/images/works/folding-net-islamabad/folding-net-islamabad-3.jpg' },
-      { type: 'image', url: '/images/works/folding-net-islamabad/folding-net-islamabad-4.jpg' },
+      { type: 'image', url: '/images/works/folding-net-islamabad/folding-net-islamabad-cover.webp' },
+      { type: 'image', url: '/images/works/folding-net-islamabad/folding-net-islamabad-1.webp' },
+      { type: 'image', url: '/images/works/folding-net-islamabad/folding-net-islamabad-2.webp' },
+      { type: 'image', url: '/images/works/folding-net-islamabad/folding-net-islamabad-3.webp' },
+      { type: 'image', url: '/images/works/folding-net-islamabad/folding-net-islamabad-4.webp' },
     ]
   },
   {
@@ -71,13 +71,13 @@ export const projects = [
     year: '2024',
     badge: 'Custom',
     gradient: 'linear-gradient(135deg, rgba(26,24,112,0.7), rgba(7,5,26,0.95))',
-    coverImage: '/images/works/sports-arena-gujranwala/sports-arena-gujranwala-cover.jpg',
+    coverImage: '/images/works/sports-arena-gujranwala/sports-arena-gujranwala-cover.webp',
     media: [
-      { type: 'image', url: '/images/works/sports-arena-gujranwala/sports-arena-gujranwala-cover.jpg' },
-      { type: 'image', url: '/images/works/sports-arena-gujranwala/sports-arena-gujranwala-1.jpg' },
-      { type: 'image', url: '/images/works/sports-arena-gujranwala/sports-arena-gujranwala-2.jpg' },
-      { type: 'image', url: '/images/works/sports-arena-gujranwala/sports-arena-gujranwala-3.jpg' },
-      { type: 'image', url: '/images/works/sports-arena-gujranwala/sports-arena-gujranwala-4.jpg' },
+      { type: 'image', url: '/images/works/sports-arena-gujranwala/sports-arena-gujranwala-cover.webp' },
+      { type: 'image', url: '/images/works/sports-arena-gujranwala/sports-arena-gujranwala-1.webp' },
+      { type: 'image', url: '/images/works/sports-arena-gujranwala/sports-arena-gujranwala-2.webp' },
+      { type: 'image', url: '/images/works/sports-arena-gujranwala/sports-arena-gujranwala-3.webp' },
+      { type: 'image', url: '/images/works/sports-arena-gujranwala/sports-arena-gujranwala-4.webp' },
     ]
   },
   {
@@ -90,16 +90,16 @@ export const projects = [
     year: '2023',
     badge: 'Custom',
     gradient: 'linear-gradient(135deg, rgba(26,24,112,0.7), rgba(7,5,26,0.95))',
-    coverImage: '/images/works/cricket-pitch-layyah/cricket-pitch-layyah-cover.jpg',
+    coverImage: '/images/works/cricket-pitch-layyah/cricket-pitch-layyah-cover.webp',
     media: [
-      { type: 'image', url: '/images/works/cricket-pitch-layyah/cricket-pitch-layyah-cover.jpg' },
-      { type: 'image', url: '/images/works/cricket-pitch-layyah/cricket-pitch-layyah-1.jpg' },
-      { type: 'image', url: '/images/works/cricket-pitch-layyah/cricket-pitch-layyah-2.jpg' },
-      { type: 'image', url: '/images/works/cricket-pitch-layyah/cricket-pitch-layyah-3.jpg' },
-      { type: 'image', url: '/images/works/cricket-pitch-layyah/cricket-pitch-layyah-4.jpg' },
-      { type: 'image', url: '/images/works/cricket-pitch-layyah/cricket-pitch-layyah-5.jpg' },
-      { type: 'image', url: '/images/works/cricket-pitch-layyah/cricket-pitch-layyah-6.jpg' },
-      { type: 'image', url: '/images/works/cricket-pitch-layyah/cricket-pitch-layyah-7.jpg' },
+      { type: 'image', url: '/images/works/cricket-pitch-layyah/cricket-pitch-layyah-cover.webp' },
+      { type: 'image', url: '/images/works/cricket-pitch-layyah/cricket-pitch-layyah-1.webp' },
+      { type: 'image', url: '/images/works/cricket-pitch-layyah/cricket-pitch-layyah-2.webp' },
+      { type: 'image', url: '/images/works/cricket-pitch-layyah/cricket-pitch-layyah-3.webp' },
+      { type: 'image', url: '/images/works/cricket-pitch-layyah/cricket-pitch-layyah-4.webp' },
+      { type: 'image', url: '/images/works/cricket-pitch-layyah/cricket-pitch-layyah-5.webp' },
+      { type: 'image', url: '/images/works/cricket-pitch-layyah/cricket-pitch-layyah-6.webp' },
+      { type: 'image', url: '/images/works/cricket-pitch-layyah/cricket-pitch-layyah-7.webp' },
     ]
   },
   {
@@ -112,14 +112,14 @@ export const projects = [
     year: '2026',
     badge: 'Custom',
     gradient: 'linear-gradient(135deg, rgba(26,24,112,0.7), rgba(7,5,26,0.95))',
-    coverImage: '/images/works/sports-arena-peshawar/sports-arena-peshawar-cover.jpg',
+    coverImage: '/images/works/sports-arena-peshawar/sports-arena-peshawar-cover.webp',
     media: [
-      { type: 'image', url: '/images/works/sports-complex-peshawar/sports-complex-peshawar-cover.jpg' },
-      { type: 'image', url: '/images/works/sports-arena-peshawar/sports-arena-peshawar-1.jpg' },
-      { type: 'image', url: '/images/works/sports-arena-peshawar/sports-arena-peshawar-2.jpg' },
-      { type: 'image', url: '/images/works/sports-arena-peshawar/sports-arena-peshawar-3.jpg' },
-      { type: 'image', url: '/images/works/sports-arena-peshawar/sports-arena-peshawar-4.jpg' },
-      { type: 'image', url: '/images/works/sports-arena-peshawar/sports-arena-peshawar-5.jpg' },
+      { type: 'image', url: '/images/works/sports-arena-peshawar/sports-arena-peshawar-cover.webp' },
+      { type: 'image', url: '/images/works/sports-arena-peshawar/sports-arena-peshawar-1.webp' },
+      { type: 'image', url: '/images/works/sports-arena-peshawar/sports-arena-peshawar-2.webp' },
+      { type: 'image', url: '/images/works/sports-arena-peshawar/sports-arena-peshawar-3.webp' },
+      { type: 'image', url: '/images/works/sports-arena-peshawar/sports-arena-peshawar-4.webp' },
+      { type: 'image', url: '/images/works/sports-arena-peshawar/sports-arena-peshawar-5.webp' },
       { type: 'video', url: '/images/works/sports-arena-peshawar/sports-arena-peshawar-6.mp4' },
       { type: 'video', url: '/images/works/sports-arena-peshawar/sports-arena-peshawar-7.mp4' },
     ]
@@ -134,9 +134,9 @@ export const projects = [
     year: '2023',
     badge: 'Custom',
     gradient: 'linear-gradient(135deg, rgba(26,24,112,0.7), rgba(7,5,26,0.95))',
-    coverImage: '/images/works/practice-ground-gujranwala/practice-ground-gujranwala-cover.jpg',
+    coverImage: '/images/works/practice-ground-gujranwala/practice-ground-gujranwala-cover.webp',
     media: [
-      { type: 'image', url: '/images/works/practice-ground-gujranwala/practice-ground-gujranwala-cover.jpg' },
+      { type: 'image', url: '/images/works/practice-ground-gujranwala/practice-ground-gujranwala-cover.webp' },
       { type: 'video', url: '/images/works/practice-ground-gujranwala/practice-ground-gujranwala-1.mp4' },
       { type: 'video', url: '/images/works/practice-ground-gujranwala/practice-ground-gujranwala-2.mp4' },
     ]
@@ -151,15 +151,15 @@ export const projects = [
     year: '2025',
     badge: 'Custom',
     gradient: 'linear-gradient(135deg, rgba(26,24,112,0.7), rgba(7,5,26,0.95))',
-    coverImage: '/images/works/roof-top-net-gohadpur-sialkot/roof-top-net-sialkot-cover.jpg',
+    coverImage: '/images/works/roof-top-net-gohadpur-sialkot/roof-top-net-sialkot-cover.webp',
     media: [
-      { type: 'image', url: '/images/works/roof-top-net-gohadpur-sialkot/roof-top-net-sialkot-cover.jpg' },
-      { type: 'image', url: '/images/works/roof-top-net-gohadpur-sialkot/roof-top-net-sialkot-1.jpg' },
-      { type: 'image', url: '/images/works/roof-top-net-gohadpur-sialkot/roof-top-net-sialkot-2.jpg' },
-      { type: 'image', url: '/images/works/roof-top-net-gohadpur-sialkot/roof-top-net-sialkot-3.jpg' },
-      { type: 'image', url: '/images/works/roof-top-net-gohadpur-sialkot/roof-top-net-sialkot-4.jpg' },
-      { type: 'image', url: '/images/works/roof-top-net-gohadpur-sialkot/roof-top-net-sialkot-5.jpg' },
-      { type: 'image', url: '/images/works/roof-top-net-gohadpur-sialkot/roof-top-net-sialkot-6.jpg' }
+      { type: 'image', url: '/images/works/roof-top-net-gohadpur-sialkot/roof-top-net-sialkot-cover.webp' },
+      { type: 'image', url: '/images/works/roof-top-net-gohadpur-sialkot/roof-top-net-sialkot-1.webp' },
+      { type: 'image', url: '/images/works/roof-top-net-gohadpur-sialkot/roof-top-net-sialkot-2.webp' },
+      { type: 'image', url: '/images/works/roof-top-net-gohadpur-sialkot/roof-top-net-sialkot-3.webp' },
+      { type: 'image', url: '/images/works/roof-top-net-gohadpur-sialkot/roof-top-net-sialkot-4.webp' },
+      { type: 'image', url: '/images/works/roof-top-net-gohadpur-sialkot/roof-top-net-sialkot-5.webp' },
+      { type: 'image', url: '/images/works/roof-top-net-gohadpur-sialkot/roof-top-net-sialkot-6.webp' }
     ]
   },
   {
@@ -172,15 +172,15 @@ export const projects = [
     year: '2026',
     badge: 'Custom',
     gradient: 'linear-gradient(135deg, rgba(26,24,112,0.7), rgba(7,5,26,0.95))',
-    coverImage: '/images/works/sports-arena-khariyan/sports-arena-khariyan-cover.jpg',
+    coverImage: '/images/works/sports-arena-khariyan/sports-arena-khariyan-cover.webp',
     media: [
-      { type: 'image', url: '/images/works/sports-arena-khariyan/sports-arena-khariyan-cover.jpg' },
-      { type: 'image', url: '/images/works/sports-arena-khariyan/sports-arena-khariyan-1.jpg' },
-      { type: 'image', url: '/images/works/sports-arena-khariyan/sports-arena-khariyan-2.jpg' },
-      { type: 'image', url: '/images/works/sports-arena-khariyan/sports-arena-khariyan-3.jpg' },
-      { type: 'image', url: '/images/works/sports-arena-khariyan/sports-arena-khariyan-4.jpg' },
-      { type: 'image', url: '/images/works/sports-arena-khariyan/sports-arena-khariyan-5.jpg' },
-      { type: 'image', url: '/images/works/sports-arena-khariyan/sports-arena-khariyan-6.jpg' }
+      { type: 'image', url: '/images/works/sports-arena-khariyan/sports-arena-khariyan-cover.webp' },
+      { type: 'image', url: '/images/works/sports-arena-khariyan/sports-arena-khariyan-1.webp' },
+      { type: 'image', url: '/images/works/sports-arena-khariyan/sports-arena-khariyan-2.webp' },
+      { type: 'image', url: '/images/works/sports-arena-khariyan/sports-arena-khariyan-3.webp' },
+      { type: 'image', url: '/images/works/sports-arena-khariyan/sports-arena-khariyan-4.webp' },
+      { type: 'image', url: '/images/works/sports-arena-khariyan/sports-arena-khariyan-5.webp' },
+      { type: 'image', url: '/images/works/sports-arena-khariyan/sports-arena-khariyan-6.webp' }
     ]
   },
   {
@@ -193,12 +193,12 @@ export const projects = [
     year: '2025',
     badge: 'Custom',
     gradient: 'linear-gradient(135deg, rgba(26,24,112,0.7), rgba(7,5,26,0.95))',
-    coverImage: '/images/works/sports-arena-wazirabad/sports-arena-wazirabad-cover.jpg',
+    coverImage: '/images/works/sports-arena-wazirabad/sports-arena-wazirabad-cover.webp',
     media: [
-      { type: 'image', url: '/images/works/sports-arena-wazirabad/sports-arena-wazirabad-cover.jpg' },
-      { type: 'image', url: '/images/works/sports-arena-wazirabad/sports-arena-wazirabad-1.jpg' },
-      { type: 'image', url: '/images/works/sports-arena-wazirabad/sports-arena-wazirabad-2.jpg' },
-      { type: 'image', url: '/images/works/sports-arena-wazirabad/sports-arena-wazirabad-3.jpg' },
+      { type: 'image', url: '/images/works/sports-arena-wazirabad/sports-arena-wazirabad-cover.webp' },
+      { type: 'image', url: '/images/works/sports-arena-wazirabad/sports-arena-wazirabad-1.webp' },
+      { type: 'image', url: '/images/works/sports-arena-wazirabad/sports-arena-wazirabad-2.webp' },
+      { type: 'image', url: '/images/works/sports-arena-wazirabad/sports-arena-wazirabad-3.webp' },
       { type: 'video', url: '/images/works/sports-arena-wazirabad/sports-arena-wazirabad-4.mp4' }
     ]
   },
@@ -212,11 +212,11 @@ export const projects = [
     year: '2026',
     badge: 'Custom',
     gradient: 'linear-gradient(135deg, rgba(26,24,112,0.7), rgba(7,5,26,0.95))',
-    coverImage: '/images/works/roof-top-net-daska-road-sialkot/roof-top-net-daska-road-sialkot-cover.jpg',
+    coverImage: '/images/works/roof-top-net-daska-road-sialkot/roof-top-net-daska-road-sialkot-cover.webp',
     media: [
-      { type: 'image', url: '/images/works/roof-top-net-daska-road-sialkot/roof-top-net-daska-road-sialkot-cover.jpg' },
-      { type: 'image', url: '/images/works/roof-top-net-daska-road-sialkot/roof-top-net-daska-road-sialkot-1.jpg' },
-      { type: 'image', url: '/images/works/roof-top-net-daska-road-sialkot/roof-top-net-daska-road-sialkot-2.jpg' },
+      { type: 'image', url: '/images/works/roof-top-net-daska-road-sialkot/roof-top-net-daska-road-sialkot-cover.webp' },
+      { type: 'image', url: '/images/works/roof-top-net-daska-road-sialkot/roof-top-net-daska-road-sialkot-1.webp' },
+      { type: 'image', url: '/images/works/roof-top-net-daska-road-sialkot/roof-top-net-daska-road-sialkot-2.webp' },
       { type: 'video', url: '/images/works/roof-top-net-daska-road-sialkot/roof-top-net-daska-road-sialkot-3.mp4' }
     ]
   },
@@ -230,12 +230,12 @@ export const projects = [
     year: '2026',
     badge: 'Custom',
     gradient: 'linear-gradient(135deg, rgba(26,24,112,0.7), rgba(7,5,26,0.95))',
-    coverImage: '/images/works/mian-indoor-cricket-club-pasrur/mian-indoor-cricket-club-pasrur-cover.jpg',
+    coverImage: '/images/works/mian-indoor-cricket-club-pasrur/mian-indoor-cricket-club-pasrur-cover.webp',
     media: [
-      { type: 'image', url: '/images/works/mian-indoor-cricket-club-pasrur/mian-indoor-cricket-club-pasrur-cover.jpg' },
-      { type: 'image', url: '/images/works/mian-indoor-cricket-club-pasrur/mian-indoor-cricket-club-pasrur-1.jpg' },
-      { type: 'image', url: '/images/works/mian-indoor-cricket-club-pasrur/mian-indoor-cricket-club-pasrur-2.jpg' },
-      { type: 'image', url: '/images/works/mian-indoor-cricket-club-pasrur/mian-indoor-cricket-club-pasrur-3.jpg' },
+      { type: 'image', url: '/images/works/mian-indoor-cricket-club-pasrur/mian-indoor-cricket-club-pasrur-cover.webp' },
+      { type: 'image', url: '/images/works/mian-indoor-cricket-club-pasrur/mian-indoor-cricket-club-pasrur-1.webp' },
+      { type: 'image', url: '/images/works/mian-indoor-cricket-club-pasrur/mian-indoor-cricket-club-pasrur-2.webp' },
+      { type: 'image', url: '/images/works/mian-indoor-cricket-club-pasrur/mian-indoor-cricket-club-pasrur-3.webp' },
       { type: 'video', url: '/images/works/mian-indoor-cricket-club-pasrur/mian-indoor-cricket-club-pasrur-4.mp4' },
       { type: 'video', url: '/images/works/mian-indoor-cricket-club-pasrur/mian-indoor-cricket-club-pasrur-5.mp4' }
     ]
@@ -250,13 +250,13 @@ export const projects = [
     year: '2026',
     badge: 'Custom',
     gradient: 'linear-gradient(135deg, rgba(26,24,112,0.7), rgba(7,5,26,0.95))',
-    coverImage: '/images/works/circket-arena-mirpur/circket-arena-mirpur-1.jpg',
+    coverImage: '/images/works/circket-arena-mirpur/circket-arena-mirpur-1.webp',
     media: [
-      { type: 'image', url: '/images/works/circket-arena-mirpur/circket-arena-mirpur-1.jpg' },
-      { type: 'image', url: '/images/works/circket-arena-mirpur/circket-arena-mirpur-2.jpg' },
-      { type: 'image', url: '/images/works/circket-arena-mirpur/circket-arena-mirpur-3.jpg' },
-      { type: 'image', url: '/images/works/circket-arena-mirpur/circket-arena-mirpur-4.jpg' },
-      { type: 'image', url: '/images/works/circket-arena-mirpur/circket-arena-mirpur-5.jpg' },
+      { type: 'image', url: '/images/works/circket-arena-mirpur/circket-arena-mirpur-1.webp' },
+      { type: 'image', url: '/images/works/circket-arena-mirpur/circket-arena-mirpur-2.webp' },
+      { type: 'image', url: '/images/works/circket-arena-mirpur/circket-arena-mirpur-3.webp' },
+      { type: 'image', url: '/images/works/circket-arena-mirpur/circket-arena-mirpur-4.webp' },
+      { type: 'image', url: '/images/works/circket-arena-mirpur/circket-arena-mirpur-5.webp' },
       { type: 'video', url: '/images/works/circket-arena-mirpur/circket-arena-mirpur-6.mp4' },
       { type: 'video', url: '/images/works/circket-arena-mirpur/circket-arena-mirpur-7.mp4' }
     ]
@@ -271,14 +271,14 @@ export const projects = [
     year: '2026',
     badge: 'Custom',
     gradient: 'linear-gradient(135deg, rgba(26,24,112,0.7), rgba(7,5,26,0.95))',
-    coverImage: '/images/works/bloomfield-hall-school-khariyan/bloomfield-hall-school-khariyan-1.jpg',
+    coverImage: '/images/works/bloomfield-hall-school-khariyan/bloomfield-hall-school-khariyan-1.webp',
     media: [
-      { type: 'image', url: '/images/works/bloomfield-hall-school-khariyan/bloomfield-hall-school-khariyan-1.jpg' },
-      { type: 'image', url: '/images/works/bloomfield-hall-school-khariyan/bloomfield-hall-school-khariyan-2.jpg' },
-      { type: 'image', url: '/images/works/bloomfield-hall-school-khariyan/bloomfield-hall-school-khariyan-3.jpg' },
-      { type: 'image', url: '/images/works/bloomfield-hall-school-khariyan/bloomfield-hall-school-khariyan-4.jpg' },
-      { type: 'image', url: '/images/works/bloomfield-hall-school-khariyan/bloomfield-hall-school-khariyan-5.jpg' },
-      { type: 'image', url: '/images/works/bloomfield-hall-school-khariyan/bloomfield-hall-school-khariyan-6.jpg' },
+      { type: 'image', url: '/images/works/bloomfield-hall-school-khariyan/bloomfield-hall-school-khariyan-1.webp' },
+      { type: 'image', url: '/images/works/bloomfield-hall-school-khariyan/bloomfield-hall-school-khariyan-2.webp' },
+      { type: 'image', url: '/images/works/bloomfield-hall-school-khariyan/bloomfield-hall-school-khariyan-3.webp' },
+      { type: 'image', url: '/images/works/bloomfield-hall-school-khariyan/bloomfield-hall-school-khariyan-4.webp' },
+      { type: 'image', url: '/images/works/bloomfield-hall-school-khariyan/bloomfield-hall-school-khariyan-5.webp' },
+      { type: 'image', url: '/images/works/bloomfield-hall-school-khariyan/bloomfield-hall-school-khariyan-6.webp' },
       { type: 'video', url: '/images/works/bloomfield-hall-school-khariyan/bloomfield-hall-school-khariyan-7.mp4' },
       { type: 'video', url: '/images/works/bloomfield-hall-school-khariyan/bloomfield-hall-school-khariyan-8.mp4' },
       { type: 'video', url: '/images/works/bloomfield-hall-school-khariyan/bloomfield-hall-school-khariyan-9.mp4' }
@@ -294,12 +294,12 @@ export const projects = [
     year: '2026',
     badge: 'Custom',
     gradient: 'linear-gradient(135deg, rgba(26,24,112,0.7), rgba(7,5,26,0.95))',
-    coverImage: '/images/works/sports-complex-mardan/sports-complex-mardan-1.jpg',
+    coverImage: '/images/works/sports-complex-mardan/sports-complex-mardan-1.webp',
     media: [
-      { type: 'image', url: '/images/works/sports-complex-mardan/sports-complex-mardan-1.jpg' },
-      { type: 'image', url: '/images/works/sports-complex-mardan/sports-complex-mardan-2.jpg' },
-      { type: 'image', url: '/images/works/sports-complex-mardan/sports-complex-mardan-3.jpg' },
-      { type: 'image', url: '/images/works/sports-complex-mardan/sports-complex-mardan-4.jpg' },
+      { type: 'image', url: '/images/works/sports-complex-mardan/sports-complex-mardan-1.webp' },
+      { type: 'image', url: '/images/works/sports-complex-mardan/sports-complex-mardan-2.webp' },
+      { type: 'image', url: '/images/works/sports-complex-mardan/sports-complex-mardan-3.webp' },
+      { type: 'image', url: '/images/works/sports-complex-mardan/sports-complex-mardan-4.webp' },
       { type: 'video', url: '/images/works/sports-complex-mardan/sports-complex-mardan-5.mp4' },
       { type: 'video', url: '/images/works/sports-complex-mardan/sports-complex-mardan-6.mp4' },
       { type: 'video', url: '/images/works/sports-complex-mardan/sports-complex-mardan-7.mp4' }
@@ -315,12 +315,12 @@ export const projects = [
     year: '2025',
     badge: 'Custom',
     gradient: 'linear-gradient(135deg, rgba(26,24,112,0.7), rgba(7,5,26,0.95))',
-    coverImage: '/images/works/house-roof-top-net-sialkot/house-roof-top-net-sialkot-1.jpg',
+    coverImage: '/images/works/house-roof-top-net-sialkot/house-roof-top-net-sialkot-1.webp',
     media: [
-      { type: 'image', url: '/images/works/house-roof-top-net-sialkot/house-roof-top-net-sialkot-1.jpg' },
-      { type: 'image', url: '/images/works/house-roof-top-net-sialkot/house-roof-top-net-sialkot-2.jpg' },
-      { type: 'image', url: '/images/works/house-roof-top-net-sialkot/house-roof-top-net-sialkot-3.jpg' },
-      { type: 'image', url: '/images/works/house-roof-top-net-sialkot/house-roof-top-net-sialkot-4.jpg' },
+      { type: 'image', url: '/images/works/house-roof-top-net-sialkot/house-roof-top-net-sialkot-1.webp' },
+      { type: 'image', url: '/images/works/house-roof-top-net-sialkot/house-roof-top-net-sialkot-2.webp' },
+      { type: 'image', url: '/images/works/house-roof-top-net-sialkot/house-roof-top-net-sialkot-3.webp' },
+      { type: 'image', url: '/images/works/house-roof-top-net-sialkot/house-roof-top-net-sialkot-4.webp' },
       { type: 'video', url: '/images/works/house-roof-top-net-sialkot/house-roof-top-net-sialkot-5.mp4' }
     ]
   }
