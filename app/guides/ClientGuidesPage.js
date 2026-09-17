@@ -102,7 +102,7 @@ export default function ClientGuidesPage({ guides, categories }) {
                   <div className={styles.guideVisual}>
                     <Image
                       src={guide.image}
-                      alt={guide.title}
+                      alt={`${guide.title} - Netting Installation & Buying Guide`}
                       fill
                       className={styles.guideImage}
                       sizes="(max-width: 768px) 100vw, 50vw"
