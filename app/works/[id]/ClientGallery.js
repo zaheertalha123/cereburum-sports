@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import styles from './project.module.css';
 
-export default function ClientGallery({ media }) {
+export default function ClientGallery({ media, projectTitle }) {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [touchStart, setTouchStart] = useState(null);
@@ -91,7 +91,7 @@ export default function ClientGallery({ media }) {
             {item.type === 'image' ? (
               <Image
                 src={item.url}
-                alt={item.alt || `Gallery Item ${idx + 1}`}
+                alt={item.alt || `${projectTitle || 'Sports net'} installation photo ${idx + 1} - boundary safety netting by Cereburum Sports`}
                 width={800}
                 height={800}
                 className={styles.mediaItem}
@@ -134,7 +134,7 @@ export default function ClientGallery({ media }) {
             {media[currentIndex].type === 'image' ? (
               <Image
                 src={media[currentIndex].url}
-                alt={media[currentIndex].alt || 'Enlarged Image'}
+                alt={media[currentIndex].alt || `${projectTitle || 'Sports net'} installation photo ${currentIndex + 1} - boundary safety netting by Cereburum Sports`}
                 width={1920}
                 height={1080}
                 className={styles.lightboxMedia}

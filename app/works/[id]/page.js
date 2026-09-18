@@ -40,7 +40,10 @@ export default async function ProjectPage({ params }) {
           {project.coverImage ? (
             <Image
               src={project.coverImage}
-              alt="Background"
+              alt={
+                project.coverImageAlt ||
+                `${project.title} - ${project.category || 'Sports Ground Netting'} Installation in ${project.location || 'Pakistan'} | Cereburum Sports`
+              }
               fill
               className={styles.heroImage}
               priority
@@ -81,7 +84,7 @@ export default async function ProjectPage({ params }) {
       <section className={styles.gallerySection}>
         <div className="container">
           <h2 className="heading-md" style={{ color: 'var(--white)' }}>Project Gallery</h2>
-          <ClientGallery media={project.media} />
+          <ClientGallery media={project.media} projectTitle={project.title} />
         </div>
       </section>
     </>
