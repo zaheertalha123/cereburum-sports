@@ -221,7 +221,7 @@ export default function HomePage() {
                 <div key={n} className={`${styles.worksTeaserCard} ${styles[`card${n}`]}`}>
                   <Image
                     src={`/images/home/${n}.jpg`}
-                    alt={`Portfolio work ${n}`}
+                    alt={`Featured sports net installation portfolio project ${n} in Pakistan | Cereburum Sports`}
                     fill
                     sizes="300px"
                     className={styles.teaserImage}
