@@ -12,15 +12,15 @@ const rawProjects = [
     badge: 'Featured',
     gradient: 'linear-gradient(135deg, rgba(18,17,74,0.9), rgba(7,5,26,0.95))',
     coverImage: '/images/works/cricket-arena-nowshera/cricket-arena-nowshera-cover.webp',
+    coverImageAlt: 'Professional Cricket Arena in Nowshera featuring high-clearance Parachute 36 netting enclosure',
     media: [
-      { type: 'image', url: '/images/works/cricket-arena-nowshera/cricket-arena-nowshera-cover.webp' },
-      { type: 'image', url: '/images/works/cricket-arena-nowshera/cricket-arena-nowshera-1.webp', alt: 'Main nets view' },
-      { type: 'image', url: '/images/works/cricket-arena-nowshera/cricket-arena-nowshera-2.webp' },
-      { type: 'image', url: '/images/works/cricket-arena-nowshera/cricket-arena-nowshera-3.webp' },
-      { type: 'image', url: '/images/works/cricket-arena-nowshera/cricket-arena-nowshera-4.webp' },
-      { type: 'image', url: '/images/works/cricket-arena-nowshera/cricket-arena-nowshera-5.webp' },
-      { type: 'image', url: '/images/works/cricket-arena-nowshera/cricket-arena-nowshera-6.webp' }
-      // { type: 'video', url: 'https://res.cloudinary.com/your-cloud/video/upload/demo.mp4', poster: '/images/works/cricket-academy/poster.jpg' }
+      { type: 'image', url: '/images/works/cricket-arena-nowshera/cricket-arena-nowshera-cover.webp', alt: 'Nowshera cricket arena high-clearance netting enclosure cover view' },
+      { type: 'image', url: '/images/works/cricket-arena-nowshera/cricket-arena-nowshera-1.webp', alt: 'Main pitch netting installation view at Nowshera cricket arena' },
+      { type: 'image', url: '/images/works/cricket-arena-nowshera/cricket-arena-nowshera-2.webp', alt: 'Perimeter side netting and steel support structure in Nowshera' },
+      { type: 'image', url: '/images/works/cricket-arena-nowshera/cricket-arena-nowshera-3.webp', alt: 'High vertical netting clearance angle at Nowshera sports arena' },
+      { type: 'image', url: '/images/works/cricket-arena-nowshera/cricket-arena-nowshera-4.webp', alt: 'Roof netting tension and corner joint structure view' },
+      { type: 'image', url: '/images/works/cricket-arena-nowshera/cricket-arena-nowshera-5.webp', alt: 'Ground coverage overview of 90ft x 60ft Nowshera cricket pitch' },
+      { type: 'image', url: '/images/works/cricket-arena-nowshera/cricket-arena-nowshera-6.webp', alt: 'Completed Parachute 36 cricket arena net structure in Nowshera' }
     ]
   },
   {
@@ -34,12 +34,13 @@ const rawProjects = [
     badge: 'Custom',
     gradient: 'linear-gradient(135deg, rgba(26,24,112,0.7), rgba(7,5,26,0.95))',
     coverImage: '/images/works/sports-complex-sahiwal/sports-complex-sahiwal-cover.webp',
+    coverImageAlt: 'Three-ground sports complex in Sahiwal with Parachute 24 netting setup',
     media: [
-      { type: 'image', url: '/images/works/sports-complex-sahiwal/sports-complex-sahiwal-cover.webp' },
-      { type: 'image', url: '/images/works/sports-complex-sahiwal/sports-complex-sahiwal-1.webp' },
-      { type: 'image', url: '/images/works/sports-complex-sahiwal/sports-complex-sahiwal-2.webp' },
-      { type: 'image', url: '/images/works/sports-complex-sahiwal/sports-complex-sahiwal-3.webp' },
-      { type: 'image', url: '/images/works/sports-complex-sahiwal/sports-complex-sahiwal-4.webp' },
+      { type: 'image', url: '/images/works/sports-complex-sahiwal/sports-complex-sahiwal-cover.webp', alt: 'Sahiwal sports complex wide installation cover view' },
+      { type: 'image', url: '/images/works/sports-complex-sahiwal/sports-complex-sahiwal-1.webp', alt: 'Triple ground netting structure overview in Sahiwal' },
+      { type: 'image', url: '/images/works/sports-complex-sahiwal/sports-complex-sahiwal-2.webp', alt: 'Parachute 24 mesh tension and corner pole detail in Sahiwal' },
+      { type: 'image', url: '/images/works/sports-complex-sahiwal/sports-complex-sahiwal-3.webp', alt: 'Side wall netting boundary alignment at Sahiwal sports complex' },
+      { type: 'image', url: '/images/works/sports-complex-sahiwal/sports-complex-sahiwal-4.webp', alt: 'Completed 35-ft high vertical clearance sports net ground view' },
       { type: 'video', url: '/images/works/sports-complex-sahiwal/sports-complex-sahiwal-5.mp4', poster: '/images/works/sports-complex-sahiwal/sports-complex-sahiwal-5-poster.webp' },
       { type: 'video', url: '/images/works/sports-complex-sahiwal/sports-complex-sahiwal-6.mp4', poster: '/images/works/sports-complex-sahiwal/sports-complex-sahiwal-6-poster.webp' },
     ]

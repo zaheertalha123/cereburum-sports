@@ -88,7 +88,7 @@ export default function ClientProductsPage({ categories }) {
                   {cat.image ? (
                     <Image
                       src={cat.image}
-                      alt={`${cat.title} - Cereburum Sports Netting & Installation`}
+                      alt={cat.imageAlt || `${cat.title} ${cat.subtitle} - Cereburum Sports Netting & Installation`}
                       fill
                       className={styles.productImage}
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 25vw"
