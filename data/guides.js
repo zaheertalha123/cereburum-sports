@@ -18,11 +18,11 @@ export const guides = [
     images: [
       {
         url: mediaUrl('/images/guides/corner-door/corner-door-01.webp'),
-        alt: 'Corner Door step 1 - ground boundary netting installation instruction',
+        alt: 'Corner Door step 1 - ground boundary netting installation instruction - Corner door inner view - Khariyan indoor cricket ground - Bloomfield Hall School Cricket Cage',
       },
       {
         url: mediaUrl('/images/guides/corner-door/corner-door-02.webp'),
-        alt: 'Corner Door step 2 - ground boundary netting installation instruction',
+        alt: 'Corner Door step 2 - ground boundary netting installation instruction - Corner door outer view - Khariyan indoor cricket ground - Bloomfield Hall School Cricket Cage',
       },
     ],
   },
