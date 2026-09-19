@@ -95,7 +95,10 @@ export default function ClientWorksPage({ projects, categories }) {
                   {project.coverImage ? (
                     <Image
                       src={project.coverImage}
-                      alt={project.title}
+                      alt={
+                        project.coverImageAlt ||
+                        `${project.title} - ${project.category || 'Sports Ground Netting'} Installation in ${project.location || 'Pakistan'} | Cereburum Sports`
+                      }
                       fill
                       className={styles.coverImage}
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

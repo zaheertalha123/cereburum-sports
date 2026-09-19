@@ -27,14 +27,22 @@ export async function generateMetadata({ params }) {
 }
 
 function toGalleryMedia(guide) {
-  const items = (guide.images ?? []).map(({ url, alt }) => ({
+  const items = (guide.images ?? []).map(({ url, alt }, index) => ({
     type: 'image',
     url,
-    alt,
+    alt:
+      alt ||
+      `${guide.title} step ${index + 1} - ground boundary netting installation instruction`,
   }));
 
   if (items.length === 0 && guide.image) {
-    items.push({ type: 'image', url: guide.image, alt: guide.title });
+    items.push({
+      type: 'image',
+      url: guide.image,
+      alt:
+        guide.imageAlt ||
+        `${guide.title} - Step by Step Sports Netting Installation Guide | Cereburum Sports`,
+    });
   }
 
   return items;
@@ -57,7 +65,10 @@ export default async function GuidePage({ params }) {
         <div className={styles.heroBg} aria-hidden="true">
           <Image
             src={guide.image}
-            alt=""
+            alt={
+              guide.imageAlt ||
+              `${guide.title} - Step by Step Sports Netting Installation Guide | Cereburum Sports`
+            }
             fill
             className={styles.heroImage}
             priority
@@ -92,7 +103,7 @@ export default async function GuidePage({ params }) {
           <h2 className="heading-md" style={{ color: 'var(--white)' }}>
             Guide Gallery
           </h2>
-          <ClientGallery media={media} />
+          <ClientGallery media={media} projectTitle={guide.title} />
         </div>
       </section>
 
