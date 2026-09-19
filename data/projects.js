@@ -13,15 +13,15 @@ const rawProjects = [
     badge: 'Featured',
     gradient: 'linear-gradient(135deg, rgba(18,17,74,0.9), rgba(7,5,26,0.95))',
     coverImage: '/images/works/cricket-arena-nowshera/cricket-arena-nowshera-cover.webp',
-    coverImageAlt: 'Professional Cricket Arena, Nowshera - Sports Arena Installation in Nowshera, Pakistan | Cereburum Sports',
+    coverImageAlt: 'Cricket arena netting installation in Nowshera, Pakistan — sports net manufacturer Cereburum Sports',
     media: [
-      { type: 'image', url: '/images/works/cricket-arena-nowshera/cricket-arena-nowshera-cover.webp', alt: 'Professional Cricket Arena, Nowshera installation photo 1 - cricket ground netting installation by Cereburum Sports' },
-      { type: 'image', url: '/images/works/cricket-arena-nowshera/cricket-arena-nowshera-1.webp', alt: 'Professional Cricket Arena, Nowshera installation photo 2 - pitch netting enclosure by Cereburum Sports' },
-      { type: 'image', url: '/images/works/cricket-arena-nowshera/cricket-arena-nowshera-2.webp', alt: 'Professional Cricket Arena, Nowshera installation photo 3 - perimeter side netting and steel support structure by Cereburum Sports' },
-      { type: 'image', url: '/images/works/cricket-arena-nowshera/cricket-arena-nowshera-3.webp', alt: 'Professional Cricket Arena, Nowshera installation photo 4 - indoor cricket cage netting setup by Cereburum Sports' },
-      { type: 'image', url: '/images/works/cricket-arena-nowshera/cricket-arena-nowshera-4.webp', alt: 'Professional Cricket Arena, Nowshera installation photo 5 - roof netting tension and corner joint structure by Cereburum Sports' },
-      { type: 'image', url: '/images/works/cricket-arena-nowshera/cricket-arena-nowshera-5.webp', alt: 'Professional Cricket Arena, Nowshera installation photo 6 - ground coverage overview by Cereburum Sports' },
-      { type: 'image', url: '/images/works/cricket-arena-nowshera/cricket-arena-nowshera-6.webp', alt: 'Professional Cricket Arena, Nowshera installation photo 7 - boundary safety netting by Cereburum Sports' }
+      { type: 'image', url: '/images/works/cricket-arena-nowshera/cricket-arena-nowshera-cover.webp', alt: 'Cricket ground netting installation in Nowshera — net manufacturer Pakistan' },
+      { type: 'image', url: '/images/works/cricket-arena-nowshera/cricket-arena-nowshera-1.webp', alt: 'Parachute 36 cricket practice net enclosure installed in Nowshera Virkan, Pakistan' },
+      { type: 'image', url: '/images/works/cricket-arena-nowshera/cricket-arena-nowshera-2.webp', alt: 'Custom sports net installation with steel pole structure — net maker Pakistan' },
+      { type: 'image', url: '/images/works/cricket-arena-nowshera/cricket-arena-nowshera-3.webp', alt: 'Cricket cage perimeter netting for sports facility in Nowshera, Pakistan' },
+      { type: 'image', url: '/images/works/cricket-arena-nowshera/cricket-arena-nowshera-4.webp', alt: 'indoor cricket ground nowshera — night cricket practice — custom net maker Cereburum Sports' },
+      { type: 'image', url: '/images/works/cricket-arena-nowshera/cricket-arena-nowshera-5.webp', alt: 'cricker indoor net — cricket indoor netting entry - indoor cricket net natural grass ground — sports barrier netting installation Pakistan' },
+      { type: 'image', url: '/images/works/cricket-arena-nowshera/cricket-arena-nowshera-6.webp', alt: 'indoor cricket net ground with height - Indoor cricket ground installation in Nowshera, Pakistan' }
     ]
   },
   {
@@ -36,15 +36,15 @@ const rawProjects = [
     badge: 'Custom',
     gradient: 'linear-gradient(135deg, rgba(26,24,112,0.7), rgba(7,5,26,0.95))',
     coverImage: '/images/works/sports-complex-sahiwal/sports-complex-sahiwal-cover.webp',
-    coverImageAlt: 'Sports Complex, Sahiwal - Sports Complex Installation in Sahiwal, Pakistan | Cereburum Sports',
+    coverImageAlt: 'Sports complex netting installation in Sahiwal, Punjab — net manufacturer Pakistan | Cereburum Sports',
     media: [
-      { type: 'image', url: '/images/works/sports-complex-sahiwal/sports-complex-sahiwal-cover.webp', alt: 'Sports Complex, Sahiwal installation photo 1 - triple ground sports complex installation by Cereburum Sports' },
-      { type: 'image', url: '/images/works/sports-complex-sahiwal/sports-complex-sahiwal-1.webp', alt: 'Sports Complex, Sahiwal installation photo 2 - triple ground netting structure overview by Cereburum Sports' },
-      { type: 'image', url: '/images/works/sports-complex-sahiwal/sports-complex-sahiwal-2.webp', alt: 'Sports Complex, Sahiwal installation photo 3 - Parachute 24 mesh tension and corner pole by Cereburum Sports' },
-      { type: 'image', url: '/images/works/sports-complex-sahiwal/sports-complex-sahiwal-3.webp', alt: 'Sports Complex, Sahiwal installation photo 4 - football ground fence netting by Cereburum Sports' },
-      { type: 'image', url: '/images/works/sports-complex-sahiwal/sports-complex-sahiwal-4.webp', alt: 'Sports Complex, Sahiwal installation photo 5 - 35ft vertical height sports net by Cereburum Sports' },
-      { type: 'video', url: '/images/works/sports-complex-sahiwal/sports-complex-sahiwal-5.mp4', poster: '/images/works/sports-complex-sahiwal/sports-complex-sahiwal-5-poster.webp' },
-      { type: 'video', url: '/images/works/sports-complex-sahiwal/sports-complex-sahiwal-6.mp4', poster: '/images/works/sports-complex-sahiwal/sports-complex-sahiwal-6-poster.webp' },
+      { type: 'image', url: '/images/works/sports-complex-sahiwal/sports-complex-sahiwal-cover.webp', alt: 'Triple-ground sports complex — natural ground sports arena — netting project in Sahiwal, Pakistan — sports net manufacturer' },
+      { type: 'image', url: '/images/works/sports-complex-sahiwal/sports-complex-sahiwal-1.webp', alt: 'net material packaging — cricket net bundle — Multi-ground sports facility net packing — custom net installation in Sahiwal, Punjab' },
+      { type: 'image', url: '/images/works/sports-complex-sahiwal/sports-complex-sahiwal-2.webp', alt: 'Parachute 24 mesh package — parachute 24 bundle — net material packaging — net for cricket ground — cricket practice net in Sahiwal, Punjab — sports net maker Pakistan' },
+      { type: 'image', url: '/images/works/sports-complex-sahiwal/sports-complex-sahiwal-3.webp', alt: 'cricket net with border — cricket net maetrial packaging — Parachute 24 Material— cricket ground perimeter fence netting installed in Sahiwal, Pakistan' },
+      { type: 'image', url: '/images/works/sports-complex-sahiwal/sports-complex-sahiwal-4.webp', alt: 'cricket net with parachute 24 — cricket net material packaging — parachute net with parachute border — net installation in Sahiwal, Punjab, Pakistan' },
+      { type: 'video', url: '/images/works/sports-complex-sahiwal/sports-complex-sahiwal-5.mp4', alt: 'Sports complex net night view — night time netting — indoor netting night view — Night cricket practice net in Sahiwal, Pakistan', poster: '/images/works/sports-complex-sahiwal/sports-complex-sahiwal-5-poster.webp' },
+      { type: 'video', url: '/images/works/sports-complex-sahiwal/sports-complex-sahiwal-6.mp4', alt: 'multiple sports arena netting — night time cricket netting — multi-ground sports arena netting — night time sports complex in sahimal in pakistan — custom net maker Cereburum Sports', poster: '/images/works/sports-complex-sahiwal/sports-complex-sahiwal-6-poster.webp' },
     ]
   },
   {
@@ -59,13 +59,13 @@ const rawProjects = [
     badge: 'Custom',
     gradient: 'linear-gradient(135deg, rgba(26,24,112,0.7), rgba(7,5,26,0.95))',
     coverImage: '/images/works/folding-net-islamabad/folding-net-islamabad-cover.webp',
-    coverImageAlt: 'Folding Net, Islamabad - Folding Net Installation in Islamabad, Pakistan | Cereburum Sports',
+    coverImageAlt: 'Foldable cricket practice net in residential courtyard, Bahria Town Islamabad — custom net manufacturer Pakistan | Cereburum Sports',
     media: [
-      { type: 'image', url: '/images/works/folding-net-islamabad/folding-net-islamabad-cover.webp', alt: 'Folding Net, Islamabad installation photo 1 - retractable boundary safety netting by Cereburum Sports' },
-      { type: 'image', url: '/images/works/folding-net-islamabad/folding-net-islamabad-1.webp', alt: 'Folding Net, Islamabad installation photo 2 - indoor cricket cage netting setup by Cereburum Sports' },
-      { type: 'image', url: '/images/works/folding-net-islamabad/folding-net-islamabad-2.webp', alt: 'Folding Net, Islamabad installation photo 3 - dual side foldable net system by Cereburum Sports' },
-      { type: 'image', url: '/images/works/folding-net-islamabad/folding-net-islamabad-3.webp', alt: 'Folding Net, Islamabad installation photo 4 - 20ft vertical height clearance net by Cereburum Sports' },
-      { type: 'image', url: '/images/works/folding-net-islamabad/folding-net-islamabad-4.webp', alt: 'Folding Net, Islamabad installation photo 5 - retractable perimeter mesh by Cereburum Sports' },
+      { type: 'image', url: '/images/works/folding-net-islamabad/folding-net-islamabad-cover.webp', alt: 'folding cricket net — Retractable white mesh sports net over paved residential driveway — folding net installation Islamabad, Pakistan' },
+      { type: 'image', url: '/images/works/folding-net-islamabad/folding-net-islamabad-1.webp', alt: 'folding sides for ease of use — Full-width foldable cricket practice net enclosure in home courtyard — sports net maker Bahria Town Islamabad' },
+      { type: 'image', url: '/images/works/folding-net-islamabad/folding-net-islamabad-2.webp', alt: '2 customized folding net sides — Rooftop foldable sports net on steel pole structure with city skyline — custom net installation Islamabad Pakistan' },
+      { type: 'image', url: '/images/works/folding-net-islamabad/folding-net-islamabad-3.webp', alt: 'Cricket folding net night view — Night rooftop cricket practice net with natural turf on sides and floodlights — folding net maker Pakistan' },
+      { type: 'image', url: '/images/works/folding-net-islamabad/folding-net-islamabad-4.webp', alt: 'Cricket folding net night view with lights on — Floodlit outdoor sports court with retractable perimeter netting at night — foldable net manufacturer Islamabad' },
     ]
   },
   {
@@ -80,13 +80,13 @@ const rawProjects = [
     badge: 'Custom',
     gradient: 'linear-gradient(135deg, rgba(26,24,112,0.7), rgba(7,5,26,0.95))',
     coverImage: '/images/works/sports-arena-gujranwala/sports-arena-gujranwala-cover.webp',
-    coverImageAlt: 'Sports Arena, Gujranwala - Sports Arena Installation in Gujranwala, Pakistan | Cereburum Sports',
+    coverImageAlt: 'Floodlit cricket sports arena netting in Gujranwala, Punjab — custom net manufacturer Pakistan | Cereburum Sports',
     media: [
-      { type: 'image', url: '/images/works/sports-arena-gujranwala/sports-arena-gujranwala-cover.webp', alt: 'Sports Arena, Gujranwala installation photo 1 - hybrid parachute netting setup by Cereburum Sports' },
-      { type: 'image', url: '/images/works/sports-arena-gujranwala/sports-arena-gujranwala-1.webp', alt: 'Sports Arena, Gujranwala installation photo 2 - cricket ground netting installation by Cereburum Sports' },
-      { type: 'image', url: '/images/works/sports-arena-gujranwala/sports-arena-gujranwala-2.webp', alt: 'Sports Arena, Gujranwala installation photo 3 - reinforced side wall netting by Cereburum Sports' },
-      { type: 'image', url: '/images/works/sports-arena-gujranwala/sports-arena-gujranwala-3.webp', alt: 'Sports Arena, Gujranwala installation photo 4 - lightweight roof net setup by Cereburum Sports' },
-      { type: 'image', url: '/images/works/sports-arena-gujranwala/sports-arena-gujranwala-4.webp', alt: 'Sports Arena, Gujranwala installation photo 5 - 25ft vertical height clearance by Cereburum Sports' },
+      { type: 'image', url: '/images/works/sports-arena-gujranwala/sports-arena-gujranwala-cover.webp', alt: 'white mesh sports arena enclosure with LED floodlight poles at night — net installation Gujranwala, Pakistan' },
+      { type: 'image', url: '/images/works/sports-arena-gujranwala/sports-arena-gujranwala-1.webp', alt: 'Indoor cricket ground netting — Empty concrete cricket court inside fully netted urban sports arena — hybrid parachute netting Gujranwala Pakistan' },
+      { type: 'image', url: '/images/works/sports-arena-gujranwala/sports-arena-gujranwala-2.webp', alt: 'Cricket netting front view — Parachute 36 reinforced side wall netting with roof mesh on sports cage — cricket arena net maker Gujranwala' },
+      { type: 'image', url: '/images/works/sports-arena-gujranwala/sports-arena-gujranwala-3.webp', alt: 'Cricket netting front view — Wide night view of boxed sports arena with perimeter floodlights and roof net — custom net installation Punjab Pakistan' },
+      { type: 'image', url: '/images/works/sports-arena-gujranwala/sports-arena-gujranwala-4.webp', alt: 'cricket arena netting night view from outside — Exterior night view of illuminated cricket arena net beside residential apartments — sports net manufacturer Gujranwala' },
     ]
   },
   {
@@ -101,16 +101,16 @@ const rawProjects = [
     badge: 'Custom',
     gradient: 'linear-gradient(135deg, rgba(26,24,112,0.7), rgba(7,5,26,0.95))',
     coverImage: '/images/works/cricket-pitch-layyah/cricket-pitch-layyah-cover.webp',
-    coverImageAlt: 'Cricket Pitch, Layyah - Cricket Pitch Installation in Layyah, Pakistan | Cereburum Sports',
+    coverImageAlt: 'Single-lane cricket practice pitch with bamboo pole netting in Layyah, Punjab — custom net manufacturer Pakistan | Cereburum Sports',
     media: [
-      { type: 'image', url: '/images/works/cricket-pitch-layyah/cricket-pitch-layyah-cover.webp', alt: 'Cricket Pitch, Layyah installation photo 1 - bamboo pole cricket practice pitch by Cereburum Sports' },
-      { type: 'image', url: '/images/works/cricket-pitch-layyah/cricket-pitch-layyah-1.webp', alt: 'Cricket Pitch, Layyah installation photo 2 - single lane cricket practice net by Cereburum Sports' },
-      { type: 'image', url: '/images/works/cricket-pitch-layyah/cricket-pitch-layyah-2.webp', alt: 'Cricket Pitch, Layyah installation photo 3 - Parachute 60 industrial grade netting by Cereburum Sports' },
-      { type: 'image', url: '/images/works/cricket-pitch-layyah/cricket-pitch-layyah-3.webp', alt: 'Cricket Pitch, Layyah installation photo 4 - outdoor cricket pitch netting by Cereburum Sports' },
-      { type: 'image', url: '/images/works/cricket-pitch-layyah/cricket-pitch-layyah-4.webp', alt: 'Cricket Pitch, Layyah installation photo 5 - high tension boundary safety net by Cereburum Sports' },
-      { type: 'image', url: '/images/works/cricket-pitch-layyah/cricket-pitch-layyah-5.webp', alt: 'Cricket Pitch, Layyah installation photo 6 - professional pitch practice net setup by Cereburum Sports' },
-      { type: 'image', url: '/images/works/cricket-pitch-layyah/cricket-pitch-layyah-6.webp', alt: 'Cricket Pitch, Layyah installation photo 7 - bamboo pole integration detail by Cereburum Sports' },
-      { type: 'image', url: '/images/works/cricket-pitch-layyah/cricket-pitch-layyah-7.webp', alt: 'Cricket Pitch, Layyah installation photo 8 - completed 75ft cricket pitch netting by Cereburum Sports' },
+      { type: 'image', url: '/images/works/cricket-pitch-layyah/cricket-pitch-layyah-cover.webp', alt: 'Cricket pitch of heavy duty net — 75ft outdoor cricket practice net cage on bamboo pole frame — cricket pitch installation Layyah, Pakistan' },
+      { type: 'image', url: '/images/works/cricket-pitch-layyah/cricket-pitch-layyah-1.webp', alt: 'Cricket practice pitch front view — Long rectangular cricket batting cage with concrete practice pitch on dirt ground — sports net maker Layyah Punjab' },
+      { type: 'image', url: '/images/works/cricket-pitch-layyah/cricket-pitch-layyah-2.webp', alt: 'Long cricket pitch netting with bamboo pole frame — Bamboo pole cricket net structure with white side and roof mesh over pitch strip — Parachute netting installation Pakistan' },
+      { type: 'image', url: '/images/works/cricket-pitch-layyah/cricket-pitch-layyah-3.webp', alt: 'Cricket practice pitch bowling side — Single-lane cricket practice enclosure with bamboo frame and reinforced white mesh — custom net installation Layyah' },
+      { type: 'image', url: '/images/works/cricket-pitch-layyah/cricket-pitch-layyah-4.webp', alt: 'Cricket pitch net packaging — Stacked white cricket net bundles packaged with blue rope for Layyah project delivery — net manufacturer Pakistan' },
+      { type: 'image', url: '/images/works/cricket-pitch-layyah/cricket-pitch-layyah-5.webp', alt: 'Custom cricket net packaging with labels — Labeled Parachute cricket net panels marked for left, right and mid sides — custom net maker Layyah Punjab' },
+      { type: 'image', url: '/images/works/cricket-pitch-layyah/cricket-pitch-layyah-6.webp', alt: 'Custom cricket net packaging with size tags — Hybrid Parachute 24 and Parachute 36 net bundles with size tags for cricket pitch — sports net manufacturing Pakistan' },
+      { type: 'image', url: '/images/works/cricket-pitch-layyah/cricket-pitch-layyah-7.webp', alt: 'Cricket net close shot with white parachute border — Close-up of high-tension Parachute 60 diamond weave cricket netting with reinforced border — net material Pakistan' },
     ]
   },
   {
@@ -125,16 +125,16 @@ const rawProjects = [
     badge: 'Custom',
     gradient: 'linear-gradient(135deg, rgba(26,24,112,0.7), rgba(7,5,26,0.95))',
     coverImage: '/images/works/sports-arena-peshawar/sports-arena-peshawar-cover.webp',
-    coverImageAlt: 'Sports Complex, Peshawar - Sports Complex Installation in Peshawar, Pakistan | Cereburum Sports',
+    coverImageAlt: 'Triple-ground sports complex netting installation at night in Peshawar, KPK — net manufacturer Pakistan | Cereburum Sports',
     media: [
-      { type: 'image', url: '/images/works/sports-arena-peshawar/sports-arena-peshawar-cover.webp', alt: 'Sports Complex, Peshawar installation photo 1 - triple interconnected sports arena netting by Cereburum Sports' },
-      { type: 'image', url: '/images/works/sports-arena-peshawar/sports-arena-peshawar-1.webp', alt: 'Sports Complex, Peshawar installation photo 2 - 40ft height roof span netting by Cereburum Sports' },
-      { type: 'image', url: '/images/works/sports-arena-peshawar/sports-arena-peshawar-2.webp', alt: 'Sports Complex, Peshawar installation photo 3 - football ground fence netting by Cereburum Sports' },
-      { type: 'image', url: '/images/works/sports-arena-peshawar/sports-arena-peshawar-3.webp', alt: 'Sports Complex, Peshawar installation photo 4 - Parachute 36 arena enclosure by Cereburum Sports' },
-      { type: 'image', url: '/images/works/sports-arena-peshawar/sports-arena-peshawar-4.webp', alt: 'Sports Complex, Peshawar installation photo 5 - rapid deployment sports net structure by Cereburum Sports' },
-      { type: 'image', url: '/images/works/sports-arena-peshawar/sports-arena-peshawar-5.webp', alt: 'Sports Complex, Peshawar installation photo 6 - completed Peshawar sports complex arena by Cereburum Sports' },
-      { type: 'video', url: '/images/works/sports-arena-peshawar/sports-arena-peshawar-6.mp4' },
-      { type: 'video', url: '/images/works/sports-arena-peshawar/sports-arena-peshawar-7.mp4' },
+      { type: 'image', url: '/images/works/sports-arena-peshawar/sports-arena-peshawar-cover.webp', alt: 'Multiple sports arena netting — Night construction of floodlit sports arena with crane installing roof netting — sports complex Peshawar, Pakistan' },
+      { type: 'image', url: '/images/works/sports-arena-peshawar/sports-arena-peshawar-1.webp', alt: 'Cricket Net installation with crane — Tadano crane deploying Parachute 36 roof net on 40ft arena poles during rapid installation — net maker Peshawar KPK' },
+      { type: 'image', url: '/images/works/sports-arena-peshawar/sports-arena-peshawar-2.webp', alt: 'Sports complex with concrete ground and night lights — Completed floodlit sports court enclosure with full roof mesh at night — custom net installation Peshawar Pakistan' },
+      { type: 'image', url: '/images/works/sports-arena-peshawar/sports-arena-peshawar-3.webp', alt: 'Net installtions team after completing project— Youth athletes on completed floodlit sports arena after net installation — sports netting Peshawar, KPK Pakistan' },
+      { type: 'image', url: '/images/works/sports-arena-peshawar/sports-arena-peshawar-4.webp', alt: 'Cricket net quality view after net installation — Side view of white perimeter sports netting with stadium floodlights at night — net manufacturer Peshawar' },
+      { type: 'image', url: '/images/works/sports-arena-peshawar/sports-arena-peshawar-5.webp', alt: 'Cricket net quality view after net installation — Parachute 36 white mesh side netting on concrete sports court under floodlights — custom net installation KPK Pakistan' },
+      { type: 'video', url: '/images/works/sports-arena-peshawar/sports-arena-peshawar-6.mp4', alt: 'Sports complex view during net installation — Sports complex roof net installation with crane at night — rapid 48-hour deployment video Peshawar, Pakistan' },
+      { type: 'video', url: '/images/works/sports-arena-peshawar/sports-arena-peshawar-7.mp4', alt: 'Sports complex night view with lights on — Triple interconnected sports arena walkthrough under floodlights at night — net maker Peshawar KPK Pakistan' },
     ]
   },
   {
@@ -149,11 +149,11 @@ const rawProjects = [
     badge: 'Custom',
     gradient: 'linear-gradient(135deg, rgba(26,24,112,0.7), rgba(7,5,26,0.95))',
     coverImage: '/images/works/practice-ground-gujranwala/practice-ground-gujranwala-cover.webp',
-    coverImageAlt: 'Practice Ground, Gujranwala - Sports Arena Installation in Gujranwala, Pakistan | Cereburum Sports',
+    coverImageAlt: 'Cricket net on steel wires and iron poles outer view — practice ground sports netting in Gujranwala, Punjab — custom net manufacturer Pakistan | Cereburum Sports',
     media: [
-      { type: 'image', url: '/images/works/practice-ground-gujranwala/practice-ground-gujranwala-cover.webp', alt: 'Practice Ground, Gujranwala installation photo 1 - 30ft vertical height practice ground netting by Cereburum Sports' },
-      { type: 'video', url: '/images/works/practice-ground-gujranwala/practice-ground-gujranwala-1.mp4' },
-      { type: 'video', url: '/images/works/practice-ground-gujranwala/practice-ground-gujranwala-2.mp4' },
+      { type: 'image', url: '/images/works/practice-ground-gujranwala/practice-ground-gujranwala-cover.webp', alt: 'cricket practice net with wires on steel poles — sports practice white mesh on steel poles in urban Gujranwala — net installation Punjab Pakistan' },
+      { type: 'video', url: '/images/works/practice-ground-gujranwala/practice-ground-gujranwala-1.mp4', alt: 'Cricket practice net installation with folding lift — Workers installing practice ground roof netting from scissor lift at height — rapid 6-hour deployment video Gujranwala Punjab' },
+      { type: 'video', url: '/images/works/practice-ground-gujranwala/practice-ground-gujranwala-2.mp4', alt: 'Cricket net installation with folding siri— Installing practice ground netting walkthrough under clear sky — sports net maker Gujranwala Pakistan' },
     ]
   },
   {
@@ -168,15 +168,15 @@ const rawProjects = [
     badge: 'Custom',
     gradient: 'linear-gradient(135deg, rgba(26,24,112,0.7), rgba(7,5,26,0.95))',
     coverImage: '/images/works/roof-top-net-gohadpur-sialkot/roof-top-net-sialkot-cover.webp',
-    coverImageAlt: 'Roof Top Net, Gohadpur, Sialkot - Rooftop Net Installation in Sialkot, Pakistan | Cereburum Sports',
+    coverImageAlt: 'Rooftop sports net installation with ceiling mesh in Gohadpur, Sialkot — custom net manufacturer Pakistan | Cereburum Sports',
     media: [
-      { type: 'image', url: '/images/works/roof-top-net-gohadpur-sialkot/roof-top-net-sialkot-cover.webp', alt: 'Roof Top Net, Gohadpur, Sialkot installation photo 1 - rooftop sports turf boundary net by Cereburum Sports' },
-      { type: 'image', url: '/images/works/roof-top-net-gohadpur-sialkot/roof-top-net-sialkot-1.webp', alt: 'Roof Top Net, Gohadpur, Sialkot installation photo 2 - high altitude ball retention netting by Cereburum Sports' },
-      { type: 'image', url: '/images/works/roof-top-net-gohadpur-sialkot/roof-top-net-sialkot-2.webp', alt: 'Roof Top Net, Gohadpur, Sialkot installation photo 3 - Parachute 24 rooftop net enclosure by Cereburum Sports' },
-      { type: 'image', url: '/images/works/roof-top-net-gohadpur-sialkot/roof-top-net-sialkot-3.webp', alt: 'Roof Top Net, Gohadpur, Sialkot installation photo 4 - 20ft full perimeter protection by Cereburum Sports' },
-      { type: 'image', url: '/images/works/roof-top-net-gohadpur-sialkot/roof-top-net-sialkot-4.webp', alt: 'Roof Top Net, Gohadpur, Sialkot installation photo 5 - rooftop cricket cage netting by Cereburum Sports' },
-      { type: 'image', url: '/images/works/roof-top-net-gohadpur-sialkot/roof-top-net-sialkot-5.webp', alt: 'Roof Top Net, Gohadpur, Sialkot installation photo 6 - high wind resistant rooftop net by Cereburum Sports' },
-      { type: 'image', url: '/images/works/roof-top-net-gohadpur-sialkot/roof-top-net-sialkot-6.webp', alt: 'Roof Top Net, Gohadpur, Sialkot installation photo 7 - completed Sialkot rooftop sports net by Cereburum Sports' }
+      { type: 'image', url: '/images/works/roof-top-net-gohadpur-sialkot/roof-top-net-sialkot-cover.webp', alt: 'rooftop cricket net night view outside — Night rooftop sports enclosure with full perimeter and ceiling netting on steel poles — net installation Sialkot, Pakistan' },
+      { type: 'image', url: '/images/works/roof-top-net-gohadpur-sialkot/roof-top-net-sialkot-1.webp', alt: 'rooftop cricket net night view with lights on — Floodlit rooftop perimeter net with upward stadium lights at night — sports net maker Gohadpur Sialkot Punjab' },
+      { type: 'image', url: '/images/works/roof-top-net-gohadpur-sialkot/roof-top-net-sialkot-2.webp', alt: 'cricket net on roof top after installation — Installation team gathered inside completed rooftop net cage after deployment — custom net installation Sialkot Pakistan' },
+      { type: 'image', url: '/images/works/roof-top-net-gohadpur-sialkot/roof-top-net-sialkot-3.webp', alt: 'night time rooftop net box inside view — White pole rooftop net frame with side and ceiling Parachute mesh under floodlights — net manufacturer Punjab' },
+      { type: 'image', url: '/images/works/roof-top-net-gohadpur-sialkot/roof-top-net-sialkot-4.webp', alt: 'rooftop net night view after installation — Wide rooftop view of sports net enclosure with city skyline at night — rooftop cricket cage Sialkot Pakistan' },
+      { type: 'image', url: '/images/works/roof-top-net-gohadpur-sialkot/roof-top-net-sialkot-5.webp', alt: 'rooftop net night view after installation — Rooftop net ceiling mesh draped over floodlit playing area after final installation — net maker Gohadpur Sialkot' },
+      { type: 'image', url: '/images/works/roof-top-net-gohadpur-sialkot/roof-top-net-sialkot-6.webp', alt: 'rooftop cricket net box corner view at night — Interior corner of rooftop sports net with white side mesh — custom net installation Sialkot Punjab' }
     ]
   },
   {
@@ -191,15 +191,15 @@ const rawProjects = [
     badge: 'Custom',
     gradient: 'linear-gradient(135deg, rgba(26,24,112,0.7), rgba(7,5,26,0.95))',
     coverImage: '/images/works/sports-arena-khariyan/sports-arena-khariyan-cover.webp',
-    coverImageAlt: 'Sports Arena, Khariyan - Sports Arena Installation in Kharian, Pakistan | Cereburum Sports',
+    coverImageAlt: 'Cricket arena ground night outside view — sports arena netting installation in Kharian, Punjab — net manufacturer Pakistan | Cereburum Sports',
     media: [
-      { type: 'image', url: '/images/works/sports-arena-khariyan/sports-arena-khariyan-cover.webp', alt: 'Sports Arena, Khariyan installation photo 1 - 32ft vertical high clearance arena net by Cereburum Sports' },
-      { type: 'image', url: '/images/works/sports-arena-khariyan/sports-arena-khariyan-1.webp', alt: 'Sports Arena, Khariyan installation photo 2 - indoor cricket cage netting setup by Cereburum Sports' },
-      { type: 'image', url: '/images/works/sports-arena-khariyan/sports-arena-khariyan-2.webp', alt: 'Sports Arena, Khariyan installation photo 3 - rapid deployment sports net installation by Cereburum Sports' },
-      { type: 'image', url: '/images/works/sports-arena-khariyan/sports-arena-khariyan-3.webp', alt: 'Sports Arena, Khariyan installation photo 4 - high tension boundary net by Cereburum Sports' },
-      { type: 'image', url: '/images/works/sports-arena-khariyan/sports-arena-khariyan-4.webp', alt: 'Sports Arena, Khariyan installation photo 5 - steel pole support structure by Cereburum Sports' },
-      { type: 'image', url: '/images/works/sports-arena-khariyan/sports-arena-khariyan-5.webp', alt: 'Sports Arena, Khariyan installation photo 6 - sports arena perimeter netting by Cereburum Sports' },
-      { type: 'image', url: '/images/works/sports-arena-khariyan/sports-arena-khariyan-6.webp', alt: 'Sports Arena, Khariyan installation photo 7 - completed Kharian sports arena net by Cereburum Sports' }
+      { type: 'image', url: '/images/works/sports-arena-khariyan/sports-arena-khariyan-cover.webp', alt: 'Night sports arena with white mesh on black steel poles and portable floodlight — net installation Kharian, Pakistan' },
+      { type: 'image', url: '/images/works/sports-arena-khariyan/sports-arena-khariyan-1.webp', alt: 'Cricket net installation team after net installation — Installation team photo in front of completed sports arena net enclosure at night — custom net maker Kharian Punjab' },
+      { type: 'image', url: '/images/works/sports-arena-khariyan/sports-arena-khariyan-2.webp', alt: 'Sports netting arena entry door — Floodlit black mesh sports cage perimeter netting with dramatic side lighting — sports net installation Kharian Pakistan' },
+      { type: 'image', url: '/images/works/sports-arena-khariyan/sports-arena-khariyan-3.webp', alt: 'Sports arena night time corner view — Empty sports arena court inside full perimeter and roof netting at night — net manufacturer Kharian Punjab' },
+      { type: 'image', url: '/images/works/sports-arena-khariyan/sports-arena-khariyan-4.webp', alt: 'Sports arena net instaation with portable scaffold — Mobile scaffolding tower inside sports arena for ceiling net installation — rapid 8-hour deployment Kharian Pakistan' },
+      { type: 'image', url: '/images/works/sports-arena-khariyan/sports-arena-khariyan-5.webp', alt: 'Team installing sports net on mobile scaffold — Workers on scaffold installing rooftop sports net mesh at height — custom net installation Kharian Punjab' },
+      { type: 'image', url: '/images/works/sports-arena-khariyan/sports-arena-khariyan-6.webp', alt: 'cricket arena inside view with concrete ground — Completed clearance sports arena interior with ceiling net at night — net maker Kharian Pakistan' }
     ]
   },
   {
@@ -214,13 +214,13 @@ const rawProjects = [
     badge: 'Custom',
     gradient: 'linear-gradient(135deg, rgba(26,24,112,0.7), rgba(7,5,26,0.95))',
     coverImage: '/images/works/sports-arena-wazirabad/sports-arena-wazirabad-cover.webp',
-    coverImageAlt: 'Sports Arena, Wazirabad - Sports Arena Installation in Wazirabad, Pakistan | Cereburum Sports',
+    coverImageAlt: 'Cricket sports arena with natural ground — Massive 200ft sports arena netting installation in Wazirabad, Punjab — net manufacturer Pakistan | Cereburum Sports',
     media: [
-      { type: 'image', url: '/images/works/sports-arena-wazirabad/sports-arena-wazirabad-cover.webp', alt: 'Sports Arena, Wazirabad installation photo 1 - 14800 sq ft massive sports ground netting by Cereburum Sports' },
-      { type: 'image', url: '/images/works/sports-arena-wazirabad/sports-arena-wazirabad-1.webp', alt: 'Sports Arena, Wazirabad installation photo 2 - football ground fence netting by Cereburum Sports' },
-      { type: 'image', url: '/images/works/sports-arena-wazirabad/sports-arena-wazirabad-2.webp', alt: 'Sports Arena, Wazirabad installation photo 3 - large span sports net tensioning by Cereburum Sports' },
-      { type: 'image', url: '/images/works/sports-arena-wazirabad/sports-arena-wazirabad-3.webp', alt: 'Sports Arena, Wazirabad installation photo 4 - full perimeter safety net enclosure by Cereburum Sports' },
-      { type: 'video', url: '/images/works/sports-arena-wazirabad/sports-arena-wazirabad-4.mp4' }
+      { type: 'image', url: '/images/works/sports-arena-wazirabad/sports-arena-wazirabad-cover.webp', alt: 'Cricket sports arena with natural ground — 200ft x 74ft sports arena with full perimeter and roof mesh on grass field — net installation Wazirabad, Pakistan' },
+      { type: 'image', url: '/images/works/sports-arena-wazirabad/sports-arena-wazirabad-1.webp', alt: 'sports arena with scaffold after installation — Large-span sports ground enclosure with netting under foggy sky — custom net maker Wazirabad Punjab' },
+      { type: 'image', url: '/images/works/sports-arena-wazirabad/sports-arena-wazirabad-2.webp', alt: 'quality view sports arena after net installation — Side view of sports arena white mesh fence on grassy field — sports net installation Wazirabad Pakistan' },
+      { type: 'image', url: '/images/works/sports-arena-wazirabad/sports-arena-wazirabad-3.webp', alt: 'net closeup after installation — Close-up of tensioned white weave sports net on black steel pole — net manufacturer Wazirabad Punjab' },
+      { type: 'video', url: '/images/works/sports-arena-wazirabad/sports-arena-wazirabad-4.mp4', alt: 'sports arena viwe after installation of net with iron poles and naturall grass — sports arena netting walkthrough along perimeter fence — custom net installation video Wazirabad Pakistan' }
     ]
   },
   {
@@ -235,12 +235,12 @@ const rawProjects = [
     badge: 'Custom',
     gradient: 'linear-gradient(135deg, rgba(26,24,112,0.7), rgba(7,5,26,0.95))',
     coverImage: '/images/works/roof-top-net-daska-road-sialkot/roof-top-net-daska-road-sialkot-cover.webp',
-    coverImageAlt: 'Roof Top Net, Daska Road, Sialkot - Rooftop Net Installation in Sialkot, Pakistan | Cereburum Sports',
+    coverImageAlt: 'Rooftop Parachute sports net installation on Daska Road, Sialkot — custom net manufacturer Pakistan | Cereburum Sports',
     media: [
-      { type: 'image', url: '/images/works/roof-top-net-daska-road-sialkot/roof-top-net-daska-road-sialkot-cover.webp', alt: 'Roof Top Net, Daska Road, Sialkot installation photo 1 - rooftop sports turf boundary net by Cereburum Sports' },
-      { type: 'image', url: '/images/works/roof-top-net-daska-road-sialkot/roof-top-net-daska-road-sialkot-1.webp', alt: 'Roof Top Net, Daska Road, Sialkot installation photo 2 - Parachute 60 high tenacity rooftop net by Cereburum Sports' },
-      { type: 'image', url: '/images/works/roof-top-net-daska-road-sialkot/roof-top-net-daska-road-sialkot-2.webp', alt: 'Roof Top Net, Daska Road, Sialkot installation photo 3 - 15ft vertical rooftop net enclosure by Cereburum Sports' },
-      { type: 'video', url: '/images/works/roof-top-net-daska-road-sialkot/roof-top-net-daska-road-sialkot-3.mp4' }
+      { type: 'image', url: '/images/works/roof-top-net-daska-road-sialkot/roof-top-net-daska-road-sialkot-cover.webp', alt: 'Rooftop cricket cage with white mesh and ceiling net under floodlights at night — net installation Daska Road Sialkot, Pakistan' },
+      { type: 'image', url: '/images/works/roof-top-net-daska-road-sialkot/roof-top-net-daska-road-sialkot-1.webp', alt: 'Roottop net front view — Floodlit rooftop sports enclosure and roof netting on concrete roof — sports net maker Sialkot Punjab' },
+      { type: 'image', url: '/images/works/roof-top-net-daska-road-sialkot/roof-top-net-daska-road-sialkot-2.webp', alt: 'Roof top cricket net cage on building top — Long interior view of rooftop net cage with lights on — custom net installation Daska Road Sialkot' },
+      { type: 'video', url: '/images/works/roof-top-net-daska-road-sialkot/roof-top-net-daska-road-sialkot-3.mp4', alt: 'Rooftop net complete view after installation at night — Completed rooftop Parachute sports net walkthrough under floodlights at night — net maker Sialkot Pakistan' }
     ]
   },
   {
@@ -255,14 +255,14 @@ const rawProjects = [
     badge: 'Custom',
     gradient: 'linear-gradient(135deg, rgba(26,24,112,0.7), rgba(7,5,26,0.95))',
     coverImage: '/images/works/mian-indoor-cricket-club-pasrur/mian-indoor-cricket-club-pasrur-cover.webp',
-    coverImageAlt: 'Mian Indoor Cricket Club, Pasrur - Sports Arena Installation in Pasrur, Pakistan | Cereburum Sports',
+    coverImageAlt: 'Indoor cricket clup night view installation — Indoor cricket club net installation in Pasrur, Punjab — custom net manufacturer Pakistan | Cereburum Sports',
     media: [
-      { type: 'image', url: '/images/works/mian-indoor-cricket-club-pasrur/mian-indoor-cricket-club-pasrur-cover.webp', alt: 'Mian Indoor Cricket Club, Pasrur installation photo 1 - indoor cricket cage netting setup by Cereburum Sports' },
-      { type: 'image', url: '/images/works/mian-indoor-cricket-club-pasrur/mian-indoor-cricket-club-pasrur-1.webp', alt: 'Mian Indoor Cricket Club, Pasrur installation photo 2 - Parachute 36 indoor sports arena net by Cereburum Sports' },
-      { type: 'image', url: '/images/works/mian-indoor-cricket-club-pasrur/mian-indoor-cricket-club-pasrur-2.webp', alt: 'Mian Indoor Cricket Club, Pasrur installation photo 3 - high vertical clearance cricket net by Cereburum Sports' },
-      { type: 'image', url: '/images/works/mian-indoor-cricket-club-pasrur/mian-indoor-cricket-club-pasrur-3.webp', alt: 'Mian Indoor Cricket Club, Pasrur installation photo 4 - express 6 hour sports net setup by Cereburum Sports' },
-      { type: 'video', url: '/images/works/mian-indoor-cricket-club-pasrur/mian-indoor-cricket-club-pasrur-4.mp4' },
-      { type: 'video', url: '/images/works/mian-indoor-cricket-club-pasrur/mian-indoor-cricket-club-pasrur-5.mp4' }
+      { type: 'image', url: '/images/works/mian-indoor-cricket-club-pasrur/mian-indoor-cricket-club-pasrur-cover.webp', alt: 'Indoor cricket clup night view installation — Indoor cricket arena net during installation at Indoor Cricket Club — net installation Pasrur, Pakistan' },
+      { type: 'image', url: '/images/works/mian-indoor-cricket-club-pasrur/mian-indoor-cricket-club-pasrur-1.webp', alt: 'Cricket club net installation starting view — Workers laying out white Parachute cricket net on grass at night — sports net maker Pasrur Punjab' },
+      { type: 'image', url: '/images/works/mian-indoor-cricket-club-pasrur/mian-indoor-cricket-club-pasrur-2.webp', alt: 'Cricket club net front view at night — Completed indoor cricket lane with roof mesh and concrete pitch  — custom net installation Pasrur Pakistan' },
+      { type: 'image', url: '/images/works/mian-indoor-cricket-club-pasrur/mian-indoor-cricket-club-pasrur-3.webp', alt: 'Cricket club net after installation back view — Floodlit indoor cricket club enclosure with brick walls and ceiling netting at night — net manufacturer Pasrur Sialkot' },
+      { type: 'video', url: '/images/works/mian-indoor-cricket-club-pasrur/mian-indoor-cricket-club-pasrur-4.mp4', alt: 'Cricket club net quality check after installation — Close-up of Parachute white cricket net mesh indoor installation — net deployment video Pasrur Punjab' },
+      { type: 'video', url: '/images/works/mian-indoor-cricket-club-pasrur/mian-indoor-cricket-club-pasrur-5.mp4', alt: 'Complete cricket club view after net install — Indoor Cricket Club white mesh net walkthrough on natural turf — Parachute 36 net maker Pasrur Pakistan' }
     ]
   },
   {
@@ -277,15 +277,15 @@ const rawProjects = [
     badge: 'Custom',
     gradient: 'linear-gradient(135deg, rgba(26,24,112,0.7), rgba(7,5,26,0.95))',
     coverImage: '/images/works/circket-arena-mirpur/circket-arena-mirpur-1.webp',
-    coverImageAlt: 'Circket Arena, Mirpur - Sports Arena Installation in Mirpur, Pakistan | Cereburum Sports',
+    coverImageAlt: 'Cricket arena outer view in morning — Indoor cricket arena with Parachute 36 and 24 netting in Mirpur, AJK — custom net manufacturer Pakistan | Cereburum Sports',
     media: [
-      { type: 'image', url: '/images/works/circket-arena-mirpur/circket-arena-mirpur-1.webp', alt: 'Circket Arena, Mirpur installation photo 1 - indoor sports ground netting by Cereburum Sports' },
-      { type: 'image', url: '/images/works/circket-arena-mirpur/circket-arena-mirpur-2.webp', alt: 'Circket Arena, Mirpur installation photo 2 - 30ft vertical height arena net by Cereburum Sports' },
-      { type: 'image', url: '/images/works/circket-arena-mirpur/circket-arena-mirpur-3.webp', alt: 'Circket Arena, Mirpur installation photo 3 - Parachute 36 side netting setup by Cereburum Sports' },
-      { type: 'image', url: '/images/works/circket-arena-mirpur/circket-arena-mirpur-4.webp', alt: 'Circket Arena, Mirpur installation photo 4 - Parachute 24 roof netting setup by Cereburum Sports' },
-      { type: 'image', url: '/images/works/circket-arena-mirpur/circket-arena-mirpur-5.webp', alt: 'Circket Arena, Mirpur installation photo 5 - custom cricket arena netting installation by Cereburum Sports' },
-      { type: 'video', url: '/images/works/circket-arena-mirpur/circket-arena-mirpur-6.mp4' },
-      { type: 'video', url: '/images/works/circket-arena-mirpur/circket-arena-mirpur-7.mp4' }
+      { type: 'image', url: '/images/works/circket-arena-mirpur/circket-arena-mirpur-1.webp', alt: 'Cricket arena outer view in morning — Exterior view of cricket arena white mesh enclosure with floodlights — net installation Mirpur, Pakistan' },
+      { type: 'image', url: '/images/works/circket-arena-mirpur/circket-arena-mirpur-2.webp', alt: 'Cricket arena before net installation — Empty concrete sports court with steel pole framework before netting — cricket arena setup Mirpur AJK' },
+      { type: 'image', url: '/images/works/circket-arena-mirpur/circket-arena-mirpur-3.webp', alt: 'Cricket arena after net installation — Floodlit indoor cricket arena interior with Parachute 36 side and Parachute 24 roof net — net maker Mirpur Pakistan' },
+      { type: 'image', url: '/images/works/circket-arena-mirpur/circket-arena-mirpur-4.webp', alt: 'Cricket arena outside corner viwe after net install — Night side view of white mesh sports cage illuminated by stadium floodlights — custom net installation Mirpur AJK' },
+      { type: 'image', url: '/images/works/circket-arena-mirpur/circket-arena-mirpur-5.webp', alt: 'Crickte arena exterior viwe in morning — Exterior cricket arena perimeter netting at dusk with residential buildings — sports net manufacturer Mirpur Pakistan' },
+      { type: 'video', url: '/images/works/circket-arena-mirpur/circket-arena-mirpur-6.mp4', alt: 'Cricket arena complete view after net install — Cricket arena net installation at night with floodlit perimeter mesh — deployment video Mirpur AJK Pakistan' },
+      { type: 'video', url: '/images/works/circket-arena-mirpur/circket-arena-mirpur-7.mp4', alt: 'Cricket arena outer view after install — Completed indoor cricket ground netting walkthrough under floodlights — net maker Mirpur Pakistan' }
     ]
   },
   {
@@ -300,17 +300,17 @@ const rawProjects = [
     badge: 'Custom',
     gradient: 'linear-gradient(135deg, rgba(26,24,112,0.7), rgba(7,5,26,0.95))',
     coverImage: '/images/works/bloomfield-hall-school-khariyan/bloomfield-hall-school-khariyan-1.webp',
-    coverImageAlt: 'Bloomfield Hall School, Khariyan - Sports Complex Installation in Kharian, Pakistan | Cereburum Sports',
+    coverImageAlt: 'School sports net enclosure for Bloomfield Hall School Kharian — custom net manufacturer Pakistan | Cereburum Sports',
     media: [
-      { type: 'image', url: '/images/works/bloomfield-hall-school-khariyan/bloomfield-hall-school-khariyan-1.webp', alt: 'Bloomfield Hall School, Khariyan installation photo 1 - school sports ground netting setup by Cereburum Sports' },
-      { type: 'image', url: '/images/works/bloomfield-hall-school-khariyan/bloomfield-hall-school-khariyan-2.webp', alt: 'Bloomfield Hall School, Khariyan installation photo 2 - indoor sports enclosure netting by Cereburum Sports' },
-      { type: 'image', url: '/images/works/bloomfield-hall-school-khariyan/bloomfield-hall-school-khariyan-3.webp', alt: 'Bloomfield Hall School, Khariyan installation photo 3 - Parachute 36 impact side net by Cereburum Sports' },
-      { type: 'image', url: '/images/works/bloomfield-hall-school-khariyan/bloomfield-hall-school-khariyan-4.webp', alt: 'Bloomfield Hall School, Khariyan installation photo 4 - Parachute 24 lightweight roof net by Cereburum Sports' },
-      { type: 'image', url: '/images/works/bloomfield-hall-school-khariyan/bloomfield-hall-school-khariyan-5.webp', alt: 'Bloomfield Hall School, Khariyan installation photo 5 - school safety approved sports netting by Cereburum Sports' },
-      { type: 'image', url: '/images/works/bloomfield-hall-school-khariyan/bloomfield-hall-school-khariyan-6.webp', alt: 'Bloomfield Hall School, Khariyan installation photo 6 - completed school arena netting by Cereburum Sports' },
-      { type: 'video', url: '/images/works/bloomfield-hall-school-khariyan/bloomfield-hall-school-khariyan-7.mp4' },
-      { type: 'video', url: '/images/works/bloomfield-hall-school-khariyan/bloomfield-hall-school-khariyan-8.mp4' },
-      { type: 'video', url: '/images/works/bloomfield-hall-school-khariyan/bloomfield-hall-school-khariyan-9.mp4' }
+      { type: 'image', url: '/images/works/bloomfield-hall-school-khariyan/bloomfield-hall-school-khariyan-1.webp', alt: 'school sports cage with white mesh and ceiling net under floodlights on school grounds — net installation Bloomfield Hall Kharian, Pakistan' },
+      { type: 'image', url: '/images/works/bloomfield-hall-school-khariyan/bloomfield-hall-school-khariyan-2.webp', alt: 'cricket net cage before installing net — Workers building steel pole frame on concrete pad for school sports enclosure at night — cricket net setup Kharian Punjab' },
+      { type: 'image', url: '/images/works/bloomfield-hall-school-khariyan/bloomfield-hall-school-khariyan-3.webp', alt: 'cricket net cage after installing net — Interior of school sports arena with Parachute 36 side and Parachute 24 roof net during installation — net maker Kharian Pakistan' },
+      { type: 'image', url: '/images/works/bloomfield-hall-school-khariyan/bloomfield-hall-school-khariyan-4.webp', alt: 'Cricket net after install exterior view — Floodlit school sports cage exterior with worker inspecting completed netting — custom net installation Bloomfield Hall Kharian' },
+      { type: 'image', url: '/images/works/bloomfield-hall-school-khariyan/bloomfield-hall-school-khariyan-5.webp', alt: 'Cricket net after install exterior view corner side — Night view of completed 20ft height school sports enclosure glowing under floodlights — sports net manufacturer Kharian Punjab' },
+      { type: 'image', url: '/images/works/bloomfield-hall-school-khariyan/bloomfield-hall-school-khariyan-6.webp', alt: 'Cricket net cage door entry — Close-up of white mesh sports net gate with black frame at school arena corner — net installation Kharian Pakistan' },
+      { type: 'video', url: '/images/works/bloomfield-hall-school-khariyan/bloomfield-hall-school-khariyan-7.mp4', alt: 'Bloomfield Hall School building exterior at night with cricket net ground complete installation — school sports net project Kharian Punjab Pakistan' },
+      { type: 'video', url: '/images/works/bloomfield-hall-school-khariyan/bloomfield-hall-school-khariyan-8.mp4', alt: 'Cricket arena complete interior view after net isntall — School sports arena net installation interior with ceiling mesh and turf rolls — deployment video Kharian Pakistan' },
+      { type: 'video', url: '/images/works/bloomfield-hall-school-khariyan/bloomfield-hall-school-khariyan-9.mp4', alt: 'Cricket arena top view during net installation — Close-up of Parachute mesh school sports net at night — net maker Bloomfield Hall Kharian' }
     ]
   },
   {
@@ -325,15 +325,15 @@ const rawProjects = [
     badge: 'Custom',
     gradient: 'linear-gradient(135deg, rgba(26,24,112,0.7), rgba(7,5,26,0.95))',
     coverImage: '/images/works/sports-complex-mardan/sports-complex-mardan-1.webp',
-    coverImageAlt: 'Sports Complex, Mardan - Sports Complex Installation in Mardan, Pakistan | Cereburum Sports',
+    coverImageAlt: 'Cricket cage corner view — Sports complex netting installation in morining in Mardan, KPK — custom net manufacturer Pakistan | Cereburum Sports',
     media: [
-      { type: 'image', url: '/images/works/sports-complex-mardan/sports-complex-mardan-1.webp', alt: 'Sports Complex, Mardan installation photo 1 - sports arena enclosure netting by Cereburum Sports' },
-      { type: 'image', url: '/images/works/sports-complex-mardan/sports-complex-mardan-2.webp', alt: 'Sports Complex, Mardan installation photo 2 - 30ft vertical height sports net by Cereburum Sports' },
-      { type: 'image', url: '/images/works/sports-complex-mardan/sports-complex-mardan-3.webp', alt: 'Sports Complex, Mardan installation photo 3 - single night express installation by Cereburum Sports' },
-      { type: 'image', url: '/images/works/sports-complex-mardan/sports-complex-mardan-4.webp', alt: 'Sports Complex, Mardan installation photo 4 - custom heavy duty sports net by Cereburum Sports' },
-      { type: 'video', url: '/images/works/sports-complex-mardan/sports-complex-mardan-5.mp4' },
-      { type: 'video', url: '/images/works/sports-complex-mardan/sports-complex-mardan-6.mp4' },
-      { type: 'video', url: '/images/works/sports-complex-mardan/sports-complex-mardan-7.mp4' }
+      { type: 'image', url: '/images/works/sports-complex-mardan/sports-complex-mardan-1.webp', alt: 'Sports complex exterior in morning — Wide view of galvanized steel frame with white mesh on concrete court in residential Mardan — net installation Mardan, KPK Pakistan' },
+      { type: 'image', url: '/images/works/sports-complex-mardan/sports-complex-mardan-2.webp', alt: 'Overnight view before starting net installation — Workers opening net packagaing to start net installation — sports net setup Mardan Pakistan' },
+      { type: 'image', url: '/images/works/sports-complex-mardan/sports-complex-mardan-3.webp', alt: 'Cricket cage net setting corner binding — Large mesh panel hoisted onto galvanized perimeter frame by worker on scaffolding — net maker Mardan KPK' },
+      { type: 'image', url: '/images/works/sports-complex-mardan/sports-complex-mardan-4.webp', alt: 'Completed floodlit sports arena interior after installation  — Sesh enclosure on concrete court with worker adjusting netting under stadium lights — custom net installation Mardan Pakistan' },
+      { type: 'video', url: '/images/works/sports-complex-mardan/sports-complex-mardan-5.mp4', alt: 'Complete view of ground after net install — White perimeter mesh on galvanized poles at dusk on residential sports court — deployment video Mardan KPK Pakistan' },
+      { type: 'video', url: '/images/works/sports-complex-mardan/sports-complex-mardan-6.mp4', alt: 'Cricket ground view after net installation at dusk — Perimeter mesh deployed on galvanized steel frame between residential buildings — net manufacturer Mardan Pakistan' },
+      { type: 'video', url: '/images/works/sports-complex-mardan/sports-complex-mardan-7.mp4', alt: 'Cricket arena net installation top view — White heavy duty mesh tensioned over floodlit interlocking brick arena at night — net maker Mardan KPK Pakistan' }
     ]
   },
   {
@@ -348,13 +348,13 @@ const rawProjects = [
     badge: 'Custom',
     gradient: 'linear-gradient(135deg, rgba(26,24,112,0.7), rgba(7,5,26,0.95))',
     coverImage: '/images/works/house-roof-top-net-sialkot/house-roof-top-net-sialkot-1.webp',
-    coverImageAlt: 'House Roof Top Net, Sialkot - Rooftop Net Installation in Sialkot, Pakistan | Cereburum Sports',
+    coverImageAlt: 'L-shaped Parachute rooftop net installation on house roof in Sialkot — custom net manufacturer Pakistan | Cereburum Sports',
     media: [
-      { type: 'image', url: '/images/works/house-roof-top-net-sialkot/house-roof-top-net-sialkot-1.webp', alt: 'House Roof Top Net, Sialkot installation photo 1 - L shaped rooftop sports turf boundary net by Cereburum Sports' },
-      { type: 'image', url: '/images/works/house-roof-top-net-sialkot/house-roof-top-net-sialkot-2.webp', alt: 'House Roof Top Net, Sialkot installation photo 2 - Parachute 60 high wind resistant net by Cereburum Sports' },
-      { type: 'image', url: '/images/works/house-roof-top-net-sialkot/house-roof-top-net-sialkot-3.webp', alt: 'House Roof Top Net, Sialkot installation photo 3 - rooftop safety enclosure netting by Cereburum Sports' },
-      { type: 'image', url: '/images/works/house-roof-top-net-sialkot/house-roof-top-net-sialkot-4.webp', alt: 'House Roof Top Net, Sialkot installation photo 4 - high tensile strength roof net by Cereburum Sports' },
-      { type: 'video', url: '/images/works/house-roof-top-net-sialkot/house-roof-top-net-sialkot-5.mp4' }
+      { type: 'image', url: '/images/works/house-roof-top-net-sialkot/house-roof-top-net-sialkot-1.webp', alt: 'Rooftop net installation in progress — White mesh ceiling and side netting on bamboos with stepladder on residential terrace — net installation Sialkot, Pakistan' },
+      { type: 'image', url: '/images/works/house-roof-top-net-sialkot/house-roof-top-net-sialkot-2.webp', alt: 'L-shaped rooftop sports cage at night — Completed Parachute 60 white mesh enclosure with worker on decorative concrete roof — net maker Sialkot Punjab' },
+      { type: 'image', url: '/images/works/house-roof-top-net-sialkot/house-roof-top-net-sialkot-3.webp', alt: 'Rooftop cricket net box night view — Wide L-shaped white mesh cage with bamboo poles and urban skyline — custom net installation Sialkot Pakistan' },
+      { type: 'image', url: '/images/works/house-roof-top-net-sialkot/house-roof-top-net-sialkot-4.webp', alt: 'Rooftop net ceiling interior at night — Low angle along Parachute 60 overhead mesh toward enclosed playing area — sports net manufacturer Sialkot Punjab' },
+      { type: 'video', url: '/images/works/house-roof-top-net-sialkot/house-roof-top-net-sialkot-5.mp4', alt: 'House rooftop net installation walkthrough — Parachute 60 mesh deployment on residential roof with completed interior corner view — deployment video Sialkot Pakistan' }
     ]
   }
 ];
