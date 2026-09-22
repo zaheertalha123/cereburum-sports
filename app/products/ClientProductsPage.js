@@ -1,18 +1,19 @@
 'use client';
 
 import { useCallback } from 'react';
+import Link from 'next/link';
 import { useSearchParams, useRouter, usePathname } from 'next/navigation';
 import Image from 'next/image';
+import { productFilterGroups } from '@/data/products';
 import styles from './products.module.css';
 
-const FILTER_OPTIONS = ['All', 'Cricket', 'Football', 'Badminton', 'Futsal', 'Hockey', 'Custom'];
 const FILTER_PARAM = 'filter';
 
 function resolveFilter(value) {
-  return FILTER_OPTIONS.includes(value) ? value : 'All';
+  return productFilterGroups.includes(value) ? value : 'All';
 }
 
-export default function ClientProductsPage({ categories }) {
+export default function ClientProductsPage({ products }) {
   const searchParams = useSearchParams();
   const router = useRouter();
   const pathname = usePathname();
@@ -33,10 +34,10 @@ export default function ClientProductsPage({ categories }) {
     [pathname, router, searchParams],
   );
 
-  const filteredCategories =
+  const filteredProducts =
     activeFilter === 'All'
-      ? categories
-      : categories.filter((cat) => cat.filterGroup === activeFilter);
+      ? products
+      : products.filter((product) => product.filterGroup === activeFilter);
 
   return (
     <>
@@ -58,7 +59,7 @@ export default function ClientProductsPage({ categories }) {
           </p>
 
           <div className={styles.filterRow} role="list" aria-label="Product categories">
-            {FILTER_OPTIONS.map((opt) => (
+            {productFilterGroups.map((opt) => (
               <button
                 key={opt}
                 onClick={() => setActiveFilter(opt)}
@@ -75,75 +76,67 @@ export default function ClientProductsPage({ categories }) {
       <section className={`section-pad ${styles.productsSection}`} aria-label="Products list">
         <div className="container">
           <div className={styles.productsGrid}>
-            {filteredCategories.map((cat, i) => (
-              <article
-                key={cat.id}
-                id={cat.id}
-                className={`${styles.productCard} reveal`}
-                style={{ transitionDelay: `${(i % 3) * 0.1}s` }}
-                aria-label={cat.title}
+            {filteredProducts.map((product, i) => (
+              <Link
+                key={product.id}
+                href={`/products/${product.id}`}
+                className={styles.productCardLink}
+                aria-label={`View ${product.title} details`}
               >
-                {/* Visual Area for Product */}
-                <div className={styles.productVisual}>
-                  {cat.image ? (
-                    <Image
-                      src={cat.image}
-                      alt={
-                        cat.imageAlt ||
-                        `${cat.title} - ${cat.subtitle || cat.filterGroup || 'Sports Netting'} Manufacturer Pakistan | Cereburum Sports`
-                      }
-                      fill
-                      className={styles.productImage}
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 25vw"
-                    />
-                  ) : (
-                    <div className={styles.placeholderVisual}>
-                      <span className={styles.placeholderText}>Image Coming Soon</span>
-                    </div>
-                  )}
-                </div>
-
-                {/* Card header */}
-                <div className={styles.cardHeader}>
-                  <div className={styles.cardHeaderLeft}>
-                    <div>
-                      <p className={`label ${styles.cardSubtitle}`}>{cat.subtitle}</p>
-                      <h2 className={`heading-lg ${styles.cardTitle}`}>{cat.title}</h2>
-                    </div>
+                <article
+                  id={product.id}
+                  className={`${styles.productCard} reveal`}
+                  style={{ transitionDelay: `${(i % 3) * 0.1}s` }}
+                >
+                  <div className={styles.productVisual}>
+                    {product.image ? (
+                      <Image
+                        src={product.image}
+                        alt={
+                          product.imageAlt ||
+                          `${product.title} - ${product.subtitle || product.filterGroup || 'Sports Netting'} Manufacturer Pakistan | Cereburum Sports`
+                        }
+                        fill
+                        className={styles.productImage}
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 25vw"
+                      />
+                    ) : (
+                      <div className={styles.placeholderVisual}>
+                        <span className={styles.placeholderText}>Image Coming Soon</span>
+                      </div>
+                    )}
                   </div>
-                  {cat.tag && (
-                    <span className={`${styles.cardTag} ${styles[`tag-${cat.tagColor}`]}`}>
-                      {cat.tag}
-                    </span>
-                  )}
-                </div>
 
-                <p className={`body-md ${styles.cardDesc}`}>{cat.desc}</p>
-
-                {/* Features */}
-                <ul className={styles.featureList} role="list" aria-label={`${cat.title} features`}>
-                  {cat.features.slice(0, 4).map((f) => (
-                    <li key={f} className={styles.featureItem}>
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className={styles.featureCheck} aria-hidden="true">
-                        <polyline points="20 6 9 17 4 12" />
-                      </svg>
-                      {f}
-                    </li>
-                  ))}
-                </ul>
-
-                {/* Specs */}
-                <div className={styles.specsGrid} role="table" aria-label={`${cat.title} specifications`}>
-                  {cat.specs.slice(0, 4).map(({ label, value }) => (
-                    <div key={label} className={styles.specItem} role="row">
-                      <span className={`label ${styles.specLabel}`} role="rowheader">{label}</span>
-                      <span className={`body-sm ${styles.specValue}`} role="cell">{value}</span>
+                  <div className={styles.cardHeader}>
+                    <div className={styles.cardHeaderLeft}>
+                      <div>
+                        <p className={`label ${styles.cardSubtitle}`}>{product.subtitle}</p>
+                        <h2 className={`heading-lg ${styles.cardTitle}`}>{product.title}</h2>
+                      </div>
                     </div>
-                  ))}
-                </div>
+                    {product.tag ? (
+                      <span className={`${styles.cardTag} ${styles[`tag-${product.tagColor}`]}`}>
+                        {product.tag}
+                      </span>
+                    ) : null}
+                  </div>
 
-                {/* CTA */}
-              </article>
+                  <div className={styles.specsGrid} role="table" aria-label={`${product.title} specifications`}>
+                    {product.specs.slice(0, 4).map(({ label, value }) => (
+                      <div key={label} className={styles.specItem} role="row">
+                        <span className={`label ${styles.specLabel}`} role="rowheader">
+                          {label}
+                        </span>
+                        <span className={`body-sm ${styles.specValue}`} role="cell">
+                          {value}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+
+                  <span className={styles.viewDetails}>View details →</span>
+                </article>
+              </Link>
             ))}
           </div>
         </div>

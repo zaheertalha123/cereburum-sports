@@ -1,5 +1,6 @@
 import { projects } from '@/data/projects';
 import { guides } from '@/data/guides';
+import { products } from '@/data/products';
 import { getSiteUrl } from '@/lib/siteUrl';
 
 const BASE_URL = getSiteUrl();
@@ -33,5 +34,12 @@ export default function sitemap() {
     priority: 0.7,
   }));
 
-  return [...staticEntries, ...projectEntries, ...guideEntries];
+  const productEntries = products.map((product) => ({
+    url: `${BASE_URL}/products/${product.id}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly',
+    priority: 0.8,
+  }));
+
+  return [...staticEntries, ...projectEntries, ...guideEntries, ...productEntries];
 }
