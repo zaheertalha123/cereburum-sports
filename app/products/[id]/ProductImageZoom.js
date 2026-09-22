@@ -5,8 +5,8 @@ import { createPortal } from 'react-dom';
 import Image from 'next/image';
 import styles from './product-detail.module.css';
 
-const ZOOM = 4;
-const PANE = 260;
+const ZOOM = 3.5;
+const PANE = 380;
 
 function paintedImageBox(frame, img) {
   const rect = frame.getBoundingClientRect();
@@ -58,6 +58,7 @@ export default function ProductImageZoom({ src, alt, tag }) {
     const y = (py - box.offsetY) / box.height;
     const bgWidth = PANE * ZOOM;
     const bgHeight = bgWidth * (box.nh / box.nw);
+    const lensSize = Math.round(PANE / ZOOM);
 
     let left = box.rect.right + 18;
     let top = event.clientY - PANE / 2;
@@ -73,6 +74,7 @@ export default function ProductImageZoom({ src, alt, tag }) {
       top,
       lensX: px,
       lensY: py,
+      lensSize,
       backgroundSize: `${bgWidth}px ${bgHeight}px`,
       backgroundPosition: `${PANE / 2 - x * bgWidth}px ${PANE / 2 - y * bgHeight}px`,
     });
@@ -97,7 +99,14 @@ export default function ProductImageZoom({ src, alt, tag }) {
         {zoom ? (
           <span
             className={styles.zoomLens}
-            style={{ left: zoom.lensX, top: zoom.lensY }}
+            style={{
+              left: zoom.lensX,
+              top: zoom.lensY,
+              width: zoom.lensSize,
+              height: zoom.lensSize,
+              marginLeft: -zoom.lensSize / 2,
+              marginTop: -zoom.lensSize / 2,
+            }}
             aria-hidden="true"
           />
         ) : null}

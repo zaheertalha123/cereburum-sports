@@ -138,14 +138,14 @@ export default async function ProductDetailPage({ params }) {
                     href={whatsappUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="btn btn-whatsapp btn-lg"
+                    className={`btn btn-whatsapp ${styles.ctaBtn}`}
                     aria-label={`Enquire about ${product.title} on WhatsApp`}
                   >
                     Enquire on WhatsApp
                   </a>
                   <Link
                     href={`/contact?product=${encodeURIComponent(product.id)}&service=custom-net#email-form-heading`}
-                    className="btn btn-outline btn-lg"
+                    className={`btn btn-outline ${styles.ctaBtn}`}
                   >
                     Request a Quote
                   </Link>
