@@ -5,7 +5,7 @@ import { createPortal } from 'react-dom';
 import Image from 'next/image';
 import styles from './product-detail.module.css';
 
-const ZOOM = 2.4;
+const ZOOM = 4;
 const PANE = 260;
 
 function paintedImageBox(frame, img) {

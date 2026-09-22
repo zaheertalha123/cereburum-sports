@@ -3,9 +3,8 @@ import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { products, getProductById } from '@/data/products';
 import ProductImageZoom from './ProductImageZoom';
+import { productInquiryMessage, whatsAppUrl } from '@/lib/whatsapp';
 import styles from './product-detail.module.css';
-
-const WHATSAPP_NUMBER = '923187768296';
 
 export async function generateStaticParams() {
   return products.map((product) => ({ id: product.id }));
@@ -30,9 +29,20 @@ export async function generateMetadata({ params }) {
   };
 }
 
-function buildWhatsAppUrl(product) {
-  const text = `Hello, I'm interested in ${product.title} (${product.subtitle}). Please share pricing and availability.`;
-  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
+function getRelatedProducts(product, limit = 3) {
+  const others = products.filter((item) => item.id !== product.id);
+  const sameGroup = others.filter((item) => item.filterGroup === product.filterGroup);
+
+  if (sameGroup.length >= limit) {
+    return { items: sameGroup.slice(0, limit), mixed: false };
+  }
+
+  const picked = new Set(sameGroup.map((item) => item.id));
+  const rest = others.filter((item) => !picked.has(item.id));
+  const featured = rest.filter((item) => item.tag);
+  const filler = [...featured, ...rest.filter((item) => !item.tag)].slice(0, limit - sameGroup.length);
+
+  return { items: [...sameGroup, ...filler], mixed: filler.length > 0 };
 }
 
 export default async function ProductDetailPage({ params }) {
@@ -43,11 +53,9 @@ export default async function ProductDetailPage({ params }) {
     notFound();
   }
 
-  const related = products
-    .filter((p) => p.filterGroup === product.filterGroup && p.id !== product.id)
-    .slice(0, 3);
+  const { items: related, mixed: relatedIsMixed } = getRelatedProducts(product);
 
-  const whatsappUrl = buildWhatsAppUrl(product);
+  const whatsappUrl = whatsAppUrl(productInquiryMessage(product));
   const productsFilterHref =
     product.filterGroup && product.filterGroup !== 'Custom'
       ? `/products?filter=${encodeURIComponent(product.filterGroup)}`
@@ -150,11 +158,15 @@ export default async function ProductDetailPage({ params }) {
           <div className="container">
             <div className={styles.relatedHeader}>
               <div>
-                <span className="section-label">More in {product.filterGroup}</span>
-                <h2 className={`heading-lg ${styles.relatedTitle}`}>Related Products</h2>
+                <span className="section-label">
+                  {relatedIsMixed ? 'From our range' : `More in ${product.filterGroup}`}
+                </span>
+                <h2 className={`heading-lg ${styles.relatedTitle}`}>
+                  {relatedIsMixed ? 'You May Also Like' : 'Related Products'}
+                </h2>
               </div>
-              <Link href={productsFilterHref} className={styles.relatedLink}>
-                View all {product.filterGroup} →
+              <Link href={relatedIsMixed ? '/products' : productsFilterHref} className={styles.relatedLink}>
+                {relatedIsMixed ? 'View all products' : `View all ${product.filterGroup}`} →
               </Link>
             </div>
 
