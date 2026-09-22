@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
-import { contactFormSchema } from '@/lib/contactSchema';
+import { contactFormSchema, contactServices } from '@/lib/contactSchema';
+import { getProductById } from '@/data/products';
 
 function escapeHtml(text) {
   return String(text)
@@ -29,7 +30,9 @@ export async function POST(request) {
       return NextResponse.json({ error: msg }, { status: 400 });
     }
 
-    const { name, email, subject, message } = parsed.data;
+    const { name, email, product, service, subject, message } = parsed.data;
+    const productLabel = product ? `${getProductById(product).title} — ${getProductById(product).subtitle}` : 'Not specified';
+    const serviceLabel = contactServices.find((item) => item.id === service)?.label || service;
 
     const user = process.env.EMAIL_USER;
     const pass = process.env.EMAIL_PASS;
@@ -47,6 +50,8 @@ export async function POST(request) {
 
     const safeName = escapeHtml(name);
     const safeEmail = escapeHtml(email);
+    const safeProduct = escapeHtml(productLabel);
+    const safeService = escapeHtml(serviceLabel);
     const safeSubject = escapeHtml(subject);
     const safeMessage = escapeHtml(message);
 
@@ -61,6 +66,8 @@ export async function POST(request) {
           <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 20px 0;">
             <p><strong>Name:</strong> ${safeName}</p>
             <p><strong>Email:</strong> ${safeEmail}</p>
+            <p><strong>Product:</strong> ${safeProduct}</p>
+            <p><strong>Service:</strong> ${safeService}</p>
             <p><strong>Subject:</strong> ${safeSubject}</p>
           </div>
           <div style="background: #ffffff; padding: 20px; border: 1px solid #e9ecef; border-radius: 8px;">

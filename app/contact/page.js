@@ -1,3 +1,4 @@
+import { Suspense } from 'react';
 import styles from './contact.module.css';
 import FAQAccordion from '@/components/FAQAccordion';
 import ContactForm from '@/components/ContactForm';
@@ -156,7 +157,9 @@ export default function ContactPage() {
               </p>
             </div>
             <div className={`${styles.formCard} reveal`}>
-              <ContactForm />
+              <Suspense fallback={null}>
+                <ContactForm />
+              </Suspense>
             </div>
           </div>
         </div>

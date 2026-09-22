@@ -1,17 +1,23 @@
 'use client';
 
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { getProductById } from '@/data/products';
+import { productInquiryMessage, whatsAppUrl } from '@/lib/whatsapp';
 import styles from './WhatsAppFAB.module.css';
 
-const WHATSAPP_NUMBER = '923187768296';
-const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=Hello%2C%20I%27m%20interested%20in%20your%20sports%20products.`;
 const CONTACT_FORM_HREF = '/contact#email-form-heading';
 
 export default function WhatsAppFAB() {
+  const pathname = usePathname();
+  const productId = pathname?.match(/^\/products\/([^/]+)$/)?.[1];
+  const product = productId ? getProductById(decodeURIComponent(productId)) : null;
+  const whatsappUrl = whatsAppUrl(product ? productInquiryMessage(product) : undefined);
+
   return (
     <div className={styles.stack}>
       <a
-        href={WHATSAPP_URL}
+        href={whatsappUrl}
         target="_blank"
         rel="noopener noreferrer"
         className={`${styles.fab} ${styles.fabWhatsapp}`}
