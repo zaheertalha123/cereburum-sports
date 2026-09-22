@@ -385,7 +385,8 @@
 }
 
 .formInput,
-.formTextarea {
+.formTextarea,
+.formSelect {
   width: 100%;
   padding: 0.75rem 1rem;
   border-radius: var(--radius-md);
@@ -401,12 +402,14 @@
 }
 
 .formInput:hover,
-.formTextarea:hover {
+.formTextarea:hover,
+.formSelect:hover {
   border-color: rgba(187,181,101,0.35);
 }
 
 .formInput:focus,
-.formTextarea:focus {
+.formTextarea:focus,
+.formSelect:focus {
   border-color: var(--sand);
   box-shadow: 0 0 0 3px rgba(187,181,101,0.12);
 }
@@ -415,6 +418,68 @@
   resize: vertical;
   min-height: 120px;
   line-height: 1.6;
+}
+
+.formSelect {
+  appearance: none;
+  color-scheme: dark;
+  background-image: linear-gradient(45deg, transparent 50%, var(--sand) 50%),
+    linear-gradient(135deg, var(--sand) 50%, transparent 50%);
+  background-position: calc(100% - 18px) 55%, calc(100% - 12px) 55%;
+  background-size: 6px 6px, 6px 6px;
+  background-repeat: no-repeat;
+  padding-right: 2.25rem;
+}
+
+.formSelect option {
+  background: #0e0c2e;
+  color: var(--white);
+}
+
+.combo {
+  position: relative;
+}
+
+.comboList {
+  position: absolute;
+  z-index: 30;
+  top: calc(100% + 0.35rem);
+  left: 0;
+  right: 0;
+  max-height: 240px;
+  overflow-y: auto;
+  margin: 0;
+  padding: 0.35rem;
+  list-style: none;
+  background: #0e0c2e;
+  border: 1px solid rgba(187, 181, 101, 0.28);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+}
+
+.comboOption {
+  width: 100%;
+  text-align: left;
+  border: 0;
+  background: transparent;
+  color: var(--gray-200);
+  font: inherit;
+  font-size: 0.9rem;
+  padding: 0.6rem 0.75rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.comboOptionActive,
+.comboOption:hover {
+  background: rgba(187, 181, 101, 0.16);
+  color: var(--white);
+}
+
+.comboEmpty {
+  padding: 0.7rem 0.75rem;
+  color: var(--gray-400);
+  font-size: 0.9rem;
 }
 
 .formError {

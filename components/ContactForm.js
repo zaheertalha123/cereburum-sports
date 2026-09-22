@@ -1,9 +1,12 @@
 'use client';
 
 import { useState } from 'react';
-import { useForm } from 'react-hook-form';
+import { Controller, useForm } from 'react-hook-form';
+import { useSearchParams } from 'next/navigation';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { contactFormSchema } from '@/lib/contactSchema';
+import { contactFormSchema, contactServices } from '@/lib/contactSchema';
+import { getProductById } from '@/data/products';
+import ProductCombobox from '@/components/ProductCombobox';
 import styles from '@/app/contact/contact.module.css';
 
 function SendIcon({ className }) {
@@ -24,12 +27,24 @@ function LoaderIcon({ className }) {
   );
 }
 
+function initialProduct(searchParams) {
+  const id = searchParams.get('product') || '';
+  return getProductById(id) ? id : '';
+}
+
+function initialService(searchParams) {
+  const id = searchParams.get('service') || '';
+  return contactServices.some((service) => service.id === id) ? id : '';
+}
+
 export default function ContactForm() {
+  const searchParams = useSearchParams();
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [serverError, setServerError] = useState(null);
 
   const {
     register,
+    control,
     handleSubmit,
     reset,
     formState: { errors, isSubmitting },
@@ -38,6 +53,8 @@ export default function ContactForm() {
     defaultValues: {
       name: '',
       email: '',
+      product: initialProduct(searchParams),
+      service: initialService(searchParams),
       subject: '',
       message: '',
     },
@@ -125,6 +142,44 @@ export default function ContactForm() {
           {errors.email && <p className={styles.formError}>{errors.email.message}</p>}
         </div>
       </div>
+
+      <div className={styles.formField}>
+          <label htmlFor="contact-product" className={`label ${styles.formLabel}`}>
+            Product
+          </label>
+          <Controller
+            name="product"
+            control={control}
+            render={({ field }) => (
+              <ProductCombobox
+                value={field.value}
+                onChange={field.onChange}
+                onBlur={field.onBlur}
+                invalid={Boolean(errors.product)}
+              />
+            )}
+          />
+          {errors.product && <p className={styles.formError}>{errors.product.message}</p>}
+        </div>
+        <div className={styles.formField}>
+          <label htmlFor="contact-service" className={`label ${styles.formLabel}`}>
+            Service
+          </label>
+          <select
+            id="contact-service"
+            className={`${styles.formInput} ${styles.formSelect}`}
+            aria-invalid={errors.service ? 'true' : 'false'}
+            {...register('service')}
+          >
+            <option value="">Select a service</option>
+            {contactServices.map((service) => (
+              <option key={service.id} value={service.id}>
+                {service.label}
+              </option>
+            ))}
+          </select>
+          {errors.service && <p className={styles.formError}>{errors.service.message}</p>}
+        </div>
 
       <div className={styles.formField}>
         <label htmlFor="contact-subject" className={`label ${styles.formLabel}`}>

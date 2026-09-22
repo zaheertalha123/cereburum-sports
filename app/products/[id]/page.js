@@ -143,7 +143,10 @@ export default async function ProductDetailPage({ params }) {
                   >
                     Enquire on WhatsApp
                   </a>
-                  <Link href="/contact#email-form-heading" className="btn btn-outline btn-lg">
+                  <Link
+                    href={`/contact?product=${encodeURIComponent(product.id)}&service=custom-net#email-form-heading`}
+                    className="btn btn-outline btn-lg"
+                  >
                     Request a Quote
                   </Link>
                 </div>
