@@ -2,11 +2,19 @@ import { mediaUrl } from '../lib/mediaUrl';
 
 const rawProducts = [
   {
-    id: 'crickeet-net-24',
+    id: 'cricket-net-24',
     title: 'Parachute 24',
     subtitle: 'Cricket Netting',
     filterGroup: 'Cricket',
-    image: '/images/products/parachute-24.webp',
+    image: '/images/products/cricket-net-24/cricket-net-24-cover.webp',
+    images: [
+      '/images/products/cricket-net-24/cricket-net-24-cover.webp',
+      '/images/products/cricket-net-24/cricket-net-24-1.webp',
+      '/images/products/cricket-net-24/cricket-net-24-2.webp',
+      '/images/products/cricket-net-24/cricket-net-24-3.webp',
+      '/images/products/cricket-net-24/cricket-net-24-4.webp',
+      '/images/products/cricket-net-24/cricket-net-24-5.webp',
+    ],
     imageAlt: 'Parachute 24 Cricket Practice Net - UV Treated Parachute Net Mesh Manufacturer Pakistan | Cereburum Sports',
     tag: 'Best Seller',
     tagColor: 'sand',
@@ -17,6 +25,10 @@ const rawProducts = [
       { label: 'Mesh Size', value: '1.75" (45mm)' },
       { label: 'Dimensions', value: '100 ft. x 10 ft.' },
       { label: 'Customizable', value: 'Yes' },
+      { label: 'Gauge', value: '1.5 mm' },
+      { label: 'Border', value: 'Coated Parachute' },
+      { label: 'Border Color', value: 'White | Black' },
+      { label: 'Weather Resistance', value: 'UV Treated' }
     ],
   },
   {
@@ -24,7 +36,15 @@ const rawProducts = [
     title: 'Parachute 36',
     subtitle: 'Cricket Netting',
     filterGroup: 'Cricket',
-    image: '/images/products/parachute-36.webp',
+    image: '/images/products/cricket-net-36/cricket-net-36-cover.webp',
+    images: [
+      '/images/products/cricket-net-36/cricket-net-36-cover.webp',
+      '/images/products/cricket-net-36/cricket-net-36-1.webp',
+      '/images/products/cricket-net-36/cricket-net-36-2.webp',
+      '/images/products/cricket-net-36/cricket-net-36-3.webp',
+      '/images/products/cricket-net-36/cricket-net-36-4.webp',
+      '/images/products/cricket-net-36/cricket-net-36-5.webp',
+    ],
     imageAlt: 'Parachute 36 Hardball Cricket Practice Netting - High Density Parachute Net Mesh Pakistan | Cereburum Sports',
     tag: 'Best Seller',
     tagColor: 'sand',
@@ -35,6 +55,10 @@ const rawProducts = [
       { label: 'Mesh Size', value: '1.75" (45mm)' },
       { label: 'Dimensions', value: '100 ft. x 10 ft.' },
       { label: 'Customizable', value: 'Yes' },
+      { label: 'Gauge', value: '2 mm' },
+      { label: 'Border', value: 'Coated Parachute' },
+      { label: 'Border Color', value: 'White | Black' },
+      { label: 'Weather Resistance', value: 'UV Treated' }
     ],
   },
   {
@@ -42,7 +66,14 @@ const rawProducts = [
     title: 'Parachute 66',
     subtitle: 'Cricket Netting',
     filterGroup: 'Cricket',
-    image: '/images/products/parachute-66.webp',
+    image: '/images/products/cricket-net-66/cricket-net-66-cover.webp',
+    images: [
+      '/images/products/cricket-net-66/cricket-net-66-cover.webp',
+      '/images/products/cricket-net-66/cricket-net-66-1.webp',
+      '/images/products/cricket-net-66/cricket-net-66-2.webp',
+      '/images/products/cricket-net-66/cricket-net-66-3.webp',
+      '/images/products/cricket-net-66/cricket-net-66-4.webp',
+    ],
     imageAlt: 'Parachute 66 Boundary Cricket Practice Net - Heavy Duty Parachute Net Mesh Pakistan | Cereburum Sports',
     tag: 'Best Seller',
     tagColor: 'sand',
@@ -53,6 +84,10 @@ const rawProducts = [
       { label: 'Mesh Size', value: '1.75" (45mm)' },
       { label: 'Dimensions', value: '100 ft. x 10 ft.' },
       { label: 'Customizable', value: 'Yes' },
+      { label: 'Gauge', value: '2.5 mm' },
+      { label: 'Border', value: 'Coated Parachute' },
+      { label: 'Border Color', value: 'White | Black' },
+      { label: 'Weather Resistance', value: 'UV Treated' }
     ],
   },
   {
@@ -60,7 +95,13 @@ const rawProducts = [
     title: 'Parachute 72',
     subtitle: 'Cricket Netting',
     filterGroup: 'Cricket',
-    image: '/images/products/parachute-72.webp',
+    image: '/images/products/cricket-net-72/cricket-net-72-cover.webp',
+    images: [
+      '/images/products/cricket-net-72/cricket-net-72-cover.webp',
+      '/images/products/cricket-net-72/cricket-net-72-1.webp',
+      '/images/products/cricket-net-72/cricket-net-72-2.webp',
+      '/images/products/cricket-net-72/cricket-net-72-3.webp',
+    ],
     imageAlt: 'Parachute 72 Stadium Boundary Cricket Netting - Weatherproof Parachute Net Mesh Pakistan | Cereburum Sports',
     tag: 'Best Seller',
     tagColor: 'sand',
@@ -71,6 +112,10 @@ const rawProducts = [
       { label: 'Mesh Size', value: '1.75" (45mm)' },
       { label: 'Dimensions', value: '100 ft. x 10 ft.' },
       { label: 'Customizable', value: 'Yes' },
+      { label: 'Gauge', value: '3 mm' },
+      { label: 'Border', value: 'Coated Parachute' },
+      { label: 'Border Color', value: 'White | Black' },
+      { label: 'Weather Resistance', value: 'UV Treated' }
     ],
   },
   {
@@ -132,7 +177,13 @@ const rawProducts = [
     title: 'Cotton Net',
     subtitle: 'Cricket Netting',
     filterGroup: 'Cricket',
-    image: '/images/products/cotton.webp',
+    image: '/images/products/cotton-net/cotton-net-cover.webp',
+    images: [
+      '/images/products/cotton-net/cotton-net-cover.webp',
+      '/images/products/cotton-net/cotton-net-1.webp',
+      '/images/products/cotton-net/cotton-net-2.webp',
+      '/images/products/cotton-net/cotton-net-3.webp',
+    ],
     imageAlt: 'Cotton Net - Bird Protection Netting - Farm Netting - Pegion Safety Netting - Multipurpose Net Manufacturer Pakistan | Cereburum Sports',
     tag: null,
     tagColor: null,
@@ -143,14 +194,24 @@ const rawProducts = [
       { label: 'Mesh Size', value: '1.75" (45mm)' },
       { label: 'Dimensions', value: '100 ft. x 10 ft.' },
       { label: 'Customizable', value: 'Yes' },
+      { label: 'Gauge', value: '2 mm' },
+      { label: 'Border', value: 'Nawar | Cotton | Rope' },
+      { label: 'Border Color', value: 'White | OffWhite'},
+      { label: 'Weather Resistance', value: 'Normal' }
     ],
   },
   {
-    id: 'crickeet-net-12',
+    id: 'cricket-net-12',
     title: 'Parachute 12',
     subtitle: 'Cricket Netting',
     filterGroup: 'Cricket',
-    image: '/images/products/parachute-12.webp',
+    image: '/images/products/cricket-net-12/cricket-net-12-cover.webp',
+    images: [
+      '/images/products/cricket-net-12/cricket-net-12-cover.webp',
+      '/images/products/cricket-net-12/cricket-net-12-1.webp',
+      '/images/products/cricket-net-12/cricket-net-12-2.webp',
+      '/images/products/cricket-net-12/cricket-net-12-3.webp',
+    ],
     imageAlt: 'Parachute 12 Mid Tier Cricket Practice Net - Parachute Net Mesh Manufacturer Pakistan | Cereburum Sports',
     tag: null,
     tagColor: null,
@@ -161,6 +222,10 @@ const rawProducts = [
       { label: 'Mesh Size', value: '1.75" (45mm)' },
       { label: 'Dimensions', value: '100 ft. x 10 ft.' },
       { label: 'Customizable', value: 'Yes' },
+      { label: 'Gauge', value: '1 mm' },
+      { label: 'Border', value: 'Nawar | Cotton | Rope' },
+      { label: 'Border Color', value: 'White | OffWhite'},
+      { label: 'Weather Resistance', value: 'UV Treated' }
     ],
   },
   {
@@ -407,6 +472,9 @@ const rawProducts = [
 export const products = rawProducts.map((product) => ({
   ...product,
   image: mediaUrl(product.image),
+  ...(product.images
+    ? { images: product.images.map((img) => mediaUrl(img)) }
+    : {}),
 }));
 
 export function getProductById(id) {

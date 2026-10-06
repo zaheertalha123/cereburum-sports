@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { products, getProductById } from '@/data/products';
-import ProductImageZoom from './ProductImageZoom';
+import ProductImageGallery from './ProductImageGallery';
 import { productInquiryMessage, whatsAppUrl } from '@/lib/whatsapp';
 import styles from './product-detail.module.css';
 
@@ -24,7 +24,9 @@ export async function generateMetadata({ params }) {
     openGraph: {
       title: `${product.title} — Cereburum Sports`,
       description: product.desc,
-      images: product.image ? [{ url: product.image, alt: product.imageAlt || product.title }] : [],
+      images: (product.images?.length ? product.images : product.image ? [product.image] : []).map(
+        (url) => ({ url, alt: product.imageAlt || product.title }),
+      ),
     },
   };
 }
@@ -56,6 +58,10 @@ export default async function ProductDetailPage({ params }) {
   const { items: related, mixed: relatedIsMixed } = getRelatedProducts(product);
 
   const whatsappUrl = whatsAppUrl(productInquiryMessage(product));
+  const galleryImages = product.images?.length ? product.images : product.image ? [product.image] : [];
+  const imageAlt =
+    product.imageAlt ||
+    `${product.title} - ${product.subtitle} - Sports Net Manufacturer Pakistan | Cereburum Sports`;
   const productsFilterHref =
     product.filterGroup && product.filterGroup !== 'Custom'
       ? `/products?filter=${encodeURIComponent(product.filterGroup)}`
@@ -79,15 +85,8 @@ export default async function ProductDetailPage({ params }) {
           </nav>
 
           <div className={styles.layout}>
-            {product.image ? (
-              <ProductImageZoom
-                src={product.image}
-                alt={
-                  product.imageAlt ||
-                  `${product.title} - ${product.subtitle} - Sports Net Manufacturer Pakistan | Cereburum Sports`
-                }
-                tag={product.tag}
-              />
+            {galleryImages.length > 0 ? (
+              <ProductImageGallery images={galleryImages} alt={imageAlt} tag={product.tag} />
             ) : null}
 
             <div className={styles.contentPanel}>
