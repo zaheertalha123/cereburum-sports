@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import styles from './project.module.css';
 
-export default function ClientGallery({ media, projectTitle }) {
+export default function ClientGallery({ media, projectTitle, compact = false, unoptimized = false }) {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [touchStart, setTouchStart] = useState(null);
@@ -25,6 +25,7 @@ export default function ClientGallery({ media, projectTitle }) {
   }, [lightboxOpen, currentIndex]); // eslint-disable-line react-hooks/exhaustive-deps
 
   if (!media || media.length === 0) {
+    if (compact) return null;
     return (
       <div className={styles.emptyGallery}>
         <p>Media gallery for this project is coming soon.</p>
@@ -77,7 +78,7 @@ export default function ClientGallery({ media, projectTitle }) {
 
   return (
     <>
-      <div className={styles.galleryGrid}>
+      <div className={compact ? styles.compactGrid : styles.galleryGrid}>
         {media.map((item, idx) => (
           <div 
             key={idx} 
@@ -97,6 +98,7 @@ export default function ClientGallery({ media, projectTitle }) {
                 className={styles.mediaItem}
                 style={{ width: '100%', height: 'auto', display: 'block' }}
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                unoptimized={unoptimized}
               />
             ) : item.type === 'video' ? (
               <div style={{ position: 'relative' }}>
@@ -139,6 +141,7 @@ export default function ClientGallery({ media, projectTitle }) {
                 height={1080}
                 className={styles.lightboxMedia}
                 style={{ width: 'auto', height: '100%', maxHeight: '85vh', maxWidth: '85vw', objectFit: 'contain' }}
+                unoptimized={unoptimized}
               />
             ) : (
               <video

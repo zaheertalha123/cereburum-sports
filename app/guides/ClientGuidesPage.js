@@ -4,6 +4,7 @@ import { useCallback } from 'react';
 import { useSearchParams, useRouter, usePathname } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
+import { getGuideCover, getGuideCoverAlt } from '@/data/guides';
 import styles from './guides.module.css';
 
 const FILTER_PARAM = 'filter';
@@ -100,16 +101,17 @@ export default function ClientGuidesPage({ guides, categories }) {
               >
                 <article className={styles.guideCard}>
                   <div className={styles.guideVisual}>
-                    <Image
-                      src={guide.image}
-                      alt={
-                        guide.imageAlt ||
-                        `${guide.title} - Step by Step Sports Netting Installation Guide | Cereburum Sports`
-                      }
-                      fill
-                      className={styles.guideImage}
-                      sizes="(max-width: 768px) 100vw, 50vw"
-                    />
+                    {getGuideCover(guide) ? (
+                      <Image
+                        src={getGuideCover(guide)}
+                        alt={getGuideCoverAlt(guide)}
+                        fill
+                        className={styles.guideImage}
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                      />
+                    ) : (
+                      <div className={styles.guideVisualFallback} aria-hidden="true" />
+                    )}
                   </div>
 
                   <div className={styles.cardBody}>
@@ -121,7 +123,9 @@ export default function ClientGuidesPage({ guides, categories }) {
                     <h2 className={`heading-md ${styles.cardTitle}`}>
                       {guide.title}
                     </h2>
-                    <p className={`body-sm ${styles.cardDesc}`}>{guide.desc}</p>
+                    {guide.desc ? (
+                      <p className={`body-sm ${styles.cardDesc}`}>{guide.desc}</p>
+                    ) : null}
                   </div>
                 </article>
               </Link>

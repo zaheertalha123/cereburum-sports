@@ -133,6 +133,14 @@
   transition: transform 0.5s ease;
 }
 
+.guideVisualFallback {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 80% 60% at 50% 40%, rgba(187, 181, 101, 0.16), transparent 70%),
+    linear-gradient(160deg, rgba(18, 17, 74, 0.9), rgba(7, 5, 26, 1));
+}
+
 .guideCard:hover .guideImage {
   transform: scale(1.05);
 }

@@ -135,6 +135,17 @@
   margin-top: 2rem;
 }
 
+.compactGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 0;
+}
+
+.compactGrid .mediaWrapper {
+  margin-bottom: 0;
+}
+
 @media (max-width: 1024px) {
   .galleryGrid {
     column-count: 2;
