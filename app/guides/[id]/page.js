@@ -224,13 +224,19 @@ export default async function GuidePage({ params }) {
           <Breadcrumbs items={breadcrumbItems} />
 
           <div className={styles.heroContent}>
-            {guide.category ? <span className={styles.categoryBadge}>{guide.category}</span> : null}
-            <h1 className={`display-md ${styles.title} animate-fade-in-up`}>{guide.title}</h1>
+            <div className={styles.heroKicker}>
+              {guide.category ? <span className={styles.categoryBadge}>{guide.category}</span> : null}
+              <span className={styles.kickerLine} aria-hidden="true" />
+              <span className={styles.kickerText}>Field guide</span>
+            </div>
+            <h1 className={`display-lg ${styles.title} animate-fade-in-up`}>{guide.title}</h1>
             {guide.desc ? <p className={`${styles.desc} animate-fade-in`}>{guide.desc}</p> : null}
-            <GuideSectionNav sections={sections} />
+            <div className={styles.heroRule} aria-hidden="true" />
           </div>
         </div>
       </section>
+
+      <GuideSectionNav sections={sections} />
 
       {gallery.length > 0 ? (
         <section
