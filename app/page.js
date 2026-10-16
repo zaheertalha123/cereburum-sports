@@ -27,7 +27,7 @@ export const metadata = {
         url: '/images/home/1.jpg',
         width: 1200,
         height: 630,
-        alt: 'Cricket Net Installation & Sports Nets in Pakistan - Cereburum Sports',
+        alt: 'Sports barrier netting and football net installation in Pakistan - Cereburum Sports',
       },
     ],
   },
@@ -55,7 +55,7 @@ const jsonLd = {
       },
     },
     {
-      '@type': ['SportsActivityLocation', 'LocalBusiness'],
+      '@type': ['Organization', 'LocalBusiness'],
       '@id': 'https://www.cereburumsports.site/#organization',
       name: 'Cereburum Sports',
       url: 'https://www.cereburumsports.site',
@@ -65,10 +65,12 @@ const jsonLd = {
         'Pakistan’s trusted specialist for cricket net installation services, rooftop cricket nets, and cricket ground netting, alongside manufacturing and supplying all types of sports nets, football netting, and safety barrier nets nationwide.',
       telephone: '+923187768296',
       email: 'cereburum.sports@gmail.com',
-      priceRange: '$$',
       address: {
         '@type': 'PostalAddress',
-        addressCountry: 'PK',
+        streetAddress: 'GFHX+2P3, Nawan Pind',
+        addressLocality: 'Nawan Pind Sialkot',
+        addressRegion: 'Nawan Pind',
+        addressCountry: 'Pakistan',
       },
       areaServed: {
         '@type': 'Country',
@@ -76,7 +78,7 @@ const jsonLd = {
       },
       sameAs: [
         'https://facebook.com/cereburumsports',
-        'https://instagram.com/cereburumsports',
+        'https://instagram.com/cereburum.sports/',
         'https://tiktok.com/@cereburumsports',
       ],
       hasOfferCatalog: {
@@ -240,15 +242,15 @@ const trusts = [
 const portfolioShowcase = [
   {
     id: 1,
-    alt: 'Cricket ground netting and boundary barrier net installation project in Pakistan | Cereburum Sports',
+    alt: 'Sports barrier netting and football pitch goal net installation | Cereburum Sports',
   },
   {
     id: 2,
-    alt: 'Rooftop cricket nets and practice net cage installation project in Pakistan | Cereburum Sports',
+    alt: 'Outdoor cricket practice net cages and academy pitch netting | Cereburum Sports',
   },
   {
     id: 3,
-    alt: 'Football netting and sports safety barrier net installation across Pakistan | Cereburum Sports',
+    alt: 'Close-up of a football striking high-tensile sports barrier netting | Cereburum Sports',
   },
 ];
 
@@ -320,10 +322,10 @@ export default function HomePage() {
       <section className={`section-pad ${styles.productsSection}`} aria-labelledby="products-heading">
         <div className="container">
           <div className={`${styles.sectionHeader} reveal text-center`}>
-            <span className="section-label">Net Installation &amp; Sports Catalog</span>
+            <span className="section-label">Sports Netting Catalog</span>
             <h2 className={`display-lg ${styles.sectionTitle}`} id="products-heading">
-              Cricket Net Installation<br />
-              <span className="text-sand">&amp; Custom Sports Netting Solutions</span>
+              Sports Nets for Cricket, Football<br />
+              <span className="text-sand">&amp; Custom Applications</span>
             </h2>
             <div className="divider divider-center" />
             <p className={`body-lg ${styles.sectionDesc}`}>
@@ -348,7 +350,7 @@ export default function HomePage() {
                 <Link
                   href={product.filter ? `/products?filter=${encodeURIComponent(product.filter)}` : '/products'}
                   className={`btn btn-outline btn-sm ${styles.productBtn}`}
-                  aria-label={`${product.ctaText} - ${product.title}`}
+                  aria-label={`${product.ctaText} ${product.title}`}
                 >
                   {product.ctaText}
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true">
@@ -373,8 +375,8 @@ export default function HomePage() {
           <div className={`${styles.sectionHeader} reveal text-center`}>
             <span className="section-label">Why Choose Us</span>
             <h2 className={`display-lg ${styles.sectionTitle}`} id="trust-heading">
-              Cricket Net Installation<br />
-              <span className="text-sand">&amp; Built-to-Last Sports Nets</span>
+              Quality Sports Netting<br />
+              <span className="text-sand">Engineered to Last</span>
             </h2>
             <div className="divider divider-center" />
           </div>
@@ -398,8 +400,8 @@ export default function HomePage() {
             <div className={styles.worksTeaserText}>
               <span className="section-label">Nationwide Portfolio</span>
               <h2 className={`display-lg ${styles.sectionTitle}`} id="works-heading">
-                Cricket Net Installations<br />
-                <span className="text-sand">&amp; Sports Netting Projects</span>
+                Proven Sports Netting<br />
+                <span className="text-sand">Projects Across Pakistan</span>
               </h2>
               <div className="divider" />
               <p className={`body-lg ${styles.sectionDesc}`}>
