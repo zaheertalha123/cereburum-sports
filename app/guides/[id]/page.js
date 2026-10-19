@@ -17,12 +17,44 @@ export async function generateMetadata({ params }) {
   const guide = guides.find((g) => g.id === id);
 
   if (!guide) {
-    return { title: 'Guide Not Found' };
+    return { title: 'Guide Not Found | Cereburum Sports' };
   }
 
+  const title = `${guide.title} | Cereburum Sports`;
+  const description = guide.desc || `${guide.title} - Step-by-step sports netting guide by Cereburum Sports.`;
+  const canonicalUrl = `https://www.cereburumsports.site/guides/${guide.id}`;
+  const imageUrl = guide.image
+    ? (guide.image.startsWith('http') ? guide.image : `https://www.cereburumsports.site${guide.image}`)
+    : 'https://www.cereburumsports.site/images/home/1.jpg';
+
   return {
-    title: `${guide.title} — Cereburum Sports Guides`,
-    description: guide.desc,
+    title,
+    description,
+    alternates: {
+      canonical: canonicalUrl,
+    },
+    openGraph: {
+      type: 'article',
+      locale: 'en_PK',
+      url: canonicalUrl,
+      siteName: 'Cereburum Sports',
+      title,
+      description,
+      images: [
+        {
+          url: imageUrl,
+          width: 1200,
+          height: 630,
+          alt: guide.imageAlt || `${guide.title} - Cereburum Sports`,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: [imageUrl],
+    },
   };
 }
 
@@ -30,18 +62,14 @@ function toGalleryMedia(guide) {
   const items = (guide.images ?? []).map(({ url, alt }, index) => ({
     type: 'image',
     url,
-    alt:
-      alt ||
-      `${guide.title} step ${index + 1} - ground boundary netting installation instruction`,
+    alt: alt || `${guide.title} - Step ${index + 1} installation image | Cereburum Sports`,
   }));
 
   if (items.length === 0 && guide.image) {
     items.push({
       type: 'image',
       url: guide.image,
-      alt:
-        guide.imageAlt ||
-        `${guide.title} - Step by Step Sports Netting Installation Guide | Cereburum Sports`,
+      alt: guide.imageAlt || `${guide.title} - Step by Step Sports Netting Guide | Cereburum Sports`,
     });
   }
 
@@ -58,17 +86,95 @@ export default async function GuidePage({ params }) {
 
   const media = toGalleryMedia(guide);
   const backHref = `/guides?filter=${encodeURIComponent(guide.category)}`;
+  const canonicalUrl = `https://www.cereburumsports.site/guides/${guide.id}`;
+  const imageUrl = guide.image
+    ? (guide.image.startsWith('http') ? guide.image : `https://www.cereburumsports.site${guide.image}`)
+    : 'https://www.cereburumsports.site/images/home/1.jpg';
+
+  const hasSteps = Array.isArray(guide.steps) && guide.steps.length > 0;
+
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'Home',
+            item: 'https://www.cereburumsports.site',
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: 'Guides',
+            item: 'https://www.cereburumsports.site/guides',
+          },
+          {
+            '@type': 'ListItem',
+            position: 3,
+            name: guide.title,
+            item: canonicalUrl,
+          },
+        ],
+      },
+      hasSteps
+        ? {
+          '@type': 'HowTo',
+          '@id': `${canonicalUrl}#howto`,
+          name: guide.title,
+          description: guide.desc,
+          image: imageUrl,
+          step: guide.steps.map((step, index) => ({
+            '@type': 'HowToStep',
+            position: index + 1,
+            name: typeof step === 'string' ? `Step ${index + 1}` : (step.title || `Step ${index + 1}`),
+            text: typeof step === 'string' ? step : (step.text || step.description || step.title || ''),
+          })),
+          publisher: {
+            '@type': 'Organization',
+            name: 'Cereburum Sports',
+            logo: {
+              '@type': 'ImageObject',
+              url: 'https://www.cereburumsports.site/logo.png',
+            },
+          },
+        }
+        : {
+          '@type': 'Article',
+          '@id': `${canonicalUrl}#article`,
+          headline: guide.title,
+          description: guide.desc,
+          image: imageUrl,
+          author: {
+            '@type': 'Organization',
+            name: 'Cereburum Sports',
+          },
+          publisher: {
+            '@type': 'Organization',
+            name: 'Cereburum Sports',
+            logo: {
+              '@type': 'ImageObject',
+              url: 'https://www.cereburumsports.site/logo.png',
+            },
+          },
+        },
+    ],
+  };
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
       <section className={styles.heroSection}>
         <div className={styles.heroBg} aria-hidden="true">
           <Image
             src={guide.image}
-            alt={
-              guide.imageAlt ||
-              `${guide.title} - Step by Step Sports Netting Installation Guide | Cereburum Sports`
-            }
+            alt={guide.imageAlt || `${guide.title} - Step by Step Sports Netting Guide | Cereburum Sports`}
             fill
             className={styles.heroImage}
             priority
