@@ -16,12 +16,44 @@ export async function generateMetadata({ params }) {
   const project = projects.find((p) => p.id === resolvedParams.id);
 
   if (!project) {
-    return { title: 'Project Not Found' };
+    return { title: 'Project Not Found | Cereburum Sports' };
   }
 
+  const title = `${project.title} | Cereburum Sports`;
+  const description = project.desc || `${project.title} sports netting project installed in ${project.location || 'Pakistan'} by Cereburum Sports.`;
+  const canonicalUrl = `https://www.cereburumsports.site/works/${project.id}`;
+  const imageUrl = project.coverImage
+    ? (project.coverImage.startsWith('http') ? project.coverImage : `https://www.cereburumsports.site${project.coverImage}`)
+    : 'https://www.cereburumsports.site/images/home/1.jpg';
+
   return {
-    title: `${project.title} — Cereburum Sports Works`,
-    description: project.desc,
+    title,
+    description,
+    alternates: {
+      canonical: canonicalUrl,
+    },
+    openGraph: {
+      type: 'website',
+      locale: 'en_PK',
+      url: canonicalUrl,
+      siteName: 'Cereburum Sports',
+      title,
+      description,
+      images: [
+        {
+          url: imageUrl,
+          width: 1200,
+          height: 630,
+          alt: project.coverImageAlt || `${project.title} - ${project.category || 'Sports Netting'} in ${project.location || 'Pakistan'} | Cereburum Sports`,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: [imageUrl],
+    },
   };
 }
 
@@ -33,8 +65,64 @@ export default async function ProjectPage({ params }) {
     notFound();
   }
 
+  const canonicalUrl = `https://www.cereburumsports.site/works/${project.id}`;
+  const imageUrl = project.coverImage
+    ? (project.coverImage.startsWith('http') ? project.coverImage : `https://www.cereburumsports.site${project.coverImage}`)
+    : 'https://www.cereburumsports.site/images/home/1.jpg';
+
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'Home',
+            item: 'https://www.cereburumsports.site',
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: 'Works',
+            item: 'https://www.cereburumsports.site/works',
+          },
+          {
+            '@type': 'ListItem',
+            position: 3,
+            name: project.title,
+            item: canonicalUrl,
+          },
+        ],
+      },
+      {
+        '@type': 'CreativeWork',
+        '@id': `${canonicalUrl}#work`,
+        name: project.title,
+        description: project.desc,
+        image: imageUrl,
+        genre: project.category || 'Sports Netting Installation',
+        dateCreated: project.year ? `${project.year}-01-01` : undefined,
+        locationCreated: {
+          '@type': 'Place',
+          name: project.location || 'Pakistan',
+        },
+        creator: {
+          '@type': 'Organization',
+          name: 'Cereburum Sports',
+        },
+      },
+    ],
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
       <section className={styles.heroSection}>
         <div className={styles.heroBg} aria-hidden="true">
           {project.coverImage ? (
