@@ -4,16 +4,78 @@ const WHATSAPP_NUMBER = '923187768296';
 const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=Hello%2C%20I%27d%20like%20to%20learn%20more%20about%20Cereburum%20Sports.`;
 
 export const metadata = {
-  title: 'About Us — Our Story & Mission',
+  title: 'About Us — Sports Net Manufacturer & Installer | Cereburum Sports',
   description:
-    'Learn about Cereburum Sports — our story, mission, values, and expertise in sports barrier netting and sports equipment across Pakistan.',
+    'Learn about Cereburum Sports — Pakistan’s trusted sports netting manufacturer and specialist installer for cricket grounds, rooftop practice nets, football pitches, and multi-sport facilities.',
+  alternates: {
+    canonical: 'https://www.cereburumsports.site/about',
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'en_PK',
+    url: 'https://www.cereburumsports.site/about',
+    siteName: 'Cereburum Sports',
+    title: 'About Us — Sports Net Manufacturer & Installer | Cereburum Sports',
+    description:
+      'Learn about Cereburum Sports — Pakistan’s trusted sports netting manufacturer and specialist installer for cricket grounds, rooftop practice nets, football pitches, and multi-sport facilities.',
+    images: [
+      {
+        url: '/images/home/1.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'About Cereburum Sports - Sports Netting Manufacturer and Facility Installer in Pakistan',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'About Us — Sports Net Manufacturer & Installer | Cereburum Sports',
+    description:
+      'Learn about Cereburum Sports — Pakistan’s trusted sports netting manufacturer and specialist installer for cricket grounds, rooftop practice nets, football pitches, and multi-sport facilities.',
+    images: ['/images/home/1.jpg'],
+  },
+};
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'AboutPage',
+      '@id': 'https://www.cereburumsports.site/about/#webpage',
+      url: 'https://www.cereburumsports.site/about',
+      name: 'About Cereburum Sports',
+      description: 'Pakistan’s trusted specialist for cricket net installation, rooftop cricket practice cages, and sports barrier netting.',
+      mainEntity: {
+        '@type': ['Organization', 'LocalBusiness'],
+        '@id': 'https://www.cereburumsports.site/#organization',
+        name: 'Cereburum Sports',
+        url: 'https://www.cereburumsports.site',
+        logo: 'https://www.cereburumsports.site/logo.png',
+        image: 'https://www.cereburumsports.site/images/home/1.jpg',
+        telephone: '+923187768296',
+        email: 'cereburum.sports@gmail.com',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: 'GFHX+2P3, Nawan Pind',
+          addressLocality: 'Nawan Pind Sialkot',
+          addressRegion: 'Nawan Pind',
+          addressCountry: 'Pakistan',
+        },
+        sameAs: [
+          'https://www.facebook.com/cereburum.sports/',
+          'https://instagram.com/cereburum.sports/',
+          'https://tiktok.com/@cereburumsports',
+        ],
+      },
+    },
+  ],
 };
 
 const values = [
   { icon: '🎯', title: 'Precision', desc: 'Every installation is measured, planned, and executed with engineering-grade accuracy.' },
   { icon: '💪', title: 'Durability', desc: 'We refuse to compromise on materials — only UV-resistant, weatherproof, long-life products.' },
   { icon: '🤝', title: 'Partnership', desc: 'We work alongside clients from consultation to completion and beyond.' },
-  { icon: '📐', title: 'Expertise', desc: 'Backed by a decade of experience in sports facility netting across Pakistan.' },
+  { icon: '📐', title: 'Expertise', desc: 'Backed by years of experience in sports facility netting across Pakistan.' },
 ];
 
 const timeline = [
@@ -47,6 +109,11 @@ const timeline = [
 export default function AboutPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
       {/* Hero */}
       <section className={styles.hero} aria-label="About us hero">
         <div className={styles.heroBg} aria-hidden="true">
@@ -65,7 +132,7 @@ export default function AboutPage() {
             <p className={`body-lg ${styles.heroDesc} animate-fade-in`}>
               Cereburum Sports was born from a simple belief: Pakistan&apos;s sports facilities
               deserve world-class netting and equipment, installed with professionalism and care.
-              Over a decade later, that mission still drives every project we take on.
+              Our mission drives every project we take on across Pakistan.
             </p>
           </div>
 
@@ -114,7 +181,7 @@ export default function AboutPage() {
           <div className={`${styles.sectionHeader} reveal text-center`}>
             <span className="section-label">Our Journey</span>
             <h2 className={`display-lg ${styles.sectionTitle}`} id="timeline-heading">
-              A Decade of <span className="text-sand">Excellence</span>
+              Years of <span className="text-sand">Excellence</span>
             </h2>
             <div className="divider divider-center" />
           </div>
