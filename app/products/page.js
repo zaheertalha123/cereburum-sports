@@ -3,7 +3,7 @@ import ClientProductsPage from './ClientProductsPage';
 import { products } from '@/data/products';
 
 export const metadata = {
-  title: 'Sports Nets Catalog & Netting Solutions in Pakistan | Cereburum Sports',
+  title: 'Sports Nets Catalog & Netting Solutions in Pakistan',
   description:
     'Explore high-durability cricket ground nets, football goal netting, rooftop practice cages, and court nets. Direct manufacturer supply and installation across Pakistan.',
   alternates: {
@@ -75,7 +75,6 @@ export default function ProductsPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <h1 className="sr-only">Sports Nets Catalog and Custom Netting Solutions in Pakistan</h1>
       <Suspense fallback={null}>
         <ClientProductsPage products={products} />
       </Suspense>

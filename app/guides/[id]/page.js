@@ -26,12 +26,13 @@ export async function generateMetadata({ params }) {
   const guide = getGuideById(id);
 
   if (!guide) {
-    return { title: 'Guide Not Found | Cereburum Sports' };
+    return { title: 'Guide Not Found' };
   }
 
   const cover = getGuideCover(guide);
   const photos = toGuideMedia(getGuideGallery(guide)).filter((item) => item.type === 'image');
-  const title = `${guide.title} | Cereburum Sports`;
+  const title = guide.title;
+  const socialTitle = `${guide.title} | Cereburum Sports`;
   const description = guide.desc || `${guide.title} - Step-by-step sports netting guide by Cereburum Sports.`;
   const canonicalUrl = `https://www.cereburumsports.site/guides/${guide.id}`;
   const ogImages = (photos.length ? photos : cover ? [{ url: cover, alt: getGuideCoverAlt(guide) }] : []).map(
@@ -55,7 +56,7 @@ export async function generateMetadata({ params }) {
       locale: 'en_PK',
       url: canonicalUrl,
       siteName: 'Cereburum Sports',
-      title,
+      title: socialTitle,
       description,
       images: ogImages.length
         ? ogImages
@@ -70,7 +71,7 @@ export async function generateMetadata({ params }) {
     },
     twitter: {
       card: 'summary_large_image',
-      title,
+      title: socialTitle,
       description,
       images: [imageUrl],
     },

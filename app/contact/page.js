@@ -10,7 +10,7 @@ const PHONE_TEL = `+${WHATSAPP_NUMBER}`;
 const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=Hello%2C%20I%27m%20interested%20in%20your%20sports%20products.%20Please%20share%20more%20details.`;
 
 export const metadata = {
-  title: 'Contact Us — Sports Net Quotes & Inquiries | Cereburum Sports',
+  title: 'Contact Us — Sports Net Quotes & Inquiries',
   description:
     'Get in touch with Cereburum Sports via WhatsApp, phone, or email. Request custom quotes for cricket ground netting, rooftop cricket practice cages, and sports barrier nets.',
   alternates: {
@@ -98,11 +98,7 @@ const jsonLd = {
           addressRegion: 'Nawan Pind',
           addressCountry: 'Pakistan',
         },
-        sameAs: [
-          'https://www.facebook.com/cereburum.sports/',
-          'https://instagram.com/cereburum.sports/',
-          'https://tiktok.com/@cereburumsports',
-        ],
+        sameAs: [SOCIAL.facebook, SOCIAL.instagram, SOCIAL.tiktok],
       },
     },
     {

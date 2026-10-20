@@ -16,10 +16,11 @@ export async function generateMetadata({ params }) {
   const project = projects.find((p) => p.id === resolvedParams.id);
 
   if (!project) {
-    return { title: 'Project Not Found | Cereburum Sports' };
+    return { title: 'Project Not Found' };
   }
 
-  const title = `${project.title} | Cereburum Sports`;
+  const title = project.title;
+  const socialTitle = `${project.title} | Cereburum Sports`;
   const description = project.desc || `${project.title} sports netting project installed in ${project.location || 'Pakistan'} by Cereburum Sports.`;
   const canonicalUrl = `https://www.cereburumsports.site/works/${project.id}`;
   const imageUrl = project.coverImage
@@ -37,7 +38,7 @@ export async function generateMetadata({ params }) {
       locale: 'en_PK',
       url: canonicalUrl,
       siteName: 'Cereburum Sports',
-      title,
+      title: socialTitle,
       description,
       images: [
         {
@@ -50,7 +51,7 @@ export async function generateMetadata({ params }) {
     },
     twitter: {
       card: 'summary_large_image',
-      title,
+      title: socialTitle,
       description,
       images: [imageUrl],
     },

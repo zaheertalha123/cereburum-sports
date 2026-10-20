@@ -15,10 +15,11 @@ export async function generateMetadata({ params }) {
   const product = getProductById(id);
 
   if (!product) {
-    return { title: 'Product Not Found | Cereburum Sports' };
+    return { title: 'Product Not Found' };
   }
 
-  const title = `${product.title} | Cereburum Sports`;
+  const title = product.title;
+  const socialTitle = `${product.title} | Cereburum Sports`;
   const description = product.desc || `${product.title} supplied and installed across Pakistan by Cereburum Sports.`;
   const canonicalUrl = `https://www.cereburumsports.site/products/${product.id}`;
   const imageUrl = product.image
@@ -51,13 +52,13 @@ export async function generateMetadata({ params }) {
       locale: 'en_PK',
       url: canonicalUrl,
       siteName: 'Cereburum Sports',
-      title,
+      title: socialTitle,
       description,
       images: ogImages,
     },
     twitter: {
       card: 'summary_large_image',
-      title,
+      title: socialTitle,
       description,
       images: [ogImages[0]?.url || imageUrl],
     },

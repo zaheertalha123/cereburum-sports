@@ -3,7 +3,7 @@ import ClientWorksPage from './ClientWorksPage';
 import { projects, projectCategories as categories } from '../../data/projects';
 
 export const metadata = {
-  title: 'Sports Net Installation Portfolio & Projects in Pakistan | Cereburum Sports',
+  title: 'Sports Net Installation Portfolio & Projects in Pakistan',
   description:
     'Browse our portfolio of completed cricket ground netting, rooftop cricket practice cages, football pitch barrier nets, and sports facility installations across Pakistan.',
   alternates: {
@@ -51,7 +51,9 @@ export default function WorksPage() {
         '@id': `https://www.cereburumsports.site/works/${project.id}`,
         name: project.title,
         description: project.description || project.subtitle,
-        image: project.image ? `https://www.cereburumsports.site${project.image}` : 'https://www.cereburumsports.site/images/home/1.jpg',
+        image: project.coverImage
+          ? `https://www.cereburumsports.site${project.coverImage}`
+          : 'https://www.cereburumsports.site/images/home/1.jpg',
         creator: {
           '@type': 'Organization',
           name: 'Cereburum Sports',
@@ -66,7 +68,6 @@ export default function WorksPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <h1 className="sr-only">Completed Sports Net Installation Projects Portfolio in Pakistan</h1>
       <Suspense fallback={null}>
         <ClientWorksPage projects={projects} categories={categories} />
       </Suspense>

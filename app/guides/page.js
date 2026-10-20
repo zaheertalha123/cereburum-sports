@@ -3,7 +3,7 @@ import ClientGuidesPage from './ClientGuidesPage';
 import { guides, guideCategories as categories } from '../../data/guides';
 
 export const metadata = {
-  title: 'Sports Netting Buying Guides & Installation Tips | Cereburum Sports',
+  title: 'Sports Netting Buying Guides & Installation Tips',
   description:
     'Expert guides and step-by-step tips for sports net installation, rooftop cricket cages, maintenance, and facility setup across Pakistan by Cereburum Sports.',
   alternates: {
@@ -78,7 +78,6 @@ export default function GuidesPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <h1 className="sr-only">Sports Netting Buying Guides and Installation Advice</h1>
       <Suspense fallback={null}>
         <ClientGuidesPage guides={guides} categories={categories} />
       </Suspense>

@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { SOCIAL } from '@/data/social';
 import styles from './page.module.css';
 
 const WHATSAPP_NUMBER = '923187768296';
@@ -76,11 +77,7 @@ const jsonLd = {
         '@type': 'Country',
         name: 'Pakistan',
       },
-      sameAs: [
-        'https://facebook.com/cereburumsports',
-        'https://instagram.com/cereburum.sports/',
-        'https://tiktok.com/@cereburumsports',
-      ],
+      sameAs: [SOCIAL.facebook, SOCIAL.instagram, SOCIAL.tiktok],
       hasOfferCatalog: {
         '@type': 'OfferCatalog',
         name: 'Sports Net Installation Services & Sports Nets Supply',

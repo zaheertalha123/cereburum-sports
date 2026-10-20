@@ -1,10 +1,11 @@
+import { SOCIAL } from '@/data/social';
 import styles from './about.module.css';
 
 const WHATSAPP_NUMBER = '923187768296';
 const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=Hello%2C%20I%27d%20like%20to%20learn%20more%20about%20Cereburum%20Sports.`;
 
 export const metadata = {
-  title: 'About Us — Sports Net Manufacturer & Installer | Cereburum Sports',
+  title: 'About Us — Sports Net Manufacturer & Installer',
   description:
     'Learn about Cereburum Sports — Pakistan’s trusted sports netting manufacturer and specialist installer for cricket grounds, rooftop practice nets, football pitches, and multi-sport facilities.',
   alternates: {
@@ -61,11 +62,7 @@ const jsonLd = {
           addressRegion: 'Nawan Pind',
           addressCountry: 'Pakistan',
         },
-        sameAs: [
-          'https://www.facebook.com/cereburum.sports/',
-          'https://instagram.com/cereburum.sports/',
-          'https://tiktok.com/@cereburumsports',
-        ],
+        sameAs: [SOCIAL.facebook, SOCIAL.instagram, SOCIAL.tiktok],
       },
     },
   ],
