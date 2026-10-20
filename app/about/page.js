@@ -1,10 +1,15 @@
 import { absoluteUrl } from '@/lib/siteUrl';
 import { getLocalBusinessSchema } from '@/lib/localBusiness';
+import Breadcrumbs, { breadcrumbJsonLd } from '@/components/Breadcrumbs';
 import styles from './about.module.css';
 
 const WHATSAPP_NUMBER = '923187768296';
 const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=Hello%2C%20I%27d%20like%20to%20learn%20more%20about%20Cereburum%20Sports.`;
 const aboutUrl = absoluteUrl('/about');
+const breadcrumbItems = [
+  { name: 'Home', href: '/' },
+  { name: 'About', href: '/about' },
+];
 
 export const metadata = {
   title: 'About Us — Sports Net Manufacturer & Installer',
@@ -42,6 +47,7 @@ export const metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
+    breadcrumbJsonLd(breadcrumbItems),
     {
       '@type': 'AboutPage',
       '@id': `${aboutUrl}/#webpage`,
@@ -104,6 +110,7 @@ export default function AboutPage() {
           <div className={styles.heroOrb} />
         </div>
         <div className={`container ${styles.heroContent}`}>
+          <Breadcrumbs items={breadcrumbItems} />
           <div className={`animate-fade-in-up ${styles.heroText}`}>
             <span className="section-label">Our Story</span>
             <h1 className={`display-lg ${styles.heroTitle} animate-fade-in-up`}>

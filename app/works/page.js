@@ -1,9 +1,14 @@
 import { Suspense } from 'react';
 import ClientWorksPage from './ClientWorksPage';
 import { projects, projectCategories as categories } from '../../data/projects';
-import { absoluteUrl } from '@/lib/siteUrl';
+import { absoluteUrl, absoluteMediaUrl } from '@/lib/siteUrl';
+import { breadcrumbJsonLd } from '@/components/Breadcrumbs';
 
 const worksUrl = absoluteUrl('/works');
+const breadcrumbItems = [
+  { name: 'Home', href: '/' },
+  { name: 'Works', href: '/works' },
+];
 
 export const metadata = {
   title: 'Sports Net Installation Portfolio & Projects in Pakistan',
@@ -41,26 +46,31 @@ export const metadata = {
 export default function WorksPage() {
   const jsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'ItemList',
-    name: 'Completed Sports Netting Projects Portfolio - Cereburum Sports',
-    description: 'Portfolio of cricket net installations, rooftop cages, football barrier nets, and sports complexes built across Pakistan.',
-    url: worksUrl,
-    numberOfItems: projects.length,
-    itemListElement: projects.map((project, index) => ({
-      '@type': 'ListItem',
-      position: index + 1,
-      item: {
-        '@type': 'CreativeWork',
-        '@id': absoluteUrl(`/works/${project.id}`),
-        name: project.title,
-        description: project.description || project.subtitle,
-        image: absoluteUrl(project.coverImage || '/images/home/1.jpg'),
-        creator: {
-          '@type': 'Organization',
-          name: 'Cereburum Sports',
-        },
+    '@graph': [
+      breadcrumbJsonLd(breadcrumbItems),
+      {
+        '@type': 'ItemList',
+        name: 'Completed Sports Netting Projects Portfolio - Cereburum Sports',
+        description: 'Portfolio of cricket net installations, rooftop cages, football barrier nets, and sports complexes built across Pakistan.',
+        url: worksUrl,
+        numberOfItems: projects.length,
+        itemListElement: projects.map((project, index) => ({
+          '@type': 'ListItem',
+          position: index + 1,
+          item: {
+            '@type': 'CreativeWork',
+            '@id': absoluteUrl(`/works/${project.id}`),
+            name: project.title,
+            description: project.description || project.subtitle,
+            image: absoluteMediaUrl(project.coverImage),
+            creator: {
+              '@type': 'Organization',
+              name: 'Cereburum Sports',
+            },
+          },
+        })),
       },
-    })),
+    ],
   };
 
   return (
@@ -70,7 +80,7 @@ export default function WorksPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <Suspense fallback={null}>
-        <ClientWorksPage projects={projects} categories={categories} />
+        <ClientWorksPage projects={projects} categories={categories} breadcrumbItems={breadcrumbItems} />
       </Suspense>
     </>
   );

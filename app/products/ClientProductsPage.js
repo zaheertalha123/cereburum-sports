@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { useSearchParams, useRouter, usePathname } from 'next/navigation';
 import Image from 'next/image';
 import { productFilterGroups } from '@/data/products';
+import Breadcrumbs from '@/components/Breadcrumbs';
 import styles from './products.module.css';
 
 const FILTER_PARAM = 'filter';
@@ -13,7 +14,7 @@ function resolveFilter(value) {
   return productFilterGroups.includes(value) ? value : 'All';
 }
 
-export default function ClientProductsPage({ products }) {
+export default function ClientProductsPage({ products, breadcrumbItems }) {
   const searchParams = useSearchParams();
   const router = useRouter();
   const pathname = usePathname();
@@ -47,6 +48,7 @@ export default function ClientProductsPage({ products }) {
           <div className={styles.pageHeaderGrid} />
         </div>
         <div className={`container ${styles.pageHeaderContent}`}>
+          {breadcrumbItems?.length ? <Breadcrumbs items={breadcrumbItems} /> : null}
           <span className="section-label animate-fade-in">Our Products</span>
           <h1 className={`display-lg ${styles.pageTitle} animate-fade-in-up`}>
             Sports Netting &<br />

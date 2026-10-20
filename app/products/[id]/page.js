@@ -4,7 +4,8 @@ import { notFound } from 'next/navigation';
 import { products, getProductById } from '@/data/products';
 import ProductImageGallery from './ProductImageGallery';
 import { productInquiryMessage, whatsAppUrl } from '@/lib/whatsapp';
-import { absoluteUrl } from '@/lib/siteUrl';
+import { absoluteUrl, absoluteMediaUrl } from '@/lib/siteUrl';
+import { breadcrumbJsonLd } from '@/components/Breadcrumbs';
 import styles from './product-detail.module.css';
 
 export async function generateStaticParams() {
@@ -23,7 +24,7 @@ export async function generateMetadata({ params }) {
   const socialTitle = `${product.title} | Cereburum Sports`;
   const description = product.desc || `${product.title} supplied and installed across Pakistan by Cereburum Sports.`;
   const canonicalUrl = absoluteUrl(`/products/${product.id}`);
-  const imageUrl = absoluteUrl(product.image || '/images/home/1.jpg');
+  const imageUrl = absoluteMediaUrl(product.image);
 
   const galleryUrls = product.images?.length
     ? product.images
@@ -31,7 +32,7 @@ export async function generateMetadata({ params }) {
       ? [product.image]
       : [];
   const ogImages = (galleryUrls.length ? galleryUrls : [imageUrl]).map((url) => ({
-    url: absoluteUrl(url),
+    url: absoluteMediaUrl(url),
     width: 1200,
     height: 630,
     alt: product.imageAlt || `${product.title} - Cereburum Sports`,
@@ -97,40 +98,21 @@ export default async function ProductDetailPage({ params }) {
       : '/products';
 
   const productCanonicalUrl = absoluteUrl(`/products/${product.id}`);
-  const productImageFullUrl = absoluteUrl(product.image || '/images/home/1.jpg');
+  const productImageFullUrl = absoluteMediaUrl(product.image);
+  const breadcrumbItems = [
+    { name: 'Home', href: '/' },
+    { name: 'Products', href: '/products' },
+    {
+      name: product.filterGroup || 'Sports Nets',
+      href: productsFilterHref,
+    },
+    { name: product.title, href: `/products/${product.id}` },
+  ];
 
   const jsonLd = {
     '@context': 'https://schema.org',
     '@graph': [
-      {
-        '@type': 'BreadcrumbList',
-        itemListElement: [
-          {
-            '@type': 'ListItem',
-            position: 1,
-            name: 'Home',
-            item: absoluteUrl(),
-          },
-          {
-            '@type': 'ListItem',
-            position: 2,
-            name: 'Products',
-            item: absoluteUrl('/products'),
-          },
-          {
-            '@type': 'ListItem',
-            position: 3,
-            name: product.filterGroup || 'Sports Nets',
-            item: absoluteUrl(productsFilterHref),
-          },
-          {
-            '@type': 'ListItem',
-            position: 4,
-            name: product.title,
-            item: productCanonicalUrl,
-          },
-        ],
-      },
+      breadcrumbJsonLd(breadcrumbItems),
       {
         '@type': 'Product',
         '@id': `${productCanonicalUrl}#product`,

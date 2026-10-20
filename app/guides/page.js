@@ -1,9 +1,14 @@
 import { Suspense } from 'react';
 import ClientGuidesPage from './ClientGuidesPage';
 import { guides, guideCategories as categories } from '../../data/guides';
-import { absoluteUrl } from '@/lib/siteUrl';
+import { absoluteUrl, absoluteMediaUrl } from '@/lib/siteUrl';
+import { breadcrumbJsonLd } from '@/components/Breadcrumbs';
 
 const guidesUrl = absoluteUrl('/guides');
+const breadcrumbItems = [
+  { name: 'Home', href: '/' },
+  { name: 'Guides', href: '/guides' },
+];
 
 export const metadata = {
   title: 'Sports Netting Buying Guides & Installation Tips',
@@ -41,39 +46,44 @@ export const metadata = {
 export default function GuidesPage() {
   const jsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'CollectionPage',
-    '@id': `${guidesUrl}/#webpage`,
-    url: guidesUrl,
-    name: 'Sports Netting Guides & Installation Tips - Cereburum Sports',
-    description: 'Educational articles and guides covering sports netting selection, cricket practice cage setups, maintenance, and installation advice.',
-    mainEntity: {
-      '@type': 'ItemList',
-      numberOfItems: guides.length,
-      itemListElement: guides.map((guide, index) => ({
-        '@type': 'ListItem',
-        position: index + 1,
-        item: {
-          '@type': 'Article',
-          '@id': absoluteUrl(`/guides/${guide.id}`),
-          url: absoluteUrl(`/guides/${guide.id}`),
-          headline: guide.title,
-          description: guide.description || guide.desc || guide.subtitle,
-          image: absoluteUrl(guide.image || '/images/home/1.jpg'),
-          author: {
-            '@type': 'Organization',
-            name: 'Cereburum Sports',
-          },
-          publisher: {
-            '@type': 'Organization',
-            name: 'Cereburum Sports',
-            logo: {
-              '@type': 'ImageObject',
-              url: absoluteUrl('/logo.png'),
+    '@graph': [
+      breadcrumbJsonLd(breadcrumbItems),
+      {
+        '@type': 'CollectionPage',
+        '@id': `${guidesUrl}/#webpage`,
+        url: guidesUrl,
+        name: 'Sports Netting Guides & Installation Tips - Cereburum Sports',
+        description: 'Educational articles and guides covering sports netting selection, cricket practice cage setups, maintenance, and installation advice.',
+        mainEntity: {
+          '@type': 'ItemList',
+          numberOfItems: guides.length,
+          itemListElement: guides.map((guide, index) => ({
+            '@type': 'ListItem',
+            position: index + 1,
+            item: {
+              '@type': 'Article',
+              '@id': absoluteUrl(`/guides/${guide.id}`),
+              url: absoluteUrl(`/guides/${guide.id}`),
+              headline: guide.title,
+              description: guide.description || guide.desc || guide.subtitle,
+              image: absoluteMediaUrl(guide.image),
+              author: {
+                '@type': 'Organization',
+                name: 'Cereburum Sports',
+              },
+              publisher: {
+                '@type': 'Organization',
+                name: 'Cereburum Sports',
+                logo: {
+                  '@type': 'ImageObject',
+                  url: absoluteUrl('/logo.png'),
+                },
+              },
             },
-          },
+          })),
         },
-      })),
-    },
+      },
+    ],
   };
 
   return (
@@ -83,7 +93,7 @@ export default function GuidesPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <Suspense fallback={null}>
-        <ClientGuidesPage guides={guides} categories={categories} />
+        <ClientGuidesPage guides={guides} categories={categories} breadcrumbItems={breadcrumbItems} />
       </Suspense>
     </>
   );

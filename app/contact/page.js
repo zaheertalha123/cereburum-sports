@@ -5,12 +5,17 @@ import ContactForm from '@/components/ContactForm';
 import { SOCIAL } from '@/data/social';
 import { absoluteUrl } from '@/lib/siteUrl';
 import { getLocalBusinessSchema } from '@/lib/localBusiness';
+import Breadcrumbs, { breadcrumbJsonLd } from '@/components/Breadcrumbs';
 
 const WHATSAPP_NUMBER = '923187768296';
 const PHONE_DISPLAY = '+92 318 7768296';
 const PHONE_TEL = `+${WHATSAPP_NUMBER}`;
 const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=Hello%2C%20I%27m%20interested%20in%20your%20sports%20products.%20Please%20share%20more%20details.`;
 const contactUrl = absoluteUrl('/contact');
+const breadcrumbItems = [
+  { name: 'Home', href: '/' },
+  { name: 'Contact', href: '/contact' },
+];
 
 export const metadata = {
   title: 'Contact Us — Sports Net Quotes & Inquiries',
@@ -79,6 +84,7 @@ const faqs = [
 const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
+    breadcrumbJsonLd(breadcrumbItems),
     {
       '@type': 'ContactPage',
       '@id': `${contactUrl}/#webpage`,
@@ -117,6 +123,7 @@ export default function ContactPage() {
           <div className={styles.heroGrid} />
         </div>
         <div className={`container ${styles.heroContent}`}>
+          <Breadcrumbs items={breadcrumbItems} />
           <span className="section-label animate-fade-in">Get in Touch</span>
           <h1 className={`display-lg ${styles.heroTitle} animate-fade-in-up`}>
             Let&apos;s Talk<br />

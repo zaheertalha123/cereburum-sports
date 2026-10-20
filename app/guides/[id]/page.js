@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import {
@@ -11,11 +10,14 @@ import {
   hasSectionContent,
   toGuideMedia,
 } from '@/data/guides';
+import { projects } from '@/data/projects';
 import ClientGallery from '@/app/works/[id]/ClientGallery';
 import galleryStyles from '@/app/works/[id]/project.module.css';
 import GuideSectionNav from './GuideSectionNav';
 import GuideSection from './GuideSection';
-import { absoluteUrl } from '@/lib/siteUrl';
+import { absoluteUrl, absoluteMediaUrl } from '@/lib/siteUrl';
+import Breadcrumbs, { breadcrumbJsonLd } from '@/components/Breadcrumbs';
+import RelatedCards from '@/components/RelatedCards';
 import styles from './guide.module.css';
 
 export async function generateStaticParams() {
@@ -38,13 +40,13 @@ export async function generateMetadata({ params }) {
   const canonicalUrl = absoluteUrl(`/guides/${guide.id}`);
   const ogImages = (photos.length ? photos : cover ? [{ url: cover, alt: getGuideCoverAlt(guide) }] : []).map(
     (image) => ({
-      url: absoluteUrl(image.url),
+      url: absoluteMediaUrl(image.url),
       width: 1200,
       height: 630,
       alt: image.alt || guide.title,
     }),
   );
-  const imageUrl = ogImages[0]?.url || absoluteUrl('/images/home/1.jpg');
+  const imageUrl = ogImages[0]?.url || absoluteMediaUrl();
 
   return {
     title,
@@ -91,10 +93,61 @@ export default async function GuidePage({ params }) {
   const gallery = toGuideMedia(getGuideGallery(guide));
   const hasVideo = gallery.some((item) => item.type === 'video');
   const sections = getVisibleGuideSections(guide);
-  const backHref = `/guides?filter=${encodeURIComponent(guide.category)}`;
+  const guidesHref = guide.category
+    ? `/guides?filter=${encodeURIComponent(guide.category)}`
+    : '/guides';
   const canonicalUrl = absoluteUrl(`/guides/${guide.id}`);
   const coverPath = cover || guide.image;
-  const imageUrl = absoluteUrl(coverPath || '/images/home/1.jpg');
+  const imageUrl = absoluteMediaUrl(coverPath);
+  const breadcrumbItems = [
+    { name: 'Home', href: '/' },
+    { name: 'Guides', href: '/guides' },
+    ...(guide.category ? [{ name: guide.category, href: guidesHref }] : []),
+    { name: guide.title, href: `/guides/${guide.id}` },
+  ];
+
+  const relatedGuides = guides
+    .filter((item) => item.id !== guide.id)
+    .slice(0, 3)
+    .map((item) => ({
+      id: item.id,
+      href: `/guides/${item.id}`,
+      image: getGuideCover(item),
+      imageAlt: getGuideCoverAlt(item),
+      eyebrow: item.category,
+      name: item.title,
+      cta: 'Read guide →',
+    }));
+
+  const relatedItems =
+    relatedGuides.length > 0
+      ? relatedGuides
+      : projects.slice(0, 3).map((item) => ({
+          id: item.id,
+          href: `/works/${item.id}`,
+          image: item.coverImage,
+          imageAlt: item.coverImageAlt || item.title,
+          eyebrow: item.category || 'Installation',
+          name: item.title,
+          cta: 'View project →',
+        }));
+
+  const relatedMeta =
+    relatedGuides.length > 0
+      ? {
+          label: 'Keep learning',
+          title: 'Related Guides',
+          viewAllHref: '/guides',
+          viewAllLabel: 'View all guides',
+          ariaLabel: 'Related guides',
+        }
+      : {
+          label: 'See it installed',
+          title: 'Related Projects',
+          viewAllHref: '/works',
+          viewAllLabel: 'View all works',
+          ariaLabel: 'Related projects',
+        };
 
   const installationSteps = guide.installation?.steps;
   const hasSteps = Array.isArray(installationSteps) && installationSteps.length > 0;
@@ -102,29 +155,7 @@ export default async function GuidePage({ params }) {
   const jsonLd = {
     '@context': 'https://schema.org',
     '@graph': [
-      {
-        '@type': 'BreadcrumbList',
-        itemListElement: [
-          {
-            '@type': 'ListItem',
-            position: 1,
-            name: 'Home',
-            item: absoluteUrl(),
-          },
-          {
-            '@type': 'ListItem',
-            position: 2,
-            name: 'Guides',
-            item: absoluteUrl('/guides'),
-          },
-          {
-            '@type': 'ListItem',
-            position: 3,
-            name: guide.title,
-            item: canonicalUrl,
-          },
-        ],
-      },
+      breadcrumbJsonLd(breadcrumbItems),
       hasSteps
         ? {
           '@type': 'HowTo',
@@ -190,11 +221,7 @@ export default async function GuidePage({ params }) {
         )}
 
         <div className="container" style={{ position: 'relative', zIndex: 10 }}>
-          <div className={styles.backLinkContainer}>
-            <Link href={backHref} className={styles.backLink}>
-              ← Back to Guides
-            </Link>
-          </div>
+          <Breadcrumbs items={breadcrumbItems} />
 
           <div className={styles.heroContent}>
             {guide.category ? <span className={styles.categoryBadge}>{guide.category}</span> : null}
@@ -285,6 +312,15 @@ export default async function GuidePage({ params }) {
           tone="alt"
         />
       ) : null}
+
+      <RelatedCards
+        label={relatedMeta.label}
+        title={relatedMeta.title}
+        viewAllHref={relatedMeta.viewAllHref}
+        viewAllLabel={relatedMeta.viewAllLabel}
+        ariaLabel={relatedMeta.ariaLabel}
+        items={relatedItems}
+      />
     </>
   );
 }

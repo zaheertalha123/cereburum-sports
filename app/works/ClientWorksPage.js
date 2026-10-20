@@ -4,6 +4,7 @@ import { useCallback } from 'react';
 import { useSearchParams, useRouter, usePathname } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
+import Breadcrumbs from '@/components/Breadcrumbs';
 import styles from './works.module.css';
 
 const FILTER_PARAM = 'filter';
@@ -12,7 +13,7 @@ function resolveFilter(value, categories) {
   return value && categories.includes(value) ? value : 'All';
 }
 
-export default function ClientWorksPage({ projects, categories }) {
+export default function ClientWorksPage({ projects, categories, breadcrumbItems }) {
   const searchParams = useSearchParams();
   const router = useRouter();
   const pathname = usePathname();
@@ -47,6 +48,7 @@ export default function ClientWorksPage({ projects, categories }) {
           <div className={styles.headerGrid} />
         </div>
         <div className={`container ${styles.headerContent}`}>
+          {breadcrumbItems?.length ? <Breadcrumbs items={breadcrumbItems} /> : null}
           <span className="section-label animate-fade-in">Portfolio</span>
           <h1 className={`display-lg ${styles.pageTitle} animate-fade-in-up`}>
             Our Work Speaks<br />

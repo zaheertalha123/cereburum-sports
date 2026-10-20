@@ -1,9 +1,14 @@
 import { Suspense } from 'react';
 import ClientProductsPage from './ClientProductsPage';
 import { products } from '@/data/products';
-import { absoluteUrl } from '@/lib/siteUrl';
+import { absoluteUrl, absoluteMediaUrl } from '@/lib/siteUrl';
+import { breadcrumbJsonLd } from '@/components/Breadcrumbs';
 
 const productsUrl = absoluteUrl('/products');
+const breadcrumbItems = [
+  { name: 'Home', href: '/' },
+  { name: 'Products', href: '/products' },
+];
 
 export const metadata = {
   title: 'Sports Nets Catalog & Netting Solutions in Pakistan',
@@ -41,30 +46,35 @@ export const metadata = {
 export default function ProductsPage() {
   const jsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'ItemList',
-    name: 'Sports Net Catalog - Cereburum Sports',
-    description: 'High-durability sports nets, cricket net installation, and barrier netting in Pakistan.',
-    url: productsUrl,
-    numberOfItems: products.length,
-    itemListElement: products.map((product, index) => {
-      const productUrl = absoluteUrl(`/products/${product.id}`);
-      return {
-        '@type': 'ListItem',
-        position: index + 1,
-        item: {
-          '@type': 'Product',
-          '@id': productUrl,
-          url: productUrl,
-          name: product.title || product.name,
-          description: product.desc || product.description,
-          image: absoluteUrl(product.image || '/images/home/1.jpg'),
-          brand: {
-            '@type': 'Brand',
-            name: 'Cereburum Sports',
-          },
-        },
-      };
-    }),
+    '@graph': [
+      breadcrumbJsonLd(breadcrumbItems),
+      {
+        '@type': 'ItemList',
+        name: 'Sports Net Catalog - Cereburum Sports',
+        description: 'High-durability sports nets, cricket net installation, and barrier netting in Pakistan.',
+        url: productsUrl,
+        numberOfItems: products.length,
+        itemListElement: products.map((product, index) => {
+          const productUrl = absoluteUrl(`/products/${product.id}`);
+          return {
+            '@type': 'ListItem',
+            position: index + 1,
+            item: {
+              '@type': 'Product',
+              '@id': productUrl,
+              url: productUrl,
+              name: product.title || product.name,
+              description: product.desc || product.description,
+              image: absoluteMediaUrl(product.image),
+              brand: {
+                '@type': 'Brand',
+                name: 'Cereburum Sports',
+              },
+            },
+          };
+        }),
+      },
+    ],
   };
 
   return (
@@ -74,7 +84,7 @@ export default function ProductsPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <Suspense fallback={null}>
-        <ClientProductsPage products={products} />
+        <ClientProductsPage products={products} breadcrumbItems={breadcrumbItems} />
       </Suspense>
     </>
   );
