@@ -54,7 +54,7 @@ export default function ClientWorksPage({ projects, categories }) {
           </h1>
           <div className="divider divider-center" style={{ margin: '1.25rem auto 1.75rem' }} />
           <p className={`body-lg ${styles.pageDesc} animate-fade-in`}>
-            500+ installations and counting — from local academies to professional-grade facilities
+            100+ installations and counting — from local academies to professional-grade facilities
             across Pakistan.
           </p>
 

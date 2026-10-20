@@ -1,20 +1,22 @@
-import { SOCIAL } from '@/data/social';
+import { absoluteUrl } from '@/lib/siteUrl';
+import { getLocalBusinessSchema } from '@/lib/localBusiness';
 import styles from './about.module.css';
 
 const WHATSAPP_NUMBER = '923187768296';
 const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=Hello%2C%20I%27d%20like%20to%20learn%20more%20about%20Cereburum%20Sports.`;
+const aboutUrl = absoluteUrl('/about');
 
 export const metadata = {
   title: 'About Us — Sports Net Manufacturer & Installer',
   description:
     'Learn about Cereburum Sports — Pakistan’s trusted sports netting manufacturer and specialist installer for cricket grounds, rooftop practice nets, football pitches, and multi-sport facilities.',
   alternates: {
-    canonical: 'https://www.cereburumsports.site/about',
+    canonical: aboutUrl,
   },
   openGraph: {
     type: 'website',
     locale: 'en_PK',
-    url: 'https://www.cereburumsports.site/about',
+    url: aboutUrl,
     siteName: 'Cereburum Sports',
     title: 'About Us — Sports Net Manufacturer & Installer | Cereburum Sports',
     description:
@@ -42,28 +44,11 @@ const jsonLd = {
   '@graph': [
     {
       '@type': 'AboutPage',
-      '@id': 'https://www.cereburumsports.site/about/#webpage',
-      url: 'https://www.cereburumsports.site/about',
+      '@id': `${aboutUrl}/#webpage`,
+      url: aboutUrl,
       name: 'About Cereburum Sports',
       description: 'Pakistan’s trusted specialist for cricket net installation, rooftop cricket practice cages, and sports barrier netting.',
-      mainEntity: {
-        '@type': ['Organization', 'LocalBusiness'],
-        '@id': 'https://www.cereburumsports.site/#organization',
-        name: 'Cereburum Sports',
-        url: 'https://www.cereburumsports.site',
-        logo: 'https://www.cereburumsports.site/logo.png',
-        image: 'https://www.cereburumsports.site/images/home/1.jpg',
-        telephone: '+923187768296',
-        email: 'cereburum.sports@gmail.com',
-        address: {
-          '@type': 'PostalAddress',
-          streetAddress: 'GFHX+2P3, Nawan Pind',
-          addressLocality: 'Nawan Pind Sialkot',
-          addressRegion: 'Nawan Pind',
-          addressCountry: 'Pakistan',
-        },
-        sameAs: [SOCIAL.facebook, SOCIAL.instagram, SOCIAL.tiktok],
-      },
+      mainEntity: getLocalBusinessSchema(),
     },
   ],
 };

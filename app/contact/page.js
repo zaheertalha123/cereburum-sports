@@ -3,23 +3,26 @@ import styles from './contact.module.css';
 import FAQAccordion from '@/components/FAQAccordion';
 import ContactForm from '@/components/ContactForm';
 import { SOCIAL } from '@/data/social';
+import { absoluteUrl } from '@/lib/siteUrl';
+import { getLocalBusinessSchema } from '@/lib/localBusiness';
 
 const WHATSAPP_NUMBER = '923187768296';
 const PHONE_DISPLAY = '+92 318 7768296';
 const PHONE_TEL = `+${WHATSAPP_NUMBER}`;
 const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=Hello%2C%20I%27m%20interested%20in%20your%20sports%20products.%20Please%20share%20more%20details.`;
+const contactUrl = absoluteUrl('/contact');
 
 export const metadata = {
   title: 'Contact Us — Sports Net Quotes & Inquiries',
   description:
     'Get in touch with Cereburum Sports via WhatsApp, phone, or email. Request custom quotes for cricket ground netting, rooftop cricket practice cages, and sports barrier nets.',
   alternates: {
-    canonical: 'https://www.cereburumsports.site/contact',
+    canonical: contactUrl,
   },
   openGraph: {
     type: 'website',
     locale: 'en_PK',
-    url: 'https://www.cereburumsports.site/contact',
+    url: contactUrl,
     siteName: 'Cereburum Sports',
     title: 'Contact Us — Sports Net Quotes & Inquiries | Cereburum Sports',
     description:
@@ -78,32 +81,15 @@ const jsonLd = {
   '@graph': [
     {
       '@type': 'ContactPage',
-      '@id': 'https://www.cereburumsports.site/contact/#webpage',
-      url: 'https://www.cereburumsports.site/contact',
+      '@id': `${contactUrl}/#webpage`,
+      url: contactUrl,
       name: 'Contact Cereburum Sports',
       description: 'Contact Cereburum Sports for custom quotes on cricket net installation and sports barrier netting across Pakistan.',
-      mainEntity: {
-        '@type': ['Organization', 'LocalBusiness'],
-        '@id': 'https://www.cereburumsports.site/#organization',
-        name: 'Cereburum Sports',
-        url: 'https://www.cereburumsports.site',
-        logo: 'https://www.cereburumsports.site/logo.png',
-        image: 'https://www.cereburumsports.site/images/home/1.jpg',
-        telephone: '+923187768296',
-        email: 'cereburum.sports@gmail.com',
-        address: {
-          '@type': 'PostalAddress',
-          streetAddress: 'GFHX+2P3, Nawan Pind',
-          addressLocality: 'Nawan Pind Sialkot',
-          addressRegion: 'Nawan Pind',
-          addressCountry: 'Pakistan',
-        },
-        sameAs: [SOCIAL.facebook, SOCIAL.instagram, SOCIAL.tiktok],
-      },
+      mainEntity: getLocalBusinessSchema(),
     },
     {
       '@type': 'FAQPage',
-      '@id': 'https://www.cereburumsports.site/contact/#faq',
+      '@id': `${contactUrl}/#faq`,
       mainEntity: faqs.map((faq) => ({
         '@type': 'Question',
         name: faq.q,

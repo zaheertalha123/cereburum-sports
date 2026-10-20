@@ -1,18 +1,21 @@
 import { Suspense } from 'react';
 import ClientProductsPage from './ClientProductsPage';
 import { products } from '@/data/products';
+import { absoluteUrl } from '@/lib/siteUrl';
+
+const productsUrl = absoluteUrl('/products');
 
 export const metadata = {
   title: 'Sports Nets Catalog & Netting Solutions in Pakistan',
   description:
     'Explore high-durability cricket ground nets, football goal netting, rooftop practice cages, and court nets. Direct manufacturer supply and installation across Pakistan.',
   alternates: {
-    canonical: 'https://www.cereburumsports.site/products',
+    canonical: productsUrl,
   },
   openGraph: {
     type: 'website',
     locale: 'en_PK',
-    url: 'https://www.cereburumsports.site/products',
+    url: productsUrl,
     siteName: 'Cereburum Sports',
     title: 'Sports Nets Catalog & Netting Solutions in Pakistan | Cereburum Sports',
     description:
@@ -41,32 +44,27 @@ export default function ProductsPage() {
     '@type': 'ItemList',
     name: 'Sports Net Catalog - Cereburum Sports',
     description: 'High-durability sports nets, cricket net installation, and barrier netting in Pakistan.',
-    url: 'https://www.cereburumsports.site/products',
+    url: productsUrl,
     numberOfItems: products.length,
-    itemListElement: products.map((product, index) => ({
-      '@type': 'ListItem',
-      position: index + 1,
-      item: {
-        '@type': 'Product',
-        '@id': `https://www.cereburumsports.site/products#${product.id}`,
-        name: product.title || product.name,
-        description: product.desc || product.description,
-        image: product.image ? `https://www.cereburumsports.site${product.image}` : 'https://www.cereburumsports.site/images/home/1.jpg',
-        brand: {
-          '@type': 'Brand',
-          name: 'Cereburum Sports',
-        },
-        offers: {
-          '@type': 'Offer',
-          priceCurrency: 'PKR',
-          availability: 'https://schema.org/InStock',
-          seller: {
-            '@type': 'Organization',
+    itemListElement: products.map((product, index) => {
+      const productUrl = absoluteUrl(`/products/${product.id}`);
+      return {
+        '@type': 'ListItem',
+        position: index + 1,
+        item: {
+          '@type': 'Product',
+          '@id': productUrl,
+          url: productUrl,
+          name: product.title || product.name,
+          description: product.desc || product.description,
+          image: absoluteUrl(product.image || '/images/home/1.jpg'),
+          brand: {
+            '@type': 'Brand',
             name: 'Cereburum Sports',
           },
         },
-      },
-    })),
+      };
+    }),
   };
 
   return (

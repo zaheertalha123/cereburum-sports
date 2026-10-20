@@ -15,6 +15,7 @@ import ClientGallery from '@/app/works/[id]/ClientGallery';
 import galleryStyles from '@/app/works/[id]/project.module.css';
 import GuideSectionNav from './GuideSectionNav';
 import GuideSection from './GuideSection';
+import { absoluteUrl } from '@/lib/siteUrl';
 import styles from './guide.module.css';
 
 export async function generateStaticParams() {
@@ -34,16 +35,16 @@ export async function generateMetadata({ params }) {
   const title = guide.title;
   const socialTitle = `${guide.title} | Cereburum Sports`;
   const description = guide.desc || `${guide.title} - Step-by-step sports netting guide by Cereburum Sports.`;
-  const canonicalUrl = `https://www.cereburumsports.site/guides/${guide.id}`;
+  const canonicalUrl = absoluteUrl(`/guides/${guide.id}`);
   const ogImages = (photos.length ? photos : cover ? [{ url: cover, alt: getGuideCoverAlt(guide) }] : []).map(
     (image) => ({
-      url: image.url.startsWith('http') ? image.url : `https://www.cereburumsports.site${image.url}`,
+      url: absoluteUrl(image.url),
       width: 1200,
       height: 630,
       alt: image.alt || guide.title,
     }),
   );
-  const imageUrl = ogImages[0]?.url || 'https://www.cereburumsports.site/images/home/1.jpg';
+  const imageUrl = ogImages[0]?.url || absoluteUrl('/images/home/1.jpg');
 
   return {
     title,
@@ -91,11 +92,9 @@ export default async function GuidePage({ params }) {
   const hasVideo = gallery.some((item) => item.type === 'video');
   const sections = getVisibleGuideSections(guide);
   const backHref = `/guides?filter=${encodeURIComponent(guide.category)}`;
-  const canonicalUrl = `https://www.cereburumsports.site/guides/${guide.id}`;
+  const canonicalUrl = absoluteUrl(`/guides/${guide.id}`);
   const coverPath = cover || guide.image;
-  const imageUrl = coverPath
-    ? (coverPath.startsWith('http') ? coverPath : `https://www.cereburumsports.site${coverPath}`)
-    : 'https://www.cereburumsports.site/images/home/1.jpg';
+  const imageUrl = absoluteUrl(coverPath || '/images/home/1.jpg');
 
   const installationSteps = guide.installation?.steps;
   const hasSteps = Array.isArray(installationSteps) && installationSteps.length > 0;
@@ -110,13 +109,13 @@ export default async function GuidePage({ params }) {
             '@type': 'ListItem',
             position: 1,
             name: 'Home',
-            item: 'https://www.cereburumsports.site',
+            item: absoluteUrl(),
           },
           {
             '@type': 'ListItem',
             position: 2,
             name: 'Guides',
-            item: 'https://www.cereburumsports.site/guides',
+            item: absoluteUrl('/guides'),
           },
           {
             '@type': 'ListItem',
@@ -144,7 +143,7 @@ export default async function GuidePage({ params }) {
             name: 'Cereburum Sports',
             logo: {
               '@type': 'ImageObject',
-              url: 'https://www.cereburumsports.site/logo.png',
+              url: absoluteUrl('/logo.png'),
             },
           },
         }
@@ -163,7 +162,7 @@ export default async function GuidePage({ params }) {
             name: 'Cereburum Sports',
             logo: {
               '@type': 'ImageObject',
-              url: 'https://www.cereburumsports.site/logo.png',
+              url: absoluteUrl('/logo.png'),
             },
           },
         },

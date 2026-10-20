@@ -59,12 +59,13 @@ export default function ClientGuidesPage({ guides, categories }) {
             style={{ margin: '1.25rem auto 1.75rem' }}
           />
           <p className={`body-lg ${styles.pageDesc} animate-fade-in`}>
-            Expert guidance on net installation, ground preparation, and
-            lighting — everything you need to build and run a professional
-            sports facility.
+            Step-by-step installation guides for sports netting enclosures,
+            corner doors, and facility setup — written from real install jobs
+            across Pakistan.
           </p>
 
-          {/* Filter pills */}
+          {/* Filter pills — only when more than one real category exists */}
+          {categories.length > 2 && (
           <div
             className={styles.filterRow}
             role="list"
@@ -81,6 +82,7 @@ export default function ClientGuidesPage({ guides, categories }) {
               </button>
             ))}
           </div>
+          )}
         </div>
       </section>
 

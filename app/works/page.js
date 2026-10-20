@@ -1,18 +1,21 @@
 import { Suspense } from 'react';
 import ClientWorksPage from './ClientWorksPage';
 import { projects, projectCategories as categories } from '../../data/projects';
+import { absoluteUrl } from '@/lib/siteUrl';
+
+const worksUrl = absoluteUrl('/works');
 
 export const metadata = {
   title: 'Sports Net Installation Portfolio & Projects in Pakistan',
   description:
     'Browse our portfolio of completed cricket ground netting, rooftop cricket practice cages, football pitch barrier nets, and sports facility installations across Pakistan.',
   alternates: {
-    canonical: 'https://www.cereburumsports.site/works',
+    canonical: worksUrl,
   },
   openGraph: {
     type: 'website',
     locale: 'en_PK',
-    url: 'https://www.cereburumsports.site/works',
+    url: worksUrl,
     siteName: 'Cereburum Sports',
     title: 'Sports Net Installation Portfolio & Projects in Pakistan | Cereburum Sports',
     description:
@@ -41,19 +44,17 @@ export default function WorksPage() {
     '@type': 'ItemList',
     name: 'Completed Sports Netting Projects Portfolio - Cereburum Sports',
     description: 'Portfolio of cricket net installations, rooftop cages, football barrier nets, and sports complexes built across Pakistan.',
-    url: 'https://www.cereburumsports.site/works',
+    url: worksUrl,
     numberOfItems: projects.length,
     itemListElement: projects.map((project, index) => ({
       '@type': 'ListItem',
       position: index + 1,
       item: {
         '@type': 'CreativeWork',
-        '@id': `https://www.cereburumsports.site/works/${project.id}`,
+        '@id': absoluteUrl(`/works/${project.id}`),
         name: project.title,
         description: project.description || project.subtitle,
-        image: project.coverImage
-          ? `https://www.cereburumsports.site${project.coverImage}`
-          : 'https://www.cereburumsports.site/images/home/1.jpg',
+        image: absoluteUrl(project.coverImage || '/images/home/1.jpg'),
         creator: {
           '@type': 'Organization',
           name: 'Cereburum Sports',

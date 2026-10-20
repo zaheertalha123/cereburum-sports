@@ -1,18 +1,21 @@
 import { Suspense } from 'react';
 import ClientGuidesPage from './ClientGuidesPage';
 import { guides, guideCategories as categories } from '../../data/guides';
+import { absoluteUrl } from '@/lib/siteUrl';
+
+const guidesUrl = absoluteUrl('/guides');
 
 export const metadata = {
   title: 'Sports Netting Buying Guides & Installation Tips',
   description:
     'Expert guides and step-by-step tips for sports net installation, rooftop cricket cages, maintenance, and facility setup across Pakistan by Cereburum Sports.',
   alternates: {
-    canonical: 'https://www.cereburumsports.site/guides',
+    canonical: guidesUrl,
   },
   openGraph: {
     type: 'website',
     locale: 'en_PK',
-    url: 'https://www.cereburumsports.site/guides',
+    url: guidesUrl,
     siteName: 'Cereburum Sports',
     title: 'Sports Netting Buying Guides & Installation Tips | Cereburum Sports',
     description:
@@ -39,8 +42,8 @@ export default function GuidesPage() {
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'CollectionPage',
-    '@id': 'https://www.cereburumsports.site/guides/#webpage',
-    url: 'https://www.cereburumsports.site/guides',
+    '@id': `${guidesUrl}/#webpage`,
+    url: guidesUrl,
     name: 'Sports Netting Guides & Installation Tips - Cereburum Sports',
     description: 'Educational articles and guides covering sports netting selection, cricket practice cage setups, maintenance, and installation advice.',
     mainEntity: {
@@ -51,10 +54,11 @@ export default function GuidesPage() {
         position: index + 1,
         item: {
           '@type': 'Article',
-          '@id': `https://www.cereburumsports.site/guides/${guide.id}`,
+          '@id': absoluteUrl(`/guides/${guide.id}`),
+          url: absoluteUrl(`/guides/${guide.id}`),
           headline: guide.title,
           description: guide.description || guide.desc || guide.subtitle,
-          image: guide.image ? `https://www.cereburumsports.site${guide.image}` : 'https://www.cereburumsports.site/images/home/1.jpg',
+          image: absoluteUrl(guide.image || '/images/home/1.jpg'),
           author: {
             '@type': 'Organization',
             name: 'Cereburum Sports',
@@ -64,7 +68,7 @@ export default function GuidesPage() {
             name: 'Cereburum Sports',
             logo: {
               '@type': 'ImageObject',
-              url: 'https://www.cereburumsports.site/logo.png',
+              url: absoluteUrl('/logo.png'),
             },
           },
         },

@@ -1,10 +1,12 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { SOCIAL } from '@/data/social';
+import { absoluteUrl } from '@/lib/siteUrl';
+import { getLocalBusinessSchema } from '@/lib/localBusiness';
 import styles from './page.module.css';
 
 const WHATSAPP_NUMBER = '923187768296';
 const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=Hello%2C%20I%27m%20interested%20in%20your%20sports%20products.`;
+const siteUrl = absoluteUrl();
 
 export const metadata = {
   title: {
@@ -18,7 +20,7 @@ export const metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_PK',
-    url: 'https://www.cereburumsports.site',
+    url: siteUrl,
     siteName: 'Cereburum Sports',
     title: 'Cricket Net Installation & Sports Nets in Pakistan | Cereburum Sports',
     description:
@@ -46,47 +48,27 @@ const jsonLd = {
   '@graph': [
     {
       '@type': 'WebSite',
-      '@id': 'https://www.cereburumsports.site/#website',
-      url: 'https://www.cereburumsports.site',
+      '@id': `${siteUrl}/#website`,
+      url: siteUrl,
       name: 'Cereburum Sports',
       description: 'Cricket Net Installation & Sports Nets Supply Across Pakistan',
       inLanguage: 'en-PK',
       publisher: {
-        '@id': 'https://www.cereburumsports.site/#organization',
+        '@id': `${siteUrl}/#organization`,
       },
     },
-    {
-      '@type': ['Organization', 'LocalBusiness'],
-      '@id': 'https://www.cereburumsports.site/#organization',
-      name: 'Cereburum Sports',
-      url: 'https://www.cereburumsports.site',
-      logo: 'https://www.cereburumsports.site/logo.png',
-      image: 'https://www.cereburumsports.site/images/home/1.jpg',
-      description:
-        'Pakistan’s trusted specialist for cricket net installation services, rooftop cricket nets, and cricket ground netting, alongside manufacturing and supplying all types of sports nets, football netting, and safety barrier nets nationwide.',
-      telephone: '+923187768296',
-      email: 'cereburum.sports@gmail.com',
-      address: {
-        '@type': 'PostalAddress',
-        streetAddress: 'GFHX+2P3, Nawan Pind',
-        addressLocality: 'Nawan Pind Sialkot',
-        addressRegion: 'Nawan Pind',
-        addressCountry: 'Pakistan',
-      },
-      areaServed: {
-        '@type': 'Country',
-        name: 'Pakistan',
-      },
-      sameAs: [SOCIAL.facebook, SOCIAL.instagram, SOCIAL.tiktok],
+    getLocalBusinessSchema({
       hasOfferCatalog: {
         '@type': 'OfferCatalog',
         name: 'Sports Net Installation Services & Sports Nets Supply',
         itemListElement: [
           {
             '@type': 'Offer',
+            url: absoluteUrl('/works'),
             itemOffered: {
               '@type': 'Service',
               name: 'Cricket Net Installation Services',
+              url: absoluteUrl('/works'),
               description:
                 'Turnkey cricket net installation services across Pakistan for grounds, academies, rooftop practice setups, and sports facilities.',
               areaServed: {
@@ -97,9 +79,11 @@ const jsonLd = {
           },
           {
             '@type': 'Offer',
+            url: absoluteUrl('/products?filter=Cricket'),
             itemOffered: {
               '@type': 'Service',
               name: 'Cricket Ground Netting & Rooftop Cricket Nets Installation',
+              url: absoluteUrl('/products?filter=Cricket'),
               description:
                 'Professional installation of high-tensile cricket ground netting and engineered rooftop cricket nets for residential and commercial facilities.',
               areaServed: {
@@ -110,9 +94,11 @@ const jsonLd = {
           },
           {
             '@type': 'Offer',
+            url: absoluteUrl('/products/cricket-net-24'),
             itemOffered: {
               '@type': 'Service',
               name: 'Cricket Practice Nets & Academy Nets Setup',
+              url: absoluteUrl('/products/cricket-net-24'),
               description:
                 'Heavy-duty cricket practice net cages and multi-lane cricket academy nets installation engineered for hardball cricket.',
               areaServed: {
@@ -123,9 +109,11 @@ const jsonLd = {
           },
           {
             '@type': 'Offer',
+            url: absoluteUrl('/products/custom'),
             itemOffered: {
               '@type': 'Service',
               name: 'Sports Barrier Netting & Custom Installation Solutions',
+              url: absoluteUrl('/products/custom'),
               description:
                 'Professional sports net installation for high-durability barrier netting and safety nets protecting spectators and facilities.',
               areaServed: {
@@ -136,34 +124,40 @@ const jsonLd = {
           },
           {
             '@type': 'Offer',
+            url: absoluteUrl('/products?filter=Cricket'),
             itemOffered: {
               '@type': 'Product',
               name: 'Cricket Nets (Practice, Pitch & Boundary Nets)',
+              url: absoluteUrl('/products?filter=Cricket'),
               description:
                 'High-density UV-treated cricket nets, joint-free parachute netting, and practice nets available in custom dimensions.',
             },
           },
           {
             '@type': 'Offer',
+            url: absoluteUrl('/products?filter=Football'),
             itemOffered: {
               '@type': 'Product',
               name: 'Football Netting & Goal Nets',
+              url: absoluteUrl('/products?filter=Football'),
               description:
                 'All-weather football goal nets, futsal nets, and pitch boundary netting manufactured for durability.',
             },
           },
           {
             '@type': 'Offer',
+            url: absoluteUrl('/products?filter=Badminton'),
             itemOffered: {
               '@type': 'Product',
               name: 'Sports Safety Nets & Court Netting',
+              url: absoluteUrl('/products?filter=Badminton'),
               description:
                 'Heavy-duty sports safety barrier netting, badminton nets, and multi-sport court netting solutions for diverse sports facilities.',
             },
           },
         ],
       },
-    },
+    }),
   ],
 };
 

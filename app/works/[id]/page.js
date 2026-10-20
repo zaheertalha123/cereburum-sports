@@ -2,6 +2,7 @@ import { projects } from '../../../data/projects';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
+import { absoluteUrl } from '@/lib/siteUrl';
 import styles from './project.module.css';
 import ClientGallery from './ClientGallery';
 
@@ -22,10 +23,8 @@ export async function generateMetadata({ params }) {
   const title = project.title;
   const socialTitle = `${project.title} | Cereburum Sports`;
   const description = project.desc || `${project.title} sports netting project installed in ${project.location || 'Pakistan'} by Cereburum Sports.`;
-  const canonicalUrl = `https://www.cereburumsports.site/works/${project.id}`;
-  const imageUrl = project.coverImage
-    ? (project.coverImage.startsWith('http') ? project.coverImage : `https://www.cereburumsports.site${project.coverImage}`)
-    : 'https://www.cereburumsports.site/images/home/1.jpg';
+  const canonicalUrl = absoluteUrl(`/works/${project.id}`);
+  const imageUrl = absoluteUrl(project.coverImage || '/images/home/1.jpg');
 
   return {
     title,
@@ -66,10 +65,8 @@ export default async function ProjectPage({ params }) {
     notFound();
   }
 
-  const canonicalUrl = `https://www.cereburumsports.site/works/${project.id}`;
-  const imageUrl = project.coverImage
-    ? (project.coverImage.startsWith('http') ? project.coverImage : `https://www.cereburumsports.site${project.coverImage}`)
-    : 'https://www.cereburumsports.site/images/home/1.jpg';
+  const canonicalUrl = absoluteUrl(`/works/${project.id}`);
+  const imageUrl = absoluteUrl(project.coverImage || '/images/home/1.jpg');
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -81,13 +78,13 @@ export default async function ProjectPage({ params }) {
             '@type': 'ListItem',
             position: 1,
             name: 'Home',
-            item: 'https://www.cereburumsports.site',
+            item: absoluteUrl(),
           },
           {
             '@type': 'ListItem',
             position: 2,
             name: 'Works',
-            item: 'https://www.cereburumsports.site/works',
+            item: absoluteUrl('/works'),
           },
           {
             '@type': 'ListItem',
