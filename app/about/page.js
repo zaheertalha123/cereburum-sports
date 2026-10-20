@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { absoluteUrl } from '@/lib/siteUrl';
 import { getLocalBusinessSchema } from '@/lib/localBusiness';
 import Breadcrumbs, { breadcrumbJsonLd } from '@/components/Breadcrumbs';
@@ -60,10 +61,26 @@ const jsonLd = {
 };
 
 const values = [
-  { icon: '🎯', title: 'Precision', desc: 'Every installation is measured, planned, and executed with engineering-grade accuracy.' },
-  { icon: '💪', title: 'Durability', desc: 'We refuse to compromise on materials — only UV-resistant, weatherproof, long-life products.' },
-  { icon: '🤝', title: 'Partnership', desc: 'We work alongside clients from consultation to completion and beyond.' },
-  { icon: '📐', title: 'Expertise', desc: 'Backed by years of experience in sports facility netting across Pakistan.' },
+  {
+    icon: '/images/icons/precision.png',
+    title: 'Precision',
+    desc: 'Every installation is measured, planned, and executed with engineering-grade accuracy.',
+  },
+  {
+    icon: '/images/icons/durability.png',
+    title: 'Durability',
+    desc: 'We refuse to compromise on materials — only UV-resistant, weatherproof, long-life products.',
+  },
+  {
+    icon: '/images/icons/partnership.png',
+    title: 'Partnership',
+    desc: 'We work alongside clients from consultation to completion and beyond.',
+  },
+  {
+    icon: '/images/icons/expertise.png',
+    title: 'Expertise',
+    desc: 'Backed by years of experience in sports facility netting across Pakistan.',
+  },
 ];
 
 const timeline = [
@@ -109,35 +126,37 @@ export default function AboutPage() {
           <div className={styles.heroGrid} />
           <div className={styles.heroOrb} />
         </div>
-        <div className={`container ${styles.heroContent}`}>
-          <Breadcrumbs items={breadcrumbItems} />
-          <div className={`animate-fade-in-up ${styles.heroText}`}>
-            <span className="section-label">Our Story</span>
-            <h1 className={`display-lg ${styles.heroTitle} animate-fade-in-up`}>
-              Built on Quality.<br />
-              <span className="text-sand">Driven by Sport.</span>
-            </h1>
-            <div className="divider" />
-            <p className={`body-lg ${styles.heroDesc} animate-fade-in`}>
-              Cereburum Sports was born from a simple belief: Pakistan&apos;s sports facilities
-              deserve world-class netting and equipment, installed with professionalism and care.
-              Our mission drives every project we take on across Pakistan.
-            </p>
-          </div>
+        <div className={`container ${styles.heroWrap}`}>
+          <Breadcrumbs items={breadcrumbItems} className={styles.heroBreadcrumbs} />
+          <div className={styles.heroContent}>
+            <div className={`animate-fade-in-up ${styles.heroText}`}>
+              <span className="section-label">Our Story</span>
+              <h1 className={`display-lg ${styles.heroTitle} animate-fade-in-up`}>
+                Built on Quality.<br />
+                <span className="text-sand">Driven by Sport.</span>
+              </h1>
+              <div className="divider" />
+              <p className={`body-lg ${styles.heroDesc} animate-fade-in`}>
+                Cereburum Sports was born from a simple belief: Pakistan&apos;s sports facilities
+                deserve world-class netting and equipment, installed with professionalism and care.
+                Our mission drives every project we take on across Pakistan.
+              </p>
+            </div>
 
-          {/* Stats block */}
-          <div className={`${styles.heroStats} animate-fade-in`} style={{ animationDelay: '0.2s' }}>
-            {[
-              { v: '8+', l: 'Years Active' },
-              { v: '100+', l: 'Projects Done' },
-              { v: '7+', l: 'Sports Covered' },
-              { v: '100%', l: 'Client Focused' },
-            ].map(({ v, l }) => (
-              <div key={l} className={styles.heroStat}>
-                <span className={`display-md ${styles.heroStatNum}`}>{v}</span>
-                <span className={`body-sm ${styles.heroStatLbl}`}>{l}</span>
-              </div>
-            ))}
+            {/* Stats block */}
+            <div className={`${styles.heroStats} animate-fade-in`} style={{ animationDelay: '0.2s' }}>
+              {[
+                { v: '8+', l: 'Years Active' },
+                { v: '100+', l: 'Projects Done' },
+                { v: '7+', l: 'Sports Covered' },
+                { v: '100%', l: 'Client Focused' },
+              ].map(({ v, l }) => (
+                <div key={l} className={styles.heroStat}>
+                  <span className={`display-md ${styles.heroStatNum}`}>{v}</span>
+                  <span className={`body-sm ${styles.heroStatLbl}`}>{l}</span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -155,7 +174,15 @@ export default function AboutPage() {
           <div className={styles.valuesGrid}>
             {values.map((v, i) => (
               <div key={v.title} className={`${styles.valueCard} reveal`} style={{ transitionDelay: `${i * 0.1}s` }}>
-                <div className={styles.valueIcon} aria-hidden="true">{v.icon}</div>
+                <div className={styles.valueIcon} aria-hidden="true">
+                  <Image
+                    src={v.icon}
+                    alt=""
+                    width={88}
+                    height={88}
+                    className={styles.valueIconImg}
+                  />
+                </div>
                 <h3 className={`heading-md ${styles.valueTitle}`}>{v.title}</h3>
                 <p className={`body-md ${styles.valueDesc}`}>{v.desc}</p>
               </div>

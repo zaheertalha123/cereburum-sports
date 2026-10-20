@@ -171,37 +171,33 @@ const stats = [
 const products = [
   {
     id: 'cricket-netting',
-    icon: '🏏',
+    icon: '/images/icons/cricket-net.png',
     title: 'Cricket Ground & Academy Net Installation',
     desc: 'Turnkey cricket net installation services for cricket grounds, practice cages, and academy enclosures across Pakistan, built for hardball and softball cricket.',
-    tag: 'Best Seller',
     filter: 'Cricket',
     ctaText: 'Explore Cricket Nets',
   },
   {
     id: 'football-netting',
-    icon: '⚽',
+    icon: '/images/icons/football-net.png',
     title: 'Football Netting & Goal Nets',
     desc: 'Weatherproof football netting, goal nets, and pitch perimeter barrier nets. Tailored mesh sizes and professional installation for football grounds.',
-    tag: null,
     filter: 'Football',
     ctaText: 'View Football Nets',
   },
   {
     id: 'rooftop-safety',
-    icon: '🔧',
+    icon: '/images/icons/practice-cage.png',
     title: 'Rooftop Cricket Nets & Practice Cages',
     desc: 'Specialized rooftop cricket net installation custom-engineered for residential terraces, clubs, and training facilities with durable safety barrier netting.',
-    tag: 'Tailored',
     filter: 'Custom',
     ctaText: 'Explore Rooftop & Safety Nets',
   },
   {
     id: 'badminton-nets',
-    icon: '🏸',
+    icon: '/images/icons/badminton.png',
     title: 'Badminton, Court & Multi-Sport Nets',
     desc: 'Regulation badminton nets, tennis/volleyball court netting, and multi-sport barrier solutions supplied and installed for indoor and outdoor complexes.',
-    tag: null,
     filter: 'Badminton',
     ctaText: 'View Court Nets',
   },
@@ -209,22 +205,22 @@ const products = [
 
 const trusts = [
   {
-    icon: '⚡',
+    icon: '/images/icons/installation-services.png',
     title: 'Cricket Net Installation Specialists',
     desc: 'Dedicated installation teams delivering precision setup for cricket grounds, rooftop practice cages, and cricket academies across Pakistan.',
   },
   {
-    icon: '🌐',
+    icon: '/images/icons/safety-net.png',
     title: 'Football, Court & Safety Barrier Nets',
     desc: 'Alongside cricket setups, we supply and install football goal nets, badminton court netting, futsal goals, and custom facility barrier nets.',
   },
   {
-    icon: '📏',
+    icon: '/images/icons/custom-size.png',
     title: 'Custom Sizing & Bespoke Solutions',
     desc: 'Precision net manufacturing tailored to your exact pitch, court, or rooftop dimensions with generous coverage that never falls short.',
   },
   {
-    icon: '📞',
+    icon: '/images/icons/direct-support.png',
     title: 'Direct Manufacturer Support',
     desc: 'Connect directly with our netting specialists on WhatsApp for sizing advice, quotes on cricket net installation or sports net supply, and nationwide delivery.',
   },
@@ -332,10 +328,15 @@ export default function HomePage() {
                 style={{ animationDelay: `${i * 0.1}s` }}
                 aria-label={product.title}
               >
-                {product.tag && (
-                  <span className={styles.productTag}>{product.tag}</span>
-                )}
-                <div className={styles.productIcon} aria-hidden="true">{product.icon}</div>
+                <div className={styles.productIcon} aria-hidden="true">
+                  <Image
+                    src={product.icon}
+                    alt=""
+                    width={88}
+                    height={88}
+                    className={styles.productIconImg}
+                  />
+                </div>
                 <h3 className={`heading-md ${styles.productTitle}`}>{product.title}</h3>
                 <p className={`body-md ${styles.productDesc}`}>{product.desc}</p>
                 <Link
@@ -375,7 +376,15 @@ export default function HomePage() {
           <div className={styles.trustGrid}>
             {trusts.map((item, i) => (
               <div key={item.title} className={`${styles.trustCard} reveal`} style={{ animationDelay: `${i * 0.1}s` }}>
-                <div className={styles.trustIcon} aria-hidden="true">{item.icon}</div>
+                <div className={styles.trustIcon} aria-hidden="true">
+                  <Image
+                    src={item.icon}
+                    alt=""
+                    width={88}
+                    height={88}
+                    className={styles.trustIconImg}
+                  />
+                </div>
                 <h3 className={`heading-sm ${styles.trustTitle}`}>{item.title}</h3>
                 <p className={`body-sm ${styles.trustDesc}`}>{item.desc}</p>
               </div>
