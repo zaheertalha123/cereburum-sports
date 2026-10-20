@@ -5,6 +5,7 @@ import { useSearchParams, useRouter, usePathname } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
 import { getGuideCover, getGuideCoverAlt } from '@/data/guides';
+import Breadcrumbs from '@/components/Breadcrumbs';
 import styles from './guides.module.css';
 
 const FILTER_PARAM = 'filter';
@@ -13,7 +14,7 @@ function resolveFilter(value, categories) {
   return value && categories.includes(value) ? value : 'All';
 }
 
-export default function ClientGuidesPage({ guides, categories }) {
+export default function ClientGuidesPage({ guides, categories, breadcrumbItems }) {
   const searchParams = useSearchParams();
   const router = useRouter();
   const pathname = usePathname();
@@ -48,6 +49,7 @@ export default function ClientGuidesPage({ guides, categories }) {
           <div className={styles.headerGrid} />
         </div>
         <div className={`container ${styles.headerContent}`}>
+          {breadcrumbItems?.length ? <Breadcrumbs items={breadcrumbItems} /> : null}
           <span className="section-label animate-fade-in">Knowledge Base</span>
           <h1 className={`display-lg ${styles.pageTitle} animate-fade-in-up`}>
             Installation &amp;
@@ -59,12 +61,13 @@ export default function ClientGuidesPage({ guides, categories }) {
             style={{ margin: '1.25rem auto 1.75rem' }}
           />
           <p className={`body-lg ${styles.pageDesc} animate-fade-in`}>
-            Expert guidance on net installation, ground preparation, and
-            lighting — everything you need to build and run a professional
-            sports facility.
+            Step-by-step installation guides for sports netting enclosures,
+            corner doors, and facility setup — written from real install jobs
+            across Pakistan.
           </p>
 
-          {/* Filter pills */}
+          {/* Filter pills — only when more than one real category exists */}
+          {categories.length > 2 && (
           <div
             className={styles.filterRow}
             role="list"
@@ -81,6 +84,7 @@ export default function ClientGuidesPage({ guides, categories }) {
               </button>
             ))}
           </div>
+          )}
         </div>
       </section>
 

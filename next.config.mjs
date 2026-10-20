@@ -12,6 +12,20 @@ const nextConfig = {
       : [],
   },
   allowedDevOrigins: ['192.168.0.101', 'local-origin.dev', '*.local-origin.dev'],
+  async redirects() {
+    return [
+      {
+        source: '/products/crickeet-net-24',
+        destination: '/products/cricket-net-24',
+        permanent: true,
+      },
+      {
+        source: '/products/crickeet-net-12',
+        destination: '/products/cricket-net-12',
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;

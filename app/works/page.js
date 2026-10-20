@@ -1,17 +1,87 @@
 import { Suspense } from 'react';
 import ClientWorksPage from './ClientWorksPage';
 import { projects, projectCategories as categories } from '../../data/projects';
+import { absoluteUrl, absoluteMediaUrl } from '@/lib/siteUrl';
+import { breadcrumbJsonLd } from '@/components/Breadcrumbs';
+
+const worksUrl = absoluteUrl('/works');
+const breadcrumbItems = [
+  { name: 'Home', href: '/' },
+  { name: 'Works', href: '/works' },
+];
 
 export const metadata = {
-  title: 'Our Works — Completed Sports Facility Installations',
+  title: 'Sports Net Installation Portfolio & Projects in Pakistan',
   description:
-    'Browse Cereburum Sports\'s portfolio of completed sports barrier netting installations. Cricket grounds, football pitches, academies, and multi-sport facilities across Pakistan.',
+    'Browse our portfolio of completed cricket ground netting, rooftop cricket practice cages, football pitch barrier nets, and sports facility installations across Pakistan.',
+  alternates: {
+    canonical: worksUrl,
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'en_PK',
+    url: worksUrl,
+    siteName: 'Cereburum Sports',
+    title: 'Sports Net Installation Portfolio & Projects in Pakistan | Cereburum Sports',
+    description:
+      'Browse our portfolio of completed cricket ground netting, rooftop cricket practice cages, football pitch barrier nets, and sports facility installations across Pakistan.',
+    images: [
+      {
+        url: '/images/home/1.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Completed sports barrier netting and cricket net installation portfolio across Pakistan - Cereburum Sports',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Sports Net Installation Portfolio & Projects in Pakistan | Cereburum Sports',
+    description:
+      'Browse our portfolio of completed cricket ground netting, rooftop cricket practice cages, football pitch barrier nets, and sports facility installations across Pakistan.',
+    images: ['/images/home/1.jpg'],
+  },
 };
 
 export default function WorksPage() {
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      breadcrumbJsonLd(breadcrumbItems),
+      {
+        '@type': 'ItemList',
+        name: 'Completed Sports Netting Projects Portfolio - Cereburum Sports',
+        description: 'Portfolio of cricket net installations, rooftop cages, football barrier nets, and sports complexes built across Pakistan.',
+        url: worksUrl,
+        numberOfItems: projects.length,
+        itemListElement: projects.map((project, index) => ({
+          '@type': 'ListItem',
+          position: index + 1,
+          item: {
+            '@type': 'CreativeWork',
+            '@id': absoluteUrl(`/works/${project.id}`),
+            name: project.title,
+            description: project.description || project.subtitle,
+            image: absoluteMediaUrl(project.coverImage),
+            creator: {
+              '@type': 'Organization',
+              name: 'Cereburum Sports',
+            },
+          },
+        })),
+      },
+    ],
+  };
+
   return (
-    <Suspense fallback={null}>
-      <ClientWorksPage projects={projects} categories={categories} />
-    </Suspense>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <Suspense fallback={null}>
+        <ClientWorksPage projects={projects} categories={categories} breadcrumbItems={breadcrumbItems} />
+      </Suspense>
+    </>
   );
 }

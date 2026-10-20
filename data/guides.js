@@ -15,11 +15,11 @@ import { mediaUrl } from '../lib/mediaUrl';
 const rawGuides = [
   {
     id: 'corner-door-installation',
-    title: 'Corner Door',
+    title: 'How to Install a Corner Door on Sports Netting Enclosures',
     category: 'Installation',
     image: '/images/guides/corner-door/gallery/corner-door-gallery-cover.webp',
     imageAlt: 'Corner Door cover - steel corner entrance door with sports netting | Cereburum Sports',
-    desc: 'A heavy-duty entrance door for sports netting enclosures — built from tubular steel, hinged at the corner post, and netted so the cage stays continuous while people can still walk in and out.',
+    desc: 'Step-by-step guide to fabricating and installing a heavy-duty corner entrance door for cricket cages and sports netting enclosures — tubular steel frame, hinges, protective coating, and arena netting so the cage stays continuous while people can walk in and out.',
     images: [
       {
         url: '/images/guides/corner-door/gallery/corner-door-gallery-cover.webp',
@@ -204,4 +204,8 @@ export function getVisibleGuideSections(guide) {
   return sections;
 }
 
-export const guideCategories = ['All', 'Installation', 'Structure', 'Scaffolding', 'Door'];
+/** Categories derived from published guides only (no empty filters). */
+export const guideCategories = [
+  'All',
+  ...[...new Set(guides.map((guide) => guide.category).filter(Boolean))],
+];

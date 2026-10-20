@@ -1,14 +1,164 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { absoluteUrl } from '@/lib/siteUrl';
+import { getLocalBusinessSchema } from '@/lib/localBusiness';
 import styles from './page.module.css';
 
 const WHATSAPP_NUMBER = '923187768296';
 const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=Hello%2C%20I%27m%20interested%20in%20your%20sports%20products.`;
+const siteUrl = absoluteUrl();
 
 export const metadata = {
-  title: 'Cereburum Sports — Premium Sports Barrier Netting & Equipment',
+  title: {
+    absolute: 'Cricket Net Installation & Sports Nets in Pakistan | Cereburum Sports',
+  },
   description:
-    'Net maker and manufacturer: premium sports barrier nettings, cricket nets, football netting, and custom net solutions with professional installation across Pakistan.',
+    'Professional cricket net installation across Pakistan for grounds, academies and rooftops. Explore cricket nets, football nets and custom sports netting solutions.',
+  alternates: {
+    canonical: '/',
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'en_PK',
+    url: siteUrl,
+    siteName: 'Cereburum Sports',
+    title: 'Cricket Net Installation & Sports Nets in Pakistan | Cereburum Sports',
+    description:
+      'Turnkey cricket net installation services across Pakistan. Alongside professional installation, we supply all types of sports nets including cricket, football, court & barrier nets.',
+    images: [
+      {
+        url: '/images/home/1.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Sports barrier netting and football net installation in Pakistan - Cereburum Sports',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Cricket Net Installation & Sports Nets in Pakistan | Cereburum Sports',
+    description:
+      'Turnkey cricket net installation services across Pakistan. We also supply cricket nets, football netting, court nets & sports barrier nets.',
+    images: ['/images/home/1.jpg'],
+  },
+};
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'WebSite',
+      '@id': `${siteUrl}/#website`,
+      url: siteUrl,
+      name: 'Cereburum Sports',
+      description: 'Cricket Net Installation & Sports Nets Supply Across Pakistan',
+      inLanguage: 'en-PK',
+      publisher: {
+        '@id': `${siteUrl}/#organization`,
+      },
+    },
+    getLocalBusinessSchema({
+      hasOfferCatalog: {
+        '@type': 'OfferCatalog',
+        name: 'Sports Net Installation Services & Sports Nets Supply',
+        itemListElement: [
+          {
+            '@type': 'Offer',
+            url: absoluteUrl('/works'),
+            itemOffered: {
+              '@type': 'Service',
+              name: 'Cricket Net Installation Services',
+              url: absoluteUrl('/works'),
+              description:
+                'Turnkey cricket net installation services across Pakistan for grounds, academies, rooftop practice setups, and sports facilities.',
+              areaServed: {
+                '@type': 'Country',
+                name: 'Pakistan',
+              },
+            },
+          },
+          {
+            '@type': 'Offer',
+            url: absoluteUrl('/products?filter=Cricket'),
+            itemOffered: {
+              '@type': 'Service',
+              name: 'Cricket Ground Netting & Rooftop Cricket Nets Installation',
+              url: absoluteUrl('/products?filter=Cricket'),
+              description:
+                'Professional installation of high-tensile cricket ground netting and engineered rooftop cricket nets for residential and commercial facilities.',
+              areaServed: {
+                '@type': 'Country',
+                name: 'Pakistan',
+              },
+            },
+          },
+          {
+            '@type': 'Offer',
+            url: absoluteUrl('/products/cricket-net-24'),
+            itemOffered: {
+              '@type': 'Service',
+              name: 'Cricket Practice Nets & Academy Nets Setup',
+              url: absoluteUrl('/products/cricket-net-24'),
+              description:
+                'Heavy-duty cricket practice net cages and multi-lane cricket academy nets installation engineered for hardball cricket.',
+              areaServed: {
+                '@type': 'Country',
+                name: 'Pakistan',
+              },
+            },
+          },
+          {
+            '@type': 'Offer',
+            url: absoluteUrl('/products/custom'),
+            itemOffered: {
+              '@type': 'Service',
+              name: 'Sports Barrier Netting & Custom Installation Solutions',
+              url: absoluteUrl('/products/custom'),
+              description:
+                'Professional sports net installation for high-durability barrier netting and safety nets protecting spectators and facilities.',
+              areaServed: {
+                '@type': 'Country',
+                name: 'Pakistan',
+              },
+            },
+          },
+          {
+            '@type': 'Offer',
+            url: absoluteUrl('/products?filter=Cricket'),
+            itemOffered: {
+              '@type': 'Product',
+              name: 'Cricket Nets (Practice, Pitch & Boundary Nets)',
+              url: absoluteUrl('/products?filter=Cricket'),
+              description:
+                'High-density UV-treated cricket nets, joint-free parachute netting, and practice nets available in custom dimensions.',
+            },
+          },
+          {
+            '@type': 'Offer',
+            url: absoluteUrl('/products?filter=Football'),
+            itemOffered: {
+              '@type': 'Product',
+              name: 'Football Netting & Goal Nets',
+              url: absoluteUrl('/products?filter=Football'),
+              description:
+                'All-weather football goal nets, futsal nets, and pitch boundary netting manufactured for durability.',
+            },
+          },
+          {
+            '@type': 'Offer',
+            url: absoluteUrl('/products?filter=Badminton'),
+            itemOffered: {
+              '@type': 'Product',
+              name: 'Sports Safety Nets & Court Netting',
+              url: absoluteUrl('/products?filter=Badminton'),
+              description:
+                'Heavy-duty sports safety barrier netting, badminton nets, and multi-sport court netting solutions for diverse sports facilities.',
+            },
+          },
+        ],
+      },
+    }),
+  ],
 };
 
 const stats = [
@@ -21,48 +171,84 @@ const stats = [
 const products = [
   {
     id: 'cricket-netting',
-    icon: '🏏',
-    title: 'Cricket Netting',
-    desc: 'Professional-grade cricket nets for academies, clubs, and outdoor grounds. Custom sizing available.',
-    tag: 'Best Seller',
+    icon: '/images/icons/cricket-net.png',
+    title: 'Cricket Ground & Academy Net Installation',
+    desc: 'Turnkey cricket net installation services for cricket grounds, practice cages, and academy enclosures across Pakistan, built for hardball and softball cricket.',
     filter: 'Cricket',
+    ctaText: 'Explore Cricket Nets',
+  },
+  {
+    id: 'football-netting',
+    icon: '/images/icons/football-net.png',
+    title: 'Football Netting & Goal Nets',
+    desc: 'Weatherproof football netting, goal nets, and pitch perimeter barrier nets. Tailored mesh sizes and professional installation for football grounds.',
+    filter: 'Football',
+    ctaText: 'View Football Nets',
+  },
+  {
+    id: 'rooftop-safety',
+    icon: '/images/icons/practice-cage.png',
+    title: 'Rooftop Cricket Nets & Practice Cages',
+    desc: 'Specialized rooftop cricket net installation custom-engineered for residential terraces, clubs, and training facilities with durable safety barrier netting.',
+    filter: 'Custom',
+    ctaText: 'Explore Rooftop & Safety Nets',
   },
   {
     id: 'badminton-nets',
-    icon: '🏸',
-    title: 'Badminton Nets',
-    desc: 'Tournament-grade badminton nets for indoor courts and clubs. Regulation mesh, steel wire options, and custom colors available.',
-    tag: null,
+    icon: '/images/icons/badminton.png',
+    title: 'Badminton, Court & Multi-Sport Nets',
+    desc: 'Regulation badminton nets, tennis/volleyball court netting, and multi-sport barrier solutions supplied and installed for indoor and outdoor complexes.',
     filter: 'Badminton',
-  },
-  {
-    id: 'football-nets',
-    icon: '⚽',
-    title: 'Football Goal Nets',
-    desc: 'Premium goal nets and boundary netting for football pitches of all sizes. Weatherproof materials.',
-    tag: null,
-    filter: 'Football',
-  },
-  {
-    id: 'custom',
-    icon: '🔧',
-    title: 'Custom Netting Solutions',
-    desc: 'Bespoke netting solutions designed to your exact specifications — size, material, color, and installation.',
-    tag: 'Tailored',
-    filter: 'Custom',
+    ctaText: 'View Court Nets',
   },
 ];
 
 const trusts = [
-  { icon: '✅', title: 'Premium Materials', desc: 'UV-resistant, weatherproof nets built to last for years in all conditions.' },
-  { icon: '📏', title: 'Precision Sizing', desc: 'Every net is made to the size you specify — and we often deliver larger or with extra coverage than quoted, never short of what you need.' },
-  { icon: '⚡', title: 'Fast Installation', desc: 'Professional installation teams with minimal disruption to your facility.' },
-  { icon: '📞', title: 'Direct Support', desc: 'Chat with us on WhatsApp anytime — no middlemen, just fast answers.' },
+  {
+    icon: '/images/icons/installation-services.png',
+    title: 'Cricket Net Installation Specialists',
+    desc: 'Dedicated installation teams delivering precision setup for cricket grounds, rooftop practice cages, and cricket academies across Pakistan.',
+  },
+  {
+    icon: '/images/icons/safety-net.png',
+    title: 'Football, Court & Safety Barrier Nets',
+    desc: 'Alongside cricket setups, we supply and install football goal nets, badminton court netting, futsal goals, and custom facility barrier nets.',
+  },
+  {
+    icon: '/images/icons/custom-size.png',
+    title: 'Custom Sizing & Bespoke Solutions',
+    desc: 'Precision net manufacturing tailored to your exact pitch, court, or rooftop dimensions with generous coverage that never falls short.',
+  },
+  {
+    icon: '/images/icons/direct-support.png',
+    title: 'Direct Manufacturer Support',
+    desc: 'Connect directly with our netting specialists on WhatsApp for sizing advice, quotes on cricket net installation or sports net supply, and nationwide delivery.',
+  },
+];
+
+const portfolioShowcase = [
+  {
+    id: 1,
+    alt: 'Sports barrier netting and football pitch goal net installation | Cereburum Sports',
+  },
+  {
+    id: 2,
+    alt: 'Outdoor cricket practice net cages and academy pitch netting | Cereburum Sports',
+  },
+  {
+    id: 3,
+    alt: 'Close-up of a football striking high-tensile sports barrier netting | Cereburum Sports',
+  },
 ];
 
 export default function HomePage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
       {/* ── HERO ─────────────────────────────────────────────── */}
       <section className={styles.hero} aria-label="Hero">
         <div className={styles.heroBg} aria-hidden="true">
@@ -74,14 +260,13 @@ export default function HomePage() {
 
         <div className={`container ${styles.heroContent}`}>
           <div className={`animate-fade-in-up ${styles.heroText}`}>
-            <span className="section-label">Pakistan&apos;s Sports Specialists</span>
+            <span className="section-label">Cricket Net Installation &amp; Sports Nets</span>
             <h1 className={`display-xl ${styles.heroHeading}`}>
-              Barrier Netting<br />
-              <span className={styles.heroAccent}>Built for Champions</span>
+              Cricket Net Installation<br />
+              <span className={styles.heroAccent}>Services &amp; Sports Nets in Pakistan</span>
             </h1>
             <p className={`body-lg ${styles.heroSub}`}>
-              Premium sports barrier nettings and equipment for cricket grounds, football fields,
-              and custom sports facilities. Trusted by academies across Pakistan.
+              Pakistan&apos;s trusted specialists in cricket net installation services — delivering turnkey setups for cricket grounds, rooftop cricket nets, practice cages, and academies nationwide. Alongside professional installation, we manufacture and supply all types of sports nets including football netting, court nets, and custom sports barrier netting.
             </p>
 
             <div className={styles.heroCtas}>
@@ -124,14 +309,14 @@ export default function HomePage() {
       <section className={`section-pad ${styles.productsSection}`} aria-labelledby="products-heading">
         <div className="container">
           <div className={`${styles.sectionHeader} reveal text-center`}>
-            <span className="section-label">Our Products</span>
+            <span className="section-label">Sports Netting Catalog</span>
             <h2 className={`display-lg ${styles.sectionTitle}`} id="products-heading">
-              Everything Your<br />
-              <span className="text-sand">Facility Needs</span>
+              Sports Nets for Cricket, Football<br />
+              <span className="text-sand">&amp; Custom Applications</span>
             </h2>
             <div className="divider divider-center" />
             <p className={`body-lg ${styles.sectionDesc}`}>
-              From perimeter barrier netting to custom solutions — we supply, deliver, and install with precision.
+              We specialize in turnkey cricket net installation services for cricket grounds, rooftop practice setups, academy enclosures, and training facilities across Pakistan. We also manufacture and supply durable football goal nets, court netting, and custom sports barrier nets.
             </p>
           </div>
 
@@ -143,17 +328,23 @@ export default function HomePage() {
                 style={{ animationDelay: `${i * 0.1}s` }}
                 aria-label={product.title}
               >
-                {product.tag && (
-                  <span className={styles.productTag}>{product.tag}</span>
-                )}
-                <div className={styles.productIcon} aria-hidden="true">{product.icon}</div>
+                <div className={styles.productIcon} aria-hidden="true">
+                  <Image
+                    src={product.icon}
+                    alt=""
+                    width={88}
+                    height={88}
+                    className={styles.productIconImg}
+                  />
+                </div>
                 <h3 className={`heading-md ${styles.productTitle}`}>{product.title}</h3>
                 <p className={`body-md ${styles.productDesc}`}>{product.desc}</p>
                 <Link
                   href={product.filter ? `/products?filter=${encodeURIComponent(product.filter)}` : '/products'}
                   className={`btn btn-outline btn-sm ${styles.productBtn}`}
+                  aria-label={`${product.ctaText} ${product.title}`}
                 >
-                  Learn More
+                  {product.ctaText}
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true">
                     <path d="M5 12h14M12 5l7 7-7 7" />
                   </svg>
@@ -164,7 +355,7 @@ export default function HomePage() {
 
           <div className={`${styles.productsCta} text-center`}>
             <Link href="/products" className="btn btn-primary btn-lg" id="all-products-btn">
-              View All Products
+              Explore All Available Nets
             </Link>
           </div>
         </div>
@@ -176,8 +367,8 @@ export default function HomePage() {
           <div className={`${styles.sectionHeader} reveal text-center`}>
             <span className="section-label">Why Choose Us</span>
             <h2 className={`display-lg ${styles.sectionTitle}`} id="trust-heading">
-              Quality You Can<br />
-              <span className="text-sand">Trust</span>
+              Quality Sports Netting<br />
+              <span className="text-sand">Engineered to Last</span>
             </h2>
             <div className="divider divider-center" />
           </div>
@@ -185,7 +376,15 @@ export default function HomePage() {
           <div className={styles.trustGrid}>
             {trusts.map((item, i) => (
               <div key={item.title} className={`${styles.trustCard} reveal`} style={{ animationDelay: `${i * 0.1}s` }}>
-                <div className={styles.trustIcon} aria-hidden="true">{item.icon}</div>
+                <div className={styles.trustIcon} aria-hidden="true">
+                  <Image
+                    src={item.icon}
+                    alt=""
+                    width={88}
+                    height={88}
+                    className={styles.trustIconImg}
+                  />
+                </div>
                 <h3 className={`heading-sm ${styles.trustTitle}`}>{item.title}</h3>
                 <p className={`body-sm ${styles.trustDesc}`}>{item.desc}</p>
               </div>
@@ -199,29 +398,33 @@ export default function HomePage() {
         <div className="container">
           <div className={`${styles.worksTeaserInner} reveal`}>
             <div className={styles.worksTeaserText}>
-              <span className="section-label">Portfolio</span>
+              <span className="section-label">Nationwide Portfolio</span>
               <h2 className={`display-lg ${styles.sectionTitle}`} id="works-heading">
-                Trusted by Facilities<br />
-                <span className="text-sand">Across Pakistan</span>
+                Proven Sports Netting<br />
+                <span className="text-sand">Projects Across Pakistan</span>
               </h2>
               <div className="divider" />
               <p className={`body-lg ${styles.sectionDesc}`}>
-                Explore our portfolio of completed installations — from local academies to
-                professional-grade sports grounds.
+                Explore our completed installations across Pakistan — from cricket academy nets and rooftop cricket practice setups to stadium perimeter netting and football barrier nets. We supply quality netting materials and provide complete turnkey installation.
               </p>
-              <Link href="/works" className="btn btn-primary btn-lg" id="view-works-btn">
-                View Our Work
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true">
-                  <path d="M5 12h14M12 5l7 7-7 7" />
-                </svg>
-              </Link>
+              <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+                <Link href="/works" className="btn btn-primary btn-lg" id="view-works-btn">
+                  View Installation Portfolio
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true">
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                  </svg>
+                </Link>
+                <Link href="/products" className="btn btn-outline btn-lg" id="view-all-nets-btn">
+                  Explore All Sports Nets
+                </Link>
+              </div>
             </div>
-            <div className={styles.worksTeaserCards} aria-hidden="true">
-              {[1, 2, 3].map((n) => (
-                <div key={n} className={`${styles.worksTeaserCard} ${styles[`card${n}`]}`}>
+            <div className={styles.worksTeaserCards}>
+              {portfolioShowcase.map(({ id, alt }) => (
+                <div key={id} className={`${styles.worksTeaserCard} ${styles[`card${id}`]}`}>
                   <Image
-                    src={`/images/home/${n}.jpg`}
-                    alt={`Featured sports net installation portfolio project ${n} in Pakistan | Cereburum Sports`}
+                    src={`/images/home/${id}.jpg`}
+                    alt={alt}
                     fill
                     sizes="300px"
                     className={styles.teaserImage}

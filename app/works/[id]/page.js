@@ -1,7 +1,9 @@
 import { projects } from '../../../data/projects';
 import { notFound } from 'next/navigation';
-import Link from 'next/link';
 import Image from 'next/image';
+import { absoluteUrl, absoluteMediaUrl } from '@/lib/siteUrl';
+import Breadcrumbs, { breadcrumbJsonLd } from '@/components/Breadcrumbs';
+import RelatedCards from '@/components/RelatedCards';
 import styles from './project.module.css';
 import ClientGallery from './ClientGallery';
 
@@ -9,6 +11,22 @@ export async function generateStaticParams() {
   return projects.map((project) => ({
     id: project.id,
   }));
+}
+
+function getRelatedProjects(project, limit = 3) {
+  const others = projects.filter((item) => item.id !== project.id);
+  const sameCategory = others.filter((item) => item.category === project.category);
+
+  if (sameCategory.length >= limit) {
+    return { items: sameCategory.slice(0, limit), mixed: false };
+  }
+
+  const picked = new Set(sameCategory.map((item) => item.id));
+  const rest = others.filter((item) => !picked.has(item.id));
+  return {
+    items: [...sameCategory, ...rest].slice(0, limit),
+    mixed: rest.length > 0 && sameCategory.length < limit,
+  };
 }
 
 export async function generateMetadata({ params }) {
@@ -19,9 +37,40 @@ export async function generateMetadata({ params }) {
     return { title: 'Project Not Found' };
   }
 
+  const title = project.title;
+  const socialTitle = `${project.title} | Cereburum Sports`;
+  const description = project.desc || `${project.title} sports netting project installed in ${project.location || 'Pakistan'} by Cereburum Sports.`;
+  const canonicalUrl = absoluteUrl(`/works/${project.id}`);
+  const imageUrl = absoluteMediaUrl(project.coverImage);
+
   return {
-    title: `${project.title} — Cereburum Sports Works`,
-    description: project.desc,
+    title,
+    description,
+    alternates: {
+      canonical: canonicalUrl,
+    },
+    openGraph: {
+      type: 'website',
+      locale: 'en_PK',
+      url: canonicalUrl,
+      siteName: 'Cereburum Sports',
+      title: socialTitle,
+      description,
+      images: [
+        {
+          url: imageUrl,
+          width: 1200,
+          height: 630,
+          alt: project.coverImageAlt || `${project.title} - ${project.category || 'Sports Netting'} in ${project.location || 'Pakistan'} | Cereburum Sports`,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: socialTitle,
+      description,
+      images: [imageUrl],
+    },
   };
 }
 
@@ -33,8 +82,53 @@ export default async function ProjectPage({ params }) {
     notFound();
   }
 
+  const canonicalUrl = absoluteUrl(`/works/${project.id}`);
+  const imageUrl = absoluteMediaUrl(project.coverImage);
+  const categoryHref = project.category
+    ? `/works?filter=${encodeURIComponent(project.category)}`
+    : '/works';
+  const breadcrumbItems = [
+    { name: 'Home', href: '/' },
+    { name: 'Works', href: '/works' },
+    ...(project.category
+      ? [{ name: project.category, href: categoryHref }]
+      : []),
+    { name: project.title, href: `/works/${project.id}` },
+  ];
+
+  const { items: related, mixed: relatedIsMixed } = getRelatedProjects(project);
+
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      breadcrumbJsonLd(breadcrumbItems),
+      {
+        '@type': 'CreativeWork',
+        '@id': `${canonicalUrl}#work`,
+        name: project.title,
+        description: project.desc,
+        image: imageUrl,
+        genre: project.category || 'Sports Netting Installation',
+        dateCreated: project.year ? `${project.year}-01-01` : undefined,
+        locationCreated: {
+          '@type': 'Place',
+          name: project.location || 'Pakistan',
+        },
+        creator: {
+          '@type': 'Organization',
+          name: 'Cereburum Sports',
+        },
+      },
+    ],
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
       <section className={styles.heroSection}>
         <div className={styles.heroBg} aria-hidden="true">
           {project.coverImage ? (
@@ -55,11 +149,7 @@ export default async function ProjectPage({ params }) {
         </div>
 
         <div className="container" style={{ position: 'relative', zIndex: 10 }}>
-          <div className={styles.backLinkContainer}>
-            <Link href="/works" className={styles.backLink}>
-              ← Back
-            </Link>
-          </div>
+          <Breadcrumbs items={breadcrumbItems} />
 
           <div className={styles.heroContent}>
             <div className={styles.metaRow}>
@@ -87,6 +177,23 @@ export default async function ProjectPage({ params }) {
           <ClientGallery media={project.media} projectTitle={project.title} />
         </div>
       </section>
+
+      <RelatedCards
+        label={relatedIsMixed ? 'More projects' : `More in ${project.category}`}
+        title={relatedIsMixed ? 'Related Installations' : 'Similar Projects'}
+        viewAllHref={relatedIsMixed ? '/works' : categoryHref}
+        viewAllLabel={relatedIsMixed ? 'View all works' : `View all ${project.category}`}
+        ariaLabel="Related projects"
+        items={related.map((item) => ({
+          id: item.id,
+          href: `/works/${item.id}`,
+          image: item.coverImage,
+          imageAlt: item.coverImageAlt || item.title,
+          eyebrow: item.category || item.location,
+          name: item.title,
+          cta: 'View project →',
+        }))}
+      />
     </>
   );
 }

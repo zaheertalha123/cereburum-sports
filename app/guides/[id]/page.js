@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import {
@@ -11,10 +10,14 @@ import {
   hasSectionContent,
   toGuideMedia,
 } from '@/data/guides';
+import { projects } from '@/data/projects';
 import ClientGallery from '@/app/works/[id]/ClientGallery';
 import galleryStyles from '@/app/works/[id]/project.module.css';
 import GuideSectionNav from './GuideSectionNav';
 import GuideSection from './GuideSection';
+import { absoluteUrl, absoluteMediaUrl } from '@/lib/siteUrl';
+import Breadcrumbs, { breadcrumbJsonLd } from '@/components/Breadcrumbs';
+import RelatedCards from '@/components/RelatedCards';
 import styles from './guide.module.css';
 
 export async function generateStaticParams() {
@@ -31,16 +34,49 @@ export async function generateMetadata({ params }) {
 
   const cover = getGuideCover(guide);
   const photos = toGuideMedia(getGuideGallery(guide)).filter((item) => item.type === 'image');
+  const title = guide.title;
+  const socialTitle = `${guide.title} | Cereburum Sports`;
+  const description = guide.desc || `${guide.title} - Step-by-step sports netting guide by Cereburum Sports.`;
+  const canonicalUrl = absoluteUrl(`/guides/${guide.id}`);
+  const ogImages = (photos.length ? photos : cover ? [{ url: cover, alt: getGuideCoverAlt(guide) }] : []).map(
+    (image) => ({
+      url: absoluteMediaUrl(image.url),
+      width: 1200,
+      height: 630,
+      alt: image.alt || guide.title,
+    }),
+  );
+  const imageUrl = ogImages[0]?.url || absoluteMediaUrl();
 
   return {
-    title: `${guide.title} — Cereburum Sports Guides`,
-    description: guide.desc,
+    title,
+    description,
+    alternates: {
+      canonical: canonicalUrl,
+    },
     openGraph: {
-      title: `${guide.title} — Cereburum Sports`,
-      description: guide.desc,
-      images: (photos.length ? photos : cover ? [{ url: cover, alt: getGuideCoverAlt(guide) }] : []).map(
-        (image) => ({ url: image.url, alt: image.alt || guide.title }),
-      ),
+      type: 'article',
+      locale: 'en_PK',
+      url: canonicalUrl,
+      siteName: 'Cereburum Sports',
+      title: socialTitle,
+      description,
+      images: ogImages.length
+        ? ogImages
+        : [
+            {
+              url: imageUrl,
+              width: 1200,
+              height: 630,
+              alt: getGuideCoverAlt(guide) || `${guide.title} - Cereburum Sports`,
+            },
+          ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: socialTitle,
+      description,
+      images: [imageUrl],
     },
   };
 }
@@ -54,14 +90,123 @@ export default async function GuidePage({ params }) {
   }
 
   const cover = getGuideCover(guide);
-  const coverAlt = getGuideCoverAlt(guide);
   const gallery = toGuideMedia(getGuideGallery(guide));
   const hasVideo = gallery.some((item) => item.type === 'video');
   const sections = getVisibleGuideSections(guide);
-  const backHref = `/guides?filter=${encodeURIComponent(guide.category)}`;
+  const guidesHref = guide.category
+    ? `/guides?filter=${encodeURIComponent(guide.category)}`
+    : '/guides';
+  const canonicalUrl = absoluteUrl(`/guides/${guide.id}`);
+  const coverPath = cover || guide.image;
+  const imageUrl = absoluteMediaUrl(coverPath);
+  const breadcrumbItems = [
+    { name: 'Home', href: '/' },
+    { name: 'Guides', href: '/guides' },
+    ...(guide.category ? [{ name: guide.category, href: guidesHref }] : []),
+    { name: guide.title, href: `/guides/${guide.id}` },
+  ];
+
+  const relatedGuides = guides
+    .filter((item) => item.id !== guide.id)
+    .slice(0, 3)
+    .map((item) => ({
+      id: item.id,
+      href: `/guides/${item.id}`,
+      image: getGuideCover(item),
+      imageAlt: getGuideCoverAlt(item),
+      eyebrow: item.category,
+      name: item.title,
+      cta: 'Read guide →',
+    }));
+
+  const relatedItems =
+    relatedGuides.length > 0
+      ? relatedGuides
+      : projects.slice(0, 3).map((item) => ({
+          id: item.id,
+          href: `/works/${item.id}`,
+          image: item.coverImage,
+          imageAlt: item.coverImageAlt || item.title,
+          eyebrow: item.category || 'Installation',
+          name: item.title,
+          cta: 'View project →',
+        }));
+
+  const relatedMeta =
+    relatedGuides.length > 0
+      ? {
+          label: 'Keep learning',
+          title: 'Related Guides',
+          viewAllHref: '/guides',
+          viewAllLabel: 'View all guides',
+          ariaLabel: 'Related guides',
+        }
+      : {
+          label: 'See it installed',
+          title: 'Related Projects',
+          viewAllHref: '/works',
+          viewAllLabel: 'View all works',
+          ariaLabel: 'Related projects',
+        };
+
+  const installationSteps = guide.installation?.steps;
+  const hasSteps = Array.isArray(installationSteps) && installationSteps.length > 0;
+
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      breadcrumbJsonLd(breadcrumbItems),
+      hasSteps
+        ? {
+          '@type': 'HowTo',
+          '@id': `${canonicalUrl}#howto`,
+          name: guide.title,
+          description: guide.desc,
+          image: imageUrl,
+          step: installationSteps.map((step, index) => ({
+            '@type': 'HowToStep',
+            position: index + 1,
+            name: typeof step === 'string' ? `Step ${index + 1}` : (step.title || `Step ${index + 1}`),
+            text: typeof step === 'string' ? step : (step.text || step.description || step.title || ''),
+          })),
+          publisher: {
+            '@type': 'Organization',
+            name: 'Cereburum Sports',
+            logo: {
+              '@type': 'ImageObject',
+              url: absoluteUrl('/logo.png'),
+            },
+          },
+        }
+        : {
+          '@type': 'Article',
+          '@id': `${canonicalUrl}#article`,
+          headline: guide.title,
+          description: guide.desc,
+          image: imageUrl,
+          author: {
+            '@type': 'Organization',
+            name: 'Cereburum Sports',
+          },
+          publisher: {
+            '@type': 'Organization',
+            name: 'Cereburum Sports',
+            logo: {
+              '@type': 'ImageObject',
+              url: absoluteUrl('/logo.png'),
+            },
+          },
+        },
+    ],
+  };
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
       <section id="guide-overview" className={`${styles.heroSection} ${styles.anchorSection}`}>
         {cover ? (
           <div className={styles.heroBg} aria-hidden="true">
@@ -76,11 +221,7 @@ export default async function GuidePage({ params }) {
         )}
 
         <div className="container" style={{ position: 'relative', zIndex: 10 }}>
-          <div className={styles.backLinkContainer}>
-            <Link href={backHref} className={styles.backLink}>
-              ← Back to Guides
-            </Link>
-          </div>
+          <Breadcrumbs items={breadcrumbItems} />
 
           <div className={styles.heroContent}>
             {guide.category ? <span className={styles.categoryBadge}>{guide.category}</span> : null}
@@ -171,6 +312,15 @@ export default async function GuidePage({ params }) {
           tone="alt"
         />
       ) : null}
+
+      <RelatedCards
+        label={relatedMeta.label}
+        title={relatedMeta.title}
+        viewAllHref={relatedMeta.viewAllHref}
+        viewAllLabel={relatedMeta.viewAllLabel}
+        ariaLabel={relatedMeta.ariaLabel}
+        items={relatedItems}
+      />
     </>
   );
 }

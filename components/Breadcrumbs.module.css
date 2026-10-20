@@ -1,0 +1,36 @@
+.crumb {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem 0.55rem;
+  margin-bottom: 1.25rem;
+  font-size: 0.85rem;
+  color: var(--gray-400);
+}
+
+.crumbItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.sep {
+  color: var(--gray-500);
+  user-select: none;
+}
+
+.crumb a {
+  color: var(--sand);
+  font-weight: 600;
+  transition: color var(--transition-base);
+}
+
+.crumb a:hover {
+  color: var(--sand-light);
+}
+
+.crumb [aria-current='page'] {
+  color: var(--white);
+}

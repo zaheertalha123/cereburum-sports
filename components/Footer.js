@@ -11,8 +11,18 @@ const navLinks = [
   { href: '/', label: 'Home' },
   { href: '/products', label: 'Products' },
   { href: '/works', label: 'Our Works' },
+  { href: '/guides', label: 'Guides' },
   { href: '/about', label: 'About Us' },
   { href: '/contact', label: 'Contact' },
+];
+
+const productLinks = [
+  { href: '/products/custom', label: 'Sports Barrier Netting' },
+  { href: '/products?filter=Cricket', label: 'Cricket Nets' },
+  { href: '/products?filter=Football', label: 'Football Nets' },
+  { href: '/products?filter=Badminton', label: 'Court Nets' },
+  { href: '/products?filter=Futsal', label: 'Futsal Nets' },
+  { href: '/products/custom', label: 'Custom Solutions' },
 ];
 
 export default function Footer() {
@@ -148,9 +158,9 @@ export default function Footer() {
           <div className={styles.navCol}>
             <h3 className={`label ${styles.colLabel}`}>Products</h3>
             <ul className={styles.linkList} role="list">
-              {['Sports Barrier Netting', 'Cricket Nets', 'Football Nets', 'Tennis Court Nets', 'Multi-Sport Netting', 'Custom Solutions'].map((item) => (
-                <li key={item}>
-                  <Link href="/products" className={styles.footerLink}>{item}</Link>
+              {productLinks.map(({ href, label }) => (
+                <li key={label}>
+                  <Link href={href} className={styles.footerLink}>{label}</Link>
                 </li>
               ))}
             </ul>

@@ -4,6 +4,8 @@ import { notFound } from 'next/navigation';
 import { products, getProductById } from '@/data/products';
 import ProductImageGallery from './ProductImageGallery';
 import { productInquiryMessage, whatsAppUrl } from '@/lib/whatsapp';
+import { absoluteUrl, absoluteMediaUrl } from '@/lib/siteUrl';
+import { breadcrumbJsonLd } from '@/components/Breadcrumbs';
 import styles from './product-detail.module.css';
 
 export async function generateStaticParams() {
@@ -18,15 +20,44 @@ export async function generateMetadata({ params }) {
     return { title: 'Product Not Found' };
   }
 
+  const title = product.title;
+  const socialTitle = `${product.title} | Cereburum Sports`;
+  const description = product.desc || `${product.title} supplied and installed across Pakistan by Cereburum Sports.`;
+  const canonicalUrl = absoluteUrl(`/products/${product.id}`);
+  const imageUrl = absoluteMediaUrl(product.image);
+
+  const galleryUrls = product.images?.length
+    ? product.images
+    : product.image
+      ? [product.image]
+      : [];
+  const ogImages = (galleryUrls.length ? galleryUrls : [imageUrl]).map((url) => ({
+    url: absoluteMediaUrl(url),
+    width: 1200,
+    height: 630,
+    alt: product.imageAlt || `${product.title} - Cereburum Sports`,
+  }));
+
   return {
-    title: `${product.title} — ${product.subtitle}`,
-    description: product.desc,
+    title,
+    description,
+    alternates: {
+      canonical: canonicalUrl,
+    },
     openGraph: {
-      title: `${product.title} — Cereburum Sports`,
-      description: product.desc,
-      images: (product.images?.length ? product.images : product.image ? [product.image] : []).map(
-        (url) => ({ url, alt: product.imageAlt || product.title }),
-      ),
+      type: 'website',
+      locale: 'en_PK',
+      url: canonicalUrl,
+      siteName: 'Cereburum Sports',
+      title: socialTitle,
+      description,
+      images: ogImages,
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: socialTitle,
+      description,
+      images: [ogImages[0]?.url || imageUrl],
     },
   };
 }
@@ -56,7 +87,6 @@ export default async function ProductDetailPage({ params }) {
   }
 
   const { items: related, mixed: relatedIsMixed } = getRelatedProducts(product);
-
   const whatsappUrl = whatsAppUrl(productInquiryMessage(product));
   const galleryImages = product.images?.length ? product.images : product.image ? [product.image] : [];
   const imageAlt =
@@ -67,8 +97,44 @@ export default async function ProductDetailPage({ params }) {
       ? `/products?filter=${encodeURIComponent(product.filterGroup)}`
       : '/products';
 
+  const productCanonicalUrl = absoluteUrl(`/products/${product.id}`);
+  const productImageFullUrl = absoluteMediaUrl(product.image);
+  const breadcrumbItems = [
+    { name: 'Home', href: '/' },
+    { name: 'Products', href: '/products' },
+    {
+      name: product.filterGroup || 'Sports Nets',
+      href: productsFilterHref,
+    },
+    { name: product.title, href: `/products/${product.id}` },
+  ];
+
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      breadcrumbJsonLd(breadcrumbItems),
+      {
+        '@type': 'Product',
+        '@id': `${productCanonicalUrl}#product`,
+        url: productCanonicalUrl,
+        name: product.title,
+        description: product.desc,
+        image: productImageFullUrl,
+        brand: {
+          '@type': 'Brand',
+          name: 'Cereburum Sports',
+        },
+      },
+    ],
+  };
+
   return (
     <div className={styles.page}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
       <section className={styles.hero} aria-label={`${product.title} product details`}>
         <div className={styles.heroBg} aria-hidden="true">
           <div className={styles.heroGrad} />

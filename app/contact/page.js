@@ -3,16 +3,51 @@ import styles from './contact.module.css';
 import FAQAccordion from '@/components/FAQAccordion';
 import ContactForm from '@/components/ContactForm';
 import { SOCIAL } from '@/data/social';
+import { absoluteUrl } from '@/lib/siteUrl';
+import { getLocalBusinessSchema } from '@/lib/localBusiness';
+import Breadcrumbs, { breadcrumbJsonLd } from '@/components/Breadcrumbs';
 
 const WHATSAPP_NUMBER = '923187768296';
 const PHONE_DISPLAY = '+92 318 7768296';
 const PHONE_TEL = `+${WHATSAPP_NUMBER}`;
 const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=Hello%2C%20I%27m%20interested%20in%20your%20sports%20products.%20Please%20share%20more%20details.`;
+const contactUrl = absoluteUrl('/contact');
+const breadcrumbItems = [
+  { name: 'Home', href: '/' },
+  { name: 'Contact', href: '/contact' },
+];
 
 export const metadata = {
-  title: 'Contact — WhatsApp & Email',
+  title: 'Contact Us — Sports Net Quotes & Inquiries',
   description:
-    'Contact Cereburum Sports via WhatsApp or our email form for product enquiries, project consultations, and quotes.',
+    'Get in touch with Cereburum Sports via WhatsApp, phone, or email. Request custom quotes for cricket ground netting, rooftop cricket practice cages, and sports barrier nets.',
+  alternates: {
+    canonical: contactUrl,
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'en_PK',
+    url: contactUrl,
+    siteName: 'Cereburum Sports',
+    title: 'Contact Us — Sports Net Quotes & Inquiries | Cereburum Sports',
+    description:
+      'Get in touch with Cereburum Sports via WhatsApp, phone, or email. Request custom quotes for cricket ground netting, rooftop cricket practice cages, and sports barrier nets.',
+    images: [
+      {
+        url: '/images/home/1.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Contact Cereburum Sports for Sports Netting Quotes and Installation in Pakistan',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Contact Us — Sports Net Quotes & Inquiries | Cereburum Sports',
+    description:
+      'Get in touch with Cereburum Sports via WhatsApp, phone, or email. Request custom quotes for cricket ground netting, rooftop cricket practice cages, and sports barrier nets.',
+    images: ['/images/home/1.jpg'],
+  },
 };
 
 const faqs = [
@@ -46,9 +81,41 @@ const faqs = [
   },
 ];
 
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    breadcrumbJsonLd(breadcrumbItems),
+    {
+      '@type': 'ContactPage',
+      '@id': `${contactUrl}/#webpage`,
+      url: contactUrl,
+      name: 'Contact Cereburum Sports',
+      description: 'Contact Cereburum Sports for custom quotes on cricket net installation and sports barrier netting across Pakistan.',
+      mainEntity: getLocalBusinessSchema(),
+    },
+    {
+      '@type': 'FAQPage',
+      '@id': `${contactUrl}/#faq`,
+      mainEntity: faqs.map((faq) => ({
+        '@type': 'Question',
+        name: faq.q,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: faq.a,
+        },
+      })),
+    },
+  ],
+};
+
 export default function ContactPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
       {/* Hero */}
       <section className={styles.hero} aria-label="Contact page hero">
         <div className={styles.heroBg} aria-hidden="true">
@@ -56,6 +123,7 @@ export default function ContactPage() {
           <div className={styles.heroGrid} />
         </div>
         <div className={`container ${styles.heroContent}`}>
+          <Breadcrumbs items={breadcrumbItems} />
           <span className="section-label animate-fade-in">Get in Touch</span>
           <h1 className={`display-lg ${styles.heroTitle} animate-fade-in-up`}>
             Let&apos;s Talk<br />
@@ -192,7 +260,7 @@ export default function ContactPage() {
                   <div className={styles.infoItemIcon} aria-hidden="true">📍</div>
                   <div>
                     <p className={`label ${styles.infoItemLabel}`}>Location</p>
-                    <p className={`body-md ${styles.infoItemValue}`}>GHFX+2P3, Nawan Pind, Sialkot, Pakistan</p>
+                    <p className={`body-md ${styles.infoItemValue}`}>GFHX+2P3, Nawan Pind, Sialkot, Pakistan</p>
 
                     <div className={styles.mapWrapper}>
                       <iframe

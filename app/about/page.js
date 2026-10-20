@@ -1,19 +1,86 @@
+import Image from 'next/image';
+import { absoluteUrl } from '@/lib/siteUrl';
+import { getLocalBusinessSchema } from '@/lib/localBusiness';
+import Breadcrumbs, { breadcrumbJsonLd } from '@/components/Breadcrumbs';
 import styles from './about.module.css';
 
 const WHATSAPP_NUMBER = '923187768296';
 const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=Hello%2C%20I%27d%20like%20to%20learn%20more%20about%20Cereburum%20Sports.`;
+const aboutUrl = absoluteUrl('/about');
+const breadcrumbItems = [
+  { name: 'Home', href: '/' },
+  { name: 'About', href: '/about' },
+];
 
 export const metadata = {
-  title: 'About Us — Our Story & Mission',
+  title: 'About Us — Sports Net Manufacturer & Installer',
   description:
-    'Learn about Cereburum Sports — our story, mission, values, and expertise in sports barrier netting and sports equipment across Pakistan.',
+    'Learn about Cereburum Sports — Pakistan’s trusted sports netting manufacturer and specialist installer for cricket grounds, rooftop practice nets, football pitches, and multi-sport facilities.',
+  alternates: {
+    canonical: aboutUrl,
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'en_PK',
+    url: aboutUrl,
+    siteName: 'Cereburum Sports',
+    title: 'About Us — Sports Net Manufacturer & Installer | Cereburum Sports',
+    description:
+      'Learn about Cereburum Sports — Pakistan’s trusted sports netting manufacturer and specialist installer for cricket grounds, rooftop practice nets, football pitches, and multi-sport facilities.',
+    images: [
+      {
+        url: '/images/home/1.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'About Cereburum Sports - Sports Netting Manufacturer and Facility Installer in Pakistan',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'About Us — Sports Net Manufacturer & Installer | Cereburum Sports',
+    description:
+      'Learn about Cereburum Sports — Pakistan’s trusted sports netting manufacturer and specialist installer for cricket grounds, rooftop practice nets, football pitches, and multi-sport facilities.',
+    images: ['/images/home/1.jpg'],
+  },
+};
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    breadcrumbJsonLd(breadcrumbItems),
+    {
+      '@type': 'AboutPage',
+      '@id': `${aboutUrl}/#webpage`,
+      url: aboutUrl,
+      name: 'About Cereburum Sports',
+      description: 'Pakistan’s trusted specialist for cricket net installation, rooftop cricket practice cages, and sports barrier netting.',
+      mainEntity: getLocalBusinessSchema(),
+    },
+  ],
 };
 
 const values = [
-  { icon: '🎯', title: 'Precision', desc: 'Every installation is measured, planned, and executed with engineering-grade accuracy.' },
-  { icon: '💪', title: 'Durability', desc: 'We refuse to compromise on materials — only UV-resistant, weatherproof, long-life products.' },
-  { icon: '🤝', title: 'Partnership', desc: 'We work alongside clients from consultation to completion and beyond.' },
-  { icon: '📐', title: 'Expertise', desc: 'Backed by a decade of experience in sports facility netting across Pakistan.' },
+  {
+    icon: '/images/icons/precision.png',
+    title: 'Precision',
+    desc: 'Every installation is measured, planned, and executed with engineering-grade accuracy.',
+  },
+  {
+    icon: '/images/icons/durability.png',
+    title: 'Durability',
+    desc: 'We refuse to compromise on materials — only UV-resistant, weatherproof, long-life products.',
+  },
+  {
+    icon: '/images/icons/partnership.png',
+    title: 'Partnership',
+    desc: 'We work alongside clients from consultation to completion and beyond.',
+  },
+  {
+    icon: '/images/icons/expertise.png',
+    title: 'Expertise',
+    desc: 'Backed by years of experience in sports facility netting across Pakistan.',
+  },
 ];
 
 const timeline = [
@@ -47,6 +114,11 @@ const timeline = [
 export default function AboutPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
       {/* Hero */}
       <section className={styles.hero} aria-label="About us hero">
         <div className={styles.heroBg} aria-hidden="true">
@@ -54,34 +126,37 @@ export default function AboutPage() {
           <div className={styles.heroGrid} />
           <div className={styles.heroOrb} />
         </div>
-        <div className={`container ${styles.heroContent}`}>
-          <div className={`animate-fade-in-up ${styles.heroText}`}>
-            <span className="section-label">Our Story</span>
-            <h1 className={`display-lg ${styles.heroTitle} animate-fade-in-up`}>
-              Built on Quality.<br />
-              <span className="text-sand">Driven by Sport.</span>
-            </h1>
-            <div className="divider" />
-            <p className={`body-lg ${styles.heroDesc} animate-fade-in`}>
-              Cereburum Sports was born from a simple belief: Pakistan&apos;s sports facilities
-              deserve world-class netting and equipment, installed with professionalism and care.
-              Over a decade later, that mission still drives every project we take on.
-            </p>
-          </div>
+        <div className={`container ${styles.heroWrap}`}>
+          <Breadcrumbs items={breadcrumbItems} className={styles.heroBreadcrumbs} />
+          <div className={styles.heroContent}>
+            <div className={`animate-fade-in-up ${styles.heroText}`}>
+              <span className="section-label">Our Story</span>
+              <h1 className={`display-lg ${styles.heroTitle} animate-fade-in-up`}>
+                Built on Quality.<br />
+                <span className="text-sand">Driven by Sport.</span>
+              </h1>
+              <div className="divider" />
+              <p className={`body-lg ${styles.heroDesc} animate-fade-in`}>
+                Cereburum Sports was born from a simple belief: Pakistan&apos;s sports facilities
+                deserve world-class netting and equipment, installed with professionalism and care.
+                Our mission drives every project we take on across Pakistan.
+              </p>
+            </div>
 
-          {/* Stats block */}
-          <div className={`${styles.heroStats} animate-fade-in`} style={{ animationDelay: '0.2s' }}>
-            {[
-              { v: '8+', l: 'Years Active' },
-              { v: '100+', l: 'Projects Done' },
-              { v: '7+', l: 'Sports Covered' },
-              { v: '100%', l: 'Client Focused' },
-            ].map(({ v, l }) => (
-              <div key={l} className={styles.heroStat}>
-                <span className={`display-md ${styles.heroStatNum}`}>{v}</span>
-                <span className={`body-sm ${styles.heroStatLbl}`}>{l}</span>
-              </div>
-            ))}
+            {/* Stats block */}
+            <div className={`${styles.heroStats} animate-fade-in`} style={{ animationDelay: '0.2s' }}>
+              {[
+                { v: '8+', l: 'Years Active' },
+                { v: '100+', l: 'Projects Done' },
+                { v: '7+', l: 'Sports Covered' },
+                { v: '100%', l: 'Client Focused' },
+              ].map(({ v, l }) => (
+                <div key={l} className={styles.heroStat}>
+                  <span className={`display-md ${styles.heroStatNum}`}>{v}</span>
+                  <span className={`body-sm ${styles.heroStatLbl}`}>{l}</span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -99,7 +174,15 @@ export default function AboutPage() {
           <div className={styles.valuesGrid}>
             {values.map((v, i) => (
               <div key={v.title} className={`${styles.valueCard} reveal`} style={{ transitionDelay: `${i * 0.1}s` }}>
-                <div className={styles.valueIcon} aria-hidden="true">{v.icon}</div>
+                <div className={styles.valueIcon} aria-hidden="true">
+                  <Image
+                    src={v.icon}
+                    alt=""
+                    width={88}
+                    height={88}
+                    className={styles.valueIconImg}
+                  />
+                </div>
                 <h3 className={`heading-md ${styles.valueTitle}`}>{v.title}</h3>
                 <p className={`body-md ${styles.valueDesc}`}>{v.desc}</p>
               </div>
@@ -114,7 +197,7 @@ export default function AboutPage() {
           <div className={`${styles.sectionHeader} reveal text-center`}>
             <span className="section-label">Our Journey</span>
             <h2 className={`display-lg ${styles.sectionTitle}`} id="timeline-heading">
-              A Decade of <span className="text-sand">Excellence</span>
+              Years of <span className="text-sand">Excellence</span>
             </h2>
             <div className="divider divider-center" />
           </div>
