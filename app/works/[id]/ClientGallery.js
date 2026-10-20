@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import styles from './project.module.css';
 
-export default function ClientGallery({ media, projectTitle, compact = false, unoptimized = false }) {
+export default function ClientGallery({ media, projectTitle, compact = false, pair = false, unoptimized = false }) {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [touchStart, setTouchStart] = useState(null);
@@ -78,11 +78,15 @@ export default function ClientGallery({ media, projectTitle, compact = false, un
 
   return (
     <>
-      <div className={compact ? styles.compactGrid : styles.galleryGrid}>
+      <div
+        className={
+          pair ? styles.pairGrid : compact ? styles.compactGrid : styles.galleryGrid
+        }
+      >
         {media.map((item, idx) => (
           <div 
             key={idx} 
-            className={styles.mediaWrapper}
+            className={`${styles.mediaWrapper} ${pair ? styles.mediaWrapperPair : ''}`}
             onClick={() => openLightbox(idx)}
             role="button"
             tabIndex={0}
@@ -90,16 +94,27 @@ export default function ClientGallery({ media, projectTitle, compact = false, un
             aria-label={`View full screen media ${idx + 1}`}
           >
             {item.type === 'image' ? (
-              <Image
-                src={item.url}
-                alt={item.alt || `${projectTitle || 'Sports net'} installation photo ${idx + 1} - boundary safety netting by Cereburum Sports`}
-                width={800}
-                height={800}
-                className={styles.mediaItem}
-                style={{ width: '100%', height: 'auto', display: 'block' }}
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                unoptimized={unoptimized}
-              />
+              pair ? (
+                <Image
+                  src={item.url}
+                  alt={item.alt || `${projectTitle || 'Sports net'} installation photo ${idx + 1} - boundary safety netting by Cereburum Sports`}
+                  fill
+                  className={styles.mediaItemCover}
+                  sizes="(max-width: 768px) 45vw, 220px"
+                  unoptimized={unoptimized}
+                />
+              ) : (
+                <Image
+                  src={item.url}
+                  alt={item.alt || `${projectTitle || 'Sports net'} installation photo ${idx + 1} - boundary safety netting by Cereburum Sports`}
+                  width={800}
+                  height={800}
+                  className={styles.mediaItem}
+                  style={{ width: '100%', height: 'auto', display: 'block' }}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  unoptimized={unoptimized}
+                />
+              )
             ) : item.type === 'video' ? (
               <div style={{ position: 'relative' }}>
                 <video

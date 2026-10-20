@@ -52,26 +52,26 @@ const rawGuides = [
     ],
     features: {
       items: [
-        'Tubular steel frame aligned with the corner netting structure',
-        'Hinged door leaf with a central horizontal support brace',
-        'Integrated arena netting laced around the frame so the enclosure stays closed',
-        'Weather-resistant finish on all welded joints and piping',
+        'Steel Frame',
+        'Hinged Door',
+        'Integrated Netting',
+        'Weather Resistant',
       ],
     },
     applications: {
       items: [
-        'Cricket cages and practice nets',
-        'Indoor and outdoor sports arenas',
-        'Training facilities and school grounds',
-        'Rooftop and boundary net enclosures',
+        'Cricket Practice Nets',
+        'Sports Arenas',
+        'Training Facilities',
+        'Rooftop Net Enclosures',
       ],
     },
     materials: {
       items: [
-        'Hollow round steel pipes for the outer post and door leaf',
-        'Heavy-duty barrel or pin hinges',
-        'Rust-inhibiting primer and weather-resistant protective coat',
-        'Durable arena netting with high-tensile twine or zip ties',
+        'Hollow Steel Pipes',
+        'Heavy-Duty Hinges',
+        'Weather-Resistant Coating',
+        'High-Tensile Netting',
       ],
       images: [
         {
@@ -86,19 +86,19 @@ const rawGuides = [
     },
     installation: {
       steps: [
-        'Measure the corner span and fabricate an outer support post frame aligned with the corner netting structure.',
-        'Cut hollow round steel pipes to size and weld a rectangular door leaf frame with a central horizontal support brace.',
-        'Weld heavy-duty barrel or pin hinges between the outer corner post and the door leaf, ensuring smooth swing clearance.',
-        'Apply rust-inhibiting primer and a weather-resistant black protective coat across all welded joints and steel piping.',
-        'Lace durable white arena netting tightly around the door frame borders and mid-brace using high-tensile twine or heavy-duty zip ties.',
+        'Measure the corner area where the door will be installed. Prepare a strong steel support frame that fits properly with the existing netting structure.',
+        'Cut the hollow steel pipes according to the required door size. Weld the pipes together to make a rectangular door frame and add a horizontal pipe in the middle for extra strength.',
+        'Attach heavy-duty hinges to the corner support post and the door frame using welding. Check that the door opens and closes smoothly without touching the surrounding structure.',
+        'Clean the steel frame and welded joints to remove rust and dirt. Apply an anti-rust primer followed by a weather-resistant black paint to protect the door from rain and moisture.', 
+        'Cover the door frame with strong sports netting. Secure the net tightly around the outer frame and middle support pipe using durable tying twine or heavy-duty zip ties. Finally, check that the door moves freely and the netting is properly secured.',
       ],
     },
     benefits: {
       items: [
-        'Easy, controlled access without cutting a hole in the net',
-        'Durable steel construction built for daily facility use',
-        'Enclosure stays continuous so balls stay inside the cage',
-        'Can be fabricated on-site to match an existing corner span',
+        'Easy Access',
+        'Durable Construction',
+        'Secure Enclosure',
+        'Custom Fit',
       ],
     },
   },
@@ -176,29 +176,18 @@ export function getGuideGallery(guide) {
   return [];
 }
 
+/** Jump links for the long parts of a guide. Short lists stay on the page without their own filter. */
 export function getVisibleGuideSections(guide) {
   const sections = [];
 
-  if (guide.title || guide.desc) {
-    sections.push({ id: 'guide-overview', label: 'Overview' });
-  }
   if (getGuideGallery(guide).length > 0) {
     sections.push({ id: 'guide-gallery', label: 'Gallery' });
   }
-  if (hasSectionContent(guide.features)) {
-    sections.push({ id: 'guide-features', label: 'Key Features' });
-  }
-  if (hasSectionContent(guide.applications)) {
-    sections.push({ id: 'guide-applications', label: 'Applications' });
-  }
-  if (hasSectionContent(guide.materials)) {
-    sections.push({ id: 'guide-materials', label: 'Materials' });
-  }
+
   if (hasSectionContent(guide.installation)) {
-    sections.push({ id: 'guide-installation', label: 'Installation' });
-  }
-  if (hasSectionContent(guide.benefits)) {
-    sections.push({ id: 'guide-benefits', label: 'Benefits' });
+    sections.push({ id: 'guide-build', label: 'Installation' });
+  } else if (hasSectionContent(guide.materials)) {
+    sections.push({ id: 'guide-build', label: 'Materials' });
   }
 
   return sections;
