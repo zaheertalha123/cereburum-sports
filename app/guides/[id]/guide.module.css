@@ -33,6 +33,14 @@
   background: linear-gradient(to bottom, rgba(7, 5, 26, 0.35), rgba(7, 5, 26, 1));
 }
 
+.heroFallback {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 70% 50% at 50% 20%, rgba(187, 181, 101, 0.12), transparent 60%),
+    var(--gradient-hero);
+}
+
 .categoryBadge {
   display: inline-block;
   background: rgba(187, 181, 101, 0.15);
@@ -116,6 +124,164 @@
   border-color: rgba(187, 181, 101, 0.6);
   color: var(--white);
   transform: translateX(-4px);
+}
+
+.contentSection {
+  background: var(--surface-0);
+  padding: 4.25rem 0;
+  position: relative;
+}
+
+.contentSectionAlt {
+  background: var(--surface-1);
+  border-top: 1px solid rgba(187, 181, 101, 0.08);
+  border-bottom: 1px solid rgba(187, 181, 101, 0.08);
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 2.25rem;
+}
+
+.sectionSubtitle {
+  color: var(--gray-400);
+  font-size: 1rem;
+  max-width: 520px;
+  margin: 0.5rem auto 0;
+  line-height: 1.6;
+}
+
+.stackLayout,
+.splitLayout {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.splitLayout {
+  align-items: start;
+}
+
+.sectionBody {
+  min-width: 0;
+}
+
+@media (min-width: 900px) {
+  .splitLayout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+    gap: 2.25rem;
+    align-items: start;
+  }
+
+  .splitLayout .featureList,
+  .splitLayout .cardGrid {
+    max-width: none;
+    margin-inline: 0;
+  }
+
+  .splitLayout .chipRow {
+    justify-content: flex-start;
+  }
+}
+
+.featureList {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-width: 760px;
+  margin-inline: auto;
+}
+
+.featureItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  color: var(--gray-200);
+  font-size: 1rem;
+  line-height: 1.5;
+  padding: 0.85rem 1rem;
+  background: var(--gradient-card);
+  border: 1px solid rgba(187, 181, 101, 0.12);
+  border-radius: var(--radius-md);
+}
+
+.featureCheck {
+  width: 1.45rem;
+  height: 1.45rem;
+  border-radius: 50%;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ink);
+  background: var(--gradient-sand);
+  margin-top: 0.05rem;
+}
+
+.chipRow {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.chip {
+  color: var(--white);
+  background: rgba(187, 181, 101, 0.1);
+  border: 1px solid rgba(187, 181, 101, 0.28);
+  padding: 0.7rem 1.15rem;
+  border-radius: 100px;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.cardGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.85rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 640px) {
+  .cardGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.infoCard {
+  background: linear-gradient(160deg, rgba(18, 17, 74, 0.7), rgba(7, 5, 26, 0.85));
+  border: 1px solid rgba(187, 181, 101, 0.16);
+  border-radius: var(--radius-md);
+  padding: 1rem 1.1rem 1rem 1.2rem;
+  color: var(--gray-200);
+  font-size: 0.98rem;
+  line-height: 1.5;
+  position: relative;
+  overflow: hidden;
+}
+
+.infoCard::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: var(--gradient-sand);
+}
+
+.stepsEmbedded {
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .stepsSection {
@@ -299,6 +465,15 @@
   .heroSection {
     padding: calc(var(--nav-h) + 3rem) 0 3rem;
     min-height: auto;
+  }
+
+  .contentSection,
+  .contentSectionAlt {
+    padding: 3rem 0;
+  }
+
+  .sectionHeader {
+    margin-bottom: 1.6rem;
   }
 
   .stepsSection {

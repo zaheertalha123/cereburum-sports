@@ -1,11 +1,20 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
-import { guides } from '@/data/guides';
+import {
+  guides,
+  getGuideById,
+  getGuideCover,
+  getGuideCoverAlt,
+  getGuideGallery,
+  getVisibleGuideSections,
+  hasSectionContent,
+  toGuideMedia,
+} from '@/data/guides';
 import ClientGallery from '@/app/works/[id]/ClientGallery';
 import galleryStyles from '@/app/works/[id]/project.module.css';
 import GuideSectionNav from './GuideSectionNav';
-import GuideSteps from './GuideSteps';
+import GuideSection from './GuideSection';
 import styles from './guide.module.css';
 
 export async function generateStaticParams() {
@@ -14,18 +23,26 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }) {
   const { id } = await params;
-  const guide = guides.find((g) => g.id === id);
+  const guide = getGuideById(id);
 
   if (!guide) {
     return { title: 'Guide Not Found | Cereburum Sports' };
   }
 
+  const cover = getGuideCover(guide);
+  const photos = toGuideMedia(getGuideGallery(guide)).filter((item) => item.type === 'image');
   const title = `${guide.title} | Cereburum Sports`;
   const description = guide.desc || `${guide.title} - Step-by-step sports netting guide by Cereburum Sports.`;
   const canonicalUrl = `https://www.cereburumsports.site/guides/${guide.id}`;
-  const imageUrl = guide.image
-    ? (guide.image.startsWith('http') ? guide.image : `https://www.cereburumsports.site${guide.image}`)
-    : 'https://www.cereburumsports.site/images/home/1.jpg';
+  const ogImages = (photos.length ? photos : cover ? [{ url: cover, alt: getGuideCoverAlt(guide) }] : []).map(
+    (image) => ({
+      url: image.url.startsWith('http') ? image.url : `https://www.cereburumsports.site${image.url}`,
+      width: 1200,
+      height: 630,
+      alt: image.alt || guide.title,
+    }),
+  );
+  const imageUrl = ogImages[0]?.url || 'https://www.cereburumsports.site/images/home/1.jpg';
 
   return {
     title,
@@ -40,14 +57,16 @@ export async function generateMetadata({ params }) {
       siteName: 'Cereburum Sports',
       title,
       description,
-      images: [
-        {
-          url: imageUrl,
-          width: 1200,
-          height: 630,
-          alt: guide.imageAlt || `${guide.title} - Cereburum Sports`,
-        },
-      ],
+      images: ogImages.length
+        ? ogImages
+        : [
+            {
+              url: imageUrl,
+              width: 1200,
+              height: 630,
+              alt: getGuideCoverAlt(guide) || `${guide.title} - Cereburum Sports`,
+            },
+          ],
     },
     twitter: {
       card: 'summary_large_image',
@@ -58,40 +77,27 @@ export async function generateMetadata({ params }) {
   };
 }
 
-function toGalleryMedia(guide) {
-  const items = (guide.images ?? []).map(({ url, alt }, index) => ({
-    type: 'image',
-    url,
-    alt: alt || `${guide.title} - Step ${index + 1} installation image | Cereburum Sports`,
-  }));
-
-  if (items.length === 0 && guide.image) {
-    items.push({
-      type: 'image',
-      url: guide.image,
-      alt: guide.imageAlt || `${guide.title} - Step by Step Sports Netting Guide | Cereburum Sports`,
-    });
-  }
-
-  return items;
-}
-
 export default async function GuidePage({ params }) {
   const { id } = await params;
-  const guide = guides.find((g) => g.id === id);
+  const guide = getGuideById(id);
 
   if (!guide) {
     notFound();
   }
 
-  const media = toGalleryMedia(guide);
+  const cover = getGuideCover(guide);
+  const gallery = toGuideMedia(getGuideGallery(guide));
+  const hasVideo = gallery.some((item) => item.type === 'video');
+  const sections = getVisibleGuideSections(guide);
   const backHref = `/guides?filter=${encodeURIComponent(guide.category)}`;
   const canonicalUrl = `https://www.cereburumsports.site/guides/${guide.id}`;
-  const imageUrl = guide.image
-    ? (guide.image.startsWith('http') ? guide.image : `https://www.cereburumsports.site${guide.image}`)
+  const coverPath = cover || guide.image;
+  const imageUrl = coverPath
+    ? (coverPath.startsWith('http') ? coverPath : `https://www.cereburumsports.site${coverPath}`)
     : 'https://www.cereburumsports.site/images/home/1.jpg';
 
-  const hasSteps = Array.isArray(guide.steps) && guide.steps.length > 0;
+  const installationSteps = guide.installation?.steps;
+  const hasSteps = Array.isArray(installationSteps) && installationSteps.length > 0;
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -126,7 +132,7 @@ export default async function GuidePage({ params }) {
           name: guide.title,
           description: guide.desc,
           image: imageUrl,
-          step: guide.steps.map((step, index) => ({
+          step: installationSteps.map((step, index) => ({
             '@type': 'HowToStep',
             position: index + 1,
             name: typeof step === 'string' ? `Step ${index + 1}` : (step.title || `Step ${index + 1}`),
@@ -170,17 +176,18 @@ export default async function GuidePage({ params }) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <section className={styles.heroSection}>
-        <div className={styles.heroBg} aria-hidden="true">
-          <Image
-            src={guide.image}
-            alt={guide.imageAlt || `${guide.title} - Step by Step Sports Netting Guide | Cereburum Sports`}
-            fill
-            className={styles.heroImage}
-            priority
-          />
-          <div className={styles.heroGradient} />
-        </div>
+      <section id="guide-overview" className={`${styles.heroSection} ${styles.anchorSection}`}>
+        {cover ? (
+          <div className={styles.heroBg} aria-hidden="true">
+            <Image src={cover} alt="" fill className={styles.heroImage} priority />
+            <div className={styles.heroGradient} />
+          </div>
+        ) : (
+          <div className={styles.heroBg} aria-hidden="true">
+            <div className={styles.heroFallback} />
+            <div className={styles.heroGradient} />
+          </div>
+        )}
 
         <div className="container" style={{ position: 'relative', zIndex: 10 }}>
           <div className={styles.backLinkContainer}>
@@ -190,38 +197,94 @@ export default async function GuidePage({ params }) {
           </div>
 
           <div className={styles.heroContent}>
-            <span className={styles.categoryBadge}>{guide.category}</span>
-            <h1 className={`display-md ${styles.title} animate-fade-in-up`}>
-              {guide.title}
-            </h1>
-            <p className={`${styles.desc} animate-fade-in`}>{guide.desc}</p>
-            <GuideSectionNav />
+            {guide.category ? <span className={styles.categoryBadge}>{guide.category}</span> : null}
+            <h1 className={`display-md ${styles.title} animate-fade-in-up`}>{guide.title}</h1>
+            {guide.desc ? <p className={`${styles.desc} animate-fade-in`}>{guide.desc}</p> : null}
+            <GuideSectionNav sections={sections} />
           </div>
         </div>
       </section>
 
-      <section
-        id="guide-media"
-        className={`${galleryStyles.gallerySection} ${styles.anchorSection}`}
-        aria-label="Guide gallery"
-      >
-        <div className="container">
-          <h2 className="heading-md" style={{ color: 'var(--white)' }}>
-            Guide Gallery
-          </h2>
-          <ClientGallery media={media} projectTitle={guide.title} />
-        </div>
-      </section>
+      {gallery.length > 0 ? (
+        <section
+          id="guide-gallery"
+          className={`${galleryStyles.gallerySection} ${styles.anchorSection}`}
+          aria-label="Guide gallery"
+        >
+          <div className="container">
+            <header className={`${styles.sectionHeader} reveal`}>
+              <span className="section-label">Visuals</span>
+              <h2 className={`heading-md ${styles.sectionTitle}`}>Image Gallery</h2>
+              <p className={styles.sectionSubtitle}>
+                {gallery.length === 1
+                  ? 'A reference photo for this component.'
+                  : hasVideo
+                    ? 'Reference photos and videos of this component in place.'
+                    : 'Reference photos of this component in place.'}
+              </p>
+            </header>
+            <ClientGallery media={gallery} projectTitle={guide.title} unoptimized />
+          </div>
+        </section>
+      ) : null}
 
-      <section
-        id="guide-steps"
-        className={`${styles.stepsSection} ${styles.anchorSection}`}
-        aria-label="Installation steps"
-      >
-        <div className="container">
-          <GuideSteps title="Installation Steps" steps={guide.steps} />
-        </div>
-      </section>
+      {hasSectionContent(guide.features) ? (
+        <GuideSection
+          id="guide-features"
+          eyebrow="Build"
+          title="Key Features"
+          items={guide.features.items}
+          images={guide.features.images}
+          itemVariant="list"
+          tone="alt"
+        />
+      ) : null}
+
+      {hasSectionContent(guide.applications) ? (
+        <GuideSection
+          id="guide-applications"
+          eyebrow="Use"
+          title="Applications"
+          items={guide.applications.items}
+          images={guide.applications.images}
+          itemVariant="chips"
+        />
+      ) : null}
+
+      {hasSectionContent(guide.materials) ? (
+        <GuideSection
+          id="guide-materials"
+          eyebrow="Specification"
+          title="Materials"
+          items={guide.materials.items}
+          images={guide.materials.images}
+          itemVariant="cards"
+          tone="alt"
+        />
+      ) : null}
+
+      {hasSectionContent(guide.installation) ? (
+        <GuideSection
+          id="guide-installation"
+          eyebrow="Process"
+          title="Installation Process"
+          subtitle="Follow each step in order for a safe, professional installation."
+          steps={guide.installation.steps}
+          images={guide.installation.images}
+        />
+      ) : null}
+
+      {hasSectionContent(guide.benefits) ? (
+        <GuideSection
+          id="guide-benefits"
+          eyebrow="Why it matters"
+          title="Benefits"
+          items={guide.benefits.items}
+          images={guide.benefits.images}
+          itemVariant="list"
+          tone="alt"
+        />
+      ) : null}
     </>
   );
 }

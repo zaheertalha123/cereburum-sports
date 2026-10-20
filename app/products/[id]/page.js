@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { products, getProductById } from '@/data/products';
-import ProductImageZoom from './ProductImageZoom';
+import ProductImageGallery from './ProductImageGallery';
 import { productInquiryMessage, whatsAppUrl } from '@/lib/whatsapp';
 import styles from './product-detail.module.css';
 
@@ -25,6 +25,21 @@ export async function generateMetadata({ params }) {
     ? (product.image.startsWith('http') ? product.image : `https://www.cereburumsports.site${product.image}`)
     : 'https://www.cereburumsports.site/images/home/1.jpg';
 
+  const galleryUrls = product.images?.length
+    ? product.images
+    : product.image
+      ? [product.image]
+      : [];
+  const ogImages = (galleryUrls.length ? galleryUrls : [imageUrl]).map((url) => {
+    const absoluteUrl = url.startsWith('http') ? url : `https://www.cereburumsports.site${url}`;
+    return {
+      url: absoluteUrl,
+      width: 1200,
+      height: 630,
+      alt: product.imageAlt || `${product.title} - Cereburum Sports`,
+    };
+  });
+
   return {
     title,
     description,
@@ -38,20 +53,13 @@ export async function generateMetadata({ params }) {
       siteName: 'Cereburum Sports',
       title,
       description,
-      images: [
-        {
-          url: imageUrl,
-          width: 1200,
-          height: 630,
-          alt: product.imageAlt || `${product.title} - Cereburum Sports`,
-        },
-      ],
+      images: ogImages,
     },
     twitter: {
       card: 'summary_large_image',
       title,
       description,
-      images: [imageUrl],
+      images: [ogImages[0]?.url || imageUrl],
     },
   };
 }
@@ -82,6 +90,10 @@ export default async function ProductDetailPage({ params }) {
 
   const { items: related, mixed: relatedIsMixed } = getRelatedProducts(product);
   const whatsappUrl = whatsAppUrl(productInquiryMessage(product));
+  const galleryImages = product.images?.length ? product.images : product.image ? [product.image] : [];
+  const imageAlt =
+    product.imageAlt ||
+    `${product.title} - ${product.subtitle} - Sports Net Manufacturer Pakistan | Cereburum Sports`;
   const productsFilterHref =
     product.filterGroup && product.filterGroup !== 'Custom'
       ? `/products?filter=${encodeURIComponent(product.filterGroup)}`
@@ -171,12 +183,8 @@ export default async function ProductDetailPage({ params }) {
           </nav>
 
           <div className={styles.layout}>
-            {product.image ? (
-              <ProductImageZoom
-                src={product.image}
-                alt={product.imageAlt || `${product.title} - ${product.subtitle} | Cereburum Sports`}
-                tag={product.tag}
-              />
+            {galleryImages.length > 0 ? (
+              <ProductImageGallery images={galleryImages} alt={imageAlt} tag={product.tag} />
             ) : null}
 
             <div className={styles.contentPanel}>
