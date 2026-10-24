@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { projects } from '@/data/projects';
 import { absoluteUrl } from '@/lib/siteUrl';
 import { getLocalBusinessSchema } from '@/lib/localBusiness';
 import Breadcrumbs, { breadcrumbJsonLd } from '@/components/Breadcrumbs';
@@ -143,19 +144,9 @@ export default function AboutPage() {
               </p>
             </div>
 
-            {/* Stats block */}
-            <div className={`${styles.heroStats} animate-fade-in`} style={{ animationDelay: '0.2s' }}>
-              {[
-                { v: '8+', l: 'Years Active' },
-                { v: '100+', l: 'Projects Done' },
-                { v: '7+', l: 'Sports Covered' },
-                { v: '100%', l: 'Client Focused' },
-              ].map(({ v, l }) => (
-                <div key={l} className={styles.heroStat}>
-                  <span className={`display-md ${styles.heroStatNum}`}>{v}</span>
-                  <span className={`body-sm ${styles.heroStatLbl}`}>{l}</span>
-                </div>
-              ))}
+            <div className={styles.storyImage}>
+              <Image src={projects[0].coverImage} alt={projects[0].coverImageAlt} fill sizes="(max-width: 899px) 100vw, 45vw" priority />
+              <p className={styles.storyCaption}>On site / {projects[0].location}</p>
             </div>
           </div>
         </div>

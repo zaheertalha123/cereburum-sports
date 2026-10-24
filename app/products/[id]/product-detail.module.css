@@ -18,17 +18,13 @@
 .heroGrad {
   position: absolute;
   inset: 0;
-  background:
-    radial-gradient(ellipse 70% 50% at 15% 20%, rgba(187, 181, 101, 0.08), transparent 60%),
-    var(--gradient-hero);
+  background: var(--surface-1);
 }
 
 .heroGrid {
   position: absolute;
   inset: 0;
-  background-image:
-    linear-gradient(rgba(187, 181, 101, 0.035) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(187, 181, 101, 0.035) 1px, transparent 1px);
+  background: var(--surface-1);
   background-size: 48px 48px;
   mask-image: linear-gradient(to bottom, #000 40%, transparent 100%);
 }
@@ -46,17 +42,17 @@
 }
 
 .crumb a {
-  color: var(--sand);
+  color: var(--navy);
   font-weight: 600;
   transition: color var(--transition-base);
 }
 
 .crumb a:hover {
-  color: var(--sand-light);
+  color: var(--navy);
 }
 
 .crumb [aria-current='page'] {
-  color: var(--white);
+  color: var(--ink);
 }
 
 .layout {
@@ -99,7 +95,7 @@
   border-radius: var(--radius-md);
   overflow: hidden;
   border: 1.5px solid rgba(187, 181, 101, 0.18);
-  background: #050414;
+  background: var(--surface-1);
   cursor: pointer;
   padding: 0;
   transition:
@@ -110,12 +106,12 @@
 
 .thumb:hover {
   border-color: rgba(187, 181, 101, 0.42);
-  transform: translateY(-1px);
+  transform: none;
 }
 
 .thumbActive {
   border-color: var(--sand);
-  box-shadow: 0 0 0 1px rgba(187, 181, 101, 0.35);
+  box-shadow: none;
 }
 
 .thumbImage {
@@ -135,11 +131,9 @@
   aspect-ratio: 4 / 3;
   border-radius: var(--radius-xl);
   overflow: hidden;
-  background: #050414;
-  border: 1px solid rgba(187, 181, 101, 0.28);
-  box-shadow:
-    0 24px 60px rgba(7, 5, 26, 0.55),
-    inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+  background: var(--surface-1);
+  border: 1px solid var(--line);
+  box-shadow: none;
   cursor: zoom-in;
 }
 
@@ -150,7 +144,7 @@
 
 .zoomLens {
   position: absolute;
-  border: 1px solid rgba(187, 181, 101, 0.9);
+  border: 1px solid var(--line);
   background: rgba(187, 181, 101, 0.18);
   border-radius: 6px;
   pointer-events: none;
@@ -166,7 +160,7 @@
   border: 1.5px solid rgba(187, 181, 101, 0.45);
   background-color: #050414;
   background-repeat: no-repeat;
-  box-shadow: 0 20px 60px rgba(7, 5, 26, 0.85);
+  box-shadow: none;
   pointer-events: none;
 }
 
@@ -187,15 +181,15 @@
   left: 1.15rem;
   z-index: 2;
   padding: 0.4rem 0.9rem;
-  border-radius: 100px;
-  background: rgba(7, 5, 26, 0.78);
-  border: 1px solid rgba(187, 181, 101, 0.45);
-  color: var(--sand);
+  border-radius:var(--radius-md);
+  background: var(--surface-1);
+  border: 1px solid var(--line);
+  color: var(--navy);
   font-size: 0.7rem;
   font-weight: 700;
-  letter-spacing: 0.1em;
+  letter-spacing: 0;
   text-transform: uppercase;
-  backdrop-filter: blur(8px);
+  backdrop-filter: none;
 }
 
 .contentPanel {
@@ -211,21 +205,21 @@
 }
 
 .eyebrow {
-  color: var(--sand);
+  color: var(--navy);
   font-size: 0.78rem;
   font-weight: 700;
-  letter-spacing: 0.14em;
+  letter-spacing: 0;
   text-transform: uppercase;
 }
 
 .title {
-  color: var(--white);
+  color: var(--ink);
   line-height: 0.95;
   margin: 0;
 }
 
 .desc {
-  color: var(--gray-200);
+  color: var(--gray-600);
   font-size: 1.05rem;
   line-height: 1.75;
   max-width: 62ch;
@@ -239,8 +233,8 @@
 }
 
 .specItem {
-  background: linear-gradient(160deg, rgba(18, 17, 74, 0.7), rgba(7, 5, 26, 0.85));
-  border: 1px solid rgba(187, 181, 101, 0.16);
+  background: var(--surface-1);
+  border: 1px solid var(--line);
   border-radius: var(--radius-md);
   padding: 0.95rem 1rem 0.9rem;
   display: flex;
@@ -261,15 +255,15 @@
 }
 
 .specLabel {
-  color: var(--sand);
+  color: var(--navy);
   font-size: 0.68rem;
   font-weight: 700;
-  letter-spacing: 0.08em;
+  letter-spacing: 0;
   text-transform: uppercase;
 }
 
 .specValue {
-  color: var(--white);
+  color: var(--ink);
   font-size: 1rem;
   font-weight: 600;
   line-height: 1.3;
@@ -282,10 +276,10 @@
 }
 
 .sectionTitle {
-  color: var(--white);
+  color: var(--ink);
   font-size: 0.78rem;
   font-weight: 700;
-  letter-spacing: 0.12em;
+  letter-spacing: 0;
   text-transform: uppercase;
 }
 
@@ -299,7 +293,7 @@
   display: flex;
   align-items: flex-start;
   gap: 0.75rem;
-  color: var(--gray-200);
+  color: var(--gray-600);
   font-size: 0.95rem;
   line-height: 1.45;
   padding: 0.15rem 0;
@@ -324,13 +318,13 @@
   gap: 0.95rem;
   padding: 1.1rem 1.25rem;
   border-radius: var(--radius-lg);
-  background: linear-gradient(145deg, rgba(18, 17, 74, 0.55), rgba(7, 5, 26, 0.8));
-  border: 1px solid rgba(187, 181, 101, 0.22);
-  box-shadow: var(--shadow-glow);
+  background: var(--surface-1);
+  border: 1px solid var(--line);
+  box-shadow: none;
 }
 
 .enquiryTitle {
-  color: var(--white);
+  color: var(--ink);
   font-size: 1.05rem;
   font-weight: 700;
   margin-bottom: 0.2rem;
@@ -360,9 +354,7 @@
 
 .relatedSection {
   padding: 4rem 0 5rem;
-  background:
-    linear-gradient(180deg, rgba(187, 181, 101, 0.06), transparent 80px),
-    var(--surface-1);
+  background: var(--surface-1);
   border-top: 1px solid rgba(187, 181, 101, 0.12);
 }
 
@@ -376,19 +368,19 @@
 }
 
 .relatedTitle {
-  color: var(--white);
+  color: var(--ink);
   margin-top: 0.35rem;
 }
 
 .relatedLink {
-  color: var(--sand);
+  color: var(--navy);
   font-size: 0.95rem;
   font-weight: 600;
   transition: color var(--transition-base);
 }
 
 .relatedLink:hover {
-  color: var(--sand-light);
+  color: var(--navy);
 }
 
 .relatedGrid {
@@ -405,7 +397,7 @@
 
 .relatedCard {
   background: var(--gradient-card);
-  border: 1px solid rgba(187, 181, 101, 0.12);
+  border: 1px solid var(--line);
   border-radius: var(--radius-lg);
   overflow: hidden;
   transition: border-color var(--transition-base), transform var(--transition-base), box-shadow var(--transition-base);
@@ -415,14 +407,14 @@
 
 .relatedCard:hover {
   border-color: rgba(187, 181, 101, 0.32);
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-glow);
+  transform: none;
+  box-shadow: none;
 }
 
 .relatedVisual {
   position: relative;
   height: 190px;
-  background: #050414;
+  background: var(--surface-1);
 }
 
 .relatedImage {
@@ -442,29 +434,29 @@
 }
 
 .relatedSubtitle {
-  color: var(--sand);
+  color: var(--navy);
   font-size: 0.7rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0;
 }
 
 .relatedName {
-  color: var(--white);
+  color: var(--ink);
   font-size: 1.1rem;
   font-weight: 600;
 }
 
 .relatedCta {
   margin-top: 0.45rem;
-  color: var(--sand);
+  color: var(--navy);
   font-size: 0.85rem;
   font-weight: 600;
   transition: transform var(--transition-base);
 }
 
 .relatedCard:hover .relatedCta {
-  transform: translateX(4px);
+  transform: none;
 }
 
 @media (max-width: 767px) {
@@ -485,3 +477,22 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* Ground Builder: remove atmospheric decoration, retain functional imagery. */
+.heroGrid { display: none; }
+/* Ground Builder product detail: gallery first, unframed specifications. */
+.hero { padding:calc(var(--nav-h) + 36px) 0 64px; }
+.heroBg { display:none; }
+.title { font-size:4rem; }
+.imageFrame { background:var(--surface-1); border:1px solid var(--line); box-shadow:none; }
+.specsGrid { gap:0 24px; }
+.specItem { border:0; border-top:1px solid var(--line); padding:14px 0; background:transparent; border-radius:0; }
+.specItem::before { display:none; }
+.specLabel,.eyebrow { color:var(--gray-400); text-transform:none; }
+.sectionTitle { text-transform:none; font-size:1rem; }
+.enquiry { background:var(--surface-1); border:0; border-left:3px solid var(--sand); padding:24px; border-radius:0; }
+.relatedCard { border:0; border-bottom:1px solid var(--line); }
+.relatedBody { padding:18px 0; }
+.relatedName { font-family:var(--font-editorial); font-weight:400; font-size:1.4rem; }
+.relatedCard:hover { transform:none; }
+@media(max-width:599px) { .title { font-size:3rem; } .enquiry { padding:20px; } }

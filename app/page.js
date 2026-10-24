@@ -3,6 +3,8 @@ import Image from 'next/image';
 import { absoluteUrl } from '@/lib/siteUrl';
 import { getLocalBusinessSchema } from '@/lib/localBusiness';
 import styles from './page.module.css';
+import { projects } from '@/data/projects';
+import { products } from '@/data/products';
 
 const WHATSAPP_NUMBER = '923187768296';
 const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=Hello%2C%20I%27m%20interested%20in%20your%20sports%20products.`;
@@ -161,279 +163,72 @@ const jsonLd = {
   ],
 };
 
-const stats = [
-  { value: '100+', label: 'Projects Completed' },
-  { value: '8+', label: 'Years Experience' },
-  { value: '100%', label: 'Quality Assured' },
-  { value: '50+', label: 'Sports Facilities' },
+const featured = projects.find((project) => project.id === 'cricket-arena-nowshera');
+const selectedProjects = ['folding-net-islamabad', 'sports-arena-gujranwala'].map((id) => projects.find((project) => project.id === id));
+const categories = [
+  { title: 'Cricket nets', note: 'Practice, academy & ground netting', href: '/products?filter=Cricket', product: 'cricket-net-36' },
+  { title: 'Football nets', note: 'Goal nets made for the game', href: '/products?filter=Football', filter: 'Football' },
+  { title: 'Court nets', note: 'For courts and multi-sport spaces', href: '/products?filter=Badminton', filter: 'Badminton' },
+  { title: 'Custom installations', note: 'A fit for your space', href: '/products/custom', product: 'custom' },
 ];
-
-const products = [
-  {
-    id: 'cricket-netting',
-    icon: '/images/icons/cricket-net.png',
-    title: 'Cricket Ground & Academy Net Installation',
-    desc: 'Turnkey cricket net installation services for cricket grounds, practice cages, and academy enclosures across Pakistan, built for hardball and softball cricket.',
-    filter: 'Cricket',
-    ctaText: 'Explore Cricket Nets',
-  },
-  {
-    id: 'football-netting',
-    icon: '/images/icons/football-net.png',
-    title: 'Football Netting & Goal Nets',
-    desc: 'Weatherproof football netting, goal nets, and pitch perimeter barrier nets. Tailored mesh sizes and professional installation for football grounds.',
-    filter: 'Football',
-    ctaText: 'View Football Nets',
-  },
-  {
-    id: 'rooftop-safety',
-    icon: '/images/icons/practice-cage.png',
-    title: 'Rooftop Cricket Nets & Practice Cages',
-    desc: 'Specialized rooftop cricket net installation custom-engineered for residential terraces, clubs, and training facilities with durable safety barrier netting.',
-    filter: 'Custom',
-    ctaText: 'Explore Rooftop & Safety Nets',
-  },
-  {
-    id: 'badminton-nets',
-    icon: '/images/icons/badminton.png',
-    title: 'Badminton, Court & Multi-Sport Nets',
-    desc: 'Regulation badminton nets, tennis/volleyball court netting, and multi-sport barrier solutions supplied and installed for indoor and outdoor complexes.',
-    filter: 'Badminton',
-    ctaText: 'View Court Nets',
-  },
-];
-
-const trusts = [
-  {
-    icon: '/images/icons/installation-services.png',
-    title: 'Cricket Net Installation Specialists',
-    desc: 'Dedicated installation teams delivering precision setup for cricket grounds, rooftop practice cages, and cricket academies across Pakistan.',
-  },
-  {
-    icon: '/images/icons/safety-net.png',
-    title: 'Football, Court & Safety Barrier Nets',
-    desc: 'Alongside cricket setups, we supply and install football goal nets, badminton court netting, futsal goals, and custom facility barrier nets.',
-  },
-  {
-    icon: '/images/icons/custom-size.png',
-    title: 'Custom Sizing & Bespoke Solutions',
-    desc: 'Precision net manufacturing tailored to your exact pitch, court, or rooftop dimensions with generous coverage that never falls short.',
-  },
-  {
-    icon: '/images/icons/direct-support.png',
-    title: 'Direct Manufacturer Support',
-    desc: 'Connect directly with our netting specialists on WhatsApp for sizing advice, quotes on cricket net installation or sports net supply, and nationwide delivery.',
-  },
-];
-
-const portfolioShowcase = [
-  {
-    id: 1,
-    alt: 'Sports barrier netting and football pitch goal net installation | Cereburum Sports',
-  },
-  {
-    id: 2,
-    alt: 'Outdoor cricket practice net cages and academy pitch netting | Cereburum Sports',
-  },
-  {
-    id: 3,
-    alt: 'Close-up of a football striking high-tensile sports barrier netting | Cereburum Sports',
-  },
+const process = [
+  { title: 'Tell us about your ground', desc: 'Share your location, dimensions and the way you want to use your space.' },
+  { title: 'Find the right netting', desc: 'We help you choose the material and layout for your project.' },
+  { title: 'From manufacture to installation', desc: 'Custom netting, supply and professional installation across Pakistan.' },
 ];
 
 export default function HomePage() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
-
-      {/* ── HERO ─────────────────────────────────────────────── */}
-      <section className={styles.hero} aria-label="Hero">
-        <div className={styles.heroBg} aria-hidden="true">
-          <div className={styles.heroBgGrad} />
-          <div className={styles.heroOrb1} />
-          <div className={styles.heroOrb2} />
-          <div className={styles.heroGrid} />
-        </div>
-
-        <div className={`container ${styles.heroContent}`}>
-          <div className={`animate-fade-in-up ${styles.heroText}`}>
-            <span className="section-label">Cricket Net Installation &amp; Sports Nets</span>
-            <h1 className={`display-xl ${styles.heroHeading}`}>
-              Cricket Net Installation<br />
-              <span className={styles.heroAccent}>Services &amp; Sports Nets in Pakistan</span>
-            </h1>
-            <p className={`body-lg ${styles.heroSub}`}>
-              Pakistan&apos;s trusted specialists in cricket net installation services — delivering turnkey setups for cricket grounds, rooftop cricket nets, practice cages, and academies nationwide. Alongside professional installation, we manufacture and supply all types of sports nets including football netting, court nets, and custom sports barrier netting.
-            </p>
-
-            <div className={styles.heroCtas}>
-              <a
-                href={WHATSAPP_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-whatsapp btn-lg"
-                aria-label="Get a free quote on WhatsApp"
-                id="hero-whatsapp-cta"
-              >
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
-                  <path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.553 4.122 1.522 5.857L0 24l6.335-1.509C8.05 23.447 9.977 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818c-1.86 0-3.601-.504-5.09-1.38l-.365-.217-3.762.896.956-3.665-.238-.377C2.504 15.44 2.181 13.758 2.181 12 2.181 6.57 6.57 2.181 12 2.181c5.431 0 9.819 4.389 9.819 9.819 0 5.431-4.388 9.818-9.819 9.818z" />
-                </svg>
-                Get Free Quote
-              </a>
-              <Link href="/products" className="btn btn-outline btn-lg" id="hero-products-btn">
-                View Products
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true">
-                  <path d="M5 12h14M12 5l7 7-7 7" />
-                </svg>
-              </Link>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <section className={styles.hero} aria-labelledby="home-heading">
+        <Image src={featured.coverImage} alt={featured.coverImageAlt} fill priority sizes="100vw" className={styles.heroImage} />
+        <div className={styles.heroShade} />
+        <div className={`container ${styles.heroInner}`}>
+          <p className={styles.heroLocation}>Cereburum Sports / Pakistan<span>Manufacturers & installers of sports netting</span></p>
+          <div className={styles.heroCopy}>
+            <h1 id="home-heading">Cricket nets.<br />Built for your ground.</h1>
+            <p>From rooftop practice spaces to full-scale arenas. Sports nets manufactured, supplied and installed across Pakistan.</p>
+            <div className={styles.heroActions}>
+              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="btn btn-whatsapp" id="hero-whatsapp-cta" aria-label="Request a quote on WhatsApp">Request a Quote</a>
+              <Link href="/works" className={styles.heroLink}>Explore our projects <span aria-hidden="true">↗</span></Link>
             </div>
           </div>
-
-          {/* Stats strip */}
-          <div className={`${styles.statsStrip} animate-fade-in`} style={{ animationDelay: '0.3s' }}>
-            {stats.map(({ value, label }) => (
-              <div key={label} className={styles.statItem}>
-                <span className={`display-md ${styles.statValue}`}>{value}</span>
-                <span className={`body-sm ${styles.statLabel}`}>{label}</span>
-              </div>
-            ))}
-          </div>
+          <Link href={`/works/${featured.id}`} className={styles.photoCaption}>On site / Nowshera<span>View this installation ↗</span></Link>
         </div>
       </section>
-
-      {/* ── PRODUCTS OVERVIEW ─────────────────────────────────── */}
-      <section className={`section-pad ${styles.productsSection}`} aria-labelledby="products-heading">
-        <div className="container">
-          <div className={`${styles.sectionHeader} reveal text-center`}>
-            <span className="section-label">Sports Netting Catalog</span>
-            <h2 className={`display-lg ${styles.sectionTitle}`} id="products-heading">
-              Sports Nets for Cricket, Football<br />
-              <span className="text-sand">&amp; Custom Applications</span>
-            </h2>
-            <div className="divider divider-center" />
-            <p className={`body-lg ${styles.sectionDesc}`}>
-              We specialize in turnkey cricket net installation services for cricket grounds, rooftop practice setups, academy enclosures, and training facilities across Pakistan. We also manufacture and supply durable football goal nets, court netting, and custom sports barrier nets.
-            </p>
+      <div className={styles.capabilities} aria-label="Our capabilities">
+        <div className="container"><span>Manufacture</span><span>Supply</span><span>Install</span><p>One team. From net to ground.</p></div>
+      </div>
+      <section className={styles.featured} aria-labelledby="featured-heading">
+        <div className={`container ${styles.featuredInner}`}>
+          <div className={styles.featuredCopy}>
+            <span className={styles.darkLabel}>Featured installation</span>
+            <h2 id="featured-heading">Nowshera /<br />Cricket Arena</h2>
+            <p>A full-scale sports arena. Custom Parachute 36 netting, made for a 90 ft × 60 ft facility.</p>
+            <dl className={styles.projectFacts}><div><dt>Ground coverage</dt><dd>5,400 sq ft</dd></div><div><dt>Height clearance</dt><dd>35 ft</dd></div></dl>
+            <Link href={`/works/${featured.id}`} className={styles.darkLink}>Explore the project <span aria-hidden="true">↗</span></Link>
           </div>
-
-          <div className={styles.productsGrid}>
-            {products.map((product, i) => (
-              <article
-                key={product.id}
-                className={`card ${styles.productCard} reveal`}
-                style={{ animationDelay: `${i * 0.1}s` }}
-                aria-label={product.title}
-              >
-                <div className={styles.productIcon} aria-hidden="true">
-                  <Image
-                    src={product.icon}
-                    alt=""
-                    width={88}
-                    height={88}
-                    className={styles.productIconImg}
-                  />
-                </div>
-                <h3 className={`heading-md ${styles.productTitle}`}>{product.title}</h3>
-                <p className={`body-md ${styles.productDesc}`}>{product.desc}</p>
-                <Link
-                  href={product.filter ? `/products?filter=${encodeURIComponent(product.filter)}` : '/products'}
-                  className={`btn btn-outline btn-sm ${styles.productBtn}`}
-                  aria-label={`${product.ctaText} ${product.title}`}
-                >
-                  {product.ctaText}
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true">
-                    <path d="M5 12h14M12 5l7 7-7 7" />
-                  </svg>
-                </Link>
-              </article>
-            ))}
-          </div>
-
-          <div className={`${styles.productsCta} text-center`}>
-            <Link href="/products" className="btn btn-primary btn-lg" id="all-products-btn">
-              Explore All Available Nets
-            </Link>
-          </div>
+          <Link href={`/works/${featured.id}`} className={styles.featuredImage} aria-label="Explore the Nowshera cricket arena installation"><Image src={featured.media[1].url} alt={featured.media[1].alt} fill sizes="(max-width: 767px) 100vw, 65vw" /></Link>
         </div>
       </section>
-
-      {/* ── TRUST INDICATORS ──────────────────────────────────── */}
-      <section className={`section-pad ${styles.trustSection}`} aria-labelledby="trust-heading">
+      <section className={`section-pad ${styles.workSection}`} aria-labelledby="work-heading">
         <div className="container">
-          <div className={`${styles.sectionHeader} reveal text-center`}>
-            <span className="section-label">Why Choose Us</span>
-            <h2 className={`display-lg ${styles.sectionTitle}`} id="trust-heading">
-              Quality Sports Netting<br />
-              <span className="text-sand">Engineered to Last</span>
-            </h2>
-            <div className="divider divider-center" />
-          </div>
-
-          <div className={styles.trustGrid}>
-            {trusts.map((item, i) => (
-              <div key={item.title} className={`${styles.trustCard} reveal`} style={{ animationDelay: `${i * 0.1}s` }}>
-                <div className={styles.trustIcon} aria-hidden="true">
-                  <Image
-                    src={item.icon}
-                    alt=""
-                    width={88}
-                    height={88}
-                    className={styles.trustIconImg}
-                  />
-                </div>
-                <h3 className={`heading-sm ${styles.trustTitle}`}>{item.title}</h3>
-                <p className={`body-sm ${styles.trustDesc}`}>{item.desc}</p>
-              </div>
-            ))}
-          </div>
+          <div className={styles.sectionHead}><div><span className="section-label">Built across Pakistan</span><h2 id="work-heading">Different grounds.<br />The same commitment.</h2></div><Link href="/works" className={styles.textLink}>All projects <span aria-hidden="true">↗</span></Link></div>
+          <div className={styles.projectGrid}>{selectedProjects.map((project) => <Link href={`/works/${project.id}`} key={project.id} className={styles.project}><div className={styles.projectImage}><Image src={project.coverImage} alt={project.coverImageAlt} fill sizes="(max-width: 767px) 100vw, 50vw" /></div><div className={styles.projectCaption}><div><p>{project.location} / {project.year}</p><h3>{project.title}</h3></div><span aria-hidden="true">↗</span></div></Link>)}</div>
         </div>
       </section>
-
-      {/* ── WORKS TEASER ──────────────────────────────────────── */}
-      <section className={`section-pad ${styles.worksTeaser}`} aria-labelledby="works-heading">
+      <section className={`section-pad ${styles.categorySection}`} aria-labelledby="categories-heading">
         <div className="container">
-          <div className={`${styles.worksTeaserInner} reveal`}>
-            <div className={styles.worksTeaserText}>
-              <span className="section-label">Nationwide Portfolio</span>
-              <h2 className={`display-lg ${styles.sectionTitle}`} id="works-heading">
-                Proven Sports Netting<br />
-                <span className="text-sand">Projects Across Pakistan</span>
-              </h2>
-              <div className="divider" />
-              <p className={`body-lg ${styles.sectionDesc}`}>
-                Explore our completed installations across Pakistan — from cricket academy nets and rooftop cricket practice setups to stadium perimeter netting and football barrier nets. We supply quality netting materials and provide complete turnkey installation.
-              </p>
-              <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-                <Link href="/works" className="btn btn-primary btn-lg" id="view-works-btn">
-                  View Installation Portfolio
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true">
-                    <path d="M5 12h14M12 5l7 7-7 7" />
-                  </svg>
-                </Link>
-                <Link href="/products" className="btn btn-outline btn-lg" id="view-all-nets-btn">
-                  Explore All Sports Nets
-                </Link>
-              </div>
-            </div>
-            <div className={styles.worksTeaserCards}>
-              {portfolioShowcase.map(({ id, alt }) => (
-                <div key={id} className={`${styles.worksTeaserCard} ${styles[`card${id}`]}`}>
-                  <Image
-                    src={`/images/home/${id}.jpg`}
-                    alt={alt}
-                    fill
-                    sizes="300px"
-                    className={styles.teaserImage}
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
+          <div className={styles.sectionHead}><div><span className="section-label">The netting range</span><h2 id="categories-heading">Netting for every space.</h2></div><Link href="/products" className={styles.textLink}>All products <span aria-hidden="true">↗</span></Link></div>
+          <div className={styles.categoryGrid}>{categories.map((category) => {
+            const product = products.find((item) => category.product ? item.id === category.product : item.filterGroup === category.filter);
+            return <Link key={category.title} href={category.href} className={styles.category}><div className={styles.categoryImage}><Image src={product.image} alt={product.imageAlt || category.title} fill sizes="(max-width: 599px) 50vw, 25vw" /></div><h3>{category.title} <span aria-hidden="true">↗</span></h3><p>{category.note}</p></Link>;
+          })}</div>
         </div>
+      </section>
+      <section className={`section-pad ${styles.processSection}`} aria-labelledby="process-heading">
+        <div className="container"><div className={styles.sectionHead}><div><span className="section-label">From the first conversation</span><h2 id="process-heading">A clear path to your ground.</h2></div><Link href="/guides" className={styles.textLink}>Installation guides <span aria-hidden="true">↗</span></Link></div><ol className={styles.processGrid}>{process.map((step, i) => <li key={step.title}><span className={styles.stepNumber}>0{i + 1}</span><h3>{step.title}</h3><p>{step.desc}</p></li>)}</ol></div>
       </section>
     </>
   );

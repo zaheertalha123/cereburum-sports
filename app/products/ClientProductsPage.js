@@ -60,13 +60,13 @@ export default function ClientProductsPage({ products, breadcrumbItems }) {
             of sports netting solutions for every facility need.
           </p>
 
-          <div className={styles.filterRow} role="list" aria-label="Product categories">
+          <div className={styles.filterRow} role="group" aria-label="Product categories">
             {productFilterGroups.map((opt) => (
               <button
                 key={opt}
                 onClick={() => setActiveFilter(opt)}
                 className={`${styles.filterPill} ${opt === activeFilter ? styles.filterActive : ''}`}
-                role="listitem"
+                aria-pressed={opt === activeFilter}
               >
                 {opt}
               </button>

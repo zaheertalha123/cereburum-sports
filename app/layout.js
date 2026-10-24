@@ -58,6 +58,7 @@ export default function RootLayout({ children }) {
       </head>
       <body suppressHydrationWarning>
         <ScrollReveal />
+        <a href="#main-content" className="skip-link">Skip to content</a>
         <Navbar />
         <main id="main-content">
           {children}

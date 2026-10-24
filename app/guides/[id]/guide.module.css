@@ -58,7 +58,7 @@
   background: rgba(18, 17, 74, 0.6);
   border: 1px solid rgba(187, 181, 101, 0.3);
   padding: 0.6rem 1.25rem;
-  border-radius: 100px;
+  border-radius: var(--radius-md);
   font-weight: 600;
   font-size: 0.9rem;
   transition: all var(--transition-base);
@@ -68,7 +68,7 @@
 .backLink:hover {
   background: rgba(18, 17, 74, 0.9);
   border-color: rgba(187, 181, 101, 0.6);
-  color: var(--white);
+  color: var(--ink);
   transform: translateX(-4px);
 }
 
@@ -77,21 +77,21 @@
   border: 1px solid rgba(187, 181, 101, 0.3);
   color: var(--sand);
   padding: 0.3rem 1rem;
-  border-radius: 100px;
+  border-radius: var(--radius-md);
   font-size: 0.85rem;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0;
   font-weight: 600;
   margin-bottom: 1rem;
 }
 
 .heroTitle {
-  color: var(--white);
+  color: var(--ink);
   margin-bottom: 1rem;
 }
 
 .heroDesc {
-  color: var(--gray-200);
+  color: var(--gray-600);
   font-size: 1.1rem;
   max-width: 600px;
   margin: 0 auto 1.5rem;
@@ -111,7 +111,7 @@
   border: 1px solid rgba(255, 255, 255, 0.08);
   color: var(--gray-400);
   padding: 0.5rem 1.25rem;
-  border-radius: 100px;
+  border-radius: var(--radius-md);
   font-size: 0.9rem;
   font-weight: 500;
   transition: all var(--transition-base);
@@ -120,7 +120,7 @@
 .jumpPill:hover {
   background: rgba(187, 181, 101, 0.12);
   border-color: var(--sand);
-  color: var(--white);
+  color: var(--ink);
 }
 
 .article {
@@ -146,7 +146,7 @@
   color: var(--sand);
   font-size: 0.72rem;
   font-weight: 700;
-  letter-spacing: 0.12em;
+  letter-spacing: 0;
   text-transform: uppercase;
   margin-bottom: 0.9rem;
 }
@@ -164,7 +164,7 @@
   display: flex;
   align-items: flex-start;
   gap: 0.65rem;
-  color: var(--gray-200);
+  color: var(--gray-600);
   font-size: 0.98rem;
   line-height: 1.45;
 }
@@ -188,7 +188,7 @@
 }
 
 .blockTitle {
-  color: var(--white);
+  color: var(--ink);
   margin: 0 0 1.25rem;
 }
 
@@ -215,7 +215,7 @@
   position: relative;
   overflow: hidden;
   padding: 0.95rem 1rem 0.95rem 1.15rem;
-  color: var(--gray-200);
+  color: var(--gray-600);
   background: linear-gradient(160deg, rgba(18, 17, 74, 0.7), rgba(7, 5, 26, 0.85));
   border: 1px solid rgba(187, 181, 101, 0.16);
   border-radius: var(--radius-md);
@@ -310,13 +310,13 @@
   color: var(--sand);
   font-size: 0.68rem;
   font-weight: 700;
-  letter-spacing: 0.12em;
+  letter-spacing: 0;
   text-transform: uppercase;
 }
 
 .stepText {
   margin: 0;
-  color: var(--gray-200);
+  color: var(--gray-600);
   font-size: 0.98rem;
   line-height: 1.65;
 }
@@ -358,3 +358,36 @@
     font-size: 0.85rem;
   }
 }
+
+/* Ground Builder: remove atmospheric decoration, retain functional imagery. */
+/* Ground Builder guide: photography above a calm, readable article. */
+.heroSection { background:var(--navy); color:var(--white); margin-top:var(--nav-h); padding:36px 0 52px; min-height:460px; text-align:left; }
+.heroImage { opacity:1; }
+.heroGradient { background:rgba(7,5,26,.68); }
+.heroContent { margin:44px 0 0; max-width:900px; }
+.heroTitle { color:var(--white); font-size:3.25rem; }
+.heroDesc { color:#eeeeF3; margin:18px 0 24px; }
+.categoryBadge { color:var(--sand); border:0; padding:0; background:transparent; text-transform:none; }
+.jumpRow { justify-content:flex-start; }
+.jumpPill { color:var(--white); background:transparent; border-color:rgba(255,255,255,.6); min-height:44px; }
+.jumpPill:hover { background:var(--sand); color:var(--ink); }
+.heroSection :global([aria-label="Breadcrumb"]), .heroSection :global([aria-label="Breadcrumb"] a), .heroSection :global([aria-label="Breadcrumb"] [aria-current]) { color:white; }
+.block,.stepsHeader { text-align:left; }
+.sectionSubtitle,.stepsSubtitle { margin-left:0; }
+.factItem,.materialItem,.stepCard { border:0; border-bottom:1px solid var(--line); border-radius:0; background:transparent; }
+.stepCard { padding:8px 0 24px; }
+.stepMarker { background:var(--sand); color:var(--ink); border:0; border-radius:var(--radius-md); }
+.stepConnector { background:var(--line); transform:scaleY(1); }
+.stepLabel { text-transform:none; color:var(--gray-400); }
+.stepItem:hover .stepCard,.stepItem:hover .stepMarker { transform:none; }
+.article::before { display:none; }
+.chip { border-radius:var(--radius-md); background:var(--surface-1); color:var(--navy); }
+@media(max-width:767px) { .heroSection { padding:24px 0 36px; } .heroTitle { font-size:2.5rem; } }
+
+.heroContent { align-items:flex-start; }
+.factCard { background:var(--surface-1); border-color:var(--line); }
+.factTitle,.blockTitle { color:var(--navy); }
+.materialItem { color:var(--gray-600); }
+.backLink { background:var(--surface-1); color:var(--navy); border-color:var(--line); }
+.backLink:hover { background:var(--surface-1); color:var(--ink); transform:none; }
+.jumpPill { color:var(--white); }
