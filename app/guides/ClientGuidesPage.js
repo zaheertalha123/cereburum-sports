@@ -70,7 +70,7 @@ export default function ClientGuidesPage({ guides, categories, breadcrumbItems }
           {categories.length > 2 && (
           <div
             className={styles.filterRow}
-            role="list"
+            role="group"
             aria-label="Guide categories"
           >
             {categories.map((opt) => (
@@ -78,7 +78,7 @@ export default function ClientGuidesPage({ guides, categories, breadcrumbItems }
                 key={opt}
                 onClick={() => setActiveFilter(opt)}
                 className={`${styles.filterPill} ${opt === activeFilter ? styles.filterActive : ''}`}
-                role="listitem"
+                aria-pressed={opt === activeFilter}
               >
                 {opt}
               </button>

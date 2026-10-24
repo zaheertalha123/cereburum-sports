@@ -30,38 +30,36 @@
 .heroGradient {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, rgba(7, 5, 26, 0.35), rgba(7, 5, 26, 1));
+  background: var(--surface-1);
 }
 
 .heroFallback {
   position: absolute;
   inset: 0;
-  background:
-    radial-gradient(ellipse 70% 50% at 50% 20%, rgba(187, 181, 101, 0.12), transparent 60%),
-    var(--gradient-hero);
+  background: var(--surface-1);
 }
 
 .categoryBadge {
   display: inline-block;
   background: rgba(187, 181, 101, 0.15);
-  border: 1px solid rgba(187, 181, 101, 0.3);
-  color: var(--sand);
+  border: 1px solid var(--line);
+  color: var(--navy);
   padding: 0.3rem 1rem;
-  border-radius: 100px;
+  border-radius:var(--radius-md);
   font-size: 0.75rem;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0;
   font-weight: 700;
   margin-bottom: 1rem;
 }
 
 .title {
-  color: var(--white);
+  color: var(--ink);
   margin-bottom: 1rem;
 }
 
 .desc {
-  color: var(--gray-200);
+  color: var(--gray-600);
   font-size: 1.05rem;
   max-width: 640px;
   margin: 0 auto 1.75rem;
@@ -77,11 +75,11 @@
 }
 
 .sectionNavBtn {
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(187, 181, 101, 0.28);
-  color: var(--sand);
+  background: var(--surface-1);
+  border: 1px solid var(--line);
+  color: var(--navy);
   padding: 0.55rem 1.35rem;
-  border-radius: 100px;
+  border-radius:var(--radius-md);
   font-size: 0.9rem;
   font-weight: 600;
   cursor: pointer;
@@ -91,7 +89,7 @@
 .sectionNavBtn:hover {
   background: rgba(187, 181, 101, 0.12);
   border-color: rgba(187, 181, 101, 0.5);
-  color: var(--white);
+  color: var(--ink);
 }
 
 .anchorSection {
@@ -108,22 +106,22 @@
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  color: var(--sand);
-  background: rgba(18, 17, 74, 0.6);
-  border: 1px solid rgba(187, 181, 101, 0.3);
+  color: var(--navy);
+  background: var(--surface-1);
+  border: 1px solid var(--line);
   padding: 0.6rem 1.25rem;
-  border-radius: 100px;
+  border-radius:var(--radius-md);
   font-weight: 600;
   font-size: 0.9rem;
   transition: all var(--transition-base);
-  backdrop-filter: blur(4px);
+  backdrop-filter: none;
 }
 
 .backLink:hover {
-  background: rgba(18, 17, 74, 0.9);
+  background: var(--surface-1);
   border-color: rgba(187, 181, 101, 0.6);
-  color: var(--white);
-  transform: translateX(-4px);
+  color: var(--ink);
+  transform: none;
 }
 
 .contentSection {
@@ -200,12 +198,12 @@
   display: flex;
   align-items: flex-start;
   gap: 0.75rem;
-  color: var(--gray-200);
+  color: var(--gray-600);
   font-size: 1rem;
   line-height: 1.5;
   padding: 0.85rem 1rem;
   background: var(--gradient-card);
-  border: 1px solid rgba(187, 181, 101, 0.12);
+  border: 1px solid var(--line);
   border-radius: var(--radius-md);
 }
 
@@ -233,11 +231,11 @@
 }
 
 .chip {
-  color: var(--white);
+  color: var(--ink);
   background: rgba(187, 181, 101, 0.1);
-  border: 1px solid rgba(187, 181, 101, 0.28);
+  border: 1px solid var(--line);
   padding: 0.7rem 1.15rem;
-  border-radius: 100px;
+  border-radius:var(--radius-md);
   font-size: 0.95rem;
   font-weight: 600;
 }
@@ -258,11 +256,11 @@
 }
 
 .infoCard {
-  background: linear-gradient(160deg, rgba(18, 17, 74, 0.7), rgba(7, 5, 26, 0.85));
-  border: 1px solid rgba(187, 181, 101, 0.16);
+  background: var(--surface-1);
+  border: 1px solid var(--line);
   border-radius: var(--radius-md);
   padding: 1rem 1.1rem 1rem 1.2rem;
-  color: var(--gray-200);
+  color: var(--gray-600);
   font-size: 0.98rem;
   line-height: 1.5;
   position: relative;
@@ -299,7 +297,7 @@
   width: 320px;
   height: 320px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(187, 181, 101, 0.06) 0%, transparent 70%);
+  background: var(--surface-1);
   pointer-events: none;
 }
 
@@ -314,7 +312,7 @@
 }
 
 .sectionTitle {
-  color: var(--white);
+  color: var(--ink);
   margin: 0.5rem 0 0.75rem;
 }
 
@@ -357,15 +355,15 @@
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  background: linear-gradient(145deg, rgba(187, 181, 101, 0.22), rgba(18, 17, 74, 0.85));
+  background: var(--surface-1);
   border: 2px solid rgba(187, 181, 101, 0.45);
-  color: var(--sand);
+  color: var(--navy);
   font-size: 1rem;
   font-weight: 700;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 0 20px rgba(187, 181, 101, 0.12);
+  box-shadow: none;
   transition:
     transform 0.35s ease,
     box-shadow 0.35s ease,
@@ -378,7 +376,7 @@
   width: 2px;
   min-height: 28px;
   margin: 0.4rem 0;
-  background: linear-gradient(180deg, rgba(187, 181, 101, 0.55), rgba(187, 181, 101, 0.08));
+  background: var(--surface-1);
   transform-origin: top center;
   transform: scaleY(0);
   transition: transform 0.65s cubic-bezier(0.22, 1, 0.36, 1) 0.15s;
@@ -394,7 +392,7 @@
 
 .stepCard {
   background: var(--gradient-card);
-  border: 1px solid rgba(187, 181, 101, 0.12);
+  border: 1px solid var(--line);
   border-radius: var(--radius-lg);
   padding: 1.35rem 1.5rem;
   position: relative;
@@ -410,21 +408,21 @@
   position: absolute;
   inset: 0 auto 0 0;
   width: 3px;
-  background: linear-gradient(180deg, var(--sand), rgba(187, 181, 101, 0.1));
+  background: var(--surface-1);
   opacity: 0;
   transition: opacity 0.35s ease;
 }
 
 .stepItem:hover .stepCard {
   border-color: rgba(187, 181, 101, 0.3);
-  box-shadow: var(--shadow-glow);
-  transform: translateX(8px);
+  box-shadow: none;
+  transform: none;
 }
 
 .stepItem:hover .stepMarker {
   transform: scale(1.08);
   border-color: var(--sand);
-  box-shadow: 0 0 28px rgba(187, 181, 101, 0.35);
+  box-shadow: none;
 }
 
 .stepItem:hover .stepCard::before {
@@ -435,9 +433,9 @@
   display: block;
   font-size: 0.68rem;
   font-weight: 700;
-  letter-spacing: 0.12em;
+  letter-spacing: 0;
   text-transform: uppercase;
-  color: var(--sand);
+  color: var(--navy);
   margin-bottom: 0.55rem;
   opacity: 0.9;
 }
@@ -445,7 +443,7 @@
 .stepText {
   margin: 0;
   font-size: 0.98rem;
-  color: var(--gray-200);
+  color: var(--gray-600);
   line-height: 1.65;
 }
 
@@ -501,7 +499,7 @@
   }
 
   .stepItem:hover .stepCard {
-    transform: translateX(4px);
+    transform: none;
   }
 }
 
@@ -520,3 +518,28 @@
     transform: none;
   }
 }
+
+/* Ground Builder: remove atmospheric decoration, retain functional imagery. */
+/* Ground Builder guide: photography above a calm, readable article. */
+.heroSection { background:var(--navy); color:var(--white); margin-top:var(--nav-h); padding:36px 0 52px; min-height:460px; text-align:left; }
+.heroImage { opacity:1; }
+.heroGradient { background:rgba(7,5,26,.68); }
+.heroContent { margin:44px 0 0; max-width:900px; }
+.title { color:var(--white); font-size:3.25rem; }
+.desc { color:#eeeeF3; margin:18px 0 24px; }
+.categoryBadge { color:var(--sand); border:0; padding:0; background:transparent; text-transform:none; }
+.sectionNav { justify-content:flex-start; }
+.sectionNavBtn { color:var(--white); background:transparent; border-color:rgba(255,255,255,.6); min-height:44px; }
+.sectionNavBtn:hover { background:var(--sand); color:var(--ink); }
+.heroSection :global([aria-label="Breadcrumb"]), .heroSection :global([aria-label="Breadcrumb"] a), .heroSection :global([aria-label="Breadcrumb"] [aria-current]) { color:white; }
+.sectionHeader,.stepsHeader { text-align:left; }
+.sectionSubtitle,.stepsSubtitle { margin-left:0; }
+.featureItem,.infoCard,.stepCard { border:0; border-bottom:1px solid var(--line); border-radius:0; background:transparent; }
+.stepCard { padding:8px 0 24px; }
+.stepMarker { background:var(--sand); color:var(--ink); border:0; border-radius:var(--radius-md); }
+.stepConnector { background:var(--line); transform:scaleY(1); }
+.stepLabel { text-transform:none; color:var(--gray-400); }
+.stepItem:hover .stepCard,.stepItem:hover .stepMarker { transform:none; }
+.stepsSection::before { display:none; }
+.chip { border-radius:var(--radius-md); background:var(--surface-1); color:var(--navy); }
+@media(max-width:767px) { .heroSection { padding:24px 0 36px; } .title { font-size:2.5rem; } }

@@ -61,13 +61,13 @@ export default function ClientWorksPage({ projects, categories, breadcrumbItems 
           </p>
 
           {/* Category filter pills */}
-          <div className={styles.filterRow} role="list" aria-label="Project categories">
+          <div className={styles.filterRow} role="group" aria-label="Project categories">
             {categories.map((cat) => (
               <button
                 key={cat}
                 onClick={() => setActiveCategory(cat)}
                 className={`${styles.filterPill} ${cat === activeCategory ? styles.filterActive : ''}`}
-                role="listitem"
+                aria-pressed={cat === activeCategory}
               >
                 {cat}
               </button>
@@ -124,7 +124,7 @@ export default function ClientWorksPage({ projects, categories, breadcrumbItems 
                   <p className={`body-sm ${styles.cardDesc}`}>{project.desc}</p>
 
                   {/* Highlights */}
-                  <ul className={styles.highlights} role="list" aria-label="Project highlights">
+                  <ul className={styles.highlights} role="group" aria-label="Project highlights">
                     {project.highlights.map((h) => (
                       <li key={h} className={styles.highlight}>
                         <span className={styles.highlightDot} aria-hidden="true" />

@@ -126,13 +126,13 @@ export default function ContactPage() {
           <Breadcrumbs items={breadcrumbItems} />
           <span className="section-label animate-fade-in">Get in Touch</span>
           <h1 className={`display-lg ${styles.heroTitle} animate-fade-in-up`}>
-            Let&apos;s Talk<br />
-            <span className="text-sand">On WhatsApp</span>
+            Let&apos;s talk<br />
+            <span className="text-sand">about your ground.</span>
           </h1>
           <div className="divider divider-center" style={{ margin: '1.25rem auto 1.75rem' }} />
           <p className={`body-lg ${styles.heroDesc} animate-fade-in`}>
-            Prefer WhatsApp? Tap below to chat with our team instantly. You can also send us a message
-            using the email form further down the page — we respond as quickly as we can.
+            Share your dimensions, location and the netting you need. Chat with our team on WhatsApp,
+            call us, or send an enquiry using the form below.
           </p>
 
           {/* Primary CTA */}

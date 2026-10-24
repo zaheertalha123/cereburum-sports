@@ -30,7 +30,7 @@
 .heroGradient {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, rgba(7, 5, 26, 0.25), rgba(7, 5, 26, 1));
+  background: var(--surface-1);
 }
 
 .metaRow {
@@ -43,32 +43,32 @@
 
 .categoryBadge {
   background: rgba(187, 181, 101, 0.15);
-  border: 1px solid rgba(187, 181, 101, 0.3);
-  color: var(--sand);
+  border: 1px solid var(--line);
+  color: var(--navy);
   padding: 0.3rem 1rem;
-  border-radius: 100px;
+  border-radius:var(--radius-md);
   font-size: 0.85rem;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0;
   font-weight: 600;
 }
 
 .yearText {
   color: var(--gray-400);
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--surface-1);
+  border: 1px solid var(--line);
   padding: 0.3rem 0.8rem;
-  border-radius: 100px;
+  border-radius:var(--radius-md);
   font-size: 0.85rem;
 }
 
 .title {
-  color: var(--white);
+  color: var(--ink);
   margin-bottom: 1rem;
 }
 
 .desc {
-  color: var(--gray-200);
+  color: var(--gray-600);
   font-size: 1.1rem;
   max-width: 600px;
   margin: 0 auto 2rem;
@@ -106,22 +106,22 @@
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  color: var(--sand);
-  background: rgba(18, 17, 74, 0.6);
-  border: 1px solid rgba(187, 181, 101, 0.3);
+  color: var(--navy);
+  background: var(--surface-1);
+  border: 1px solid var(--line);
   padding: 0.6rem 1.25rem;
-  border-radius: 100px;
+  border-radius:var(--radius-md);
   font-weight: 600;
   font-size: 0.9rem;
   transition: all var(--transition-base);
-  backdrop-filter: blur(4px);
+  backdrop-filter: none;
 }
 
 .backLink:hover {
-  background: rgba(18, 17, 74, 0.9);
+  background: var(--surface-1);
   border-color: rgba(187, 181, 101, 0.6);
-  color: var(--white);
-  transform: translateX(-4px);
+  color: var(--ink);
+  transform: none;
 }
 
 .gallerySection {
@@ -162,7 +162,7 @@
   position: relative;
   border-radius: var(--radius-md);
   overflow: hidden;
-  border: 1px solid rgba(187, 181, 101, 0.1);
+  border: 1px solid var(--line);
   break-inside: avoid;
   margin-bottom: 1.5rem;
   cursor: pointer;
@@ -194,7 +194,7 @@
   position: fixed;
   inset: 0;
   background: rgba(0, 0, 0, 0.95);
-  backdrop-filter: blur(8px);
+  backdrop-filter: none;
   z-index: 9999;
   display: flex;
   align-items: center;
@@ -225,8 +225,8 @@
   position: absolute;
   top: 1.5rem;
   right: 1.5rem;
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: var(--surface-1);
+  border: 1px solid var(--line);
   color: white;
   width: 44px;
   height: 44px;
@@ -241,7 +241,7 @@
 }
 
 .closeBtn:hover {
-  background: rgba(255, 255, 255, 0.2);
+  background: var(--surface-1);
   transform: scale(1.1);
 }
 
@@ -249,8 +249,8 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: var(--surface-1);
+  border: 1px solid var(--line);
   color: white;
   width: 50px;
   height: 50px;
@@ -267,7 +267,7 @@
 .navBtn:active,
 .navBtn:focus {
   outline: none;
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--surface-1);
 }
 
 .lightboxCaption {
@@ -282,9 +282,9 @@
 .counter {
   position: absolute;
   bottom: 1.5rem;
-  color: rgba(255, 255, 255, 0.5);
+  color: var(--gray-400);
   font-variant-numeric: tabular-nums;
-  letter-spacing: 2px;
+  letter-spacing: 0;
 }
 
 .playIconOverlay {
@@ -294,9 +294,9 @@
   transform: translate(-50%, -50%);
   width: 60px;
   height: 60px;
-  background: rgba(18, 17, 74, 0.85);
-  color: var(--sand);
-  border: 1px solid rgba(187, 181, 101, 0.3);
+  background: var(--surface-1);
+  color: var(--navy);
+  border: 1px solid var(--line);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -304,5 +304,29 @@
   font-size: 1.2rem;
   padding-left: 5px;
   pointer-events: none;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  box-shadow: none;
 }
+/* Ground Builder: remove atmospheric decoration, retain functional imagery. */
+/* Ground Builder project hero: keep the installation visible. */
+.heroSection { margin-top:var(--nav-h); padding:36px 0 64px; min-height:580px; background:var(--navy); color:var(--white); align-items:flex-end; text-align:left; }
+.heroImage { opacity:1; }
+.heroGradient { background:rgba(7,5,26,.58); }
+.heroContent { max-width:900px; margin:70px 0 0; }
+.title { color:var(--white); font-family:var(--font-editorial); font-size:3.5rem; }
+.desc { color:#eeeeF3; margin:22px 0; max-width:680px; }
+.metaRow,.highlightsRow { justify-content:flex-start; }
+.categoryBadge { background:transparent; color:var(--sand); border:0; padding:0; text-transform:none; }
+.yearText { color:#dcdce3; background:transparent; border:0; padding:0; }
+.highlightItem { color:#eeeeF3; }
+.heroSection :global([aria-label="Breadcrumb"]), .heroSection :global([aria-label="Breadcrumb"] [aria-current]), .heroSection :global([aria-label="Breadcrumb"] a) { color:white; }
+.heroSection :global([aria-label="Breadcrumb"] a:hover) { color:var(--sand); }
+.lightboxCaption { color:white; }
+.navBtn:focus-visible { outline:3px solid var(--sand); outline-offset:4px; }
+.mediaWrapper:hover .mediaItem { transform:scale(1.025); }
+.projectEnquiry { display:flex; justify-content:space-between; align-items:center; gap:24px; padding:32px 0; border-top:1px solid var(--line); margin-top:32px; }
+.projectEnquiry h2 { font-family:var(--font-editorial); font-weight:400; font-size:1.8rem; }
+.projectEnquiry p { color:var(--gray-400); margin-top:8px; }
+@media(max-width:767px) { .heroSection { padding:24px 0 40px; min-height:560px; } .heroContent { margin-top:50px; } .title { font-size:2.5rem; } .highlightsRow { gap:12px; } .projectEnquiry { flex-direction:column; align-items:flex-start; } }
+.closeBtn,.navBtn { background:var(--navy); color:var(--white); border:1px solid rgba(255,255,255,.5); border-radius:var(--radius-md); }
+.closeBtn:hover,.navBtn:hover { background:var(--ink); }
+.lightboxCaption { position:static; margin-top:12px; font-size:.8rem; line-height:1.5; max-height:4.5em; overflow:auto; }

@@ -12,13 +12,11 @@
 }
 .headerGrid {
   position: absolute; inset: 0;
-  background-image:
-    linear-gradient(rgba(187,181,101,0.035) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(187,181,101,0.035) 1px, transparent 1px);
+  background: var(--surface-1);
   background-size: 50px 50px;
 }
 .headerContent { position: relative; z-index: 1; }
-.pageTitle  { color: var(--white); margin: 0.5rem 0; }
+.pageTitle  { color: var(--ink); margin: 0.5rem 0; }
 .pageDesc   { color: var(--gray-400); max-width: 540px; margin: 0 auto 2rem; }
 
 /* Filter pills */
@@ -30,19 +28,19 @@
   margin-top: 2rem;
 }
 .filterPill {
-  background: rgba(255,255,255,0.03);
-  border: 1px solid rgba(255,255,255,0.08);
+  background: var(--surface-1);
+  border: 1px solid var(--line);
   color: var(--gray-300);
   padding: 0.5rem 1.25rem;
-  border-radius: 100px;
+  border-radius:var(--radius-md);
   font-size: 0.9rem;
   font-weight: 500;
   cursor: pointer;
   transition: all var(--transition-base);
 }
 .filterPill:hover {
-  background: rgba(255,255,255,0.1);
-  color: var(--white);
+  background: var(--surface-1);
+  color: var(--ink);
 }
 .filterActive {
   background: var(--sand);
@@ -74,7 +72,7 @@
 /* ── PROJECT CARD ──────────────────────────────────────── */
 .projectCard {
   background: var(--gradient-card);
-  border: 1px solid rgba(187,181,101,0.1);
+  border: 1px solid var(--line);
   border-radius: var(--radius-lg);
   overflow: hidden;
   display: flex;
@@ -83,8 +81,8 @@
 }
 .projectCard:hover {
   border-color: rgba(187,181,101,0.3);
-  box-shadow: var(--shadow-glow);
-  transform: translateY(-4px);
+  box-shadow: none;
+  transform: none;
 }
 .featured.projectCard {
   flex-direction: row;
@@ -128,7 +126,7 @@
   width: 140px;
   height: 140px;
   border-radius: 50%;
-  border: 1px solid rgba(187,181,101,0.15);
+  border: 1px solid var(--line);
   top: 50%; left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -137,7 +135,7 @@
   position: absolute;
   width: 100px; height: 100px;
   border-radius: 50%;
-  border: 1px solid rgba(187,181,101,0.08);
+  border: 1px solid var(--line);
   top: 50%; left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -167,24 +165,24 @@
 .cardCategory {
   font-size: 0.72rem;
   font-weight: 600;
-  letter-spacing: 0.08em;
+  letter-spacing: 0;
   text-transform: uppercase;
-  color: var(--sand);
+  color: var(--navy);
   background: rgba(187,181,101,0.1);
-  border: 1px solid rgba(187,181,101,0.2);
+  border: 1px solid var(--line);
   padding: 0.2rem 0.6rem;
-  border-radius: 100px;
+  border-radius:var(--radius-md);
 }
 .cardBadge {
   font-size: 0.7rem;
   font-weight: 700;
-  letter-spacing: 0.08em;
+  letter-spacing: 0;
   text-transform: uppercase;
-  background: rgba(26,24,112,0.6);
-  border: 1px solid rgba(26,24,112,0.8);
-  color: rgba(255,255,255,0.8);
+  background: var(--surface-1);
+  border: 1px solid var(--line);
+  color: var(--gray-400);
   padding: 0.2rem 0.6rem;
-  border-radius: 100px;
+  border-radius:var(--radius-md);
 }
 .cardYear {
   font-size: 0.8rem;
@@ -192,8 +190,8 @@
   margin-left: auto;
 }
 
-.cardTitle { color: var(--white); }
-.cardType  { color: var(--sand); opacity: 0.8; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600; }
+.cardTitle { color: var(--ink); }
+.cardType  { color: var(--navy); opacity: 0.8; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0; font-weight: 600; }
 .cardDesc  { color: var(--gray-400); flex: 1; }
 
 /* Highlights */
@@ -208,11 +206,11 @@
   align-items: center;
   gap: 0.4rem;
   font-size: 0.78rem;
-  color: var(--gray-200);
-  background: rgba(18,17,74,0.4);
-  border: 1px solid rgba(187,181,101,0.1);
+  color: var(--gray-600);
+  background: var(--surface-1);
+  border: 1px solid var(--line);
   padding: 0.25rem 0.6rem;
-  border-radius: 100px;
+  border-radius:var(--radius-md);
 }
 .highlightDot {
   width: 5px; height: 5px;
@@ -273,3 +271,40 @@
     justify-content: center;
   }
 }
+
+/* Ground Builder: remove atmospheric decoration, retain functional imagery. */
+.cardVisualDecor, .headerGrid { display: none; }
+
+.pageHeader { padding: calc(var(--nav-h) + 48px) 0 36px; text-align: left; background: var(--surface-1); border-bottom: 1px solid var(--line); }
+.pageDesc { margin: 18px 0 0; max-width: 620px; }
+.filterRow { justify-content: flex-start; margin-top: 32px; gap: 8px; }
+.filterPill { min-height: 44px; padding: 10px 20px; border: 1px solid var(--line); border-radius:var(--radius-md); color: var(--navy); background: var(--white); }
+.filterPill:hover { background: var(--navy); color: var(--white); }
+.filterActive, .filterActive:hover { background: var(--sand); color: var(--ink); border-color: var(--sand); }
+.pageHeader :global(.divider) { margin-left: 0 !important; margin-right: auto !important; }
+@media(max-width:767px) { .pageHeader { padding: calc(var(--nav-h) + 30px) 0 30px; } .filterPill { padding: 10px 14px; } }
+
+.projectsGrid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 48px 32px; }
+.projectCard { background: var(--white); border: 0; border-bottom: 1px solid var(--line); border-radius: 0; }
+.projectCard:hover { transform: none; }
+.featured { grid-column: 1 / -1; }
+.featured.projectCard { display: grid; grid-template-columns: 1.6fr 1fr; background: var(--navy); color: var(--white); }
+.cardVisual { height: auto; aspect-ratio: 1.6; }
+.featured .cardVisual { width: 100%; min-height: 400px; height: 100%; }
+.cardContent { padding: 22px 0 26px; }
+.featured .cardContent { padding: 36px; }
+.cardTitle { font-family: var(--font-editorial); font-weight: 400; font-size: 1.8rem; }
+.featured .cardTitle { color: var(--white); font-size: 2.5rem; }
+.featured .cardDesc, .featured .cardYear { color: #dcdce3; }
+.featured .cardCategory, .featured .cardType { color: var(--sand); }
+.cardCategory, .cardBadge { border: 0; padding: 0; background: transparent; text-transform: none; }
+.cardBadge { margin-left: 8px; color: var(--gray-400); }
+.featured .cardBadge { color: #dcdce3; }
+.cardType { display: none; }
+.highlights { gap: 0; }
+.highlight { border: 0; background: transparent; padding: 5px 14px 5px 0; color: var(--gray-600); }
+.featured .highlight { color: #dcdce3; }
+.projectCard:hover .coverImage { opacity: 1; transform: scale(1.025); }
+@media(max-width:767px) { .projectsGrid { grid-template-columns: 1fr; gap: 32px; } .featured.projectCard { grid-template-columns: 1fr; } .featured .cardVisual { min-height: 0; height: auto; aspect-ratio: 1.45; } .featured .cardContent { padding: 24px; } .featured .cardTitle { font-size: 2rem; } }
+
+.cardVisual { border-radius:var(--radius-md); overflow:hidden; }

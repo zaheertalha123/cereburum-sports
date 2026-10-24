@@ -10,7 +10,7 @@ const CONTACT_FORM_HREF = '/contact#email-form-heading';
 const navLinks = [
   { href: '/', label: 'Home' },
   { href: '/products', label: 'Products' },
-  { href: '/works', label: 'Our Works' },
+  { href: '/works', label: 'Projects' },
   { href: '/guides', label: 'Guides' },
   { href: '/about', label: 'About Us' },
   { href: '/contact', label: 'Contact' },

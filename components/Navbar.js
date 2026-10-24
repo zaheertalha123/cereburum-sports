@@ -1,117 +1,65 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import styles from './Navbar.module.css';
 
-const WHATSAPP_NUMBER = '923187768296';
-const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=Hello%2C%20I%27m%20interested%20in%20your%20sports%20products.`;
-
 const navLinks = [
-  { href: '/',         label: 'Home' },
   { href: '/products', label: 'Products' },
-  { href: '/works',    label: 'Our Works' },
-  { href: '/guides',   label: 'Guides' },
-  { href: '/about',    label: 'About Us' },
-  { href: '/contact',  label: 'Contact' },
+  { href: '/works', label: 'Projects' },
+  { href: '/guides', label: 'Guides' },
+  { href: '/about', label: 'About' },
+  { href: '/contact', label: 'Contact' },
 ];
 
 export default function Navbar() {
   const pathname = usePathname();
-  const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const menuRef = useRef(null);
+  const toggleRef = useRef(null);
+  const isActive = (href) => pathname === href || pathname.startsWith(`${href}/`);
 
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 20);
-    window.addEventListener('scroll', onScroll, { passive: true });
-    return () => window.removeEventListener('scroll', onScroll);
-  }, []);
-
-  // Close menu on route change
   useEffect(() => { setMenuOpen(false); }, [pathname]);
-
-  // Lock body scroll when menu open
   useEffect(() => {
-    document.body.style.overflow = menuOpen ? 'hidden' : '';
-    return () => { document.body.style.overflow = ''; };
+    if (!menuOpen) return;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    menuRef.current?.querySelector('a')?.focus();
+    const close = () => { setMenuOpen(false); toggleRef.current?.focus(); };
+    const onKey = (event) => {
+      if (event.key === 'Escape') { event.preventDefault(); close(); }
+      if (event.key === 'Tab') {
+        const items = [toggleRef.current, ...menuRef.current.querySelectorAll('a')];
+        const first = items[0];
+        const last = items[items.length - 1];
+        if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
+        else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
+      }
+    };
+    const onResize = () => { if (window.innerWidth >= 1000) close(); };
+    document.addEventListener('keydown', onKey);
+    window.addEventListener('resize', onResize);
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      document.removeEventListener('keydown', onKey);
+      window.removeEventListener('resize', onResize);
+    };
   }, [menuOpen]);
 
   return (
-    <header className={`${styles.header} ${scrolled ? styles.scrolled : ''}`} role="banner">
+    <header className={styles.header}>
       <div className={`container ${styles.inner}`}>
-        {/* Logo */}
-        <Link href="/" className={styles.logo} aria-label="Cereburum Sports — Home">
-          <img
-            src="/logo.png"
-            alt="Cereburum Sports"
-            className={styles.logoImage}
-          />
-        </Link>
-
-        {/* Desktop nav */}
-        <nav className={styles.nav} aria-label="Main navigation">
-          <ul className={styles.navList} role="list">
-            {navLinks.map(({ href, label }) => (
-              <li key={href}>
-                <Link
-                  href={href}
-                  className={`${styles.navLink} ${pathname === href ? styles.active : ''}`}
-                >
-                  {label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
-
-        {/* Mobile hamburger */}
-        <button
-          className={`${styles.hamburger} ${menuOpen ? styles.open : ''}`}
-          type="button"
-          onClick={() => setMenuOpen(!menuOpen)}
-          aria-expanded={menuOpen}
-          aria-controls="mobile-menu"
-          aria-haspopup="menu"
-          aria-label={menuOpen ? 'Close menu' : 'Open menu'}
-          id="hamburger-btn"
-        >
-          <span /><span /><span />
-        </button>
+        <Link href="/" className={styles.logo} aria-label="Cereburum Sports — Home"><img src="/logo.png" alt="Cereburum Sports" width="1387" height="565" className={styles.logoImage} /></Link>
+        <nav className={styles.nav} aria-label="Main navigation"><ul className={styles.navList}>{navLinks.map(({ href, label }) => <li key={href}><Link href={href} className={`${styles.navLink} ${isActive(href) ? styles.active : ''}`} aria-current={isActive(href) ? 'page' : undefined}>{label}</Link></li>)}</ul></nav>
+        <Link href="/contact#email-form-heading" className={`btn btn-primary ${styles.quote}`}>Get a Quote</Link>
+        <button ref={toggleRef} className={`${styles.hamburger} ${menuOpen ? styles.open : ''}`} type="button" onClick={() => setMenuOpen(!menuOpen)} aria-expanded={menuOpen} aria-controls="mobile-menu" aria-label={menuOpen ? 'Close menu' : 'Open menu'} id="hamburger-btn"><span /><span /><span /></button>
       </div>
-
-      {/* Mobile menu */}
-      <div
-        id="mobile-menu"
-        className={`${styles.mobileMenu} ${menuOpen ? styles.mobileOpen : ''}`}
-        aria-hidden={!menuOpen}
-      >
-        <nav aria-label="Mobile navigation">
-          <ul className={styles.mobileNavList} role="list">
-            {navLinks.map(({ href, label }) => (
-              <li key={href}>
-                <Link
-                  href={href}
-                  className={`${styles.mobileNavLink} ${pathname === href ? styles.mobileActive : ''}`}
-                  tabIndex={menuOpen ? 0 : -1}
-                >
-                  {label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
-      </div>
-
-      {/* Backdrop */}
-      {menuOpen && (
-        <div
-          className={styles.backdrop}
-          onClick={() => setMenuOpen(false)}
-          aria-hidden="true"
-        />
-      )}
+      <nav ref={menuRef} id="mobile-menu" className={styles.mobileMenu} aria-label="Mobile navigation" hidden={!menuOpen}>
+        <Link href="/" onClick={() => setMenuOpen(false)}>Home</Link>
+        {navLinks.map(({ href, label }) => <Link key={href} href={href} onClick={() => setMenuOpen(false)} aria-current={isActive(href) ? 'page' : undefined}>{label}</Link>)}
+        <Link href="/contact#email-form-heading" className="btn btn-primary" onClick={() => setMenuOpen(false)}>Get a Quote</Link>
+      </nav>
     </header>
   );
 }

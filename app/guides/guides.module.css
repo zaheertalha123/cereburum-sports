@@ -21,9 +21,7 @@
 .headerGrid {
   position: absolute;
   inset: 0;
-  background-image:
-    linear-gradient(rgba(187, 181, 101, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(187, 181, 101, 0.04) 1px, transparent 1px);
+  background: var(--surface-1);
   background-size: 50px 50px;
 }
 
@@ -33,7 +31,7 @@
 }
 
 .pageTitle {
-  color: var(--white);
+  color: var(--ink);
   margin: 0.5rem 0;
 }
 
@@ -53,11 +51,11 @@
 }
 
 .filterPill {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: var(--surface-1);
+  border: 1px solid var(--line);
   color: var(--gray-300);
   padding: 0.5rem 1.25rem;
-  border-radius: 100px;
+  border-radius:var(--radius-md);
   font-size: 0.9rem;
   font-weight: 500;
   cursor: pointer;
@@ -65,8 +63,8 @@
 }
 
 .filterPill:hover {
-  background: rgba(255, 255, 255, 0.1);
-  color: var(--white);
+  background: var(--surface-1);
+  color: var(--ink);
 }
 
 .filterActive {
@@ -102,7 +100,7 @@
 
 .guideCard {
   background: var(--gradient-card);
-  border: 1px solid rgba(187, 181, 101, 0.12);
+  border: 1px solid var(--line);
   border-radius: var(--radius-lg);
   overflow: hidden;
   display: flex;
@@ -116,8 +114,8 @@
 
 .guideCard:hover {
   border-color: rgba(187, 181, 101, 0.28);
-  box-shadow: var(--shadow-glow);
-  transform: translateY(-4px);
+  box-shadow: none;
+  transform: none;
 }
 
 .guideVisual {
@@ -136,9 +134,7 @@
 .guideVisualFallback {
   position: absolute;
   inset: 0;
-  background:
-    radial-gradient(ellipse 80% 60% at 50% 40%, rgba(187, 181, 101, 0.16), transparent 70%),
-    linear-gradient(160deg, rgba(18, 17, 74, 0.9), rgba(7, 5, 26, 1));
+  background: var(--surface-1);
 }
 
 .guideCard:hover .guideImage {
@@ -163,17 +159,17 @@
 .categoryBadge {
   font-size: 0.7rem;
   font-weight: 700;
-  letter-spacing: 0.09em;
+  letter-spacing: 0;
   text-transform: uppercase;
-  color: var(--sand);
+  color: var(--navy);
   background: rgba(187, 181, 101, 0.1);
-  border: 1px solid rgba(187, 181, 101, 0.22);
+  border: 1px solid var(--line);
   padding: 0.2rem 0.65rem;
-  border-radius: 100px;
+  border-radius:var(--radius-md);
 }
 
 .cardTitle {
-  color: var(--white);
+  color: var(--ink);
   margin: 0;
 }
 
@@ -200,3 +196,25 @@
     padding: 1.25rem;
   }
 }
+
+/* Ground Builder: remove atmospheric decoration, retain functional imagery. */
+.headerGrid { display: none; }
+
+.pageHeader { padding: calc(var(--nav-h) + 48px) 0 36px; text-align: left; background: var(--surface-1); border-bottom: 1px solid var(--line); }
+.pageDesc { margin: 18px 0 0; max-width: 620px; }
+.filterRow { justify-content: flex-start; margin-top: 32px; gap: 8px; }
+.filterPill { min-height: 44px; padding: 10px 20px; border: 1px solid var(--line); border-radius:var(--radius-md); color: var(--navy); background: var(--white); }
+.filterPill:hover { background: var(--navy); color: var(--white); }
+.filterActive, .filterActive:hover { background: var(--sand); color: var(--ink); border-color: var(--sand); }
+.pageHeader :global(.divider) { margin-left: 0 !important; margin-right: auto !important; }
+@media(max-width:767px) { .pageHeader { padding: calc(var(--nav-h) + 30px) 0 30px; } .filterPill { padding: 10px 14px; } }
+
+.guideCard { border: 0; border-bottom: 1px solid var(--line); border-radius: 0; background: var(--white); }
+.guideCard:hover { transform: none; }
+.guideVisual { height: auto; aspect-ratio: 1.6; }
+.cardBody { padding: 24px 0; }
+.categoryBadge { background: transparent; border: 0; padding: 0; text-transform: none; }
+.cardTitle { font-family: var(--font-editorial); font-weight: 400; font-size: 1.8rem; }
+.guideCard:hover .guideImage { transform: scale(1.025); }
+
+.guideVisual { border-radius:var(--radius-md); overflow:hidden; }

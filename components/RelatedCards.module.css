@@ -14,19 +14,19 @@
 }
 
 .relatedTitle {
-  color: var(--white);
+  color: var(--ink);
   margin-top: 0.35rem;
 }
 
 .relatedLink {
-  color: var(--sand);
+  color: var(--navy);
   font-size: 0.95rem;
   font-weight: 600;
   transition: color var(--transition-base);
 }
 
 .relatedLink:hover {
-  color: var(--sand-light);
+  color: var(--navy);
 }
 
 .relatedGrid {
@@ -43,7 +43,7 @@
 
 .relatedCard {
   background: var(--gradient-card);
-  border: 1px solid rgba(187, 181, 101, 0.12);
+  border: 1px solid var(--line);
   border-radius: var(--radius-lg);
   overflow: hidden;
   transition: border-color var(--transition-base), transform var(--transition-base), box-shadow var(--transition-base);
@@ -53,14 +53,14 @@
 
 .relatedCard:hover {
   border-color: rgba(187, 181, 101, 0.32);
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-glow);
+  transform: none;
+  box-shadow: none;
 }
 
 .relatedVisual {
   position: relative;
   height: 190px;
-  background: #050414;
+  background: var(--surface-1);
 }
 
 .relatedImage {
@@ -80,27 +80,36 @@
 }
 
 .relatedSubtitle {
-  color: var(--sand);
+  color: var(--navy);
   font-size: 0.7rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0;
 }
 
 .relatedName {
-  color: var(--white);
+  color: var(--ink);
   font-size: 1.1rem;
   font-weight: 600;
 }
 
 .relatedCta {
   margin-top: 0.45rem;
-  color: var(--sand);
+  color: var(--navy);
   font-size: 0.85rem;
   font-weight: 600;
   transition: transform var(--transition-base);
 }
 
 .relatedCard:hover .relatedCta {
-  transform: translateX(4px);
+  transform: none;
 }
+
+/* Ground Builder: remove atmospheric decoration, retain functional imagery. */
+.relatedCard { border:0; border-bottom:1px solid var(--line); border-radius:0; }
+.relatedCard:hover { transform:none; }
+.relatedBody { padding:20px 0; }
+.relatedName { font-family:var(--font-editorial); font-weight:400; font-size:1.4rem; }
+.relatedSubtitle { text-transform:none; }
+
+.relatedVisual { border-radius:var(--radius-md); overflow:hidden; }
