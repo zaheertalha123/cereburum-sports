@@ -5,7 +5,7 @@
 
 /* ── CTA Band ── */
 .ctaBand {
-  background: linear-gradient(135deg, rgba(18,17,74,0.8), rgba(26,24,112,0.6));
+  background: var(--navy);
   border-bottom: 1px solid rgba(187,181,101,0.12);
   padding: 4rem 0;
 }
@@ -147,3 +147,14 @@
     align-items: flex-start;
   }
 }
+/* Ground Builder shared footer */
+.footer { background:var(--ink); color:var(--white); }
+.ctaBand { background:var(--navy); border-bottom:1px solid rgba(255,255,255,.18); padding:56px 0; }
+.ctaHeading { font-family:var(--font-editorial); font-weight:400; line-height:1.15; }
+.ctaBand :global(.text-sand) { color:var(--sand); }
+.ctaBand :global(.btn-outline) { color:var(--white); }
+.ctaBand :global(.btn-outline):hover { background:var(--white); color:var(--navy); }
+.tagline,.footerLink,.contactItem,.socialLink { color:#c5c5d2; }
+.whatsappLink { color:var(--sand); }
+.copyright,.credit { color:#ababbd; }
+.colLabel { text-transform:none; }

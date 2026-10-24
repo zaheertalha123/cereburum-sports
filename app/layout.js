@@ -72,6 +72,7 @@ export default function RootLayout({ children }) {
     <html lang="en" className={`${inter.variable} ${bebas.variable}`} suppressHydrationWarning>
       <body suppressHydrationWarning>
         <ScrollReveal />
+        <a href="#main-content" className="skip-link">Skip to content</a>
         <Navbar />
         <main id="main-content">
           {children}

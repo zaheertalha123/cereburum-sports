@@ -86,3 +86,13 @@
   border-style: solid;
   border-color: transparent transparent transparent rgba(187,181,101,0.2);
 }
+/* Ground Builder: quiet, accessible contact shortcuts. */
+.fab { width:48px; height:48px; border-radius:var(--radius-md); box-shadow:var(--shadow-sm); }
+.fabWhatsapp { animation:none; background:#25D366; color:var(--ink); }
+.fabContact { background:var(--sand); }
+.fabWhatsapp:hover,.fabContact:hover { transform:none; box-shadow:var(--shadow-md); }
+.fab:focus-visible .tooltip { opacity:1; transform:none; }
+.tooltip { right:58px; }
+.stack { gap:8px; bottom:16px; right:16px; }
+
+.fabWhatsapp:hover { background:#1fba58; }
