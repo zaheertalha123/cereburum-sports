@@ -2712,6 +2712,108 @@ const rawGuides = [
       ],
     },
   },
+  {
+    id: 'pole-bending',
+    title: 'Pole Bending in Sports Netting Structures: Causes and Examples',
+    category: 'maintenance-and-issues',
+    image: '/images/guides/pole-bending/gallery/pole-bending-01.webp',
+    imageAlt: 'Sports net enclosure showing a bent corner support pole highlighted with a red vertical reference line | Cereburum Sports',
+    desc: 'Learn how to identify bent poles in cricket practice nets, football enclosures, and sports arenas. This guide uses real photographs and videos to show how supporting poles can bend or lean away from their original position. Understand possible causes, including excessive net tension, wind pressure, and structural weaknesses, and learn why bent poles should be inspected and corrected to maintain a safe and properly supported netting structure.',
+    images: [
+      {
+        url: '/images/guides/pole-bending/gallery/pole-bending-01.webp',
+        alt: 'Wide view of a sports net enclosure with a red dashed vertical line highlighting bending in a tall corner support pole | Cereburum Sports',
+      },
+      {
+        url: '/images/guides/pole-bending/gallery/pole-bending-02.webp',
+        alt: 'Reference photograph showing pole bending and positioning in a sports netting support structure | Cereburum Sports',
+      },
+      {
+        url: '/images/guides/pole-bending/gallery/pole-bending-03.webp',
+        alt: 'Close-up of a tall white and green sports net support pole bending away from a straight red vertical reference line | Cereburum Sports',
+      },
+      {
+        url: '/images/guides/pole-bending/gallery/pole-bending-04.webp',
+        alt: 'Sports net enclosure support pole reference showing visible bending or deviation from its intended position | Cereburum Sports',
+      },
+      {
+        url: '/images/guides/pole-bending/gallery/pole-bending-05.webp',
+        alt: 'Example of pole positioning and bending in a sports netting enclosure | Cereburum Sports',
+      },
+      {
+        url: '/images/guides/pole-bending/gallery/pole-bending-06.webp',
+        alt: 'Sports enclosure pole condition reference for identifying structural bending and misalignment | Cereburum Sports',
+      },
+      {
+        url: '/images/guides/pole-bending/gallery/pole-bending-07.webp',
+        alt: 'Reference image showing the condition of supporting poles in a sports netting structure | Cereburum Sports',
+      },
+      {
+        type: 'video',
+        url: '/images/guides/pole-bending/gallery/pole-bending-08.mp4',
+        poster: '/images/guides/pole-bending/gallery/pole-bending-01.webp',
+        alt: 'Video reference demonstrating pole bending in a sports net enclosure and its effect on structural alignment | Cereburum Sports',
+      },
+      {
+        url: '/images/guides/pole-bending/gallery/pole-bending-09.webp',
+        alt: 'Night view of a sports net enclosure showing a bent vertical support pole highlighted against a straight red reference line | Cereburum Sports',
+      },
+      {
+        type: 'video',
+        url: '/images/guides/pole-bending/gallery/pole-bending-10.mp4',
+        poster: '/images/guides/pole-bending/gallery/pole-bending-09.webp',
+        alt: 'Video reference showing bending in a tall sports net support pole at an outdoor sports facility | Cereburum Sports',
+      },
+      {
+        url: '/images/guides/pole-bending/gallery/pole-bending-11.webp',
+        alt: 'Additional sports netting support pole reference for examining bending and structural positioning | Cereburum Sports',
+      },
+    ],
+    features: {
+      items: [
+        'Pole Bending Examples',
+        'Vertical Alignment Comparison',
+        'Structural Weakness Identification',
+        'Pole Condition Inspection',
+      ],
+    },
+    applications: {
+      items: [
+        'Cricket Practice Nets',
+        'Football Net Enclosures',
+        'Sports Arenas',
+        'Rooftop Net Enclosures',
+        'Outdoor Training Facilities',
+      ],
+    },
+    materials: {
+      items: [],
+      images: [],
+    },
+    installation: {
+      steps: [
+        'Supporting poles are an important part of a sports netting structure. They hold the net in position and help maintain the intended height, shape, and stability of the enclosure.',
+        'Pole bending occurs when a supporting pole curves or moves away from its intended straight position. This may happen gradually over time or suddenly due to excessive force.',
+        'Common possible causes include strong winds, excessive net tension, insufficient pole strength, weak foundations, corrosion, and improper installation. The actual cause should be determined through inspection.',
+        'Observe the pole from a suitable distance and compare its position with a straight vertical reference line. The reference images use red lines to make bending easier to identify.',
+        'Inspect the upper section of the pole carefully. In some examples, the lower section appears relatively straight while the upper section bends away from the intended vertical position.',
+        'Check the corner poles and intermediate supporting poles. Corner poles may experience forces from netting and support cables in multiple directions, making their condition especially important.',
+        'Look for additional warning signs such as cracked welds, loose connections, damaged foundations, corrosion, or unusual movement. These problems may indicate that the pole requires structural attention.',
+        'Bent poles can affect the overall shape of the enclosure, create uneven net tension, and place additional stress on connected supports. Significant bending may also create a safety risk.',
+        'If a pole shows noticeable or increasing bending, restrict access to the affected area and arrange an inspection by a qualified professional. Do not attempt to straighten a loaded pole or adjust tension cables without appropriate expertise and equipment.',
+        'After the cause has been identified and any necessary repair or replacement has been completed, check the alignment of the supporting poles and the condition of the netting connections before returning the enclosure to use.',
+      ],
+    },
+    benefits: {
+      items: [
+        'Early Bending Detection',
+        'Improved Structural Safety',
+        'Better Pole Alignment',
+        'Reduced Netting Stress',
+        'Timely Maintenance Planning',
+      ],
+    },
+  },
 ];
 
 function mapImages(images) {
