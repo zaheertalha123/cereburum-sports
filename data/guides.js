@@ -1476,6 +1476,160 @@ const rawGuides = [
         'Convenient Maintenance',
       ],
     },
+  },  
+  {
+    id: 'custom-scaffolding',
+    title: 'Custom-Made Scaffolding for Sports Netting and Ground Maintenance',
+    category: 'scaffolding-and-equipment',
+    image: '/images/guides/custom-scaffolding/gallery/custom-scaffolding-01.webp',
+    imageAlt: 'Custom-made mobile scaffolding designed for sports ground netting and lighting maintenance | Cereburum Sports',
+    desc: 'Learn how custom-made scaffolding is used inside cricket grounds and sports arenas for regular maintenance. These specially designed structures provide access to elevated nets, lights, and support wires. Equipped with wheels for easy movement, they can remain inside the sports enclosure for future repairs and adjustments.',
+    images: [
+      {
+        url: '/images/guides/custom-scaffolding/gallery/custom-scaffolding-01.webp',
+        alt: 'Custom-made scaffolding structure used inside a sports netting enclosure | Cereburum Sports',
+      },
+      {
+        url: '/images/guides/custom-scaffolding/gallery/custom-scaffolding-02.webp',
+        alt: 'Custom scaffolding designed for accessing elevated sports netting | Cereburum Sports',
+      },
+      {
+        url: '/images/guides/custom-scaffolding/gallery/custom-scaffolding-03.webp',
+        alt: 'Mobile custom scaffolding for sports ground maintenance and net repairs | Cereburum Sports',
+      },
+      {
+        type: 'video',
+        url: '/images/guides/custom-scaffolding/gallery/custom-scaffolding-04.mp4',
+        poster: '/images/guides/custom-scaffolding/gallery/custom-scaffolding-01.webp',
+        alt: 'Custom scaffolding demonstration for sports arena maintenance | Cereburum Sports',
+      },
+      {
+        type: 'video',
+        url: '/images/guides/custom-scaffolding/gallery/custom-scaffolding-05.mp4',
+        poster: '/images/guides/custom-scaffolding/gallery/custom-scaffolding-01.webp',
+        alt: 'Custom-made scaffolding used for elevated netting access | Cereburum Sports',
+      },
+      {
+        type: 'video',
+        url: '/images/guides/custom-scaffolding/gallery/custom-scaffolding-06.mp4',
+        poster: '/images/guides/custom-scaffolding/gallery/custom-scaffolding-01.webp',
+        alt: 'Mobile scaffolding equipment for sports ground maintenance | Cereburum Sports',
+      },
+      {
+        type: 'video',
+        url: '/images/guides/custom-scaffolding/gallery/custom-scaffolding-07.mp4',
+        poster: '/images/guides/custom-scaffolding/gallery/custom-scaffolding-01.webp',
+        alt: 'Custom scaffolding structure for sports net installation and repair | Cereburum Sports',
+      },
+      {
+        url: '/images/guides/custom-scaffolding/gallery/custom-scaffolding-08.webp',
+        alt: 'Custom-made scaffolding for reaching elevated areas of a sports enclosure | Cereburum Sports',
+      },
+      {
+        url: '/images/guides/custom-scaffolding/gallery/custom-scaffolding-09.webp',
+        alt: 'Custom scaffolding designed for netting and lighting maintenance | Cereburum Sports',
+      },
+      {
+        type: 'video',
+        url: '/images/guides/custom-scaffolding/gallery/custom-scaffolding-10.mp4',
+        poster: '/images/guides/custom-scaffolding/gallery/custom-scaffolding-09.webp',
+        alt: 'Custom scaffolding used for maintenance inside a sports arena | Cereburum Sports',
+      },
+      {
+        type: 'video',
+        url: '/images/guides/custom-scaffolding/gallery/custom-scaffolding-11.mp4',
+        poster: '/images/guides/custom-scaffolding/gallery/custom-scaffolding-09.webp',
+        alt: 'Custom mobile scaffolding for accessing sports netting | Cereburum Sports',
+      },
+      {
+        type: 'video',
+        url: '/images/guides/custom-scaffolding/gallery/custom-scaffolding-12.mp4',
+        poster: '/images/guides/custom-scaffolding/gallery/custom-scaffolding-09.webp',
+        alt: 'Custom scaffolding equipment used for sports ground repairs | Cereburum Sports',
+      },
+      {
+        type: 'video',
+        url: '/images/guides/custom-scaffolding/gallery/custom-scaffolding-13.mp4',
+        poster: '/images/guides/custom-scaffolding/gallery/custom-scaffolding-09.webp',
+        alt: 'Custom-made scaffolding for elevated maintenance work | Cereburum Sports',
+      },
+      {
+        type: 'video',
+        url: '/images/guides/custom-scaffolding/gallery/custom-scaffolding-14.mp4',
+        poster: '/images/guides/custom-scaffolding/gallery/custom-scaffolding-09.webp',
+        alt: 'Mobile scaffolding demonstration for sports netting maintenance | Cereburum Sports',
+      },
+      {
+        url: '/images/guides/custom-scaffolding/gallery/custom-scaffolding-15.webp',
+        alt: 'Custom scaffolding structure for sports arena maintenance | Cereburum Sports',
+      },
+      {
+        type: 'video',
+        url: '/images/guides/custom-scaffolding/gallery/custom-scaffolding-16.mp4',
+        poster: '/images/guides/custom-scaffolding/gallery/custom-scaffolding-15.webp',
+        alt: 'Custom scaffolding used for repairing sports netting | Cereburum Sports',
+      },
+      {
+        type: 'video',
+        url: '/images/guides/custom-scaffolding/gallery/custom-scaffolding-17.mp4',
+        poster: '/images/guides/custom-scaffolding/gallery/custom-scaffolding-15.webp',
+        alt: 'Mobile custom scaffolding for net and lighting maintenance | Cereburum Sports',
+      },
+      {
+        url: '/images/guides/custom-scaffolding/gallery/custom-scaffolding-18.webp',
+        alt: 'Custom-made mobile scaffolding designed for sports ground access | Cereburum Sports',
+      },
+      {
+        type: 'video',
+        url: '/images/guides/custom-scaffolding/gallery/custom-scaffolding-19.mp4',
+        poster: '/images/guides/custom-scaffolding/gallery/custom-scaffolding-18.webp',
+        alt: 'Custom scaffolding used for elevated sports enclosure maintenance | Cereburum Sports',
+      },
+      {
+        type: 'video',
+        url: '/images/guides/custom-scaffolding/gallery/custom-scaffolding-20.mp4',
+        poster: '/images/guides/custom-scaffolding/gallery/custom-scaffolding-18.webp',
+        alt: 'Custom mobile scaffolding for regular sports arena maintenance | Cereburum Sports',
+      },
+    ],
+    features: {
+      items: [
+        'Custom-Built Structure',
+        'Wheels for Easy Movement',
+        'Suitable for Ground Maintenance',
+        'Reusable for Future Repairs',
+      ],
+    },
+    applications: {
+      items: [
+        'Roof Net Repairs',
+        'Lighting Maintenance',
+        'Side Net Adjustments',
+        'Sports Ground Maintenance',
+      ],
+    },
+    materials: {
+      items: [],
+      images: [],
+    },
+    installation: {
+      steps: [
+        'Custom-made scaffolding is designed according to the height, dimensions, and maintenance requirements of a sports ground. It is especially useful for enclosed cricket grounds and sports arenas where elevated areas need regular access.',
+        'The scaffolding is constructed with a strong supporting frame and a suitable working platform. Its dimensions are selected to provide access to roof netting, lights, and other elevated components inside the enclosure.',
+        'Wheels are attached to the bottom of the scaffolding to make it easier to move between different areas of the ground. Suitable wheel locks and stabilizers are required to keep the structure secure while workers are using it.',
+        'During maintenance, the scaffolding can be moved to the required location to access damaged net sections, loose borders, support ropes, or lighting fixtures. It must be positioned on a firm, level surface before use.',
+        'Unlike temporary scaffolding that is removed after installation, custom-made scaffolding can be kept inside the sports enclosure for future maintenance. This allows workers to access elevated areas whenever repairs or adjustments are needed.',
+        'Before each use, inspect the frame, wheels, working platform, and safety components. Never move the scaffolding while workers are on it, and use the required guardrails and fall protection. Store it securely away from the playing area when it is not in use.',
+      ],
+    },
+    benefits: {
+      items: [
+        'Easy Movement Inside Ground',
+        'Convenient Future Maintenance',
+        'Access to Nets and Lights',
+        'Reusable Equipment',
+      ],
+    },
   },
   {
     id: 'corner-door-installation',
