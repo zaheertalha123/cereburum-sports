@@ -1869,6 +1869,84 @@ const rawGuides = [
         'Can Be Relocated Between Work Areas',
       ],
     },
+  },  
+  {
+    id: 'portable-scaffolding',
+    title: 'Portable Scaffolding for Sports Net Installation',
+    category: 'scaffolding-and-equipment',
+    image: '/images/guides/portable-scaffolding/gallery/portable-scaffolding-01.webp',
+    imageAlt: 'Detachable portable scaffolding used for cricket net installation and maintenance | Cereburum Sports',
+    desc: 'Learn how portable scaffolding helps workers install and maintain sports nets at different heights. Its detachable sections make it easy to transport, assemble, and adjust according to the structure. Portable scaffolding is also available with wheels and can be rented for temporary installation work.',
+    images: [
+      ...[
+        'webp', 'webp', 'mp4', 'mp4', 'webp', 'mp4',
+        'mp4', 'mp4', 'mp4', 'webp', 'webp', 'webp',
+        'mp4', 'webp', 'mp4', 'webp', 'mp4', 'mp4',
+        'webp', 'webp', 'webp', 'webp', 'webp', 'mp4',
+      ].map((ext, index) => {
+        const number = String(index + 1).padStart(2, '0');
+        const base = '/images/guides/portable-scaffolding/gallery/';
+        const isVideo = ext === 'mp4';
+
+        return {
+          ...(isVideo ? { type: 'video' } : {}),
+          url: `${base}portable-scaffolding-${number}.${ext}`,
+          ...(isVideo
+            ? {
+                poster: `${base}portable-scaffolding-01.webp`,
+              }
+            : {}),
+          alt: `Portable scaffolding for sports net installation and maintenance - Gallery ${number} | Cereburum Sports`,
+        };
+      }),
+    ],
+    features: {
+      items: [
+        'Detachable Scaffolding Sections',
+        'Adjustable Working Height',
+        'Easy Assembly and Dismantling',
+        'Optional Wheels for Movement',
+        'Reusable for Different Projects',
+        'Available for Rental',
+      ],
+    },
+    applications: {
+      items: [
+        'Cricket Box Net Installation',
+        'Sports Ground Net Installation',
+        'Roof Net Installation',
+        'Side Net Installation',
+        'Net Repair and Maintenance',
+        'Lighting Installation and Maintenance',
+      ],
+    },
+    materials: {
+      items: [],
+      images: [],
+    },
+    installation: {
+      steps: [
+        'Portable scaffolding is commonly used when workers need temporary access to elevated areas during sports net installation. Unlike fixed scaffolding, its sections can be detached and assembled again at another location.',
+        'The scaffolding is made from separate metal frames, connecting pipes, braces, and working platforms. These components can be transported to the installation site and assembled according to the required height.',
+        'Before assembly, inspect all components and select a firm, level working surface. Follow the manufacturer’s instructions for bracing, stabilizers, platforms, and safe assembly.',
+        'The height of portable scaffolding can be adjusted by adding or removing compatible sections. This makes it useful for cricket boxes and sports structures of different heights.',
+        'Some portable scaffolding systems are available with wheels, making them easier to move between working areas. Wheels must be properly locked during use, and the scaffold must not be moved while workers are on it.',
+        'Once the scaffolding is correctly assembled and inspected, workers can use its secured working platform to attach net borders, connect supporting wires, and adjust net positioning.',
+        'Portable scaffolding is also helpful for installing roof nets and repairing damaged netting. Workers can reach different sections of the structure without building permanent access equipment.',
+        'After completing the work, the scaffolding can be dismantled into separate sections and transported to another location. It can also be rented when required for temporary installation or maintenance projects.',
+      ],
+    },
+    benefits: {
+      items: [
+        'Easy to Detach and Transport',
+        'Adjustable Height for Different Structures',
+        'Optional Wheels for Easy Movement',
+        'Suitable for Temporary Installation Work',
+        'Can Be Rented When Required',
+        'Reusable Across Multiple Projects',
+        'Useful for Net and Lighting Maintenance',
+      ],
+    },
   },
   {
     id: 'corner-door-installation',
