@@ -2408,6 +2408,121 @@ const rawGuides = [
         'Organized Delivery',
       ],
     },
+  },  
+  {
+    id: 'center-door',
+    title: 'Center Doors for Sports Net Enclosures: Types, Uses and Benefits',
+    category: 'doors-and-access',
+    image: '/images/guides/center-door/gallery/center-door-01.webp',
+    imageAlt: 'Center entrance door with steel frame and netting in a sports enclosure | Cereburum Sports',
+    desc: 'Explore different center door designs used in cricket practice nets, football enclosures, and sports arenas. Center doors provide a convenient entrance and exit without requiring people to move or lift the surrounding netting. This guide shows real examples of center doors, their construction, benefits, and where they are commonly used.',
+    images: [
+      {
+        url: '/images/guides/center-door/gallery/center-door-01.webp',
+        alt: 'Front view of a center door integrated into white sports netting with a black steel support frame | Cereburum Sports',
+      },
+      {
+        url: '/images/guides/center-door/gallery/center-door-02.webp',
+        alt: 'Open center entrance door with rectangular steel frame and white netting attached to the door | Cereburum Sports',
+      },
+      {
+        type: 'video',
+        url: '/images/guides/center-door/gallery/center-door-03.mp4',
+        poster: '/images/guides/center-door/gallery/center-door-02.webp',
+        alt: 'Video reference showing a center door used for entering and exiting a sports net enclosure | Cereburum Sports',
+      },
+      {
+        type: 'video',
+        url: '/images/guides/center-door/gallery/center-door-04.mp4',
+        poster: '/images/guides/center-door/gallery/center-door-02.webp',
+        alt: 'Video demonstration of a center entrance door in a sports netting structure | Cereburum Sports',
+      },
+      {
+        url: '/images/guides/center-door/gallery/center-door-05.webp',
+        alt: 'Black steel center door with chain-link mesh opening into an enclosed football playing area | Cereburum Sports',
+      },
+      {
+        url: '/images/guides/center-door/gallery/center-door-06.webp',
+        alt: 'Center access door with black steel frame and chain-link mesh in an outdoor sports enclosure | Cereburum Sports',
+      },
+      {
+        type: 'video',
+        url: '/images/guides/center-door/gallery/center-door-07.mp4',
+        poster: '/images/guides/center-door/gallery/center-door-05.webp',
+        alt: 'Video reference showing a center door with steel frame and chain-link mesh for sports ground access | Cereburum Sports',
+      },
+      {
+        type: 'video',
+        url: '/images/guides/center-door/gallery/center-door-08.mp4',
+        poster: '/images/guides/center-door/gallery/center-door-06.webp',
+        alt: 'Video showing the design and use of a center entrance door in a sports enclosure | Cereburum Sports',
+      },
+      {
+        type: 'video',
+        url: '/images/guides/center-door/gallery/center-door-09.mp4',
+        poster: '/images/guides/center-door/gallery/center-door-06.webp',
+        alt: 'Video reference demonstrating center door access in a sports netting enclosure | Cereburum Sports',
+      },
+      {
+        url: '/images/guides/center-door/gallery/center-door-10.webp',
+        alt: 'Center door design reference for convenient entrance and exit in a sports net enclosure | Cereburum Sports',
+      },
+    ],
+    features: {
+      items: [
+        'Central Entrance',
+        'Hinged Door Design',
+        'Steel Frame Construction',
+        'Netting or Chain-Link Mesh',
+      ],
+    },
+    applications: {
+      items: [
+        'Cricket Practice Nets',
+        'Football Grounds',
+        'Sports Arenas',
+        'Training Facilities',
+      ],
+    },
+    materials: {
+      items: [
+        'Steel Door Frame',
+        'Heavy-Duty Hinges',
+        'Sports Netting or Chain-Link Mesh',
+        'Tying Twine',
+        'Protective Paint',
+      ],
+      images: [
+        {
+          url: '/images/guides/center-door/materials/center-door-01.webp',
+          alt: 'Material reference for center door construction in sports net enclosures | Cereburum Sports',
+        },
+        {
+          url: '/images/guides/center-door/materials/center-door-02.webp',
+          alt: 'Material used for preparing and securing center doors in sports netting structures | Cereburum Sports',
+        },
+      ],
+    },
+    installation: {
+      steps: [
+        'A center door is an entrance placed along the side of a sports net enclosure rather than at the corner. It allows players, coaches, and maintenance workers to enter and exit the playing area conveniently.',
+        'Center doors are commonly made using rectangular steel frames with hinges. The door frame is attached to a supporting post so it can open and close without disturbing the surrounding enclosure.',
+        'Different center door designs are available. Some doors use the same white sports netting as the surrounding enclosure, while others use chain-link mesh attached to a steel frame.',
+        'Net-covered center doors are suitable for cricket practice nets and similar enclosures where maintaining a continuous netting appearance is important. The net is secured around the door frame using strong tying twine.',
+        'Chain-link mesh center doors are commonly used in football grounds and multi-purpose sports arenas. They provide a more rigid entrance panel that can handle frequent opening and closing.',
+        'A center door is useful when players need regular access from the side of the enclosure. It can be positioned near the main walking path or another convenient entry point.',
+        'The door should have enough clearance to open and close smoothly. Its hinges, frame, and fastening points should be properly secured, and the surrounding netting should not obstruct movement.',
+        'The reference images and videos show different center door examples. Choose a design based on the type of sports enclosure, available entrance space, frequency of use, and preferred netting or mesh material.',
+      ],
+    },
+    benefits: {
+      items: [
+        'Easy Entry and Exit',
+        'Convenient Side Access',
+        'Protects Surrounding Netting',
+        'Suitable for Frequent Use',
+      ],
+    },
   },
   {
     id: 'corner-door-installation',
