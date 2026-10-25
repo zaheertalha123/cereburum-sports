@@ -2542,6 +2542,18 @@ const rawGuides = [
           url: '/images/guides/center-door/materials/center-door-02.webp',
           alt: 'Material used for preparing and securing center doors in sports netting structures | Cereburum Sports',
         },
+        {
+          url: '/images/guides/center-door/materials/center-door-03.webp',
+          alt: 'Iron rods used to secure the center door frame to the supporting pole | Cereburum Sports',
+        },
+        {
+          url: '/images/guides/center-door/materials/center-door-04.webp',
+          alt: 'Hinges used to attach the center door frame to the supporting pole | Cereburum Sports',
+        },
+        {
+          url: '/images/guides/center-door/materials/center-door-05.webp',
+          alt: 'Anti-rust coating applied to the steel door frame | Cereburum Sports',
+        },
       ],
     },
     installation: {
@@ -2635,6 +2647,18 @@ const rawGuides = [
         {
           url: '/images/guides/corner-door/materials/corner-door-02.webp',
           alt: 'Material reference for attaching sports netting to a steel corner door frame | Cereburum Sports',
+        },
+        {
+          url: '/images/guides/corner-door/materials/corner-door-03.webp',
+          alt: 'Iron rods used to secure the corner door frame to the supporting pole | Cereburum Sports',
+        },
+        {
+          url: '/images/guides/corner-door/materials/corner-door-04.webp',
+          alt: 'Hinges used to attach the corner door frame to the supporting pole | Cereburum Sports',
+        },
+        {
+          url: '/images/guides/corner-door/materials/corner-door-05.webp',
+          alt: 'Anti-rust coating applied to the steel door frame | Cereburum Sports',
         },
       ],
     },
