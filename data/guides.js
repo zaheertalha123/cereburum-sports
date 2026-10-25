@@ -159,6 +159,140 @@ const rawGuides = [
     benefits: {
       items: ['Safe Practice Area', 'Prevents Balls from Escaping', 'Day & Night Practice', 'Strong & Durable Structure'],
     },
+  },  
+  {
+    id: 'cricket-box',
+    title: 'How to Build and Install a Cricket Box',
+    category: 'sports-structure',
+    image: '/images/guides/01-sports-structure/cricket-box/gallery/cricket-box-01.webp',
+    imageAlt: 'Cricket box with steel poles and surrounding sports netting | Cereburum Sports',
+    desc: 'Step-by-step guide to building a cricket box using steel poles and strong netting. Learn how to measure the area, install the structure, and secure the side and roof nets for safe cricket practice.',
+    images: [
+      {
+        url: '/images/guides/01-sports-structure/cricket-box/gallery/cricket-box-01.webp',
+        alt: 'Cricket box gallery 1 - cricket practice enclosure | Cereburum Sports',
+      },
+      {
+        url: '/images/guides/01-sports-structure/cricket-box/gallery/cricket-box-02.webp',
+        alt: 'Cricket box gallery 2 - steel pole structure | Cereburum Sports',
+      },
+      {
+        url: '/images/guides/01-sports-structure/cricket-box/gallery/cricket-box-03.webp',
+        alt: 'Cricket box gallery 3 - cricket net installation | Cereburum Sports',
+      },
+      {
+        url: '/images/guides/01-sports-structure/cricket-box/gallery/cricket-box-04.webp',
+        alt: 'Cricket box gallery 4 - side and roof netting | Cereburum Sports',
+      },
+      {
+        url: '/images/guides/01-sports-structure/cricket-box/gallery/cricket-box-05.webp',
+        alt: 'Cricket box gallery 5 - outdoor cricket practice enclosure | Cereburum Sports',
+      },
+      {
+        url: '/images/guides/01-sports-structure/cricket-box/gallery/cricket-box-06.webp',
+        alt: 'Cricket box gallery 6 - installed side netting | Cereburum Sports',
+      },
+      {
+        url: '/images/guides/01-sports-structure/cricket-box/gallery/cricket-box-07.webp',
+        alt: 'Cricket box gallery 7 - complete netted cricket box | Cereburum Sports',
+      },
+      {
+        url: '/images/guides/01-sports-structure/cricket-box/gallery/cricket-box-08.webp',
+        alt: 'Cricket box gallery 8 - cricket box structure and netting | Cereburum Sports',
+      },
+      {
+        url: '/images/guides/01-sports-structure/cricket-box/gallery/cricket-box-09.webp',
+        alt: 'Cricket box gallery 9 - cricket practice net enclosure | Cereburum Sports',
+      },
+      {
+        type: 'video',
+        url: '/images/guides/01-sports-structure/cricket-box/gallery/cricket-box-10.mp4',
+        poster: '/images/guides/01-sports-structure/cricket-box/gallery/cricket-box-01.webp',
+        alt: 'Cricket box installation video 10 | Cereburum Sports',
+      },
+      {
+        type: 'video',
+        url: '/images/guides/01-sports-structure/cricket-box/gallery/cricket-box-11.mp4',
+        poster: '/images/guides/01-sports-structure/cricket-box/gallery/cricket-box-01.webp',
+        alt: 'Cricket box installation video 11 | Cereburum Sports',
+      },
+      {
+        type: 'video',
+        url: '/images/guides/01-sports-structure/cricket-box/gallery/cricket-box-12.mp4',
+        poster: '/images/guides/01-sports-structure/cricket-box/gallery/cricket-box-01.webp',
+        alt: 'Cricket box installation video 12 | Cereburum Sports',
+      },
+    ],
+    features: {
+      items: [
+        'Strong Steel Structure',
+        'Side and Roof Netting',
+        'Custom Sizes',
+        'Outdoor Installation',
+      ],
+    },
+    applications: {
+      items: [
+        'Cricket Practice',
+        'Home Cricket Nets',
+        'Cricket Academies',
+        'Training Grounds',
+      ],
+    },
+    materials: {
+      items: [
+        'Steel Poles',
+        'High-Strength Netting',
+        'Steel Wire Rope',
+        'Wire Rope Clamps',
+        'Net Tying Thread',
+        'Anti-Rust Paint',
+      ],
+      images: [
+        { 
+          url: '/images/guides/01-sports-structure/cricket-box/materials/cricket-box-01.webp', 
+          alt: 'Steel poles and support pipes used in cricket arena construction | Cereburum Sports' 
+        },
+        { 
+          url: '/images/guides/01-sports-structure/cricket-box/materials/cricket-box-02.webp', 
+          alt: 'Bamboos used to make the cricket box frame | Cereburum Sports' 
+        },
+        { 
+          url: '/images/guides/01-sports-structure/cricket-box/materials/cricket-box-03.webp', 
+          alt: 'irons hook wled with the stell pipes for hanging purposes | Cereburum Sports' 
+        },
+        { 
+          url: '/images/guides/01-sports-structure/cricket-box/materials/cricket-box-04.webp', 
+          alt: 'floodlights installed on steel poles for night practice | Cereburum Sports' 
+        },
+        { 
+          url: '/images/guides/01-sports-structure/cricket-box/materials/cricket-box-05.webp', 
+          alt: 'coated steel wires installed on poles to support roof nets | Cereburum Sports' 
+        },
+        { 
+          url: '/images/guides/01-sports-structure/cricket-box/materials/cricket-box-06.webp', 
+          alt: 'Anti-rust coating applied to steel poles for long term durability | Cereburum Sports' 
+        },
+      ],
+    },
+    installation: {
+      steps: [
+        'Measure the available area and decide the length, width, and height of the cricket box. Mark the positions where the steel poles will be installed.',
+        'Prepare the steel poles according to the required measurements. Install the poles firmly in the ground and check that they are straight and properly aligned.',
+        'Connect the poles using steel pipes or wire ropes where required. Make sure the structure is strong enough to support the netting.',
+        'Install the roof netting and attach it securely to the top of the structure. Keep the net properly supported to prevent excessive sagging.',
+        'Install the side netting around the cricket box. Join the net sections properly and secure them using strong tying thread or suitable fasteners.',
+        'Check all corners, joints, and net connections. Make sure the netting is properly secured and the cricket box is ready for practice.',
+      ],
+    },
+    benefits: {
+      items: [
+        'Safe Cricket Practice',
+        'Prevents Ball Escape',
+        'Space Efficient',
+        'Custom Installation',
+      ],
+    },
   },
   {
     id: 'corner-door-installation',
