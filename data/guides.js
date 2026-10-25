@@ -1630,6 +1630,82 @@ const rawGuides = [
         'Reusable Equipment',
       ],
     },
+  },  
+  {
+    id: 'fix-scaffolding',
+    title: 'Fixed Scaffolding for Cricket Boxes and Sports Net Installation',
+    category: 'scaffolding-and-equipment',
+    image: '/images/guides/fix-scaffolding/gallery/fix-scaffolding-01.webp',
+    imageAlt: 'Heavy-duty fixed steel scaffolding for cricket box and sports netting installation | Cereburum Sports',
+    desc: 'Learn how fixed scaffolding is used for installing and maintaining nets in small to medium-sized sports structures and cricket practice boxes. These heavy steel structures provide elevated working access but do not have wheels, making them difficult to reposition compared to mobile scaffolding.',
+    images: [
+      {
+        url: '/images/guides/fix-scaffolding/gallery/fix-scaffolding-01.webp',
+        alt: 'Fixed steel scaffolding structure used for cricket practice net installation | Cereburum Sports',
+      },
+      {
+        url: '/images/guides/fix-scaffolding/gallery/fix-scaffolding-02.webp',
+        alt: 'Heavy-duty fixed scaffolding for accessing elevated sports netting | Cereburum Sports',
+      },
+      {
+        type: 'video',
+        url: '/images/guides/fix-scaffolding/gallery/fix-scaffolding-03.mp4',
+        poster: '/images/guides/fix-scaffolding/gallery/fix-scaffolding-01.webp',
+        alt: 'Fixed scaffolding used for sports netting installation and maintenance | Cereburum Sports',
+      },
+      {
+        url: '/images/guides/fix-scaffolding/gallery/fix-scaffolding-04.webp',
+        alt: 'Steel fixed scaffolding for small and medium-sized sports structures | Cereburum Sports',
+      },
+      {
+        url: '/images/guides/fix-scaffolding/gallery/fix-scaffolding-05.webp',
+        alt: 'Tall fixed steel scaffolding with working platform and cross bracing for cricket net installation | Cereburum Sports',
+      },
+      {
+        type: 'video',
+        url: '/images/guides/fix-scaffolding/gallery/fix-scaffolding-06.mp4',
+        poster: '/images/guides/fix-scaffolding/gallery/fix-scaffolding-05.webp',
+        alt: 'Demonstration of fixed scaffolding equipment for cricket box netting work | Cereburum Sports',
+      },
+    ],
+    features: {
+      items: [
+        'Heavy Steel Structure',
+        'Fixed Base Without Wheels',
+        'Elevated Working Platform',
+        'Strong Frame Construction',
+      ],
+    },
+    applications: {
+      items: [
+        'Cricket Practice Boxes',
+        'Small Sports Enclosures',
+        'Medium-Sized Net Structures',
+        'Net Installation and Repairs',
+      ],
+    },
+    materials: {
+      items: [],
+      images: [],
+    },
+    installation: {
+      steps: [
+        'Fixed scaffolding is commonly used for small to medium-sized sports structures and cricket practice boxes. It provides workers with access to elevated areas where nets, ropes, and supporting wires need to be installed or maintained.',
+        'These scaffolding structures are generally made from heavy steel pipes or hollow steel sections. The frame includes vertical supports, horizontal connections, and cross bracing to provide strength and stability.',
+        'Unlike mobile scaffolding, fixed scaffolding does not have wheels. It must be placed on a firm, level surface and properly secured before workers use the elevated platform.',
+        'During cricket box installation, workers can use the scaffolding to reach upper net borders, roof support wires, and other elevated connections. This makes it useful for attaching and adjusting netting at heights that cannot be reached safely from the ground.',
+        'Because the structure is heavy and has no wheels, moving it from one location to another can be difficult. Repositioning may require suitable lifting equipment or partial dismantling, depending on its design and weight.',
+        'Before use, inspect the steel frame, bracing, platform, and base supports. Make sure the scaffolding is properly secured and equipped with suitable access, guardrails, and fall protection. Workers should not use an incomplete or unstable structure.',
+      ],
+    },
+    benefits: {
+      items: [
+        'Strong Steel Construction',
+        'Elevated Working Access',
+        'Suitable for Cricket Boxes',
+        'Reusable for Maintenance',
+      ],
+    },
   },
   {
     id: 'corner-door-installation',
