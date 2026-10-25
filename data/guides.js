@@ -774,6 +774,97 @@ const rawGuides = [
         'Safe Handling',
       ],
     },
+  },  
+  {
+    id: 'net-stitching',
+    title: 'How to Stitch Sports Netting Borders Together',
+    category: 'installation-and-techniques',
+    image: '/images/guides/net-stitching/gallery/net-stitching-01.webp',
+    imageAlt: 'Sports netting borders stitched together using white tying twine | Cereburum Sports',
+    desc: 'Step-by-step guide to joining and stitching sports netting borders to form a single continuous border. Learn how to align adjoining net sections, secure their reinforced edges using strong tying twine, and maintain a proper connection for cricket practice nets, sports arenas, and other netting enclosures.',
+    images: [
+      {
+        url: '/images/guides/net-stitching/gallery/net-stitching-01.webp',
+        alt: 'Net Stitching gallery 1 - close-up of white sports netting attached to a black reinforced border using tying twine | Cereburum Sports',
+      },
+      {
+        url: '/images/guides/net-stitching/gallery/net-stitching-02.webp',
+        alt: 'Net Stitching gallery 2 - two reinforced net borders stitched together to form a single continuous border | Cereburum Sports',
+      },
+      {
+        url: '/images/guides/net-stitching/gallery/net-stitching-03.webp',
+        alt: 'Net Stitching gallery 3 - front view of joined sports netting sections with aligned mesh and a continuous upper border | Cereburum Sports',
+      },
+      {
+        type: 'video',
+        url: '/images/guides/net-stitching/gallery/net-stitching-04.mp4',
+        poster: '/images/guides/net-stitching/gallery/net-stitching-01.webp',
+        alt: 'Net Stitching video 1 - demonstration of stitching sports netting borders together | Cereburum Sports',
+      },
+      {
+        type: 'video',
+        url: '/images/guides/net-stitching/gallery/net-stitching-05.mp4',
+        poster: '/images/guides/net-stitching/gallery/net-stitching-03.webp',
+        alt: 'Net Stitching video 2 - joining adjacent sports net sections and securing their reinforced borders | Cereburum Sports',
+      },
+    ],
+    features: {
+      items: [
+        'Continuous Border',
+        'Strong Stitching',
+        'Aligned Netting',
+        'Secure Connection',
+      ],
+    },
+    applications: {
+      items: [
+        'Cricket Practice Nets',
+        'Sports Arenas',
+        'Football Netting',
+        'Large Net Enclosures',
+      ],
+    },
+    materials: {
+      items: [
+        'Sports Netting',
+        'Reinforced Net Borders',
+        'High-Strength Tying Twine',
+        'Wooden Netting Needle',
+      ],
+      images: [
+        { 
+          url: '/images/guides/net-stitching/materials/net-stitching-01.webp', 
+          alt: 'Parachute border sewn with the netting thread | Cereburum Sports' 
+        },
+        { 
+          url: '/images/guides/net-stitching/materials/net-stitching-02.webp', 
+          alt: 'Parachute thread used to stitch the netting borders | Cereburum Sports' 
+        },
+        { 
+          url: '/images/guides/net-stitching/materials/net-stitching-03.webp', 
+          alt: 'Wooden netting needle used to join the nets | Cereburum Sports' 
+        },
+      ],
+    },
+    installation: {
+      steps: [
+        'Identify the two sports netting sections that need to be joined. Spread out the nets and check that their reinforced borders are clean, properly positioned, and free from tangles.',
+        'Bring the two reinforced borders together and align them carefully. Make sure both borders follow the same line so they can be stitched together to form a single continuous border.',
+        'Prepare strong tying twine and wind it around a wooden netting needle. Keep enough twine available to complete the stitching without unnecessary interruptions.',
+        'Start stitching from one end of the joined borders. Pass the tying twine through or around both reinforced edges and secure it with a firm knot. Continue stitching along the borders at regular intervals to hold them together.',
+        'While stitching, maintain even tension on the tying twine. Keep both borders aligned and avoid pulling too tightly, as excessive tension may cause the netting to bend or become uneven.',
+        'After joining the borders, check the connection between the adjoining net sections. Make sure the mesh remains properly aligned and there are no large gaps or loose sections along the joint.',
+        'Finish the stitching with secure knots and trim any unnecessary loose twine. Inspect the completed joint to confirm that both borders are firmly connected and form a single continuous border.',
+      ],
+    },
+    benefits: {
+      items: [
+        'Strong Net Connection',
+        'Continuous Border',
+        'Reduced Gaps',
+        'Neat Finish',
+      ],
+    },
   },
   {
     id: 'corner-door-installation',
