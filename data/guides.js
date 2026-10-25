@@ -1788,6 +1788,87 @@ const rawGuides = [
         'Useful for Elevated Maintenance',
       ],
     },
+  },  
+  {
+    id: 'mobile-scissor-lift',
+    title: 'Mobile Scissor Lift for Sports Net Installation',
+    category: 'scaffolding-and-equipment',
+    image: '/images/guides/mobile-scissor-lift/gallery/mobile-scissor-lift-01.webp',
+    imageAlt: 'Mobile scissor lift providing elevated access for sports net installation and maintenance | Cereburum Sports',
+    desc: 'Learn how mobile scissor lifts help workers safely reach elevated areas during sports net installation and maintenance. These machines provide a stable working platform for attaching nets, adjusting supporting wires, and repairing netting in cricket boxes and sports enclosures.',
+    images: [
+      {
+        url: '/images/guides/mobile-scissor-lift/gallery/mobile-scissor-lift-01.webp',
+        alt: 'Mobile scissor lift used for elevated sports net installation | Cereburum Sports',
+      },
+      {
+        url: '/images/guides/mobile-scissor-lift/gallery/mobile-scissor-lift-02.webp',
+        alt: 'Worker on elevated scissor lift installing netting around a cricket enclosure | Cereburum Sports',
+      },
+      {
+        type: 'video',
+        url: '/images/guides/mobile-scissor-lift/gallery/mobile-scissor-lift-03.mp4',
+        poster: '/images/guides/mobile-scissor-lift/gallery/mobile-scissor-lift-02.webp',
+        alt: 'Mobile scissor lift demonstration during sports net installation | Cereburum Sports',
+      },
+      {
+        type: 'video',
+        url: '/images/guides/mobile-scissor-lift/gallery/mobile-scissor-lift-04.mp4',
+        poster: '/images/guides/mobile-scissor-lift/gallery/mobile-scissor-lift-01.webp',
+        alt: 'Scissor lift providing elevated working access for net installation | Cereburum Sports',
+      },
+      {
+        type: 'video',
+        url: '/images/guides/mobile-scissor-lift/gallery/mobile-scissor-lift-05.mp4',
+        poster: '/images/guides/mobile-scissor-lift/gallery/mobile-scissor-lift-02.webp',
+        alt: 'Using a mobile scissor lift for sports net maintenance and adjustments | Cereburum Sports',
+      },
+    ],
+    features: {
+      items: [
+        'Hydraulic Lifting Platform',
+        'Stable Elevated Workspace',
+        'Movable Between Work Areas',
+        'Adjustable Working Height',
+        'Platform Safety Guardrails',
+      ],
+    },
+    applications: {
+      items: [
+        'Cricket Box Net Installation',
+        'Sports Enclosure Maintenance',
+        'Side Net Installation',
+        'Roof Net Adjustments',
+        'Lighting Maintenance',
+        'Supporting Wire Connections',
+      ],
+    },
+    materials: {
+      items: [],
+      images: [],
+    },
+    installation: {
+      steps: [
+        'Mobile scissor lifts are useful when workers need to reach elevated areas of cricket boxes and sports netting structures. They provide a working platform for tasks that are difficult to perform using ordinary ladders.',
+        'Before using a scissor lift, inspect the working area and check that the ground is firm, level, and suitable for the equipment. Make sure there are no obstacles or overhead electrical hazards.',
+        'Position the scissor lift near the section where the net needs to be installed. Follow the manufacturer’s instructions for positioning, operating, and stabilizing the equipment.',
+        'A trained worker can enter the platform and raise it to the required working height while remaining within the equipment’s rated capacity and operating limits.',
+        'Once at the required height, the worker can attach the net border to the supporting poles or wires. The elevated platform provides space to work on net connections and adjust their positioning.',
+        'Scissor lifts are also helpful when installing roof nets, connecting supporting ropes, and adjusting net tension. Workers can reach the upper sections without repeatedly climbing a ladder.',
+        'After completing one section, the platform can be lowered and the lift moved to another working position. Driving while elevated is permitted only when the equipment and ground conditions allow it under the manufacturer’s instructions.',
+        'Scissor lifts can also be used for future maintenance, including repairing damaged nets, replacing connections, and servicing lights installed at elevated positions.',
+      ],
+    },
+    benefits: {
+      items: [
+        'Stable Working Platform',
+        'Safer Elevated Access When Used Correctly',
+        'Easy Height Adjustment',
+        'Useful for Installation and Maintenance',
+        'Reduces Repeated Ladder Climbing',
+        'Can Be Relocated Between Work Areas',
+      ],
+    },
   },
   {
     id: 'corner-door-installation',
