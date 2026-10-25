@@ -561,6 +561,93 @@ const rawGuides = [
     },
   },
   {
+    id: 'net-extension-joint',
+    title: 'How to Make a Net Extension Joint for Sports Netting',
+    category: 'installation-and-techniques',
+    image: '/images/guides/net-extension-joint/gallery/net-extension-joint-01.webp',
+    imageAlt: 'Net Extension Joint - joining two sports nets using thread and a wooden netting needle | Cereburum Sports',
+    desc: 'Step-by-step guide to joining two sports nets using an extension joint. Learn how to align net edges, use a wooden netting needle, and connect meshes with strong joining thread to extend net length or width.',
+    images: [
+      {
+        url: '/images/guides/net-extension-joint/gallery/net-extension-joint-01.webp',
+        alt: 'Net Extension Joint gallery 1 - joining thread wrapped around a wooden netting needle to connect two nets | Cereburum Sports',
+      },
+      {
+        url: '/images/guides/net-extension-joint/gallery/net-extension-joint-02.webp',
+        alt: 'Net Extension Joint gallery 2 - close-up of joining thread passing through aligned net meshes | Cereburum Sports',
+      },
+      {
+        type: 'video',
+        url: '/images/guides/net-extension-joint/gallery/net-extension-joint-03.mp4',
+        poster: '/images/guides/net-extension-joint/gallery/net-extension-joint-01.webp',
+        alt: 'Net Extension Joint video 1 - demonstration of joining sports net edges using thread and a netting needle | Cereburum Sports',
+      },
+      {
+        type: 'video',
+        url: '/images/guides/net-extension-joint/gallery/net-extension-joint-04.mp4',
+        poster: '/images/guides/net-extension-joint/gallery/net-extension-joint-02.webp',
+        alt: 'Net Extension Joint video 2 - connecting matching net meshes while maintaining proper alignment | Cereburum Sports',
+      },
+      {
+        type: 'video',
+        url: '/images/guides/net-extension-joint/gallery/net-extension-joint-05.mp4',
+        poster: '/images/guides/net-extension-joint/gallery/net-extension-joint-01.webp',
+        alt: 'Net Extension Joint video 3 - extending sports netting by joining two net sections | Cereburum Sports',
+      },
+    ],
+    features: {
+      items: [
+        'Strong Joint',
+        'Seamless Extension',
+        'Flexible Connection',
+        'Durable Stitching',
+      ],
+    },
+    applications: {
+      items: [
+        'Cricket Practice Nets',
+        'Football Ground Netting',
+        'Sports Arenas',
+        'Net Extensions & Repairs',
+      ],
+    },
+    materials: {
+      items: [
+        'Joining Thread',
+        'Wooden Netting Needle',
+        'Sports Netting',
+      ],
+      images: [
+        { 
+          url: '/images/guides/net-extension-joint/materials/net-extension-joint-01.webp', 
+          alt: 'Thread used to join the nets | Cereburum Sports' 
+        },
+        { 
+          url: '/images/guides/net-extension-joint/materials/net-extension-joint-02.webp', 
+          alt: 'Joining thread wrapped around a wooden netting needle to connect two nets | Cereburum Sports' 
+        }
+      ],
+    },
+    installation: {
+      steps: [
+        'Place both nets next to each other and identify the edges that need to be joined. Make sure the nets are properly spread out without twists or folds.',
+        'Align the border meshes of both nets so that the joining line remains straight and the mesh pattern matches properly.',
+        'Wind strong joining thread around a wooden netting needle. Secure the thread at the starting point of the extension joint.',
+        'Pass the netting needle through the matching edge meshes of both nets. Continue joining one mesh at a time while keeping the thread tension even.',
+        'Continue the extension joint along the entire joining line. Avoid pulling the thread too tightly, as this may distort the net meshes.',
+        'Secure the joining thread at the finishing point. Check the complete joint for loose knots, missed meshes, and uneven connections before installing the extended net.',
+      ],
+    },
+    benefits: {
+      items: [
+        'Increases Net Size',
+        'Strong Connection',
+        'Cost Effective',
+        'Easy Net Repairs',
+      ],
+    },
+  },
+  {
     id: 'corner-door-installation',
     title: 'How to Install a Corner Door on Sports Netting Enclosures',
     category: 'doors-and-access',
