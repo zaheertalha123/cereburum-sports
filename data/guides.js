@@ -1101,6 +1101,143 @@ const rawGuides = [
         'Long-Lasting Use',
       ],
     },
+  },  
+  {
+    id: 'roof-installation',
+    title: 'How to Install Roof Netting on Sports Enclosures',
+    category: 'installation-and-techniques',
+    image: '/images/guides/roof-installation/gallery/roof-installation-01.webp',
+    imageAlt: 'Roof netting installation using scaffolding and ropes on a sports enclosure | Cereburum Sports',
+    desc: 'Step-by-step guide to installing roof netting for cricket cages and sports arenas. Learn how to lift the roof net, secure its four corners with strong ropes, and stitch the borders to supporting poles or wires for a properly fitted overhead net.',
+    images: [
+      {
+        url: '/images/guides/roof-installation/gallery/roof-installation-01.webp',
+        alt: 'White roof net being lifted and positioned using scaffolding during sports enclosure installation | Cereburum Sports',
+      },
+      {
+        type: 'video',
+        url: '/images/guides/roof-installation/gallery/roof-installation-02.mp4',
+        poster: '/images/guides/roof-installation/gallery/roof-installation-01.webp',
+        alt: 'Roof netting installation process for a sports enclosure | Cereburum Sports',
+      },
+      {
+        type: 'video',
+        url: '/images/guides/roof-installation/gallery/roof-installation-03.mp4',
+        poster: '/images/guides/roof-installation/gallery/roof-installation-01.webp',
+        alt: 'Positioning overhead netting during sports arena roof installation | Cereburum Sports',
+      },
+      {
+        type: 'video',
+        url: '/images/guides/roof-installation/gallery/roof-installation-04.mp4',
+        poster: '/images/guides/roof-installation/gallery/roof-installation-01.webp',
+        alt: 'Securing sports roof netting to the supporting structure | Cereburum Sports',
+      },
+      {
+        url: '/images/guides/roof-installation/gallery/roof-installation-05.webp',
+        alt: 'Overhead white sports netting spread across a cricket enclosure during roof installation | Cereburum Sports',
+      },
+      {
+        type: 'video',
+        url: '/images/guides/roof-installation/gallery/roof-installation-06.mp4',
+        poster: '/images/guides/roof-installation/gallery/roof-installation-05.webp',
+        alt: 'Roof net border attachment process on a sports enclosure | Cereburum Sports',
+      },
+      {
+        type: 'video',
+        url: '/images/guides/roof-installation/gallery/roof-installation-07.mp4',
+        poster: '/images/guides/roof-installation/gallery/roof-installation-05.webp',
+        alt: 'Stitching overhead sports netting to supporting poles or wires | Cereburum Sports',
+      },
+      {
+        type: 'video',
+        url: '/images/guides/roof-installation/gallery/roof-installation-08.mp4',
+        poster: '/images/guides/roof-installation/gallery/roof-installation-05.webp',
+        alt: 'Securing the roof net border during cricket cage installation | Cereburum Sports',
+      },
+      {
+        type: 'video',
+        url: '/images/guides/roof-installation/gallery/roof-installation-09.mp4',
+        poster: '/images/guides/roof-installation/gallery/roof-installation-05.webp',
+        alt: 'Adjusting and attaching overhead netting across a sports arena | Cereburum Sports',
+      },
+      {
+        type: 'video',
+        url: '/images/guides/roof-installation/gallery/roof-installation-10.mp4',
+        poster: '/images/guides/roof-installation/gallery/roof-installation-05.webp',
+        alt: 'Roof net stitching and attachment demonstration for sports enclosures | Cereburum Sports',
+      },
+      {
+        type: 'video',
+        url: '/images/guides/roof-installation/gallery/roof-installation-11.mp4',
+        poster: '/images/guides/roof-installation/gallery/roof-installation-05.webp',
+        alt: 'Final roof net installation and border securing process | Cereburum Sports',
+      },
+    ],
+    features: {
+      items: [
+        'Four-Corner Support',
+        'Strong Rope Attachment',
+        'Stitched Net Borders',
+        'Overhead Coverage',
+      ],
+    },
+    applications: {
+      items: [
+        'Cricket Practice Nets',
+        'Sports Arenas',
+        'Training Facilities',
+        'Rooftop Net Enclosures',
+      ],
+    },
+    materials: {
+      items: [
+        'Sports Roof Netting',
+        'Strong Ropes',
+        'Netting Twine',
+        'Wooden Netting Needle',
+        'Scaffolding',
+      ],
+      images: [
+        { 
+          url: '/images/guides/roof-installation/materials/roof-installation-01.webp', 
+          alt: 'nylon rope used to secure the roof net to the supporting structure | Cereburum Sports' 
+        },
+        { 
+          url: '/images/guides/roof-installation/materials/roof-installation-02.webp', 
+          alt: 'Cable ties used to attach the net border with the poles | Cereburum Sports' 
+        },
+        { 
+          url: '/images/guides/roof-installation/materials/roof-installation-03.webp', 
+          alt: 'Parachute thread used to stitch the netting borders | Cereburum Sports' 
+        },
+        { 
+          url: '/images/guides/roof-installation/materials/roof-installation-04.webp', 
+          alt: 'Wooden netting needle used to join the nets | Cereburum Sports' 
+        },
+        { 
+          url: '/images/guides/roof-installation/materials/roof-installation-05.webp', 
+          alt: 'Scaffolding used to lift the roof net | Cereburum Sports' 
+        },
+      ],
+    },
+    installation: {
+      steps: [
+        'Spread the roof net on the ground and identify its four corners. Check that the net size matches the roof area and that the borders are properly stitched.',
+        'Attach strong ropes to all four corners of the roof net. Lift the net carefully and secure each corner to the corresponding corner of the roof structure. Make sure all four corners are properly attached before starting the border stitching.',
+        'After securing the corners, spread the roof net across the supporting structure. Adjust its position so the net covers the required roof area without twisting or becoming tangled.',
+        'Start stitching the net border from any one side of the roof. Use strong netting twine and a wooden netting needle to attach the border to the supporting pole or wire, depending on the structure.',
+        'Continue stitching along the border, keeping the attachment secure and the net evenly positioned. After completing one side, move to the remaining sides and repeat the process until all roof borders are properly attached.',
+        'Finally, inspect all four corners, stitched borders, and supporting ropes. Check that the roof net is properly secured, evenly spread, and has suitable tension without excessive stretching or unnecessary sagging.',
+      ],
+    },
+    benefits: {
+      items: [
+        'Secure Roof Coverage',
+        'Even Net Support',
+        'Reliable Attachment',
+        'Custom Structure Fit',
+      ],
+    },
   },
   {
     id: 'corner-door-installation',
