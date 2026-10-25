@@ -2114,7 +2114,108 @@ const rawGuides = [
         'Better Installation Planning',
       ],
     },
-  },  
+  },    
+  {
+    id: 'length-measurement',
+    title: 'How to Measure Length for Sports Net Installation',
+    category: 'measurement-and-planning',
+    image: '/images/guides/length-measurement/gallery/length-measurement-01.webp',
+    imageAlt: 'Measuring the distance between corner poles of a sports net enclosure using a measuring tape | Cereburum Sports',
+    desc: 'Learn how to measure the correct length for cricket practice nets, football enclosures, and sports arenas. Measure from one corner pole to the opposite corner while keeping the measuring tape slightly loose. This helps provide enough net material for proper fitting and natural sag during installation.',
+    images: [
+      {
+        url: '/images/guides/length-measurement/gallery/length-measurement-01.webp',
+        alt: 'Measuring tape stretched between two steel poles across a grassy sports ground to measure net length | Cereburum Sports',
+      },
+      {
+        url: '/images/guides/length-measurement/gallery/length-measurement-02.webp',
+        alt: 'Annotated length measurement guide showing corner poles, measuring direction, and slightly loose tape for net fitting | Cereburum Sports',
+      },
+      {
+        type: 'video',
+        url: '/images/guides/length-measurement/gallery/length-measurement-03.mp4',
+        poster: '/images/guides/length-measurement/gallery/length-measurement-01.webp',
+        alt: 'Video demonstration of measuring the distance between corner poles for sports net installation | Cereburum Sports',
+      },
+      {
+        type: 'video',
+        url: '/images/guides/length-measurement/gallery/length-measurement-04.mp4',
+        poster: '/images/guides/length-measurement/gallery/length-measurement-02.webp',
+        alt: 'Sports net length measurement video showing how to position measuring tape between support poles | Cereburum Sports',
+      },
+      {
+        type: 'video',
+        url: '/images/guides/length-measurement/gallery/length-measurement-05.mp4',
+        poster: '/images/guides/length-measurement/gallery/length-measurement-01.webp',
+        alt: 'Checking the required length of a sports net enclosure using a measuring tape | Cereburum Sports',
+      },
+      {
+        url: '/images/guides/length-measurement/gallery/length-measurement-06.webp',
+        alt: 'Sports net enclosure length measurement reference showing the distance along the supporting structure | Cereburum Sports',
+      },
+      {
+        url: '/images/guides/length-measurement/gallery/length-measurement-07.webp',
+        alt: 'Annotated sports net length measurement along a brick boundary wall showing the starting pole, final pole, and loose measuring tape | Cereburum Sports',
+      },
+      {
+        type: 'video',
+        url: '/images/guides/length-measurement/gallery/length-measurement-08.mp4',
+        poster: '/images/guides/length-measurement/gallery/length-measurement-07.webp',
+        alt: 'Video showing length measurement along the boundary of a sports net structure with allowance for natural net sag | Cereburum Sports',
+      },
+      {
+        type: 'video',
+        url: '/images/guides/length-measurement/gallery/length-measurement-09.mp4',
+        poster: '/images/guides/length-measurement/gallery/length-measurement-07.webp',
+        alt: 'Practical demonstration of measuring sports net enclosure length from the starting corner to the final pole | Cereburum Sports',
+      },
+    ],
+    features: {
+      items: [
+        'Corner-to-Corner Measurement',
+        'Slightly Loose Measuring Tape',
+        'Natural Net Sag Allowance',
+        'Accurate Net Length Planning',
+      ],
+    },
+    applications: {
+      items: [
+        'Cricket Practice Nets',
+        'Football Net Enclosures',
+        'Sports Arenas',
+        'Rooftop Net Enclosures',
+      ],
+    },
+    materials: {
+      items: [
+        '100 ft Measuring Tape',
+      ],
+      images: [
+        {
+          url: '/images/guides/length-measurement/materials/length-measurement-01.webp',
+          alt: 'Measuring tape used to measure the distance between corner poles for sports net installation | Cereburum Sports',
+        },
+      ],
+    },
+    installation: {
+      steps: [
+        'Identify the starting corner pole of the sports net structure. This will be the starting point for measuring the required net length.',
+        'Place the measuring tape at the starting corner pole and extend it towards the opposite corner or final pole along the side being measured.',
+        'Keep the measuring tape slightly loose instead of pulling it completely tight. Allow a small natural curve in the tape to provide extra space for proper net fitting and sag.',
+        'Continue measuring until the tape reaches the opposite corner pole. Make sure the tape follows the intended net installation direction.',
+        'Record the total length shown on the measuring tape. This measurement will help determine the required net size, including the allowance for natural sag.',
+        'Repeat the process for the remaining sides of the structure where required. Recheck the measurements before ordering, preparing, or cutting the sports net.',
+      ],
+    },
+    benefits: {
+      items: [
+        'Proper Net Fitting',
+        'Natural Net Sag',
+        'Reduced Risk of Short Netting',
+        'Better Installation Planning',
+      ],
+    },
+  },
   {
     id: 'corner-door-installation',
     title: 'How to Install a Corner Door on Sports Netting Enclosures',
