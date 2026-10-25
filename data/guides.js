@@ -427,58 +427,58 @@ const rawGuides = [
         'Suitable for Outdoor Use',
       ],
     },
-  },
+  },  
   {
     id: 'bamboos',
-    title: 'How to Install Bamboo Supports for Sports Netting',
+    title: 'Use of Bamboo Supports for Cricket Pitches and Rooftop Nets',
     category: 'installation-and-techniques',
     image: '/images/guides/bamboos/gallery/bamboos-01.webp',
-    imageAlt: 'Bamboo support structure with sports netting installed around a cricket practice enclosure | Cereburum Sports',
-    desc: 'Step-by-step guide to installing bamboo supports for cricket practice nets and sports enclosures. Learn how to measure the area, position bamboo poles, secure the netting, and build a simple and affordable practice setup.',
+    imageAlt: 'Bamboo poles supporting a cricket practice pitch and sports netting enclosure | Cereburum Sports',
+    desc: 'Explore how bamboo poles are used to support cricket practice nets, home cricket pitches, and rooftop netting enclosures. Bamboo provides an affordable and practical alternative to permanent steel structures for suitable small-scale installations. This guide shows real examples of bamboo-supported netting, different enclosure sizes, and how bamboo poles, ropes, and netting work together to create a practice area.',
     images: [
       {
         url: '/images/guides/bamboos/gallery/bamboos-01.webp',
-        alt: 'Bamboo poles supporting a cricket practice net enclosure | Cereburum Sports',
+        alt: 'Bamboo-supported cricket practice pitch with protective sports netting | Cereburum Sports',
       },
       {
         url: '/images/guides/bamboos/gallery/bamboos-02.webp',
-        alt: 'Bamboo support installation showing a 42 ft length and 20 ft width with four bamboo positions | Cereburum Sports',
+        alt: 'Bamboo-supported cricket practice net measuring 42 ft in length and 20 ft in width with four marked bamboo positions | Cereburum Sports',
       },
       {
         url: '/images/guides/bamboos/gallery/bamboos-03.webp',
-        alt: 'Bamboo netting installation showing a 35 ft length and 22 ft width with four bamboo supports | Cereburum Sports',
+        alt: 'Cricket practice net setup measuring 35 ft in length and 22 ft in width with bamboo support positions highlighted | Cereburum Sports',
       },
       {
         url: '/images/guides/bamboos/gallery/bamboos-04.webp',
-        alt: 'Completed bamboo-supported cricket practice enclosure with netting on the sides and roof | Cereburum Sports',
+        alt: 'Completed cricket practice enclosure using bamboo poles to support side and roof netting | Cereburum Sports',
       },
       {
         type: 'video',
         url: '/images/guides/bamboos/gallery/bamboos-05.mp4',
         poster: '/images/guides/bamboos/gallery/bamboos-01.webp',
-        alt: 'Bamboo support and sports netting installation video | Cereburum Sports',
+        alt: 'Video showing the use of bamboo poles for supporting cricket practice netting | Cereburum Sports',
       },
       {
         type: 'video',
         url: '/images/guides/bamboos/gallery/bamboos-06.mp4',
         poster: '/images/guides/bamboos/gallery/bamboos-01.webp',
-        alt: 'Bamboo-supported cricket practice net setup walkthrough | Cereburum Sports',
+        alt: 'Walkthrough of a bamboo-supported cricket practice net enclosure | Cereburum Sports',
       },
       {
         url: '/images/guides/bamboos/gallery/bamboos-07.webp',
-        alt: 'Bamboo support arrangement for sports netting installation | Cereburum Sports',
+        alt: 'Bamboo pole arrangement used to support netting around a cricket practice area | Cereburum Sports',
       },
       {
         url: '/images/guides/bamboos/gallery/bamboos08.webp',
-        alt: 'Bamboo poles and netting connections in a cricket practice enclosure | Cereburum Sports',
+        alt: 'Bamboo supports and rope connections used for cricket and rooftop netting | Cereburum Sports',
       },
       {
         url: '/images/guides/bamboos/gallery/bamboos-09.webp',
-        alt: 'Sports netting supported by bamboo poles around a practice area | Cereburum Sports',
+        alt: 'Sports netting supported by bamboo poles around a cricket practice pitch | Cereburum Sports',
       },
       {
         url: '/images/guides/bamboos/gallery/bamboos-10.webp',
-        alt: 'Bamboo support and netting installation detail | Cereburum Sports',
+        alt: 'Bamboo support arrangement for securing protective sports netting | Cereburum Sports',
       },
       {
         url: '/images/guides/bamboos/gallery/bamboos-11.webp',
@@ -486,36 +486,38 @@ const rawGuides = [
       },
       {
         url: '/images/guides/bamboos/gallery/bamboos-12.webp',
-        alt: 'Bamboo netting support installation detail | Cereburum Sports',
+        alt: 'Bamboo support connections used in sports netting installations | Cereburum Sports',
       },
       {
         url: '/images/guides/bamboos/gallery/bamboos-13.webp',
-        alt: 'Sports netting material for bamboo-supported enclosures | Cereburum Sports',
+        alt: 'Protective sports netting suitable for bamboo-supported cricket practice areas | Cereburum Sports',
       },
       {
         url: '/images/guides/bamboos/gallery/bamboos-14.webp',
-        alt: 'Bamboo-supported cricket practice net enclosure | Cereburum Sports',
+        alt: 'Bamboo-supported sports net enclosure for cricket practice and small spaces | Cereburum Sports',
       },
       {
         type: 'video',
         url: '/images/guides/bamboos/gallery/bamboos-15.mp4',
         poster: '/images/guides/bamboos/gallery/bamboos-01.webp',
-        alt: 'Bamboo netting installation and support arrangement video | Cereburum Sports',
+        alt: 'Video reference showing bamboo supports and netting arrangements for cricket practice areas | Cereburum Sports',
       },
     ],
     features: {
       items: [
-        'Bamboo Supports',
+        'Bamboo Pole Supports',
+        'Cricket Pitch Netting',
+        'Rooftop Netting Support',
         'Custom Sizes',
         'Roof & Side Netting',
-        'Simple Installation',
       ],
     },
     applications: {
       items: [
-        'Cricket Practice Nets',
-        'Home Practice Areas',
-        'Rooftop Net Enclosures',
+        'Cricket Practice Pitches',
+        'Home Cricket Nets',
+        'Rooftop Practice Nets',
+        'Backyard Cricket Areas',
         'Small Sports Enclosures',
       ],
     },
@@ -527,80 +529,84 @@ const rawGuides = [
         'Tying Twine',
       ],
       images: [
-        { 
-          url: '/images/guides/bamboos/materials/bamboos-01.webp', 
-          alt: 'Bamboo poles used to support sports netting | Cereburum Sports' 
+        {
+          url: '/images/guides/bamboos/materials/bamboos-01.webp',
+          alt: 'Bamboo poles used to support cricket practice and rooftop netting | Cereburum Sports',
         },
-        { 
-          url: '/images/guides/bamboos/materials/bamboos-02.webp', 
-          alt: 'Strong ropes used to support the roof netting | Cereburum Sports' 
+        {
+          url: '/images/guides/bamboos/materials/bamboos-02.webp',
+          alt: 'Strong ropes used to support overhead netting between bamboo poles | Cereburum Sports',
         },
-        { 
-          url: '/images/guides/bamboos/materials/bamboos-03.webp', 
-          alt: 'Tying twine used to secure the netting to the bamboo poles | Cereburum Sports' 
-        }
+        {
+          url: '/images/guides/bamboos/materials/bamboos-03.webp',
+          alt: 'Tying twine used to connect sports netting with bamboo supports | Cereburum Sports',
+        },
       ],
     },
     installation: {
       steps: [
-        'Measure the length and width of the area where the netting will be installed. For example, one setup measures 42 ft by 20 ft, while another measures 35 ft by 22 ft.',
-        'Mark the positions for the bamboo poles according to the measurements. Place the poles at suitable points to support the sides and roof of the netting.',
-        'Install the bamboo poles vertically and secure them properly. Make sure the poles are stable and strong enough to support the netting.',
-        'Connect strong ropes between the bamboo poles to create support for the roof netting. Tie the ropes securely and check their alignment.',
-        'Spread the sports netting across the roof and sides. Tie the netting to the bamboo poles and supporting ropes, keeping it properly aligned without pulling it too tightly.',
-        'Check all bamboo supports, ropes, and netting connections. Make sure the structure is stable, the netting covers the required area, and there are no large gaps.',
+        'Bamboo poles can be used as supports for cricket practice pitches, home cricket nets, and suitable rooftop netting setups. They provide a practical option where a permanent steel structure is not required.',
+        'For cricket practice pitches, bamboo poles are positioned around the playing area to hold protective netting. The net helps prevent cricket balls from travelling outside the practice space.',
+        'Bamboo supports can also be used for rooftop practice nets where the building structure, wind conditions, and available space allow a safely designed installation. The supports must be properly secured without damaging the roof.',
+        'The size of a bamboo-supported enclosure depends on the available space. The reference images show two examples: one measuring 42 ft by 20 ft and another measuring 35 ft by 22 ft.',
+        'Bamboo poles are positioned at suitable points around the enclosure. Their number, spacing, height, and thickness depend on the netting area and the loads the supports must carry.',
+        'Strong ropes are connected between the bamboo poles to support the overhead netting. The sports net is then attached around the sides and roof to create a covered practice area.',
+        'Bamboo-supported netting is useful for smaller practice spaces because it can be more affordable than a permanent steel structure. However, bamboo requires regular inspection for cracks, splitting, moisture damage, and weakening over time.',
+        'For rooftop installations, a qualified professional should assess the roof, anchoring method, wind loads, and structural stability before installation. Bamboo supports should not be used where they cannot safely withstand the expected loads.',
+        'The gallery images and videos show different bamboo support arrangements and completed netting setups, helping customers understand how bamboo can be used for cricket practice pitches and suitable rooftop enclosures.',
       ],
     },
     benefits: {
       items: [
-        'Affordable Setup',
-        'Easy Installation',
-        'Custom Fit',
-        'Practical for Small Areas',
+        'Affordable Netting Support',
+        'Suitable for Small Practice Areas',
+        'Customizable Enclosure Sizes',
+        'Lightweight Material',
+        'Practical for Home Cricket Nets',
       ],
     },
-  },
+  },  
   {
     id: 'net-extension-joint',
-    title: 'How to Make a Net Extension Joint for Sports Netting',
+    title: 'Long-Lasting and Nearly Invisible Net Extension Joints',
     category: 'installation-and-techniques',
     image: '/images/guides/net-extension-joint/gallery/net-extension-joint-01.webp',
-    imageAlt: 'Net Extension Joint - joining two sports nets using thread and a wooden netting needle | Cereburum Sports',
-    desc: 'Step-by-step guide to joining two sports nets using an extension joint. Learn how to align net edges, use a wooden netting needle, and connect meshes with strong joining thread to extend net length or width.',
+    imageAlt: 'Nearly invisible net extension joint connecting two sports net sections using matching joining thread | Cereburum Sports',
+    desc: 'Discover how professional net extension joints connect two sports nets to create a larger net without an obvious joining line. When matching thread and proper stitching techniques are used, the joint blends naturally with the surrounding mesh, providing a strong, long-lasting connection. Explore real images and videos showing how these joints maintain the appearance and strength of cricket nets, football netting, and sports enclosures.',
     images: [
       {
         url: '/images/guides/net-extension-joint/gallery/net-extension-joint-01.webp',
-        alt: 'Net Extension Joint gallery 1 - joining thread wrapped around a wooden netting needle to connect two nets | Cereburum Sports',
+        alt: 'Wooden netting needle and matching thread used to create a strong and nearly invisible extension joint | Cereburum Sports',
       },
       {
         url: '/images/guides/net-extension-joint/gallery/net-extension-joint-02.webp',
-        alt: 'Net Extension Joint gallery 2 - close-up of joining thread passing through aligned net meshes | Cereburum Sports',
+        alt: 'Close-up of two sports nets joined using matching thread to create a neat extension joint | Cereburum Sports',
       },
       {
         type: 'video',
         url: '/images/guides/net-extension-joint/gallery/net-extension-joint-03.mp4',
         poster: '/images/guides/net-extension-joint/gallery/net-extension-joint-01.webp',
-        alt: 'Net Extension Joint video 1 - demonstration of joining sports net edges using thread and a netting needle | Cereburum Sports',
+        alt: 'Video demonstrating how a long-lasting net extension joint is created using matching thread and a netting needle | Cereburum Sports',
       },
       {
         type: 'video',
         url: '/images/guides/net-extension-joint/gallery/net-extension-joint-04.mp4',
         poster: '/images/guides/net-extension-joint/gallery/net-extension-joint-02.webp',
-        alt: 'Net Extension Joint video 2 - connecting matching net meshes while maintaining proper alignment | Cereburum Sports',
+        alt: 'Video showing how matching net meshes are joined to make the extension joint less noticeable | Cereburum Sports',
       },
       {
         type: 'video',
         url: '/images/guides/net-extension-joint/gallery/net-extension-joint-05.mp4',
         poster: '/images/guides/net-extension-joint/gallery/net-extension-joint-01.webp',
-        alt: 'Net Extension Joint video 3 - extending sports netting by joining two net sections | Cereburum Sports',
+        alt: 'Video reference showing a strong and neatly stitched net extension joint for sports netting | Cereburum Sports',
       },
     ],
     features: {
       items: [
-        'Strong Joint',
-        'Seamless Extension',
-        'Flexible Connection',
-        'Durable Stitching',
+        'Nearly Invisible Joint',
+        'Long-Lasting Stitching',
+        'Strong Mesh Connection',
+        'Uniform Net Appearance',
       ],
     },
     applications: {
@@ -608,126 +614,131 @@ const rawGuides = [
         'Cricket Practice Nets',
         'Football Ground Netting',
         'Sports Arenas',
+        'Large Netting Enclosures',
         'Net Extensions & Repairs',
       ],
     },
     materials: {
       items: [
-        'Joining Thread',
+        'Matching Joining Thread',
         'Wooden Netting Needle',
         'Sports Netting',
       ],
       images: [
-        { 
-          url: '/images/guides/net-extension-joint/materials/net-extension-joint-01.webp', 
-          alt: 'Thread used to join the nets | Cereburum Sports' 
+        {
+          url: '/images/guides/net-extension-joint/materials/net-extension-joint-01.webp',
+          alt: 'Strong matching thread used to create durable and less visible net extension joints | Cereburum Sports',
         },
-        { 
-          url: '/images/guides/net-extension-joint/materials/net-extension-joint-02.webp', 
-          alt: 'Joining thread wrapped around a wooden netting needle to connect two nets | Cereburum Sports' 
-        }
+        {
+          url: '/images/guides/net-extension-joint/materials/net-extension-joint-02.webp',
+          alt: 'Wooden netting needle with joining thread used to connect sports nets neatly | Cereburum Sports',
+        },
       ],
     },
     installation: {
       steps: [
-        'Place both nets next to each other and identify the edges that need to be joined. Make sure the nets are properly spread out without twists or folds.',
-        'Align the border meshes of both nets so that the joining line remains straight and the mesh pattern matches properly.',
-        'Wind strong joining thread around a wooden netting needle. Secure the thread at the starting point of the extension joint.',
-        'Pass the netting needle through the matching edge meshes of both nets. Continue joining one mesh at a time while keeping the thread tension even.',
-        'Continue the extension joint along the entire joining line. Avoid pulling the thread too tightly, as this may distort the net meshes.',
-        'Secure the joining thread at the finishing point. Check the complete joint for loose knots, missed meshes, and uneven connections before installing the extended net.',
+        'Net extension joints are used when two or more net sections need to be connected to cover a larger area. Instead of leaving a visible gap or overlapping the nets, the edges are joined together using matching thread.',
+        'A properly made extension joint is designed to blend with the surrounding netting. When the joining thread matches the net color and thickness, the connection becomes difficult to notice from a normal viewing distance.',
+        'The edges of both nets are aligned so that their mesh patterns continue naturally across the joining line. This helps the finished net maintain a uniform appearance.',
+        'A wooden netting needle is used to pass the joining thread through the matching meshes. Each connection is stitched carefully to create a continuous and secure joint.',
+        'The joining thread is kept at a suitable tension. This prevents the meshes from becoming distorted and helps the joined sections maintain their original shape.',
+        'These joints are designed for long-term use. When suitable UV-resistant thread, compatible netting materials, and proper stitching are used, the connection can remain strong through regular outdoor use.',
+        'Unlike poorly joined nets, which may have noticeable overlaps, gaps, or uneven stitching, a professionally finished extension joint creates a cleaner and more consistent netting surface.',
+        'The reference images and videos demonstrate how extension joints are made and how matching thread helps the joining line blend with the rest of the sports net.',
+        'After joining, the complete connection is checked for loose stitches, missed meshes, and uneven tension. A properly finished joint helps extend the net without affecting its overall appearance.',
       ],
     },
     benefits: {
       items: [
-        'Increases Net Size',
-        'Strong Connection',
-        'Cost Effective',
-        'Easy Net Repairs',
+        'Nearly Invisible Joining Line',
+        'Long-Term Durability',
+        'Clean and Uniform Appearance',
+        'Strong Net Connection',
+        'Cost-Effective Net Extension',
       ],
     },
   },  
   {
     id: 'net-packing',
-    title: 'How to Fold, Pack, and Label Sports Netting',
+    title: 'How We Fold, Label, and Pack Sports Nets',
     category: 'installation-and-techniques',
     image: '/images/guides/net-packing/gallery/net-packing-01.webp',
-    imageAlt: 'Sports netting folded and packed into a compact bundle | Cereburum Sports',
-    desc: 'Step-by-step guide to folding, packing, securing, and labeling sports netting for safe storage and transportation. Learn how to arrange large nets into compact bundles, tie them with rope, and mention the correct net size on each package for easy identification during installation.',
+    imageAlt: 'Sports netting carefully folded into a compact bundle for packing | Cereburum Sports',
+    desc: 'See how we carefully fold, label, and pack sports nets before delivery. Each net is arranged into a compact bundle, secured with strong rope, and labeled with its dimensions for easy identification. Our packing process helps prevent tangling, saves space, and makes handling and installation easier.',
     images: [
       {
         url: '/images/guides/net-packing/gallery/net-packing-01.webp',
-        alt: 'Net Packing gallery 1 - folded sports netting prepared for packing | Cereburum Sports',
+        alt: 'White sports netting folded and arranged into a compact bundle before packing | Cereburum Sports',
       },
       {
         url: '/images/guides/net-packing/gallery/net-packing-02.webp',
-        alt: 'Net Packing gallery 2 - packed white sports net tied with blue rope and labeled with its size | Cereburum Sports',
+        alt: 'Packed white sports net secured with blue rope and an identification label showing its size | Cereburum Sports',
       },
       {
         url: '/images/guides/net-packing/gallery/net-packing-03.webp',
-        alt: 'Net Packing gallery 3 - compact bundle of white sports netting secured with blue rope | Cereburum Sports',
+        alt: 'Compact bundle of folded white sports netting tied securely with blue packing rope | Cereburum Sports',
       },
       {
         url: '/images/guides/net-packing/gallery/net-packing-04.webp',
-        alt: 'Net Packing gallery 4 - sports netting packing and bundle preparation | Cereburum Sports',
+        alt: 'Sports netting arranged and prepared for folding and final packing | Cereburum Sports',
       },
       {
         url: '/images/guides/net-packing/gallery/net-packing-05.webp',
-        alt: 'Net Packing gallery 5 - multiple packed sports nets arranged with size identification labels | Cereburum Sports',
+        alt: 'Multiple sports net packets with identification labels showing their dimensions | Cereburum Sports',
       },
       {
         url: '/images/guides/net-packing/gallery/net-packing-06.webp',
-        alt: 'Net Packing gallery 6 - packed netting bundles ready for storage or delivery | Cereburum Sports',
+        alt: 'Folded and securely packed sports net bundles prepared for storage and delivery | Cereburum Sports',
       },
       {
         type: 'video',
         url: '/images/guides/net-packing/gallery/net-packing-07.mp4',
         poster: '/images/guides/net-packing/gallery/net-packing-01.webp',
-        alt: 'Net Packing video 1 - sports netting packing demonstration | Cereburum Sports',
+        alt: 'Video demonstration of how sports netting is folded and prepared for packing | Cereburum Sports',
       },
       {
         type: 'video',
         url: '/images/guides/net-packing/gallery/net-packing-08.mp4',
         poster: '/images/guides/net-packing/gallery/net-packing-02.webp',
-        alt: 'Net Packing video 2 - folding and arranging sports netting for packing | Cereburum Sports',
+        alt: 'Video showing the process of arranging and folding sports netting into manageable sections | Cereburum Sports',
       },
       {
         type: 'video',
         url: '/images/guides/net-packing/gallery/net-packing-09.mp4',
         poster: '/images/guides/net-packing/gallery/net-packing-03.webp',
-        alt: 'Net Packing video 3 - preparing a compact sports netting bundle | Cereburum Sports',
+        alt: 'Video demonstrating how folded sports nets are arranged into compact bundles | Cereburum Sports',
       },
       {
         type: 'video',
         url: '/images/guides/net-packing/gallery/net-packing-10.mp4',
         poster: '/images/guides/net-packing/gallery/net-packing-04.webp',
-        alt: 'Net Packing video 4 - sports net folding and packing technique | Cereburum Sports',
+        alt: 'Video reference showing the folding technique used to prepare sports nets for packing | Cereburum Sports',
       },
       {
         type: 'video',
         url: '/images/guides/net-packing/gallery/net-packing-11.mp4',
         poster: '/images/guides/net-packing/gallery/net-packing-05.webp',
-        alt: 'Net Packing video 5 - handling and securing sports netting during packing | Cereburum Sports',
+        alt: 'Video showing how sports net bundles are secured with packing rope | Cereburum Sports',
       },
       {
         type: 'video',
         url: '/images/guides/net-packing/gallery/net-packing-12.mp4',
         poster: '/images/guides/net-packing/gallery/net-packing-06.webp',
-        alt: 'Net Packing video 6 - preparing packed sports netting for transportation | Cereburum Sports',
+        alt: 'Video demonstrating the preparation of packed sports net bundles for transportation | Cereburum Sports',
       },
       {
         type: 'video',
         url: '/images/guides/net-packing/gallery/net-packing-13.mp4',
         poster: '/images/guides/net-packing/gallery/net-packing-01.webp',
-        alt: 'Net Packing video 7 - sports net packing and final bundle preparation | Cereburum Sports',
+        alt: 'Video showing the final folding, tying, and packing process for sports netting | Cereburum Sports',
       },
     ],
     features: {
       items: [
-        'Compact Folding',
+        'Careful Net Folding',
+        'Compact Packing',
+        'Individual Size Labels',
         'Secure Rope Tying',
-        'Size Labeling',
-        'Easy Transportation',
       ],
     },
     applications: {
@@ -735,510 +746,540 @@ const rawGuides = [
         'Cricket Practice Nets',
         'Football Goal Nets',
         'Sports Arenas',
+        'Custom Sports Netting',
         'Net Storage and Delivery',
       ],
     },
     materials: {
       items: [
         'Sports Netting',
-        'Packing Rope',
-        'Size Labels',
+        'Nylon Packing Rope',
+        'Size Identification Labels',
         'Marker Pen',
       ],
       images: [
-        { 
-          url: '/images/guides/net-packing/materials/net-packing-01.webp', 
-          alt: 'nylon rope used to tie the packed nets | Cereburum Sports' 
+        {
+          url: '/images/guides/net-packing/materials/net-packing-01.webp',
+          alt: 'Strong nylon rope used to tie and secure folded sports net bundles | Cereburum Sports',
         },
-        { 
-          url: '/images/guides/net-packing/materials/net-packing-02.webp', 
-          alt: 'Size labels used to identify the packed nets | Cereburum Sports' 
-        }
+        {
+          url: '/images/guides/net-packing/materials/net-packing-02.webp',
+          alt: 'Size identification label used to mark the dimensions of packed sports nets | Cereburum Sports',
+        },
       ],
     },
     installation: {
       steps: [
-        'Before packing, spread out the sports net and check its overall condition. Make sure the net is clean, dry, and free from unnecessary tangles. Confirm its length and width according to the required measurements.',
-        'Fold the net carefully from one side to the other. Keep the netting properly aligned during folding so that it does not become tangled. Continue folding until the net forms a manageable shape.',
-        'Arrange the folded net into a compact bundle. Keep the loose edges inside the bundle and avoid pulling the netting too tightly, as this may affect the shape of the net.',
-        'Use strong packing rope to tie the folded net securely. Wrap the rope around the bundle and make firm knots to prevent it from opening during handling, storage, or transportation.',
-        'After packing, mention the net size on a label using a marker pen. Write the length and width clearly, such as 105 × 35 ft, and attach the label securely to the bundle so it can be identified without opening the package.',
-        'Recheck the packed bundle to confirm that the rope is properly tied and the size label is correct. Arrange the completed bundles in a clean, dry place, ready for storage, delivery, or installation.',
+        'Before packing, we spread out each prepared sports net and check that it is properly arranged without unnecessary twists or tangles.',
+        'We carefully fold the net from one side to the other, keeping the mesh aligned. This helps maintain the net shape and makes it easier to open during installation.',
+        'After folding, we arrange the net into a compact bundle. The loose edges are kept inside so the packet remains neat and easy to handle.',
+        'We use strong nylon packing rope to tie each folded net securely. The rope keeps the bundle together during handling, storage, and transportation.',
+        'We prepare an identification label for every net packet. The label includes the net dimensions, such as 105 × 35 ft, and its installation section where required.',
+        'The identification label is attached to the outside of the packet so the net size can be checked without opening the bundle.',
+        'Finally, we inspect each packed net to ensure it is properly folded, securely tied, and correctly labeled before arranging it for delivery.',
       ],
     },
     benefits: {
       items: [
-        'Easy Identification',
-        'Tangle Prevention',
-        'Space Saving',
-        'Safe Handling',
+        'Prevents Net Tangling',
+        'Easy Size Identification',
+        'Space-Saving Packing',
+        'Convenient Transportation',
+        'Faster Installation Preparation',
       ],
     },
   },  
   {
     id: 'net-stitching',
-    title: 'How to Stitch Sports Netting Borders Together',
+    title: 'How We Stitch Sports Net Borders for Strong and Secure Connections',
     category: 'installation-and-techniques',
     image: '/images/guides/net-stitching/gallery/net-stitching-01.webp',
-    imageAlt: 'Sports netting borders stitched together using white tying twine | Cereburum Sports',
-    desc: 'Step-by-step guide to joining and stitching sports netting borders to form a single continuous border. Learn how to align adjoining net sections, secure their reinforced edges using strong tying twine, and maintain a proper connection for cricket practice nets, sports arenas, and other netting enclosures.',
+    imageAlt: 'Sports netting stitched to a reinforced parachute border using strong matching thread | Cereburum Sports',
+    desc: 'See how we professionally stitch sports net borders to create strong, secure, and neatly finished connections. We use reinforced parachute borders, durable stitching thread, and careful stitching techniques to join net sections and maintain a continuous border. Explore real images and videos showing our net border stitching process for cricket practice nets, football netting, and sports enclosures.',
     images: [
       {
         url: '/images/guides/net-stitching/gallery/net-stitching-01.webp',
-        alt: 'Net Stitching gallery 1 - close-up of white sports netting attached to a black reinforced border using tying twine | Cereburum Sports',
+        alt: 'Close-up of white sports netting securely stitched to a black reinforced parachute border | Cereburum Sports',
       },
       {
         url: '/images/guides/net-stitching/gallery/net-stitching-02.webp',
-        alt: 'Net Stitching gallery 2 - two reinforced net borders stitched together to form a single continuous border | Cereburum Sports',
+        alt: 'Two reinforced sports net borders stitched together to create a strong and continuous connection | Cereburum Sports',
       },
       {
         url: '/images/guides/net-stitching/gallery/net-stitching-03.webp',
-        alt: 'Net Stitching gallery 3 - front view of joined sports netting sections with aligned mesh and a continuous upper border | Cereburum Sports',
+        alt: 'Front view of joined sports net sections showing aligned mesh and a neatly stitched continuous upper border | Cereburum Sports',
       },
       {
         type: 'video',
         url: '/images/guides/net-stitching/gallery/net-stitching-04.mp4',
         poster: '/images/guides/net-stitching/gallery/net-stitching-01.webp',
-        alt: 'Net Stitching video 1 - demonstration of stitching sports netting borders together | Cereburum Sports',
+        alt: 'Video demonstrating how we stitch reinforced borders onto sports netting | Cereburum Sports',
       },
       {
         type: 'video',
         url: '/images/guides/net-stitching/gallery/net-stitching-05.mp4',
         poster: '/images/guides/net-stitching/gallery/net-stitching-03.webp',
-        alt: 'Net Stitching video 2 - joining adjacent sports net sections and securing their reinforced borders | Cereburum Sports',
+        alt: 'Video showing our process of joining sports net sections by stitching their reinforced borders together | Cereburum Sports',
       },
     ],
     features: {
       items: [
-        'Continuous Border',
-        'Strong Stitching',
-        'Aligned Netting',
-        'Secure Connection',
+        'Reinforced Parachute Borders',
+        'Strong Border Stitching',
+        'Continuous Border Finish',
+        'Secure Net Connections',
       ],
     },
     applications: {
       items: [
         'Cricket Practice Nets',
-        'Sports Arenas',
         'Football Netting',
+        'Sports Arenas',
         'Large Net Enclosures',
+        'Custom Sports Netting',
       ],
     },
     materials: {
       items: [
         'Sports Netting',
-        'Reinforced Net Borders',
-        'High-Strength Tying Twine',
+        'Reinforced Parachute Border',
+        'Strong Parachute Thread',
         'Wooden Netting Needle',
       ],
       images: [
-        { 
-          url: '/images/guides/net-stitching/materials/net-stitching-01.webp', 
-          alt: 'Parachute border sewn with the netting thread | Cereburum Sports' 
+        {
+          url: '/images/guides/net-stitching/materials/net-stitching-01.webp',
+          alt: 'Reinforced parachute border stitched along the edge of sports netting | Cereburum Sports',
         },
-        { 
-          url: '/images/guides/net-stitching/materials/net-stitching-02.webp', 
-          alt: 'Parachute thread used to stitch the netting borders | Cereburum Sports' 
+        {
+          url: '/images/guides/net-stitching/materials/net-stitching-02.webp',
+          alt: 'Strong parachute thread used for stitching reinforced sports net borders | Cereburum Sports',
         },
-        { 
-          url: '/images/guides/net-stitching/materials/net-stitching-03.webp', 
-          alt: 'Wooden netting needle used to join the nets | Cereburum Sports' 
+        {
+          url: '/images/guides/net-stitching/materials/net-stitching-03.webp',
+          alt: 'Wooden netting needle used to stitch and join reinforced sports net borders | Cereburum Sports',
         },
       ],
     },
     installation: {
       steps: [
-        'Identify the two sports netting sections that need to be joined. Spread out the nets and check that their reinforced borders are clean, properly positioned, and free from tangles.',
-        'Bring the two reinforced borders together and align them carefully. Make sure both borders follow the same line so they can be stitched together to form a single continuous border.',
-        'Prepare strong tying twine and wind it around a wooden netting needle. Keep enough twine available to complete the stitching without unnecessary interruptions.',
-        'Start stitching from one end of the joined borders. Pass the tying twine through or around both reinforced edges and secure it with a firm knot. Continue stitching along the borders at regular intervals to hold them together.',
-        'While stitching, maintain even tension on the tying twine. Keep both borders aligned and avoid pulling too tightly, as excessive tension may cause the netting to bend or become uneven.',
-        'After joining the borders, check the connection between the adjoining net sections. Make sure the mesh remains properly aligned and there are no large gaps or loose sections along the joint.',
-        'Finish the stitching with secure knots and trim any unnecessary loose twine. Inspect the completed joint to confirm that both borders are firmly connected and form a single continuous border.',
+        'We stitch reinforced borders onto sports nets to provide strong edges and secure connections. These borders help maintain the shape of the net and provide suitable points for attaching or joining net sections.',
+        'We use reinforced parachute borders because they provide additional support along the edges of sports netting. The border is carefully positioned to follow the net edge.',
+        'Our team uses strong parachute thread to stitch the netting to the reinforced border. The stitching is arranged carefully to keep the border properly attached and prevent loose sections.',
+        'When two sports net sections need to be connected, we align their reinforced borders and stitch them together to form a continuous joining line.',
+        'A wooden netting needle is used to pass the joining thread through the required connection points. We maintain even stitching and suitable thread tension to keep the borders properly aligned.',
+        'We make sure the connected borders remain straight and the surrounding net meshes are properly arranged. This helps create a neat appearance without unnecessary gaps or uneven sections.',
+        'The reinforced border and strong stitching help distribute tension along the net edges, reducing the risk of individual connection points becoming loose during normal use.',
+        'The gallery images and videos showcase our border stitching process, including how the parachute border is attached and how adjoining net sections are connected.',
+        'After stitching, we inspect the completed border to check the thread connections, border alignment, and overall finish before preparing the net for installation.',
       ],
     },
     benefits: {
       items: [
-        'Strong Net Connection',
-        'Continuous Border',
-        'Reduced Gaps',
-        'Neat Finish',
+        'Strong Reinforced Edges',
+        'Long-Lasting Stitching',
+        'Secure Net Connections',
+        'Neat and Continuous Borders',
+        'Better Net Shape and Alignment',
       ],
     },
   },  
   {
     id: 'pre-installation-setup',
-    title: 'How to Prepare Sports Netting Before Installation',
+    title: 'How We Prepare Sports Netting Before Installation',
     category: 'installation-and-techniques',
     image: '/images/guides/pre-installation-setup/gallery/pre-installation-setup-01.webp',
-    imageAlt: 'Pre-installation setup of a sports netting enclosure with steel poles, support wires, and workers preparing the structure | Cereburum Sports',
-    desc: 'Step-by-step guide to preparing sports netting before installation. Learn how to inspect the supporting structure, arrange and unfold netting, identify reinforced borders, check measurements, and position the net correctly before lifting and securing it to cricket cages and sports arenas.',
+    imageAlt: 'Sports netting installation site with steel support poles, overhead wires, and scaffolding prepared for net installation | Cereburum Sports',
+    desc: 'See how we prepare sports nets before installation at cricket practice facilities, football grounds, and sports arenas. Our preparation process includes checking the supporting structure, verifying measurements, carefully unfolding netting, arranging reinforced borders, and preparing installation materials. Explore real images and videos showing how our team organizes large sports nets before lifting and securing them to the enclosure.',
     images: [
       {
         url: '/images/guides/pre-installation-setup/gallery/pre-installation-setup-01.webp',
-        alt: 'Pre-Installation Setup gallery 1 - steel sports enclosure frame with overhead support wires and scaffolding prepared for net installation | Cereburum Sports',
+        alt: 'Steel sports net enclosure with overhead support wires and scaffolding ready for net installation | Cereburum Sports',
       },
       {
         type: 'video',
         url: '/images/guides/pre-installation-setup/gallery/pre-installation-setup-02.mp4',
         poster: '/images/guides/pre-installation-setup/gallery/pre-installation-setup-01.webp',
-        alt: 'Pre-Installation Setup video 1 - preparing sports netting and installation equipment | Cereburum Sports',
+        alt: 'Video showing how our team prepares the supporting structure and equipment before sports net installation | Cereburum Sports',
       },
       {
         type: 'video',
         url: '/images/guides/pre-installation-setup/gallery/pre-installation-setup-03.mp4',
         poster: '/images/guides/pre-installation-setup/gallery/pre-installation-setup-01.webp',
-        alt: 'Pre-Installation Setup video 2 - arranging netting before installation on a sports enclosure | Cereburum Sports',
+        alt: 'Video demonstrating the preparation and arrangement of sports netting before installation | Cereburum Sports',
       },
       {
         url: '/images/guides/pre-installation-setup/gallery/pre-installation-setup-04.webp',
-        alt: 'Pre-Installation Setup gallery 4 - worker spreading and preparing white sports netting along the ground beside a sports field | Cereburum Sports',
+        alt: 'Worker carefully spreading white sports netting on the ground before installation at a sports facility | Cereburum Sports',
       },
       {
         type: 'video',
         url: '/images/guides/pre-installation-setup/gallery/pre-installation-setup-05.mp4',
         poster: '/images/guides/pre-installation-setup/gallery/pre-installation-setup-04.webp',
-        alt: 'Pre-Installation Setup video 3 - preparing and positioning sports netting before lifting | Cereburum Sports',
+        alt: 'Video showing how we unfold and position large sports net sections before lifting | Cereburum Sports',
       },
       {
         type: 'video',
         url: '/images/guides/pre-installation-setup/gallery/pre-installation-setup-06.mp4',
         poster: '/images/guides/pre-installation-setup/gallery/pre-installation-setup-04.webp',
-        alt: 'Pre-Installation Setup video 4 - handling and arranging large sports netting sections | Cereburum Sports',
+        alt: 'Video demonstrating how our team handles and arranges sports netting on the ground before installation | Cereburum Sports',
       },
       {
         url: '/images/guides/pre-installation-setup/gallery/pre-installation-setup-07.webp',
-        alt: 'Pre-Installation Setup gallery 7 - folded white sports netting with black reinforced borders arranged on the ground before installation | Cereburum Sports',
+        alt: 'White sports netting with black reinforced borders unfolded and arranged on the ground for installation | Cereburum Sports',
       },
       {
         type: 'video',
         url: '/images/guides/pre-installation-setup/gallery/pre-installation-setup-08.mp4',
         poster: '/images/guides/pre-installation-setup/gallery/pre-installation-setup-07.webp',
-        alt: 'Pre-Installation Setup video 5 - demonstration of preparing sports netting for installation | Cereburum Sports',
+        alt: 'Video demonstrating the preparation of reinforced sports net borders before installation | Cereburum Sports',
       },
       {
         type: 'video',
         url: '/images/guides/pre-installation-setup/gallery/pre-installation-setup-09.mp4',
         poster: '/images/guides/pre-installation-setup/gallery/pre-installation-setup-07.webp',
-        alt: 'Pre-Installation Setup video 6 - arranging netting sections and preparing reinforced borders | Cereburum Sports',
+        alt: 'Video showing how we arrange netting sections and align their reinforced borders before installation | Cereburum Sports',
       },
       {
         type: 'video',
         url: '/images/guides/pre-installation-setup/gallery/pre-installation-setup-10.mp4',
         poster: '/images/guides/pre-installation-setup/gallery/pre-installation-setup-01.webp',
-        alt: 'Pre-Installation Setup video 7 - sports netting preparation and setup before final installation | Cereburum Sports',
+        alt: 'Video showing the final preparation of sports netting and supporting equipment before installation | Cereburum Sports',
       },
     ],
     features: {
       items: [
         'Structure Inspection',
-        'Net Arrangement',
-        'Border Alignment',
-        'Installation Preparation',
+        'Measurement Verification',
+        'Careful Net Unfolding',
+        'Reinforced Border Alignment',
+        'Organized Installation Preparation',
       ],
     },
     applications: {
       items: [
         'Cricket Practice Nets',
+        'Football Net Enclosures',
         'Sports Arenas',
-        'Football Enclosures',
         'Rooftop Netting',
+        'Large Sports Net Installations',
       ],
     },
     materials: {
       items: [
         'Sports Netting',
         'Reinforced Net Borders',
-        'Support Ropes and Wires',
-        'Tying Twine',
+        'Nylon Support Ropes',
+        'Parachute Stitching Thread',
+        'Wooden Netting Needle',
         'Measuring Tape',
         'Cable Ties',
       ],
       images: [
-        { 
-          url: '/images/guides/pre-installation-setup/materials/pre-installation-setup-01.webp', 
-          alt: 'Border sewn with the netting thread | Cereburum Sports' 
+        {
+          url: '/images/guides/pre-installation-setup/materials/pre-installation-setup-01.webp',
+          alt: 'Reinforced parachute border stitched along the edge of sports netting | Cereburum Sports',
         },
-        { 
-          url: '/images/guides/pre-installation-setup/materials/pre-installation-setup-02.webp', 
-          alt: 'Nylon Rope used to tie the netting sections | Cereburum Sports' 
+        {
+          url: '/images/guides/pre-installation-setup/materials/pre-installation-setup-02.webp',
+          alt: 'Strong nylon rope used to tie and secure sports netting sections during installation | Cereburum Sports',
         },
-        { 
-          url: '/images/guides/pre-installation-setup/materials/pre-installation-setup-03.webp', 
-          alt: 'Parachute thread used to stitch the netting borders | Cereburum Sports' 
+        {
+          url: '/images/guides/pre-installation-setup/materials/pre-installation-setup-03.webp',
+          alt: 'Parachute thread used for stitching and securing reinforced sports net borders | Cereburum Sports',
         },
-        { 
-          url: '/images/guides/pre-installation-setup/materials/pre-installation-setup-04.webp', 
-          alt: 'Wooden netting needle used to join the nets | Cereburum Sports' 
+        {
+          url: '/images/guides/pre-installation-setup/materials/pre-installation-setup-04.webp',
+          alt: 'Wooden netting needle used for joining and repairing sports netting sections | Cereburum Sports',
         },
-        { 
-          url: '/images/guides/pre-installation-setup/materials/pre-installation-setup-05.webp', 
-          alt: 'Measuring tape to confirm and verify sizes before final installation | Cereburum Sports' 
+        {
+          url: '/images/guides/pre-installation-setup/materials/pre-installation-setup-05.webp',
+          alt: 'Measuring tape used to verify sports net dimensions before installation | Cereburum Sports',
         },
-        { 
-          url: '/images/guides/pre-installation-setup/materials/pre-installation-setup-06.webp', 
-          alt: 'Cable Ties to attach net border with the poles | Cereburum Sports' 
+        {
+          url: '/images/guides/pre-installation-setup/materials/pre-installation-setup-06.webp',
+          alt: 'Cable ties used to secure reinforced net borders to supporting poles | Cereburum Sports',
         },
       ],
     },
     installation: {
       steps: [
-        'Inspect the sports enclosure before starting the net installation. Check that the steel poles, upper support pipes, and support wires are properly installed and securely connected.',
-        'Measure the length, width, and height of the enclosure. Compare these measurements with the prepared netting to confirm that the net size matches the installation area.',
-        'Clear the installation area of sharp objects, stones, and other materials that could damage the net. Choose a clean and open space where the netting can be unfolded and arranged safely.',
-        'Remove the sports netting from its packaging and carefully spread it on the ground. Unfold the net gradually to avoid tangling the mesh or twisting the reinforced borders.',
-        'Identify the reinforced borders of each netting section. Arrange the net so that the upper, lower, and side borders face their correct installation positions.',
-        'Check the netting for tangled sections, damaged mesh, loose stitching, or twisted borders. Straighten the net and correct any problems before installation begins.',
-        'Position the netting near the enclosure where it will be installed. Arrange the sections in the correct order and keep the reinforced borders accessible for attaching ropes and securing the net to the supporting structure.',
-        'Prepare the required tying twine, support ropes, and installation tools. Make sure the workers understand the installation sequence and that suitable ladders or scaffolding are safely positioned where needed.',
-        'Before lifting the net, perform a final check of its direction, measurements, and border alignment. Make sure the net is free from tangles and ready to be raised and secured to the enclosure.',
+        'Before installing sports netting, our team checks the supporting structure, including steel poles, overhead support pipes, and wires. We make sure the structure is ready to support the netting.',
+        'We measure the length, width, and height of the installation area and compare these dimensions with the prepared sports nets. This helps confirm that each net section matches its intended position.',
+        'We select a suitable area near the enclosure where the nets can be unfolded and arranged. The ground is checked for sharp objects and other materials that could damage the netting.',
+        'Our team carefully opens the packed net bundles and spreads the netting on the ground. We unfold each section gradually to prevent tangling and unnecessary twisting.',
+        'We identify the reinforced borders and arrange the netting according to its installation direction. The upper, lower, and side borders are positioned correctly before lifting.',
+        'We check the netting for tangled meshes, twisted borders, loose stitching, or other visible issues. Any necessary adjustments are completed while the net is still on the ground.',
+        'For large enclosures, we arrange the net sections in the correct order. This helps our installation team identify which net belongs to each side or roof section.',
+        'We prepare the nylon ropes, cable ties, joining thread, and other materials needed to secure the netting. Suitable scaffolding or access equipment is positioned for the installation work.',
+        'The gallery images and videos showcase how our team spreads, handles, and organizes sports netting before installation, including the preparation of large net sections and reinforced borders.',
+        'Before lifting the netting, we perform a final check of its dimensions, direction, border alignment, and overall condition. Once everything is properly arranged, the net is ready for installation.',
       ],
     },
     benefits: {
       items: [
-        'Faster Installation',
-        'Reduced Net Damage',
-        'Proper Alignment',
-        'Organized Workflow',
+        'Smooth Installation Process',
+        'Reduced Net Tangling',
+        'Correct Net Positioning',
+        'Better Border Alignment',
+        'Reduced Risk of Net Damage',
+        'Organized Installation Work',
       ],
     },
   },  
   {
     id: 'rings',
-    title: 'How to Install Rings on Sports Netting Borders',
+    title: 'How Metal Rings Make Sports Nets Foldable and Adjustable',
     category: 'installation-and-techniques',
     image: '/images/guides/rings/gallery/rings-01.webp',
-    imageAlt: 'Metal rings fitted into black border of green sports netting | Cereburum Sports',
-    desc: 'Step-by-step guide to installing metal rings on sports netting borders for cricket cages, football nets, and sports enclosures. Learn how rings provide strong attachment points for hooks, ropes, and clips while helping keep the net securely installed.',
+    imageAlt: 'Metal rings installed along reinforced sports net borders for adjustable and foldable netting | Cereburum Sports',
+    desc: 'Discover how metal rings make sports nets easier to fold, adjust, open, and close. We install strong metal rings along reinforced parachute borders to create convenient attachment points for ropes, hooks, and clips. These rings allow suitable netting sections to slide, gather, or be repositioned when needed. Explore real images and videos showing how rings improve the flexibility and usability of cricket practice nets, football enclosures, and sports arenas.',
     images: [
       {
         url: '/images/guides/rings/gallery/rings-01.webp',
-        alt: 'Sports netting with metal rings installed along the black border | Cereburum Sports',
+        alt: 'Green sports netting with metal rings fitted along a black reinforced border for adjustable installation | Cereburum Sports',
       },
       {
         url: '/images/guides/rings/gallery/rings-02.webp',
-        alt: 'Close-up of metal ring and spring clip attached to sports netting border | Cereburum Sports',
+        alt: 'Close-up of a metal ring and spring clip used to attach and adjust sports netting | Cereburum Sports',
       },
       {
         url: '/images/guides/rings/gallery/rings-03.webp',
-        alt: 'Metal rings positioned along reinforced black netting border | Cereburum Sports',
+        alt: 'Metal rings arranged along a reinforced black net border to support flexible net positioning | Cereburum Sports',
       },
       {
         url: '/images/guides/rings/gallery/rings-04.webp',
-        alt: 'Metal ring attachment on green sports netting | Cereburum Sports',
+        alt: 'Metal ring attached to green sports netting for convenient opening and closing | Cereburum Sports',
       },
       {
         url: '/images/guides/rings/gallery/rings-05.webp',
-        alt: 'Ring installation detail on reinforced sports net border | Cereburum Sports',
+        alt: 'Close-up of a metal ring securely fitted into a reinforced sports net border | Cereburum Sports',
       },
       {
         url: '/images/guides/rings/gallery/rings-06.webp',
-        alt: 'Close view of ring placement for securing sports netting | Cereburum Sports',
+        alt: 'Ring placement along sports netting border for adjustable attachment and positioning | Cereburum Sports',
       },
       {
         url: '/images/guides/rings/gallery/rings-07.webp',
-        alt: 'Sports net border with metal rings for installation and attachment | Cereburum Sports',
+        alt: 'Sports net border fitted with metal rings for folding, adjustment, and easy removal | Cereburum Sports',
       },
       {
         type: 'video',
         url: '/images/guides/rings/gallery/rings-08.mp4',
         poster: '/images/guides/rings/gallery/rings-01.webp',
-        alt: 'Rings installation demonstration for sports netting borders | Cereburum Sports',
+        alt: 'Video demonstrating metal rings on sports net borders and their use in adjustable netting installations | Cereburum Sports',
       },
     ],
     features: {
       items: [
-        'Metal Rings',
-        'Reinforced Border',
-        'Secure Attachment',
-        'Easy Installation',
+        'Foldable Netting',
+        'Adjustable Net Position',
+        'Easy Opening and Closing',
+        'Reinforced Ring Attachments',
+        'Flexible Net Installation',
       ],
     },
     applications: {
       items: [
         'Cricket Practice Nets',
-        'Football Nets',
+        'Football Net Enclosures',
         'Sports Arenas',
         'Rooftop Net Enclosures',
+        'Movable Net Partitions',
       ],
     },
     materials: {
       items: [
         'Metal Rings',
-        'Reinforced Border Tape',
+        'Reinforced Parachute Border',
         'Ring Installation Tool',
         'Measuring Tape',
       ],
       images: [
-        { 
-          url: '/images/guides/rings/materials/rings-01.webp', 
-          alt: 'Metal rings fitted into black border of sports netting | Cereburum Sports' 
+        {
+          url: '/images/guides/rings/materials/rings-01.webp',
+          alt: 'Metal rings fitted into reinforced sports net borders for flexible attachment | Cereburum Sports',
         },
-        { 
-          url: '/images/guides/rings/materials/rings-02.webp', 
-          alt: 'Parachute border sewn with the netting thread | Cereburum Sports' 
+        {
+          url: '/images/guides/rings/materials/rings-02.webp',
+          alt: 'Reinforced parachute border stitched along sports netting for secure ring installation | Cereburum Sports',
         },
-        { 
-          url: '/images/guides/rings/materials/rings-03.webp', 
-          alt: 'Ring installation tool with yellow and black handles and metal rings for sports netting borders | Cereburum Sports',
-        }
+        {
+          url: '/images/guides/rings/materials/rings-03.webp',
+          alt: 'Ring installation tool with yellow and black handles used to secure metal rings into net borders | Cereburum Sports',
+        },
       ],
     },
     installation: {
       steps: [
-        'Spread the sports net on a clean and flat surface. Check that the black border tape is properly stitched around the edges of the net.',
-        'Measure and mark the positions where the rings will be installed. Keep suitable spacing between rings so the net can be attached evenly to the supporting structure.',
-        'Place each metal ring at the marked position on the reinforced border. Make sure the ring is positioned within the border tape and does not damage the net threads.',
-        'Use a suitable ring installation tool to fix the ring firmly into the border. Check that the ring is properly secured and its edges are smooth.',
-        'Repeat the process along the required sides of the net. After installing all rings, check their alignment and attachment strength. The net can then be connected to the supporting structure using suitable hooks, clips, or ropes.',
+        'We install metal rings along reinforced sports net borders to make netting easier to attach, adjust, fold, and reposition. These rings provide convenient connection points without requiring the net mesh itself to be tied directly to the supporting structure.',
+        'For foldable netting, rings can be arranged along a suitable support rope or cable. This allows the net to slide and gather toward one side, similar to a curtain, when the practice area needs to be opened.',
+        'Metal rings also make sports nets adjustable. Depending on the installation design, the net can be repositioned or its attachment points changed without removing the entire netting structure.',
+        'We use reinforced parachute borders to provide a strong base for installing the rings. The reinforced material helps support the attachment points and reduces direct stress on the net meshes.',
+        'The rings are positioned at suitable intervals along the border. Their spacing depends on the net size, intended movement, and supporting arrangement.',
+        'A ring installation tool is used to secure each metal ring into the reinforced border. We check that the rings are firmly attached and have smooth edges to avoid damaging the netting or connecting ropes.',
+        'Once installed, the rings can be connected to suitable ropes, hooks, clips, or sliding supports. The correct attachment method depends on whether the net needs to remain fixed, fold to one side, or be adjusted occasionally.',
+        'The gallery images and video showcase the metal rings, reinforced borders, and attachment arrangements used in our sports netting installations.',
+        'Before use, we check the rings and connections to ensure they are secure and that any intended folding or sliding movement works smoothly without excessive pulling or damage to the net.',
       ],
     },
     benefits: {
       items: [
-        'Strong Attachment',
-        'Easy Net Removal',
-        'Even Support',
-        'Long-Lasting Use',
+        'Easy Net Folding',
+        'Adjustable Net Positioning',
+        'Convenient Opening and Closing',
+        'Quick Net Removal',
+        'Flexible Use of Space',
+        'Secure Attachment Points',
       ],
     },
   },  
   {
     id: 'roof-installation',
-    title: 'How to Install Roof Netting on Sports Enclosures',
+    title: 'How We Install Roof Netting for Cricket Nets and Sports Arenas',
     category: 'installation-and-techniques',
     image: '/images/guides/roof-installation/gallery/roof-installation-01.webp',
-    imageAlt: 'Roof netting installation using scaffolding and ropes on a sports enclosure | Cereburum Sports',
-    desc: 'Step-by-step guide to installing roof netting for cricket cages and sports arenas. Learn how to lift the roof net, secure its four corners with strong ropes, and stitch the borders to supporting poles or wires for a properly fitted overhead net.',
+    imageAlt: 'Our installation team lifting white roof netting onto a sports enclosure using scaffolding and support ropes | Cereburum Sports',
+    desc: 'See how we install roof netting for cricket practice cages, sports arenas, and outdoor net enclosures. Our installation process includes preparing the roof net, lifting it with support ropes, securing all four corners, and stitching the reinforced borders to the supporting structure. Explore real images and videos showing how our team installs overhead sports netting to provide secure coverage and a neat finish.',
     images: [
       {
         url: '/images/guides/roof-installation/gallery/roof-installation-01.webp',
-        alt: 'White roof net being lifted and positioned using scaffolding during sports enclosure installation | Cereburum Sports',
+        alt: 'White sports roof net being lifted and positioned using scaffolding during installation | Cereburum Sports',
       },
       {
         type: 'video',
         url: '/images/guides/roof-installation/gallery/roof-installation-02.mp4',
         poster: '/images/guides/roof-installation/gallery/roof-installation-01.webp',
-        alt: 'Roof netting installation process for a sports enclosure | Cereburum Sports',
+        alt: 'Video showing how our team lifts roof netting onto a sports enclosure | Cereburum Sports',
       },
       {
         type: 'video',
         url: '/images/guides/roof-installation/gallery/roof-installation-03.mp4',
         poster: '/images/guides/roof-installation/gallery/roof-installation-01.webp',
-        alt: 'Positioning overhead netting during sports arena roof installation | Cereburum Sports',
+        alt: 'Video demonstrating the positioning of overhead sports netting during roof installation | Cereburum Sports',
       },
       {
         type: 'video',
         url: '/images/guides/roof-installation/gallery/roof-installation-04.mp4',
         poster: '/images/guides/roof-installation/gallery/roof-installation-01.webp',
-        alt: 'Securing sports roof netting to the supporting structure | Cereburum Sports',
+        alt: 'Video showing how roof netting is secured to the supporting sports enclosure structure | Cereburum Sports',
       },
       {
         url: '/images/guides/roof-installation/gallery/roof-installation-05.webp',
-        alt: 'Overhead white sports netting spread across a cricket enclosure during roof installation | Cereburum Sports',
+        alt: 'White roof netting spread across the overhead support structure of a cricket practice enclosure | Cereburum Sports',
       },
       {
         type: 'video',
         url: '/images/guides/roof-installation/gallery/roof-installation-06.mp4',
         poster: '/images/guides/roof-installation/gallery/roof-installation-05.webp',
-        alt: 'Roof net border attachment process on a sports enclosure | Cereburum Sports',
+        alt: 'Video demonstrating how our team attaches reinforced roof net borders to the supporting structure | Cereburum Sports',
       },
       {
         type: 'video',
         url: '/images/guides/roof-installation/gallery/roof-installation-07.mp4',
         poster: '/images/guides/roof-installation/gallery/roof-installation-05.webp',
-        alt: 'Stitching overhead sports netting to supporting poles or wires | Cereburum Sports',
+        alt: 'Video showing roof net border stitching along supporting poles and wires | Cereburum Sports',
       },
       {
         type: 'video',
         url: '/images/guides/roof-installation/gallery/roof-installation-08.mp4',
         poster: '/images/guides/roof-installation/gallery/roof-installation-05.webp',
-        alt: 'Securing the roof net border during cricket cage installation | Cereburum Sports',
+        alt: 'Video demonstrating how we secure the reinforced borders of overhead cricket netting | Cereburum Sports',
       },
       {
         type: 'video',
         url: '/images/guides/roof-installation/gallery/roof-installation-09.mp4',
         poster: '/images/guides/roof-installation/gallery/roof-installation-05.webp',
-        alt: 'Adjusting and attaching overhead netting across a sports arena | Cereburum Sports',
+        alt: 'Video showing the adjustment and alignment of roof netting across a sports arena | Cereburum Sports',
       },
       {
         type: 'video',
         url: '/images/guides/roof-installation/gallery/roof-installation-10.mp4',
         poster: '/images/guides/roof-installation/gallery/roof-installation-05.webp',
-        alt: 'Roof net stitching and attachment demonstration for sports enclosures | Cereburum Sports',
+        alt: 'Video demonstrating the stitching and attachment of sports roof net borders | Cereburum Sports',
       },
       {
         type: 'video',
         url: '/images/guides/roof-installation/gallery/roof-installation-11.mp4',
         poster: '/images/guides/roof-installation/gallery/roof-installation-05.webp',
-        alt: 'Final roof net installation and border securing process | Cereburum Sports',
+        alt: 'Video showing the final roof net installation and securing of reinforced borders | Cereburum Sports',
       },
     ],
     features: {
       items: [
-        'Four-Corner Support',
-        'Strong Rope Attachment',
-        'Stitched Net Borders',
-        'Overhead Coverage',
+        'Four-Corner Roof Support',
+        'Strong Rope Connections',
+        'Reinforced Border Stitching',
+        'Complete Overhead Coverage',
+        'Proper Net Alignment',
       ],
     },
     applications: {
       items: [
         'Cricket Practice Nets',
+        'Football Net Enclosures',
         'Sports Arenas',
-        'Training Facilities',
         'Rooftop Net Enclosures',
+        'Outdoor Training Facilities',
       ],
     },
     materials: {
       items: [
         'Sports Roof Netting',
-        'Strong Ropes',
-        'Netting Twine',
+        'Strong Nylon Ropes',
+        'Cable Ties',
+        'Parachute Stitching Thread',
         'Wooden Netting Needle',
         'Scaffolding',
       ],
       images: [
-        { 
-          url: '/images/guides/roof-installation/materials/roof-installation-01.webp', 
-          alt: 'nylon rope used to secure the roof net to the supporting structure | Cereburum Sports' 
+        {
+          url: '/images/guides/roof-installation/materials/roof-installation-01.webp',
+          alt: 'Strong nylon rope used to lift and secure roof netting to the supporting structure | Cereburum Sports',
         },
-        { 
-          url: '/images/guides/roof-installation/materials/roof-installation-02.webp', 
-          alt: 'Cable ties used to attach the net border with the poles | Cereburum Sports' 
+        {
+          url: '/images/guides/roof-installation/materials/roof-installation-02.webp',
+          alt: 'Cable ties used to attach reinforced roof net borders to supporting poles | Cereburum Sports',
         },
-        { 
-          url: '/images/guides/roof-installation/materials/roof-installation-03.webp', 
-          alt: 'Parachute thread used to stitch the netting borders | Cereburum Sports' 
+        {
+          url: '/images/guides/roof-installation/materials/roof-installation-03.webp',
+          alt: 'Strong parachute thread used to stitch roof net borders to supporting connections | Cereburum Sports',
         },
-        { 
-          url: '/images/guides/roof-installation/materials/roof-installation-04.webp', 
-          alt: 'Wooden netting needle used to join the nets | Cereburum Sports' 
+        {
+          url: '/images/guides/roof-installation/materials/roof-installation-04.webp',
+          alt: 'Wooden netting needle used for stitching and securing sports roof netting | Cereburum Sports',
         },
-        { 
-          url: '/images/guides/roof-installation/materials/roof-installation-05.webp', 
-          alt: 'Scaffolding used to lift the roof net | Cereburum Sports' 
+        {
+          url: '/images/guides/roof-installation/materials/roof-installation-05.webp',
+          alt: 'Scaffolding used by our installation team to access and secure overhead sports netting | Cereburum Sports',
         },
       ],
     },
     installation: {
       steps: [
-        'Spread the roof net on the ground and identify its four corners. Check that the net size matches the roof area and that the borders are properly stitched.',
-        'Attach strong ropes to all four corners of the roof net. Lift the net carefully and secure each corner to the corresponding corner of the roof structure. Make sure all four corners are properly attached before starting the border stitching.',
-        'After securing the corners, spread the roof net across the supporting structure. Adjust its position so the net covers the required roof area without twisting or becoming tangled.',
-        'Start stitching the net border from any one side of the roof. Use strong netting twine and a wooden netting needle to attach the border to the supporting pole or wire, depending on the structure.',
-        'Continue stitching along the border, keeping the attachment secure and the net evenly positioned. After completing one side, move to the remaining sides and repeat the process until all roof borders are properly attached.',
-        'Finally, inspect all four corners, stitched borders, and supporting ropes. Check that the roof net is properly secured, evenly spread, and has suitable tension without excessive stretching or unnecessary sagging.',
+        'Before installing the roof net, our team checks the supporting poles, overhead wires, and roof structure. We confirm that the structure is ready and that suitable scaffolding and safety equipment are available.',
+        'We spread the roof net on the ground and identify its four corners. The net dimensions are checked against the roof area, and the reinforced borders are arranged in the correct direction.',
+        'We attach strong nylon ropes to the four corners of the roof net. These ropes help our team lift and position the net over the supporting structure in a controlled manner.',
+        'Our installation team carefully raises the roof net using the prepared ropes and suitable access equipment. The net is lifted gradually to prevent unnecessary twisting, tangling, or damage.',
+        'Once the net reaches the required height, we secure its four corners to the corresponding support points. This helps hold the roof net in position before attaching the remaining borders.',
+        'After securing the corners, we spread and adjust the net across the roof area. We check that the netting covers the required space and that its reinforced borders follow the supporting poles or wires.',
+        'We begin securing the reinforced border from one side of the roof. Using strong parachute thread and a wooden netting needle, we stitch the border to suitable supporting connections according to the structure design.',
+        'We continue attaching the borders along the remaining sides. Our team maintains suitable net tension and checks the alignment to avoid excessive stretching, uneven edges, or unnecessary sagging.',
+        'The gallery images and videos showcase our roof net installation process, including lifting the net, positioning it across the structure, and securing the reinforced borders.',
+        'After completing the installation, we inspect the four corner connections, support ropes, stitched borders, and overall roof coverage. We make any necessary adjustments to ensure the net is properly positioned and securely attached.',
       ],
     },
     benefits: {
       items: [
-        'Secure Roof Coverage',
-        'Even Net Support',
-        'Reliable Attachment',
-        'Custom Structure Fit',
+        'Complete Overhead Protection',
+        'Secure Four-Corner Attachment',
+        'Strong Border Connections',
+        'Even Roof Net Coverage',
+        'Neat Installation Finish',
+        'Custom Fit for Sports Enclosures',
       ],
     },
-  },  
+  }, 
   {
     id: 'rope-in-border',
     title: 'How Border Ropes Keep Sports Nets in Shape During Installation',
