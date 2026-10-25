@@ -2215,6 +2215,118 @@ const rawGuides = [
         'Better Installation Planning',
       ],
     },
+  },  
+  {
+    id: 'poles-alignment',
+    title: 'How to Check Pole Alignment for Sports Net Installation',
+    category: 'measurement-and-planning',
+    image: '/images/guides/poles-alignment/gallery/poles-alignment-01.webp',
+    imageAlt: 'Original and annotated comparison showing badly aligned support poles in a sports netting structure | Cereburum Sports',
+    desc: 'Learn why proper pole alignment is important for cricket practice nets, football enclosures, and sports arenas. Correctly aligned poles help maintain a straight and balanced structure, support proper net fitting, and prevent uneven net installation. This guide uses real examples to show the difference between properly aligned and badly aligned poles.',
+    images: [
+      {
+        url: '/images/guides/poles-alignment/gallery/poles-alignment-01.webp',
+        alt: 'Side-by-side original and annotated images highlighting badly aligned vertical poles in a sports net enclosure | Cereburum Sports',
+      },
+      {
+        url: '/images/guides/poles-alignment/gallery/poles-alignment-02.webp',
+        alt: 'Sports net enclosure under construction showing green alignment lines and a red section indicating misalignment along the upper support line | Cereburum Sports',
+      },
+      {
+        url: '/images/guides/poles-alignment/gallery/poles-alignment-03.webp',
+        alt: 'Night view of a sports net structure showing correctly aligned length and width along the upper corner supports | Cereburum Sports',
+      },
+      {
+        url: '/images/guides/poles-alignment/gallery/poles-alignment-04.webp',
+        alt: 'Completed sports net enclosure at night with green lines highlighting well-aligned length and width | Cereburum Sports',
+      },
+      {
+        type: 'video',
+        url: '/images/guides/poles-alignment/gallery/poles-alignment-05.mp4',
+        poster: '/images/guides/poles-alignment/gallery/poles-alignment-03.webp',
+        alt: 'Video reference for checking pole alignment along the length and width of a sports net enclosure | Cereburum Sports',
+      },
+      {
+        url: '/images/guides/poles-alignment/gallery/poles-alignment-06.webp',
+        alt: 'Original and annotated night photographs showing correctly aligned and misaligned poles numbered along a sports net boundary | Cereburum Sports',
+      },
+      {
+        type: 'video',
+        url: '/images/guides/poles-alignment/gallery/poles-alignment-07.mp4',
+        poster: '/images/guides/poles-alignment/gallery/poles-alignment-06.webp',
+        alt: 'Video reference showing alignment differences between multiple support poles along a sports netting structure | Cereburum Sports',
+      },
+      {
+        url: '/images/guides/poles-alignment/gallery/poles-alignment-08.webp',
+        alt: 'Original and annotated close-up comparison identifying correctly aligned, badly aligned, and very badly aligned vertical poles | Cereburum Sports',
+      },
+      {
+        type: 'video',
+        url: '/images/guides/poles-alignment/gallery/poles-alignment-09.mp4',
+        poster: '/images/guides/poles-alignment/gallery/poles-alignment-08.webp',
+        alt: 'Video reference for identifying bent or incorrectly positioned poles in a sports net support structure | Cereburum Sports',
+      },
+      {
+        url: '/images/guides/poles-alignment/gallery/poles-alignment-10.webp',
+        alt: 'Comparison of original and annotated sports enclosure poles showing a curved alignment line caused by incorrectly positioned supports | Cereburum Sports',
+      },
+      {
+        url: '/images/guides/poles-alignment/gallery/poles-alignment-11.webp',
+        alt: 'Sports net support structure showing pole positioning and alignment across the enclosure | Cereburum Sports',
+      },
+      {
+        url: '/images/guides/poles-alignment/gallery/poles-alignment-12.webp',
+        alt: 'Pole alignment reference photograph for checking the straightness of sports net enclosure supports | Cereburum Sports',
+      },
+      {
+        url: '/images/guides/poles-alignment/gallery/poles-alignment-13.webp',
+        alt: 'Sports netting structure alignment reference showing the positioning of supporting poles | Cereburum Sports',
+      },
+      {
+        url: '/images/guides/poles-alignment/gallery/poles-alignment-14.webp',
+        alt: 'Pole positioning reference for inspecting alignment before sports net installation | Cereburum Sports',
+      },
+    ],
+    features: {
+      items: [
+        'Straight Pole Alignment',
+        'Length and Width Alignment',
+        'Misalignment Identification',
+        'Structure Inspection',
+      ],
+    },
+    applications: {
+      items: [
+        'Cricket Practice Nets',
+        'Football Net Enclosures',
+        'Sports Arenas',
+        'Rooftop Net Enclosures',
+      ],
+    },
+    materials: {
+      items: [],
+      images: [],
+    },
+    installation: {
+      steps: [
+        'Identify the corner poles of the sports net structure. These poles act as reference points for checking the alignment of the remaining supporting poles.',
+        'Check the poles along the length of the structure. Look from one corner towards the opposite end and observe whether the intermediate poles follow the same straight line.',
+        'Repeat the alignment check along the width of the structure. The supporting poles should follow the intended boundary line without unnecessary inward or outward deviations.',
+        'Inspect the upper sections of the poles. Compare their positions with the intended straight support line. A pole that bends or moves away from this line may cause uneven net fitting.',
+        'Identify any badly aligned poles. As shown in the reference images, some poles may be slightly out of position while others may have significant bends or deviations.',
+        'Check the vertical alignment of individual poles. Make sure the poles are properly positioned and do not lean excessively towards the inside or outside of the structure.',
+        'Correct any alignment problems before installing the sports net. Adjust the pole position or repair the affected support where required, using suitable equipment and qualified workers.',
+        'Perform a final alignment inspection along both the length and width. Properly aligned poles help the net follow the intended structure shape and provide a cleaner installation.',
+      ],
+    },
+    benefits: {
+      items: [
+        'Straight and Balanced Structure',
+        'Proper Net Fitting',
+        'Reduced Uneven Net Tension',
+        'Better Installation Appearance',
+      ],
+    },
   },
   {
     id: 'corner-door-installation',
