@@ -293,6 +293,140 @@ const rawGuides = [
         'Custom Installation',
       ],
     },
+  },  
+  {
+    id: 'football-goal',
+    title: 'How to Build and Install a Football Goal',
+    category: 'sports-structure',
+    image: '/images/guides/01-sports-structure/football-goal/gallery/football-goal-01.webp',
+    imageAlt: 'Steel football goal frame for sports grounds | Cereburum Sports',
+    desc: 'Step-by-step guide to building a football goal using steel pipes and strong netting. Learn how to measure the height, width, upper depth, and lower depth, prepare the frame, and install the goal net.',
+    images: [
+      {
+        url: '/images/guides/01-sports-structure/football-goal/gallery/football-goal-01.webp',
+        alt: 'Football goal gallery 1 - steel football goal frame | Cereburum Sports',
+      },
+      {
+        url: '/images/guides/01-sports-structure/football-goal/gallery/football-goal-02.webp',
+        alt: 'Football goal gallery 2 - height, width, upper depth, and lower depth measurements | Cereburum Sports',
+      },
+      {
+        url: '/images/guides/01-sports-structure/football-goal/gallery/football-goal-03.webp',
+        alt: 'Football goal gallery 3 - football goal frame construction | Cereburum Sports',
+      },
+      {
+        url: '/images/guides/01-sports-structure/football-goal/gallery/football-goal-04.webp',
+        alt: 'Football goal gallery 4 - steel pipe frame and support structure | Cereburum Sports',
+      },
+      {
+        url: '/images/guides/01-sports-structure/football-goal/gallery/football-goal-05.webp',
+        alt: 'Football goal gallery 5 - football goal installation | Cereburum Sports',
+      },
+      {
+        type: 'video',
+        url: '/images/guides/01-sports-structure/football-goal/gallery/football-goal-06.mp4',
+        poster: '/images/guides/01-sports-structure/football-goal/gallery/football-goal-01.webp',
+        alt: 'Football goal gallery 6 - football goal construction video | Cereburum Sports',
+      },
+      {
+        type: 'video',
+        url: '/images/guides/01-sports-structure/football-goal/gallery/football-goal-07.mp4',
+        poster: '/images/guides/01-sports-structure/football-goal/gallery/football-goal-01.webp',
+        alt: 'Football goal gallery 7 - football goal installation video | Cereburum Sports',
+      },
+      {
+        url: '/images/guides/01-sports-structure/football-goal/gallery/football-goal-08.webp',
+        alt: 'Football goal gallery 8 - football goal frame details | Cereburum Sports',
+      },
+      {
+        url: '/images/guides/01-sports-structure/football-goal/gallery/football-goal-09.webp',
+        alt: 'Football goal gallery 9 - goal height, width, and depth measurement guide | Cereburum Sports',
+      },
+      {
+        url: '/images/guides/01-sports-structure/football-goal/gallery/football-goal-10.webp',
+        alt: 'Football goal gallery 10 - football goal structure | Cereburum Sports',
+      },
+      {
+        url: '/images/guides/01-sports-structure/football-goal/gallery/football-goal-11.webp',
+        alt: 'Football goal gallery 11 - welded steel football goal frame | Cereburum Sports',
+      },
+      {
+        url: '/images/guides/01-sports-structure/football-goal/gallery/football-goal-12.webp',
+        alt: 'Football goal gallery 12 - football goal frame installation details | Cereburum Sports',
+      },
+      {
+        url: '/images/guides/01-sports-structure/football-goal/gallery/football-goal-13.webp',
+        alt: 'Football goal gallery 13 - football goal structure and finishing | Cereburum Sports',
+      },
+      {
+        type: 'video',
+        url: '/images/guides/01-sports-structure/football-goal/gallery/football-goal-14.mp4',
+        poster: '/images/guides/01-sports-structure/football-goal/gallery/football-goal-01.webp',
+        alt: 'Football goal gallery 14 - football goal demonstration video | Cereburum Sports',
+      },
+    ],
+    features: {
+      items: [
+        'Strong Steel Frame',
+        'Custom Dimensions',
+        'Sloped Rear Supports',
+        'Weather Resistant',
+      ],
+    },
+    applications: {
+      items: [
+        'Football Grounds',
+        'Sports Academies',
+        'School Playgrounds',
+        'Training Facilities',
+      ],
+    },
+    materials: {
+      items: [
+        'Hollow Steel Pipes',
+        'Football Goal Netting',
+        'Welding Rods',
+        'Net Tying Thread',
+        'Anti-Rust Paint',
+      ],
+      images: [
+        { 
+          url: '/images/guides/01-sports-structure/football-goal/materials/football-goal-01.webp', 
+          alt: 'Steel poles and support pipes used in cricket arena construction | Cereburum Sports' 
+        },
+        { 
+          url: '/images/guides/01-sports-structure/football-goal/materials/football-goal-02.webp', 
+          alt: 'Anti-rust coating applied to steel poles for long term durability | Cereburum Sports' 
+        },
+        { 
+          url: '/images/guides/01-sports-structure/football-goal/materials/football-goal-03.webp', 
+          alt: 'welding rods used to weld the football goal frame | Cereburum Sports' 
+        },
+        { 
+          url: '/images/guides/01-sports-structure/football-goal/materials/football-goal-04.webp', 
+          alt: 'netting thread used to install the football goal net | Cereburum Sports' 
+        },
+      ],
+    },
+    installation: {
+      steps: [
+        'Measure the required width and height of the football goal. Also measure the upper depth and lower depth to decide how far the net will extend behind the goal.',
+        'Cut the hollow steel pipes according to the measurements. Prepare two vertical posts and one horizontal crossbar for the front of the goal.',
+        'Weld the front posts and crossbar together to make a rectangular goal opening. Check that the corners are properly aligned.',
+        'Attach the upper and lower depth pipes behind the goal. Add sloped rear support pipes and weld all joints to complete the frame.',
+        'Clean the steel pipes and welded joints. Apply anti-rust primer and weather-resistant paint to protect the frame from rust.',
+        'Install the football goal net around the back and sides of the frame. Secure it properly using strong tying thread or suitable net fasteners.',
+        'Check the frame, net connections, and overall stability. Secure the goal against tipping before allowing players to use it.',
+      ],
+    },
+    benefits: {
+      items: [
+        'Durable Construction',
+        'Custom Goal Sizes',
+        'Easy Net Replacement',
+        'Suitable for Outdoor Use',
+      ],
+    },
   },
   {
     id: 'corner-door-installation',
