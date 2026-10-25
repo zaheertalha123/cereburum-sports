@@ -9,9 +9,12 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import styles from './guides.module.css';
 
 const FILTER_PARAM = 'filter';
+const ALL_FILTER = 'all';
 
 function resolveFilter(value, categories) {
-  return value && categories.includes(value) ? value : 'All';
+  return value && categories.some((category) => category.id === value)
+    ? value
+    : ALL_FILTER;
 }
 
 export default function ClientGuidesPage({ guides, categories, breadcrumbItems }) {
@@ -24,7 +27,7 @@ export default function ClientGuidesPage({ guides, categories, breadcrumbItems }
   const setActiveFilter = useCallback(
     (opt) => {
       const params = new URLSearchParams(searchParams.toString());
-      if (opt === 'All') {
+      if (opt === ALL_FILTER) {
         params.delete(FILTER_PARAM);
       } else {
         params.set(FILTER_PARAM, opt);
@@ -36,9 +39,11 @@ export default function ClientGuidesPage({ guides, categories, breadcrumbItems }
   );
 
   const filtered =
-    activeFilter === 'All'
+    activeFilter === ALL_FILTER
       ? guides
       : guides.filter((g) => g.category === activeFilter);
+
+  const activeCategory = categories.find((category) => category.id === activeFilter);
 
   return (
     <>
@@ -66,21 +71,22 @@ export default function ClientGuidesPage({ guides, categories, breadcrumbItems }
             across Pakistan.
           </p>
 
-          {/* Filter pills — only when more than one real category exists */}
-          {categories.length > 2 && (
+          {/* Filter pills — every defined category stays selectable */}
+          {categories.length > 1 && (
           <div
             className={styles.filterRow}
-            role="list"
+            role="group"
             aria-label="Guide categories"
           >
-            {categories.map((opt) => (
+            {categories.map((category) => (
               <button
-                key={opt}
-                onClick={() => setActiveFilter(opt)}
-                className={`${styles.filterPill} ${opt === activeFilter ? styles.filterActive : ''}`}
-                role="listitem"
+                key={category.id}
+                type="button"
+                onClick={() => setActiveFilter(category.id)}
+                className={`${styles.filterPill} ${category.id === activeFilter ? styles.filterActive : ''}`}
+                aria-pressed={category.id === activeFilter}
               >
-                {opt}
+                {category.label}
               </button>
             ))}
           </div>
@@ -94,6 +100,23 @@ export default function ClientGuidesPage({ guides, categories, breadcrumbItems }
         aria-label="Guides list"
       >
         <div className="container">
+          {filtered.length === 0 ? (
+            <div className={styles.emptyState}>
+              <p className={`body-lg ${styles.emptyTitle}`}>
+                No guides in {activeCategory?.label ?? 'this category'} yet.
+              </p>
+              <p className={`body-sm ${styles.emptyDesc}`}>
+                New guides are added regularly — browse all guides or check back soon.
+              </p>
+              <button
+                type="button"
+                className={styles.emptyAction}
+                onClick={() => setActiveFilter(ALL_FILTER)}
+              >
+                View all guides
+              </button>
+            </div>
+          ) : (
           <div className={styles.guidesGrid}>
             {filtered.map((guide, i) => (
               <Link
@@ -121,7 +144,7 @@ export default function ClientGuidesPage({ guides, categories, breadcrumbItems }
                   <div className={styles.cardBody}>
                     <div className={styles.cardMeta}>
                       <span className={styles.categoryBadge}>
-                        {guide.category}
+                        {guide.categoryLabel || guide.category}
                       </span>
                     </div>
                     <h2 className={`heading-md ${styles.cardTitle}`}>
@@ -135,6 +158,7 @@ export default function ClientGuidesPage({ guides, categories, breadcrumbItems }
               </Link>
             ))}
           </div>
+          )}
         </div>
       </section>
     </>

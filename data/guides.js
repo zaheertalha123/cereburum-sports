@@ -1,6 +1,27 @@
 import { mediaUrl } from '../lib/mediaUrl';
 
 /**
+ * Guide categories. `id` is the stable filter value used in URLs; `label` is
+ * what visitors see. Keep the order below — it drives the filter pill order.
+ */
+export const guideCategoryDefs = [
+  { id: 'sports-structure', label: 'Sports Structure' },
+  { id: 'installation-and-techniques', label: 'Installation & Techniques' },
+  { id: 'scaffolding-and-equipment', label: 'Scaffolding & Equipment' },
+  { id: 'measurement-and-planning', label: 'Measurement & Planning' },
+  { id: 'doors-and-access', label: 'Doors & Access' },
+  { id: 'maintenance-and-issues', label: 'Maintenance & Issues' },
+];
+
+export function getGuideCategoryLabel(value) {
+  if (!value) return '';
+  const match = guideCategoryDefs.find(
+    (category) => category.id === value || category.label === value,
+  );
+  return match ? match.label : value;
+}
+
+/**
  * Guide shape (omit any section that does not apply — the page hides it):
  * {
  *   id, title, category, image, imageAlt, desc,
@@ -16,7 +37,7 @@ const rawGuides = [
   {
     id: 'corner-door-installation',
     title: 'How to Install a Corner Door on Sports Netting Enclosures',
-    category: 'Installation',
+    category: 'doors-and-access',
     image: '/images/guides/corner-door/gallery/corner-door-gallery-cover.webp',
     imageAlt: 'Corner Door cover - steel corner entrance door with sports netting | Cereburum Sports',
     desc: 'Step-by-step guide to fabricating and installing a heavy-duty corner entrance door for cricket cages and sports netting enclosures — tubular steel frame, hinges, protective coating, and arena netting so the cage stays continuous while people can walk in and out.',
@@ -134,6 +155,7 @@ function mapSection(section) {
 
 export const guides = rawGuides.map((guide) => ({
   ...guide,
+  categoryLabel: getGuideCategoryLabel(guide.category),
   image: guide.image ? mediaUrl(guide.image) : undefined,
   images: mapImages(guide.images),
   features: mapSection(guide.features),
@@ -193,8 +215,8 @@ export function getVisibleGuideSections(guide) {
   return sections;
 }
 
-/** Categories derived from published guides only (no empty filters). */
+/** Every defined category is selectable, even before it has a guide. */
 export const guideCategories = [
-  'All',
-  ...[...new Set(guides.map((guide) => guide.category).filter(Boolean))],
+  { id: 'all', label: 'All' },
+  ...guideCategoryDefs,
 ];

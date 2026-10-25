@@ -6,6 +6,7 @@ import {
   getGuideCover,
   getGuideCoverAlt,
   getGuideGallery,
+  getGuideCategoryLabel,
   getVisibleGuideSections,
   hasSectionContent,
   toGuideMedia,
@@ -118,6 +119,7 @@ export default async function GuidePage({ params }) {
   const cover = getGuideCover(guide);
   const gallery = toGuideMedia(getGuideGallery(guide));
   const sections = getVisibleGuideSections(guide);
+  const guideCategoryLabel = getGuideCategoryLabel(guide.category);
   const guidesHref = guide.category
     ? `/guides?filter=${encodeURIComponent(guide.category)}`
     : '/guides';
@@ -127,7 +129,7 @@ export default async function GuidePage({ params }) {
   const breadcrumbItems = [
     { name: 'Home', href: '/' },
     { name: 'Guides', href: '/guides' },
-    ...(guide.category ? [{ name: guide.category, href: guidesHref }] : []),
+    ...(guide.category ? [{ name: guideCategoryLabel, href: guidesHref }] : []),
     { name: guide.title, href: `/guides/${guide.id}` },
   ];
 
@@ -139,7 +141,7 @@ export default async function GuidePage({ params }) {
       href: `/guides/${item.id}`,
       image: getGuideCover(item),
       imageAlt: getGuideCoverAlt(item),
-      eyebrow: item.category,
+      eyebrow: item.categoryLabel || item.category,
       name: item.title,
       cta: 'Read guide →',
     }));
@@ -254,7 +256,7 @@ export default async function GuidePage({ params }) {
           <Breadcrumbs items={breadcrumbItems} />
 
           <div className={styles.heroContent}>
-            {guide.category ? <span className={styles.categoryBadge}>{guide.category}</span> : null}
+            {guide.category ? <span className={styles.categoryBadge}>{guideCategoryLabel}</span> : null}
             <h1 className={`display-md ${styles.heroTitle} animate-fade-in-up`}>{guide.title}</h1>
             {guide.desc ? <p className={`${styles.heroDesc} animate-fade-in`}>{guide.desc}</p> : null}
             <GuideSectionNav sections={sections} />
