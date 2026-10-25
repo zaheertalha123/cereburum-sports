@@ -865,6 +865,143 @@ const rawGuides = [
         'Neat Finish',
       ],
     },
+  },  
+  {
+    id: 'pre-installation-setup',
+    title: 'How to Prepare Sports Netting Before Installation',
+    category: 'installation-and-techniques',
+    image: '/images/guides/pre-installation-setup/gallery/pre-installation-setup-01.webp',
+    imageAlt: 'Pre-installation setup of a sports netting enclosure with steel poles, support wires, and workers preparing the structure | Cereburum Sports',
+    desc: 'Step-by-step guide to preparing sports netting before installation. Learn how to inspect the supporting structure, arrange and unfold netting, identify reinforced borders, check measurements, and position the net correctly before lifting and securing it to cricket cages and sports arenas.',
+    images: [
+      {
+        url: '/images/guides/pre-installation-setup/gallery/pre-installation-setup-01.webp',
+        alt: 'Pre-Installation Setup gallery 1 - steel sports enclosure frame with overhead support wires and scaffolding prepared for net installation | Cereburum Sports',
+      },
+      {
+        type: 'video',
+        url: '/images/guides/pre-installation-setup/gallery/pre-installation-setup-02.mp4',
+        poster: '/images/guides/pre-installation-setup/gallery/pre-installation-setup-01.webp',
+        alt: 'Pre-Installation Setup video 1 - preparing sports netting and installation equipment | Cereburum Sports',
+      },
+      {
+        type: 'video',
+        url: '/images/guides/pre-installation-setup/gallery/pre-installation-setup-03.mp4',
+        poster: '/images/guides/pre-installation-setup/gallery/pre-installation-setup-01.webp',
+        alt: 'Pre-Installation Setup video 2 - arranging netting before installation on a sports enclosure | Cereburum Sports',
+      },
+      {
+        url: '/images/guides/pre-installation-setup/gallery/pre-installation-setup-04.webp',
+        alt: 'Pre-Installation Setup gallery 4 - worker spreading and preparing white sports netting along the ground beside a sports field | Cereburum Sports',
+      },
+      {
+        type: 'video',
+        url: '/images/guides/pre-installation-setup/gallery/pre-installation-setup-05.mp4',
+        poster: '/images/guides/pre-installation-setup/gallery/pre-installation-setup-04.webp',
+        alt: 'Pre-Installation Setup video 3 - preparing and positioning sports netting before lifting | Cereburum Sports',
+      },
+      {
+        type: 'video',
+        url: '/images/guides/pre-installation-setup/gallery/pre-installation-setup-06.mp4',
+        poster: '/images/guides/pre-installation-setup/gallery/pre-installation-setup-04.webp',
+        alt: 'Pre-Installation Setup video 4 - handling and arranging large sports netting sections | Cereburum Sports',
+      },
+      {
+        url: '/images/guides/pre-installation-setup/gallery/pre-installation-setup-07.webp',
+        alt: 'Pre-Installation Setup gallery 7 - folded white sports netting with black reinforced borders arranged on the ground before installation | Cereburum Sports',
+      },
+      {
+        type: 'video',
+        url: '/images/guides/pre-installation-setup/gallery/pre-installation-setup-08.mp4',
+        poster: '/images/guides/pre-installation-setup/gallery/pre-installation-setup-07.webp',
+        alt: 'Pre-Installation Setup video 5 - demonstration of preparing sports netting for installation | Cereburum Sports',
+      },
+      {
+        type: 'video',
+        url: '/images/guides/pre-installation-setup/gallery/pre-installation-setup-09.mp4',
+        poster: '/images/guides/pre-installation-setup/gallery/pre-installation-setup-07.webp',
+        alt: 'Pre-Installation Setup video 6 - arranging netting sections and preparing reinforced borders | Cereburum Sports',
+      },
+      {
+        type: 'video',
+        url: '/images/guides/pre-installation-setup/gallery/pre-installation-setup-10.mp4',
+        poster: '/images/guides/pre-installation-setup/gallery/pre-installation-setup-01.webp',
+        alt: 'Pre-Installation Setup video 7 - sports netting preparation and setup before final installation | Cereburum Sports',
+      },
+    ],
+    features: {
+      items: [
+        'Structure Inspection',
+        'Net Arrangement',
+        'Border Alignment',
+        'Installation Preparation',
+      ],
+    },
+    applications: {
+      items: [
+        'Cricket Practice Nets',
+        'Sports Arenas',
+        'Football Enclosures',
+        'Rooftop Netting',
+      ],
+    },
+    materials: {
+      items: [
+        'Sports Netting',
+        'Reinforced Net Borders',
+        'Support Ropes and Wires',
+        'Tying Twine',
+        'Measuring Tape',
+        'Cable Ties',
+      ],
+      images: [
+        { 
+          url: '/images/guides/pre-installation-setup/materials/pre-installation-setup-01.webp', 
+          alt: 'Border sewn with the netting thread | Cereburum Sports' 
+        },
+        { 
+          url: '/images/guides/pre-installation-setup/materials/pre-installation-setup-02.webp', 
+          alt: 'Nylon Rope used to tie the netting sections | Cereburum Sports' 
+        },
+        { 
+          url: '/images/guides/pre-installation-setup/materials/pre-installation-setup-03.webp', 
+          alt: 'Parachute thread used to stitch the netting borders | Cereburum Sports' 
+        },
+        { 
+          url: '/images/guides/pre-installation-setup/materials/pre-installation-setup-04.webp', 
+          alt: 'Wooden netting needle used to join the nets | Cereburum Sports' 
+        },
+        { 
+          url: '/images/guides/pre-installation-setup/materials/pre-installation-setup-05.webp', 
+          alt: 'Measuring tape to confirm and verify sizes before final installation | Cereburum Sports' 
+        },
+        { 
+          url: '/images/guides/pre-installation-setup/materials/pre-installation-setup-06.webp', 
+          alt: 'Cable Ties to attach net border with the poles | Cereburum Sports' 
+        },
+      ],
+    },
+    installation: {
+      steps: [
+        'Inspect the sports enclosure before starting the net installation. Check that the steel poles, upper support pipes, and support wires are properly installed and securely connected.',
+        'Measure the length, width, and height of the enclosure. Compare these measurements with the prepared netting to confirm that the net size matches the installation area.',
+        'Clear the installation area of sharp objects, stones, and other materials that could damage the net. Choose a clean and open space where the netting can be unfolded and arranged safely.',
+        'Remove the sports netting from its packaging and carefully spread it on the ground. Unfold the net gradually to avoid tangling the mesh or twisting the reinforced borders.',
+        'Identify the reinforced borders of each netting section. Arrange the net so that the upper, lower, and side borders face their correct installation positions.',
+        'Check the netting for tangled sections, damaged mesh, loose stitching, or twisted borders. Straighten the net and correct any problems before installation begins.',
+        'Position the netting near the enclosure where it will be installed. Arrange the sections in the correct order and keep the reinforced borders accessible for attaching ropes and securing the net to the supporting structure.',
+        'Prepare the required tying twine, support ropes, and installation tools. Make sure the workers understand the installation sequence and that suitable ladders or scaffolding are safely positioned where needed.',
+        'Before lifting the net, perform a final check of its direction, measurements, and border alignment. Make sure the net is free from tangles and ready to be raised and secured to the enclosure.',
+      ],
+    },
+    benefits: {
+      items: [
+        'Faster Installation',
+        'Reduced Net Damage',
+        'Proper Alignment',
+        'Organized Workflow',
+      ],
+    },
   },
   {
     id: 'corner-door-installation',
