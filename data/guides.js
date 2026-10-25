@@ -2033,7 +2033,88 @@ const rawGuides = [
         'Useful for Net and Lighting Maintenance',
       ],
     },
-  },
+  },  
+  {
+    id: 'height-measurement',
+    title: 'How to Measure Height for Sports Net Installation',
+    category: 'measurement-and-planning',
+    image: '/images/guides/height-measurement/gallery/height-measurement-01.webp',
+    imageAlt: 'Measuring the height of a steel pole for sports net installation | Cereburum Sports',
+    desc: 'Learn how to measure the correct height for cricket cages and sports netting enclosures. Measure from the top of the pole to the ground and keep extra margin for proper net fall and coverage.',
+    images: [
+      {
+        url: '/images/guides/height-measurement/gallery/height-measurement-01.webp',
+        alt: 'Measuring tape extended along a tall steel pole to measure sports net installation height | Cereburum Sports',
+      },
+      {
+        url: '/images/guides/height-measurement/gallery/height-measurement-02.webp',
+        alt: 'Height measurement guide showing the measuring direction from the top of the pole to the ground and extra margin for net fall | Cereburum Sports',
+      },
+      {
+        type: 'video',
+        url: '/images/guides/height-measurement/gallery/height-measurement-03.mp4',
+        poster: '/images/guides/height-measurement/gallery/height-measurement-01.webp',
+        alt: 'Video guide demonstrating how to measure pole height for cricket net installation | Cereburum Sports',
+      },
+      {
+        type: 'video',
+        url: '/images/guides/height-measurement/gallery/height-measurement-04.mp4',
+        poster: '/images/guides/height-measurement/gallery/height-measurement-01.webp',
+        alt: 'Measuring vertical height of a sports net structure using a measuring tape | Cereburum Sports',
+      },
+      {
+        type: 'video',
+        url: '/images/guides/height-measurement/gallery/height-measurement-05.mp4',
+        poster: '/images/guides/height-measurement/gallery/height-measurement-02.webp',
+        alt: 'Checking sports net height measurements and allowing extra length for proper net fall | Cereburum Sports',
+      },
+    ],
+    features: {
+      items: [
+        'Accurate Height Measurement',
+        'Top-to-Ground Measurement',
+        'Extra Net Fall Margin',
+        'Suitable for Different Structures',
+      ],
+    },
+    applications: {
+      items: [
+        'Cricket Practice Nets',
+        'Football Net Enclosures',
+        'Sports Arenas',
+        'Rooftop Net Enclosures',
+      ],
+    },
+    materials: {
+      items: [
+        '100 ft Measuring Tape',
+      ],
+      images: [
+        { 
+          url: '/images/guides/height-measurement/materials/height-measurement-01.webp', 
+          alt: 'Measuring tape extended along a tall steel pole to measure sports net installation height | Cereburum Sports' 
+        }
+      ],
+    },
+    installation: {
+      steps: [
+        'Identify the top of the pole where the sports net will be attached. This will be the starting point for measuring the height.',
+        'Place the measuring tape at the top attachment point and extend it vertically down along the pole until the tape touches the ground.',
+        'Keep the measuring tape straight while taking the measurement. Avoid bending or pulling the tape sideways, as this can affect the accuracy.',
+        'Record the measured height and keep some extra margin for net fall. This additional length allows the net to fall naturally and cover the bottom area properly.',
+        'Repeat the measurement at other poles if their heights are different or the ground is uneven. Recheck all measurements before preparing or cutting the net.',
+      ],
+    },
+  
+    benefits: {
+      items: [
+        'Accurate Net Sizing',
+        'Proper Ground Coverage',
+        'Reduced Material Wastage',
+        'Better Installation Planning',
+      ],
+    },
+  },  
   {
     id: 'corner-door-installation',
     title: 'How to Install a Corner Door on Sports Netting Enclosures',
