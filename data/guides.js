@@ -1706,6 +1706,88 @@ const rawGuides = [
         'Reusable for Maintenance',
       ],
     },
+  },  
+  {
+    id: 'mobile-crane',
+    title: 'Mobile Crane for Sports Net Installation',
+    category: 'scaffolding-and-equipment',
+    image: '/images/guides/mobile-crane/gallery/mobile-crane-01.webp',
+    imageAlt: 'Mobile crane with elevated worker basket installing roof netting on a large sports structure | Cereburum Sports',
+    desc: 'Learn how mobile cranes help workers reach high areas during sports net installation and maintenance. They are especially useful for large cricket grounds, sports enclosures, and tall netting structures where ordinary ladders and scaffolding may not provide sufficient access.',
+    images: [
+      {
+        url: '/images/guides/mobile-crane/gallery/mobile-crane-01.webp',
+        alt: 'Truck-mounted mobile crane lifting workers in a basket for roof net installation | Cereburum Sports',
+      },
+      {
+        url: '/images/guides/mobile-crane/gallery/mobile-crane-02.webp',
+        alt: 'Mobile crane equipment used for high-level sports netting installation | Cereburum Sports',
+      },
+      {
+        url: '/images/guides/mobile-crane/gallery/mobile-crane-03.webp',
+        alt: 'Mobile crane providing elevated access for installing sports enclosure nets | Cereburum Sports',
+      },
+      {
+        type: 'video',
+        url: '/images/guides/mobile-crane/gallery/mobile-crane-04.mp4',
+        poster: '/images/guides/mobile-crane/gallery/mobile-crane-01.webp',
+        alt: 'Mobile crane demonstration during elevated sports net installation | Cereburum Sports',
+      },
+      {
+        type: 'video',
+        url: '/images/guides/mobile-crane/gallery/mobile-crane-05.mp4',
+        poster: '/images/guides/mobile-crane/gallery/mobile-crane-02.webp',
+        alt: 'Using mobile crane equipment to access high roof netting areas | Cereburum Sports',
+      },
+      {
+        type: 'video',
+        url: '/images/guides/mobile-crane/gallery/mobile-crane-06.mp4',
+        poster: '/images/guides/mobile-crane/gallery/mobile-crane-03.webp',
+        alt: 'Mobile crane supporting high-level net installation and maintenance work | Cereburum Sports',
+      },
+    ],
+    features: {
+      items: [
+        'High Working Reach',
+        'Truck-Mounted Crane',
+        'Elevated Working Access',
+        'Movable Between Locations',
+      ],
+    },
+    applications: {
+      items: [
+        'Large Cricket Grounds',
+        'High Roof Net Installation',
+        'Tall Sports Enclosures',
+        'Elevated Net Repairs',
+        'Roof Wire and Rope Connections',
+      ],
+    },
+    materials: {
+      items: [],
+      images: [],
+    },
+    installation: {
+      steps: [
+        'Mobile cranes are commonly used when installing nets on large sports structures where the working height is too great for ordinary ladders or regular scaffolding. They help workers access roof corners, upper net borders, and elevated supporting wires.',
+        'Before starting work, inspect the installation area and determine the required working height and reach. Check ground conditions, nearby obstacles, overhead electrical lines, and available space for positioning the crane.',
+        'Position the mobile crane on suitable ground and deploy its outriggers according to the manufacturer’s instructions. The crane must remain stable throughout the operation.',
+        'When workers need to be lifted, use only an approved personnel-lifting arrangement with the required safety equipment, qualified operators, and applicable safety procedures. A standard material-lifting crane must not be used to lift people unless personnel lifting is specifically permitted and all required safeguards are in place.',
+        'Workers can then access the upper parts of the sports structure to attach roof net corners, connect net borders to supporting wires, and adjust net positioning.',
+        'During roof net installation, the elevated access helps workers guide the net across high sections of the structure. Workers can secure the net to the supporting system while maintaining the required alignment and allowing appropriate net fall.',
+        'After completing one section, lower the working basket and reposition the crane if another area needs attention. Never move the crane with workers elevated unless the equipment and approved operating procedure specifically permit it.',
+        'Once the work is complete, inspect the installed netting, supporting ropes, and connection points. Make sure all attachments are secure and the net is positioned correctly.',
+      ],
+    },
+    benefits: {
+      items: [
+        'Access to Greater Heights',
+        'Useful for Large Structures',
+        'Supports Roof Net Installation',
+        'Can Be Relocated Between Work Areas',
+        'Useful for Elevated Maintenance',
+      ],
+    },
   },
   {
     id: 'corner-door-installation',
