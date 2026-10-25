@@ -2215,84 +2215,84 @@ const rawGuides = [
         'Better Installation Planning',
       ],
     },
-  },  
+  },    
   {
     id: 'poles-alignment',
-    title: 'How to Check Pole Alignment for Sports Net Installation',
+    title: 'Good vs Bad Pole Alignment in Sports Net Structures',
     category: 'measurement-and-planning',
     image: '/images/guides/poles-alignment/gallery/poles-alignment-01.webp',
-    imageAlt: 'Original and annotated comparison showing badly aligned support poles in a sports netting structure | Cereburum Sports',
-    desc: 'Learn why proper pole alignment is important for cricket practice nets, football enclosures, and sports arenas. Correctly aligned poles help maintain a straight and balanced structure, support proper net fitting, and prevent uneven net installation. This guide uses real examples to show the difference between properly aligned and badly aligned poles.',
+    imageAlt: 'Comparison of original and annotated sports net support poles showing poor alignment | Cereburum Sports',
+    desc: 'See real examples of properly aligned and badly aligned poles in sports net structures. Poles should follow a straight line along the length and width of the enclosure. These images highlight correct alignment in green and incorrect alignment in red, helping you understand how pole positioning affects the overall structure and net fitting.',
     images: [
       {
         url: '/images/guides/poles-alignment/gallery/poles-alignment-01.webp',
-        alt: 'Side-by-side original and annotated images highlighting badly aligned vertical poles in a sports net enclosure | Cereburum Sports',
+        alt: 'Original and annotated comparison showing badly aligned support poles in a sports net enclosure | Cereburum Sports',
       },
       {
         url: '/images/guides/poles-alignment/gallery/poles-alignment-02.webp',
-        alt: 'Sports net enclosure under construction showing green alignment lines and a red section indicating misalignment along the upper support line | Cereburum Sports',
+        alt: 'Sports net structure showing green lines for properly aligned poles and a red line highlighting incorrect alignment | Cereburum Sports',
       },
       {
         url: '/images/guides/poles-alignment/gallery/poles-alignment-03.webp',
-        alt: 'Night view of a sports net structure showing correctly aligned length and width along the upper corner supports | Cereburum Sports',
+        alt: 'Night view of a sports net enclosure with green lines showing correctly aligned length and width supports | Cereburum Sports',
       },
       {
         url: '/images/guides/poles-alignment/gallery/poles-alignment-04.webp',
-        alt: 'Completed sports net enclosure at night with green lines highlighting well-aligned length and width | Cereburum Sports',
+        alt: 'Completed sports net enclosure at night showing straight and properly aligned upper support lines | Cereburum Sports',
       },
       {
         type: 'video',
         url: '/images/guides/poles-alignment/gallery/poles-alignment-05.mp4',
         poster: '/images/guides/poles-alignment/gallery/poles-alignment-03.webp',
-        alt: 'Video reference for checking pole alignment along the length and width of a sports net enclosure | Cereburum Sports',
+        alt: 'Video reference demonstrating pole alignment along the length and width of a sports net enclosure | Cereburum Sports',
       },
       {
         url: '/images/guides/poles-alignment/gallery/poles-alignment-06.webp',
-        alt: 'Original and annotated night photographs showing correctly aligned and misaligned poles numbered along a sports net boundary | Cereburum Sports',
+        alt: 'Side-by-side night photographs with numbered poles and green and red lines showing aligned and misaligned sections | Cereburum Sports',
       },
       {
         type: 'video',
         url: '/images/guides/poles-alignment/gallery/poles-alignment-07.mp4',
         poster: '/images/guides/poles-alignment/gallery/poles-alignment-06.webp',
-        alt: 'Video reference showing alignment differences between multiple support poles along a sports netting structure | Cereburum Sports',
+        alt: 'Video reference comparing correctly positioned and misaligned support poles along a sports net boundary | Cereburum Sports',
       },
       {
         url: '/images/guides/poles-alignment/gallery/poles-alignment-08.webp',
-        alt: 'Original and annotated close-up comparison identifying correctly aligned, badly aligned, and very badly aligned vertical poles | Cereburum Sports',
+        alt: 'Original and annotated close-up showing aligned, badly aligned, and very badly aligned sports net support poles | Cereburum Sports',
       },
       {
         type: 'video',
         url: '/images/guides/poles-alignment/gallery/poles-alignment-09.mp4',
         poster: '/images/guides/poles-alignment/gallery/poles-alignment-08.webp',
-        alt: 'Video reference for identifying bent or incorrectly positioned poles in a sports net support structure | Cereburum Sports',
+        alt: 'Video reference showing differences in pole straightness and positioning within a sports net structure | Cereburum Sports',
       },
       {
         url: '/images/guides/poles-alignment/gallery/poles-alignment-10.webp',
-        alt: 'Comparison of original and annotated sports enclosure poles showing a curved alignment line caused by incorrectly positioned supports | Cereburum Sports',
+        alt: 'Original and annotated comparison showing a curved red line highlighting badly aligned poles | Cereburum Sports',
       },
       {
         url: '/images/guides/poles-alignment/gallery/poles-alignment-11.webp',
-        alt: 'Sports net support structure showing pole positioning and alignment across the enclosure | Cereburum Sports',
+        alt: 'Sports net enclosure showing the positioning of support poles for alignment comparison | Cereburum Sports',
       },
       {
         url: '/images/guides/poles-alignment/gallery/poles-alignment-12.webp',
-        alt: 'Pole alignment reference photograph for checking the straightness of sports net enclosure supports | Cereburum Sports',
+        alt: 'Reference photograph showing vertical sports net poles for checking their alignment and straightness | Cereburum Sports',
       },
       {
         url: '/images/guides/poles-alignment/gallery/poles-alignment-13.webp',
-        alt: 'Sports netting structure alignment reference showing the positioning of supporting poles | Cereburum Sports',
+        alt: 'Sports net structure showing the arrangement of supporting poles along the enclosure boundary | Cereburum Sports',
       },
       {
         url: '/images/guides/poles-alignment/gallery/poles-alignment-14.webp',
-        alt: 'Pole positioning reference for inspecting alignment before sports net installation | Cereburum Sports',
+        alt: 'Pole alignment reference showing support pole positions in a sports net enclosure | Cereburum Sports',
       },
     ],
     features: {
       items: [
-        'Straight Pole Alignment',
+        'Good Alignment Examples',
+        'Bad Alignment Examples',
         'Length and Width Alignment',
-        'Misalignment Identification',
-        'Structure Inspection',
+        'Visual Comparisons',
       ],
     },
     applications: {
@@ -2309,22 +2309,103 @@ const rawGuides = [
     },
     installation: {
       steps: [
-        'Identify the corner poles of the sports net structure. These poles act as reference points for checking the alignment of the remaining supporting poles.',
-        'Check the poles along the length of the structure. Look from one corner towards the opposite end and observe whether the intermediate poles follow the same straight line.',
-        'Repeat the alignment check along the width of the structure. The supporting poles should follow the intended boundary line without unnecessary inward or outward deviations.',
-        'Inspect the upper sections of the poles. Compare their positions with the intended straight support line. A pole that bends or moves away from this line may cause uneven net fitting.',
-        'Identify any badly aligned poles. As shown in the reference images, some poles may be slightly out of position while others may have significant bends or deviations.',
-        'Check the vertical alignment of individual poles. Make sure the poles are properly positioned and do not lean excessively towards the inside or outside of the structure.',
-        'Correct any alignment problems before installing the sports net. Adjust the pole position or repair the affected support where required, using suitable equipment and qualified workers.',
-        'Perform a final alignment inspection along both the length and width. Properly aligned poles help the net follow the intended structure shape and provide a cleaner installation.',
+        'Look at the poles along the length of the sports net structure. Properly aligned poles should follow the same straight line from one corner to the other.',
+        'Check the poles along the width of the enclosure. The upper ends of the poles should follow the intended straight support line without unnecessary inward or outward deviations.',
+        'Observe the examples marked with green lines. These show how correctly positioned poles form a straight and consistent alignment across the structure.',
+        'Compare them with the examples marked in red. These highlight poles that are bent, leaning, or positioned away from the intended alignment line.',
+        'Notice that some poles may be slightly misaligned while others may show significant deviations. Even small alignment problems can affect the appearance and fitting of the net.',
+        'Compare the original and annotated photographs to understand the difference between good and bad pole alignment. Properly aligned poles help maintain a balanced structure and allow the net to fit more evenly.',
       ],
     },
     benefits: {
       items: [
-        'Straight and Balanced Structure',
+        'Better Pole Positioning',
         'Proper Net Fitting',
-        'Reduced Uneven Net Tension',
-        'Better Installation Appearance',
+        'Straight Structure Lines',
+        'Improved Appearance',
+      ],
+    },
+  },  
+  {
+    id: 'size-checking',
+    title: 'Sports Net Size Verification and Final Packing',
+    category: 'measurement-and-planning',
+    image: '/images/guides/size-checking/gallery/size-checking-01.webp',
+    imageAlt: 'Sports net bundles with size and quality tags after final verification and packing | Cereburum Sports',
+    desc: 'See how we verify the dimensions and quality of every sports net before final packing. Each net is carefully rechecked, folded, and packed separately with an identification tag showing its size and installation section. This process ensures that all net packets are properly identified, organized, and ready for delivery and installation.',
+    images: [
+      {
+        url: '/images/guides/size-checking/gallery/size-checking-01.webp',
+        alt: 'Three white sports net packets secured with blue ropes and labeled with size and quality identification tags | Cereburum Sports',
+      },
+      {
+        url: '/images/guides/size-checking/gallery/size-checking-02.webp',
+        alt: 'Close-up of folded sports net packets showing handwritten dimensions and installation side labels attached to each bundle | Cereburum Sports',
+      },
+      {
+        type: 'video',
+        url: '/images/guides/size-checking/gallery/size-checking-03.mp4',
+        poster: '/images/guides/size-checking/gallery/size-checking-01.webp',
+        alt: 'Sports net size verification process before final packing | Cereburum Sports',
+      },
+      {
+        type: 'video',
+        url: '/images/guides/size-checking/gallery/size-checking-04.mp4',
+        poster: '/images/guides/size-checking/gallery/size-checking-02.webp',
+        alt: 'Checking sports net dimensions and preparing individual net packets for identification | Cereburum Sports',
+      },
+      {
+        type: 'video',
+        url: '/images/guides/size-checking/gallery/size-checking-05.mp4',
+        poster: '/images/guides/size-checking/gallery/size-checking-01.webp',
+        alt: 'Final sports net packing and identification tag checking before delivery | Cereburum Sports',
+      },
+    ],
+    features: {
+      items: [
+        'Size Rechecking',
+        'Quality Verification',
+        'Individual Packet Tagging',
+        'Secure Packing',
+      ],
+    },
+    applications: {
+      items: [
+        'Cricket Practice Nets',
+        'Football Net Enclosures',
+        'Sports Arenas',
+        'Custom Sports Netting',
+      ],
+    },
+    materials: {
+      items: [
+        'Measuring Tape',
+        'Size and Quality Tags',
+        'Packing Rope',
+      ],
+      images: [
+        {
+          url: '/images/guides/size-checking/materials/size-checking-01.webp',
+          alt: 'Measuring tape used to verify sports net dimensions before final packing | Cereburum Sports',
+        },
+      ],
+    },
+    installation: {
+      steps: [
+        'Before final packing, we recheck the length and width of each prepared sports net using a measuring tape. The measurements are compared with the required dimensions to ensure the correct size.',
+        'We inspect each net for quality, checking the mesh, threads, and overall condition to identify any visible damage or defects.',
+        'After size and quality verification, we carefully fold each net into a separate packet. This keeps the net organized and helps prevent tangling during transportation.',
+        'We prepare an identification tag for every net packet. Each tag includes the verified net size and its installation section, such as left side, right side, or middle section.',
+        'Each folded net packet is securely tied using packing rope. The identification tag is attached where it can be easily seen without opening the packet.',
+        'Finally, we recheck all packed nets and their identification tags to confirm that the correct sizes and sections are ready for delivery and installation.',
+      ],
+    },
+    benefits: {
+      items: [
+        'Accurate Net Dimensions',
+        'Quality Assurance',
+        'Easy Identification',
+        'Organized Delivery',
       ],
     },
   },
