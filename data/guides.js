@@ -1410,6 +1410,72 @@ const rawGuides = [
         'Reduces Net Damage',
       ],
     },
+  },  
+  {
+    id: 'aluminium-ladder',
+    title: 'Uses and Benefits of Aluminium Ladders in Sports Net Installation',
+    category: 'scaffolding-and-equipment',
+    image: '/images/guides/aluminium-ladder/gallery/aluminium-ladder-01.webp',
+    imageAlt: 'Aluminium ladder used for accessing elevated areas during sports netting installation | Cereburum Sports',
+    desc: 'Learn when and why aluminium ladders are used during cricket net and sports arena installation. These lightweight, portable ladders help workers reach elevated areas for attaching net borders, securing ropes, adjusting netting, and performing maintenance on sports enclosures.',
+    images: [
+      {
+        url: '/images/guides/aluminium-ladder/gallery/aluminium-ladder-01.webp',
+        alt: 'Aluminium ladder used during sports netting installation | Cereburum Sports',
+      },
+      {
+        url: '/images/guides/aluminium-ladder/gallery/aluminium-ladder-02.webp',
+        alt: 'Portable aluminium ladder for accessing elevated sports netting structures | Cereburum Sports',
+      },
+      {
+        url: '/images/guides/aluminium-ladder/gallery/aluminium-ladder-03.webp',
+        alt: 'Aluminium ladder equipment used for sports arena net installation and maintenance | Cereburum Sports',
+      },
+      {
+        type: 'video',
+        url: '/images/guides/aluminium-ladder/gallery/aluminium-ladder-04.mp4',
+        poster: '/images/guides/aluminium-ladder/gallery/aluminium-ladder-01.webp',
+        alt: 'Video showing aluminium ladder use during sports netting installation | Cereburum Sports',
+      },
+    ],
+    features: {
+      items: [
+        'Lightweight Structure',
+        'Easy to Move',
+        'Corrosion Resistant',
+        'Quick Setup',
+      ],
+    },
+    applications: {
+      items: [
+        'Side Net Installation',
+        'Border Attachment',
+        'Rope Adjustments',
+        'Net Maintenance',
+      ],
+    },
+    materials: {
+      items: [],
+      images: [],
+    },
+    installation: {
+      steps: [
+        'Aluminium ladders are commonly used when workers need to reach elevated sections of sports netting structures. They are useful for smaller installation tasks where a suitable ladder can provide safe access without requiring scaffolding.',
+        'During side net installation, workers can use an aluminium ladder to reach upper poles or support wires. This allows them to attach the net border and secure it to the supporting structure.',
+        'Ladders are also helpful when adjusting ropes, tightening loose connections, or checking the alignment of installed netting at elevated positions.',
+        'Because aluminium ladders are lightweight, workers can move them between different positions around the sports enclosure. This makes them convenient for tasks that require access to several locations.',
+        'For maintenance work, ladders provide access to damaged net sections, loose stitching, and border connections that need inspection or repair.',
+        'Before using a ladder, place it on firm, level ground and secure it according to the manufacturer instructions. Maintain three points of contact while climbing and avoid overreaching. For high roof installations or tasks requiring both hands for extended periods, use suitable scaffolding or an elevated work platform instead.',
+      ],
+    },
+    benefits: {
+      items: [
+        'Easy Height Access',
+        'Portable Equipment',
+        'Faster Repositioning',
+        'Convenient Maintenance',
+      ],
+    },
   },
   {
     id: 'corner-door-installation',
