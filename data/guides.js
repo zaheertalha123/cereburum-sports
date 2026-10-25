@@ -429,6 +429,138 @@ const rawGuides = [
     },
   },
   {
+    id: 'bamboos',
+    title: 'How to Install Bamboo Supports for Sports Netting',
+    category: 'installation-and-techniques',
+    image: '/images/guides/bamboos/gallery/bamboos-01.webp',
+    imageAlt: 'Bamboo support structure with sports netting installed around a cricket practice enclosure | Cereburum Sports',
+    desc: 'Step-by-step guide to installing bamboo supports for cricket practice nets and sports enclosures. Learn how to measure the area, position bamboo poles, secure the netting, and build a simple and affordable practice setup.',
+    images: [
+      {
+        url: '/images/guides/bamboos/gallery/bamboos-01.webp',
+        alt: 'Bamboo poles supporting a cricket practice net enclosure | Cereburum Sports',
+      },
+      {
+        url: '/images/guides/bamboos/gallery/bamboos-02.webp',
+        alt: 'Bamboo support installation showing a 42 ft length and 20 ft width with four bamboo positions | Cereburum Sports',
+      },
+      {
+        url: '/images/guides/bamboos/gallery/bamboos-03.webp',
+        alt: 'Bamboo netting installation showing a 35 ft length and 22 ft width with four bamboo supports | Cereburum Sports',
+      },
+      {
+        url: '/images/guides/bamboos/gallery/bamboos-04.webp',
+        alt: 'Completed bamboo-supported cricket practice enclosure with netting on the sides and roof | Cereburum Sports',
+      },
+      {
+        type: 'video',
+        url: '/images/guides/bamboos/gallery/bamboos-05.mp4',
+        poster: '/images/guides/bamboos/gallery/bamboos-01.webp',
+        alt: 'Bamboo support and sports netting installation video | Cereburum Sports',
+      },
+      {
+        type: 'video',
+        url: '/images/guides/bamboos/gallery/bamboos-06.mp4',
+        poster: '/images/guides/bamboos/gallery/bamboos-01.webp',
+        alt: 'Bamboo-supported cricket practice net setup walkthrough | Cereburum Sports',
+      },
+      {
+        url: '/images/guides/bamboos/gallery/bamboos-07.webp',
+        alt: 'Bamboo support arrangement for sports netting installation | Cereburum Sports',
+      },
+      {
+        url: '/images/guides/bamboos/gallery/bamboos08.webp',
+        alt: 'Bamboo poles and netting connections in a cricket practice enclosure | Cereburum Sports',
+      },
+      {
+        url: '/images/guides/bamboos/gallery/bamboos-09.webp',
+        alt: 'Sports netting supported by bamboo poles around a practice area | Cereburum Sports',
+      },
+      {
+        url: '/images/guides/bamboos/gallery/bamboos-10.webp',
+        alt: 'Bamboo support and netting installation detail | Cereburum Sports',
+      },
+      {
+        url: '/images/guides/bamboos/gallery/bamboos-11.webp',
+        alt: 'Bamboo poles and netting materials used for cricket practice enclosures | Cereburum Sports',
+      },
+      {
+        url: '/images/guides/bamboos/gallery/bamboos-12.webp',
+        alt: 'Bamboo netting support installation detail | Cereburum Sports',
+      },
+      {
+        url: '/images/guides/bamboos/gallery/bamboos-13.webp',
+        alt: 'Sports netting material for bamboo-supported enclosures | Cereburum Sports',
+      },
+      {
+        url: '/images/guides/bamboos/gallery/bamboos-14.webp',
+        alt: 'Bamboo-supported cricket practice net enclosure | Cereburum Sports',
+      },
+      {
+        type: 'video',
+        url: '/images/guides/bamboos/gallery/bamboos-15.mp4',
+        poster: '/images/guides/bamboos/gallery/bamboos-01.webp',
+        alt: 'Bamboo netting installation and support arrangement video | Cereburum Sports',
+      },
+    ],
+    features: {
+      items: [
+        'Bamboo Supports',
+        'Custom Sizes',
+        'Roof & Side Netting',
+        'Simple Installation',
+      ],
+    },
+    applications: {
+      items: [
+        'Cricket Practice Nets',
+        'Home Practice Areas',
+        'Rooftop Net Enclosures',
+        'Small Sports Enclosures',
+      ],
+    },
+    materials: {
+      items: [
+        'Bamboo Poles',
+        'Sports Netting',
+        'Strong Ropes',
+        'Tying Twine',
+      ],
+      images: [
+        { 
+          url: '/images/guides/bamboos/materials/bamboos-01.webp', 
+          alt: 'Bamboo poles used to support sports netting | Cereburum Sports' 
+        },
+        { 
+          url: '/images/guides/bamboos/materials/bamboos-02.webp', 
+          alt: 'Strong ropes used to support the roof netting | Cereburum Sports' 
+        },
+        { 
+          url: '/images/guides/bamboos/materials/bamboos-03.webp', 
+          alt: 'Tying twine used to secure the netting to the bamboo poles | Cereburum Sports' 
+        }
+      ],
+    },
+    installation: {
+      steps: [
+        'Measure the length and width of the area where the netting will be installed. For example, one setup measures 42 ft by 20 ft, while another measures 35 ft by 22 ft.',
+        'Mark the positions for the bamboo poles according to the measurements. Place the poles at suitable points to support the sides and roof of the netting.',
+        'Install the bamboo poles vertically and secure them properly. Make sure the poles are stable and strong enough to support the netting.',
+        'Connect strong ropes between the bamboo poles to create support for the roof netting. Tie the ropes securely and check their alignment.',
+        'Spread the sports netting across the roof and sides. Tie the netting to the bamboo poles and supporting ropes, keeping it properly aligned without pulling it too tightly.',
+        'Check all bamboo supports, ropes, and netting connections. Make sure the structure is stable, the netting covers the required area, and there are no large gaps.',
+      ],
+    },
+    benefits: {
+      items: [
+        'Affordable Setup',
+        'Easy Installation',
+        'Custom Fit',
+        'Practical for Small Areas',
+      ],
+    },
+  },
+  {
     id: 'corner-door-installation',
     title: 'How to Install a Corner Door on Sports Netting Enclosures',
     category: 'doors-and-access',
