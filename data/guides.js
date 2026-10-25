@@ -646,6 +646,134 @@ const rawGuides = [
         'Easy Net Repairs',
       ],
     },
+  },  
+  {
+    id: 'net-packing',
+    title: 'How to Fold, Pack, and Label Sports Netting',
+    category: 'installation-and-techniques',
+    image: '/images/guides/net-packing/gallery/net-packing-01.webp',
+    imageAlt: 'Sports netting folded and packed into a compact bundle | Cereburum Sports',
+    desc: 'Step-by-step guide to folding, packing, securing, and labeling sports netting for safe storage and transportation. Learn how to arrange large nets into compact bundles, tie them with rope, and mention the correct net size on each package for easy identification during installation.',
+    images: [
+      {
+        url: '/images/guides/net-packing/gallery/net-packing-01.webp',
+        alt: 'Net Packing gallery 1 - folded sports netting prepared for packing | Cereburum Sports',
+      },
+      {
+        url: '/images/guides/net-packing/gallery/net-packing-02.webp',
+        alt: 'Net Packing gallery 2 - packed white sports net tied with blue rope and labeled with its size | Cereburum Sports',
+      },
+      {
+        url: '/images/guides/net-packing/gallery/net-packing-03.webp',
+        alt: 'Net Packing gallery 3 - compact bundle of white sports netting secured with blue rope | Cereburum Sports',
+      },
+      {
+        url: '/images/guides/net-packing/gallery/net-packing-04.webp',
+        alt: 'Net Packing gallery 4 - sports netting packing and bundle preparation | Cereburum Sports',
+      },
+      {
+        url: '/images/guides/net-packing/gallery/net-packing-05.webp',
+        alt: 'Net Packing gallery 5 - multiple packed sports nets arranged with size identification labels | Cereburum Sports',
+      },
+      {
+        url: '/images/guides/net-packing/gallery/net-packing-06.webp',
+        alt: 'Net Packing gallery 6 - packed netting bundles ready for storage or delivery | Cereburum Sports',
+      },
+      {
+        type: 'video',
+        url: '/images/guides/net-packing/gallery/net-packing-07.mp4',
+        poster: '/images/guides/net-packing/gallery/net-packing-01.webp',
+        alt: 'Net Packing video 1 - sports netting packing demonstration | Cereburum Sports',
+      },
+      {
+        type: 'video',
+        url: '/images/guides/net-packing/gallery/net-packing-08.mp4',
+        poster: '/images/guides/net-packing/gallery/net-packing-02.webp',
+        alt: 'Net Packing video 2 - folding and arranging sports netting for packing | Cereburum Sports',
+      },
+      {
+        type: 'video',
+        url: '/images/guides/net-packing/gallery/net-packing-09.mp4',
+        poster: '/images/guides/net-packing/gallery/net-packing-03.webp',
+        alt: 'Net Packing video 3 - preparing a compact sports netting bundle | Cereburum Sports',
+      },
+      {
+        type: 'video',
+        url: '/images/guides/net-packing/gallery/net-packing-10.mp4',
+        poster: '/images/guides/net-packing/gallery/net-packing-04.webp',
+        alt: 'Net Packing video 4 - sports net folding and packing technique | Cereburum Sports',
+      },
+      {
+        type: 'video',
+        url: '/images/guides/net-packing/gallery/net-packing-11.mp4',
+        poster: '/images/guides/net-packing/gallery/net-packing-05.webp',
+        alt: 'Net Packing video 5 - handling and securing sports netting during packing | Cereburum Sports',
+      },
+      {
+        type: 'video',
+        url: '/images/guides/net-packing/gallery/net-packing-12.mp4',
+        poster: '/images/guides/net-packing/gallery/net-packing-06.webp',
+        alt: 'Net Packing video 6 - preparing packed sports netting for transportation | Cereburum Sports',
+      },
+      {
+        type: 'video',
+        url: '/images/guides/net-packing/gallery/net-packing-13.mp4',
+        poster: '/images/guides/net-packing/gallery/net-packing-01.webp',
+        alt: 'Net Packing video 7 - sports net packing and final bundle preparation | Cereburum Sports',
+      },
+    ],
+    features: {
+      items: [
+        'Compact Folding',
+        'Secure Rope Tying',
+        'Size Labeling',
+        'Easy Transportation',
+      ],
+    },
+    applications: {
+      items: [
+        'Cricket Practice Nets',
+        'Football Goal Nets',
+        'Sports Arenas',
+        'Net Storage and Delivery',
+      ],
+    },
+    materials: {
+      items: [
+        'Sports Netting',
+        'Packing Rope',
+        'Size Labels',
+        'Marker Pen',
+      ],
+      images: [
+        { 
+          url: '/images/guides/net-packing/materials/net-packing-01.webp', 
+          alt: 'nylon rope used to tie the packed nets | Cereburum Sports' 
+        },
+        { 
+          url: '/images/guides/net-packing/materials/net-packing-02.webp', 
+          alt: 'Size labels used to identify the packed nets | Cereburum Sports' 
+        }
+      ],
+    },
+    installation: {
+      steps: [
+        'Before packing, spread out the sports net and check its overall condition. Make sure the net is clean, dry, and free from unnecessary tangles. Confirm its length and width according to the required measurements.',
+        'Fold the net carefully from one side to the other. Keep the netting properly aligned during folding so that it does not become tangled. Continue folding until the net forms a manageable shape.',
+        'Arrange the folded net into a compact bundle. Keep the loose edges inside the bundle and avoid pulling the netting too tightly, as this may affect the shape of the net.',
+        'Use strong packing rope to tie the folded net securely. Wrap the rope around the bundle and make firm knots to prevent it from opening during handling, storage, or transportation.',
+        'After packing, mention the net size on a label using a marker pen. Write the length and width clearly, such as 105 × 35 ft, and attach the label securely to the bundle so it can be identified without opening the package.',
+        'Recheck the packed bundle to confirm that the rope is properly tied and the size label is correct. Arrange the completed bundles in a clean, dry place, ready for storage, delivery, or installation.',
+      ],
+    },
+    benefits: {
+      items: [
+        'Easy Identification',
+        'Tangle Prevention',
+        'Space Saving',
+        'Safe Handling',
+      ],
+    },
   },
   {
     id: 'corner-door-installation',
