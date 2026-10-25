@@ -1238,7 +1238,100 @@ const rawGuides = [
         'Custom Structure Fit',
       ],
     },
-  },
+  },  
+  {
+    id: 'rope-in-border',
+    title: 'How Border Ropes Keep Sports Nets in Shape During Installation',
+    category: 'installation-and-techniques',
+    image: '/images/guides/rope-in-border/gallery/rope-in-border-01.webp',
+    imageAlt: 'Reinforced sports net border with rope that helps maintain net shape during installation | Cereburum Sports',
+    desc: 'Learn how ropes inside the borders of sports nets help maintain their shape during installation. Border ropes provide extra strength, distribute tension evenly, prevent uneven stretching, and make it easier to align and secure cricket nets, football nets, and sports arena enclosures.',
+    images: [
+      {
+        url: '/images/guides/rope-in-border/gallery/rope-in-border-01.webp',
+        alt: 'White sports net with reinforced border rope for maintaining net shape | Cereburum Sports',
+      },
+      {
+        url: '/images/guides/rope-in-border/gallery/rope-in-border-02.webp',
+        alt: 'Close-up of rope inside a stitched sports net border for additional support | Cereburum Sports',
+      },
+      {
+        url: '/images/guides/rope-in-border/gallery/rope-in-border-03.webp',
+        alt: 'Reinforced sports net border designed to maintain shape during installation | Cereburum Sports',
+      },
+      {
+        url: '/images/guides/rope-in-border/gallery/rope-in-border-04.webp',
+        alt: 'Border rope reinforcement supporting the edges of sports netting | Cereburum Sports',
+      },
+      {
+        url: '/images/guides/rope-in-border/gallery/rope-in-border-05.webp',
+        alt: 'Sports net corner with reinforced border and rope for maintaining proper alignment | Cereburum Sports',
+      },
+      {
+        type: 'video',
+        url: '/images/guides/rope-in-border/gallery/rope-in-border-06.mp4',
+        poster: '/images/guides/rope-in-border/gallery/rope-in-border-01.webp',
+        alt: 'Demonstration of how border ropes support sports netting during installation | Cereburum Sports',
+      },
+      {
+        type: 'video',
+        url: '/images/guides/rope-in-border/gallery/rope-in-border-07.mp4',
+        poster: '/images/guides/rope-in-border/gallery/rope-in-border-02.webp',
+        alt: 'How reinforced border ropes help keep sports nets properly aligned | Cereburum Sports',
+      },
+    ],
+    features: {
+      items: [
+        'Shape Retention',
+        'Even Tension Distribution',
+        'Reinforced Borders',
+        'Better Net Alignment',
+      ],
+    },
+    applications: {
+      items: [
+        'Cricket Practice Nets',
+        'Football Goal Nets',
+        'Sports Arenas',
+        'Roof and Side Netting',
+      ],
+    },
+    materials: {
+      items: [
+        'Sports Netting',
+        'Strong Border Rope',
+        'Reinforced Net Border',
+      ],
+      images: [
+        { 
+          url: '/images/guides/rope-in-border/materials/rope-in-border-01.webp', 
+          alt: 'Reinforced sports net border designed to maintain shape during installation | Cereburum Sports' 
+        },
+        { 
+          url: '/images/guides/rope-in-border/materials/rope-in-border-02.webp', 
+          alt: 'Strong border rope used to maintain net shape during installation | Cereburum Sports' 
+        },
+      ],
+    },
+    installation: {
+      steps: [
+        'Before installation, check that strong ropes are properly positioned inside the stitched borders of the sports net. These ropes provide support and help the net maintain its original shape.',
+        'Spread the net on the ground and identify its corners and borders. The border ropes help keep the edges straight and make it easier to identify the correct net dimensions.',
+        'Start positioning the net by holding or securing its corners according to the installation structure. The ropes inside the borders help maintain the net shape while it is being lifted or stretched.',
+        'While installing the net, apply tension gradually along the reinforced borders. The ropes help distribute the pulling force across the edges instead of putting excessive pressure on individual net threads.',
+        'Continue aligning and securing the borders with the supporting poles or wires. Adjust the tension evenly so the net remains properly shaped without unnecessary stretching or sagging.',
+        'After installation, inspect all sides and corners to make sure the net is properly aligned. Check that the border ropes are supporting the edges and the net has maintained its intended shape.',
+      ],
+    },
+    benefits: {
+      items: [
+        'Maintains Net Shape',
+        'Prevents Uneven Stretching',
+        'Easier Net Installation',
+        'Improved Edge Strength',
+      ],
+    },
+  },  
   {
     id: 'corner-door-installation',
     title: 'How to Install a Corner Door on Sports Netting Enclosures',
