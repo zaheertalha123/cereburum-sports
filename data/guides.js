@@ -1876,29 +1876,115 @@ const rawGuides = [
     category: 'scaffolding-and-equipment',
     image: '/images/guides/portable-scaffolding/gallery/portable-scaffolding-01.webp',
     imageAlt: 'Detachable portable scaffolding used for cricket net installation and maintenance | Cereburum Sports',
-    desc: 'Learn how portable scaffolding helps workers install and maintain sports nets at different heights. Its detachable sections make it easy to transport, assemble, and adjust according to the structure. Portable scaffolding is also available with wheels and can be rented for temporary installation work.',
+    desc: 'Learn how portable scaffolding helps workers install and maintain sports nets at different heights. Its detachable sections make it easy to transport, assemble, and adjust according to the structure. Portable scaffolding is also available with wheels and can be rented for temporary installation work.',    
     images: [
-      ...[
-        'webp', 'webp', 'mp4', 'mp4', 'webp', 'mp4',
-        'mp4', 'mp4', 'mp4', 'webp', 'webp', 'webp',
-        'mp4', 'webp', 'mp4', 'webp', 'mp4', 'mp4',
-        'webp', 'webp', 'webp', 'webp', 'webp', 'mp4',
-      ].map((ext, index) => {
-        const number = String(index + 1).padStart(2, '0');
-        const base = '/images/guides/portable-scaffolding/gallery/';
-        const isVideo = ext === 'mp4';
-
-        return {
-          ...(isVideo ? { type: 'video' } : {}),
-          url: `${base}portable-scaffolding-${number}.${ext}`,
-          ...(isVideo
-            ? {
-                poster: `${base}portable-scaffolding-01.webp`,
-              }
-            : {}),
-          alt: `Portable scaffolding for sports net installation and maintenance - Gallery ${number} | Cereburum Sports`,
-        };
-      }),
+      {
+        url: '/images/guides/portable-scaffolding/gallery/portable-scaffolding-01.webp',
+        alt: 'Portable metal scaffolding used for sports net installation',
+      },
+      {
+        url: '/images/guides/portable-scaffolding/gallery/portable-scaffolding-02.webp',
+        alt: 'Tall portable scaffolding assembled inside a cricket practice ground',
+      },
+      {
+        type: 'video',
+        url: '/images/guides/portable-scaffolding/gallery/portable-scaffolding-03.mp4',
+        alt: 'Portable scaffolding setup for elevated sports net installation',
+      },
+      {
+        type: 'video',
+        url: '/images/guides/portable-scaffolding/gallery/portable-scaffolding-04.mp4',
+        alt: 'Using portable scaffolding during cricket net installation work',
+      },
+      {
+        url: '/images/guides/portable-scaffolding/gallery/portable-scaffolding-05.webp',
+        alt: 'Detachable metal scaffolding structure for sports ground maintenance',
+      },
+      {
+        type: 'video',
+        url: '/images/guides/portable-scaffolding/gallery/portable-scaffolding-06.mp4',
+        alt: 'Portable scaffolding used to access elevated net installation areas',
+      },
+      {
+        type: 'video',
+        url: '/images/guides/portable-scaffolding/gallery/portable-scaffolding-07.mp4',
+        alt: 'Scaffolding equipment used for installing high sports nets',
+      },
+      {
+        type: 'video',
+        url: '/images/guides/portable-scaffolding/gallery/portable-scaffolding-08.mp4',
+        alt: 'Portable scaffolding arrangement for cricket box net installation',
+      },
+      {
+        type: 'video',
+        url: '/images/guides/portable-scaffolding/gallery/portable-scaffolding-09.mp4',
+        alt: 'Adjustable portable scaffolding used for sports net maintenance',
+      },
+      {
+        url: '/images/guides/portable-scaffolding/gallery/portable-scaffolding-10.webp',
+        alt: 'Portable scaffolding with detachable metal frames at a cricket ground',
+      },
+      {
+        url: '/images/guides/portable-scaffolding/gallery/portable-scaffolding-11.webp',
+        alt: 'Metal scaffolding tower for elevated net installation and repair',
+      },
+      {
+        url: '/images/guides/portable-scaffolding/gallery/portable-scaffolding-12.webp',
+        alt: 'Portable scaffolding structure with adjustable working platforms',
+      },
+      {
+        type: 'video',
+        url: '/images/guides/portable-scaffolding/gallery/portable-scaffolding-13.mp4',
+        alt: 'Using detachable scaffolding sections for sports net installation',
+      },
+      {
+        url: '/images/guides/portable-scaffolding/gallery/portable-scaffolding-14.webp',
+        alt: 'Portable metal scaffolding positioned beside a cricket net enclosure',
+      },
+      {
+        type: 'video',
+        url: '/images/guides/portable-scaffolding/gallery/portable-scaffolding-15.mp4',
+        alt: 'Portable scaffolding used for maintenance of overhead cricket nets',
+      },
+      {
+        url: '/images/guides/portable-scaffolding/gallery/portable-scaffolding-16.webp',
+        alt: 'Tall portable scaffolding tower inside a sports net enclosure at night',
+      },
+      {
+        type: 'video',
+        url: '/images/guides/portable-scaffolding/gallery/portable-scaffolding-17.mp4',
+        alt: 'Portable scaffolding used for elevated sports net installation work',
+      },
+      {
+        type: 'video',
+        url: '/images/guides/portable-scaffolding/gallery/portable-scaffolding-18.mp4',
+        alt: 'Workers using portable scaffolding for sports net installation',
+      },
+      {
+        url: '/images/guides/portable-scaffolding/gallery/portable-scaffolding-19.webp',
+        alt: 'Adjustable metal scaffolding for cricket ground net maintenance',
+      },
+      {
+        url: '/images/guides/portable-scaffolding/gallery/portable-scaffolding-20.webp',
+        alt: 'Portable scaffolding assembled for high roof net installation',
+      },
+      {
+        url: '/images/guides/portable-scaffolding/gallery/portable-scaffolding-21.webp',
+        alt: 'Detachable scaffolding frame used in sports facility maintenance',
+      },
+      {
+        url: '/images/guides/portable-scaffolding/gallery/portable-scaffolding-22.webp',
+        alt: 'Portable scaffolding tower with working platforms and support braces',
+      },
+      {
+        url: '/images/guides/portable-scaffolding/gallery/portable-scaffolding-23.webp',
+        alt: 'Metal scaffolding equipment for installation of cricket enclosure nets',
+      },
+      {
+        type: 'video',
+        url: '/images/guides/portable-scaffolding/gallery/portable-scaffolding-24.mp4',
+        alt: 'Portable scaffolding demonstration for sports net installation and maintenance',
+      },
     ],
     features: {
       items: [
