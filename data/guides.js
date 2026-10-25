@@ -1002,6 +1002,105 @@ const rawGuides = [
         'Organized Workflow',
       ],
     },
+  },  
+  {
+    id: 'rings',
+    title: 'How to Install Rings on Sports Netting Borders',
+    category: 'installation-and-techniques',
+    image: '/images/guides/rings/gallery/rings-01.webp',
+    imageAlt: 'Metal rings fitted into black border of green sports netting | Cereburum Sports',
+    desc: 'Step-by-step guide to installing metal rings on sports netting borders for cricket cages, football nets, and sports enclosures. Learn how rings provide strong attachment points for hooks, ropes, and clips while helping keep the net securely installed.',
+    images: [
+      {
+        url: '/images/guides/rings/gallery/rings-01.webp',
+        alt: 'Sports netting with metal rings installed along the black border | Cereburum Sports',
+      },
+      {
+        url: '/images/guides/rings/gallery/rings-02.webp',
+        alt: 'Close-up of metal ring and spring clip attached to sports netting border | Cereburum Sports',
+      },
+      {
+        url: '/images/guides/rings/gallery/rings-03.webp',
+        alt: 'Metal rings positioned along reinforced black netting border | Cereburum Sports',
+      },
+      {
+        url: '/images/guides/rings/gallery/rings-04.webp',
+        alt: 'Metal ring attachment on green sports netting | Cereburum Sports',
+      },
+      {
+        url: '/images/guides/rings/gallery/rings-05.webp',
+        alt: 'Ring installation detail on reinforced sports net border | Cereburum Sports',
+      },
+      {
+        url: '/images/guides/rings/gallery/rings-06.webp',
+        alt: 'Close view of ring placement for securing sports netting | Cereburum Sports',
+      },
+      {
+        url: '/images/guides/rings/gallery/rings-07.webp',
+        alt: 'Sports net border with metal rings for installation and attachment | Cereburum Sports',
+      },
+      {
+        type: 'video',
+        url: '/images/guides/rings/gallery/rings-08.mp4',
+        poster: '/images/guides/rings/gallery/rings-01.webp',
+        alt: 'Rings installation demonstration for sports netting borders | Cereburum Sports',
+      },
+    ],
+    features: {
+      items: [
+        'Metal Rings',
+        'Reinforced Border',
+        'Secure Attachment',
+        'Easy Installation',
+      ],
+    },
+    applications: {
+      items: [
+        'Cricket Practice Nets',
+        'Football Nets',
+        'Sports Arenas',
+        'Rooftop Net Enclosures',
+      ],
+    },
+    materials: {
+      items: [
+        'Metal Rings',
+        'Reinforced Border Tape',
+        'Ring Installation Tool',
+        'Measuring Tape',
+      ],
+      images: [
+        { 
+          url: '/images/guides/rings/materials/rings-01.webp', 
+          alt: 'Metal rings fitted into black border of sports netting | Cereburum Sports' 
+        },
+        { 
+          url: '/images/guides/rings/materials/rings-02.webp', 
+          alt: 'Parachute border sewn with the netting thread | Cereburum Sports' 
+        },
+        { 
+          url: '/images/guides/rings/materials/rings-03.webp', 
+          alt: 'Ring installation tool with yellow and black handles and metal rings for sports netting borders | Cereburum Sports',
+        }
+      ],
+    },
+    installation: {
+      steps: [
+        'Spread the sports net on a clean and flat surface. Check that the black border tape is properly stitched around the edges of the net.',
+        'Measure and mark the positions where the rings will be installed. Keep suitable spacing between rings so the net can be attached evenly to the supporting structure.',
+        'Place each metal ring at the marked position on the reinforced border. Make sure the ring is positioned within the border tape and does not damage the net threads.',
+        'Use a suitable ring installation tool to fix the ring firmly into the border. Check that the ring is properly secured and its edges are smooth.',
+        'Repeat the process along the required sides of the net. After installing all rings, check their alignment and attachment strength. The net can then be connected to the supporting structure using suitable hooks, clips, or ropes.',
+      ],
+    },
+    benefits: {
+      items: [
+        'Strong Attachment',
+        'Easy Net Removal',
+        'Even Support',
+        'Long-Lasting Use',
+      ],
+    },
   },
   {
     id: 'corner-door-installation',
