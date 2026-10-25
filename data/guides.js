@@ -2618,6 +2618,99 @@ const rawGuides = [
         'Suitable for Different Sports',
       ],
     },
+  },  
+  {
+    id: 'netting-age',
+    title: 'Sports Netting Age: New vs Old Net Comparison',
+    category: 'maintenance-and-issues',
+    image: '/images/guides/netting-age/gallery/netting-age-01.webp',
+    imageAlt: 'Comparison of new white netting thread and four-year-old thread showing visible aging and discoloration | Cereburum Sports',
+    desc: 'See how sports netting changes after years of outdoor use. This guide compares newly installed netting with older netting, including a four-year-old thread example. Real images and videos highlight differences in thread color, surface condition, knots, and signs of wear. Learn how to recognize aging netting and understand when maintenance, repair, or replacement may be required.',
+    images: [
+      {
+        url: '/images/guides/netting-age/gallery/netting-age-01.webp',
+        alt: 'Close-up comparison of newly installed white netting thread and four-year-old discolored thread | Cereburum Sports',
+      },
+      {
+        url: '/images/guides/netting-age/gallery/netting-age-02.webp',
+        alt: 'Sports netting thread comparison showing differences between fresh white thread and older weathered thread | Cereburum Sports',
+      },
+      {
+        type: 'video',
+        url: '/images/guides/netting-age/gallery/netting-age-03.mp4',
+        poster: '/images/guides/netting-age/gallery/netting-age-01.webp',
+        alt: 'Video reference comparing new sports netting thread with older thread after years of use | Cereburum Sports',
+      },
+      {
+        type: 'video',
+        url: '/images/guides/netting-age/gallery/netting-age-04.mp4',
+        poster: '/images/guides/netting-age/gallery/netting-age-02.webp',
+        alt: 'Video demonstration showing visible differences in the condition of new and aged sports netting | Cereburum Sports',
+      },
+      {
+        url: '/images/guides/netting-age/gallery/netting-age-05.webp',
+        alt: 'Close-up view of tangled and weathered old sports netting showing thread discoloration and signs of extended use | Cereburum Sports',
+      },
+      {
+        url: '/images/guides/netting-age/gallery/netting-age-06.webp',
+        alt: 'Close-up inspection of an old sports net border showing worn fabric edging and weathered netting threads | Cereburum Sports',
+      },
+      {
+        type: 'video',
+        url: '/images/guides/netting-age/gallery/netting-age-07.mp4',
+        poster: '/images/guides/netting-age/gallery/netting-age-05.webp',
+        alt: 'Video inspection of aged sports netting showing thread condition and visible wear after prolonged use | Cereburum Sports',
+      },
+      {
+        type: 'video',
+        url: '/images/guides/netting-age/gallery/netting-age-08.mp4',
+        poster: '/images/guides/netting-age/gallery/netting-age-06.webp',
+        alt: 'Video reference showing the condition of old sports netting and its border after years of outdoor exposure | Cereburum Sports',
+      },
+    ],
+    features: {
+      items: [
+        'New vs Old Net Comparison',
+        'Four-Year-Old Thread Example',
+        'Thread Wear Identification',
+        'Netting Condition Inspection',
+      ],
+    },
+    applications: {
+      items: [
+        'Cricket Practice Nets',
+        'Football Net Enclosures',
+        'Sports Arenas',
+        'Outdoor Training Facilities',
+        'Rooftop Net Enclosures',
+      ],
+    },
+    materials: {
+      items: [],
+      images: [],
+    },
+    installation: {
+      steps: [
+        'Sports netting changes over time due to sunlight, rain, dust, wind, and regular use. The rate of aging depends on the net material, quality, weather conditions, and maintenance.',
+        'Newly installed netting usually has a cleaner appearance, with fresh threads and properly formed knots. The reference images show new white thread alongside older thread for comparison.',
+        'After several years of outdoor exposure, netting threads may become discolored, rough, or worn. The four-year-old thread example shows visible differences compared with the new thread.',
+        'Inspect the threads closely for fraying, thinning, broken strands, and damaged knots. These signs can indicate that the net has experienced wear and may require maintenance.',
+        'Check the border and edges of the net. Older netting may show damaged border stitching, worn fabric edging, or loose attachment points, particularly in areas exposed to frequent movement.',
+        'Compare the condition of different sections of the same net. Areas exposed to direct sunlight, strong wind, or repeated ball impact may show more wear than protected sections.',
+        'Do not judge net strength by color alone. A discolored net may still be usable, while a clean-looking net may have weakened threads. Check the actual condition of the material and its connections.',
+        'Repair small damaged sections where practical. If the net has widespread broken threads, weak knots, damaged borders, or significant deterioration, consider replacing the affected section or the complete net.',
+        'The reference images and videos demonstrate how old sports netting can look after years of use. Regular inspections help identify problems early and support decisions about repair or replacement.',
+      ],
+    },
+    benefits: {
+      items: [
+        'Understand Netting Aging',
+        'Identify Worn Threads',
+        'Detect Maintenance Issues',
+        'Plan Timely Replacement',
+        'Maintain Safer Enclosures',
+      ],
+    },
   },
 ];
 
