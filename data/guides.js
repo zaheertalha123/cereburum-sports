@@ -21,19 +21,127 @@ export function getGuideCategoryLabel(value) {
   return match ? match.label : value;
 }
 
-/**
- * Guide shape (omit any section that does not apply — the page hides it):
- * {
- *   id, title, category, image, imageAlt, desc,
- *   images: [{ url, alt, type?: 'image' | 'video', poster?: string }],
- *   features:      { items: string[], images?: [{ url, alt }] },
- *   applications:  { items: string[], images?: [{ url, alt }] },
- *   materials:     { items: string[], images?: [{ url, alt }] },
- *   installation:  { steps: string[], images?: [{ url, alt }] },
- *   benefits:      { items: string[], images?: [{ url, alt }] },
- * }
- */
 const rawGuides = [
+  {
+    id: 'cricket-arena',
+    title: 'How to Build a Cricket Arena',
+    category: 'sports-structure',
+    image: '/images/guides/01-sports-structure/cricket-arena/cricket-arena-01.webp',
+    imageAlt: 'Cricket arena with steel poles and support pipes | Cereburum Sports',
+    desc: 'Learn how to build a cricket arena using steel poles, support pipes, and protective netting. This guide covers planning, pole installation, frame support, net installation, and final safety checks.',
+    images: [
+      { 
+        url: '/images/guides/01-sports-structure/cricket-arena/cricket-arena-01.webp', 
+        alt: 'Cricket arena steel poles and support frame | Cereburum Sports' 
+      },
+      { 
+        url: '/images/guides/01-sports-structure/cricket-arena/cricket-arena-02.webp', 
+        alt: 'Cricket arena construction view | Cereburum Sports' 
+      },
+      { 
+        type: 'video', 
+        url: '/images/guides/01-sports-structure/cricket-arena/cricket-arena-03.mp4', 
+        poster: '/images/guides/01-sports-structure/cricket-arena/cricket-arena-01.webp', 
+        alt: 'Cricket arena construction video | Cereburum Sports' 
+      },
+      { 
+        url: '/images/guides/01-sports-structure/cricket-arena/cricket-arena-04.webp', 
+        alt: 'Cricket arena boundary poles and lighting installation | Cereburum Sports'
+      },
+      { 
+        url: '/images/guides/01-sports-structure/cricket-arena/cricket-arena-05.webp', 
+        alt: 'Cricket arena steel frame with floodlights at night | Cereburum Sports' 
+      },
+      { 
+        type: 'video',
+        url: '/images/guides/01-sports-structure/cricket-arena/cricket-arena-06.mp4', 
+        poster: '/images/guides/01-sports-structure/cricket-arena/cricket-arena-01.webp', 
+        alt: 'Cricket arena installation video | Cereburum Sports' 
+      },
+      { 
+        type: 'video', 
+        url: '/images/guides/01-sports-structure/cricket-arena/cricket-arena-07.mp4', 
+        poster: '/images/guides/01-sports-structure/cricket-arena/cricket-arena-01.webp', 
+        alt: 'Cricket arena construction walkthrough | Cereburum Sports' 
+      },
+      { 
+        type: 'video', 
+        url: '/images/guides/01-sports-structure/cricket-arena/cricket-arena-08.mp4', 
+        poster: '/images/guides/01-sports-structure/cricket-arena/cricket-arena-01.webp', 
+        alt: 'Cricket arena installation process | Cereburum Sports' 
+      },
+      { 
+        url: '/images/guides/01-sports-structure/cricket-arena/cricket-arena-09.webp', 
+        alt: 'Cricket arena steel support pipes and diagonal bracing | Cereburum Sports' 
+      },
+      { 
+        url: '/images/guides/01-sports-structure/cricket-arena/cricket-arena-10.webp', 
+        alt: 'Cricket arena roof netting installation using scaffolding | Cereburum Sports' 
+      },
+      { 
+        type: 'video', 
+        url: '/images/guides/01-sports-structure/cricket-arena/cricket-arena-11.mp4', 
+        poster: '/images/guides/01-sports-structure/cricket-arena/cricket-arena-01.webp', 
+        alt: 'Cricket arena construction video 11 | Cereburum Sports' 
+      },
+      { 
+        type: 'video', 
+        url: '/images/guides/01-sports-structure/cricket-arena/cricket-arena-12.mp4', 
+        poster: '/images/guides/01-sports-structure/cricket-arena/cricket-arena-01.webp', 
+        alt: 'Cricket arena installation video 12 | Cereburum Sports' 
+      },
+      { 
+        type: 'video', 
+        url: '/images/guides/01-sports-structure/cricket-arena/cricket-arena-13.mp4', 
+        poster: '/images/guides/01-sports-structure/cricket-arena/cricket-arena-01.webp', 
+        alt: 'Cricket arena construction video 13 | Cereburum Sports' 
+      },
+      { 
+        type: 'video', 
+        url: '/images/guides/01-sports-structure/cricket-arena/cricket-arena-14.mp4', 
+        poster: '/images/guides/01-sports-structure/cricket-arena/cricket-arena-01.webp', 
+        alt: 'Cricket arena installation video 14 | Cereburum Sports' 
+      },
+      { 
+        type: 'video', 
+        url: '/images/guides/01-sports-structure/cricket-arena/cricket-arena-15.mp4', 
+        poster: '/images/guides/01-sports-structure/cricket-arena/cricket-arena-01.webp', 
+        alt: 'Cricket arena construction video 15 | Cereburum Sports' 
+      },
+      { 
+        type: 'video', 
+        url: '/images/guides/01-sports-structure/cricket-arena/cricket-arena-16.mp4', 
+        poster: '/images/guides/01-sports-structure/cricket-arena/cricket-arena-01.webp', 
+        alt: 'Cricket arena installation video 16 | Cereburum Sports' 
+      },
+    ],
+    features: {
+      items: ['Steel Pole Structure', 'Strong Support Frame', 'Roof & Side Netting', 'Lighting System'],
+    },
+    applications: {
+      items: ['Cricket Academies', 'Sports Clubs', 'Schools & Universities', 'Commercial Cricket Arenas'],
+    },
+    materials: {
+      items: ['Steel Poles', 'Horizontal Support Pipes', 'Diagonal Support Pipes', 'Sports Netting', 'Ropes & Tying Thread', 'Floodlights', 'Anti-Rust Paint'],
+      images: [
+        { url: '/images/guides/01-sports-structure/cricket-arena/cricket-arena-09.webp', alt: 'Steel poles and support pipes used in cricket arena construction | Cereburum Sports' },
+        { url: '/images/guides/01-sports-structure/cricket-arena/cricket-arena-10.webp', alt: 'Protective roof netting installed over a cricket arena | Cereburum Sports' },
+      ],
+    },
+    installation: {
+      steps: [
+        'Measure the available area and decide the length, width, and height of the cricket arena. Mark the positions where the steel poles will be installed.',
+        'Prepare the ground and install the steel poles at the marked positions. Make sure the poles are properly fixed and aligned.',
+        'Connect the poles using horizontal support pipes. Add diagonal support pipes where required to make the structure stronger and more stable.',
+        'Install the lighting system at suitable positions around the arena. Secure the lights and electrical wiring properly.',
+        'Install the side netting and roof netting using suitable scaffolding and lifting equipment. Tie the netting securely to the support structure and adjust the tension without putting excessive pressure on the poles.',
+        'Check the complete arena, including pole alignment, support pipes, netting connections, and lighting. Make sure everything is properly secured before using the arena.',
+      ],
+    },
+    benefits: {
+      items: ['Safe Practice Area', 'Prevents Balls from Escaping', 'Day & Night Practice', 'Strong & Durable Structure'],
+    },
+  },
   {
     id: 'corner-door-installation',
     title: 'How to Install a Corner Door on Sports Netting Enclosures',
