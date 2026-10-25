@@ -1333,6 +1333,85 @@ const rawGuides = [
     },
   },  
   {
+    id: 'straight-net-joint',
+    title: 'Why Straight Net Joints Are Weak in Sports Netting',
+    category: 'installation-and-techniques',
+    image: '/images/guides/straight-net-joint/gallery/straight-net-joint-01.webp',
+    imageAlt: 'Straight net joint highlighted as a weak connection in a sports netting enclosure | Cereburum Sports',
+    desc: 'Learn why straight net joints can create weak points in cricket nets, football nets, and sports enclosures. This guide explains how poorly connected net sections can separate under tension, affect net strength, and increase the risk of damage during regular use.',
+    images: [
+      {
+        url: '/images/guides/straight-net-joint/gallery/straight-net-joint-01.webp',
+        alt: 'Straight joint between two sections of sports netting | Cereburum Sports',
+      },
+      {
+        url: '/images/guides/straight-net-joint/gallery/straight-net-joint-02.webp',
+        alt: 'Highlighted straight net joint showing a potentially weak connection in an installed sports arena net | Cereburum Sports',
+      },
+      {
+        url: '/images/guides/straight-net-joint/gallery/straight-net-joint-03.webp',
+        alt: 'Example of a straight net joint in sports netting that may become weak under tension | Cereburum Sports',
+      },
+      {
+        type: 'video',
+        url: '/images/guides/straight-net-joint/gallery/straight-net-joint-04.mp4',
+        poster: '/images/guides/straight-net-joint/gallery/straight-net-joint-01.webp',
+        alt: 'Video demonstrating straight net joints and their potential weaknesses in sports netting | Cereburum Sports',
+      },
+    ],
+    features: {
+      items: [
+        'Straight Joint Identification',
+        'Weak Connection Points',
+        'Tension Concentration',
+        'Joint Strength Awareness',
+      ],
+    },
+    applications: {
+      items: [
+        'Cricket Practice Nets',
+        'Football Netting',
+        'Sports Arenas',
+        'Roof and Side Netting',
+      ],
+    },
+    materials: {
+      items: [
+        'Sports Netting Sections',
+        'Net Stitching Twine',
+        'Wooden Netting Needle',
+      ],
+      images: [
+        { 
+          url: '/images/guides/straight-net-joint/materials/straight-net-joint-01.webp', 
+          alt: 'Thread used for straight net joints | Cereburum Sports' 
+        },
+        { 
+          url: '/images/guides/straight-net-joint/materials/straight-net-joint-02.webp', 
+          alt: 'Wooden netting needle used to join the nets | Cereburum Sports' 
+        },
+      ],
+    },
+    installation: {
+      steps: [
+        'Identify the areas where two sections of sports netting are joined together. A straight net joint forms a continuous connection line between the two net sections.',
+        'Check how the net sections are connected along the straight joint. If the stitching is weak or uneven, the connection may not support the tension applied during installation.',
+        'When the net is stretched and secured to the supporting structure, pulling forces can place additional stress on the straight joint. This may cause the stitching to loosen or the connected sections to separate.',
+        'During regular use, repeated ball impacts and movement of the net can put further pressure on weak joints. Over time, this may increase the chances of tearing or damage along the connection.',
+        'Avoid relying on poorly stitched straight joints in areas that experience high tension. Use a suitable joining method with strong stitching and proper reinforcement where required.',
+        'After installation, inspect all net joints carefully. Make sure the connected sections are secure, the stitching is not loose, and there are no visible gaps or signs of separation.',
+      ],
+    },
+    benefits: {
+      items: [
+        'Identifies Weak Joints',
+        'Prevents Net Separation',
+        'Improves Installation Quality',
+        'Reduces Net Damage',
+      ],
+    },
+  },
+  {
     id: 'corner-door-installation',
     title: 'How to Install a Corner Door on Sports Netting Enclosures',
     category: 'doors-and-access',
