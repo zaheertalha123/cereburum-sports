@@ -1,25 +1,14 @@
-'use client';
-
 import styles from './guide.module.css';
 
 export default function GuideSectionNav({ sections }) {
-  if (!sections?.length) return null;
-
-  const scrollToSection = (id) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  };
+  if (!sections || sections.length < 2) return null;
 
   return (
-    <nav className={styles.sectionNav} aria-label="Guide sections">
+    <nav className={styles.jumpRow} aria-label="On this page">
       {sections.map(({ id, label }) => (
-        <button
-          key={id}
-          type="button"
-          className={styles.sectionNavBtn}
-          onClick={() => scrollToSection(id)}
-        >
+        <a key={id} href={`#${id}`} className={styles.jumpPill}>
           {label}
-        </button>
+        </a>
       ))}
     </nav>
   );

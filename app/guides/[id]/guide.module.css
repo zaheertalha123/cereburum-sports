@@ -1,19 +1,14 @@
+/* Hero — cover image like individual work pages */
+
 .heroSection {
   position: relative;
-  min-height: 45vh;
+  min-height: 50vh;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: calc(var(--nav-h) + 4rem) 0 4rem;
   overflow: hidden;
   text-align: center;
-}
-
-.heroContent {
-  position: relative;
-  z-index: 2;
-  max-width: 760px;
-  margin: 0 auto;
 }
 
 .heroBg {
@@ -24,78 +19,29 @@
 
 .heroImage {
   object-fit: cover;
-  opacity: 0.45;
-}
-
-.heroGradient {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to bottom, rgba(7, 5, 26, 0.35), rgba(7, 5, 26, 1));
+  opacity: 0.35;
 }
 
 .heroFallback {
   position: absolute;
   inset: 0;
-  background:
-    radial-gradient(ellipse 70% 50% at 50% 20%, rgba(187, 181, 101, 0.12), transparent 60%),
-    var(--gradient-hero);
+  background: var(--gradient-hero);
 }
 
-.categoryBadge {
-  display: inline-block;
-  background: rgba(187, 181, 101, 0.15);
-  border: 1px solid rgba(187, 181, 101, 0.3);
-  color: var(--sand);
-  padding: 0.3rem 1rem;
-  border-radius: 100px;
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  font-weight: 700;
-  margin-bottom: 1rem;
+.heroGradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(7, 5, 26, 0.25), rgba(7, 5, 26, 1));
 }
 
-.title {
-  color: var(--white);
-  margin-bottom: 1rem;
-}
-
-.desc {
-  color: var(--gray-200);
-  font-size: 1.05rem;
-  max-width: 640px;
-  margin: 0 auto 1.75rem;
-  line-height: 1.65;
-}
-
-.sectionNav {
+.heroContent {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  margin-top: 0.25rem;
-}
-
-.sectionNavBtn {
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(187, 181, 101, 0.28);
-  color: var(--sand);
-  padding: 0.55rem 1.35rem;
-  border-radius: 100px;
-  font-size: 0.9rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all var(--transition-base);
-}
-
-.sectionNavBtn:hover {
-  background: rgba(187, 181, 101, 0.12);
-  border-color: rgba(187, 181, 101, 0.5);
-  color: var(--white);
-}
-
-.anchorSection {
-  scroll-margin-top: calc(var(--nav-h) + 1.5rem);
+  flex-direction: column;
+  align-items: center;
 }
 
 .backLinkContainer {
@@ -126,150 +72,157 @@
   transform: translateX(-4px);
 }
 
-.contentSection {
-  background: var(--surface-0);
-  padding: 4.25rem 0;
-  position: relative;
+.categoryBadge {
+  background: rgba(187, 181, 101, 0.15);
+  border: 1px solid rgba(187, 181, 101, 0.3);
+  color: var(--sand);
+  padding: 0.3rem 1rem;
+  border-radius: 100px;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  margin-bottom: 1rem;
 }
 
-.contentSectionAlt {
-  background: var(--surface-1);
-  border-top: 1px solid rgba(187, 181, 101, 0.08);
-  border-bottom: 1px solid rgba(187, 181, 101, 0.08);
+.heroTitle {
+  color: var(--white);
+  margin-bottom: 1rem;
 }
 
-.sectionHeader {
-  text-align: center;
-  margin-bottom: 2.25rem;
-}
-
-.sectionSubtitle {
-  color: var(--gray-400);
-  font-size: 1rem;
-  max-width: 520px;
-  margin: 0.5rem auto 0;
-  line-height: 1.6;
-}
-
-.stackLayout,
-.splitLayout {
-  display: flex;
-  flex-direction: column;
-  gap: 1.75rem;
-}
-
-.splitLayout {
-  align-items: start;
-}
-
-.sectionBody {
-  min-width: 0;
-}
-
-@media (min-width: 900px) {
-  .splitLayout {
-    display: grid;
-    grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
-    gap: 2.25rem;
-    align-items: start;
-  }
-
-  .splitLayout .featureList,
-  .splitLayout .cardGrid {
-    max-width: none;
-    margin-inline: 0;
-  }
-
-  .splitLayout .chipRow {
-    justify-content: flex-start;
-  }
-}
-
-.featureList {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 0.75rem;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  max-width: 760px;
-  margin-inline: auto;
-}
-
-.featureItem {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.75rem;
+.heroDesc {
   color: var(--gray-200);
-  font-size: 1rem;
-  line-height: 1.5;
-  padding: 0.85rem 1rem;
-  background: var(--gradient-card);
-  border: 1px solid rgba(187, 181, 101, 0.12);
-  border-radius: var(--radius-md);
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto 1.5rem;
+  line-height: 1.75;
 }
 
-.featureCheck {
-  width: 1.45rem;
-  height: 1.45rem;
-  border-radius: 50%;
-  flex-shrink: 0;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--ink);
-  background: var(--gradient-sand);
-  margin-top: 0.05rem;
-}
-
-.chipRow {
+.jumpRow {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 0.75rem;
-  list-style: none;
-  margin: 0;
-  padding: 0;
+  margin-top: 0.5rem;
 }
 
-.chip {
-  color: var(--white);
-  background: rgba(187, 181, 101, 0.1);
-  border: 1px solid rgba(187, 181, 101, 0.28);
-  padding: 0.7rem 1.15rem;
+.jumpPill {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: var(--gray-400);
+  padding: 0.5rem 1.25rem;
   border-radius: 100px;
-  font-size: 0.95rem;
-  font-weight: 600;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all var(--transition-base);
 }
 
-.cardGrid {
+.jumpPill:hover {
+  background: rgba(187, 181, 101, 0.12);
+  border-color: var(--sand);
+  color: var(--white);
+}
+
+.article {
+  background: var(--surface-0);
+  padding: 4rem 0 5.5rem;
+}
+
+.facts {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 0.85rem;
-  list-style: none;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-bottom: 3.5rem;
+}
+
+.factCard {
+  background: var(--gradient-card);
+  border: 1px solid rgba(187, 181, 101, 0.12);
+  border-radius: var(--radius-lg);
+  padding: 1.35rem 1.35rem 1.15rem;
+}
+
+.factTitle {
+  color: var(--sand);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 0.9rem;
+}
+
+.factList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 
-@media (min-width: 640px) {
-  .cardGrid {
-    grid-template-columns: 1fr 1fr;
-  }
+.factItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  color: var(--gray-200);
+  font-size: 0.98rem;
+  line-height: 1.45;
 }
 
-.infoCard {
+.factMark {
+  width: 7px;
+  height: 7px;
+  margin-top: 0.45rem;
+  border-radius: 50%;
+  background: var(--sand);
+  flex-shrink: 0;
+}
+
+.factMedia {
+  margin-top: 1rem;
+}
+
+.block {
+  scroll-margin-top: calc(var(--nav-h) + 1.25rem);
+  margin-bottom: 3.75rem;
+}
+
+.blockTitle {
+  color: var(--white);
+  margin: 0 0 1.25rem;
+}
+
+.build {
+  scroll-margin-top: calc(var(--nav-h) + 1.25rem);
+  display: grid;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+.buildSplit {
+  grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
+}
+
+.materialList {
+  display: grid;
+  gap: 0.75rem;
+  margin: 0 0 1.25rem;
+  padding: 0;
+  list-style: none;
+}
+
+.materialItem {
+  position: relative;
+  overflow: hidden;
+  padding: 0.95rem 1rem 0.95rem 1.15rem;
+  color: var(--gray-200);
   background: linear-gradient(160deg, rgba(18, 17, 74, 0.7), rgba(7, 5, 26, 0.85));
   border: 1px solid rgba(187, 181, 101, 0.16);
   border-radius: var(--radius-md);
-  padding: 1rem 1.1rem 1rem 1.2rem;
-  color: var(--gray-200);
-  font-size: 0.98rem;
-  line-height: 1.5;
-  position: relative;
-  overflow: hidden;
+  line-height: 1.4;
 }
 
-.infoCard::before {
+.materialItem::before {
   content: '';
   position: absolute;
   left: 0;
@@ -279,51 +232,20 @@
   background: var(--gradient-sand);
 }
 
+.materialImages {
+  max-width: 420px;
+}
+
+.stepsCol {
+  min-width: 0;
+}
+
+.installMedia {
+  margin-top: 1.5rem;
+}
+
 .stepsEmbedded {
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.stepsSection {
-  background: var(--surface-0);
-  padding: 4.5rem 0 5rem;
-  position: relative;
-  overflow: hidden;
-}
-
-.stepsSection::before {
-  content: '';
-  position: absolute;
-  top: -120px;
-  right: -80px;
-  width: 320px;
-  height: 320px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(187, 181, 101, 0.06) 0%, transparent 70%);
-  pointer-events: none;
-}
-
-.stepsLayout {
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.stepsHeader {
-  text-align: center;
-  margin-bottom: 3rem;
-}
-
-.sectionTitle {
-  color: var(--white);
-  margin: 0.5rem 0 0.75rem;
-}
-
-.stepsSubtitle {
-  color: var(--gray-400);
-  font-size: 1rem;
-  max-width: 520px;
-  margin: 0 auto;
-  line-height: 1.6;
+  margin: 0;
 }
 
 .stepsTimeline {
@@ -336,10 +258,10 @@
 
 .stepItem {
   display: grid;
-  grid-template-columns: 56px 1fr;
-  gap: 1.25rem;
+  grid-template-columns: 48px 1fr;
+  gap: 1rem;
   align-items: stretch;
-  padding-bottom: 1.75rem;
+  padding-bottom: 1.15rem;
 }
 
 .stepItem:last-child {
@@ -354,169 +276,85 @@
 
 .stepMarker {
   flex-shrink: 0;
-  width: 48px;
-  height: 48px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  background: linear-gradient(145deg, rgba(187, 181, 101, 0.22), rgba(18, 17, 74, 0.85));
-  border: 2px solid rgba(187, 181, 101, 0.45);
-  color: var(--sand);
-  font-size: 1rem;
+  background: var(--gradient-sand);
+  color: var(--ink);
+  font-size: 0.95rem;
   font-weight: 700;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 0 20px rgba(187, 181, 101, 0.12);
-  transition:
-    transform 0.35s ease,
-    box-shadow 0.35s ease,
-    border-color 0.35s ease;
   z-index: 1;
 }
 
 .stepConnector {
   flex: 1;
   width: 2px;
-  min-height: 28px;
-  margin: 0.4rem 0;
+  min-height: 18px;
+  margin: 0.35rem 0;
   background: linear-gradient(180deg, rgba(187, 181, 101, 0.55), rgba(187, 181, 101, 0.08));
-  transform-origin: top center;
-  transform: scaleY(0);
-  transition: transform 0.65s cubic-bezier(0.22, 1, 0.36, 1) 0.15s;
-}
-
-.stepItem.reveal.visible .stepConnector {
-  transform: scaleY(1);
-}
-
-.stepItem.reveal.visible .stepMarker {
-  animation: stepMarkerPop 0.55s cubic-bezier(0.34, 1.56, 0.64, 1) both;
 }
 
 .stepCard {
   background: var(--gradient-card);
   border: 1px solid rgba(187, 181, 101, 0.12);
   border-radius: var(--radius-lg);
-  padding: 1.35rem 1.5rem;
-  position: relative;
-  overflow: hidden;
-  transition:
-    transform 0.35s ease,
-    border-color 0.35s ease,
-    box-shadow 0.35s ease;
-}
-
-.stepCard::before {
-  content: '';
-  position: absolute;
-  inset: 0 auto 0 0;
-  width: 3px;
-  background: linear-gradient(180deg, var(--sand), rgba(187, 181, 101, 0.1));
-  opacity: 0;
-  transition: opacity 0.35s ease;
-}
-
-.stepItem:hover .stepCard {
-  border-color: rgba(187, 181, 101, 0.3);
-  box-shadow: var(--shadow-glow);
-  transform: translateX(8px);
-}
-
-.stepItem:hover .stepMarker {
-  transform: scale(1.08);
-  border-color: var(--sand);
-  box-shadow: 0 0 28px rgba(187, 181, 101, 0.35);
-}
-
-.stepItem:hover .stepCard::before {
-  opacity: 1;
+  padding: 1.05rem 1.2rem 1.15rem;
 }
 
 .stepLabel {
   display: block;
+  margin-bottom: 0.35rem;
+  color: var(--sand);
   font-size: 0.68rem;
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--sand);
-  margin-bottom: 0.55rem;
-  opacity: 0.9;
 }
 
 .stepText {
   margin: 0;
-  font-size: 0.98rem;
   color: var(--gray-200);
+  font-size: 0.98rem;
   line-height: 1.65;
 }
 
-@keyframes stepMarkerPop {
-  from {
-    opacity: 0;
-    transform: scale(0.45);
+@media (max-width: 900px) {
+  .facts,
+  .buildSplit {
+    grid-template-columns: 1fr;
   }
 
-  to {
-    opacity: 1;
-    transform: scale(1);
+  .materialImages {
+    max-width: none;
   }
 }
 
 @media (max-width: 767px) {
   .heroSection {
     padding: calc(var(--nav-h) + 3rem) 0 3rem;
-    min-height: auto;
+    min-height: 44vh;
   }
 
-  .contentSection,
-  .contentSectionAlt {
-    padding: 3rem 0;
+  .article {
+    padding: 2.75rem 0 4rem;
   }
 
-  .sectionHeader {
-    margin-bottom: 1.6rem;
-  }
-
-  .stepsSection {
-    padding: 3rem 0 3.5rem;
-  }
-
-  .stepsHeader {
-    margin-bottom: 2.25rem;
+  .facts,
+  .block {
+    margin-bottom: 2.5rem;
   }
 
   .stepItem {
-    grid-template-columns: 44px 1fr;
-    gap: 0.85rem;
-    padding-bottom: 1.25rem;
+    grid-template-columns: 40px 1fr;
+    gap: 0.75rem;
   }
 
   .stepMarker {
-    width: 40px;
-    height: 40px;
-    font-size: 0.9rem;
-  }
-
-  .stepCard {
-    padding: 1.1rem 1.15rem;
-  }
-
-  .stepItem:hover .stepCard {
-    transform: translateX(4px);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .stepItem.reveal.visible .stepMarker {
-    animation: none;
-  }
-
-  .stepConnector {
-    transform: scaleY(1);
-    transition: none;
-  }
-
-  .stepItem:hover .stepCard,
-  .stepItem:hover .stepMarker {
-    transform: none;
+    width: 34px;
+    height: 34px;
+    font-size: 0.85rem;
   }
 }
