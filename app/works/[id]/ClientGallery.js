@@ -1,7 +1,8 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import Image from 'next/image';
+import GalleryImage from '@/components/GalleryImage';
+import GalleryVideo from '@/components/GalleryVideo';
 import styles from './project.module.css';
 
 export default function ClientGallery({ media, projectTitle, compact = false, pair = false, unoptimized = false }) {
@@ -94,42 +95,29 @@ export default function ClientGallery({ media, projectTitle, compact = false, pa
             aria-label={`View full screen media ${idx + 1}`}
           >
             {item.type === 'image' ? (
-              pair ? (
-                <Image
-                  src={item.url}
-                  alt={item.alt || `${projectTitle || 'Sports net'} installation photo ${idx + 1} - boundary safety netting by Cereburum Sports`}
-                  fill
-                  className={styles.mediaItemCover}
-                  sizes="(max-width: 768px) 45vw, 220px"
-                  unoptimized={unoptimized}
-                />
-              ) : (
-                <Image
-                  src={item.url}
-                  alt={item.alt || `${projectTitle || 'Sports net'} installation photo ${idx + 1} - boundary safety netting by Cereburum Sports`}
-                  width={800}
-                  height={800}
-                  className={styles.mediaItem}
-                  style={{ width: '100%', height: 'auto', display: 'block' }}
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  unoptimized={unoptimized}
-                />
-              )
+              <GalleryImage
+                src={item.url}
+                alt={
+                  item.alt ||
+                  `${projectTitle || 'Sports net'} installation photo ${idx + 1} - boundary safety netting by Cereburum Sports`
+                }
+                layout={pair ? 'cover' : 'responsive'}
+                className={pair ? styles.mediaItemCover : styles.mediaItem}
+                sizes={
+                  pair
+                    ? '(max-width: 768px) 45vw, 220px'
+                    : '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
+                }
+                unoptimized={unoptimized}
+              />
             ) : item.type === 'video' ? (
-              <div style={{ position: 'relative' }}>
-                <video
-                  muted
-                  loop
-                  playsInline
-                  autoPlay
-                  className={styles.mediaItem}
-                  poster={item.poster}
-                  style={{ width: '100%', height: 'auto', display: 'block' }}
-                >
-                  <source src={item.url} type="video/mp4" />
-                </video>
-                <div className={styles.playIconOverlay}>▶</div>
-              </div>
+              <GalleryVideo
+                src={item.url}
+                className={styles.mediaItem}
+                variant="inline"
+                showPlayOverlay
+                playOverlayClassName={styles.playIconOverlay}
+              />
             ) : null}
           </div>
         ))}
@@ -149,25 +137,18 @@ export default function ClientGallery({ media, projectTitle, compact = false, pa
           
           <div className={styles.lightboxContent} onClick={(e) => e.stopPropagation()}>
             {media[currentIndex].type === 'image' ? (
-              <Image
+              <GalleryImage
+                key={media[currentIndex].url}
                 src={media[currentIndex].url}
-                alt={media[currentIndex].alt || `${projectTitle || 'Sports net'} installation photo ${currentIndex + 1} - boundary safety netting by Cereburum Sports`}
-                width={1920}
-                height={1080}
-                className={styles.lightboxMedia}
-                style={{ width: 'auto', height: '100%', maxHeight: '85vh', maxWidth: '85vw', objectFit: 'contain' }}
+                alt={
+                  media[currentIndex].alt ||
+                  `${projectTitle || 'Sports net'} installation photo ${currentIndex + 1} - boundary safety netting by Cereburum Sports`
+                }
+                variant="lightbox"
                 unoptimized={unoptimized}
               />
             ) : (
-              <video
-                controls
-                autoPlay
-                playsInline
-                className={styles.lightboxMedia}
-                style={{ maxHeight: '85vh', maxWidth: '85vw' }}
-              >
-                <source src={media[currentIndex].url} type="video/mp4" />
-              </video>
+              <GalleryVideo key={media[currentIndex].url} src={media[currentIndex].url} variant="lightbox" />
             )}
             {media[currentIndex].alt && (
               <div className={styles.lightboxCaption}>{media[currentIndex].alt}</div>
