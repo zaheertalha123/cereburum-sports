@@ -61,3 +61,18 @@
 @media(max-width:599px) { .hero { height:min(570px,calc(100svh - var(--nav-h) - 56px)); min-height:490px; } }
 
 .featuredImage,.projectImage,.categoryImage { border-radius:var(--radius-md); overflow:hidden; }
+@media(prefers-reduced-motion:no-preference) {
+ .heroCopy h1 { animation:heroEnter var(--motion-enter) var(--ease-out) backwards; }
+ .heroCopy > p { animation:heroEnter var(--motion-enter) var(--ease-out) 70ms backwards; }
+ .heroActions { animation:heroEnter var(--motion-enter) var(--ease-out) 140ms backwards; }
+ .heroLocation,.photoCaption { animation:heroFade 480ms var(--ease-out) 120ms backwards; }
+}
+.featuredImage img { transition:transform var(--transition-slow); }
+.heroLink span,.darkLink span,.textLink span,.projectCaption > span,.category h3 span { display:inline-block; transition:translate var(--transition-base); }
+@media(hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference) {
+ .featuredImage:hover img { transform:scale(1.025); }
+ .heroLink:hover span,.darkLink:hover span,.textLink:hover span,.project:hover .projectCaption > span,.category:hover h3 span { translate:3px -3px; }
+}
+
+@keyframes heroEnter { from { opacity:0; translate:0 18px; } to { opacity:1; translate:0 0; } }
+@keyframes heroFade { from { opacity:0; } to { opacity:1; } }

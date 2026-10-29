@@ -70,18 +70,6 @@ export const viewport = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${inter.variable} ${bebas.variable}`} suppressHydrationWarning>
-      <body suppressHydrationWarning>
-        <ScrollReveal />
-        <a href="#main-content" className="skip-link">Skip to content</a>
-        <Navbar />
-        <main id="main-content">
-          {children}
-        </main>
-        <Footer />
-        <WhatsAppFAB />
-        <Analytics />
-        <SpeedInsights />
-      </body>
-    </html>
-  );
-}
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: `if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) { document.documentElement.dataset.motion = 'pending'; setTimeout(function () { if (document.documentElement.dataset.motion === 'pending') delete document.documentElement.dataset.motion; }, 3000); }` }} />
+      </head>

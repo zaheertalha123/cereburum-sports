@@ -3,59 +3,48 @@
 import { useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 
-/**
- * Attaches an IntersectionObserver that adds the .visible class
- * to all elements with the .reveal class when they enter the viewport.
- */
+/** CSS owns the motion; observe one entrance per element, including streamed content. */
 export default function ScrollReveal() {
   const pathname = usePathname();
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
-    );
+    if (!('IntersectionObserver' in window)) return;
+    if (document.documentElement.dataset.motion) document.documentElement.dataset.motion = 'ready';
 
-    const observeReveals = (root = document) => {
-      root.querySelectorAll?.('.reveal').forEach((el) => {
-        if (!el.classList.contains('visible')) {
-          observer.observe(el);
-        }
+    const observed = new WeakSet();
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(({ isIntersecting, target }) => {
+        if (!isIntersecting) return;
+        target.dataset.reveal = 'visible';
+        observer.unobserve(target);
       });
+    }, { threshold: 0, rootMargin: '0px 0px 48px 0px' });
+
+    const observe = (element) => {
+      if (element.closest('[data-reveal-scope="pending"]')) return;
+      if (observed.has(element) || element.dataset.reveal === 'visible') return;
+      observed.add(element);
+      observer.observe(element);
+    };
+    const scan = (root) => {
+      if (root.matches?.('.reveal')) observe(root);
+      root.querySelectorAll?.('.reveal').forEach(observe);
     };
 
-    // Run once for initial content, then once more on next frame for route transitions.
-    observeReveals();
-    const rafId = requestAnimationFrame(() => observeReveals());
-
-    const mutationObserver = new MutationObserver((mutations) => {
-      mutations.forEach((mutation) => {
-        mutation.addedNodes.forEach((node) => {
-          if (!(node instanceof Element)) {
-            return;
-          }
-
-          if (node.classList.contains('reveal') && !node.classList.contains('visible')) {
-            observer.observe(node);
-          }
-
-          observeReveals(node);
+    const mutations = new MutationObserver((records) => {
+      records.forEach(({ addedNodes, type, target }) => {
+        if (type === 'attributes') scan(target);
+        addedNodes.forEach((node) => {
+          if (node instanceof Element) scan(node);
         });
       });
     });
-
-    mutationObserver.observe(document.body, { childList: true, subtree: true });
+    mutations.observe(document.body, { childList: true, subtree: true, attributes: true, attributeFilter: ['data-reveal-scope'] });
+    const frame = requestAnimationFrame(() => scan(document));
 
     return () => {
-      cancelAnimationFrame(rafId);
-      mutationObserver.disconnect();
+      cancelAnimationFrame(frame);
+      mutations.disconnect();
       observer.disconnect();
     };
   }, [pathname]);

@@ -16,9 +16,13 @@ export default function GalleryImage({
   width = 800,
   height = 800,
   unoptimized = false,
+  loadedSrc,
+  onLoad,
 }) {
-  const { displayUrl, ready } = useGalleryMediaLoad(src);
-  const useBlob = displayUrl?.startsWith('blob:');
+  const { displayUrl } = useGalleryMediaLoad(loadedSrc ? null : src);
+  const imageUrl = loadedSrc || displayUrl;
+  const ready = Boolean(imageUrl);
+  const useBlob = imageUrl?.startsWith('blob:');
 
   const shellClass =
     layout === 'cover'
@@ -38,16 +42,17 @@ export default function GalleryImage({
       {ready ? (
         layout === 'cover' ? (
           <Image
-            src={displayUrl}
+            src={imageUrl}
             alt={alt}
             fill
             className={className}
             sizes={sizes}
-            unoptimized={unoptimized || useBlob}
+            unoptimized={unoptimized || useBlob || Boolean(loadedSrc)}
+            onLoad={onLoad}
           />
         ) : (
           <Image
-            src={displayUrl}
+            src={imageUrl}
             alt={alt}
             width={width}
             height={height}
@@ -59,7 +64,8 @@ export default function GalleryImage({
                 : { width: '100%', height: 'auto', display: 'block' })
             }
             sizes={sizes}
-            unoptimized={unoptimized || useBlob}
+            unoptimized={unoptimized || useBlob || Boolean(loadedSrc)}
+            onLoad={onLoad}
           />
         )
       ) : null}
