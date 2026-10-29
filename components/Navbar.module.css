@@ -15,12 +15,16 @@
 .open span:nth-child(1) { transform:translateY(7px) rotate(45deg); }
 .open span:nth-child(2) { opacity:0; }
 .open span:nth-child(3) { transform:translateY(-7px) rotate(-45deg); }
-.mobileMenu { position:fixed; top:var(--nav-h); bottom:0; left:0; right:0; background:var(--navy); padding:28px; overflow:auto; }
+.mobileMenu { position:fixed; top:var(--nav-h); bottom:0; left:0; right:0; background:var(--navy); padding:28px; overflow:auto; text-align:center; }
 .mobileMenu[hidden] { display:none; }
 .mobileMenu > a:not(:last-child) { display:block; padding:14px 0; border-bottom:1px solid rgba(255,255,255,.18); font-size:1.3rem; }
 .mobileMenu > a[aria-current] { color:var(--sand); }
 .mobileMenu > a:last-child { margin-top:28px; }
 @media(max-width:999px) { .nav { display:none; } .quote { margin-left:auto; } .hamburger { display:flex; } .inner { gap:16px; } }
+@media(max-width:999px) {
+ .header[data-menu-open='true'] .quote { display:none; }
+ .header[data-menu-open='true'] .hamburger { margin-left:auto; }
+}
 @media(min-width:1000px) { .mobileMenu { display:none; } }
 @media(max-width:599px) { .logoImage { width:134px; } .inner { gap:12px; } .quote { padding:.5rem .7rem; font-size:.7rem; } }
 

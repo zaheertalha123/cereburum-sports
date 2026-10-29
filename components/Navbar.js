@@ -48,7 +48,7 @@ export default function Navbar() {
   }, [menuOpen]);
 
   return (
-    <header className={styles.header}>
+    <header className={styles.header} data-menu-open={menuOpen}>
       <div className={`container ${styles.inner}`}>
         <Link href="/" className={styles.logo} aria-label="Cereburum Sports — Home"><img src="/logo.png" alt="Cereburum Sports" width="1387" height="565" className={styles.logoImage} /></Link>
         <nav className={styles.nav} aria-label="Main navigation"><ul className={styles.navList}>{navLinks.map(({ href, label }) => <li key={href}><Link href={href} className={`${styles.navLink} ${isActive(href) ? styles.active : ''}`} aria-current={isActive(href) ? 'page' : undefined}>{label}</Link></li>)}</ul></nav>

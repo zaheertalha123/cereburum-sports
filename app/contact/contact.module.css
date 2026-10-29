@@ -572,7 +572,7 @@
 .formSectionDesc { margin-left:0; max-width:620px; }
 .formSectionIntro :global(.divider) { margin-left:0!important; }
 .formCard { background:transparent; border:0; border-top:1px solid var(--line); padding:32px 0 0; }
-.formInput,.formTextarea,.formSelect { background:var(--surface-0); border:1px solid #8c8c9c; color:var(--text-primary); min-height:48px; }
+.formInput,.formTextarea,.formSelect { background:var(--surface-0); border:2px solid #8c8c9c; color:var(--text-primary); min-height:48px; }
 .formInput::placeholder,.formTextarea::placeholder { color:var(--gray-400); }
 .formSelect { background-image:none; appearance:auto; }
 .formSelect option,.comboList { background:var(--surface-0); color:var(--text-primary); }
@@ -580,7 +580,14 @@
 .comboOptionActive,.comboOption:hover { background:var(--sand); color:var(--ink); }
 .formLabel { color:var(--text-primary); }
 .formSubmit { width:auto; align-self:flex-start; min-width:200px; }
-.infoCard { border:0; border-top:2px solid var(--sand); padding:24px 0; background:transparent; }
+.infoCard {
+ background:color-mix(in srgb, var(--ink) 96%, var(--white));
+ border:1px solid rgba(255,255,255,.12);
+ border-top:2px solid var(--sand);
+ padding:32px;
+ box-shadow:none;
+}
+@media(max-width:767px) { .infoCard { padding:24px; } }
 .infoItemValue { overflow-wrap:anywhere; }
 .infoItemIcon { display:none; }
 .mapWrapper iframe,.mapWrapper:hover iframe { filter:none; }
