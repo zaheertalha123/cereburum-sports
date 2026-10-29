@@ -9,7 +9,10 @@
  --gradient-hero:var(--surface-1); --gradient-accent:var(--navy); --gradient-card:var(--surface-1); --gradient-sand:var(--sand); --gradient-page:var(--surface-0); --gradient-page-reverse:var(--surface-0);
  --shadow-sm:0 2px 8px rgba(7,5,26,.06); --shadow-md:0 8px 24px rgba(7,5,26,.1); --shadow-lg:0 16px 40px rgba(7,5,26,.12); --shadow-glow:none;
  --radius-sm:4px; --radius-md:6px; --radius-lg:8px; --radius-xl:8px;
- --transition-fast:150ms ease; --transition-base:200ms ease; --transition-slow:300ms ease;
+ --ease-out:cubic-bezier(.22,1,.36,1); --ease-in-out:cubic-bezier(.4,0,.2,1);
+ --transition-fast:160ms var(--ease-out); --transition-base:240ms var(--ease-out); --transition-slow:480ms var(--ease-out);
+ --motion-enter:600ms; --motion-stagger:50ms;
+ --motion-reveal:1000ms; --ease-reveal:cubic-bezier(.2,.65,.3,1);
  --font-body:'Inter',system-ui,sans-serif; --font-display:'Bebas Neue',Impact,sans-serif; --font-editorial:'DM Serif Display',Georgia,serif;
  --max-w:1360px; --nav-h:88px;
 }
@@ -47,10 +50,25 @@ main { min-width:0; }
 .text-center { text-align:center; } .text-left { text-align:left; } .flex-center { display:flex; align-items:center; justify-content:center; }
 .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); border:0; }
 .skip-link { position:fixed; top:8px; left:8px; z-index:10001; padding:12px 20px; background:var(--sand); color:var(--ink); transform:translateY(-160%); } .skip-link:focus { transform:none; }
-/* Readable even without JavaScript. */
-.reveal,.reveal.visible { opacity:1; transform:none; }
+/* The head bootstrap opts in before first paint; no JS keeps content readable.
+   Backwards fill releases transforms after entrance for hover interactions. */
+.reveal { opacity:1; }
+html[data-motion] .reveal:not([data-reveal='visible']) { opacity:0; }
+html[data-motion] .reveal[data-reveal='visible'] { animation:revealUp var(--motion-reveal) var(--ease-reveal) var(--reveal-delay,0ms) backwards; }
+@keyframes revealUp { from { opacity:0; translate:0 18px; } to { opacity:1; translate:0 0; } }
 @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-.animate-fade-in,.animate-fade-in-up { animation:fadeIn .3s ease both; }
+.animate-fade-in { animation:fadeIn 320ms var(--ease-out) backwards; }
+.animate-fade-in-up { animation:revealUp var(--motion-enter) var(--ease-out) backwards; }
+/* Shared feedback for calls to action, filters and form fields. */
+.btn { transition:background var(--transition-base),color var(--transition-base),border-color var(--transition-base),translate var(--transition-base),box-shadow var(--transition-base); }
+button[aria-pressed] { transition:background var(--transition-base),color var(--transition-base),border-color var(--transition-base),translate var(--transition-fast); }
+input,textarea,select { transition:border-color var(--transition-base),background-color var(--transition-base),box-shadow var(--transition-base); }
+@media(hover:hover) and (pointer:fine) {
+ .btn:hover { translate:0 -2px; box-shadow:0 6px 18px rgba(0,0,0,.16); }
+ button[aria-pressed='false']:hover { translate:0 -2px; }
+}
+.btn:active,button[aria-pressed]:active { translate:0 0; }
+.reveal:focus-within { animation:none!important; opacity:1!important; }
 @media(max-width:899px) { :root { --nav-h:76px; } .container { padding-inline:28px; } .display-xl { font-size:4.75rem; } .display-lg { font-size:3.5rem; } }
 @media(max-width:599px) { .container { padding-inline:20px; } .section-pad { padding-block:52px; } .display-xl { font-size:3.5rem; } .display-lg { font-size:3rem; } .display-md { font-size:2.5rem; } .heading-lg { font-size:1.7rem; } }
-@media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } *,*::before,*::after { animation-duration:.01ms!important; animation-iteration-count:1!important; transition-duration:.01ms!important; scroll-behavior:auto!important; } }
+@media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } *,*::before,*::after { animation-duration:.01ms!important; animation-delay:0ms!important; animation-iteration-count:1!important; transition-duration:.01ms!important; transition-delay:0ms!important; scroll-behavior:auto!important; } .reveal,.animate-fade-in,.animate-fade-in-up { animation:none!important; opacity:1!important; } .btn,button[aria-pressed] { translate:none!important; } }

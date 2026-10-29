@@ -156,7 +156,7 @@ export default async function ProductDetailPage({ params }) {
             ) : null}
 
             <div className={styles.contentPanel}>
-              <div className={styles.headingBlock}>
+              <div className={`${styles.headingBlock} animate-fade-in-up`}>
                 <p className={styles.eyebrow}>{product.subtitle}</p>
                 <h1 className={`display-md ${styles.title}`}>{product.title}</h1>
                 <p className={styles.desc}>{product.desc}</p>

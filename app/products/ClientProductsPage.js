@@ -6,6 +6,7 @@ import { useSearchParams, useRouter, usePathname } from 'next/navigation';
 import Image from 'next/image';
 import { productFilterGroups } from '@/data/products';
 import PageHero from '@/components/PageHero';
+import useRevealReady from '@/components/useRevealReady';
 import styles from './products.module.css';
 
 const FILTER_PARAM = 'filter';
@@ -15,6 +16,7 @@ function resolveFilter(value) {
 }
 
 export default function ClientProductsPage({ products, breadcrumbItems }) {
+  const revealScope = useRevealReady();
   const searchParams = useSearchParams();
   const router = useRouter();
   const pathname = usePathname();
@@ -64,7 +66,7 @@ export default function ClientProductsPage({ products, breadcrumbItems }) {
           </div>
       </PageHero>
 
-      <section className={`section-pad ${styles.productsSection}`} aria-label="Products list">
+      <section data-reveal-scope={revealScope} className={`section-pad ${styles.productsSection}`} aria-label="Products list">
         <div className="container">
           <div className={styles.productsGrid}>
             {filteredProducts.map((product, i) => (
@@ -77,7 +79,7 @@ export default function ClientProductsPage({ products, breadcrumbItems }) {
                 <article
                   id={product.id}
                   className={`${styles.productCard} reveal`}
-                  style={{ transitionDelay: `${(i % 3) * 0.1}s` }}
+                  style={{ '--reveal-delay': `${(i % 3) * 50}ms` }}
                 >
                   <div className={styles.productVisual}>
                     {product.image ? (

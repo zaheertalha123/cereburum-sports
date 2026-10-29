@@ -17,6 +17,12 @@
 .toolbar { background:var(--surface-1); border-bottom:1px solid var(--line); }
 .toolbarInner { padding-block:20px; }
 .toolbarInner > div { margin:0; justify-content:flex-start; }
+@media(prefers-reduced-motion:no-preference) {
+ .title { animation:heroEnter var(--motion-enter) var(--ease-out) backwards; }
+ .description { animation:heroEnter var(--motion-enter) var(--ease-out) 70ms backwards; }
+ .actions { animation:heroEnter var(--motion-enter) var(--ease-out) 140ms backwards; }
+ .caption,.toolbar { animation:heroFade 480ms var(--ease-out) 120ms backwards; }
+}
 @media(min-width:1600px) { .inner { min-height:510px; } }
 @media(max-width:767px) {
  .inner { min-height:420px; padding-block:20px 24px; }
@@ -29,3 +35,6 @@
  .toolbarInner { padding-block:16px; }
 }
 @media(max-width:374px) { .title { font-size:3rem; } }
+
+@keyframes heroEnter { from { opacity:0; translate:0 18px; } to { opacity:1; translate:0 0; } }
+@keyframes heroFade { from { opacity:0; } to { opacity:1; } }

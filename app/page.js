@@ -202,33 +202,33 @@ export default function HomePage() {
       </div>
       <section className={styles.featured} aria-labelledby="featured-heading">
         <div className={`container ${styles.featuredInner}`}>
-          <div className={styles.featuredCopy}>
+          <div className={`${styles.featuredCopy} reveal`}>
             <span className={styles.darkLabel}>Featured installation</span>
             <h2 id="featured-heading">Nowshera /<br />Cricket Arena</h2>
             <p>A full-scale sports arena. Custom Parachute 36 netting, made for a 90 ft × 60 ft facility.</p>
             <dl className={styles.projectFacts}><div><dt>Ground coverage</dt><dd>5,400 sq ft</dd></div><div><dt>Height clearance</dt><dd>35 ft</dd></div></dl>
             <Link href={`/works/${featured.id}`} className={styles.darkLink}>Explore the project <span aria-hidden="true">↗</span></Link>
           </div>
-          <Link href={`/works/${featured.id}`} className={styles.featuredImage} aria-label="Explore the Nowshera cricket arena installation"><Image src={featured.media[1].url} alt={featured.media[1].alt} fill sizes="(max-width: 767px) 100vw, 65vw" /></Link>
+          <Link href={`/works/${featured.id}`} className={`${styles.featuredImage} reveal`} aria-label="Explore the Nowshera cricket arena installation"><Image src={featured.media[1].url} alt={featured.media[1].alt} fill sizes="(max-width: 767px) 100vw, 65vw" /></Link>
         </div>
       </section>
       <section className={`section-pad ${styles.workSection}`} aria-labelledby="work-heading">
         <div className="container">
-          <div className={styles.sectionHead}><div><span className="section-label">Built across Pakistan</span><h2 id="work-heading">Different grounds.<br />The same commitment.</h2></div><Link href="/works" className={styles.textLink}>All projects <span aria-hidden="true">↗</span></Link></div>
-          <div className={styles.projectGrid}>{selectedProjects.map((project) => <Link href={`/works/${project.id}`} key={project.id} className={styles.project}><div className={styles.projectImage}><Image src={project.coverImage} alt={project.coverImageAlt} fill sizes="(max-width: 767px) 100vw, 50vw" /></div><div className={styles.projectCaption}><div><p>{project.location} / {project.year}</p><h3>{project.title}</h3></div><span aria-hidden="true">↗</span></div></Link>)}</div>
+          <div className={`${styles.sectionHead} reveal`}><div><span className="section-label">Built across Pakistan</span><h2 id="work-heading">Different grounds.<br />The same commitment.</h2></div><Link href="/works" className={styles.textLink}>All projects <span aria-hidden="true">↗</span></Link></div>
+          <div className={styles.projectGrid}>{selectedProjects.map((project) => <Link href={`/works/${project.id}`} key={project.id} className={`${styles.project} reveal`}><div className={styles.projectImage}><Image src={project.coverImage} alt={project.coverImageAlt} fill sizes="(max-width: 767px) 100vw, 50vw" /></div><div className={styles.projectCaption}><div><p>{project.location} / {project.year}</p><h3>{project.title}</h3></div><span aria-hidden="true">↗</span></div></Link>)}</div>
         </div>
       </section>
       <section className={`section-pad ${styles.categorySection}`} aria-labelledby="categories-heading">
         <div className="container">
-          <div className={styles.sectionHead}><div><span className="section-label">The netting range</span><h2 id="categories-heading">Netting for every space.</h2></div><Link href="/products" className={styles.textLink}>All products <span aria-hidden="true">↗</span></Link></div>
+          <div className={`${styles.sectionHead} reveal`}><div><span className="section-label">The netting range</span><h2 id="categories-heading">Netting for every space.</h2></div><Link href="/products" className={styles.textLink}>All products <span aria-hidden="true">↗</span></Link></div>
           <div className={styles.categoryGrid}>{categories.map((category) => {
             const product = products.find((item) => category.product ? item.id === category.product : item.filterGroup === category.filter);
-            return <Link key={category.title} href={category.href} className={styles.category}><div className={styles.categoryImage}><Image src={product.image} alt={product.imageAlt || category.title} fill sizes="(max-width: 599px) 50vw, 25vw" /></div><h3>{category.title} <span aria-hidden="true">↗</span></h3><p>{category.note}</p></Link>;
+            return <Link key={category.title} href={category.href} className={`${styles.category} reveal`}><div className={styles.categoryImage}><Image src={product.image} alt={product.imageAlt || category.title} fill sizes="(max-width: 599px) 50vw, 25vw" /></div><h3>{category.title} <span aria-hidden="true">↗</span></h3><p>{category.note}</p></Link>;
           })}</div>
         </div>
       </section>
       <section className={`section-pad ${styles.processSection}`} aria-labelledby="process-heading">
-        <div className="container"><div className={styles.sectionHead}><div><span className="section-label">From the first conversation</span><h2 id="process-heading">A clear path to your ground.</h2></div><Link href="/guides" className={styles.textLink}>Installation guides <span aria-hidden="true">↗</span></Link></div><ol className={styles.processGrid}>{process.map((step, i) => <li key={step.title}><span className={styles.stepNumber}>0{i + 1}</span><h3>{step.title}</h3><p>{step.desc}</p></li>)}</ol></div>
+        <div className="container"><div className={`${styles.sectionHead} reveal`}><div><span className="section-label">From the first conversation</span><h2 id="process-heading">A clear path to your ground.</h2></div><Link href="/guides" className={styles.textLink}>Installation guides <span aria-hidden="true">↗</span></Link></div><ol className={styles.processGrid}>{process.map((step, i) => <li key={step.title} className="reveal" style={{ '--reveal-delay': `${i * 50}ms` }}><span className={styles.stepNumber}>0{i + 1}</span><h3>{step.title}</h3><p>{step.desc}</p></li>)}</ol></div>
       </section>
     </>
   );

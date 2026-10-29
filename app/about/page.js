@@ -144,7 +144,7 @@ export default function AboutPage() {
           </div>
           <div className={styles.valuesGrid}>
             {values.map((v, i) => (
-              <div key={v.title} className={`${styles.valueCard} reveal`} style={{ transitionDelay: `${i * 0.1}s` }}>
+              <div key={v.title} className={`${styles.valueCard} reveal`} style={{ '--reveal-delay': `${(i % 4) * 50}ms` }}>
                 <div className={styles.valueIcon} aria-hidden="true">
                   <Image
                     src={v.icon}
@@ -175,7 +175,7 @@ export default function AboutPage() {
 
           <div className={styles.timeline} role="list">
             {timeline.map((item, i) => (
-              <div key={item.year} className={`${styles.timelineItem} reveal`} style={{ transitionDelay: `${i * 0.1}s` }} role="listitem">
+              <div key={item.year} className={`${styles.timelineItem} reveal`} style={{ '--reveal-delay': `${(i % 4) * 50}ms` }} role="listitem">
                 <div className={styles.timelineLeft}>
                   <span className={`display-md ${styles.timelineYear}`}>{item.year}</span>
                 </div>

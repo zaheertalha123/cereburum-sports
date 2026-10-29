@@ -7,7 +7,7 @@ import { breadcrumbJsonLd } from '@/components/Breadcrumbs';
 const worksUrl = absoluteUrl('/works');
 const breadcrumbItems = [
   { name: 'Home', href: '/' },
-  { name: 'Works', href: '/works' },
+  { name: 'Projects', href: '/works' },
 ];
 
 export const metadata = {

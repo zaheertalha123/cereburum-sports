@@ -6,6 +6,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { getGuideCover, getGuideCoverAlt } from '@/data/guides';
 import PageHero from '@/components/PageHero';
+import useRevealReady from '@/components/useRevealReady';
 import styles from './guides.module.css';
 
 const FILTER_PARAM = 'filter';
@@ -18,6 +19,7 @@ function resolveFilter(value, categories) {
 }
 
 export default function ClientGuidesPage({ guides, categories, breadcrumbItems }) {
+  const revealScope = useRevealReady();
   const searchParams = useSearchParams();
   const router = useRouter();
   const pathname = usePathname();
@@ -79,7 +81,7 @@ export default function ClientGuidesPage({ guides, categories, breadcrumbItems }
       </PageHero>
 
       {/* Guides Grid */}
-      <section
+      <section data-reveal-scope={revealScope}
         className={`section-pad ${styles.guidesSection}`}
         aria-label="Guides list"
       >
@@ -107,7 +109,7 @@ export default function ClientGuidesPage({ guides, categories, breadcrumbItems }
                 key={guide.id}
                 href={`/guides/${guide.id}`}
                 className={`${styles.guideCardLink} reveal`}
-                style={{ transitionDelay: `${(i % 3) * 0.1}s` }}
+                style={{ '--reveal-delay': `${(i % 3) * 50}ms` }}
                 aria-label={`View guide: ${guide.title}`}
               >
                 <article className={styles.guideCard}>

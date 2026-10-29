@@ -15,6 +15,8 @@ export default function ClientGallery({ media, projectTitle, compact = false, pa
   const closeRef = useRef(null);
   const openerRef = useRef(null);
   const dialogRef = useRef(null);
+  // Inline images stay mounted while the dialog is open, keeping their blob URLs alive.
+  const loadedImagesRef = useRef(new Map());
 
   useEffect(() => {
     if (!lightboxOpen) return;
@@ -124,6 +126,9 @@ export default function ClientGallery({ media, projectTitle, compact = false, pa
                     : '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
                 }
                 unoptimized={unoptimized}
+                onLoad={(event) => {
+                  loadedImagesRef.current.set(item.url, event.currentTarget.currentSrc);
+                }}
               />
             ) : item.type === 'video' ? (
               <GalleryVideo
@@ -164,10 +169,15 @@ export default function ClientGallery({ media, projectTitle, compact = false, pa
                   `${projectTitle || 'Sports net'} installation photo ${currentIndex + 1} - boundary safety netting by Cereburum Sports`
                 }
                 variant="lightbox"
+                imageStyle={{ width: 'auto', height: 'auto', maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }}
+                loadedSrc={loadedImagesRef.current.get(media[currentIndex].url)}
+                onLoad={(event) => {
+                  loadedImagesRef.current.set(media[currentIndex].url, event.currentTarget.currentSrc);
+                }}
                 unoptimized={unoptimized}
               />
             ) : (
-              <GalleryVideo key={media[currentIndex].url} src={media[currentIndex].url} variant="lightbox" />
+              <GalleryVideo key={media[currentIndex].url} src={media[currentIndex].url} variant="lightbox" videoStyle={{ width: 'auto', height: 'auto', maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }} />
             )}
             {media[currentIndex].alt && (
               <div className={styles.lightboxCaption}>{media[currentIndex].alt}</div>

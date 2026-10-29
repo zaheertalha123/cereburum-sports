@@ -90,7 +90,7 @@ export default async function ProjectPage({ params }) {
     : '/works';
   const breadcrumbItems = [
     { name: 'Home', href: '/' },
-    { name: 'Works', href: '/works' },
+    { name: 'Projects', href: '/works' },
     ...(project.category
       ? [{ name: project.category, href: categoryHref }]
       : []),
@@ -184,7 +184,7 @@ export default async function ProjectPage({ params }) {
         label={relatedIsMixed ? 'More projects' : `More in ${project.category}`}
         title={relatedIsMixed ? 'Related Installations' : 'Similar Projects'}
         viewAllHref={relatedIsMixed ? '/works' : categoryHref}
-        viewAllLabel={relatedIsMixed ? 'View all works' : `View all ${project.category}`}
+        viewAllLabel={relatedIsMixed ? 'View all projects' : `View all ${project.category}`}
         ariaLabel="Related projects"
         items={related.map((item) => ({
           id: item.id,

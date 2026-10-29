@@ -31,7 +31,7 @@ export default function Footer() {
     <footer className={styles.footer} role="contentinfo">
       {/* CTA band */}
       <div className={styles.ctaBand}>
-        <div className={`container ${styles.ctaInner}`}>
+        <div className={`container ${styles.ctaInner} reveal`}>
           <div>
             <p className={`label ${styles.ctaLabel}`}>Ready to get started?</p>
             <h2 className={`display-md ${styles.ctaHeading}`}>

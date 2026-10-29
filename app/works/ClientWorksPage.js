@@ -5,6 +5,7 @@ import { useSearchParams, useRouter, usePathname } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
 import PageHero from '@/components/PageHero';
+import useRevealReady from '@/components/useRevealReady';
 import styles from './works.module.css';
 
 const FILTER_PARAM = 'filter';
@@ -14,6 +15,7 @@ function resolveFilter(value, categories) {
 }
 
 export default function ClientWorksPage({ projects, categories, breadcrumbItems }) {
+  const revealScope = useRevealReady();
   const searchParams = useSearchParams();
   const router = useRouter();
   const pathname = usePathname();
@@ -66,7 +68,7 @@ export default function ClientWorksPage({ projects, categories, breadcrumbItems 
       </PageHero>
 
       {/* Projects Grid */}
-      <section className={`section-pad ${styles.projectsSection}`} aria-label="Project portfolio">
+      <section data-reveal-scope={revealScope} className={`section-pad ${styles.projectsSection}`} aria-label="Project portfolio">
         <div className="container">
           <div className={styles.projectsGrid}>
             {filteredProjects.map((project, i) => (
@@ -74,7 +76,8 @@ export default function ClientWorksPage({ projects, categories, breadcrumbItems 
                 href={`/works/${project.id}`}
                 key={project.id}
                 id={project.id}
-                className={`${styles.projectCard} ${i === 0 && activeCategory === 'All' ? styles.featured : ''}`}
+                className={`${styles.projectCard} reveal ${i === 0 && activeCategory === 'All' ? styles.featured : ''}`}
+                style={{ '--reveal-delay': `${(i % 2) * 50}ms` }}
                 aria-label={project.title}
               >
                 {/* Visual area */}
