@@ -25,7 +25,7 @@ export default function Navbar() {
     if (!menuOpen) return;
     const previousOverflow = document.body.style.overflow;
     document.body.style.overflow = 'hidden';
-    menuRef.current?.querySelector('a')?.focus();
+    menuRef.current?.querySelector('a')?.focus({ preventScroll: true });
     const close = () => { setMenuOpen(false); toggleRef.current?.focus(); };
     const onKey = (event) => {
       if (event.key === 'Escape') { event.preventDefault(); close(); }
@@ -52,10 +52,10 @@ export default function Navbar() {
       <div className={`container ${styles.inner}`}>
         <Link href="/" className={styles.logo} aria-label="Cereburum Sports — Home"><img src="/logo.png" alt="Cereburum Sports" width="1387" height="565" className={styles.logoImage} /></Link>
         <nav className={styles.nav} aria-label="Main navigation"><ul className={styles.navList}>{navLinks.map(({ href, label }) => <li key={href}><Link href={href} className={`${styles.navLink} ${isActive(href) ? styles.active : ''}`} aria-current={isActive(href) ? 'page' : undefined}>{label}</Link></li>)}</ul></nav>
-        <Link href="/contact#email-form-heading" className={`btn btn-primary ${styles.quote}`}>Get a Quote</Link>
+        <Link href="/contact#email-form-heading" className={`btn btn-primary ${styles.quote}`} inert={menuOpen}>Get a Quote</Link>
         <button ref={toggleRef} className={`${styles.hamburger} ${menuOpen ? styles.open : ''}`} type="button" onClick={() => setMenuOpen(!menuOpen)} aria-expanded={menuOpen} aria-controls="mobile-menu" aria-label={menuOpen ? 'Close menu' : 'Open menu'} id="hamburger-btn"><span /><span /><span /></button>
       </div>
-      <nav ref={menuRef} id="mobile-menu" className={styles.mobileMenu} aria-label="Mobile navigation" hidden={!menuOpen}>
+      <nav ref={menuRef} id="mobile-menu" className={styles.mobileMenu} aria-label="Mobile navigation" aria-hidden={!menuOpen} inert={!menuOpen}>
         <Link href="/" onClick={() => setMenuOpen(false)}>Home</Link>
         {navLinks.map(({ href, label }) => <Link key={href} href={href} onClick={() => setMenuOpen(false)} aria-current={isActive(href) ? 'page' : undefined}>{label}</Link>)}
         <Link href="/contact#email-form-heading" className="btn btn-primary" onClick={() => setMenuOpen(false)}>Get a Quote</Link>
