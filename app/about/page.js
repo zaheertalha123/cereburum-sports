@@ -1,8 +1,10 @@
+import Link from 'next/link';
+import PageHero from '@/components/PageHero';
 import Image from 'next/image';
 import { projects } from '@/data/projects';
 import { absoluteUrl } from '@/lib/siteUrl';
 import { getLocalBusinessSchema } from '@/lib/localBusiness';
-import Breadcrumbs, { breadcrumbJsonLd } from '@/components/Breadcrumbs';
+import { breadcrumbJsonLd } from '@/components/Breadcrumbs';
 import styles from './about.module.css';
 
 const WHATSAPP_NUMBER = '923187768296';
@@ -120,37 +122,15 @@ export default function AboutPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      {/* Hero */}
-      <section className={styles.hero} aria-label="About us hero">
-        <div className={styles.heroBg} aria-hidden="true">
-          <div className={styles.heroGrad} />
-          <div className={styles.heroGrid} />
-          <div className={styles.heroOrb} />
-        </div>
-        <div className={`container ${styles.heroWrap}`}>
-          <Breadcrumbs items={breadcrumbItems} className={styles.heroBreadcrumbs} />
-          <div className={styles.heroContent}>
-            <div className={`animate-fade-in-up ${styles.heroText}`}>
-              <span className="section-label">Our Story</span>
-              <h1 className={`display-lg ${styles.heroTitle} animate-fade-in-up`}>
-                Built on Quality.<br />
-                <span className="text-sand">Driven by Sport.</span>
-              </h1>
-              <div className="divider" />
-              <p className={`body-lg ${styles.heroDesc} animate-fade-in`}>
-                Cereburum Sports was born from a simple belief: Pakistan&apos;s sports facilities
-                deserve world-class netting and equipment, installed with professionalism and care.
-                Our mission drives every project we take on across Pakistan.
-              </p>
-            </div>
-
-            <div className={styles.storyImage}>
-              <Image src={projects[0].coverImage} alt={projects[0].coverImageAlt} fill sizes="(max-width: 899px) 100vw, 45vw" priority />
-              <p className={styles.storyCaption}>On site / {projects[0].location}</p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <PageHero
+        title="Cereburum Sports"
+        description="Sports net manufacturers and installers, based in Sialkot. Since 2019, we have helped turn grounds, courts and rooftops into spaces to play."
+        image={projects[2].coverImage}
+        imageAlt={projects[2].coverImageAlt}
+        caption="Bahria Town, Islamabad / Custom folding nets"
+        breadcrumbItems={breadcrumbItems}
+        actions={<Link href="/works" className="btn btn-primary">Explore our projects</Link>}
+      />
 
       {/* Values */}
       <section className={styles.valuesSection} aria-labelledby="values-heading">

@@ -22,17 +22,17 @@
 }
 
 .crumb a {
-  color: var(--navy);
+  color:var(--text-primary);
   font-weight: 600;
   transition: color var(--transition-base);
 }
 
 .crumb a:hover {
-  color: var(--navy);
+  color:var(--text-primary);
 }
 
 .crumb [aria-current='page'] {
-  color: var(--ink);
+  color:var(--text-primary);
 }
 
 /* Ground Builder: remove atmospheric decoration, retain functional imagery. */

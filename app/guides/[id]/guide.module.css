@@ -68,7 +68,7 @@
 .backLink:hover {
   background: rgba(18, 17, 74, 0.9);
   border-color: rgba(187, 181, 101, 0.6);
-  color: var(--ink);
+  color:var(--text-primary);
   transform: translateX(-4px);
 }
 
@@ -86,7 +86,7 @@
 }
 
 .heroTitle {
-  color: var(--ink);
+  color:var(--text-primary);
   margin-bottom: 1rem;
 }
 
@@ -120,7 +120,7 @@
 .jumpPill:hover {
   background: rgba(187, 181, 101, 0.12);
   border-color: var(--sand);
-  color: var(--ink);
+  color:var(--text-primary);
 }
 
 .article {
@@ -188,7 +188,7 @@
 }
 
 .blockTitle {
-  color: var(--ink);
+  color:var(--text-primary);
   margin: 0 0 1.25rem;
 }
 
@@ -280,7 +280,7 @@
   height: 40px;
   border-radius: 50%;
   background: var(--gradient-sand);
-  color: var(--ink);
+  color:var(--ink);
   font-size: 0.95rem;
   font-weight: 700;
   display: flex;
@@ -381,13 +381,13 @@
 .stepLabel { text-transform:none; color:var(--gray-400); }
 .stepItem:hover .stepCard,.stepItem:hover .stepMarker { transform:none; }
 .article::before { display:none; }
-.chip { border-radius:var(--radius-md); background:var(--surface-1); color:var(--navy); }
+.chip { border-radius:var(--radius-md); background:var(--surface-1); color:var(--text-primary); }
 @media(max-width:767px) { .heroSection { padding:24px 0 36px; } .heroTitle { font-size:2.5rem; } }
 
 .heroContent { align-items:flex-start; }
 .factCard { background:var(--surface-1); border-color:var(--line); }
-.factTitle,.blockTitle { color:var(--navy); }
+.factTitle,.blockTitle { color:var(--text-primary); }
 .materialItem { color:var(--gray-600); }
-.backLink { background:var(--surface-1); color:var(--navy); border-color:var(--line); }
-.backLink:hover { background:var(--surface-1); color:var(--ink); transform:none; }
+.backLink { background:var(--surface-1); color:var(--text-primary); border-color:var(--line); }
+.backLink:hover { background:var(--surface-1); color:var(--text-primary); transform:none; }
 .jumpPill { color:var(--white); }
