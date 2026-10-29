@@ -174,7 +174,7 @@ export default async function ProjectPage({ params }) {
 
       <section className={styles.gallerySection}>
         <div className="container">
-          <h2 className="heading-md" style={{ color: 'var(--ink)' }}>Project Gallery</h2>
+          <h2 className="heading-md" style={{ color: 'var(--text-primary)' }}>Project Gallery</h2>
           <ClientGallery media={project.media} projectTitle={project.title} />
           <div className={styles.projectEnquiry}><div><h2>Planning a ground of your own?</h2><p>Tell us about your space and installation requirements.</p></div><Link href="/contact?service=installation#email-form-heading" className="btn btn-primary">Discuss your installation</Link></div>
         </div>

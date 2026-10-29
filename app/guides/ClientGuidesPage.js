@@ -5,7 +5,7 @@ import { useSearchParams, useRouter, usePathname } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
 import { getGuideCover, getGuideCoverAlt } from '@/data/guides';
-import Breadcrumbs from '@/components/Breadcrumbs';
+import PageHero from '@/components/PageHero';
 import styles from './guides.module.css';
 
 const FILTER_PARAM = 'filter';
@@ -48,29 +48,14 @@ export default function ClientGuidesPage({ guides, categories, breadcrumbItems }
   return (
     <>
       {/* Page Header */}
-      <section className={styles.pageHeader} aria-label="Guides page header">
-        <div className={styles.headerBg} aria-hidden="true">
-          <div className={styles.headerGrad} />
-          <div className={styles.headerGrid} />
-        </div>
-        <div className={`container ${styles.headerContent}`}>
-          {breadcrumbItems?.length ? <Breadcrumbs items={breadcrumbItems} /> : null}
-          <span className="section-label animate-fade-in">Knowledge Base</span>
-          <h1 className={`display-lg ${styles.pageTitle} animate-fade-in-up`}>
-            Installation &amp;
-            <br />
-            <span className="text-sand">Setup Guides</span>
-          </h1>
-          <div
-            className="divider divider-center"
-            style={{ margin: '1.25rem auto 1.75rem' }}
-          />
-          <p className={`body-lg ${styles.pageDesc} animate-fade-in`}>
-            Step-by-step installation guides for sports netting enclosures,
-            corner doors, and facility setup — written from real install jobs
-            across Pakistan.
-          </p>
-
+      <PageHero
+        title="Installation & setup guides"
+        description="Plan your space, choose your supports and install your netting. Practical instructions drawn from our work on real sports grounds."
+        image={getGuideCover(guides[0])}
+        imageAlt={getGuideCoverAlt(guides[0])}
+        caption="From the field / Cricket arena construction"
+        breadcrumbItems={breadcrumbItems}
+      >
           {/* Filter pills — every defined category stays selectable */}
           {categories.length > 1 && (
           <div
@@ -91,8 +76,7 @@ export default function ClientGuidesPage({ guides, categories, breadcrumbItems }
             ))}
           </div>
           )}
-        </div>
-      </section>
+      </PageHero>
 
       {/* Guides Grid */}
       <section

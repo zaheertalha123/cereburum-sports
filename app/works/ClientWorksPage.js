@@ -4,7 +4,7 @@ import { useCallback } from 'react';
 import { useSearchParams, useRouter, usePathname } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
-import Breadcrumbs from '@/components/Breadcrumbs';
+import PageHero from '@/components/PageHero';
 import styles from './works.module.css';
 
 const FILTER_PARAM = 'filter';
@@ -42,24 +42,14 @@ export default function ClientWorksPage({ projects, categories, breadcrumbItems 
   return (
     <>
       {/* Page Header */}
-      <section className={styles.pageHeader} aria-label="Our works page header">
-        <div className={styles.headerBg} aria-hidden="true">
-          <div className={styles.headerGrad} />
-          <div className={styles.headerGrid} />
-        </div>
-        <div className={`container ${styles.headerContent}`}>
-          {breadcrumbItems?.length ? <Breadcrumbs items={breadcrumbItems} /> : null}
-          <span className="section-label animate-fade-in">Portfolio</span>
-          <h1 className={`display-lg ${styles.pageTitle} animate-fade-in-up`}>
-            Our Work Speaks<br />
-            <span className="text-sand">For Itself</span>
-          </h1>
-          <div className="divider divider-center" style={{ margin: '1.25rem auto 1.75rem' }} />
-          <p className={`body-lg ${styles.pageDesc} animate-fade-in`}>
-            100+ installations and counting — from local academies to professional-grade facilities
-            across Pakistan.
-          </p>
-
+      <PageHero
+        title="Sports netting projects"
+        description="See our netting in place. Explore cricket arenas, rooftop practice spaces and custom installations across Pakistan."
+        image={projects[0].coverImage}
+        imageAlt={projects[0].coverImageAlt}
+        caption="Nowshera, Pakistan / Cricket arena"
+        breadcrumbItems={breadcrumbItems}
+      >
           {/* Category filter pills */}
           <div className={styles.filterRow} role="group" aria-label="Project categories">
             {categories.map((cat) => (
@@ -73,8 +63,7 @@ export default function ClientWorksPage({ projects, categories, breadcrumbItems 
               </button>
             ))}
           </div>
-        </div>
-      </section>
+      </PageHero>
 
       {/* Projects Grid */}
       <section className={`section-pad ${styles.projectsSection}`} aria-label="Project portfolio">

@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { useSearchParams, useRouter, usePathname } from 'next/navigation';
 import Image from 'next/image';
 import { productFilterGroups } from '@/data/products';
-import Breadcrumbs from '@/components/Breadcrumbs';
+import PageHero from '@/components/PageHero';
 import styles from './products.module.css';
 
 const FILTER_PARAM = 'filter';
@@ -42,24 +42,14 @@ export default function ClientProductsPage({ products, breadcrumbItems }) {
 
   return (
     <>
-      <section className={styles.pageHeader} aria-label="Products page header">
-        <div className={styles.pageHeaderBg} aria-hidden="true">
-          <div className={styles.pageHeaderGrad} />
-          <div className={styles.pageHeaderGrid} />
-        </div>
-        <div className={`container ${styles.pageHeaderContent}`}>
-          {breadcrumbItems?.length ? <Breadcrumbs items={breadcrumbItems} /> : null}
-          <span className="section-label animate-fade-in">Our Products</span>
-          <h1 className={`display-lg ${styles.pageTitle} animate-fade-in-up`}>
-            Sports Netting &<br />
-            <span className="text-sand">Equipment Range</span>
-          </h1>
-          <div className="divider divider-center" style={{ margin: '1.25rem auto 1.75rem' }} />
-          <p className={`body-lg ${styles.pageDesc} animate-fade-in`}>
-            From perimeter barrier systems to specialized court nets — we carry the full spectrum
-            of sports netting solutions for every facility need.
-          </p>
-
+      <PageHero
+        title="Sports nets & equipment"
+        description="Cricket practice nets, goal nets and custom barriers. Find the right material and mesh for your ground, court or rooftop."
+        image={products.find((product) => product.id === "cricket-net-36").image}
+        imageAlt="Parachute 36 cricket netting manufactured by Cereburum Sports"
+        caption="Parachute 36 / Cricket netting"
+        breadcrumbItems={breadcrumbItems}
+      >
           <div className={styles.filterRow} role="group" aria-label="Product categories">
             {productFilterGroups.map((opt) => (
               <button
@@ -72,8 +62,7 @@ export default function ClientProductsPage({ products, breadcrumbItems }) {
               </button>
             ))}
           </div>
-        </div>
-      </section>
+      </PageHero>
 
       <section className={`section-pad ${styles.productsSection}`} aria-label="Products list">
         <div className="container">

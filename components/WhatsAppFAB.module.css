@@ -41,7 +41,7 @@
 
 .fabContact {
   background: var(--gradient-sand);
-  color: var(--ink);
+  color:var(--ink);
   box-shadow: 0 4px 24px rgba(187, 181, 101, 0.4);
 }
 

@@ -152,8 +152,8 @@
 .ctaBand { background:var(--navy); border-bottom:1px solid rgba(255,255,255,.18); padding:56px 0; }
 .ctaHeading { font-family:var(--font-editorial); font-weight:400; line-height:1.15; }
 .ctaBand :global(.text-sand) { color:var(--sand); }
-.ctaBand :global(.btn-outline) { color:var(--white); }
-.ctaBand :global(.btn-outline):hover { background:var(--white); color:var(--navy); }
+.ctaBand :global(.btn-outline) { color:var(--white); border-width:2px; }
+.ctaBand :global(.btn-outline):hover { background:var(--surface-0); color:var(--text-primary); }
 .tagline,.footerLink,.contactItem,.socialLink { color:#c5c5d2; }
 .whatsappLink { color:var(--sand); }
 .copyright,.credit { color:#ababbd; }

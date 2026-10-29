@@ -16,7 +16,7 @@
   background-size: 50px 50px;
 }
 .headerContent { position: relative; z-index: 1; }
-.pageTitle  { color: var(--ink); margin: 0.5rem 0; }
+.pageTitle  { color:var(--text-primary); margin: 0.5rem 0; }
 .pageDesc   { color: var(--gray-400); max-width: 540px; margin: 0 auto 2rem; }
 
 /* Filter pills */
@@ -40,12 +40,12 @@
 }
 .filterPill:hover {
   background: var(--surface-1);
-  color: var(--ink);
+  color:var(--text-primary);
 }
 .filterActive {
   background: var(--sand);
   border-color: var(--sand);
-  color: var(--navy);
+  color:var(--ink);
   pointer-events: none;
 }
 
@@ -167,7 +167,7 @@
   font-weight: 600;
   letter-spacing: 0;
   text-transform: uppercase;
-  color: var(--navy);
+  color:var(--text-primary);
   background: rgba(187,181,101,0.1);
   border: 1px solid var(--line);
   padding: 0.2rem 0.6rem;
@@ -190,8 +190,8 @@
   margin-left: auto;
 }
 
-.cardTitle { color: var(--ink); }
-.cardType  { color: var(--navy); opacity: 0.8; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0; font-weight: 600; }
+.cardTitle { color:var(--text-primary); }
+.cardType  { color:var(--text-primary); opacity: 0.8; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0; font-weight: 600; }
 .cardDesc  { color: var(--gray-400); flex: 1; }
 
 /* Highlights */
@@ -278,14 +278,14 @@
 .pageHeader { padding: calc(var(--nav-h) + 48px) 0 36px; text-align: left; background: var(--surface-1); border-bottom: 1px solid var(--line); }
 .pageDesc { margin: 18px 0 0; max-width: 620px; }
 .filterRow { justify-content: flex-start; margin-top: 32px; gap: 8px; }
-.filterPill { min-height: 44px; padding: 10px 20px; border: 1px solid var(--line); border-radius:var(--radius-md); color: var(--navy); background: var(--white); }
+.filterPill { min-height: 44px; padding: 10px 20px; border: 1px solid var(--line); border-radius:var(--radius-md); color:var(--text-primary); background:var(--surface-0); }
 .filterPill:hover { background: var(--navy); color: var(--white); }
-.filterActive, .filterActive:hover { background: var(--sand); color: var(--ink); border-color: var(--sand); }
+.filterActive, .filterActive:hover { background: var(--sand); color:var(--ink); border-color: var(--sand); }
 .pageHeader :global(.divider) { margin-left: 0 !important; margin-right: auto !important; }
 @media(max-width:767px) { .pageHeader { padding: calc(var(--nav-h) + 30px) 0 30px; } .filterPill { padding: 10px 14px; } }
 
 .projectsGrid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 48px 32px; }
-.projectCard { background: var(--white); border: 0; border-bottom: 1px solid var(--line); border-radius: 0; }
+.projectCard { background:var(--surface-0); border: 0; border-bottom: 1px solid var(--line); border-radius: 0; }
 .projectCard:hover { transform: none; }
 .featured { grid-column: 1 / -1; }
 .featured.projectCard { display: grid; grid-template-columns: 1.6fr 1fr; background: var(--navy); color: var(--white); }

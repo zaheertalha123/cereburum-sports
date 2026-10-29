@@ -14,19 +14,19 @@
 }
 
 .relatedTitle {
-  color: var(--ink);
+  color:var(--text-primary);
   margin-top: 0.35rem;
 }
 
 .relatedLink {
-  color: var(--navy);
+  color:var(--text-primary);
   font-size: 0.95rem;
   font-weight: 600;
   transition: color var(--transition-base);
 }
 
 .relatedLink:hover {
-  color: var(--navy);
+  color:var(--text-primary);
 }
 
 .relatedGrid {
@@ -80,7 +80,7 @@
 }
 
 .relatedSubtitle {
-  color: var(--navy);
+  color:var(--text-primary);
   font-size: 0.7rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -88,14 +88,14 @@
 }
 
 .relatedName {
-  color: var(--ink);
+  color:var(--text-primary);
   font-size: 1.1rem;
   font-weight: 600;
 }
 
 .relatedCta {
   margin-top: 0.45rem;
-  color: var(--navy);
+  color:var(--text-primary);
   font-size: 0.85rem;
   font-weight: 600;
   transition: transform var(--transition-base);

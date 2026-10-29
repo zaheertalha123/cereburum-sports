@@ -24,7 +24,7 @@
   align-items: center;
   gap: 1.5rem;
 }
-.heroTitle { color: var(--ink); }
+.heroTitle { color:var(--text-primary); }
 .heroDesc  { color: var(--gray-400); max-width: 520px; }
 
 .heroCta {
@@ -76,7 +76,7 @@
 /* ── WHY WHATSAPP ──────────────────────────────────────── */
 .whySection { background: var(--surface-1); }
 .sectionHeader { margin-bottom: 3.5rem; }
-.sectionTitle  { color: var(--ink); margin-bottom: 0.5rem; }
+.sectionTitle  { color:var(--text-primary); margin-bottom: 0.5rem; }
 
 .reasonsGrid {
   display: grid;
@@ -102,7 +102,7 @@
   transform: none;
 }
 .reasonIcon  { font-size: 2rem; }
-.reasonTitle { color: var(--ink); }
+.reasonTitle { color:var(--text-primary); }
 .reasonDesc  { color: var(--gray-400); }
 
 /* ── INFO + FAQ ────────────────────────────────────────── */
@@ -128,7 +128,7 @@
   height: fit-content;
 }
 
-.infoTitle { color: var(--ink); }
+.infoTitle { color:var(--text-primary); }
 
 .infoList { display: flex; flex-direction: column; gap: 1.25rem; margin-top: 0.5rem; }
 .infoItem {
@@ -141,13 +141,13 @@
   flex-shrink: 0;
   margin-top: 2px;
 }
-.infoItemLabel { color: var(--navy); margin-bottom: 0.2rem; }
+.infoItemLabel { color:var(--text-primary); margin-bottom: 0.2rem; }
 .infoItemValue {
   color: var(--gray-600);
   text-decoration: none;
   transition: color var(--transition-fast);
 }
-.infoItemValue:hover { color: var(--navy); }
+.infoItemValue:hover { color:var(--text-primary); }
 
 .mapWrapper {
   margin-top: 1.25rem;
@@ -187,7 +187,7 @@
 }
 
 .faqQ {
-  color: var(--ink);
+  color:var(--text-primary);
   margin: 0;
   transition: color var(--transition-fast);
 }
@@ -217,7 +217,7 @@
 }
 
 .accordionHeader:hover .faqQ {
-  color: var(--navy);
+  color:var(--text-primary);
 }
 
 .accordionIcon {
@@ -230,7 +230,7 @@
 
 .accordionIconActive {
   transform: rotate(180deg);
-  color: var(--navy);
+  color:var(--text-primary);
 }
 
 .accordionContent {
@@ -330,7 +330,7 @@
 }
 
 .formSectionTitle {
-  color: var(--ink);
+  color:var(--text-primary);
   margin-bottom: 0.75rem;
 }
 
@@ -378,7 +378,7 @@
 }
 
 .formLabel {
-  color: var(--navy);
+  color:var(--text-primary);
   letter-spacing: 0;
 }
 
@@ -430,7 +430,7 @@
 
 .formSelect option {
   background: var(--surface-1);
-  color: var(--ink);
+  color:var(--text-primary);
 }
 
 .combo {
@@ -470,7 +470,7 @@
 .comboOptionActive,
 .comboOption:hover {
   background: rgba(187, 181, 101, 0.16);
-  color: var(--ink);
+  color:var(--text-primary);
 }
 
 .comboEmpty {
@@ -535,7 +535,7 @@
   justify-content: center;
   background: rgba(187,181,101,0.15);
   border: 1px solid var(--line);
-  color: var(--navy);
+  color:var(--text-primary);
 }
 
 .formSuccessSvg {
@@ -543,7 +543,7 @@
 }
 
 .formSuccessTitle {
-  color: var(--ink);
+  color:var(--text-primary);
   margin: 0;
 }
 
@@ -566,26 +566,26 @@
 .socialRow { justify-content:flex-start; }
 .heroCta { animation:none; box-shadow:none; font-size:.9rem; padding:.85rem 1.5rem; }
 .heroGrid { display:none; }
-.formSection { background:var(--white); border:0; }
+.formSection { background:var(--surface-0); border:0; }
 .formSectionInner { max-width:880px; }
 .formSectionIntro { text-align:left; }
 .formSectionDesc { margin-left:0; max-width:620px; }
 .formSectionIntro :global(.divider) { margin-left:0!important; }
 .formCard { background:transparent; border:0; border-top:1px solid var(--line); padding:32px 0 0; }
-.formInput,.formTextarea,.formSelect { background:var(--white); border:1px solid #8c8c9c; color:var(--ink); min-height:48px; }
+.formInput,.formTextarea,.formSelect { background:var(--surface-0); border:1px solid #8c8c9c; color:var(--text-primary); min-height:48px; }
 .formInput::placeholder,.formTextarea::placeholder { color:var(--gray-400); }
 .formSelect { background-image:none; appearance:auto; }
-.formSelect option,.comboList { background:var(--white); color:var(--ink); }
+.formSelect option,.comboList { background:var(--surface-0); color:var(--text-primary); }
 .comboOption { min-height:44px; }
 .comboOptionActive,.comboOption:hover { background:var(--sand); color:var(--ink); }
-.formLabel { color:var(--navy); }
+.formLabel { color:var(--text-primary); }
 .formSubmit { width:auto; align-self:flex-start; min-width:200px; }
 .infoCard { border:0; border-top:2px solid var(--sand); padding:24px 0; background:transparent; }
 .infoItemValue { overflow-wrap:anywhere; }
 .infoItemIcon { display:none; }
 .mapWrapper iframe,.mapWrapper:hover iframe { filter:none; }
 .faqCol { padding-top:24px; }
-.formSuccessIcon { color:var(--navy); }
+.formSuccessIcon { color:var(--text-primary); }
 @media(max-width:767px) { .hero { padding:calc(var(--nav-h) + 24px) 0 36px; } .formCard { padding:24px 0 0; } .socialRow { flex-direction:row; max-width:none; } .socialBtn { width:auto; } .callBtn { width:auto; } .heroCta { width:auto; } }
 .hero :global(.divider) { margin-left:0!important; margin-right:auto!important; }
 @media(min-width:900px) {
