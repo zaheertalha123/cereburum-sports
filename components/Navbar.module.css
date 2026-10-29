@@ -27,7 +27,7 @@
 .mobileMenu > a:nth-child(7) { --menu-order:6; }
 .mobileMenu > a:not(:last-child) { display:block; padding:14px 0; border-bottom:1px solid rgba(255,255,255,.18); font-size:1.3rem; }
 .mobileMenu > a[aria-current] { color:var(--sand); }
-.mobileMenu > a:last-child { margin-top:28px; }
+.mobileMenu > a:last-child { width:100%; margin-top:28px; }
 @media(max-width:999px) { .nav { display:none; } .quote { margin-left:auto; } .hamburger { display:flex; } .inner { gap:16px; } }
 @media(max-width:999px) {
  .header[data-menu-open='true'] .quote { opacity:0; visibility:hidden; pointer-events:none; }

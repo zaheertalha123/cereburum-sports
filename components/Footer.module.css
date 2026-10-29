@@ -148,13 +148,18 @@
   }
 }
 /* Ground Builder shared footer */
-.footer { background:var(--ink); color:var(--white); }
+.footer { background:var(--ink); color:var(--white); font-family:var(--font-body); }
 .ctaBand { background:var(--navy); border-bottom:1px solid rgba(255,255,255,.18); padding:56px 0; }
-.ctaHeading { font-family:var(--font-editorial); font-weight:400; line-height:1.15; }
+.ctaHeading { font-family:var(--font-display); font-size:3.5rem; font-weight:400; line-height:1.05; letter-spacing:0; text-wrap:balance; }
 .ctaBand :global(.text-sand) { color:var(--sand); }
 .ctaBand :global(.btn-outline) { color:var(--white); border-width:2px; }
 .ctaBand :global(.btn-outline):hover { background:var(--surface-0); color:var(--text-primary); }
 .tagline,.footerLink,.contactItem,.socialLink { color:#c5c5d2; }
 .whatsappLink { color:var(--sand); }
 .copyright,.credit { color:#ababbd; }
-.colLabel { text-transform:none; }
+.colLabel { font-size:1rem; font-weight:600; line-height:1.4; text-transform:none; }
+.ctaLabel { font-size:.875rem; font-weight:500; }
+.tagline,.footerLink,.contactItem { font-size:.9375rem; line-height:1.75; }
+.whatsappLink { font-size:.9375rem; font-weight:600; font-variant-numeric:tabular-nums; }
+.copyright,.credit { font-size:.8125rem; line-height:1.6; }
+@media(max-width:767px) { .ctaHeading { font-size:3rem; } }
