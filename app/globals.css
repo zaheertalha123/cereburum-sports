@@ -15,7 +15,10 @@
  --motion-reveal:1000ms; --ease-reveal:cubic-bezier(.2,.65,.3,1);
  --font-body:'Inter',system-ui,sans-serif; --font-display:'Bebas Neue',Impact,sans-serif; --font-editorial:'DM Serif Display',Georgia,serif;
  --max-w:1360px; --nav-h:88px;
+ --hero-height:620px;
 }
+@media(min-width:1600px) { :root { --hero-height:680px; } }
+@media(max-width:767px) { :root { --hero-height:560px; } }
 *,*::before,*::after { box-sizing:border-box; margin:0; padding:0; }
 html { scroll-behavior:smooth; -webkit-font-smoothing:antialiased; -webkit-text-size-adjust:100%; scroll-padding-top:calc(var(--nav-h) + 24px); }
 body { font-family:var(--font-body); background:var(--surface-0); color:var(--text-primary); line-height:1.65; text-rendering:optimizeLegibility; }

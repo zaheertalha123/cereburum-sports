@@ -347,7 +347,7 @@
 }
 /* Ground Builder: remove atmospheric decoration, retain functional imagery. */
 /* Ground Builder project hero: keep the installation visible. */
-.heroSection { margin-top:var(--nav-h); padding:36px 0 64px; min-height:580px; background:var(--navy); color:var(--white); align-items:flex-end; text-align:left; }
+.heroSection { margin-top:var(--nav-h); padding:36px 0 64px; min-height:var(--hero-height); background:var(--navy); color:var(--white); align-items:flex-end; text-align:left; }
 .heroImage { opacity:1; }
 .heroGradient { background:rgba(7,5,26,.58); }
 .heroContent { max-width:900px; margin:70px 0 0; }
@@ -365,7 +365,7 @@
 .projectEnquiry { display:flex; justify-content:space-between; align-items:center; gap:24px; padding:32px 0; border-top:1px solid var(--line); margin-top:32px; }
 .projectEnquiry h2 { font-family:var(--font-editorial); font-weight:400; font-size:1.8rem; }
 .projectEnquiry p { color:var(--gray-400); margin-top:8px; }
-@media(max-width:767px) { .heroSection { padding:24px 0 40px; min-height:560px; } .heroContent { margin-top:50px; } .title { font-size:2.5rem; } .highlightsRow { gap:12px; } .projectEnquiry { flex-direction:column; align-items:flex-start; } }
+@media(max-width:767px) { .heroSection { padding:24px 0 40px; min-height:var(--hero-height); } .heroContent { margin-top:50px; } .title { font-size:2.5rem; } .highlightsRow { gap:12px; } .projectEnquiry { flex-direction:column; align-items:flex-start; } }
 .closeBtn,.navBtn { background:var(--navy); color:var(--white); border:1px solid rgba(255,255,255,.5); border-radius:var(--radius-md); }
 .closeBtn:hover,.navBtn:hover { background:var(--ink); }
 .lightboxCaption { position:absolute; top:calc(100% + 12px); bottom:auto; left:0; margin:0; font-size:.8rem; line-height:1.5; max-height:4.5em; overflow:auto; overflow-wrap:anywhere; }
