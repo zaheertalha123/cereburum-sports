@@ -2,7 +2,7 @@
 .hero { position:relative; isolation:isolate; background:var(--ink); color:var(--white); }
 .image { object-fit:cover; z-index:-2; }
 .scrim { position:absolute; inset:0; background:rgba(7,5,26,.68); z-index:-1; }
-.inner { min-height:480px; padding-block:26px 28px; display:flex; flex-direction:column; align-items:flex-start; }
+.inner { min-height:var(--hero-height); padding-block:26px 28px; display:flex; flex-direction:column; align-items:flex-start; }
 .breadcrumbs { margin:0; font-size:.75rem; }
 .breadcrumbs,.breadcrumbs a,.breadcrumbs [aria-current],.breadcrumbs span { color:#e2e4eb; }
 .breadcrumbs a:hover { color:var(--sand-light); }
@@ -15,7 +15,7 @@
 .caption { display:flex; align-items:center; gap:12px; color:#e2e4eb; font-size:.75rem; }
 .captionLine { width:28px; height:2px; background:var(--sand); flex-shrink:0; }
 .toolbar { background:var(--surface-1); border-bottom:1px solid var(--line); }
-.toolbarInner { padding-block:20px; }
+.toolbarInner { padding-block:40px 24px; }
 .toolbarInner > div { margin:0; justify-content:flex-start; }
 @media(prefers-reduced-motion:no-preference) {
  .title { animation:heroEnter var(--motion-enter) var(--ease-out) backwards; }
@@ -23,16 +23,15 @@
  .actions { animation:heroEnter var(--motion-enter) var(--ease-out) 140ms backwards; }
  .caption,.toolbar { animation:heroFade 480ms var(--ease-out) 120ms backwards; }
 }
-@media(min-width:1600px) { .inner { min-height:510px; } }
 @media(max-width:767px) {
- .inner { min-height:420px; padding-block:20px 24px; }
+ .inner { padding-block:20px 24px; }
  .copy { padding-block:38px 32px; }
  .title { font-size:3.5rem; max-width:540px; }
  .description { font-size:.9rem; margin-top:18px; line-height:1.75; }
  .actions { margin-top:24px; gap:10px; }
  .actions :global(.btn) { font-size:.8rem; padding:.75rem 1rem; }
  .caption { font-size:.7rem; }
- .toolbarInner { padding-block:16px; }
+ .toolbarInner { padding-block:32px 20px; }
 }
 @media(max-width:374px) { .title { font-size:3rem; } }
 

@@ -361,7 +361,7 @@
 
 /* Ground Builder: remove atmospheric decoration, retain functional imagery. */
 /* Ground Builder guide: photography above a calm, readable article. */
-.heroSection { background:var(--navy); color:var(--white); margin-top:var(--nav-h); padding:36px 0 52px; min-height:460px; text-align:left; }
+.heroSection { background:var(--navy); color:var(--white); margin-top:var(--nav-h); padding:36px 0 52px; min-height:var(--hero-height); text-align:left; }
 .heroImage { opacity:1; }
 .heroGradient { background:rgba(7,5,26,.68); }
 .heroContent { margin:44px 0 0; max-width:900px; }
