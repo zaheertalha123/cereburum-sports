@@ -1,5 +1,5 @@
 import './globals.css';
-import { Bebas_Neue, Inter } from 'next/font/google';
+import localFont from 'next/font/local';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import WhatsAppFAB from '@/components/WhatsAppFAB';
@@ -8,15 +8,19 @@ import { Analytics } from '@vercel/analytics/next';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { getSiteUrl } from '@/lib/siteUrl';
 
-const inter = Inter({
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
+const inter = localFont({
+  src: [
+    { path: '../fonts/inter-latin-400-normal.woff2', weight: '400', style: 'normal' },
+    { path: '../fonts/inter-latin-500-normal.woff2', weight: '500', style: 'normal' },
+    { path: '../fonts/inter-latin-600-normal.woff2', weight: '600', style: 'normal' },
+    { path: '../fonts/inter-latin-700-normal.woff2', weight: '700', style: 'normal' },
+  ],
   display: 'swap',
   variable: '--font-inter',
 });
 
-const bebas = Bebas_Neue({
-  subsets: ['latin'],
+const bebas = localFont({
+  src: '../fonts/bebas-neue-latin-400-normal.woff2',
   weight: '400',
   display: 'swap',
   variable: '--font-bebas',
