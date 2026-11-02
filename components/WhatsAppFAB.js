@@ -15,7 +15,7 @@ export default function WhatsAppFAB() {
   const whatsappUrl = whatsAppUrl(product ? productInquiryMessage(product) : undefined);
 
   return (
-    <div className={styles.stack}>
+    <aside className={styles.stack} aria-label="Quick contact">
       <a
         href={whatsappUrl}
         target="_blank"
@@ -61,6 +61,6 @@ export default function WhatsAppFAB() {
         </svg>
         <span className={styles.tooltip}>Send us a message</span>
       </Link>
-    </div>
+    </aside>
   );
 }

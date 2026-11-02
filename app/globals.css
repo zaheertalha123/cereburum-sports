@@ -6,8 +6,6 @@
      Ink Black:  #07051A
    ============================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Bebas+Neue&display=swap');
-
 /* ── TOKENS ─────────────────────────────────────────────── */
 :root {
   --navy:       #12114A;
@@ -46,8 +44,8 @@
   --transition-base:   250ms ease;
   --transition-slow:   400ms ease;
 
-  --font-body:    'Inter', system-ui, sans-serif;
-  --font-display: 'Bebas Neue', 'Inter', sans-serif;
+  --font-body:    var(--font-inter), system-ui, sans-serif;
+  --font-display: var(--font-bebas), var(--font-inter), sans-serif;
 
   --max-w:       1200px;
   --nav-h:       96px;
@@ -182,7 +180,7 @@ button, input, select, textarea {
 
 .btn-whatsapp {
   background: #25D366;
-  color: #fff;
+  color: #0b0a24;
   box-shadow: 0 4px 20px rgba(37,211,102,0.35);
   padding: 0.9rem 2rem;
   font-weight: 700;

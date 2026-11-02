@@ -1,47 +1,21 @@
-'use client';
-
-import { useCallback } from 'react';
-import { useSearchParams, useRouter, usePathname } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import styles from './works.module.css';
 
-const FILTER_PARAM = 'filter';
-
-function resolveFilter(value, categories) {
-  return value && categories.includes(value) ? value : 'All';
+function filterHref(value) {
+  if (!value || value === 'All') return '/works';
+  return `/works?filter=${encodeURIComponent(value)}`;
 }
 
-export default function ClientWorksPage({ projects, categories, breadcrumbItems }) {
-  const searchParams = useSearchParams();
-  const router = useRouter();
-  const pathname = usePathname();
-
-  const activeCategory = resolveFilter(searchParams.get(FILTER_PARAM), categories);
-
-  const setActiveCategory = useCallback(
-    (cat) => {
-      const params = new URLSearchParams(searchParams.toString());
-      if (cat === 'All') {
-        params.delete(FILTER_PARAM);
-      } else {
-        params.set(FILTER_PARAM, cat);
-      }
-      const query = params.toString();
-      router.replace(query ? `${pathname}?${query}` : pathname, { scroll: false });
-    },
-    [pathname, router, searchParams],
-  );
-
+export default function ClientWorksPage({ projects, categories, breadcrumbItems, activeCategory = 'All' }) {
   const filteredProjects =
     activeCategory === 'All'
       ? projects
-      : projects.filter((p) => p.category === activeCategory);
+      : projects.filter((project) => project.category === activeCategory);
 
   return (
     <>
-      {/* Page Header */}
       <section className={styles.pageHeader} aria-label="Our works page header">
         <div className={styles.headerBg} aria-hidden="true">
           <div className={styles.headerGrad} />
@@ -60,23 +34,22 @@ export default function ClientWorksPage({ projects, categories, breadcrumbItems 
             across Pakistan.
           </p>
 
-          {/* Category filter pills */}
-          <div className={styles.filterRow} role="list" aria-label="Project categories">
+          <ul className={styles.filterRow} aria-label="Project categories">
             {categories.map((cat) => (
-              <button
-                key={cat}
-                onClick={() => setActiveCategory(cat)}
-                className={`${styles.filterPill} ${cat === activeCategory ? styles.filterActive : ''}`}
-                role="listitem"
-              >
-                {cat}
-              </button>
+              <li key={cat}>
+                <Link
+                  href={filterHref(cat)}
+                  className={`${styles.filterPill} ${cat === activeCategory ? styles.filterActive : ''}`}
+                  aria-current={cat === activeCategory ? 'page' : undefined}
+                >
+                  {cat}
+                </Link>
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
       </section>
 
-      {/* Projects Grid */}
       <section className={`section-pad ${styles.projectsSection}`} aria-label="Project portfolio">
         <div className="container">
           <div className={styles.projectsGrid}>
@@ -88,7 +61,6 @@ export default function ClientWorksPage({ projects, categories, breadcrumbItems 
                 className={`${styles.projectCard} ${i === 0 && activeCategory === 'All' ? styles.featured : ''}`}
                 aria-label={project.title}
               >
-                {/* Visual area */}
                 <div
                   className={styles.cardVisual}
                   style={!project.coverImage ? { background: project.gradient } : undefined}
@@ -109,7 +81,6 @@ export default function ClientWorksPage({ projects, categories, breadcrumbItems 
                   <div className={styles.cardVisualDecor} />
                 </div>
 
-                {/* Content */}
                 <div className={styles.cardContent}>
                   <div className={styles.cardMeta}>
                     <span className={styles.cardCategory}>{project.category}</span>
@@ -123,8 +94,7 @@ export default function ClientWorksPage({ projects, categories, breadcrumbItems 
                   <p className={`body-sm ${styles.cardType}`}>{project.type}</p>
                   <p className={`body-sm ${styles.cardDesc}`}>{project.desc}</p>
 
-                  {/* Highlights */}
-                  <ul className={styles.highlights} role="list" aria-label="Project highlights">
+                  <ul className={styles.highlights} aria-label="Project highlights">
                     {project.highlights.map((h) => (
                       <li key={h} className={styles.highlight}>
                         <span className={styles.highlightDot} aria-hidden="true" />

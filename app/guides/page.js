@@ -1,4 +1,3 @@
-import { Suspense } from 'react';
 import ClientGuidesPage from './ClientGuidesPage';
 import { guides, guideCategories as categories } from '../../data/guides';
 import { absoluteUrl, absoluteMediaUrl } from '@/lib/siteUrl';
@@ -28,8 +27,8 @@ export const metadata = {
     images: [
       {
         url: '/images/home/1.jpg',
-        width: 1200,
-        height: 630,
+        width: 600,
+        height: 600,
         alt: 'Sports netting guides and facility installation tips - Cereburum Sports',
       },
     ],
@@ -43,7 +42,14 @@ export const metadata = {
   },
 };
 
-export default function GuidesPage() {
+function resolveFilter(value) {
+  const filter = Array.isArray(value) ? value[0] : value;
+  return filter && categories.some((category) => category.id === filter) ? filter : 'all';
+}
+
+export default async function GuidesPage({ searchParams }) {
+  const params = await searchParams;
+  const activeFilter = resolveFilter(params?.filter);
   const jsonLd = {
     '@context': 'https://schema.org',
     '@graph': [
@@ -92,9 +98,12 @@ export default function GuidesPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <Suspense fallback={null}>
-        <ClientGuidesPage guides={guides} categories={categories} breadcrumbItems={breadcrumbItems} />
-      </Suspense>
+      <ClientGuidesPage
+        guides={guides}
+        categories={categories}
+        breadcrumbItems={breadcrumbItems}
+        activeFilter={activeFilter}
+      />
     </>
   );
 }

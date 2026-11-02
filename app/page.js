@@ -2,6 +2,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { absoluteUrl } from '@/lib/siteUrl';
 import { getLocalBusinessSchema } from '@/lib/localBusiness';
+import { yearsSinceFounding } from '@/lib/yearsActive';
+import Testimonials from '@/components/Testimonials';
 import styles from './page.module.css';
 
 const WHATSAPP_NUMBER = '923187768296';
@@ -28,8 +30,8 @@ export const metadata = {
     images: [
       {
         url: '/images/home/1.jpg',
-        width: 1200,
-        height: 630,
+        width: 600,
+        height: 600,
         alt: 'Sports barrier netting and football net installation in Pakistan - Cereburum Sports',
       },
     ],
@@ -163,7 +165,7 @@ const jsonLd = {
 
 const stats = [
   { value: '100+', label: 'Projects Completed' },
-  { value: '8+', label: 'Years Experience' },
+  { value: yearsSinceFounding(), label: 'Years Experience' },
   { value: '100%', label: 'Quality Assured' },
   { value: '50+', label: 'Sports Facilities' },
 ];
@@ -275,7 +277,7 @@ export default function HomePage() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-whatsapp btn-lg"
-                aria-label="Get a free quote on WhatsApp"
+                aria-label="Get Free Quote on WhatsApp"
                 id="hero-whatsapp-cta"
               >
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -392,6 +394,8 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      <Testimonials />
 
       {/* ── WORKS TEASER ──────────────────────────────────────── */}
       <section className={`section-pad ${styles.worksTeaser}`} aria-labelledby="works-heading">

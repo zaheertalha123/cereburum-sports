@@ -11,12 +11,12 @@ export default function FAQAccordion({ faqs }) {
   };
 
   return (
-    <div className={styles.faqList} role="list" aria-label="FAQ Accordion">
+    <ul className={styles.faqList} aria-label="FAQ Accordion">
       {faqs.map((faq, i) => {
         const isActive = activeIndex === i;
 
         return (
-          <div key={i} className={styles.accordionItem}>
+          <li key={i} className={styles.accordionItem}>
             <button
               className={styles.accordionHeader}
               onClick={() => toggleAccordion(i)}
@@ -40,9 +40,9 @@ export default function FAQAccordion({ faqs }) {
                 <p className={`body-sm ${styles.faqA}`}>{faq.a}</p>
               </div>
             </div>
-          </div>
+          </li>
         );
       })}
-    </div>
+    </ul>
   );
 }

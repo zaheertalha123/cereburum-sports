@@ -1,53 +1,26 @@
-'use client';
-
-import { useCallback } from 'react';
-import { useSearchParams, useRouter, usePathname } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
 import { getGuideCover, getGuideCoverAlt } from '@/data/guides';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import styles from './guides.module.css';
 
-const FILTER_PARAM = 'filter';
 const ALL_FILTER = 'all';
 
-function resolveFilter(value, categories) {
-  return value && categories.some((category) => category.id === value)
-    ? value
-    : ALL_FILTER;
+function filterHref(value) {
+  if (!value || value === ALL_FILTER) return '/guides';
+  return `/guides?filter=${encodeURIComponent(value)}`;
 }
 
-export default function ClientGuidesPage({ guides, categories, breadcrumbItems }) {
-  const searchParams = useSearchParams();
-  const router = useRouter();
-  const pathname = usePathname();
-
-  const activeFilter = resolveFilter(searchParams.get(FILTER_PARAM), categories);
-
-  const setActiveFilter = useCallback(
-    (opt) => {
-      const params = new URLSearchParams(searchParams.toString());
-      if (opt === ALL_FILTER) {
-        params.delete(FILTER_PARAM);
-      } else {
-        params.set(FILTER_PARAM, opt);
-      }
-      const query = params.toString();
-      router.replace(query ? `${pathname}?${query}` : pathname, { scroll: false });
-    },
-    [pathname, router, searchParams],
-  );
-
+export default function ClientGuidesPage({ guides, categories, breadcrumbItems, activeFilter = ALL_FILTER }) {
   const filtered =
     activeFilter === ALL_FILTER
       ? guides
-      : guides.filter((g) => g.category === activeFilter);
+      : guides.filter((guide) => guide.category === activeFilter);
 
   const activeCategory = categories.find((category) => category.id === activeFilter);
 
   return (
     <>
-      {/* Page Header */}
       <section className={styles.pageHeader} aria-label="Guides page header">
         <div className={styles.headerBg} aria-hidden="true">
           <div className={styles.headerGrad} />
@@ -71,30 +44,24 @@ export default function ClientGuidesPage({ guides, categories, breadcrumbItems }
             across Pakistan.
           </p>
 
-          {/* Filter pills — every defined category stays selectable */}
           {categories.length > 1 && (
-          <div
-            className={styles.filterRow}
-            role="group"
-            aria-label="Guide categories"
-          >
-            {categories.map((category) => (
-              <button
-                key={category.id}
-                type="button"
-                onClick={() => setActiveFilter(category.id)}
-                className={`${styles.filterPill} ${category.id === activeFilter ? styles.filterActive : ''}`}
-                aria-pressed={category.id === activeFilter}
-              >
-                {category.label}
-              </button>
-            ))}
-          </div>
+            <ul className={styles.filterRow} aria-label="Guide categories">
+              {categories.map((category) => (
+                <li key={category.id}>
+                  <Link
+                    href={filterHref(category.id)}
+                    className={`${styles.filterPill} ${category.id === activeFilter ? styles.filterActive : ''}`}
+                    aria-current={category.id === activeFilter ? 'page' : undefined}
+                  >
+                    {category.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           )}
         </div>
       </section>
 
-      {/* Guides Grid */}
       <section
         className={`section-pad ${styles.guidesSection}`}
         aria-label="Guides list"
@@ -108,56 +75,52 @@ export default function ClientGuidesPage({ guides, categories, breadcrumbItems }
               <p className={`body-sm ${styles.emptyDesc}`}>
                 New guides are added regularly — browse all guides or check back soon.
               </p>
-              <button
-                type="button"
-                className={styles.emptyAction}
-                onClick={() => setActiveFilter(ALL_FILTER)}
-              >
+              <Link href="/guides" className={styles.emptyAction}>
                 View all guides
-              </button>
+              </Link>
             </div>
           ) : (
-          <div className={styles.guidesGrid}>
-            {filtered.map((guide, i) => (
-              <Link
-                key={guide.id}
-                href={`/guides/${guide.id}`}
-                className={`${styles.guideCardLink} reveal`}
-                style={{ transitionDelay: `${(i % 3) * 0.1}s` }}
-                aria-label={`View guide: ${guide.title}`}
-              >
-                <article className={styles.guideCard}>
-                  <div className={styles.guideVisual}>
-                    {getGuideCover(guide) ? (
-                      <Image
-                        src={getGuideCover(guide)}
-                        alt={getGuideCoverAlt(guide)}
-                        fill
-                        className={styles.guideImage}
-                        sizes="(max-width: 768px) 100vw, 50vw"
-                      />
-                    ) : (
-                      <div className={styles.guideVisualFallback} aria-hidden="true" />
-                    )}
-                  </div>
-
-                  <div className={styles.cardBody}>
-                    <div className={styles.cardMeta}>
-                      <span className={styles.categoryBadge}>
-                        {guide.categoryLabel || guide.category}
-                      </span>
+            <div className={styles.guidesGrid}>
+              {filtered.map((guide, i) => (
+                <Link
+                  key={guide.id}
+                  href={`/guides/${guide.id}`}
+                  className={`${styles.guideCardLink} reveal`}
+                  style={{ transitionDelay: `${(i % 3) * 0.1}s` }}
+                  aria-label={`View guide: ${guide.title}`}
+                >
+                  <article className={styles.guideCard}>
+                    <div className={styles.guideVisual}>
+                      {getGuideCover(guide) ? (
+                        <Image
+                          src={getGuideCover(guide)}
+                          alt={getGuideCoverAlt(guide)}
+                          fill
+                          className={styles.guideImage}
+                          sizes="(max-width: 768px) 100vw, 50vw"
+                        />
+                      ) : (
+                        <div className={styles.guideVisualFallback} aria-hidden="true" />
+                      )}
                     </div>
-                    <h2 className={`heading-md ${styles.cardTitle}`}>
-                      {guide.title}
-                    </h2>
-                    {guide.desc ? (
-                      <p className={`body-sm ${styles.cardDesc}`}>{guide.desc}</p>
-                    ) : null}
-                  </div>
-                </article>
-              </Link>
-            ))}
-          </div>
+
+                    <div className={styles.cardBody}>
+                      <div className={styles.cardMeta}>
+                        <span className={styles.categoryBadge}>
+                          {guide.categoryLabel || guide.category}
+                        </span>
+                      </div>
+                      <h2 className={`heading-md ${styles.cardTitle}`}>
+                        {guide.title}
+                      </h2>
+                      {guide.desc ? (
+                        <p className={`body-sm ${styles.cardDesc}`}>{guide.desc}</p>
+                      ) : null}
+                    </div>
+                  </article>
+                </Link>
+              ))}
+            </div>
           )}
         </div>
       </section>

@@ -60,6 +60,7 @@ export default function ProductCombobox({ value, onChange, onBlur, invalid }) {
     <div className={styles.combo} ref={rootRef}>
       <input
         id="contact-product"
+        name="product"
         type="text"
         role="combobox"
         aria-expanded={open}

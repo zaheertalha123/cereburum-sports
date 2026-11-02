@@ -43,9 +43,13 @@ export default function Navbar() {
       <div className={`container ${styles.inner}`}>
         {/* Logo */}
         <Link href="/" className={styles.logo} aria-label="Cereburum Sports — Home">
-          <img
-            src="/logo.png"
+          <Image
+            src="/logo-header.webp"
             alt="Cereburum Sports"
+            width={146}
+            height={60}
+            priority
+            sizes="(max-width: 640px) 102px, 146px"
             className={styles.logoImage}
           />
         </Link>

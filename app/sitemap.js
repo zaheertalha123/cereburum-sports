@@ -15,28 +15,24 @@ export default function sitemap() {
     { path: '/guides', changeFrequency: 'monthly', priority: 0.85 },
   ].map(({ path, changeFrequency, priority }) => ({
     url: `${BASE_URL}${path}`,
-    lastModified: new Date(),
     changeFrequency,
     priority,
   }));
 
   const projectEntries = projects.map((project) => ({
     url: `${BASE_URL}/works/${project.id}`,
-    lastModified: new Date(),
     changeFrequency: 'monthly',
     priority: 0.75,
   }));
 
   const guideEntries = guides.map((guide) => ({
     url: `${BASE_URL}/guides/${guide.id}`,
-    lastModified: new Date(),
     changeFrequency: 'monthly',
     priority: 0.7,
   }));
 
   const productEntries = products.map((product) => ({
     url: `${BASE_URL}/products/${product.id}`,
-    lastModified: new Date(),
     changeFrequency: 'monthly',
     priority: 0.8,
   }));

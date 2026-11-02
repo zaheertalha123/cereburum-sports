@@ -1,7 +1,8 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
-import { products, getProductById } from '@/data/products';
+import { products, getProductById, productPageTitle } from '@/data/products';
+import SpecComparison from './SpecComparison';
 import ProductImageGallery from './ProductImageGallery';
 import { productInquiryMessage, whatsAppUrl } from '@/lib/whatsapp';
 import { absoluteUrl, absoluteMediaUrl } from '@/lib/siteUrl';
@@ -20,8 +21,8 @@ export async function generateMetadata({ params }) {
     return { title: 'Product Not Found' };
   }
 
-  const title = product.title;
-  const socialTitle = `${product.title} | Cereburum Sports`;
+  const title = productPageTitle(product);
+  const socialTitle = `${title} | Cereburum Sports`;
   const description = product.desc || `${product.title} supplied and installed across Pakistan by Cereburum Sports.`;
   const canonicalUrl = absoluteUrl(`/products/${product.id}`);
   const imageUrl = absoluteMediaUrl(product.image);
@@ -191,6 +192,22 @@ export default async function ProductDetailPage({ params }) {
                 </ul>
               </div>
 
+              {product.bestFor ? (
+                <div className={styles.section}>
+                  <h2 className={styles.sectionTitle}>Best for</h2>
+                  <p className={styles.enquiryText}>{product.bestFor}</p>
+                </div>
+              ) : null}
+
+              {product.differsFrom ? (
+                <div className={styles.section}>
+                  <h2 className={styles.sectionTitle}>How it differs</h2>
+                  <p className={styles.enquiryText}>{product.differsFrom}</p>
+                </div>
+              ) : null}
+
+              <SpecComparison productId={product.id} />
+
               <div className={styles.enquiry}>
                 <div className={styles.enquiryCopy}>
                   <p className={styles.enquiryTitle}>Need this net for your ground?</p>
@@ -204,7 +221,7 @@ export default async function ProductDetailPage({ params }) {
                     target="_blank"
                     rel="noopener noreferrer"
                     className={`btn btn-whatsapp ${styles.ctaBtn}`}
-                    aria-label={`Enquire about ${product.title} on WhatsApp`}
+                    aria-label={`Enquire on WhatsApp about ${product.title}`}
                   >
                     Enquire on WhatsApp
                   </a>

@@ -1,40 +1,15 @@
-'use client';
-
-import { useCallback } from 'react';
 import Link from 'next/link';
-import { useSearchParams, useRouter, usePathname } from 'next/navigation';
 import Image from 'next/image';
 import { productFilterGroups } from '@/data/products';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import styles from './products.module.css';
 
-const FILTER_PARAM = 'filter';
-
-function resolveFilter(value) {
-  return productFilterGroups.includes(value) ? value : 'All';
+function filterHref(value) {
+  if (!value || value === 'All') return '/products';
+  return `/products?filter=${encodeURIComponent(value)}`;
 }
 
-export default function ClientProductsPage({ products, breadcrumbItems }) {
-  const searchParams = useSearchParams();
-  const router = useRouter();
-  const pathname = usePathname();
-
-  const activeFilter = resolveFilter(searchParams.get(FILTER_PARAM));
-
-  const setActiveFilter = useCallback(
-    (opt) => {
-      const params = new URLSearchParams(searchParams.toString());
-      if (opt === 'All') {
-        params.delete(FILTER_PARAM);
-      } else {
-        params.set(FILTER_PARAM, opt);
-      }
-      const query = params.toString();
-      router.replace(query ? `${pathname}?${query}` : pathname, { scroll: false });
-    },
-    [pathname, router, searchParams],
-  );
-
+export default function ClientProductsPage({ products, breadcrumbItems, activeFilter = 'All' }) {
   const filteredProducts =
     activeFilter === 'All'
       ? products
@@ -60,18 +35,19 @@ export default function ClientProductsPage({ products, breadcrumbItems }) {
             of sports netting solutions for every facility need.
           </p>
 
-          <div className={styles.filterRow} role="list" aria-label="Product categories">
+          <ul className={styles.filterRow} aria-label="Product categories">
             {productFilterGroups.map((opt) => (
-              <button
-                key={opt}
-                onClick={() => setActiveFilter(opt)}
-                className={`${styles.filterPill} ${opt === activeFilter ? styles.filterActive : ''}`}
-                role="listitem"
-              >
-                {opt}
-              </button>
+              <li key={opt}>
+                <Link
+                  href={filterHref(opt)}
+                  className={`${styles.filterPill} ${opt === activeFilter ? styles.filterActive : ''}`}
+                  aria-current={opt === activeFilter ? 'page' : undefined}
+                >
+                  {opt}
+                </Link>
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
       </section>
 

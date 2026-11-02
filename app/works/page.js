@@ -1,4 +1,3 @@
-import { Suspense } from 'react';
 import ClientWorksPage from './ClientWorksPage';
 import { projects, projectCategories as categories } from '../../data/projects';
 import { absoluteUrl, absoluteMediaUrl } from '@/lib/siteUrl';
@@ -28,8 +27,8 @@ export const metadata = {
     images: [
       {
         url: '/images/home/1.jpg',
-        width: 1200,
-        height: 630,
+        width: 600,
+        height: 600,
         alt: 'Completed sports barrier netting and cricket net installation portfolio across Pakistan - Cereburum Sports',
       },
     ],
@@ -43,7 +42,14 @@ export const metadata = {
   },
 };
 
-export default function WorksPage() {
+function resolveFilter(value) {
+  const filter = Array.isArray(value) ? value[0] : value;
+  return filter && categories.includes(filter) ? filter : 'All';
+}
+
+export default async function WorksPage({ searchParams }) {
+  const params = await searchParams;
+  const activeCategory = resolveFilter(params?.filter);
   const jsonLd = {
     '@context': 'https://schema.org',
     '@graph': [
@@ -79,9 +85,12 @@ export default function WorksPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <Suspense fallback={null}>
-        <ClientWorksPage projects={projects} categories={categories} breadcrumbItems={breadcrumbItems} />
-      </Suspense>
+      <ClientWorksPage
+        projects={projects}
+        categories={categories}
+        breadcrumbItems={breadcrumbItems}
+        activeCategory={activeCategory}
+      />
     </>
   );
 }

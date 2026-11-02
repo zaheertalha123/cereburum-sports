@@ -1,4 +1,5 @@
 import './globals.css';
+import { Bebas_Neue, Inter } from 'next/font/google';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import WhatsAppFAB from '@/components/WhatsAppFAB';
@@ -6,6 +7,20 @@ import ScrollReveal from '@/components/ScrollReveal';
 import { Analytics } from '@vercel/analytics/next';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { getSiteUrl } from '@/lib/siteUrl';
+
+const inter = Inter({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  display: 'swap',
+  variable: '--font-inter',
+});
+
+const bebas = Bebas_Neue({
+  subsets: ['latin'],
+  weight: '400',
+  display: 'swap',
+  variable: '--font-bebas',
+});
 
 const siteUrl = getSiteUrl();
 
@@ -32,7 +47,7 @@ export const metadata = {
     title: 'Cereburum Sports — Premium Sports Barrier Netting & Equipment',
     description:
       'Net manufacturer and custom net maker. Specialists in sports barrier nettings and custom equipment — quality installations for grounds, academies, and sports facilities.',
-    images: [{ url: '/logo.png', width: 800, height: 600, alt: 'Cereburum Sports Logo' }],
+    images: [{ url: '/logo.png', width: 1387, height: 569, alt: 'Cereburum Sports Logo' }],
   },
   twitter: {
     card: 'summary_large_image',
@@ -40,22 +55,17 @@ export const metadata = {
     description:
       'Sports net maker and manufacturer — premium barrier nettings and equipment for facilities.',
   },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: { index: true, follow: true },
-  },
+};
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  themeColor: '#07051A',
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <meta name="theme-color" content="#07051A" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </head>
+    <html lang="en" className={`${inter.variable} ${bebas.variable}`} suppressHydrationWarning>
       <body suppressHydrationWarning>
         <ScrollReveal />
         <Navbar />

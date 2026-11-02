@@ -111,8 +111,8 @@
   flex-wrap: wrap;
   gap: 0.75rem;
 }
-.copyright { color: var(--gray-600); }
-.credit    { color: var(--gray-600); }
+.copyright { color: #9a9ab8; }
+.credit    { color: #9a9ab8; }
 
 @media (max-width: 767px) {
   .ctaBand {

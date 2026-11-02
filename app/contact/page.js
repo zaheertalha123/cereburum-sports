@@ -1,10 +1,9 @@
-import { Suspense } from 'react';
 import styles from './contact.module.css';
 import FAQAccordion from '@/components/FAQAccordion';
 import ContactForm from '@/components/ContactForm';
 import { SOCIAL } from '@/data/social';
 import { absoluteUrl } from '@/lib/siteUrl';
-import { getLocalBusinessSchema } from '@/lib/localBusiness';
+import { BUSINESS_EMAIL, getLocalBusinessSchema } from '@/lib/localBusiness';
 import Breadcrumbs, { breadcrumbJsonLd } from '@/components/Breadcrumbs';
 
 const WHATSAPP_NUMBER = '923187768296';
@@ -35,8 +34,8 @@ export const metadata = {
     images: [
       {
         url: '/images/home/1.jpg',
-        width: 1200,
-        height: 630,
+        width: 600,
+        height: 600,
         alt: 'Contact Cereburum Sports for Sports Netting Quotes and Installation in Pakistan',
       },
     ],
@@ -108,7 +107,10 @@ const jsonLd = {
   ],
 };
 
-export default function ContactPage() {
+export default async function ContactPage({ searchParams }) {
+  const params = await searchParams;
+  const initialProductId = Array.isArray(params?.product) ? params.product[0] : params?.product || '';
+  const initialServiceId = Array.isArray(params?.service) ? params.service[0] : params?.service || '';
   return (
     <>
       <script
@@ -141,7 +143,7 @@ export default function ContactPage() {
             target="_blank"
             rel="noopener noreferrer"
             className={`btn btn-whatsapp btn-lg ${styles.heroCta}`}
-            aria-label="Chat with Cereburum Sports on WhatsApp"
+            aria-label="Chat on WhatsApp Now"
             id="contact-hero-cta"
           >
             <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -154,7 +156,7 @@ export default function ContactPage() {
             <a
               href={`tel:${PHONE_TEL}`}
               className={`btn btn-outline btn-lg ${styles.callBtn}`}
-              aria-label={`Call Cereburum Sports at ${PHONE_DISPLAY}`}
+              aria-label={`Call ${PHONE_DISPLAY}`}
             >
               <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                 <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
@@ -168,7 +170,7 @@ export default function ContactPage() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className={`btn btn-outline btn-sm ${styles.socialBtn}`}
-                  aria-label="Cereburum Sports on Facebook"
+                  aria-label="Facebook, Cereburum Sports"
                 >
                   <svg className={styles.socialIcon} width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                     <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
@@ -182,7 +184,7 @@ export default function ContactPage() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className={`btn btn-outline btn-sm ${styles.socialBtn}`}
-                  aria-label="Cereburum Sports on Instagram"
+                  aria-label="Instagram, Cereburum Sports"
                 >
                   <svg className={styles.socialIcon} width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                     <path d="M12 0C8.74 0 8.333.015 7.108.063 5.838.108 4.828.278 3.962.525a5.566 5.566 0 00-2.004 1.304A5.56 5.56 0 00 .525 3.962C.278 4.828.108 5.838.063 7.108.015 8.333 0 8.74 0 12s.015 3.667.063 4.892c.045 1.27.215 2.28.462 3.146a5.566 5.566 0 001.304 2.004 5.56 5.56 0 002.004 1.305c.866.247 1.876.417 3.146.462 1.225.048 1.632.063 4.892.063s3.667-.015 4.892-.063c1.27-.045 2.28-.215 3.146-.462a5.566 5.566 0 002.004-1.304 5.56 5.56 0 001.305-2.004c.247-.866.417-1.876.462-3.146.048-1.225.063-1.632.063-4.892s-.015-3.667-.063-4.892c-.045-1.27-.215-2.28-.462-3.146a5.566 5.566 0 00-1.304-2.004 5.56 5.56 0 00-2.004-1.305C19.172.278 18.162.108 16.892.063 15.667.015 15.26 0 12 0zm0 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.204-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 11-2.881 0 1.44 1.44 0 012.881 0z" />
@@ -196,7 +198,7 @@ export default function ContactPage() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className={`btn btn-outline btn-sm ${styles.socialBtn}`}
-                  aria-label="Cereburum Sports on TikTok"
+                  aria-label="TikTok, Cereburum Sports"
                 >
                   <svg className={styles.socialIcon} width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                     <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64v-3.5a6.67 6.67 0 00-1-.05A6.33 6.33 0 005 20.1a6.34 6.34 0 0010.14-5.1v-7a8.16 8.16 0 004.77 1.52v-3.4a4.85 4.85 0 01-1-.1z" />
@@ -225,9 +227,7 @@ export default function ContactPage() {
               </p>
             </div>
             <div className={`${styles.formCard} reveal`}>
-              <Suspense fallback={null}>
-                <ContactForm />
-              </Suspense>
+              <ContactForm initialProductId={initialProductId} initialServiceId={initialServiceId} />
             </div>
           </div>
         </div>
@@ -247,6 +247,13 @@ export default function ContactPage() {
                   <div>
                     <p className={`label ${styles.infoItemLabel}`}>WhatsApp & Phone</p>
                     <a href={`tel:${PHONE_TEL}`} className={`body-md ${styles.infoItemValue}`}>{PHONE_DISPLAY}</a>
+                  </div>
+                </li>
+                <li className={styles.infoItem}>
+                  <div className={styles.infoItemIcon} aria-hidden="true">✉️</div>
+                  <div>
+                    <p className={`label ${styles.infoItemLabel}`}>Email</p>
+                    <a href={`mailto:${BUSINESS_EMAIL}`} className={`body-md ${styles.infoItemValue}`}>{BUSINESS_EMAIL}</a>
                   </div>
                 </li>
                 <li className={styles.infoItem}>

@@ -1,6 +1,5 @@
-import { Suspense } from 'react';
 import ClientProductsPage from './ClientProductsPage';
-import { products } from '@/data/products';
+import { productFilterGroups, products } from '@/data/products';
 import { absoluteUrl, absoluteMediaUrl } from '@/lib/siteUrl';
 import { breadcrumbJsonLd } from '@/components/Breadcrumbs';
 
@@ -28,8 +27,8 @@ export const metadata = {
     images: [
       {
         url: '/images/home/1.jpg',
-        width: 1200,
-        height: 630,
+        width: 600,
+        height: 600,
         alt: 'Sports Nets Catalog and Custom Netting Solutions - Cereburum Sports',
       },
     ],
@@ -43,7 +42,14 @@ export const metadata = {
   },
 };
 
-export default function ProductsPage() {
+function resolveFilter(value) {
+  const filter = Array.isArray(value) ? value[0] : value;
+  return productFilterGroups.includes(filter) ? filter : 'All';
+}
+
+export default async function ProductsPage({ searchParams }) {
+  const params = await searchParams;
+  const activeFilter = resolveFilter(params?.filter);
   const jsonLd = {
     '@context': 'https://schema.org',
     '@graph': [
@@ -83,9 +89,11 @@ export default function ProductsPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <Suspense fallback={null}>
-        <ClientProductsPage products={products} breadcrumbItems={breadcrumbItems} />
-      </Suspense>
+      <ClientProductsPage
+        products={products}
+        breadcrumbItems={breadcrumbItems}
+        activeFilter={activeFilter}
+      />
     </>
   );
 }

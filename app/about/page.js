@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { absoluteUrl } from '@/lib/siteUrl';
 import { getLocalBusinessSchema } from '@/lib/localBusiness';
+import { yearsSinceFounding } from '@/lib/yearsActive';
 import Breadcrumbs, { breadcrumbJsonLd } from '@/components/Breadcrumbs';
 import styles from './about.module.css';
 
@@ -30,8 +31,8 @@ export const metadata = {
     images: [
       {
         url: '/images/home/1.jpg',
-        width: 1200,
-        height: 630,
+        width: 600,
+        height: 600,
         alt: 'About Cereburum Sports - Sports Netting Manufacturer and Facility Installer in Pakistan',
       },
     ],
@@ -146,7 +147,7 @@ export default function AboutPage() {
             {/* Stats block */}
             <div className={`${styles.heroStats} animate-fade-in`} style={{ animationDelay: '0.2s' }}>
               {[
-                { v: '8+', l: 'Years Active' },
+                { v: yearsSinceFounding(), l: 'Years Active' },
                 { v: '100+', l: 'Projects Done' },
                 { v: '7+', l: 'Sports Covered' },
                 { v: '100%', l: 'Client Focused' },

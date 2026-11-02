@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 import { Controller, useForm } from 'react-hook-form';
-import { useSearchParams } from 'next/navigation';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { contactFormSchema, contactServices } from '@/lib/contactSchema';
 import { getProductById } from '@/data/products';
@@ -27,18 +26,15 @@ function LoaderIcon({ className }) {
   );
 }
 
-function initialProduct(searchParams) {
-  const id = searchParams.get('product') || '';
+function initialProduct(id) {
   return getProductById(id) ? id : '';
 }
 
-function initialService(searchParams) {
-  const id = searchParams.get('service') || '';
+function initialService(id) {
   return contactServices.some((service) => service.id === id) ? id : '';
 }
 
-export default function ContactForm() {
-  const searchParams = useSearchParams();
+export default function ContactForm({ initialProductId = '', initialServiceId = '' }) {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [serverError, setServerError] = useState(null);
 
@@ -53,8 +49,8 @@ export default function ContactForm() {
     defaultValues: {
       name: '',
       email: '',
-      product: initialProduct(searchParams),
-      service: initialService(searchParams),
+      product: initialProduct(initialProductId),
+      service: initialService(initialServiceId),
       subject: '',
       message: '',
     },
@@ -123,6 +119,7 @@ export default function ContactForm() {
             className={styles.formInput}
             aria-invalid={errors.name ? 'true' : 'false'}
             {...register('name')}
+            required
           />
           {errors.name && <p className={styles.formError}>{errors.name.message}</p>}
         </div>
@@ -138,6 +135,7 @@ export default function ContactForm() {
             className={styles.formInput}
             aria-invalid={errors.email ? 'true' : 'false'}
             {...register('email')}
+            required
           />
           {errors.email && <p className={styles.formError}>{errors.email.message}</p>}
         </div>
@@ -207,6 +205,7 @@ export default function ContactForm() {
           className={styles.formTextarea}
           aria-invalid={errors.message ? 'true' : 'false'}
           {...register('message')}
+          required
         />
         {errors.message && <p className={styles.formError}>{errors.message.message}</p>}
       </div>

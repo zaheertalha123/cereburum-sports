@@ -1,0 +1,42 @@
+.section {
+  background: var(--surface-0);
+}
+
+.list {
+  list-style: none;
+  display: grid;
+  gap: 1.25rem;
+  margin-top: 2rem;
+  padding: 0;
+}
+
+@media (min-width: 768px) {
+  .list { grid-template-columns: repeat(2, 1fr); }
+}
+
+.card {
+  background: var(--gradient-card);
+  border: 1px solid rgba(187, 181, 101, 0.12);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+}
+
+.quote {
+  margin: 0;
+  color: var(--white);
+}
+
+.person {
+  margin: 1rem 0 0;
+  color: var(--sand);
+  font-size: 0.9rem;
+}
+
+.projectLink,
+.reviewsLink a {
+  color: var(--sand);
+}
+
+.reviewsLink {
+  margin-top: 1.5rem;
+}

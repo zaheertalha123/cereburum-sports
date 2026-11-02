@@ -18,8 +18,15 @@ const rawProducts = [
     imageAlt: 'Parachute 24 Cricket Practice Net - UV Treated Parachute Net Mesh Manufacturer Pakistan | Cereburum Sports',
     tag: 'Best Seller',
     tagColor: 'sand',
-    desc: 'Premium joint-free cotton netting, machine-made for superior durability and fully customizable in size and color to suit sports, animal enclosures, and multi-purpose safety needs.',
-    features: ['Joint-free construction', 'Machine-made high-quality', 'Fully customizable size and color', 'Optimized for softball and multi-sport use'],
+    // TODO(owner): Confirm Parachute 24 is the lighter cricket-practice grade (1.5 mm gauge, 1.75 inch mesh, 100 ft x 10 ft panel) before treating these lines as final.
+    desc: 'Parachute 24 is a lighter cricket practice net. The listed build is a 1.5 mm parachute mesh with a 1.75 inch (45 mm) opening, a coated parachute border in white or black, and a UV-treated finish, supplied as a 100 ft by 10 ft panel that can be resized.',
+    features: [
+      '1.5 mm parachute gauge for lighter cricket practice nets',
+      '1.75 inch (45 mm) mesh opening',
+      'Coated parachute border in white or black',
+      'UV-treated finish for outdoor practice cages',
+      '100 ft by 10 ft panel, with custom sizes available',
+    ],
     specs: [
       { label: 'Material', value: 'Parachute 24' },
       { label: 'Mesh Size', value: '1.75" (45mm)' },
@@ -471,11 +478,17 @@ const rawProducts = [
     subtitle: 'Futsal Goal',
     filterGroup: 'Futsal',
     image: '/images/products/futsal-nylon-105.webp',
-    imageAlt: 'Nylon Net - Futsal & Handball Goal Net - Knotted UV Treated Nylon Netting Pakistan | Cereburum Sports',
+    imageAlt: 'Nylon 105 Futsal Goal Net - Knotted UV Treated Nylon Netting Pakistan | Cereburum Sports',
     tag: null,
     tagColor: null,
-    desc: 'The Handball Nylon 105 is a specialized, handcrafted net designed specifically for the high-frequency impacts of handball, offering a resilient and reliable solution in a variety of team colors.',
-    features: ['Hand-knotted precision for handball dimensions', 'Durable Nylon 105 grade construction', 'High-density mesh to prevent ball pass-through', 'Available in multiple vibrant color options'],
+    // TODO(owner): Confirm Nylon 105 is sold as a futsal goal net. If it is also used for another sport, add that only after you confirm it.
+    desc: 'Nylon 105 is a knotted futsal goal net in the listed 3 m by 2 m size, with a 4 inch nylon mesh made for repeated close-range shots and offered in a choice of colors.',
+    features: [
+      'Knotted nylon sized for a futsal goal',
+      'Nylon 105 grade twine',
+      '4 inch mesh on a 3 m by 2 m goal',
+      'Color options for club kits',
+    ],
     specs: [
       { label: 'Material', value: 'Nylon' },
       { label: 'Mesh Size', value: '4"' },
@@ -492,8 +505,14 @@ const rawProducts = [
     imageAlt: 'Nylon Net - Heavy Duty Futsal Goal Net - High Impact UV Treated Nylon Netting Pakistan | Cereburum Sports',
     tag: 'Best Seller',
     tagColor: 'sand',
-    desc: 'The Handball Nylon 107 is an elite, heavy-duty goal net handcrafted for professional competition, featuring extra-thick twine for maximum durability against the most powerful high-speed throws.',
-    features: ['Reinforced extra-thick Nylon 107 construction', 'Hand-knotted for superior impact resistance', 'Tight mesh tension designed for professional handball', 'Premium weather-resistant color finishes', 'Industrial-grade durability for high-intensity training'],
+    // TODO(owner): Confirm Nylon 107 is the heavier futsal goal net beside Nylon 105, and that "Thick Nylon" is the material name you want published.
+    desc: 'Nylon 107 is a heavier futsal goal net than Nylon 105. The listed build uses thicker nylon twine, a 4 inch mesh, and a 3 m by 2 m goal size for harder futsal shots.',
+    features: [
+      'Thicker nylon twine for futsal goals',
+      'Knotted build for harder shots than Nylon 105',
+      '4 inch mesh on a 3 m by 2 m goal',
+      'Custom sizes available',
+    ],
     specs: [
       { label: 'Material', value: 'Thick Nylon' },
       { label: 'Mesh Size', value: '4"' },
@@ -543,6 +562,28 @@ const rawProducts = [
     ],
   },
 ];
+
+// TODO(owner): Add bestFor and differsFrom on Parachute 12/24/36/66/72 and Polyester 4/8/12/DL only when you have real buyer guidance for how each grade is chosen. Leave them unset until then.
+
+export const specFamilies = [
+  {
+    id: 'parachute-cricket',
+    title: 'Parachute cricket nets compared',
+    ids: ['cricket-net-24', 'cricket-net-36', 'cricket-net-66', 'cricket-net-72'],
+  },
+  {
+    id: 'polyester-cricket',
+    title: 'Polyester cricket nets compared',
+    ids: ['polyester-4', 'polyester-8', 'polyester-12', 'polyester-double-layer'],
+  },
+];
+
+export function productPageTitle(product) {
+  const name = (product?.title || '').trim();
+  const category = (product?.subtitle || product?.filterGroup || '').trim();
+  if (!category || name.toLowerCase().includes(category.toLowerCase())) return name;
+  return `${name} ${category}`;
+}
 
 export const products = rawProducts.map((product) => ({
   ...product,

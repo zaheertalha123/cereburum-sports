@@ -97,6 +97,14 @@ export default async function ProjectPage({ params }) {
   ];
 
   const { items: related, mixed: relatedIsMixed } = getRelatedProjects(project);
+  const projectDetails = [
+    ['Client type', project.clientType],
+    ['Challenge', project.challenge],
+    ['Solution', project.solution],
+    ['Net specification', project.netSpec],
+    ['Frame', project.frame],
+    ['Timeline', project.timeline],
+  ].filter(([, value]) => typeof value === 'string' && value.trim());
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -177,6 +185,29 @@ export default async function ProjectPage({ params }) {
           <ClientGallery media={project.media} projectTitle={project.title} />
         </div>
       </section>
+
+      {(projectDetails.length > 0 || project.clientQuote) ? (
+        <section className={styles.caseStudy} aria-label="Project details">
+          <div className="container">
+            <h2 className="heading-md" style={{ color: 'var(--white)' }}>Project details</h2>
+            {projectDetails.length > 0 ? (
+              <div className={styles.caseStudyGrid}>
+                {projectDetails.map(([label, value]) => (
+                  <div key={label}>
+                    <p className={styles.caseLabel}>{label}</p>
+                    <p className={styles.caseText}>{value}</p>
+                  </div>
+                ))}
+              </div>
+            ) : null}
+            {project.clientQuote ? (
+              <blockquote className={styles.caseQuote}>
+                <p>{project.clientQuote}</p>
+              </blockquote>
+            ) : null}
+          </div>
+        </section>
+      ) : null}
 
       <RelatedCards
         label={relatedIsMixed ? 'More projects' : `More in ${project.category}`}

@@ -1,5 +1,27 @@
 import { mediaUrl } from '../lib/mediaUrl';
 
+/*
+TODO(owner): Add any of these fields to a project only when the fact is known.
+They stay hidden until filled: clientType, challenge, solution, netSpec, frame, timeline, clientQuote.
+Still needed for:
+- cricket-arena-nowshera
+- sports-complex-sahiwal
+- folding-net-islamabad
+- sports-arena-gujranwala
+- cricket-pitch-layyah
+- sports-complex-peshawar
+- practice-ground-gujranwala
+- roof-top-net-sialkot
+- sports-arena-khariyan
+- sports-arena-wazirabad
+- roof-top-net-sialkot-daska-road
+- mian-indoor-cricket-club-pasrur
+- cricket-arena-mirpur
+- bloomfield-hall-school-khariyan
+- sports-complex-mardan
+- house-roof-top-net-sialkot
+*/
+
 const rawProjects = [
   {
     id: 'cricket-arena-nowshera',
@@ -266,8 +288,8 @@ const rawProjects = [
     ]
   },
   {
-    id: 'circket-arena-mirpur',
-    title: 'Circket Arena, Mirpur',
+    id: 'cricket-arena-mirpur',
+    title: 'Cricket Arena, Mirpur',
     category: 'Sports Arena',
     type: 'Sports Arena',
     location: 'Mirpur, Pakistan',
