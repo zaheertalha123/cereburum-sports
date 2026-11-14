@@ -6,6 +6,16 @@ import styles from './guides.module.css';
 
 const ALL_FILTER = 'all';
 
+const heroPhotos = [
+  { src: '/images/guide_hero/guide_hero_01.webp', alt: 'Steel support frame for a sports netting enclosure', position: 'center 48%' },
+  { src: '/images/guide_hero/guide_hero_02.webp', alt: 'Netting and upright support poles around an outdoor practice area', position: 'center 53%' },
+  { src: '/images/guide_hero/guide_hero_03.webp', alt: 'Installation crew working beside scaffolding and steel netting supports', position: '64% 53%' },
+  { src: '/images/guide_hero/guide_hero_04.webp', alt: 'Sports netting draped from scaffolding during installation', position: '62% 50%' },
+  { src: '/images/guide_hero/guide_hero_05.webp', alt: 'Crane lifting an installer to reach overhead netting', position: '60% 50%' },
+  { src: '/images/guide_hero/guide_hero_06.webp', alt: 'Close-up of white mesh tied to a perimeter cable', position: 'center 42%' },
+  { src: '/images/guide_hero/guide_hero_07.webp', alt: 'Floodlit practice enclosure with a framed netting entrance', position: '65% 53%' },
+];
+
 function filterHref(value) {
   if (!value || value === ALL_FILTER) return '/guides';
   return `/guides?filter=${encodeURIComponent(value)}`;
@@ -25,9 +35,7 @@ export default function ClientGuidesPage({ guides, categories, breadcrumbItems, 
       <PageHero
         title="Installation & setup guides"
         description="Plan your space, choose your supports and install your netting. Practical instructions drawn from our work on real sports grounds."
-        image={getGuideCover(guides[0])}
-        imageAlt={getGuideCoverAlt(guides[0])}
-        caption="From the field / Cricket arena construction"
+        photos={heroPhotos}
         breadcrumbItems={breadcrumbItems}
       >
         {categories.length > 1 && (
