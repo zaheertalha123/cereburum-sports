@@ -3,6 +3,15 @@ import Image from 'next/image';
 import PageHero from '@/components/PageHero';
 import styles from './works.module.css';
 
+const heroPhotos = [
+  { src: '/images/project_hero/project_hero_01.webp', alt: 'Enclosed cricket practice lane with grass and overhead netting', position: 'center 56%' },
+  { src: '/images/project_hero/project_hero_02.webp', alt: 'Floodlit turf field surrounded by tall sports netting', position: 'center 68%' },
+  { src: '/images/project_hero/project_hero_03.webp', alt: 'Overhead netting in a walled practice area', position: 'center 42%' },
+  { src: '/images/project_hero/project_hero_04.webp', alt: 'Elevated view of a narrow netted practice lane', position: 'center 48%' },
+  { src: '/images/project_hero/project_hero_05.webp', alt: 'Long sports enclosure with overhead netting and floodlights', position: 'center 48%' },
+  { src: '/images/project_hero/project_hero_06.webp', alt: 'Floodlit court enclosed by side and overhead nets', position: 'center 52%' },
+];
+
 function filterHref(value) {
   if (!value || value === 'All') return '/works';
   return `/works?filter=${encodeURIComponent(value)}`;
@@ -20,9 +29,7 @@ export default function ClientWorksPage({ projects, categories, breadcrumbItems,
       <PageHero
         title="Sports netting projects"
         description="See our netting in place. Explore cricket arenas, rooftop practice spaces and custom installations across Pakistan."
-        image={projects[0].coverImage}
-        imageAlt={projects[0].coverImageAlt}
-        caption="Nowshera, Pakistan / Cricket arena"
+        photos={heroPhotos}
         breadcrumbItems={breadcrumbItems}
       >
         <ul className={styles.filterRow} aria-label="Project categories">
