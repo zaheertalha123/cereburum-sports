@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import PageHero from '@/components/PageHero';
 import Image from 'next/image';
-import { projects } from '@/data/projects';
 import { absoluteUrl } from '@/lib/siteUrl';
 import { getLocalBusinessSchema } from '@/lib/localBusiness';
 import { breadcrumbJsonLd } from '@/components/Breadcrumbs';
@@ -125,9 +124,9 @@ export default function AboutPage() {
       <PageHero
         title="Cereburum Sports"
         description="Sports net manufacturers and installers, based in Sialkot. Since 2019, we have helped turn grounds, courts and rooftops into spaces to play."
-        image={projects[2].coverImage}
-        imageAlt={projects[2].coverImageAlt}
-        caption="Bahria Town, Islamabad / Custom folding nets"
+        image="/images/about_hero/about_hero.webp"
+        imageAlt="Industrial net-making machine threaded with white yarn"
+        imagePosition="60% center"
         breadcrumbItems={breadcrumbItems}
         actions={<Link href="/works" className="btn btn-primary">Explore our projects</Link>}
       />

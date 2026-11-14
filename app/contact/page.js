@@ -1,5 +1,4 @@
 import PageHero from '@/components/PageHero';
-import { projects } from '@/data/projects';
 import styles from './contact.module.css';
 import FAQAccordion from '@/components/FAQAccordion';
 import ContactForm from '@/components/ContactForm';
@@ -122,9 +121,9 @@ export default async function ContactPage({ searchParams }) {
       <PageHero
         title="Sports netting enquiries"
         description="Tell us about your ground. Share your location, dimensions and the sport you play, and our team will help you choose the netting and installation you need."
-        image={projects[0].coverImage}
-        imageAlt={projects[0].coverImageAlt}
-        imagePosition="center 65%"
+        image="/images/contact_hero/contact_hero.webp"
+        imageAlt="Close-up of a white braided sports net knot against a dark background"
+        imagePosition="60% center"
         caption="Based in Sialkot / Serving grounds across Pakistan"
         breadcrumbItems={breadcrumbItems}
         actions={<>
