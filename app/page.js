@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import HomeHeroPhotos from '@/components/HomeHeroPhotos';
 import Testimonials from '@/components/Testimonials';
 import { absoluteUrl } from '@/lib/siteUrl';
 import { getLocalBusinessSchema } from '@/lib/localBusiness';
@@ -183,20 +184,19 @@ export default function HomePage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <section className={styles.hero} aria-labelledby="home-heading">
-        <Image src={featured.coverImage} alt={featured.coverImageAlt} fill priority sizes="100vw" className={styles.heroImage} />
-        <div className={styles.heroShade} />
-        <div className={`container ${styles.heroInner}`}>
-          <p className={styles.heroLocation}>Cereburum Sports / Pakistan<span>Manufacturers & installers of sports netting</span></p>
-          <div className={styles.heroCopy}>
-            <h1 id="home-heading">Cricket net installation.<br />Built for your ground.</h1>
-            <p>From rooftop practice spaces to full-scale arenas. We manufacture, supply and install sports nets across Pakistan.</p>
-            <div className={styles.heroActions}>
-              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="btn btn-whatsapp" id="hero-whatsapp-cta" aria-label="Request a Quote on WhatsApp">Request a Quote</a>
-              <Link href="/works" className={styles.heroLink}>Explore our projects <span aria-hidden="true">↗</span></Link>
+        <HomeHeroPhotos>
+          <div className={`container ${styles.heroInner}`}>
+            <p className={styles.heroLocation}>Cereburum Sports / Pakistan<span>Manufacturers & installers of sports netting</span></p>
+            <div className={styles.heroCopy}>
+              <h1 id="home-heading">Cricket net installation.<br />Built for your ground.</h1>
+              <p>From rooftop practice spaces to full-scale arenas. We manufacture, supply and install sports nets across Pakistan.</p>
+              <div className={styles.heroActions}>
+                <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="btn btn-whatsapp" id="hero-whatsapp-cta" aria-label="Request a Quote on WhatsApp">Request a Quote</a>
+                <Link href="/works" className={styles.heroLink}>Explore our projects <span aria-hidden="true">↗</span></Link>
+              </div>
             </div>
           </div>
-          <Link href={`/works/${featured.id}`} className={styles.photoCaption}>On site / Nowshera<span>View this installation ↗</span></Link>
-        </div>
+        </HomeHeroPhotos>
       </section>
       <div className={styles.capabilities} aria-label="Our capabilities">
         <div className="container"><span>Manufacture</span><span>Supply</span><span>Install</span><p>One team. From net to ground.</p></div>
