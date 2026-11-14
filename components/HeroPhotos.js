@@ -1,19 +1,13 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useId, useState } from 'react';
 import Image from 'next/image';
 import styles from '@/app/page.module.css';
 
-const photos = [
-  { src: '/images/hero/hero_01.webp', alt: 'Floodlit cricket enclosure viewed across the grass', position: '63% 48%' },
-  { src: '/images/hero/hero_02.webp', alt: 'Corner view of a floodlit sports netting enclosure', position: '56% 48%' },
-  { src: '/images/hero/hero_03.webp', alt: 'Brightly lit cricket enclosure behind a low brick wall', position: '61% 42%' },
-  { src: '/images/hero/hero_04.webp', alt: 'Tall sports barrier netting viewed from the street at night', position: '58% 36%' },
-];
-
 const slideDuration = 6500;
 
-export default function HomeHeroPhotos({ children }) {
+export default function HeroPhotos({ photos, children }) {
+  const photoId = useId();
   const [activeIndex, setActiveIndex] = useState(0);
   const [paused, setPaused] = useState(false);
 
@@ -38,13 +32,13 @@ export default function HomeHeroPhotos({ children }) {
       reducedMotion.removeEventListener('change', scheduleSlide);
       document.removeEventListener('visibilitychange', scheduleSlide);
     };
-  }, [activeIndex, paused]);
+  }, [activeIndex, paused, photos.length]);
 
   return (
     <>
       <div
         className={styles.heroPhotos}
-        id="home-hero-photo"
+        id={photoId}
         data-paused={paused}
         style={{ '--hero-slide-duration': `${slideDuration}ms` }}
       >
@@ -70,7 +64,7 @@ export default function HomeHeroPhotos({ children }) {
           type="button"
           className={styles.heroPlayback}
           aria-label={paused ? 'Play slideshow' : 'Pause slideshow'}
-          aria-controls="home-hero-photo"
+          aria-controls={photoId}
           onClick={() => setPaused((wasPaused) => !wasPaused)}
         >
           <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
@@ -83,7 +77,7 @@ export default function HomeHeroPhotos({ children }) {
             type="button"
             className={styles.heroPhotoChoice}
             aria-label={alt}
-            aria-controls="home-hero-photo"
+            aria-controls={photoId}
             aria-pressed={index === activeIndex}
             onClick={() => setActiveIndex(index)}
           />

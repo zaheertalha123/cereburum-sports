@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import HomeHeroPhotos from '@/components/HomeHeroPhotos';
+import HeroPhotos from '@/components/HeroPhotos';
 import Testimonials from '@/components/Testimonials';
 import { absoluteUrl } from '@/lib/siteUrl';
 import { getLocalBusinessSchema } from '@/lib/localBusiness';
@@ -165,6 +165,13 @@ const jsonLd = {
   ],
 };
 
+const heroPhotos = [
+  { src: '/images/hero/hero_01.webp', alt: 'Floodlit cricket enclosure viewed across the grass', position: '63% 48%' },
+  { src: '/images/hero/hero_02.webp', alt: 'Corner view of a floodlit sports netting enclosure', position: '56% 48%' },
+  { src: '/images/hero/hero_03.webp', alt: 'Brightly lit cricket enclosure behind a low brick wall', position: '61% 42%' },
+  { src: '/images/hero/hero_04.webp', alt: 'Tall sports barrier netting viewed from the street at night', position: '58% 36%' },
+];
+
 const featured = projects.find((project) => project.id === 'cricket-arena-nowshera');
 const selectedProjects = ['folding-net-islamabad', 'sports-arena-gujranwala'].map((id) => projects.find((project) => project.id === id));
 const categories = [
@@ -184,7 +191,7 @@ export default function HomePage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <section className={styles.hero} aria-labelledby="home-heading">
-        <HomeHeroPhotos>
+        <HeroPhotos photos={heroPhotos}>
           <div className={`container ${styles.heroInner}`}>
             <p className={styles.heroLocation}>Cereburum Sports / Pakistan<span>Manufacturers & installers of sports netting</span></p>
             <div className={styles.heroCopy}>
@@ -196,7 +203,7 @@ export default function HomePage() {
               </div>
             </div>
           </div>
-        </HomeHeroPhotos>
+        </HeroPhotos>
       </section>
       <div className={styles.capabilities} aria-label="Our capabilities">
         <div className="container"><span>Manufacture</span><span>Supply</span><span>Install</span><p>One team. From net to ground.</p></div>

@@ -2,6 +2,7 @@
 .hero { position:relative; isolation:isolate; background:var(--ink); color:var(--white); }
 .image { object-fit:cover; z-index:-2; }
 .scrim { position:absolute; inset:0; background:rgba(7,5,26,.68); z-index:-1; }
+.hero[data-gallery='true'] .inner { position:relative; padding-bottom:84px; }
 .inner { min-height:var(--hero-height); padding-block:26px 28px; display:flex; flex-direction:column; align-items:flex-start; }
 .breadcrumbs { margin:0; font-size:.75rem; }
 .breadcrumbs,.breadcrumbs a,.breadcrumbs [aria-current],.breadcrumbs span { color:#e2e4eb; }

@@ -4,6 +4,14 @@ import { productFilterGroups } from '@/data/products';
 import PageHero from '@/components/PageHero';
 import styles from './products.module.css';
 
+const heroPhotos = [
+  { src: '/images/product_hero/product_hero_01.webp', alt: 'White square-mesh sports net on a dark background', position: 'center' },
+  { src: '/images/product_hero/product_hero_02.webp', alt: 'Close-up of a knotted diamond-mesh net', position: 'center' },
+  { src: '/images/product_hero/product_hero_03.webp', alt: 'Fine square-mesh net with knotted intersections', position: 'center' },
+  { src: '/images/product_hero/product_hero_04.webp', alt: 'Thick braided netting with square openings', position: 'center' },
+  { src: '/images/product_hero/product_hero_05.webp', alt: 'Close-up of a thick white net with evenly spaced square openings', position: 'center' },
+];
+
 function filterHref(value) {
   if (!value || value === 'All') return '/products';
   return `/products?filter=${encodeURIComponent(value)}`;
@@ -20,9 +28,7 @@ export default function ClientProductsPage({ products, breadcrumbItems, activeFi
       <PageHero
         title="Sports nets & equipment"
         description="Cricket practice nets, goal nets and custom barriers. Find the right material and mesh for your ground, court or rooftop."
-        image={products.find((product) => product.id === "cricket-net-36").image}
-        imageAlt="Parachute 36 cricket netting manufactured by Cereburum Sports"
-        caption="Parachute 36 / Cricket netting"
+        photos={heroPhotos}
         breadcrumbItems={breadcrumbItems}
       >
         <ul className={styles.filterRow} aria-label="Product categories">
