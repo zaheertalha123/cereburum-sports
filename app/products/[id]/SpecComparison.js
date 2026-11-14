@@ -22,7 +22,7 @@ export default function SpecComparison({ productId }) {
       <p className={styles.compareNote}>
         Compared from the listed material, mesh, and size for each grade.
       </p>
-      <div className={styles.compareWrap}>
+      <div className={styles.compareWrap} role="region" aria-labelledby={`compare-${family.id}`} tabIndex={0}>
         <table className={styles.compareTable}>
           <thead>
             <tr>

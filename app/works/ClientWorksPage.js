@@ -25,19 +25,20 @@ export default function ClientWorksPage({ projects, categories, breadcrumbItems,
         caption="Nowshera, Pakistan / Cricket arena"
         breadcrumbItems={breadcrumbItems}
       >
-          <ul className={styles.filterRow} aria-label="Project categories">
-            {categories.map((cat) => (
-              <li key={cat}>
-                <Link
-                  href={filterHref(cat)}
-                  className={`${styles.filterPill} ${cat === activeCategory ? styles.filterActive : ''}`}
-                  aria-current={cat === activeCategory ? 'page' : undefined}
-                >
-                  {cat}
-                </Link>
-              </li>
-            ))}
-          </ul>
+        <ul className={styles.filterRow} aria-label="Project categories">
+          {categories.map((cat) => (
+            <li key={cat}>
+              <Link
+                scroll={false}
+                href={filterHref(cat)}
+                className={`${styles.filterPill} ${cat === activeCategory ? styles.filterActive : ''}`}
+                aria-current={cat === activeCategory ? 'page' : undefined}
+              >
+                {cat}
+              </Link>
+            </li>
+          ))}
+        </ul>
       </PageHero>
 
       {/* Projects Grid */}

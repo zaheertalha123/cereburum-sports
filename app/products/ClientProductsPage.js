@@ -25,19 +25,20 @@ export default function ClientProductsPage({ products, breadcrumbItems, activeFi
         caption="Parachute 36 / Cricket netting"
         breadcrumbItems={breadcrumbItems}
       >
-          <ul className={styles.filterRow} aria-label="Product categories">
-            {productFilterGroups.map((opt) => (
-              <li key={opt}>
-                <Link
-                  href={filterHref(opt)}
-                  className={`${styles.filterPill} ${opt === activeFilter ? styles.filterActive : ''}`}
-                  aria-current={opt === activeFilter ? 'page' : undefined}
-                >
-                  {opt}
-                </Link>
-              </li>
-            ))}
-          </ul>
+        <ul className={styles.filterRow} aria-label="Product categories">
+          {productFilterGroups.map((opt) => (
+            <li key={opt}>
+              <Link
+                scroll={false}
+                href={filterHref(opt)}
+                className={`${styles.filterPill} ${opt === activeFilter ? styles.filterActive : ''}`}
+                aria-current={opt === activeFilter ? 'page' : undefined}
+              >
+                {opt}
+              </Link>
+            </li>
+          ))}
+        </ul>
       </PageHero>
 
       <section className={`section-pad ${styles.productsSection}`} aria-label="Products list">

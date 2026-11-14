@@ -93,6 +93,10 @@
 .fabWhatsapp:hover,.fabContact:hover { transform:none; box-shadow:var(--shadow-md); }
 .fab:focus-visible .tooltip { opacity:1; transform:none; }
 .tooltip { right:58px; }
-.stack { gap:8px; bottom:16px; right:16px; }
+.stack { gap:8px; bottom:max(16px, env(safe-area-inset-bottom)); right:max(16px, env(safe-area-inset-right)); }
+
+@media (max-width: 599px) {
+  .fabContact { display: none; }
+}
 
 .fabWhatsapp:hover { background:#1fba58; }

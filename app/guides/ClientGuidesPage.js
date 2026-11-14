@@ -30,21 +30,22 @@ export default function ClientGuidesPage({ guides, categories, breadcrumbItems, 
         caption="From the field / Cricket arena construction"
         breadcrumbItems={breadcrumbItems}
       >
-          {categories.length > 1 && (
-            <ul className={styles.filterRow} aria-label="Guide categories">
-              {categories.map((category) => (
-                <li key={category.id}>
-                  <Link
-                    href={filterHref(category.id)}
-                    className={`${styles.filterPill} ${category.id === activeFilter ? styles.filterActive : ''}`}
-                    aria-current={category.id === activeFilter ? 'page' : undefined}
-                  >
-                    {category.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          )}
+        {categories.length > 1 && (
+          <ul className={styles.filterRow} aria-label="Guide categories">
+            {categories.map((category) => (
+              <li key={category.id}>
+                <Link
+                  scroll={false}
+                  href={filterHref(category.id)}
+                  className={`${styles.filterPill} ${category.id === activeFilter ? styles.filterActive : ''}`}
+                  aria-current={category.id === activeFilter ? 'page' : undefined}
+                >
+                  {category.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        )}
       </PageHero>
 
       {/* Guides Grid */}

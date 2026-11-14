@@ -16,7 +16,7 @@
 .captionLine { width:28px; height:2px; background:var(--sand); flex-shrink:0; }
 .toolbar { background:var(--surface-1); border-bottom:1px solid var(--line); }
 .toolbarInner { padding-block:40px 24px; }
-.toolbarInner > div { margin:0; justify-content:flex-start; }
+.toolbarInner > ul { margin:0; justify-content:flex-start; }
 @media(prefers-reduced-motion:no-preference) {
  .title { animation:heroEnter var(--motion-enter) var(--ease-out) backwards; }
  .description { animation:heroEnter var(--motion-enter) var(--ease-out) 70ms backwards; }
