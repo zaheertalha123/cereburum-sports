@@ -2,6 +2,7 @@
 
 import { useEffect, useId, useRef, useState } from 'react';
 import Image from 'next/image';
+import { heroFallbackSrc, heroSrcSet } from '@/lib/heroImage';
 import styles from '@/app/page.module.css';
 
 const slideDuration = 6500;
@@ -70,14 +71,44 @@ export default function HeroPhotos({ photos, children }) {
               if (requestedIndex === index) setRequestedIndex(activeIndex);
             },
           };
-          const srcSet = responsive
-            ? [750, 1200, 1600].map((width) => `${src.replace(/\.webp$/, `-${width}.webp`)} ${width}w`).join(', ')
+          const srcSet = responsive ? heroSrcSet(src) : undefined;
+          const slideStyle = first
+            ? { position: 'absolute', inset: 0, opacity: 1, zIndex: 1 }
             : undefined;
+          const imageStyle = first
+            ? {
+                position: 'absolute',
+                inset: 0,
+                width: '100%',
+                height: '100%',
+                objectFit: 'cover',
+                objectPosition: position,
+                opacity: 1,
+              }
+            : imageProps.style;
 
           return (
-            <div key={src} className={styles.heroSlide} data-active={index === activeIndex} aria-hidden={index !== activeIndex}>
+            <div
+              key={src}
+              className={first ? 'hero-lcp-slide' : styles.heroSlide}
+              style={slideStyle}
+              data-active={index === activeIndex || undefined}
+              data-first={first || undefined}
+              aria-hidden={index !== activeIndex}
+            >
               {srcSet ? (
-                <img {...imageProps} srcSet={srcSet} fetchPriority="high" decoding="async" />
+                <img
+                  {...imageProps}
+                  src={heroFallbackSrc(src, true)}
+                  srcSet={srcSet}
+                  sizes="100vw"
+                  width={750}
+                  height={560}
+                  className="hero-lcp-img"
+                  style={imageStyle}
+                  fetchPriority={first ? 'high' : 'low'}
+                  decoding="async"
+                />
               ) : (
                 <Image
                   {...imageProps}

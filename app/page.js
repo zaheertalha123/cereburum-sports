@@ -3,6 +3,7 @@ import Image from 'next/image';
 import HeroPhotos from '@/components/HeroPhotos';
 import Testimonials from '@/components/Testimonials';
 import { absoluteUrl } from '@/lib/siteUrl';
+import { preloadHeroImage } from '@/lib/heroImage';
 import { getLocalBusinessSchema } from '@/lib/localBusiness';
 import styles from './page.module.css';
 import { projects } from '@/data/projects';
@@ -192,10 +193,12 @@ const process = [
 ];
 
 export default function HomePage() {
+  preloadHeroImage(heroPhotos[0]);
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <section className={styles.hero} aria-labelledby="home-heading">
+      <section className={`${styles.hero} hero-lcp`} aria-labelledby="home-heading" style={{ position: 'relative', minHeight: 560, background: '#07051A' }}>
         <HeroPhotos photos={heroPhotos}>
           <div className={`container ${styles.heroInner}`}>
             <p className={styles.heroLocation}>Cereburum Sports / Pakistan<span>Manufacturers & installers of sports netting</span></p>

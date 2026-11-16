@@ -1,4 +1,5 @@
-import ClientProductsPage from './ClientProductsPage';
+import ClientProductsPage, { productHeroPhotos } from './ClientProductsPage';
+import { preloadHeroImage } from '@/lib/heroImage';
 import { productFilterGroups, products } from '@/data/products';
 import { absoluteUrl, absoluteMediaUrl } from '@/lib/siteUrl';
 import { breadcrumbJsonLd } from '@/components/Breadcrumbs';
@@ -48,6 +49,7 @@ function resolveFilter(value) {
 }
 
 export default async function ProductsPage({ searchParams }) {
+  preloadHeroImage(productHeroPhotos[0]);
   const params = await searchParams;
   const activeFilter = resolveFilter(params?.filter);
   const jsonLd = {

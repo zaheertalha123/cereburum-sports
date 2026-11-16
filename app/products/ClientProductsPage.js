@@ -4,7 +4,7 @@ import { productFilterGroups } from '@/data/products';
 import PageHero from '@/components/PageHero';
 import styles from './products.module.css';
 
-const heroPhotos = [
+export const productHeroPhotos = [
   { src: '/images/product_hero/product_hero_01.webp', responsive: true, alt: 'White square-mesh sports net on a dark background', position: 'center' },
   { src: '/images/product_hero/product_hero_02.webp', alt: 'Close-up of a knotted diamond-mesh net', position: 'center' },
   { src: '/images/product_hero/product_hero_03.webp', alt: 'Fine square-mesh net with knotted intersections', position: 'center' },
@@ -28,7 +28,7 @@ export default function ClientProductsPage({ products, breadcrumbItems, activeFi
       <PageHero
         title="Sports nets & equipment"
         description="Cricket practice nets, goal nets and custom barriers. Find the right material and mesh for your ground, court or rooftop."
-        photos={heroPhotos}
+        photos={productHeroPhotos}
         breadcrumbItems={breadcrumbItems}
       >
         <ul className={styles.filterRow} aria-label="Product categories">

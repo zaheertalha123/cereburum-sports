@@ -18,7 +18,7 @@ export default function PageHero({ title, description, image, imageAlt, imagePos
 
   return (
     <header className={styles.header}>
-      <section className={styles.hero} data-gallery={photos ? true : undefined} aria-label={title}>
+      <section className={`${styles.hero} hero-lcp`} data-gallery={photos ? true : undefined} aria-label={title} style={{ position: 'relative', minHeight: 560, background: '#07051A' }}>
         {photos ? (
           <HeroPhotos photos={photos}>{content}</HeroPhotos>
         ) : (
