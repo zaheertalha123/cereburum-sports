@@ -40,13 +40,13 @@ const siteUrl = getSiteUrl();
 export const metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: 'Cereburum Sports — Premium Sports Barrier Netting & Equipment',
+    default: 'Cereburum Sports — Sports Net Manufacturer in Sialkot',
     template: '%s | Cereburum Sports',
   },
   description:
-    'Sports net manufacturer and custom net maker: premium barrier nettings, cricket nets, football nets, and installations for facilities across Pakistan.',
+    'Cereburum Sports manufactures and installs cricket, football, futsal, court and hockey nets from Sialkot for grounds, rooftops and arenas across Pakistan.',
   keywords: [
-    'sports barrier netting', 'cricket nets', 'football netting', 'sports equipment Pakistan',
+    'sports net manufacturer Sialkot', 'cricket net installation Pakistan', 'cricket net price Pakistan', 'football goal net manufacturer',
     'barrier netting installation', 'sports facility netting', 'Cereburum Sports',
     'net maker', 'net manufacturer', 'custom net maker', 'sports net manufacturer',
   ],
@@ -57,16 +57,16 @@ export const metadata = {
     locale: 'en_PK',
     url: siteUrl,
     siteName: 'Cereburum Sports',
-    title: 'Cereburum Sports — Premium Sports Barrier Netting & Equipment',
+    title: 'Cereburum Sports — Sports Net Manufacturer in Sialkot',
     description:
-      'Net manufacturer and custom net maker. Specialists in sports barrier nettings and custom equipment — quality installations for grounds, academies, and sports facilities.',
+      'Cereburum Sports manufactures and installs cricket, football, futsal, court and hockey nets from Sialkot.',
     images: [{ url: '/logo.png', width: 1387, height: 569, alt: 'Cereburum Sports Logo' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Cereburum Sports — Premium Sports Barrier Netting',
     description:
-      'Sports net maker and manufacturer — premium barrier nettings and equipment for facilities.',
+      'Sports nets manufactured and installed from Sialkot for grounds, rooftops and arenas across Pakistan.',
   },
 };
 

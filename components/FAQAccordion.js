@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 import styles from '../app/contact/contact.module.css';
 
 export default function FAQAccordion({ faqs }) {
@@ -38,6 +39,13 @@ export default function FAQAccordion({ faqs }) {
             >
               <div className={styles.accordionContentInner}>
                 <p className={`body-sm ${styles.faqA}`}>{faq.a}</p>
+                {faq.links?.length ? (
+                  <ul>
+                    {faq.links.map((link) => (
+                      <li key={link.href}><Link href={link.href}>{link.label}</Link></li>
+                    ))}
+                  </ul>
+                ) : null}
               </div>
             </div>
           </li>

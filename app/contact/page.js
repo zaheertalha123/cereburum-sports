@@ -5,6 +5,7 @@ import ContactForm from '@/components/ContactForm';
 import { absoluteUrl } from '@/lib/siteUrl';
 import { BUSINESS_EMAIL, getLocalBusinessSchema } from '@/lib/localBusiness';
 import { breadcrumbJsonLd } from '@/components/Breadcrumbs';
+import { buyerFaqs, faqAnswerText } from '@/data/buyerFaqs';
 
 const WHATSAPP_NUMBER = '923187768296';
 const PHONE_DISPLAY = '+92 318 7768296';
@@ -78,6 +79,7 @@ const faqs = [
     q: 'What are your payment procedures?',
     a: 'For customized orders, we ask for a 50% advance to begin work—you may also visit the factory first if you prefer additional assurance. The remaining balance is due before dispatch, once we share video proof that your order is complete and ready.',
   },
+  ...buyerFaqs,
 ];
 
 const jsonLd = {
@@ -100,7 +102,7 @@ const jsonLd = {
         name: faq.q,
         acceptedAnswer: {
           '@type': 'Answer',
-          text: faq.a,
+          text: faqAnswerText(faq),
         },
       })),
     },
