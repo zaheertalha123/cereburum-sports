@@ -18,6 +18,7 @@ import GuideSteps from './GuideSteps';
 import { absoluteUrl, absoluteMediaUrl } from '@/lib/siteUrl';
 import Breadcrumbs, { breadcrumbJsonLd } from '@/components/Breadcrumbs';
 import RelatedCards from '@/components/RelatedCards';
+import { howtoStepName } from '@/lib/howtoStepName';
 import styles from './guide.module.css';
 
 export async function generateStaticParams() {
@@ -202,12 +203,11 @@ export default async function GuidePage({ params }) {
             step: installationSteps.map((step, index) => {
               const text = typeof step === 'string' ? step : step.text || step.description || step.title || '';
               const title = typeof step === 'string' ? '' : step.title;
-              const firstClause = text.trim().split(/[.;:](?=\s|$)/, 1)[0];
-              const summary = firstClause.split(/\s+/).slice(0, 9).join(' ');
+              const named = title && !/^step\s+\d+$/i.test(title.trim()) ? title.trim() : howtoStepName(text);
               return {
                 '@type': 'HowToStep',
                 position: index + 1,
-                name: title && !/^step\s+\d+$/i.test(title.trim()) ? title : summary,
+                name: named,
                 text,
               };
             }),
