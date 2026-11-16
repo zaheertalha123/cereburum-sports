@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { getProductById } from '@/data/products';
-import { productInquiryMessage, whatsAppUrl } from '@/lib/whatsapp';
+import { productInquiryMessage, WHATSAPP_NUMBER, whatsAppUrl } from '@/lib/whatsapp';
 import styles from './WhatsAppFAB.module.css';
 
 const CONTACT_FORM_HREF = '/contact#email-form-heading';
@@ -36,6 +36,18 @@ export default function WhatsAppFAB() {
           <path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.553 4.122 1.522 5.857L0 24l6.335-1.509C8.05 23.447 9.977 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818c-1.86 0-3.601-.504-5.09-1.38l-.365-.217-3.762.896.956-3.665-.238-.377C2.504 15.44 2.181 13.758 2.181 12 2.181 6.57 6.57 2.181 12 2.181c5.431 0 9.819 4.389 9.819 9.819 0 5.431-4.388 9.818-9.819 9.818z" />
         </svg>
         <span className={styles.tooltip}>Chat with us!</span>
+      </a>
+
+      <a
+        href={`tel:+${WHATSAPP_NUMBER}`}
+        className={`${styles.fab} ${styles.fabCall}`}
+        aria-label="Call Cereburum Sports"
+        id="call-fab"
+      >
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" className={styles.icon}>
+          <path d="M6.62 10.79c1.44 2.83 3.76 5.15 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1C10.61 21 3 13.39 3 4c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+        </svg>
+        <span className={styles.tooltip}>Call us</span>
       </a>
 
       <Link

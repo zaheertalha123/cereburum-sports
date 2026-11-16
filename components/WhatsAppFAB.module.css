@@ -90,6 +90,8 @@
 .fab { width:48px; height:48px; border-radius:var(--radius-md); box-shadow:var(--shadow-sm); }
 .fabWhatsapp { animation:none; background:#25D366; color:var(--ink); }
 .fabContact { background:var(--sand); }
+.fabCall { background:var(--navy); color:var(--white); border:1px solid var(--sand); }
+.fabCall:hover { background:var(--navy-light); box-shadow:var(--shadow-md); }
 .fabWhatsapp:hover,.fabContact:hover { transform:none; box-shadow:var(--shadow-md); }
 .fab:focus-visible .tooltip { opacity:1; transform:none; }
 .tooltip { right:58px; }
