@@ -199,12 +199,18 @@ export default async function GuidePage({ params }) {
             name: guide.title,
             description: guide.desc,
             image: imageUrl,
-            step: installationSteps.map((step, index) => ({
-              '@type': 'HowToStep',
-              position: index + 1,
-              name: typeof step === 'string' ? `Step ${index + 1}` : step.title || `Step ${index + 1}`,
-              text: typeof step === 'string' ? step : step.text || step.description || step.title || '',
-            })),
+            step: installationSteps.map((step, index) => {
+              const text = typeof step === 'string' ? step : step.text || step.description || step.title || '';
+              const title = typeof step === 'string' ? '' : step.title;
+              const firstClause = text.trim().split(/[.;:](?=\s|$)/, 1)[0];
+              const summary = firstClause.split(/\s+/).slice(0, 9).join(' ');
+              return {
+                '@type': 'HowToStep',
+                position: index + 1,
+                name: title && !/^step\s+\d+$/i.test(title.trim()) ? title : summary,
+                text,
+              };
+            }),
             publisher: {
               '@type': 'Organization',
               name: 'Cereburum Sports',

@@ -118,7 +118,7 @@ export default async function ProjectPage({ params }) {
         description: project.desc,
         image: imageUrl,
         genre: project.category || 'Sports Netting Installation',
-        dateCreated: project.year ? `${project.year}-01-01` : undefined,
+        dateCreated: project.dateCreated,
         locationCreated: {
           '@type': 'Place',
           name: project.location || 'Pakistan',
