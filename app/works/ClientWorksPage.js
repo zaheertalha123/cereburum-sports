@@ -1,7 +1,16 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import Breadcrumbs from '@/components/Breadcrumbs';
+import PageHero from '@/components/PageHero';
 import styles from './works.module.css';
+
+const heroPhotos = [
+  { src: '/images/project_hero/project_hero_01.webp', alt: 'Enclosed cricket practice lane with grass and overhead netting', position: 'center 56%' },
+  { src: '/images/project_hero/project_hero_02.webp', alt: 'Floodlit turf field surrounded by tall sports netting', position: 'center 68%' },
+  { src: '/images/project_hero/project_hero_03.webp', alt: 'Overhead netting in a walled practice area', position: 'center 42%' },
+  { src: '/images/project_hero/project_hero_04.webp', alt: 'Elevated view of a narrow netted practice lane', position: 'center 48%' },
+  { src: '/images/project_hero/project_hero_05.webp', alt: 'Long sports enclosure with overhead netting and floodlights', position: 'center 48%' },
+  { src: '/images/project_hero/project_hero_06.webp', alt: 'Floodlit court enclosed by side and overhead nets', position: 'center 52%' },
+];
 
 function filterHref(value) {
   if (!value || value === 'All') return '/works';
@@ -12,44 +21,34 @@ export default function ClientWorksPage({ projects, categories, breadcrumbItems,
   const filteredProjects =
     activeCategory === 'All'
       ? projects
-      : projects.filter((project) => project.category === activeCategory);
+      : projects.filter((p) => p.category === activeCategory);
 
   return (
     <>
-      <section className={styles.pageHeader} aria-label="Our works page header">
-        <div className={styles.headerBg} aria-hidden="true">
-          <div className={styles.headerGrad} />
-          <div className={styles.headerGrid} />
-        </div>
-        <div className={`container ${styles.headerContent}`}>
-          {breadcrumbItems?.length ? <Breadcrumbs items={breadcrumbItems} /> : null}
-          <span className="section-label animate-fade-in">Portfolio</span>
-          <h1 className={`display-lg ${styles.pageTitle} animate-fade-in-up`}>
-            Our Work Speaks<br />
-            <span className="text-sand">For Itself</span>
-          </h1>
-          <div className="divider divider-center" style={{ margin: '1.25rem auto 1.75rem' }} />
-          <p className={`body-lg ${styles.pageDesc} animate-fade-in`}>
-            100+ installations and counting — from local academies to professional-grade facilities
-            across Pakistan.
-          </p>
+      {/* Page Header */}
+      <PageHero
+        title="Sports netting projects"
+        description="See our netting in place. Explore cricket arenas, rooftop practice spaces and custom installations across Pakistan."
+        photos={heroPhotos}
+        breadcrumbItems={breadcrumbItems}
+      >
+        <ul className={styles.filterRow} aria-label="Project categories">
+          {categories.map((cat) => (
+            <li key={cat}>
+              <Link
+                scroll={false}
+                href={filterHref(cat)}
+                className={`${styles.filterPill} ${cat === activeCategory ? styles.filterActive : ''}`}
+                aria-current={cat === activeCategory ? 'page' : undefined}
+              >
+                {cat}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </PageHero>
 
-          <ul className={styles.filterRow} aria-label="Project categories">
-            {categories.map((cat) => (
-              <li key={cat}>
-                <Link
-                  href={filterHref(cat)}
-                  className={`${styles.filterPill} ${cat === activeCategory ? styles.filterActive : ''}`}
-                  aria-current={cat === activeCategory ? 'page' : undefined}
-                >
-                  {cat}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
-
+      {/* Projects Grid */}
       <section className={`section-pad ${styles.projectsSection}`} aria-label="Project portfolio">
         <div className="container">
           <div className={styles.projectsGrid}>
@@ -58,9 +57,11 @@ export default function ClientWorksPage({ projects, categories, breadcrumbItems,
                 href={`/works/${project.id}`}
                 key={project.id}
                 id={project.id}
-                className={`${styles.projectCard} ${i === 0 && activeCategory === 'All' ? styles.featured : ''}`}
+                className={`${styles.projectCard} reveal ${i === 0 && activeCategory === 'All' ? styles.featured : ''}`}
+                style={{ '--reveal-delay': `${(i % 2) * 50}ms` }}
                 aria-label={project.title}
               >
+                {/* Visual area */}
                 <div
                   className={styles.cardVisual}
                   style={!project.coverImage ? { background: project.gradient } : undefined}
@@ -81,6 +82,7 @@ export default function ClientWorksPage({ projects, categories, breadcrumbItems,
                   <div className={styles.cardVisualDecor} />
                 </div>
 
+                {/* Content */}
                 <div className={styles.cardContent}>
                   <div className={styles.cardMeta}>
                     <span className={styles.cardCategory}>{project.category}</span>
@@ -94,7 +96,8 @@ export default function ClientWorksPage({ projects, categories, breadcrumbItems,
                   <p className={`body-sm ${styles.cardType}`}>{project.type}</p>
                   <p className={`body-sm ${styles.cardDesc}`}>{project.desc}</p>
 
-                  <ul className={styles.highlights} aria-label="Project highlights">
+                  {/* Highlights */}
+                  <ul className={styles.highlights} role="group" aria-label="Project highlights">
                     {project.highlights.map((h) => (
                       <li key={h} className={styles.highlight}>
                         <span className={styles.highlightDot} aria-hidden="true" />

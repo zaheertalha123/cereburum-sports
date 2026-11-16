@@ -26,6 +26,13 @@ const bebas = localFont({
   variable: '--font-bebas',
 });
 
+const editorial = localFont({
+  src: '../fonts/dm-serif-display-latin-400-normal.woff2',
+  weight: '400',
+  display: 'swap',
+  variable: '--font-dm-serif',
+});
+
 const siteUrl = getSiteUrl();
 
 export const metadata = {
@@ -69,9 +76,13 @@ export const viewport = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${inter.variable} ${bebas.variable}`} suppressHydrationWarning>
+    <html lang="en" className={`${inter.variable} ${bebas.variable} ${editorial.variable}`} suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: `if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) { document.documentElement.dataset.motion = 'pending'; setTimeout(function () { if (document.documentElement.dataset.motion === 'pending') delete document.documentElement.dataset.motion; }, 3000); }` }} />
+      </head>
       <body suppressHydrationWarning>
         <ScrollReveal />
+        <a href="#main-content" className="skip-link">Skip to content</a>
         <Navbar />
         <main id="main-content">
           {children}

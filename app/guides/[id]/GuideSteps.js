@@ -21,7 +21,7 @@ export default function GuideSteps({ title, steps, embedded = false }) {
           <li
             key={i}
             className={`${styles.stepItem} reveal`}
-            style={{ transitionDelay: `${i * 0.12}s` }}
+            style={{ '--reveal-delay': `${(i % 4) * 50}ms` }}
           >
             <div className={styles.stepMarkerCol} aria-hidden="true">
               <span className={styles.stepMarker}>{i + 1}</span>

@@ -1,8 +1,9 @@
+import Link from 'next/link';
+import PageHero from '@/components/PageHero';
 import Image from 'next/image';
 import { absoluteUrl } from '@/lib/siteUrl';
 import { getLocalBusinessSchema } from '@/lib/localBusiness';
-import { yearsSinceFounding } from '@/lib/yearsActive';
-import Breadcrumbs, { breadcrumbJsonLd } from '@/components/Breadcrumbs';
+import { breadcrumbJsonLd } from '@/components/Breadcrumbs';
 import styles from './about.module.css';
 
 const WHATSAPP_NUMBER = '923187768296';
@@ -120,47 +121,15 @@ export default function AboutPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      {/* Hero */}
-      <section className={styles.hero} aria-label="About us hero">
-        <div className={styles.heroBg} aria-hidden="true">
-          <div className={styles.heroGrad} />
-          <div className={styles.heroGrid} />
-          <div className={styles.heroOrb} />
-        </div>
-        <div className={`container ${styles.heroWrap}`}>
-          <Breadcrumbs items={breadcrumbItems} className={styles.heroBreadcrumbs} />
-          <div className={styles.heroContent}>
-            <div className={`animate-fade-in-up ${styles.heroText}`}>
-              <span className="section-label">Our Story</span>
-              <h1 className={`display-lg ${styles.heroTitle} animate-fade-in-up`}>
-                Built on Quality.<br />
-                <span className="text-sand">Driven by Sport.</span>
-              </h1>
-              <div className="divider" />
-              <p className={`body-lg ${styles.heroDesc} animate-fade-in`}>
-                Cereburum Sports was born from a simple belief: Pakistan&apos;s sports facilities
-                deserve world-class netting and equipment, installed with professionalism and care.
-                Our mission drives every project we take on across Pakistan.
-              </p>
-            </div>
-
-            {/* Stats block */}
-            <div className={`${styles.heroStats} animate-fade-in`} style={{ animationDelay: '0.2s' }}>
-              {[
-                { v: yearsSinceFounding(), l: 'Years Active' },
-                { v: '100+', l: 'Projects Done' },
-                { v: '7+', l: 'Sports Covered' },
-                { v: '100%', l: 'Client Focused' },
-              ].map(({ v, l }) => (
-                <div key={l} className={styles.heroStat}>
-                  <span className={`display-md ${styles.heroStatNum}`}>{v}</span>
-                  <span className={`body-sm ${styles.heroStatLbl}`}>{l}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+      <PageHero
+        title="Cereburum Sports"
+        description="Sports net manufacturers and installers, based in Sialkot. Since 2019, we have helped turn grounds, courts and rooftops into spaces to play."
+        image="/images/about_hero/about_hero.webp"
+        imageAlt="Industrial net-making machine threaded with white yarn"
+        imagePosition="60% center"
+        breadcrumbItems={breadcrumbItems}
+        actions={<Link href="/works" className="btn btn-primary">Explore our projects</Link>}
+      />
 
       {/* Values */}
       <section className={styles.valuesSection} aria-labelledby="values-heading">
@@ -174,7 +143,7 @@ export default function AboutPage() {
           </div>
           <div className={styles.valuesGrid}>
             {values.map((v, i) => (
-              <div key={v.title} className={`${styles.valueCard} reveal`} style={{ transitionDelay: `${i * 0.1}s` }}>
+              <div key={v.title} className={`${styles.valueCard} reveal`} style={{ '--reveal-delay': `${(i % 4) * 50}ms` }}>
                 <div className={styles.valueIcon} aria-hidden="true">
                   <Image
                     src={v.icon}
@@ -205,7 +174,7 @@ export default function AboutPage() {
 
           <div className={styles.timeline} role="list">
             {timeline.map((item, i) => (
-              <div key={item.year} className={`${styles.timelineItem} reveal`} style={{ transitionDelay: `${i * 0.1}s` }} role="listitem">
+              <div key={item.year} className={`${styles.timelineItem} reveal`} style={{ '--reveal-delay': `${(i % 4) * 50}ms` }} role="listitem">
                 <div className={styles.timelineLeft}>
                   <span className={`display-md ${styles.timelineYear}`}>{item.year}</span>
                 </div>

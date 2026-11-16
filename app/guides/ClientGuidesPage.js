@@ -1,10 +1,20 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { getGuideCover, getGuideCoverAlt } from '@/data/guides';
-import Breadcrumbs from '@/components/Breadcrumbs';
+import PageHero from '@/components/PageHero';
 import styles from './guides.module.css';
 
 const ALL_FILTER = 'all';
+
+const heroPhotos = [
+  { src: '/images/guide_hero/guide_hero_01.webp', alt: 'Steel support frame for a sports netting enclosure', position: 'center 48%' },
+  { src: '/images/guide_hero/guide_hero_02.webp', alt: 'Netting and upright support poles around an outdoor practice area', position: 'center 53%' },
+  { src: '/images/guide_hero/guide_hero_03.webp', alt: 'Installation crew working beside scaffolding and steel netting supports', position: '64% 53%' },
+  { src: '/images/guide_hero/guide_hero_04.webp', alt: 'Sports netting draped from scaffolding during installation', position: '62% 50%' },
+  { src: '/images/guide_hero/guide_hero_05.webp', alt: 'Crane lifting an installer to reach overhead netting', position: '60% 50%' },
+  { src: '/images/guide_hero/guide_hero_06.webp', alt: 'Close-up of white mesh tied to a perimeter cable', position: 'center 42%' },
+  { src: '/images/guide_hero/guide_hero_07.webp', alt: 'Floodlit practice enclosure with a framed netting entrance', position: '65% 53%' },
+];
 
 function filterHref(value) {
   if (!value || value === ALL_FILTER) return '/guides';
@@ -15,53 +25,38 @@ export default function ClientGuidesPage({ guides, categories, breadcrumbItems, 
   const filtered =
     activeFilter === ALL_FILTER
       ? guides
-      : guides.filter((guide) => guide.category === activeFilter);
+      : guides.filter((g) => g.category === activeFilter);
 
   const activeCategory = categories.find((category) => category.id === activeFilter);
 
   return (
     <>
-      <section className={styles.pageHeader} aria-label="Guides page header">
-        <div className={styles.headerBg} aria-hidden="true">
-          <div className={styles.headerGrad} />
-          <div className={styles.headerGrid} />
-        </div>
-        <div className={`container ${styles.headerContent}`}>
-          {breadcrumbItems?.length ? <Breadcrumbs items={breadcrumbItems} /> : null}
-          <span className="section-label animate-fade-in">Knowledge Base</span>
-          <h1 className={`display-lg ${styles.pageTitle} animate-fade-in-up`}>
-            Installation &amp;
-            <br />
-            <span className="text-sand">Setup Guides</span>
-          </h1>
-          <div
-            className="divider divider-center"
-            style={{ margin: '1.25rem auto 1.75rem' }}
-          />
-          <p className={`body-lg ${styles.pageDesc} animate-fade-in`}>
-            Step-by-step installation guides for sports netting enclosures,
-            corner doors, and facility setup — written from real install jobs
-            across Pakistan.
-          </p>
+      {/* Page Header */}
+      <PageHero
+        title="Installation & setup guides"
+        description="Plan your space, choose your supports and install your netting. Practical instructions drawn from our work on real sports grounds."
+        photos={heroPhotos}
+        breadcrumbItems={breadcrumbItems}
+      >
+        {categories.length > 1 && (
+          <ul className={styles.filterRow} aria-label="Guide categories">
+            {categories.map((category) => (
+              <li key={category.id}>
+                <Link
+                  scroll={false}
+                  href={filterHref(category.id)}
+                  className={`${styles.filterPill} ${category.id === activeFilter ? styles.filterActive : ''}`}
+                  aria-current={category.id === activeFilter ? 'page' : undefined}
+                >
+                  {category.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        )}
+      </PageHero>
 
-          {categories.length > 1 && (
-            <ul className={styles.filterRow} aria-label="Guide categories">
-              {categories.map((category) => (
-                <li key={category.id}>
-                  <Link
-                    href={filterHref(category.id)}
-                    className={`${styles.filterPill} ${category.id === activeFilter ? styles.filterActive : ''}`}
-                    aria-current={category.id === activeFilter ? 'page' : undefined}
-                  >
-                    {category.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          )}
-        </div>
-      </section>
-
+      {/* Guides Grid */}
       <section
         className={`section-pad ${styles.guidesSection}`}
         aria-label="Guides list"
@@ -80,47 +75,47 @@ export default function ClientGuidesPage({ guides, categories, breadcrumbItems, 
               </Link>
             </div>
           ) : (
-            <div className={styles.guidesGrid}>
-              {filtered.map((guide, i) => (
-                <Link
-                  key={guide.id}
-                  href={`/guides/${guide.id}`}
-                  className={`${styles.guideCardLink} reveal`}
-                  style={{ transitionDelay: `${(i % 3) * 0.1}s` }}
-                  aria-label={`View guide: ${guide.title}`}
-                >
-                  <article className={styles.guideCard}>
-                    <div className={styles.guideVisual}>
-                      {getGuideCover(guide) ? (
-                        <Image
-                          src={getGuideCover(guide)}
-                          alt={getGuideCoverAlt(guide)}
-                          fill
-                          className={styles.guideImage}
-                          sizes="(max-width: 768px) 100vw, 50vw"
-                        />
-                      ) : (
-                        <div className={styles.guideVisualFallback} aria-hidden="true" />
-                      )}
-                    </div>
+          <div className={styles.guidesGrid}>
+            {filtered.map((guide, i) => (
+              <Link
+                key={guide.id}
+                href={`/guides/${guide.id}`}
+                className={`${styles.guideCardLink} reveal`}
+                style={{ '--reveal-delay': `${(i % 3) * 50}ms` }}
+                aria-label={`View guide: ${guide.title}`}
+              >
+                <article className={styles.guideCard}>
+                  <div className={styles.guideVisual}>
+                    {getGuideCover(guide) ? (
+                      <Image
+                        src={getGuideCover(guide)}
+                        alt={getGuideCoverAlt(guide)}
+                        fill
+                        className={styles.guideImage}
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                      />
+                    ) : (
+                      <div className={styles.guideVisualFallback} aria-hidden="true" />
+                    )}
+                  </div>
 
-                    <div className={styles.cardBody}>
-                      <div className={styles.cardMeta}>
-                        <span className={styles.categoryBadge}>
-                          {guide.categoryLabel || guide.category}
-                        </span>
-                      </div>
-                      <h2 className={`heading-md ${styles.cardTitle}`}>
-                        {guide.title}
-                      </h2>
-                      {guide.desc ? (
-                        <p className={`body-sm ${styles.cardDesc}`}>{guide.desc}</p>
-                      ) : null}
+                  <div className={styles.cardBody}>
+                    <div className={styles.cardMeta}>
+                      <span className={styles.categoryBadge}>
+                        {guide.categoryLabel || guide.category}
+                      </span>
                     </div>
-                  </article>
-                </Link>
-              ))}
-            </div>
+                    <h2 className={`heading-md ${styles.cardTitle}`}>
+                      {guide.title}
+                    </h2>
+                    {guide.desc ? (
+                      <p className={`body-sm ${styles.cardDesc}`}>{guide.desc}</p>
+                    ) : null}
+                  </div>
+                </article>
+              </Link>
+            ))}
+          </div>
           )}
         </div>
       </section>

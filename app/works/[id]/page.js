@@ -1,6 +1,7 @@
 import { projects } from '../../../data/projects';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
+import Link from 'next/link';
 import { absoluteUrl, absoluteMediaUrl } from '@/lib/siteUrl';
 import Breadcrumbs, { breadcrumbJsonLd } from '@/components/Breadcrumbs';
 import RelatedCards from '@/components/RelatedCards';
@@ -89,7 +90,7 @@ export default async function ProjectPage({ params }) {
     : '/works';
   const breadcrumbItems = [
     { name: 'Home', href: '/' },
-    { name: 'Works', href: '/works' },
+    { name: 'Projects', href: '/works' },
     ...(project.category
       ? [{ name: project.category, href: categoryHref }]
       : []),
@@ -181,8 +182,9 @@ export default async function ProjectPage({ params }) {
 
       <section className={styles.gallerySection}>
         <div className="container">
-          <h2 className="heading-md" style={{ color: 'var(--white)' }}>Project Gallery</h2>
+          <h2 className="heading-md" style={{ color: 'var(--text-primary)' }}>Project Gallery</h2>
           <ClientGallery media={project.media} projectTitle={project.title} />
+          <div className={styles.projectEnquiry}><div><h2>Planning a ground of your own?</h2><p>Tell us about your space and installation requirements.</p></div><Link href="/contact?service=installation#email-form-heading" className="btn btn-primary">Discuss your installation</Link></div>
         </div>
       </section>
 
@@ -213,7 +215,7 @@ export default async function ProjectPage({ params }) {
         label={relatedIsMixed ? 'More projects' : `More in ${project.category}`}
         title={relatedIsMixed ? 'Related Installations' : 'Similar Projects'}
         viewAllHref={relatedIsMixed ? '/works' : categoryHref}
-        viewAllLabel={relatedIsMixed ? 'View all works' : `View all ${project.category}`}
+        viewAllLabel={relatedIsMixed ? 'View all projects' : `View all ${project.category}`}
         ariaLabel="Related projects"
         items={related.map((item) => ({
           id: item.id,

@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import GalleryImage from '@/components/GalleryImage';
 import GalleryVideo from '@/components/GalleryVideo';
 import styles from './project.module.css';
@@ -12,18 +12,36 @@ export default function ClientGallery({ media, projectTitle, compact = false, pa
   const [touchEnd, setTouchEnd] = useState(null);
 
   const minSwipeDistance = 50;
+  const closeRef = useRef(null);
+  const openerRef = useRef(null);
+  const dialogRef = useRef(null);
+  // Inline images stay mounted while the dialog is open, keeping their blob URLs alive.
+  const loadedImagesRef = useRef(new Map());
 
-  // Close lightbox on escape key
   useEffect(() => {
-    const handleKeyDown = (e) => {
-      if (!lightboxOpen) return;
-      if (e.key === 'Escape') closeLightbox();
-      if (e.key === 'ArrowRight') nextMedia(e);
-      if (e.key === 'ArrowLeft') prevMedia(e);
+    if (!lightboxOpen) return;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    closeRef.current?.focus();
+    const handleKeyDown = (event) => {
+      if (event.key === 'Escape') closeLightbox();
+      if (event.key === 'ArrowRight') nextMedia(event);
+      if (event.key === 'ArrowLeft') prevMedia(event);
+      if (event.key === 'Tab') {
+        const buttons = dialogRef.current?.querySelectorAll('button, video[controls]');
+        const first = buttons?.[0];
+        const last = buttons?.[buttons.length - 1];
+        if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last?.focus(); }
+        else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first?.focus(); }
+      }
     };
     window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [lightboxOpen, currentIndex]); // eslint-disable-line react-hooks/exhaustive-deps
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+      document.body.style.overflow = previousOverflow;
+      openerRef.current?.focus();
+    };
+  }, [lightboxOpen]); // eslint-disable-line react-hooks/exhaustive-deps
 
   if (!media || media.length === 0) {
     if (compact) return null;
@@ -35,14 +53,13 @@ export default function ClientGallery({ media, projectTitle, compact = false, pa
   }
 
   const openLightbox = (index) => {
+    openerRef.current = document.activeElement;
     setCurrentIndex(index);
     setLightboxOpen(true);
-    document.body.style.overflow = 'hidden';
   };
 
   const closeLightbox = () => {
     setLightboxOpen(false);
-    document.body.style.overflow = '';
   };
 
   const nextMedia = (e) => {
@@ -91,7 +108,7 @@ export default function ClientGallery({ media, projectTitle, compact = false, pa
             onClick={() => openLightbox(idx)}
             role="button"
             tabIndex={0}
-            onKeyDown={(e) => { if (e.key === 'Enter') openLightbox(idx); }}
+            onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openLightbox(idx); } }}
             aria-label={`View full screen media ${idx + 1}`}
           >
             {item.type === 'image' ? (
@@ -109,6 +126,9 @@ export default function ClientGallery({ media, projectTitle, compact = false, pa
                     : '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
                 }
                 unoptimized={unoptimized}
+                onLoad={(event) => {
+                  loadedImagesRef.current.set(item.url, event.currentTarget.currentSrc);
+                }}
               />
             ) : item.type === 'video' ? (
               <GalleryVideo
@@ -125,13 +145,17 @@ export default function ClientGallery({ media, projectTitle, compact = false, pa
 
       {lightboxOpen && (
         <div 
+          ref={dialogRef}
+          role="dialog"
+          aria-modal="true"
+          aria-label={`${projectTitle || 'Installation'} media gallery`}
           className={styles.lightboxOverlay} 
           onClick={closeLightbox}
           onTouchStart={handleTouchStart}
           onTouchMove={handleTouchMove}
           onTouchEnd={handleTouchEnd}
         >
-          <button className={styles.closeBtn} onClick={closeLightbox} aria-label="Close lightbox">✕</button>
+          <button ref={closeRef} className={styles.closeBtn} onClick={closeLightbox} aria-label="Close lightbox">✕</button>
           
           <button className={styles.navBtn} style={{ left: '1.5rem' }} onClick={prevMedia} aria-label="Previous media">❮</button>
           
@@ -145,10 +169,15 @@ export default function ClientGallery({ media, projectTitle, compact = false, pa
                   `${projectTitle || 'Sports net'} installation photo ${currentIndex + 1} - boundary safety netting by Cereburum Sports`
                 }
                 variant="lightbox"
+                imageStyle={{ width: 'auto', height: 'auto', maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }}
+                loadedSrc={loadedImagesRef.current.get(media[currentIndex].url)}
+                onLoad={(event) => {
+                  loadedImagesRef.current.set(media[currentIndex].url, event.currentTarget.currentSrc);
+                }}
                 unoptimized={unoptimized}
               />
             ) : (
-              <GalleryVideo key={media[currentIndex].url} src={media[currentIndex].url} variant="lightbox" />
+              <GalleryVideo key={media[currentIndex].url} src={media[currentIndex].url} variant="lightbox" videoStyle={{ width: 'auto', height: 'auto', maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }} />
             )}
             {media[currentIndex].alt && (
               <div className={styles.lightboxCaption}>{media[currentIndex].alt}</div>

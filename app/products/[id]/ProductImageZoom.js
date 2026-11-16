@@ -38,7 +38,7 @@ export default function ProductImageZoom({ src, alt, tag }) {
   function updateZoom(event) {
     const frame = frameRef.current;
     const img = frame?.querySelector('img');
-    if (!frame || !img) return;
+    if (!frame || !img?.complete || !img.naturalWidth) return;
 
     const box = paintedImageBox(frame, img);
     const px = event.clientX - box.rect.left;
@@ -54,11 +54,11 @@ export default function ProductImageZoom({ src, alt, tag }) {
       return;
     }
 
-    const x = (px - box.offsetX) / box.width;
-    const y = (py - box.offsetY) / box.height;
-    const bgWidth = PANE * ZOOM;
-    const bgHeight = bgWidth * (box.nh / box.nw);
+    const bgWidth = box.width * ZOOM;
+    const bgHeight = box.height * ZOOM;
     const lensSize = Math.round(PANE / ZOOM);
+    const lensX = Math.max(lensSize / 2, Math.min(box.width - lensSize / 2, px - box.offsetX));
+    const lensY = Math.max(lensSize / 2, Math.min(box.height - lensSize / 2, py - box.offsetY));
 
     let left = box.rect.right + 18;
     let top = event.clientY - PANE / 2;
@@ -72,11 +72,12 @@ export default function ProductImageZoom({ src, alt, tag }) {
     setZoom({
       left,
       top,
-      lensX: px,
-      lensY: py,
+      imageSrc: img.currentSrc || img.src,
+      lensX: box.offsetX + lensX,
+      lensY: box.offsetY + lensY,
       lensSize,
       backgroundSize: `${bgWidth}px ${bgHeight}px`,
-      backgroundPosition: `${PANE / 2 - x * bgWidth}px ${PANE / 2 - y * bgHeight}px`,
+      backgroundPosition: `${Math.min(0, Math.max(PANE - bgWidth, PANE / 2 - lensX * ZOOM))}px ${Math.min(0, Math.max(PANE - bgHeight, PANE / 2 - lensY * ZOOM))}px`,
     });
   }
 
@@ -121,7 +122,7 @@ export default function ProductImageZoom({ src, alt, tag }) {
               style={{
                 left: zoom.left,
                 top: zoom.top,
-                backgroundImage: `url("${src}")`,
+                backgroundImage: `url("${zoom.imageSrc}")`,
                 backgroundSize: zoom.backgroundSize,
                 backgroundPosition: zoom.backgroundPosition,
               }}

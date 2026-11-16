@@ -11,7 +11,7 @@ const CONTACT_FORM_HREF = '/contact#email-form-heading';
 const navLinks = [
   { href: '/', label: 'Home' },
   { href: '/products', label: 'Products' },
-  { href: '/works', label: 'Our Works' },
+  { href: '/works', label: 'Projects' },
   { href: '/guides', label: 'Guides' },
   { href: '/about', label: 'About Us' },
   { href: '/contact', label: 'Contact' },
@@ -32,7 +32,7 @@ export default function Footer() {
     <footer className={styles.footer} role="contentinfo">
       {/* CTA band */}
       <div className={styles.ctaBand}>
-        <div className={`container ${styles.ctaInner}`}>
+        <div className={`container ${styles.ctaInner} reveal`}>
           <div>
             <p className={`label ${styles.ctaLabel}`}>Ready to get started?</p>
             <h2 className={`display-md ${styles.ctaHeading}`}>

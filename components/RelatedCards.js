@@ -33,7 +33,7 @@ export default function RelatedCards({
   return (
     <section className={styles.relatedSection} aria-label={ariaLabel || title}>
       <div className="container">
-        <div className={styles.relatedHeader}>
+        <div className={`${styles.relatedHeader} reveal`}>
           <div>
             {label ? <span className="section-label">{label}</span> : null}
             <h2 className={`heading-lg ${styles.relatedTitle}`}>{title}</h2>
@@ -46,8 +46,8 @@ export default function RelatedCards({
         </div>
 
         <div className={styles.relatedGrid}>
-          {items.map((item) => (
-            <Link key={item.id} href={item.href} className={styles.relatedCard}>
+          {items.map((item, i) => (
+            <Link key={item.id} href={item.href} className={`${styles.relatedCard} reveal`} style={{ '--reveal-delay': `${(i % 3) * 50}ms` }}>
               <div className={styles.relatedVisual}>
                 {item.image ? (
                   <Image

@@ -16,25 +16,25 @@
 
 .card {
   background: var(--gradient-card);
-  border: 1px solid rgba(187, 181, 101, 0.12);
+  border: 1px solid var(--line);
   border-radius: var(--radius-lg);
   padding: 1.5rem;
 }
 
 .quote {
   margin: 0;
-  color: var(--white);
+  color: var(--text-primary);
 }
 
 .person {
   margin: 1rem 0 0;
-  color: var(--sand);
+  color: var(--sand-dark);
   font-size: 0.9rem;
 }
 
 .projectLink,
 .reviewsLink a {
-  color: var(--sand);
+  color: var(--sand-dark);
 }
 
 .reviewsLink {

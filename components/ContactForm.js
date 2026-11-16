@@ -6,6 +6,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { contactFormSchema, contactServices } from '@/lib/contactSchema';
 import { getProductById } from '@/data/products';
 import ProductCombobox from '@/components/ProductCombobox';
+import ContactCombobox from '@/components/ContactCombobox';
 import styles from '@/app/contact/contact.module.css';
 
 function SendIcon({ className }) {
@@ -150,6 +151,8 @@ export default function ContactForm({ initialProductId = '', initialServiceId = 
             control={control}
             render={({ field }) => (
               <ProductCombobox
+                name={field.name}
+                inputRef={field.ref}
                 value={field.value}
                 onChange={field.onChange}
                 onBlur={field.onBlur}
@@ -163,19 +166,24 @@ export default function ContactForm({ initialProductId = '', initialServiceId = 
           <label htmlFor="contact-service" className={`label ${styles.formLabel}`}>
             Service
           </label>
-          <select
-            id="contact-service"
-            className={`${styles.formInput} ${styles.formSelect}`}
-            aria-invalid={errors.service ? 'true' : 'false'}
-            {...register('service')}
-          >
-            <option value="">Select a service</option>
-            {contactServices.map((service) => (
-              <option key={service.id} value={service.id}>
-                {service.label}
-              </option>
-            ))}
-          </select>
+          <Controller
+            name="service"
+            control={control}
+            render={({ field }) => (
+              <ContactCombobox
+                id="contact-service"
+                options={contactServices}
+                placeholder="Search or select a service"
+                emptyMessage="No services found"
+                name={field.name}
+                inputRef={field.ref}
+                value={field.value}
+                onChange={field.onChange}
+                onBlur={field.onBlur}
+                invalid={Boolean(errors.service)}
+              />
+            )}
+          />
           {errors.service && <p className={styles.formError}>{errors.service.message}</p>}
         </div>
 
