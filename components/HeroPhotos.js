@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useId, useState } from 'react';
+import { useEffect, useId, useRef, useState } from 'react';
 import Image from 'next/image';
 import styles from '@/app/page.module.css';
 
@@ -9,10 +9,13 @@ const slideDuration = 6500;
 export default function HeroPhotos({ photos, children }) {
   const photoId = useId();
   const [activeIndex, setActiveIndex] = useState(0);
+  const [requestedIndex, setRequestedIndex] = useState(0);
+  const [mountedSlides, setMountedSlides] = useState([0]);
+  const loadedSlides = useRef(new Set());
   const [paused, setPaused] = useState(false);
 
   useEffect(() => {
-    if (paused) return;
+    if (paused || requestedIndex !== activeIndex) return;
 
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
     let timer;
@@ -20,7 +23,7 @@ export default function HeroPhotos({ photos, children }) {
       window.clearTimeout(timer);
       if (reducedMotion.matches || document.hidden) return;
       timer = window.setTimeout(() => {
-        setActiveIndex((index) => (index + 1) % photos.length);
+        setRequestedIndex((activeIndex + 1) % photos.length);
       }, slideDuration);
     }
 
@@ -32,7 +35,15 @@ export default function HeroPhotos({ photos, children }) {
       reducedMotion.removeEventListener('change', scheduleSlide);
       document.removeEventListener('visibilitychange', scheduleSlide);
     };
-  }, [activeIndex, paused, photos.length]);
+  }, [activeIndex, paused, photos.length, requestedIndex]);
+
+  useEffect(() => {
+    if (loadedSlides.current.has(requestedIndex)) {
+      setActiveIndex(requestedIndex);
+    } else {
+      setMountedSlides((slides) => slides.includes(requestedIndex) ? slides : [...slides, requestedIndex]);
+    }
+  }, [requestedIndex]);
 
   return (
     <>
@@ -42,20 +53,43 @@ export default function HeroPhotos({ photos, children }) {
         data-paused={paused}
         style={{ '--hero-slide-duration': `${slideDuration}ms` }}
       >
-        {photos.map(({ src, alt, position }, index) => (
-          <div key={src} className={styles.heroSlide} data-active={index === activeIndex} aria-hidden={index !== activeIndex}>
-            <Image
-              src={src}
-              alt={alt}
-              fill
-              preload={index === 0}
-              fetchPriority={index === 0 ? undefined : 'low'}
-              sizes="100vw"
-              className={styles.heroImage}
-              style={{ objectPosition: position, transformOrigin: position }}
-            />
-          </div>
-        ))}
+        {mountedSlides.map((index) => {
+          const { src, alt, position, responsive } = photos[index];
+          const first = index === 0;
+          const imageProps = {
+            src,
+            alt,
+            sizes: '100vw',
+            className: styles.heroImage,
+            style: { objectPosition: position, transformOrigin: position },
+            onLoad: () => {
+              loadedSlides.current.add(index);
+              if (requestedIndex === index) setActiveIndex(index);
+            },
+            onError: () => {
+              if (requestedIndex === index) setRequestedIndex(activeIndex);
+            },
+          };
+          const srcSet = responsive
+            ? [750, 1200, 1600].map((width) => `${src.replace(/\.webp$/, `-${width}.webp`)} ${width}w`).join(', ')
+            : undefined;
+
+          return (
+            <div key={src} className={styles.heroSlide} data-active={index === activeIndex} aria-hidden={index !== activeIndex}>
+              {srcSet ? (
+                <img {...imageProps} srcSet={srcSet} fetchPriority="high" decoding="async" />
+              ) : (
+                <Image
+                  {...imageProps}
+                  fill
+                  preload={first}
+                  fetchPriority={first ? 'high' : 'low'}
+                  loading={first ? undefined : 'lazy'}
+                />
+              )}
+            </div>
+          );
+        })}
       </div>
       <div className={styles.heroShade} aria-hidden="true" />
       {children}
@@ -79,7 +113,7 @@ export default function HeroPhotos({ photos, children }) {
             aria-label={alt}
             aria-controls={photoId}
             aria-pressed={index === activeIndex}
-            onClick={() => setActiveIndex(index)}
+            onClick={() => setRequestedIndex(index)}
           />
         ))}
       </div>

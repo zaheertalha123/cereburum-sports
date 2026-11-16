@@ -421,6 +421,7 @@ const rawProducts = [
   {
     id: 'badminton-hiqua',
     title: 'Badminton Hiqua',
+    pageTitle: 'Badminton Hiqua Net',
     subtitle: 'Badminton Net',
     filterGroup: 'Badminton',
     image: '/images/products/badminton-hiqua.webp',
@@ -439,7 +440,8 @@ const rawProducts = [
   {
     id: 'badminton-yonex',
     title: 'Badminton Yonex',
-    subtitle: 'Badminton net',
+    pageTitle: 'Badminton Yonex Net',
+    subtitle: 'Badminton Net',
     filterGroup: 'Badminton',
     image: '/images/products/badminton-yonex.webp',
     imageAlt: 'Badminton Net - Yonex Tournament Steel Wire Net - High Density Badminton Netting Pakistan | Cereburum Sports',
@@ -457,7 +459,8 @@ const rawProducts = [
   {
     id: 'badminton-1170',
     title: 'Badminton 1170',
-    subtitle: 'Badminton net',
+    pageTitle: 'Badminton 1170 Net',
+    subtitle: 'Badminton Net',
     filterGroup: 'Badminton',
     image: '/images/products/badminton-1170.webp',
     imageAlt: 'Badminton Net - Micro Mesh Court Net - Ultra Fine 1cm Badminton Netting Pakistan | Cereburum Sports',
@@ -523,6 +526,7 @@ const rawProducts = [
   {
     id: 'hockey-net-parachute',
     title: 'Hockey Net Parachute',
+    pageTitle: 'Hockey Parachute Goal Net',
     subtitle: 'Hockey Goal Net',
     filterGroup: 'Hockey',
     image: '/images/products/hockey-net-parachute.webp',
@@ -541,6 +545,7 @@ const rawProducts = [
   {
     id: 'custom',
     title: 'Custom Solutions',
+    pageTitle: 'Custom Netting Solutions',
     subtitle: 'Bespoke & Tailored',
     filterGroup: 'Custom',
     image: '/images/products/custom-net.webp',
@@ -579,6 +584,8 @@ export const specFamilies = [
 ];
 
 export function productPageTitle(product) {
+  if (product?.pageTitle) return product.pageTitle;
+
   const name = (product?.title || '').trim();
   const category = (product?.subtitle || product?.filterGroup || '').trim();
   if (!category || name.toLowerCase().includes(category.toLowerCase())) return name;

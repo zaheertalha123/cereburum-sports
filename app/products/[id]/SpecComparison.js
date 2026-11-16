@@ -17,7 +17,7 @@ export default function SpecComparison({ productId }) {
   }
 
   return (
-    <section className={styles.compareSection} aria-labelledby={`compare-${family.id}`}>
+    <section className={styles.compareSection}>
       <h2 className={styles.sectionTitle} id={`compare-${family.id}`}>{family.title}</h2>
       <p className={styles.compareNote}>
         Compared from the listed material, mesh, and size for each grade.

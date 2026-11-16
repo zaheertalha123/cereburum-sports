@@ -116,6 +116,7 @@ export default async function ProductDetailPage({ params }) {
       breadcrumbJsonLd(breadcrumbItems),
       {
         '@type': 'Product',
+        // TODO(owner): Add offers only when authoritative product pricing is available.
         '@id': `${productCanonicalUrl}#product`,
         url: productCanonicalUrl,
         name: product.title,
