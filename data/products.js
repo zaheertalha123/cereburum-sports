@@ -585,6 +585,10 @@ export const specFamilies = [
 
 export function productPageTitle(product) {
   if (product?.pageTitle) return product.pageTitle;
+  if (product?.id === 'custom') return 'Custom Size Sports Net Manufacturer in Pakistan';
+  if (product?.id === 'cricket-net-24') return 'Parachute 24 Cricket Practice Net, Custom Sizes';
+  if (product?.id === 'cricket-net-36') return 'Parachute 36 Cricket Practice Net, Custom Sizes';
+  if (product?.filterGroup === 'Cricket') return `${product.title} Cricket Net, Custom Sizes`;
 
   const name = (product?.title || '').trim();
   const category = (product?.subtitle || product?.filterGroup || '').trim();

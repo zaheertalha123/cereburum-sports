@@ -7,6 +7,7 @@ import Breadcrumbs, { breadcrumbJsonLd } from '@/components/Breadcrumbs';
 import RelatedCards from '@/components/RelatedCards';
 import styles from './project.module.css';
 import ClientGallery from './ClientGallery';
+import { locationForCity } from '@/data/locations';
 
 export async function generateStaticParams() {
   return projects.map((project) => ({
@@ -98,6 +99,22 @@ export default async function ProjectPage({ params }) {
   ];
 
   const { items: related, mixed: relatedIsMixed } = getRelatedProjects(project);
+  const city = (project.location || 'Pakistan').split(',')[0].trim();
+  const cityPage = locationForCity(city);
+  const projectText = `${project.desc || ''} ${(project.highlights || []).join(' ')}`;
+  const gradeLinks = [
+    ['Parachute 72', '/products/cricket-net-72'],
+    ['Parachute 66', '/products/cricket-net-66'],
+    ['Parachute 36', '/products/cricket-net-36'],
+    ['Parachute 24', '/products/cricket-net-24'],
+    ['Parachute 12', '/products/cricket-net-12'],
+  ].filter(([name]) => new RegExp(`\\b${name}\\b`).test(projectText));
+  const planningLinks = [
+    cityPage ? { href: `/locations/${cityPage.slug}`, label: `Installation in ${cityPage.city}` } : null,
+    project.id === 'bloomfield-hall-school-khariyan' ? { href: '/services/school-sports-ground-netting', label: 'School sports ground netting' } : null,
+    { href: '/services/cricket-net-installation-pakistan', label: 'Cricket net installation' },
+    ...gradeLinks.map(([label, href]) => ({ href, label })),
+  ].filter(Boolean);
   const projectDetails = [
     ['Client type', project.clientType],
     ['Challenge', project.challenge],
@@ -122,6 +139,11 @@ export default async function ProjectPage({ params }) {
         locationCreated: {
           '@type': 'Place',
           name: project.location || 'Pakistan',
+          address: {
+            '@type': 'PostalAddress',
+            addressLocality: city,
+            addressCountry: 'PK',
+          },
         },
         creator: {
           '@type': 'Organization',
@@ -185,6 +207,18 @@ export default async function ProjectPage({ params }) {
           <h2 className="heading-md" style={{ color: 'var(--text-primary)' }}>Project Gallery</h2>
           <ClientGallery media={project.media} projectTitle={project.title} />
           <div className={styles.projectEnquiry}><div><h2>Planning a ground of your own?</h2><p>Tell us about your space and installation requirements.</p></div><Link href="/contact?service=installation#email-form-heading" className="btn btn-primary">Discuss your installation</Link></div>
+          <div className={styles.projectEnquiry}>
+            <div>
+              <h2>Planning a similar ground in {city}?</h2>
+              <p>We manufacture in Sialkot and install where it is practical. The material and size on this page are the ones already published for this project.</p>
+              <ul>
+                {planningLinks.map((link) => (
+                  <li key={link.href}><Link href={link.href}>{link.label}</Link></li>
+                ))}
+              </ul>
+            </div>
+            <Link href="/contact?service=installation#email-form-heading" className="btn btn-primary">Discuss this ground</Link>
+          </div>
         </div>
       </section>
 

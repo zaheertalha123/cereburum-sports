@@ -3,7 +3,11 @@ import Image from 'next/image';
 import HeroPhotos from '@/components/HeroPhotos';
 import Testimonials from '@/components/Testimonials';
 import { absoluteUrl } from '@/lib/siteUrl';
+import { preloadHeroImage } from '@/lib/heroImage';
 import { getLocalBusinessSchema } from '@/lib/localBusiness';
+import { faqJsonLd } from '@/lib/buyerSchema';
+import { faqsById } from '@/data/buyerFaqs';
+import buyer from '@/components/buyer.module.css';
 import styles from './page.module.css';
 import { projects } from '@/data/projects';
 import { products } from '@/data/products';
@@ -12,13 +16,14 @@ import { getGuideById, getGuideCategoryLabel, getGuideCover, getGuideCoverAlt } 
 const WHATSAPP_NUMBER = '923187768296';
 const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=Hello%2C%20I%27m%20interested%20in%20your%20sports%20products.`;
 const siteUrl = absoluteUrl();
+const homeFaqs = faqsById('manufacture', 'range', 'rooftop', 'school', 'cost', 'cities');
+const homeDescription = 'Cereburum Sports manufactures and installs cricket, football and court nets from Sialkot. Standard sizes or made to measure, including rooftop practice nets, for schools, academies and arenas across Pakistan.';
 
 export const metadata = {
   title: {
-    absolute: 'Cricket Net Installation & Sports Nets in Pakistan | Cereburum Sports',
+    absolute: 'Cricket Net Installation in Pakistan | Cereburum Sports, Sialkot',
   },
-  description:
-    'Professional cricket net installation across Pakistan for grounds, academies and rooftops. Explore cricket nets, football nets and custom sports netting solutions.',
+  description: homeDescription,
   alternates: {
     canonical: '/',
   },
@@ -27,9 +32,8 @@ export const metadata = {
     locale: 'en_PK',
     url: siteUrl,
     siteName: 'Cereburum Sports',
-    title: 'Cricket Net Installation & Sports Nets in Pakistan | Cereburum Sports',
-    description:
-      'Turnkey cricket net installation services across Pakistan. Alongside professional installation, we supply all types of sports nets including cricket, football, court & barrier nets.',
+    title: 'Cricket Net Installation in Pakistan | Cereburum Sports, Sialkot',
+    description: homeDescription,
     images: [
       {
         url: '/images/home/1.jpg',
@@ -41,9 +45,8 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Cricket Net Installation & Sports Nets in Pakistan | Cereburum Sports',
-    description:
-      'Turnkey cricket net installation services across Pakistan. We also supply cricket nets, football netting, court nets & sports barrier nets.',
+    title: 'Cricket Net Installation in Pakistan | Cereburum Sports, Sialkot',
+    description: homeDescription,
     images: ['/images/home/1.jpg'],
   },
 };
@@ -62,6 +65,7 @@ const jsonLd = {
         '@id': `${siteUrl}/#organization`,
       },
     },
+    faqJsonLd(absoluteUrl('/'), homeFaqs),
     getLocalBusinessSchema({
       hasOfferCatalog: {
         '@type': 'OfferCatalog',
@@ -84,11 +88,11 @@ const jsonLd = {
           },
           {
             '@type': 'Offer',
-            url: absoluteUrl('/products?filter=Cricket'),
+            url: absoluteUrl('/products/cricket-nets'),
             itemOffered: {
               '@type': 'Service',
               name: 'Cricket Ground Netting & Rooftop Cricket Nets Installation',
-              url: absoluteUrl('/products?filter=Cricket'),
+              url: absoluteUrl('/products/cricket-nets'),
               description:
                 'Professional installation of high-tensile cricket ground netting and engineered rooftop cricket nets for residential and commercial facilities.',
               areaServed: {
@@ -129,33 +133,33 @@ const jsonLd = {
           },
           {
             '@type': 'Offer',
-            url: absoluteUrl('/products?filter=Cricket'),
+            url: absoluteUrl('/products/cricket-nets'),
             itemOffered: {
               '@type': 'Product',
               name: 'Cricket Nets (Practice, Pitch & Boundary Nets)',
-              url: absoluteUrl('/products?filter=Cricket'),
+              url: absoluteUrl('/products/cricket-nets'),
               description:
                 'High-density UV-treated cricket nets, joint-free parachute netting, and practice nets available in custom dimensions.',
             },
           },
           {
             '@type': 'Offer',
-            url: absoluteUrl('/products?filter=Football'),
+            url: absoluteUrl('/products/football-goal-nets'),
             itemOffered: {
               '@type': 'Product',
               name: 'Football Netting & Goal Nets',
-              url: absoluteUrl('/products?filter=Football'),
+              url: absoluteUrl('/products/football-goal-nets'),
               description:
                 'All-weather football goal nets, futsal nets, and pitch boundary netting manufactured for durability.',
             },
           },
           {
             '@type': 'Offer',
-            url: absoluteUrl('/products?filter=Badminton'),
+            url: absoluteUrl('/products/court-nets'),
             itemOffered: {
               '@type': 'Product',
               name: 'Sports Safety Nets & Court Netting',
-              url: absoluteUrl('/products?filter=Badminton'),
+              url: absoluteUrl('/products/court-nets'),
               description:
                 'Heavy-duty sports safety barrier netting, badminton nets, and multi-sport court netting solutions for diverse sports facilities.',
             },
@@ -176,9 +180,9 @@ const heroPhotos = [
 const featured = projects.find((project) => project.id === 'bloomfield-hall-school-khariyan');
 const selectedProjects = ['cricket-arena-nowshera', 'cricket-arena-mirpur'].map((id) => projects.find((project) => project.id === id));
 const categories = [
-  { title: 'Cricket nets', note: 'Practice, academy & ground netting', href: '/products?filter=Cricket', product: 'cricket-net-36' },
-  { title: 'Football nets', note: 'Goal nets made for the game', href: '/products?filter=Football', filter: 'Football' },
-  { title: 'Court nets', note: 'For courts and multi-sport spaces', href: '/products?filter=Badminton', filter: 'Badminton' },
+  { title: 'Cricket nets', note: 'Practice, academy & ground netting', href: '/products/cricket-nets', product: 'cricket-net-36' },
+  { title: 'Football nets', note: 'Goal nets made for the game', href: '/products/football-goal-nets', filter: 'Football' },
+  { title: 'Court nets', note: 'For courts and multi-sport spaces', href: '/products/court-nets', filter: 'Badminton' },
   { title: 'Custom installations', note: 'A fit for your space', href: '/products/custom', product: 'custom' },
 ];
 const selectedGuides = ['cricket-arena', 'height-measurement', 'roof-installation']
@@ -192,16 +196,18 @@ const process = [
 ];
 
 export default function HomePage() {
+  preloadHeroImage(heroPhotos[0]);
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <section className={styles.hero} aria-labelledby="home-heading">
+      <section className={`${styles.hero} hero-lcp`} aria-labelledby="home-heading" style={{ position: 'relative', minHeight: 560, background: '#07051A' }}>
         <HeroPhotos photos={heroPhotos}>
           <div className={`container ${styles.heroInner}`}>
             <p className={styles.heroLocation}>Cereburum Sports / Pakistan<span>Manufacturers & installers of sports netting</span></p>
             <div className={styles.heroCopy}>
               <h1 id="home-heading">Cricket net installation.<br />Built for your ground.</h1>
-              <p>From rooftop practice spaces to full-scale arenas. We manufacture, supply and install sports nets across Pakistan.</p>
+              <p>Manufactured in Sialkot and installed across Pakistan, including Lahore, Karachi, Islamabad, Rawalpindi, Gujranwala, Peshawar and the cities in our project list. From rooftop practice nets to full arenas.</p>
               <div className={styles.heroActions}>
                 <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="btn btn-whatsapp" id="hero-whatsapp-cta" aria-label="Request a Quote on WhatsApp">Request a Quote</a>
                 <Link href="/works" className={styles.heroLink}>Explore our projects <span aria-hidden="true">↗</span></Link>
@@ -271,6 +277,66 @@ export default function HomePage() {
       </section>
       <section className={`section-pad ${styles.processSection}`} aria-labelledby="process-heading">
         <div className="container"><div className={`${styles.sectionHead} reveal`}><div><span className="section-label">From the first conversation</span><h2 id="process-heading">A clear path to your ground.</h2></div></div><ol className={styles.processGrid}>{process.map((step, i) => <li key={step.title} className="reveal" style={{ '--reveal-delay': `${i * 50}ms` }}><span className={styles.stepNumber}>0{i + 1}</span><h3>{step.title}</h3><p>{step.desc}</p></li>)}</ol></div>
+      </section>
+      <section className={`section-pad ${buyer.section}`} aria-labelledby="sialkot-maker-heading">
+        <div className="container">
+          <h2 id="sialkot-maker-heading">Sports net manufacturers in Sialkot</h2>
+          <p>Cereburum Sports manufactures, supplies and installs sports nets from Sialkot: cricket practice and arena netting, including roof netting, football and futsal goal nets, badminton and court nets, hockey nets, and custom sizes.</p>
+          <ul className={buyer.links}><li><Link href="/about">About the workshop</Link></li></ul>
+        </div>
+      </section>
+      <section className={`section-pad ${buyer.section}`} aria-labelledby="rooftop-heading">
+        <div className="container">
+          <h2 id="rooftop-heading">Rooftop cricket practice nets</h2>
+          <p>Rooftop installations are common. A bamboo frame is the cost-effective option, and an iron frame is the more durable one. Feasibility still depends on the roof layout and access. Published Sialkot rooftops include Gohadpur, Daska Road and an L-shaped house roof.</p>
+          <ul className={buyer.links}>
+            <li><Link href="/guides/rooftop-cricket-practice-net">Rooftop guide</Link></li>
+            <li><Link href="/works/roof-top-net-sialkot">Gohadpur</Link></li>
+            <li><Link href="/works/roof-top-net-sialkot-daska-road">Daska Road</Link></li>
+            <li><Link href="/works/house-roof-top-net-sialkot">House rooftop</Link></li>
+          </ul>
+        </div>
+      </section>
+      <section className={`section-pad ${buyer.section}`} aria-labelledby="school-heading">
+        <div className="container">
+          <h2 id="school-heading">School and academy netting</h2>
+          <p>Bloomfield Hall School in Kharian has a 40 ft by 40 ft enclosure, 20 ft high, with Parachute 36 sides and a Parachute 24 roof. Share the ground size and the sports students play.</p>
+          <ul className={buyer.links}>
+            <li><Link href="/works/bloomfield-hall-school-khariyan">Bloomfield Hall School</Link></li>
+            <li><Link href="/services/school-sports-ground-netting">School sports ground netting</Link></li>
+          </ul>
+        </div>
+      </section>
+      <section className={`section-pad ${buyer.section}`} aria-labelledby="cost-heading">
+        <div className="container">
+          {/* TODO(owner): add 2–3 starting ranges for a 100×10 practice panel, a rooftop cage, and a full arena. */}
+          <h2 id="cost-heading">What our nets cost</h2>
+          <p>Quotes depend on size, material and structure. Standard sizes and custom sizes are both available. Indicative prices are published only after we add them.</p>
+          <ul className={buyer.links}>
+            <li><Link href="/guides/cricket-net-price-pakistan">How cricket net pricing works</Link></li>
+            <li><Link href="/guides/cricket-arena-cost-pakistan">Arena cost</Link></li>
+          </ul>
+        </div>
+      </section>
+      <section className={`section-pad ${buyer.faq}`} aria-labelledby="home-faq-heading">
+        <div className="container">
+          <h2 id="home-faq-heading">Questions</h2>
+          <dl>
+            {homeFaqs.map((faq) => (
+              <div key={faq.id}>
+                <dt>{faq.q}</dt>
+                <dd>
+                  <p>{faq.a}</p>
+                  {faq.links?.length ? (
+                    <ul className={buyer.links}>
+                      {faq.links.map((link) => <li key={link.href}><Link href={link.href}>{link.label}</Link></li>)}
+                    </ul>
+                  ) : null}
+                </dd>
+              </div>
+            ))}
+          </dl>
+        </div>
       </section>
       <Testimonials />
     </>

@@ -1,7 +1,14 @@
-import ClientProductsPage from './ClientProductsPage';
+import ClientProductsPage, { productHeroPhotos } from './ClientProductsPage';
+import { preloadHeroImage } from '@/lib/heroImage';
 import { productFilterGroups, products } from '@/data/products';
 import { absoluteUrl, absoluteMediaUrl } from '@/lib/siteUrl';
 import { breadcrumbJsonLd } from '@/components/Breadcrumbs';
+const filterCanonical = {
+  Cricket: '/products/cricket-nets',
+  Football: '/products/football-goal-nets',
+  Badminton: '/products/court-nets',
+  Futsal: '/products/futsal-nets',
+};
 
 const productsUrl = absoluteUrl('/products');
 const breadcrumbItems = [
@@ -9,21 +16,25 @@ const breadcrumbItems = [
   { name: 'Products', href: '/products' },
 ];
 
-export const metadata = {
+export async function generateMetadata({ searchParams }) {
+  const params = await searchParams;
+  const activeFilter = resolveFilter(params?.filter);
+  const canonicalPath = filterCanonical[activeFilter] || '/products';
+  const url = absoluteUrl(canonicalPath);
+  const description = 'Standard sizes and custom sizes of cricket, football, futsal, badminton and hockey nets, manufactured in Sialkot and installed across Pakistan.';
+  return {
   title: 'Sports Nets Catalog & Netting Solutions in Pakistan',
-  description:
-    'Explore high-durability cricket ground nets, football goal netting, rooftop practice cages, and court nets. Direct manufacturer supply and installation across Pakistan.',
+  description,
   alternates: {
-    canonical: productsUrl,
+    canonical: url,
   },
   openGraph: {
     type: 'website',
     locale: 'en_PK',
-    url: productsUrl,
+    url,
     siteName: 'Cereburum Sports',
     title: 'Sports Nets Catalog & Netting Solutions in Pakistan | Cereburum Sports',
-    description:
-      'Explore high-durability cricket ground nets, football goal netting, rooftop practice cages, and court nets. Direct manufacturer supply and installation across Pakistan.',
+    description,
     images: [
       {
         url: '/images/home/1.jpg',
@@ -36,11 +47,11 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Sports Nets Catalog & Netting Solutions in Pakistan | Cereburum Sports',
-    description:
-      'Explore high-durability cricket ground nets, football goal netting, rooftop practice cages, and court nets. Direct manufacturer supply and installation across Pakistan.',
+    description,
     images: ['/images/home/1.jpg'],
   },
-};
+  };
+}
 
 function resolveFilter(value) {
   const filter = Array.isArray(value) ? value[0] : value;
@@ -48,6 +59,7 @@ function resolveFilter(value) {
 }
 
 export default async function ProductsPage({ searchParams }) {
+  preloadHeroImage(productHeroPhotos[0]);
   const params = await searchParams;
   const activeFilter = resolveFilter(params?.filter);
   const jsonLd = {

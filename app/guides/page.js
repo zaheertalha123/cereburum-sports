@@ -2,6 +2,8 @@ import ClientGuidesPage from './ClientGuidesPage';
 import { guides, guideCategories as categories } from '../../data/guides';
 import { absoluteUrl, absoluteMediaUrl } from '@/lib/siteUrl';
 import { breadcrumbJsonLd } from '@/components/Breadcrumbs';
+import { buyerGuides } from '@/data/buyerGuides';
+import Link from 'next/link';
 
 const guidesUrl = absoluteUrl('/guides');
 const breadcrumbItems = [
@@ -104,6 +106,18 @@ export default async function GuidesPage({ searchParams }) {
         breadcrumbItems={breadcrumbItems}
         activeFilter={activeFilter}
       />
+      <section className="section-pad" aria-labelledby="buyer-guides-heading">
+        <div className="container">
+          <h2 id="buyer-guides-heading" className="heading-md">Pricing, materials and rooftops</h2>
+          <ul>
+            {buyerGuides.map((guide) => (
+              <li key={guide.slug}><Link href={`/guides/${guide.slug}`}>{guide.h1}</Link></li>
+            ))}
+            <li><Link href="/services/cricket-net-installation-pakistan">Cricket net installation across Pakistan</Link></li>
+            <li><Link href="/services/school-sports-ground-netting">School sports ground netting</Link></li>
+          </ul>
+        </div>
+      </section>
     </>
   );
 }

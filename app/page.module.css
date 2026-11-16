@@ -1,7 +1,7 @@
 .hero { position:relative; margin-top:var(--nav-h); background:var(--ink); color:var(--white); }
 .heroPhotos { position:absolute; inset:0; overflow:hidden; isolation:isolate; }
 .heroSlide { position:absolute; inset:0; opacity:0; }
-.heroSlide[data-active='true'] { opacity:1; z-index:1; }
+.heroSlide[data-active='true'] { opacity:1; z-index:2; }
 @media (prefers-reduced-motion:no-preference) {
   .heroSlide { transition:opacity 650ms ease; }
   .heroSlide[data-active='true'] .heroImage {

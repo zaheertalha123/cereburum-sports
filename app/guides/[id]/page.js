@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import {
   guides,
@@ -18,14 +19,23 @@ import GuideSteps from './GuideSteps';
 import { absoluteUrl, absoluteMediaUrl } from '@/lib/siteUrl';
 import Breadcrumbs, { breadcrumbJsonLd } from '@/components/Breadcrumbs';
 import RelatedCards from '@/components/RelatedCards';
+import { howtoStepName } from '@/lib/howtoStepName';
+import { buyerGuides, getBuyerGuide } from '@/data/buyerGuides';
+import { guideNotes } from '@/data/guideNotes';
+import EditorialPage, { editorialMetadata } from '@/components/EditorialPage';
 import styles from './guide.module.css';
 
 export async function generateStaticParams() {
-  return guides.map((guide) => ({ id: guide.id }));
+  return [
+    ...guides.map((guide) => ({ id: guide.id })),
+    ...buyerGuides.map((guide) => ({ id: guide.slug })),
+  ];
 }
 
 export async function generateMetadata({ params }) {
   const { id } = await params;
+  const buyerGuide = getBuyerGuide(id);
+  if (buyerGuide) return editorialMetadata(buyerGuide, `/guides/${buyerGuide.slug}`);
   const guide = getGuideById(id);
 
   if (!guide) {
@@ -110,6 +120,19 @@ function FactCard({ title, items, images }) {
 
 export default async function GuidePage({ params }) {
   const { id } = await params;
+  const buyerGuide = getBuyerGuide(id);
+  if (buyerGuide) {
+    return (
+      <EditorialPage
+        page={buyerGuide}
+        breadcrumbs={[
+          { name: 'Home', href: '/' },
+          { name: 'Guides', href: '/guides' },
+          { name: buyerGuide.h1, href: `/guides/${buyerGuide.slug}` },
+        ]}
+      />
+    );
+  }
   const guide = getGuideById(id);
 
   if (!guide) {
@@ -202,12 +225,11 @@ export default async function GuidePage({ params }) {
             step: installationSteps.map((step, index) => {
               const text = typeof step === 'string' ? step : step.text || step.description || step.title || '';
               const title = typeof step === 'string' ? '' : step.title;
-              const firstClause = text.trim().split(/[.;:](?=\s|$)/, 1)[0];
-              const summary = firstClause.split(/\s+/).slice(0, 9).join(' ');
+              const named = title && !/^step\s+\d+$/i.test(title.trim()) ? title.trim() : howtoStepName(text);
               return {
                 '@type': 'HowToStep',
                 position: index + 1,
-                name: title && !/^step\s+\d+$/i.test(title.trim()) ? title : summary,
+                name: named,
                 text,
               };
             }),
@@ -272,6 +294,7 @@ export default async function GuidePage({ params }) {
 
       <article className={styles.article}>
         <div className="container">
+          {guideNotes[guide.id]?.lead ? <p className={styles.heroDesc}>{guideNotes[guide.id].lead}</p> : null}
           {showFacts ? (
             <div className={styles.facts}>
               <FactCard title="Features" items={guide.features?.items} images={guide.features?.images} />
@@ -336,6 +359,22 @@ export default async function GuidePage({ params }) {
               ) : null}
             </section>
           ) : null}
+
+          {guideNotes[guide.id]?.sections?.map((section) => (
+            <section key={section.heading} className={styles.block}>
+              <h2 className={`heading-md ${styles.blockTitle}`}>{section.heading}</h2>
+              {section.paragraphs.map((paragraph) => (
+                <p key={paragraph} className={styles.heroDesc}>{paragraph}</p>
+              ))}
+              {section.links?.length ? (
+                <ul className={styles.materialList}>
+                  {section.links.map((link) => (
+                    <li key={link.href}><Link href={link.href}>{link.label}</Link></li>
+                  ))}
+                </ul>
+              ) : null}
+            </section>
+          ))}
         </div>
       </article>
 

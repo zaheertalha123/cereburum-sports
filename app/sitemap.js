@@ -1,6 +1,10 @@
 import { projects } from '@/data/projects';
 import { guides } from '@/data/guides';
 import { products } from '@/data/products';
+import { catalogPages } from '@/data/catalogPages';
+import { buyerGuides } from '@/data/buyerGuides';
+import { servicePages } from '@/data/servicePages';
+import { locations } from '@/data/locations';
 import { getSiteUrl } from '@/lib/siteUrl';
 
 const BASE_URL = getSiteUrl();
@@ -37,5 +41,38 @@ export default function sitemap() {
     priority: 0.8,
   }));
 
-  return [...staticEntries, ...projectEntries, ...guideEntries, ...productEntries];
+  const catalogEntries = catalogPages.map((page) => ({
+    url: `${BASE_URL}/products/${page.slug}`,
+    changeFrequency: 'weekly',
+    priority: 0.8,
+  }));
+
+  const buyerGuideEntries = buyerGuides.map((page) => ({
+    url: `${BASE_URL}/guides/${page.slug}`,
+    changeFrequency: 'monthly',
+    priority: 0.7,
+  }));
+
+  const serviceEntries = servicePages.map((page) => ({
+    url: `${BASE_URL}/services/${page.slug}`,
+    changeFrequency: 'monthly',
+    priority: 0.8,
+  }));
+
+  const locationEntries = locations.map((location) => ({
+    url: `${BASE_URL}/locations/${location.slug}`,
+    changeFrequency: 'monthly',
+    priority: 0.7,
+  }));
+
+  return [
+    ...staticEntries,
+    ...projectEntries,
+    ...guideEntries,
+    ...productEntries,
+    ...catalogEntries,
+    ...buyerGuideEntries,
+    ...serviceEntries,
+    ...locationEntries,
+  ];
 }

@@ -2,6 +2,11 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { products, getProductById, productPageTitle } from '@/data/products';
+import { catalogPages, getCatalogPage } from '@/data/catalogPages';
+import { categoryPathFor } from '@/lib/productRoutes';
+import { productHeadline, productSections, projectsForProduct } from '@/lib/productCopy';
+import EditorialPage, { editorialMetadata } from '@/components/EditorialPage';
+import PriceNote from '@/components/PriceNote';
 import SpecComparison from './SpecComparison';
 import ProductImageGallery from './ProductImageGallery';
 import { productInquiryMessage, whatsAppUrl } from '@/lib/whatsapp';
@@ -10,11 +15,16 @@ import { breadcrumbJsonLd } from '@/components/Breadcrumbs';
 import styles from './product-detail.module.css';
 
 export async function generateStaticParams() {
-  return products.map((product) => ({ id: product.id }));
+  return [
+    ...products.map((product) => ({ id: product.id })),
+    ...catalogPages.map((page) => ({ id: page.slug })),
+  ];
 }
 
 export async function generateMetadata({ params }) {
   const { id } = await params;
+  const catalog = getCatalogPage(id);
+  if (catalog) return editorialMetadata(catalog, `/products/${catalog.slug}`);
   const product = getProductById(id);
 
   if (!product) {
@@ -81,6 +91,20 @@ function getRelatedProducts(product, limit = 3) {
 
 export default async function ProductDetailPage({ params }) {
   const { id } = await params;
+  const catalog = getCatalogPage(id);
+  if (catalog) {
+    return (
+      <EditorialPage
+        page={catalog}
+        breadcrumbs={[
+          { name: 'Home', href: '/' },
+          { name: 'Products', href: '/products' },
+          { name: catalog.h1, href: `/products/${catalog.slug}` },
+        ]}
+        catalogProducts={products.filter((item) => item.filterGroup === catalog.filterGroup)}
+      />
+    );
+  }
   const product = getProductById(id);
 
   if (!product) {
@@ -93,10 +117,9 @@ export default async function ProductDetailPage({ params }) {
   const imageAlt =
     product.imageAlt ||
     `${product.title} - ${product.subtitle} - Sports Net Manufacturer Pakistan | Cereburum Sports`;
-  const productsFilterHref =
-    product.filterGroup && product.filterGroup !== 'Custom'
-      ? `/products?filter=${encodeURIComponent(product.filterGroup)}`
-      : '/products';
+  const productsFilterHref = categoryPathFor(product.filterGroup);
+  const detailSections = productSections(product);
+  const installedProjects = projectsForProduct(product);
 
   const productCanonicalUrl = absoluteUrl(`/products/${product.id}`);
   const productImageFullUrl = absoluteMediaUrl(product.image);
@@ -105,7 +128,7 @@ export default async function ProductDetailPage({ params }) {
     { name: 'Products', href: '/products' },
     {
       name: product.filterGroup || 'Sports Nets',
-      href: productsFilterHref,
+      href: categoryPathFor(product.filterGroup),
     },
     { name: product.title, href: `/products/${product.id}` },
   ];
@@ -160,7 +183,7 @@ export default async function ProductDetailPage({ params }) {
             <div className={styles.contentPanel}>
               <div className={`${styles.headingBlock} animate-fade-in-up`}>
                 <p className={styles.eyebrow}>{product.subtitle}</p>
-                <h1 className={`display-md ${styles.title}`}>{product.title}</h1>
+                <h1 className={`display-md ${styles.title}`}>{productHeadline(product)}</h1>
                 <p className={styles.desc}>{product.desc}</p>
               </div>
 
@@ -192,6 +215,34 @@ export default async function ProductDetailPage({ params }) {
                   ))}
                 </ul>
               </div>
+
+              {detailSections.map((section) => (
+                <div key={section.title} className={styles.section}>
+                  <h2 className={styles.sectionTitle}>{section.title}</h2>
+                  <p className={styles.enquiryText}>{section.body}</p>
+                  {section.links?.length ? (
+                    <ul className={styles.featureList}>
+                      {section.links.map((link) => (
+                        <li key={link.href}><Link href={link.href}>{link.label}</Link></li>
+                      ))}
+                    </ul>
+                  ) : null}
+                </div>
+              ))}
+
+              {product.id === 'cricket-net-24' ? <PriceNote id="parachute24Panel" label="Indicative 100×10 ft Parachute 24 panel, excluding installation" /> : null}
+              {product.id === 'cricket-net-36' ? <PriceNote id="parachute36Panel" label="Indicative 100×10 ft Parachute 36 panel, excluding installation" /> : null}
+
+              {installedProjects.length ? (
+                <div className={styles.section}>
+                  <h2 className={styles.sectionTitle}>Installed on these projects</h2>
+                  <ul className={styles.featureList}>
+                    {installedProjects.map((project) => (
+                      <li key={project.id}><Link href={`/works/${project.id}`}>{project.title}</Link></li>
+                    ))}
+                  </ul>
+                </div>
+              ) : null}
 
               {product.bestFor ? (
                 <div className={styles.section}>

@@ -1,0 +1,24 @@
+.page { background: var(--surface-0); color: var(--text-primary); }
+.hero { margin-top: var(--nav-h); padding: 48px 0 36px; border-bottom: 1px solid var(--line); }
+.title { font-family: var(--font-display); font-weight: 400; font-size: clamp(2.6rem, 6vw, 4.75rem); line-height: .95; text-transform: uppercase; max-width: 18ch; text-wrap: balance; }
+.lede { max-width: 68ch; margin-top: 18px; color: #d5d8e2; font-size: 1.05rem; }
+.body { padding-block: 48px 80px; display: grid; gap: 42px; }
+.section h2, .faq h2, .catalogWrap h2 { font-family: var(--font-editorial); font-weight: 400; font-size: clamp(1.8rem, 3vw, 2.5rem); line-height: 1.15; }
+.section p, .faq dd, .note { max-width: 68ch; margin-top: 12px; color: var(--gray-400); }
+.links, .linkRow { display: flex; flex-wrap: wrap; gap: 10px 18px; margin-top: 16px; padding: 0; }
+.links a, .linkRow a, .faq a { color: var(--sand); border-bottom: 1px solid rgba(187, 181, 101, .7); }
+.faq dl { display: grid; gap: 22px; margin-top: 20px; }
+.faq dt { font-weight: 600; }
+.faq dd { margin-top: 6px; }
+.catalog { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 16px; padding: 0; margin-top: 18px; }
+.card { display: grid; gap: 6px; align-content: start; min-height: 100%; padding: 16px; border: 1px solid var(--line); border-radius: var(--radius-md); background: var(--surface-1); }
+.card strong { font-family: var(--font-editorial); font-size: 1.45rem; font-weight: 400; }
+.card span { color: var(--gray-400); font-size: .85rem; }
+.tableWrap { overflow-x: auto; }
+.tableWrap table { width: 100%; border-collapse: collapse; margin-top: 16px; }
+.tableWrap th, .tableWrap td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+.tableWrap caption { caption-side: top; text-align: left; margin-bottom: 8px; color: var(--gray-400); }
+@media (max-width: 599px) {
+  .hero { padding-top: 28px; }
+  .title { max-width: none; }
+}

@@ -18,12 +18,20 @@ const navLinks = [
 ];
 
 const productLinks = [
-  { href: '/products/custom', label: 'Sports Barrier Netting' },
-  { href: '/products?filter=Cricket', label: 'Cricket Nets' },
-  { href: '/products?filter=Football', label: 'Football Nets' },
-  { href: '/products?filter=Badminton', label: 'Court Nets' },
-  { href: '/products?filter=Futsal', label: 'Futsal Nets' },
-  { href: '/products/custom', label: 'Custom Solutions' },
+  { href: '/products/cricket-nets', label: 'Cricket Nets' },
+  { href: '/products/football-goal-nets', label: 'Football Goal Nets' },
+  { href: '/products/court-nets', label: 'Court Nets' },
+  { href: '/products/futsal-nets', label: 'Futsal Nets' },
+  { href: '/products/custom', label: 'Custom Sizes' },
+  { href: '/services/cricket-net-installation-pakistan', label: 'Cricket Net Installation' },
+];
+
+const cityLinks = [
+  { href: '/locations/sialkot', label: 'Sialkot' },
+  { href: '/locations/lahore', label: 'Lahore' },
+  { href: '/locations/karachi', label: 'Karachi' },
+  { href: '/locations/islamabad', label: 'Islamabad' },
+  { href: '/locations/rawalpindi', label: 'Rawalpindi' },
 ];
 
 export default function Footer() {
@@ -85,7 +93,7 @@ export default function Footer() {
               />
             </Link>
             <p className={`body-sm ${styles.tagline}`}>
-              Premium sports barrier nettings and equipment for facilities that demand excellence.
+              Sports nets manufactured in Sialkot and installed across Pakistan.
             </p>
             <a
               href={WHATSAPP_URL}
@@ -186,6 +194,9 @@ export default function Footer() {
                 </a>
               </li>
               <li className={`body-sm ${styles.contactItem}`}>Sialkot, Pakistan</li>
+              {cityLinks.map(({ href, label }) => (
+                <li key={href}><Link href={href} className={styles.footerLink}>{label}</Link></li>
+              ))}
             </ul>
           </div>
         </div>
@@ -198,7 +209,7 @@ export default function Footer() {
             &copy; {currentYear} Cereburum Sports. All rights reserved.
           </p>
           <p className={`body-sm ${styles.credit}`}>
-            Premium Sports Equipment & Netting
+            Sports nets, made in Sialkot
           </p>
         </div>
       </div>

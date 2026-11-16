@@ -1,10 +1,11 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { productFilterGroups } from '@/data/products';
+import { categoryPathFor } from '@/lib/productRoutes';
 import PageHero from '@/components/PageHero';
 import styles from './products.module.css';
 
-const heroPhotos = [
+export const productHeroPhotos = [
   { src: '/images/product_hero/product_hero_01.webp', responsive: true, alt: 'White square-mesh sports net on a dark background', position: 'center' },
   { src: '/images/product_hero/product_hero_02.webp', alt: 'Close-up of a knotted diamond-mesh net', position: 'center' },
   { src: '/images/product_hero/product_hero_03.webp', alt: 'Fine square-mesh net with knotted intersections', position: 'center' },
@@ -13,8 +14,8 @@ const heroPhotos = [
 ];
 
 function filterHref(value) {
-  if (!value || value === 'All') return '/products';
-  return `/products?filter=${encodeURIComponent(value)}`;
+  if (value === 'Hockey') return '/products?filter=Hockey';
+  return categoryPathFor(value);
 }
 
 export default function ClientProductsPage({ products, breadcrumbItems, activeFilter = 'All' }) {
@@ -26,9 +27,9 @@ export default function ClientProductsPage({ products, breadcrumbItems, activeFi
   return (
     <>
       <PageHero
-        title="Sports nets & equipment"
+        title="Sports nets"
         description="Cricket practice nets, goal nets and custom barriers. Find the right material and mesh for your ground, court or rooftop."
-        photos={heroPhotos}
+        photos={productHeroPhotos}
         breadcrumbItems={breadcrumbItems}
       >
         <ul className={styles.filterRow} aria-label="Product categories">
@@ -46,6 +47,17 @@ export default function ClientProductsPage({ products, breadcrumbItems, activeFi
           ))}
         </ul>
       </PageHero>
+
+      <section className="section-pad" style={{ paddingBottom: 0 }} aria-labelledby="catalog-intro-heading">
+        <div className="container">
+          {/* TODO(owner): confirm volleyball before adding it to this list. */}
+          <h2 id="catalog-intro-heading" className="heading-md">Standard sizes and custom sizes</h2>
+          <p className="body-md" style={{ maxWidth: '68ch', marginTop: '12px' }}>
+            Manufactured in Sialkot. This catalog lists cricket, football, futsal, badminton and hockey nets.
+            Quotes depend on size, material and structure. <Link href="/guides/cricket-net-price-pakistan">See how pricing works</Link> or ask for a <Link href="/products/custom">custom size</Link>.
+          </p>
+        </div>
+      </section>
 
       <section className={`section-pad ${styles.productsSection}`} aria-label="Products list">
         <div className="container">

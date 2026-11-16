@@ -5,6 +5,7 @@ import { absoluteUrl } from '@/lib/siteUrl';
 import { getLocalBusinessSchema } from '@/lib/localBusiness';
 import { breadcrumbJsonLd } from '@/components/Breadcrumbs';
 import styles from './about.module.css';
+import buyer from '@/components/buyer.module.css';
 
 const WHATSAPP_NUMBER = '923187768296';
 const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=Hello%2C%20I%27d%20like%20to%20learn%20more%20about%20Cereburum%20Sports.`;
@@ -15,9 +16,9 @@ const breadcrumbItems = [
 ];
 
 export const metadata = {
-  title: 'About Us — Sports Net Manufacturer & Installer',
+  title: 'Sports Net Manufacturers in Sialkot',
   description:
-    'Learn about Cereburum Sports — Pakistan’s trusted sports netting manufacturer and specialist installer for cricket grounds, rooftop practice nets, football pitches, and multi-sport facilities.',
+    'Cereburum Sports manufactures and installs sports nets in Sialkot: cricket, football, futsal, court and hockey nets, including rooftop and school enclosures across Pakistan.',
   alternates: {
     canonical: aboutUrl,
   },
@@ -26,9 +27,9 @@ export const metadata = {
     locale: 'en_PK',
     url: aboutUrl,
     siteName: 'Cereburum Sports',
-    title: 'About Us — Sports Net Manufacturer & Installer | Cereburum Sports',
+    title: 'Sports Net Manufacturers in Sialkot | Cereburum Sports',
     description:
-      'Learn about Cereburum Sports — Pakistan’s trusted sports netting manufacturer and specialist installer for cricket grounds, rooftop practice nets, football pitches, and multi-sport facilities.',
+      'Cereburum Sports manufactures and installs sports nets in Sialkot: cricket, football, futsal, court and hockey nets, including rooftop and school enclosures across Pakistan.',
     images: [
       {
         url: '/images/home/1.jpg',
@@ -40,9 +41,9 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'About Us — Sports Net Manufacturer & Installer | Cereburum Sports',
+    title: 'Sports Net Manufacturers in Sialkot | Cereburum Sports',
     description:
-      'Learn about Cereburum Sports — Pakistan’s trusted sports netting manufacturer and specialist installer for cricket grounds, rooftop practice nets, football pitches, and multi-sport facilities.',
+      'Cereburum Sports manufactures and installs sports nets in Sialkot: cricket, football, futsal, court and hockey nets, including rooftop and school enclosures across Pakistan.',
     images: ['/images/home/1.jpg'],
   },
 };
@@ -122,14 +123,41 @@ export default function AboutPage() {
       />
 
       <PageHero
-        title="Cereburum Sports"
-        description="Sports net manufacturers and installers, based in Sialkot. Since 2019, we have helped turn grounds, courts and rooftops into spaces to play."
+        title="Sports net manufacturers and installers in Sialkot"
+        description="Since 2019, Cereburum Sports has manufactured and installed sports nets for grounds, courts and rooftops. The workshop is in Sialkot."
         image="/images/about_hero/about_hero.webp"
         imageAlt="Industrial net-making machine threaded with white yarn"
         imagePosition="60% center"
         breadcrumbItems={breadcrumbItems}
         actions={<Link href="/works" className="btn btn-primary">Explore our projects</Link>}
       />
+
+      <section className={`section-pad ${buyer.section}`} aria-labelledby="what-we-make-heading">
+        <div className="container">
+          <h2 id="what-we-make-heading">What we make</h2>
+          <p>Cereburum Sports manufactures, supplies and installs sports nets: cricket practice and arena netting, including roof netting, football and futsal goal nets, badminton and court nets, hockey nets, and custom sizes.</p>
+          <h2>Where we install</h2>
+          <p>The workshop is in Sialkot. We deliver and install across Pakistan where it is practical, including Lahore, Karachi, Islamabad and Rawalpindi, and the cities already shown in the project list. There is no separate office in those cities.</p>
+          <ul className={buyer.links}>
+            <li><Link href="/locations/sialkot">Sialkot</Link></li>
+            <li><Link href="/locations/lahore">Lahore</Link></li>
+            <li><Link href="/locations/karachi">Karachi</Link></li>
+            <li><Link href="/locations/islamabad">Islamabad</Link></li>
+            <li><Link href="/locations/rawalpindi">Rawalpindi</Link></li>
+          </ul>
+          <h2>Local manufacture and imported nets</h2>
+          <p>The nets are made in Sialkot, in custom sizes when you need them, and the installation team fits them where the site allows. Factory visits are welcome. That is the practical difference from buying a net and arranging installation separately.</p>
+          <h2>Installed work</h2>
+          <p>The public timeline includes more than 100 projects by 2025. These pages show a school enclosure, two arenas and a Sialkot rooftop.</p>
+          {/* TODO(owner): approved testimonials or a Google review embed. Do not invent reviews or ratings. */}
+          <ul className={buyer.links}>
+            <li><Link href="/works/bloomfield-hall-school-khariyan">Bloomfield Hall School</Link></li>
+            <li><Link href="/works/cricket-arena-nowshera">Nowshera arena</Link></li>
+            <li><Link href="/works/cricket-arena-mirpur">Mirpur arena</Link></li>
+            <li><Link href="/works/roof-top-net-sialkot">Gohadpur rooftop</Link></li>
+          </ul>
+        </div>
+      </section>
 
       {/* Values */}
       <section className={styles.valuesSection} aria-labelledby="values-heading">

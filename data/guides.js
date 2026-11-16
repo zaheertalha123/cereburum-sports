@@ -24,11 +24,11 @@ export function getGuideCategoryLabel(value) {
 const rawGuides = [
   {
     id: 'cricket-arena',
-    title: 'How to Build a Cricket Arena',
+    title: 'How to Build a Practice Cricket Arena',
     category: 'sports-structure',
     image: '/images/guides/01-sports-structure/cricket-arena/gallery/cricket-arena-01.webp',
     imageAlt: 'Cricket arena with steel poles and support pipes | Cereburum Sports',
-    desc: 'Learn how to build a cricket arena using steel poles, support pipes, and protective netting. This guide covers planning, pole installation, frame support, net installation, and final safety checks.',
+    desc: 'A netted practice or indoor cricket arena, not a stadium. Learn how to build it using steel poles, support pipes, and protective netting. This guide covers planning, pole installation, frame support, net installation, and final safety checks.',
     images: [
       { 
         url: '/images/guides/01-sports-structure/cricket-arena/gallery/cricket-arena-01.webp', 
