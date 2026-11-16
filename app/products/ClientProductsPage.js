@@ -55,7 +55,6 @@ export default function ClientProductsPage({ products, breadcrumbItems, activeFi
                 key={product.id}
                 href={`/products/${product.id}`}
                 className={styles.productCardLink}
-                aria-label={`View ${product.title} details`}
               >
                 <article
                   id={product.id}
