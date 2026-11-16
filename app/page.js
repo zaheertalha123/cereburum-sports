@@ -7,6 +7,7 @@ import { getLocalBusinessSchema } from '@/lib/localBusiness';
 import styles from './page.module.css';
 import { projects } from '@/data/projects';
 import { products } from '@/data/products';
+import { getGuideById, getGuideCategoryLabel, getGuideCover, getGuideCoverAlt } from '@/data/guides';
 
 const WHATSAPP_NUMBER = '923187768296';
 const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=Hello%2C%20I%27m%20interested%20in%20your%20sports%20products.`;
@@ -172,14 +173,18 @@ const heroPhotos = [
   { src: '/images/hero/hero_04.webp', alt: 'Tall sports barrier netting viewed from the street at night', position: '58% 36%' },
 ];
 
-const featured = projects.find((project) => project.id === 'cricket-arena-nowshera');
-const selectedProjects = ['folding-net-islamabad', 'sports-arena-gujranwala'].map((id) => projects.find((project) => project.id === id));
+const featured = projects.find((project) => project.id === 'bloomfield-hall-school-khariyan');
+const selectedProjects = ['cricket-arena-nowshera', 'cricket-arena-mirpur'].map((id) => projects.find((project) => project.id === id));
 const categories = [
   { title: 'Cricket nets', note: 'Practice, academy & ground netting', href: '/products?filter=Cricket', product: 'cricket-net-36' },
   { title: 'Football nets', note: 'Goal nets made for the game', href: '/products?filter=Football', filter: 'Football' },
   { title: 'Court nets', note: 'For courts and multi-sport spaces', href: '/products?filter=Badminton', filter: 'Badminton' },
   { title: 'Custom installations', note: 'A fit for your space', href: '/products/custom', product: 'custom' },
 ];
+const selectedGuides = ['cricket-arena', 'height-measurement', 'roof-installation']
+  .map(getGuideById)
+  .filter(Boolean);
+
 const process = [
   { title: 'Tell us about your ground', desc: 'Share your location, dimensions and the way you want to use your space.' },
   { title: 'Find the right netting', desc: 'We help you choose the material and layout for your project.' },
@@ -212,12 +217,12 @@ export default function HomePage() {
         <div className={`container ${styles.featuredInner}`}>
           <div className={`${styles.featuredCopy} reveal`}>
             <span className={styles.darkLabel}>Featured installation</span>
-            <h2 id="featured-heading">Nowshera /<br />Cricket Arena</h2>
-            <p>A full-scale sports arena. Custom Parachute 36 netting, made for a 90 ft × 60 ft facility.</p>
-            <dl className={styles.projectFacts}><div><dt>Ground coverage</dt><dd>5,400 sq ft</dd></div><div><dt>Height clearance</dt><dd>35 ft</dd></div></dl>
+            <h2 id="featured-heading">{featured.title}</h2>
+            <p>A school sports enclosure with Parachute 36 side netting and Parachute 24 roof netting, built for daily student use.</p>
+            <dl className={styles.projectFacts}><div><dt>Ground coverage</dt><dd>1,600 sq ft</dd></div><div><dt>Height clearance</dt><dd>20 ft</dd></div></dl>
             <Link href={`/works/${featured.id}`} className={styles.darkLink}>Explore the project <span aria-hidden="true">↗</span></Link>
           </div>
-          <Link href={`/works/${featured.id}`} className={`${styles.featuredImage} reveal`} aria-label="Explore the Nowshera cricket arena installation"><Image src={featured.media[1].url} alt={featured.media[1].alt} fill sizes="(max-width: 767px) 100vw, 65vw" /></Link>
+          <Link href={`/works/${featured.id}`} className={`${styles.featuredImage} reveal`} aria-label={`Explore the ${featured.title} installation`}><Image src={featured.coverImage} alt={featured.coverImageAlt} fill sizes="(max-width: 767px) 100vw, 65vw" /></Link>
         </div>
       </section>
       <section className={`section-pad ${styles.workSection}`} aria-labelledby="work-heading">
@@ -235,8 +240,37 @@ export default function HomePage() {
           })}</div>
         </div>
       </section>
+      <section className={`section-pad ${styles.guideSection}`} aria-labelledby="home-guides-heading">
+        <div className="container">
+          <div className={`${styles.sectionHead} reveal`}>
+            <h2 id="home-guides-heading">Installation &amp; setup guides</h2>
+            <Link href="/guides" className={styles.textLink}>All guides <span aria-hidden="true">↗</span></Link>
+          </div>
+          <div className={styles.guideGrid}>
+            {selectedGuides.map((guide) => {
+              const cover = getGuideCover(guide);
+              return (
+                <Link href={`/guides/${guide.id}`} key={guide.id} className={`${styles.project} reveal`}>
+                  {cover && (
+                    <div className={styles.projectImage}>
+                      <Image src={cover} alt={getGuideCoverAlt(guide)} fill sizes="(max-width: 767px) 100vw, 33vw" />
+                    </div>
+                  )}
+                  <div className={styles.projectCaption}>
+                    <div>
+                      <p>{getGuideCategoryLabel(guide.category)}</p>
+                      <h3>{guide.title}</h3>
+                    </div>
+                    <span aria-hidden="true">↗</span>
+                  </div>
+                </Link>
+              );
+            })}
+          </div>
+        </div>
+      </section>
       <section className={`section-pad ${styles.processSection}`} aria-labelledby="process-heading">
-        <div className="container"><div className={`${styles.sectionHead} reveal`}><div><span className="section-label">From the first conversation</span><h2 id="process-heading">A clear path to your ground.</h2></div><Link href="/guides" className={styles.textLink}>Installation guides <span aria-hidden="true">↗</span></Link></div><ol className={styles.processGrid}>{process.map((step, i) => <li key={step.title} className="reveal" style={{ '--reveal-delay': `${i * 50}ms` }}><span className={styles.stepNumber}>0{i + 1}</span><h3>{step.title}</h3><p>{step.desc}</p></li>)}</ol></div>
+        <div className="container"><div className={`${styles.sectionHead} reveal`}><div><span className="section-label">From the first conversation</span><h2 id="process-heading">A clear path to your ground.</h2></div></div><ol className={styles.processGrid}>{process.map((step, i) => <li key={step.title} className="reveal" style={{ '--reveal-delay': `${i * 50}ms` }}><span className={styles.stepNumber}>0{i + 1}</span><h3>{step.title}</h3><p>{step.desc}</p></li>)}</ol></div>
       </section>
       <Testimonials />
     </>

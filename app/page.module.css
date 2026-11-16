@@ -88,6 +88,11 @@
 .categoryImage { position:relative; aspect-ratio:1.2; overflow:hidden; background:var(--surface-1); }
 .category h3 { display:flex; justify-content:space-between; gap:10px; font-family:var(--font-editorial); font-weight:400; font-size:1.35rem; margin-top:18px; }
 .category p { font-size:.75rem; color:var(--gray-400); margin-top:6px; }
+.guideSection { border-top:1px solid var(--line); }
+.guideGrid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:32px; }
+@media(max-width:767px) {
+  .guideGrid { grid-template-columns:1fr; gap:30px; }
+}
 .processSection { background:var(--surface-1); }
 .processGrid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:40px; }
 .processGrid li { border-top:1px solid var(--line); padding-top:24px; }
