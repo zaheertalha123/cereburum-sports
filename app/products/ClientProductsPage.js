@@ -5,7 +5,7 @@ import PageHero from '@/components/PageHero';
 import styles from './products.module.css';
 
 const heroPhotos = [
-  { src: '/images/product_hero/product_hero_01.webp', alt: 'White square-mesh sports net on a dark background', position: 'center' },
+  { src: '/images/product_hero/product_hero_01.webp', responsive: true, alt: 'White square-mesh sports net on a dark background', position: 'center' },
   { src: '/images/product_hero/product_hero_02.webp', alt: 'Close-up of a knotted diamond-mesh net', position: 'center' },
   { src: '/images/product_hero/product_hero_03.webp', alt: 'Fine square-mesh net with knotted intersections', position: 'center' },
   { src: '/images/product_hero/product_hero_04.webp', alt: 'Thick braided netting with square openings', position: 'center' },

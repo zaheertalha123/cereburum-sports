@@ -167,7 +167,7 @@ const jsonLd = {
 };
 
 const heroPhotos = [
-  { src: '/images/hero/hero_01.webp', alt: 'Floodlit cricket enclosure viewed across the grass', position: '63% 48%' },
+  { src: '/images/hero/hero_01.webp', responsive: true, alt: 'Floodlit cricket enclosure viewed across the grass', position: '63% 48%' },
   { src: '/images/hero/hero_02.webp', alt: 'Corner view of a floodlit sports netting enclosure', position: '56% 48%' },
   { src: '/images/hero/hero_03.webp', alt: 'Brightly lit cricket enclosure behind a low brick wall', position: '61% 42%' },
   { src: '/images/hero/hero_04.webp', alt: 'Tall sports barrier netting viewed from the street at night', position: '58% 36%' },

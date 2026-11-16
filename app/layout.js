@@ -17,6 +17,7 @@ const inter = localFont({
   ],
   display: 'swap',
   variable: '--font-inter',
+  preload: false,
 });
 
 const bebas = localFont({
@@ -31,6 +32,7 @@ const editorial = localFont({
   weight: '400',
   display: 'swap',
   variable: '--font-dm-serif',
+  preload: false,
 });
 
 const siteUrl = getSiteUrl();
