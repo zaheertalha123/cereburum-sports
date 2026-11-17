@@ -130,7 +130,7 @@ export default async function ContactPage({ searchParams }) {
         breadcrumbItems={breadcrumbItems}
         actions={<>
           <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="btn btn-whatsapp" id="contact-hero-cta">Chat on WhatsApp</a>
-          <a href={`tel:${PHONE_TEL}`} className="btn btn-outline" aria-label={`Call Cereburum Sports at ${PHONE_DISPLAY}`}>Call {PHONE_DISPLAY}</a>
+          <a href={`tel:${PHONE_TEL}`} className="btn btn-outline">Call {PHONE_DISPLAY}</a>
         </>}
       />
 
