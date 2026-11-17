@@ -12,6 +12,7 @@ export default function HeroPhotos({ photos, children }) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [requestedIndex, setRequestedIndex] = useState(0);
   const [mountedSlides, setMountedSlides] = useState([0]);
+  const firstImage = useRef(null);
   const loadedSlides = useRef(new Set());
   const [paused, setPaused] = useState(false);
 
@@ -39,6 +40,10 @@ export default function HeroPhotos({ photos, children }) {
   }, [activeIndex, paused, photos.length, requestedIndex]);
 
   useEffect(() => {
+    // The eager image can finish loading before React hydrates.
+    if (firstImage.current?.complete && firstImage.current.naturalWidth > 0) {
+      loadedSlides.current.add(0);
+    }
     if (loadedSlides.current.has(requestedIndex)) {
       setActiveIndex(requestedIndex);
     } else {
@@ -60,6 +65,7 @@ export default function HeroPhotos({ photos, children }) {
           const imageProps = {
             src,
             alt,
+            ref: first ? firstImage : undefined,
             sizes: '100vw',
             className: styles.heroImage,
             style: { objectPosition: position, transformOrigin: position },
@@ -72,28 +78,11 @@ export default function HeroPhotos({ photos, children }) {
             },
           };
           const srcSet = responsive ? heroSrcSet(src) : undefined;
-          const slideStyle = first
-            ? { position: 'absolute', inset: 0, opacity: 1, zIndex: 1 }
-            : undefined;
-          const imageStyle = first
-            ? {
-                position: 'absolute',
-                inset: 0,
-                width: '100%',
-                height: '100%',
-                objectFit: 'cover',
-                objectPosition: position,
-                opacity: 1,
-              }
-            : imageProps.style;
-
           return (
             <div
               key={src}
-              className={first ? 'hero-lcp-slide' : styles.heroSlide}
-              style={slideStyle}
+              className={styles.heroSlide}
               data-active={index === activeIndex || undefined}
-              data-first={first || undefined}
               aria-hidden={index !== activeIndex}
             >
               {srcSet ? (
@@ -104,8 +93,6 @@ export default function HeroPhotos({ photos, children }) {
                   sizes="100vw"
                   width={750}
                   height={560}
-                  className="hero-lcp-img"
-                  style={imageStyle}
                   fetchPriority={first ? 'high' : 'low'}
                   decoding="async"
                 />
