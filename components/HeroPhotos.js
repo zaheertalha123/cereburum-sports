@@ -56,8 +56,8 @@ export default function HeroPhotos({ photos, children }) {
       <div
         className={styles.heroPhotos}
         id={photoId}
+        style={{ position: 'absolute', inset: 0, overflow: 'hidden', isolation: 'isolate', '--hero-slide-duration': `${slideDuration}ms` }}
         data-paused={paused}
-        style={{ '--hero-slide-duration': `${slideDuration}ms` }}
       >
         {mountedSlides.map((index) => {
           const { src, alt, position, responsive } = photos[index];
@@ -83,6 +83,7 @@ export default function HeroPhotos({ photos, children }) {
               key={src}
               className={styles.heroSlide}
               data-active={index === activeIndex || undefined}
+              style={first ? { position: 'absolute', inset: 0, opacity: activeIndex === 0 ? 1 : undefined } : undefined}
               aria-hidden={index !== activeIndex}
             >
               {srcSet ? (
@@ -91,6 +92,8 @@ export default function HeroPhotos({ photos, children }) {
                   src={heroFallbackSrc(src, true)}
                   srcSet={srcSet}
                   sizes="100vw"
+                  className={`${styles.heroImage} hero-lcp-img`}
+                  style={{ ...imageProps.style, position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }}
                   width={750}
                   height={560}
                   fetchPriority={first ? 'high' : 'low'}
