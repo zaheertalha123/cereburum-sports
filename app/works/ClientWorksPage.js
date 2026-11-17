@@ -59,7 +59,6 @@ export default function ClientWorksPage({ projects, categories, breadcrumbItems,
                 id={project.id}
                 className={`${styles.projectCard} reveal ${i === 0 && activeCategory === 'All' ? styles.featured : ''}`}
                 style={{ '--reveal-delay': `${(i % 2) * 50}ms` }}
-                aria-label={project.title}
               >
                 {/* Visual area */}
                 <div

@@ -32,7 +32,7 @@ export default function Breadcrumbs({ items, className = '' }) {
             {isLast || !item.href ? (
               <span aria-current={isLast ? 'page' : undefined}>{item.name}</span>
             ) : (
-              <Link href={item.href}>{item.name}</Link>
+              <Link href={item.href} prefetch={item.href === '/' ? false : undefined}>{item.name}</Link>
             )}
           </span>
         );

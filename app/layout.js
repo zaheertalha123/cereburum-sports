@@ -80,7 +80,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${inter.variable} ${bebas.variable} ${editorial.variable}`} suppressHydrationWarning>
       <head>
-        <style dangerouslySetInnerHTML={{ __html: '.hero-lcp{position:relative;min-height:560px;background:#07051A}.hero-lcp-slide{position:absolute;inset:0;opacity:1;z-index:1}.hero-lcp-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:1}' }} />
+        <style dangerouslySetInnerHTML={{ __html: '.hero-lcp{position:relative;min-height:560px;background:#07051A}' }} />
         <script dangerouslySetInnerHTML={{ __html: `if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) { document.documentElement.dataset.motion = 'pending'; setTimeout(function () { if (document.documentElement.dataset.motion === 'pending') delete document.documentElement.dataset.motion; }, 3000); }` }} />
       </head>
       <body suppressHydrationWarning>

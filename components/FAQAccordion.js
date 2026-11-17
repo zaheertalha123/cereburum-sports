@@ -20,6 +20,8 @@ export default function FAQAccordion({ faqs }) {
           <li key={i} className={styles.accordionItem}>
             <button
               className={styles.accordionHeader}
+              id={`faq-question-${i}`}
+              type="button"
               onClick={() => toggleAccordion(i)}
               aria-expanded={isActive}
               aria-controls={`faq-answer-${i}`}
@@ -35,7 +37,8 @@ export default function FAQAccordion({ faqs }) {
               id={`faq-answer-${i}`}
               className={`${styles.accordionContent} ${isActive ? styles.accordionContentActive : ''}`}
               role="region"
-              aria-hidden={!isActive}
+              inert={!isActive}
+              aria-labelledby={`faq-question-${i}`}
             >
               <div className={styles.accordionContentInner}>
                 <p className={`body-sm ${styles.faqA}`}>{faq.a}</p>

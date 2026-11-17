@@ -21,7 +21,7 @@ const homeDescription = 'Cereburum Sports manufactures and installs cricket, foo
 
 export const metadata = {
   title: {
-    absolute: 'Cricket Net Installation in Pakistan | Cereburum Sports, Sialkot',
+    absolute: 'Sports Nets for Cricket, Football & More | Cereburum Sports',
   },
   description: homeDescription,
   alternates: {
@@ -32,7 +32,7 @@ export const metadata = {
     locale: 'en_PK',
     url: siteUrl,
     siteName: 'Cereburum Sports',
-    title: 'Cricket Net Installation in Pakistan | Cereburum Sports, Sialkot',
+    title: 'Sports Nets for Cricket, Football & More | Cereburum Sports',
     description: homeDescription,
     images: [
       {
@@ -45,7 +45,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Cricket Net Installation in Pakistan | Cereburum Sports, Sialkot',
+    title: 'Sports Nets for Cricket, Football & More | Cereburum Sports',
     description: homeDescription,
     images: ['/images/home/1.jpg'],
   },
