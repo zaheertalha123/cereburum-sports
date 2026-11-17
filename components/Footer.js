@@ -83,7 +83,7 @@ export default function Footer() {
         <div className={`container ${styles.mainInner}`}>
           {/* Brand col */}
           <div className={styles.brandCol}>
-            <Link href="/" aria-label="Cereburum Sports home">
+            <Link href="/" prefetch={false} aria-label="Cereburum Sports home">
               <Image
                 src="/logo-header.webp"
                 alt="Cereburum Sports"
