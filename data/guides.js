@@ -27,16 +27,16 @@ const rawGuides = [
     title: 'How to Build a Practice Cricket Arena',
     category: 'sports-structure',
     image: '/images/guides/01-sports-structure/cricket-arena/gallery/cricket-arena-01.webp',
-    imageAlt: 'Cricket arena with steel poles and support pipes | Cereburum Sports',
+    imageAlt: 'Tall black steel poles and a white crossbar frame a cricket arena under construction on paved ground',
     desc: 'A netted practice or indoor cricket arena, not a stadium. Learn how to build it using steel poles, support pipes, and protective netting. This guide covers planning, pole installation, frame support, net installation, and final safety checks.',
     images: [
       { 
         url: '/images/guides/01-sports-structure/cricket-arena/gallery/cricket-arena-01.webp', 
-        alt: 'Cricket arena steel poles and support frame | Cereburum Sports' 
+        alt: 'Tall black steel poles and a white crossbar frame a cricket arena under construction on paved ground'
       },
       { 
         url: '/images/guides/01-sports-structure/cricket-arena/gallery/cricket-arena-02.webp', 
-        alt: 'Cricket arena construction view | Cereburum Sports' 
+        alt: 'Cricket arena steel frame marked with height, width, and length arrows during construction'
       },
       { 
         type: 'video', 
@@ -46,11 +46,11 @@ const rawGuides = [
       },
       { 
         url: '/images/guides/01-sports-structure/cricket-arena/gallery/cricket-arena-04.webp', 
-        alt: 'Cricket arena boundary poles and lighting installation | Cereburum Sports'
+        alt: 'Black steel poles with mounted floodlights and cables enclosing a concrete cricket arena court'
       },
       { 
         url: '/images/guides/01-sports-structure/cricket-arena/gallery/cricket-arena-05.webp', 
-        alt: 'Cricket arena steel frame with floodlights at night | Cereburum Sports' 
+        alt: 'Floodlit cricket arena at night with a steel frame, bright lights, and a green scaffolding tower'
       },
       { 
         type: 'video',
@@ -72,11 +72,11 @@ const rawGuides = [
       },
       { 
         url: '/images/guides/01-sports-structure/cricket-arena/gallery/cricket-arena-09.webp', 
-        alt: 'Cricket arena steel support pipes and diagonal bracing | Cereburum Sports' 
+        alt: 'Night view of a cricket arena steel frame with vertical poles, cross pipes, and diagonal bracing'
       },
       { 
         url: '/images/guides/01-sports-structure/cricket-arena/gallery/cricket-arena-10.webp', 
-        alt: 'Cricket arena roof netting installation using scaffolding | Cereburum Sports' 
+        alt: 'Cricket arena with side and roof netting at sunset and a tall wheeled scaffolding tower on court'
       },
       { 
         type: 'video', 
@@ -126,23 +126,23 @@ const rawGuides = [
       images: [
         { 
           url: '/images/guides/01-sports-structure/cricket-arena/materials/cricket-arena-01.webp', 
-          alt: 'Steel poles and support pipes used in cricket arena construction | Cereburum Sports' 
+          alt: 'Stack of hollow steel pipes prepared for cricket arena poles and support frame construction'
         },
         { 
           url: '/images/guides/01-sports-structure/cricket-arena/materials/cricket-arena-02.webp', 
-          alt: 'irons hook wled with the stell pipes for hanging purposes | Cereburum Sports' 
+          alt: 'Curved pointed metal hooks piled on a wooden surface for cricket arena pipe fittings'
         },
         { 
           url: '/images/guides/01-sports-structure/cricket-arena/materials/cricket-arena-03.webp', 
-          alt: 'floodlights installed on steel poles for night practice | Cereburum Sports' 
+          alt: 'Rectangular LED floodlight in a black metal housing for cricket arena night lighting'
         },
         { 
           url: '/images/guides/01-sports-structure/cricket-arena/materials/cricket-arena-04.webp', 
-          alt: 'coated steel wires installed on poles to support roof nets | Cereburum Sports' 
+          alt: 'Steel wire rope looped with a thimble and wire-rope clips for cricket arena net support'
         },
         { 
           url: '/images/guides/01-sports-structure/cricket-arena/materials/cricket-arena-05.webp', 
-          alt: 'Anti-rust coating applied to steel poles for long term durability | Cereburum Sports' 
+          alt: 'Tin of anti-rust paint and a brush used to coat steel poles for cricket arena frames'
         },
       ],
     },
@@ -165,44 +165,44 @@ const rawGuides = [
     title: 'How to Build and Install a Cricket Box',
     category: 'sports-structure',
     image: '/images/guides/01-sports-structure/cricket-box/gallery/cricket-box-01.webp',
-    imageAlt: 'Cricket box with steel poles and surrounding sports netting | Cereburum Sports',
+    imageAlt: 'Rooftop cricket practice net at night with sloped mesh, poles, and concrete bases on a terrace',
     desc: 'Step-by-step guide to building a cricket box using steel poles and strong netting. Learn how to measure the area, install the structure, and secure the side and roof nets for safe cricket practice.',
     images: [
       {
         url: '/images/guides/01-sports-structure/cricket-box/gallery/cricket-box-01.webp',
-        alt: 'Cricket box gallery 1 - cricket practice enclosure | Cereburum Sports',
+        alt: 'Rooftop cricket practice net at night with sloped mesh, poles, and concrete bases on a terrace',
       },
       {
         url: '/images/guides/01-sports-structure/cricket-box/gallery/cricket-box-02.webp',
-        alt: 'Cricket box gallery 2 - steel pole structure | Cereburum Sports',
+        alt: 'Night view of a mesh cricket box labeled with height, width, and length measurement arrows',
       },
       {
         url: '/images/guides/01-sports-structure/cricket-box/gallery/cricket-box-03.webp',
-        alt: 'Cricket box gallery 3 - cricket net installation | Cereburum Sports',
+        alt: 'Black mesh cricket practice box on steel poles at night beside a house and garden tree',
       },
       {
         url: '/images/guides/01-sports-structure/cricket-box/gallery/cricket-box-04.webp',
-        alt: 'Cricket box gallery 4 - side and roof netting | Cereburum Sports',
+        alt: 'Interior of a cricket box showing side and roof mesh over a concrete lane at night',
       },
       {
         url: '/images/guides/01-sports-structure/cricket-box/gallery/cricket-box-05.webp',
-        alt: 'Cricket box gallery 5 - outdoor cricket practice enclosure | Cereburum Sports',
+        alt: 'Open end of a rectangular cricket practice box with black side and roof netting at night',
       },
       {
         url: '/images/guides/01-sports-structure/cricket-box/gallery/cricket-box-06.webp',
-        alt: 'Cricket box gallery 6 - installed side netting | Cereburum Sports',
+        alt: 'Exterior side of a black mesh cricket box at night beside a dirt yard and a sand pile',
       },
       {
         url: '/images/guides/01-sports-structure/cricket-box/gallery/cricket-box-07.webp',
-        alt: 'Cricket box gallery 7 - complete netted cricket box | Cereburum Sports',
+        alt: 'Daytime cricket practice box built from bamboo poles and white mesh netting on bare ground',
       },
       {
         url: '/images/guides/01-sports-structure/cricket-box/gallery/cricket-box-08.webp',
-        alt: 'Cricket box gallery 8 - cricket box structure and netting | Cereburum Sports',
+        alt: 'Front opening of a bamboo-frame cricket box with white netting and a concrete practice lane',
       },
       {
         url: '/images/guides/01-sports-structure/cricket-box/gallery/cricket-box-09.webp',
-        alt: 'Cricket box gallery 9 - cricket practice net enclosure | Cereburum Sports',
+        alt: 'Side view of a bamboo cricket box with white mesh, a concrete floor, and a ladder inside',
       },
       {
         type: 'video',
@@ -251,27 +251,27 @@ const rawGuides = [
       images: [
         { 
           url: '/images/guides/01-sports-structure/cricket-box/materials/cricket-box-01.webp', 
-          alt: 'Steel poles and support pipes used in cricket arena construction | Cereburum Sports' 
+          alt: 'Stack of hollow steel pipes prepared for cricket box poles and support frame construction'
         },
         { 
           url: '/images/guides/01-sports-structure/cricket-box/materials/cricket-box-02.webp', 
-          alt: 'Bamboos used to make the cricket box frame | Cereburum Sports' 
+          alt: 'Bundle of cut bamboo poles stacked on grass for building a cricket box support frame'
         },
         { 
           url: '/images/guides/01-sports-structure/cricket-box/materials/cricket-box-03.webp', 
-          alt: 'irons hook wled with the stell pipes for hanging purposes | Cereburum Sports' 
+          alt: 'Curved pointed metal hooks piled on a wooden surface for cricket box pipe fittings'
         },
         { 
           url: '/images/guides/01-sports-structure/cricket-box/materials/cricket-box-04.webp', 
-          alt: 'floodlights installed on steel poles for night practice | Cereburum Sports' 
+          alt: 'Rectangular LED floodlight in a black metal housing for lighting a cricket practice box'
         },
         { 
           url: '/images/guides/01-sports-structure/cricket-box/materials/cricket-box-05.webp', 
-          alt: 'coated steel wires installed on poles to support roof nets | Cereburum Sports' 
+          alt: 'Steel wire rope looped with a thimble and wire-rope clips for cricket box net support'
         },
         { 
           url: '/images/guides/01-sports-structure/cricket-box/materials/cricket-box-06.webp', 
-          alt: 'Anti-rust coating applied to steel poles for long term durability | Cereburum Sports' 
+          alt: 'Tin of anti-rust paint and a brush used to coat steel poles for cricket box frames'
         },
       ],
     },
@@ -299,28 +299,28 @@ const rawGuides = [
     title: 'How to Build and Install a Football Goal',
     category: 'sports-structure',
     image: '/images/guides/01-sports-structure/football-goal/gallery/football-goal-01.webp',
-    imageAlt: 'Steel football goal frame for sports grounds | Cereburum Sports',
+    imageAlt: 'White painted steel football goal frame without a net standing on a grass sports field',
     desc: 'Step-by-step guide to building a football goal using steel pipes and strong netting. Learn how to measure the height, width, upper depth, and lower depth, prepare the frame, and install the goal net.',
     images: [
       {
         url: '/images/guides/01-sports-structure/football-goal/gallery/football-goal-01.webp',
-        alt: 'Football goal gallery 1 - steel football goal frame | Cereburum Sports',
+        alt: 'White painted steel football goal frame without a net standing on a grass sports field',
       },
       {
         url: '/images/guides/01-sports-structure/football-goal/gallery/football-goal-02.webp',
-        alt: 'Football goal gallery 2 - height, width, upper depth, and lower depth measurements | Cereburum Sports',
+        alt: 'White steel football goal labeled with height, width, upper depth, and lower depth arrows',
       },
       {
         url: '/images/guides/01-sports-structure/football-goal/gallery/football-goal-03.webp',
-        alt: 'Football goal gallery 3 - football goal frame construction | Cereburum Sports',
+        alt: 'White steel football goal with angled back supports standing on grass beside a fenced court',
       },
       {
         url: '/images/guides/01-sports-structure/football-goal/gallery/football-goal-04.webp',
-        alt: 'Football goal gallery 4 - steel pipe frame and support structure | Cereburum Sports',
+        alt: 'Front view of a rectangular white steel football goal standing on a grass field without a net',
       },
       {
         url: '/images/guides/01-sports-structure/football-goal/gallery/football-goal-05.webp',
-        alt: 'Football goal gallery 5 - football goal installation | Cereburum Sports',
+        alt: 'Angled view of a white steel football goal with back supports on grass near a fenced court',
       },
       {
         type: 'video',
@@ -336,27 +336,27 @@ const rawGuides = [
       },
       {
         url: '/images/guides/01-sports-structure/football-goal/gallery/football-goal-08.webp',
-        alt: 'Football goal gallery 8 - football goal frame details | Cereburum Sports',
+        alt: 'Black steel football goal with angled side supports standing on a sand sports court',
       },
       {
         url: '/images/guides/01-sports-structure/football-goal/gallery/football-goal-09.webp',
-        alt: 'Football goal gallery 9 - goal height, width, and depth measurement guide | Cereburum Sports',
+        alt: 'Black steel football goal marked with height, width, upper depth, and lower depth arrows',
       },
       {
         url: '/images/guides/01-sports-structure/football-goal/gallery/football-goal-10.webp',
-        alt: 'Football goal gallery 10 - football goal structure | Cereburum Sports',
+        alt: 'End view of a black steel football goal showing its triangular depth profile on a paved court',
       },
       {
         url: '/images/guides/01-sports-structure/football-goal/gallery/football-goal-11.webp',
-        alt: 'Football goal gallery 11 - welded steel football goal frame | Cereburum Sports',
+        alt: 'Unfinished steel football goal frame standing in a workshop among tools and leftover materials',
       },
       {
         url: '/images/guides/01-sports-structure/football-goal/gallery/football-goal-12.webp',
-        alt: 'Football goal gallery 12 - football goal frame installation details | Cereburum Sports',
+        alt: 'White football goal with white netting on green artificial turf beside a red sideline and wall',
       },
       {
         url: '/images/guides/01-sports-structure/football-goal/gallery/football-goal-13.webp',
-        alt: 'Football goal gallery 13 - football goal structure and finishing | Cereburum Sports',
+        alt: 'White football goal on green artificial turf seen through perimeter sports netting',
       },
       {
         type: 'video',
@@ -392,19 +392,19 @@ const rawGuides = [
       images: [
         { 
           url: '/images/guides/01-sports-structure/football-goal/materials/football-goal-01.webp', 
-          alt: 'Steel poles and support pipes used in cricket arena construction | Cereburum Sports' 
+          alt: 'Stack of hollow steel pipes ready to be cut and welded into a football goal frame'
         },
         { 
           url: '/images/guides/01-sports-structure/football-goal/materials/football-goal-02.webp', 
-          alt: 'Anti-rust coating applied to steel poles for long term durability | Cereburum Sports' 
+          alt: 'Tin of anti-rust paint and a brush used to coat steel pipes for football goal frames'
         },
         { 
           url: '/images/guides/01-sports-structure/football-goal/materials/football-goal-03.webp', 
-          alt: 'welding rods used to weld the football goal frame | Cereburum Sports' 
+          alt: 'Spool of welding wire and a bundle of welding rods used to join a football goal frame'
         },
         { 
           url: '/images/guides/01-sports-structure/football-goal/materials/football-goal-04.webp', 
-          alt: 'netting thread used to install the football goal net | Cereburum Sports' 
+          alt: 'Two spools of white netting thread used for making or repairing a football goal net'
         },
       ],
     },
@@ -433,24 +433,24 @@ const rawGuides = [
     title: 'Use of Bamboo Supports for Cricket Pitches and Rooftop Nets',
     category: 'installation-and-techniques',
     image: '/images/guides/02-installation-and-techniques/bamboos/gallery/bamboos-01.webp',
-    imageAlt: 'Bamboo poles supporting a cricket practice pitch and sports netting enclosure | Cereburum Sports',
+    imageAlt: 'High view of a tiled cricket practice area with wall netting, a sink, and a cot in the center',
     desc: 'Explore how bamboo poles are used to support cricket practice nets, home cricket pitches, and rooftop netting enclosures. Bamboo provides an affordable and practical alternative to permanent steel structures for suitable small-scale installations. This guide shows real examples of bamboo-supported netting, different enclosure sizes, and how bamboo poles, ropes, and netting work together to create a practice area.',
     images: [
       {
         url: '/images/guides/02-installation-and-techniques/bamboos/gallery/bamboos-01.webp',
-        alt: 'Bamboo-supported cricket practice pitch with protective sports netting | Cereburum Sports',
+        alt: 'High view of a tiled cricket practice area with wall netting, a sink, and a cot in the center',
       },
       {
         url: '/images/guides/02-installation-and-techniques/bamboos/gallery/bamboos-02.webp',
-        alt: 'Bamboo-supported cricket practice net measuring 42 ft in length and 20 ft in width with four marked bamboo positions | Cereburum Sports',
+        alt: 'Indoor cricket practice net labeled 42 ft long and 20 ft wide with four bamboo pole positions',
       },
       {
         url: '/images/guides/02-installation-and-techniques/bamboos/gallery/bamboos-03.webp',
-        alt: 'Cricket practice net setup measuring 35 ft in length and 22 ft in width with bamboo support positions highlighted | Cereburum Sports',
+        alt: 'High view of a tiled cricket practice court with black side netting, a sink, and a central cot',
       },
       {
         url: '/images/guides/02-installation-and-techniques/bamboos/gallery/bamboos-04.webp',
-        alt: 'Completed cricket practice enclosure using bamboo poles to support side and roof netting | Cereburum Sports',
+        alt: 'Interior of a cricket practice enclosure with side and roof netting, a tiled floor, and a sink',
       },
       {
         type: 'video',
@@ -466,35 +466,35 @@ const rawGuides = [
       },
       {
         url: '/images/guides/02-installation-and-techniques/bamboos/gallery/bamboos-07.webp',
-        alt: 'Bamboo pole arrangement used to support netting around a cricket practice area | Cereburum Sports',
+        alt: 'Workers on a rooftop ladder attach cricket netting to bamboo poles under a roof net at night',
       },
       {
         url: '/images/guides/02-installation-and-techniques/bamboos/gallery/bamboos08.webp',
-        alt: 'Bamboo supports and rope connections used for cricket and rooftop netting | Cereburum Sports',
+        alt: 'Rooftop cricket net with bamboo poles, a stepladder, and a worker sitting beside the enclosure',
       },
       {
         url: '/images/guides/02-installation-and-techniques/bamboos/gallery/bamboos-09.webp',
-        alt: 'Sports netting supported by bamboo poles around a cricket practice pitch | Cereburum Sports',
+        alt: 'Rooftop cricket practice net with roof mesh, bamboo poles, a stepladder, and an air conditioner',
       },
       {
         url: '/images/guides/02-installation-and-techniques/bamboos/gallery/bamboos-10.webp',
-        alt: 'Bamboo support arrangement for securing protective sports netting | Cereburum Sports',
+        alt: 'Night view of a rooftop cricket net with bamboo poles, an orange ladder, and an air conditioner',
       },
       {
         url: '/images/guides/02-installation-and-techniques/bamboos/gallery/bamboos-11.webp',
-        alt: 'Bamboo poles and netting materials used for cricket practice enclosures | Cereburum Sports',
+        alt: 'Rooftop cricket net labeled 35 ft long and 22 ft wide with four numbered bamboo pole positions',
       },
       {
         url: '/images/guides/02-installation-and-techniques/bamboos/gallery/bamboos-12.webp',
-        alt: 'Bamboo support connections used in sports netting installations | Cereburum Sports',
+        alt: 'Corner of a rooftop cricket enclosure with bamboo poles, side and roof netting, and a plastic chair',
       },
       {
         url: '/images/guides/02-installation-and-techniques/bamboos/gallery/bamboos-13.webp',
-        alt: 'Protective sports netting suitable for bamboo-supported cricket practice areas | Cereburum Sports',
+        alt: 'Ground-level cricket practice box built from bamboo poles and white mesh netting on bare earth',
       },
       {
         url: '/images/guides/02-installation-and-techniques/bamboos/gallery/bamboos-14.webp',
-        alt: 'Bamboo-supported sports net enclosure for cricket practice and small spaces | Cereburum Sports',
+        alt: 'Side view of a bamboo cricket practice box with white mesh, a concrete floor, and a ladder inside',
       },
       {
         type: 'video',
@@ -531,15 +531,15 @@ const rawGuides = [
       images: [
         {
           url: '/images/guides/02-installation-and-techniques/bamboos/materials/bamboos-01.webp',
-          alt: 'Bamboo poles used to support cricket practice and rooftop netting | Cereburum Sports',
+          alt: 'Bundle of cut bamboo poles stacked on grass for cricket practice and rooftop net supports',
         },
         {
           url: '/images/guides/02-installation-and-techniques/bamboos/materials/bamboos-02.webp',
-          alt: 'Strong ropes used to support overhead netting between bamboo poles | Cereburum Sports',
+          alt: 'White rope lashing a horizontal bamboo rail to a vertical bamboo pole with netting behind',
         },
         {
           url: '/images/guides/02-installation-and-techniques/bamboos/materials/bamboos-03.webp',
-          alt: 'Tying twine used to connect sports netting with bamboo supports | Cereburum Sports',
+          alt: 'Two spools of white tying twine used to fasten sports netting to bamboo supports',
         },
       ],
     },
@@ -571,16 +571,16 @@ const rawGuides = [
     title: 'Long-Lasting and Nearly Invisible Net Extension Joints',
     category: 'installation-and-techniques',
     image: '/images/guides/02-installation-and-techniques/net-extension-joint/gallery/net-extension-joint-01.webp',
-    imageAlt: 'Nearly invisible net extension joint connecting two sports net sections using matching joining thread | Cereburum Sports',
+    imageAlt: 'Hands using a wooden netting needle to stitch a white sports net extension joint',
     desc: 'Discover how professional net extension joints connect two sports nets to create a larger net without an obvious joining line. When matching thread and proper stitching techniques are used, the joint blends naturally with the surrounding mesh, providing a strong, long-lasting connection. Explore real images and videos showing how these joints maintain the appearance and strength of cricket nets, football netting, and sports enclosures.',
     images: [
       {
         url: '/images/guides/02-installation-and-techniques/net-extension-joint/gallery/net-extension-joint-01.webp',
-        alt: 'Wooden netting needle and matching thread used to create a strong and nearly invisible extension joint | Cereburum Sports',
+        alt: 'Hands using a wooden netting needle to stitch a white sports net extension joint',
       },
       {
         url: '/images/guides/02-installation-and-techniques/net-extension-joint/gallery/net-extension-joint-02.webp',
-        alt: 'Close-up of two sports nets joined using matching thread to create a neat extension joint | Cereburum Sports',
+        alt: 'Hands holding two wooden netting needles wound with white thread at a sports net edge',
       },
       {
         type: 'video',
@@ -627,11 +627,11 @@ const rawGuides = [
       images: [
         {
           url: '/images/guides/02-installation-and-techniques/net-extension-joint/materials/net-extension-joint-01.webp',
-          alt: 'Strong matching thread used to create durable and less visible net extension joints | Cereburum Sports',
+          alt: 'Two spools of white matching thread used to stitch nearly invisible net extension joints',
         },
         {
           url: '/images/guides/02-installation-and-techniques/net-extension-joint/materials/net-extension-joint-02.webp',
-          alt: 'Wooden netting needle with joining thread used to connect sports nets neatly | Cereburum Sports',
+          alt: 'Wooden netting needle wound with white joining thread for stitching sports net extension joints',
         },
       ],
     },
@@ -663,32 +663,32 @@ const rawGuides = [
     title: 'How We Fold, Label, and Pack Sports Nets',
     category: 'installation-and-techniques',
     image: '/images/guides/02-installation-and-techniques/net-packing/gallery/net-packing-01.webp',
-    imageAlt: 'Sports netting carefully folded into a compact bundle for packing | Cereburum Sports',
+    imageAlt: 'White sports net packed into a compact bundle, tied with blue rope and a handwritten size label',
     desc: 'See how we carefully fold, label, and pack sports nets before delivery. Each net is arranged into a compact bundle, secured with strong rope, and labeled with its dimensions for easy identification. Our packing process helps prevent tangling, saves space, and makes handling and installation easier.',
     images: [
       {
         url: '/images/guides/02-installation-and-techniques/net-packing/gallery/net-packing-01.webp',
-        alt: 'White sports netting folded and arranged into a compact bundle before packing | Cereburum Sports',
+        alt: 'White sports net packed into a compact bundle, tied with blue rope and a handwritten size label',
       },
       {
         url: '/images/guides/02-installation-and-techniques/net-packing/gallery/net-packing-02.webp',
-        alt: 'Packed white sports net secured with blue rope and an identification label showing its size | Cereburum Sports',
+        alt: 'Packed white sports net tied with blue rope, with a callout pointing to the size label after packing',
       },
       {
         url: '/images/guides/02-installation-and-techniques/net-packing/gallery/net-packing-03.webp',
-        alt: 'Compact bundle of folded white sports netting tied securely with blue packing rope | Cereburum Sports',
+        alt: 'Compact white sports net bundle tied with blue packing rope and a handwritten size label',
       },
       {
         url: '/images/guides/02-installation-and-techniques/net-packing/gallery/net-packing-04.webp',
-        alt: 'Sports netting arranged and prepared for folding and final packing | Cereburum Sports',
+        alt: 'Several packed white sports net bundles stacked against a wall and tied with blue packing rope',
       },
       {
         url: '/images/guides/02-installation-and-techniques/net-packing/gallery/net-packing-05.webp',
-        alt: 'Multiple sports net packets with identification labels showing their dimensions | Cereburum Sports',
+        alt: 'Row of packed white sports net bundles labeled front side 40 x 25 and back side 80 x 25',
       },
       {
         url: '/images/guides/02-installation-and-techniques/net-packing/gallery/net-packing-06.webp',
-        alt: 'Folded and securely packed sports net bundles prepared for storage and delivery | Cereburum Sports',
+        alt: 'Hand pointing to a size label on a packed bundle of dark fabric and white sports net',
       },
       {
         type: 'video',
@@ -760,11 +760,11 @@ const rawGuides = [
       images: [
         {
           url: '/images/guides/02-installation-and-techniques/net-packing/materials/net-packing-01.webp',
-          alt: 'Strong nylon rope used to tie and secure folded sports net bundles | Cereburum Sports',
+          alt: 'Coil of blue twisted packing rope used to tie and secure folded sports net bundles',
         },
         {
           url: '/images/guides/02-installation-and-techniques/net-packing/materials/net-packing-02.webp',
-          alt: 'Size identification label used to mark the dimensions of packed sports nets | Cereburum Sports',
+          alt: 'Cardboard size identification tag marked 65 x 35 with a blue packing rope loop attached',
         },
       ],
     },
@@ -794,20 +794,20 @@ const rawGuides = [
     title: 'How We Stitch Sports Net Borders for Strong and Secure Connections',
     category: 'installation-and-techniques',
     image: '/images/guides/02-installation-and-techniques/net-stitching/gallery/net-stitching-01.webp',
-    imageAlt: 'Sports netting stitched to a reinforced parachute border using strong matching thread | Cereburum Sports',
+    imageAlt: 'White sports net stitched to a black reinforced parachute border along the top edge at night',
     desc: 'See how we professionally stitch sports net borders to create strong, secure, and neatly finished connections. We use reinforced parachute borders, durable stitching thread, and careful stitching techniques to join net sections and maintain a continuous border. Explore real images and videos showing our net border stitching process for cricket practice nets, football netting, and sports enclosures.',
     images: [
       {
         url: '/images/guides/02-installation-and-techniques/net-stitching/gallery/net-stitching-01.webp',
-        alt: 'Close-up of white sports netting securely stitched to a black reinforced parachute border | Cereburum Sports',
+        alt: 'White sports net stitched to a black reinforced parachute border along the top edge at night',
       },
       {
         url: '/images/guides/02-installation-and-techniques/net-stitching/gallery/net-stitching-02.webp',
-        alt: 'Two reinforced sports net borders stitched together to create a strong and continuous connection | Cereburum Sports',
+        alt: 'Callout showing two black sports net borders stitched together to form one continuous top border',
       },
       {
         url: '/images/guides/02-installation-and-techniques/net-stitching/gallery/net-stitching-03.webp',
-        alt: 'Front view of joined sports net sections showing aligned mesh and a neatly stitched continuous upper border | Cereburum Sports',
+        alt: 'Front view of white sports net hanging from a continuous black top border with loose thread at the join',
       },
       {
         type: 'video',
@@ -849,15 +849,15 @@ const rawGuides = [
       images: [
         {
           url: '/images/guides/02-installation-and-techniques/net-stitching/materials/net-stitching-01.webp',
-          alt: 'Reinforced parachute border stitched along the edge of sports netting | Cereburum Sports',
+          alt: 'Close-up of a black reinforced parachute border stitched along the edge of white sports netting',
         },
         {
           url: '/images/guides/02-installation-and-techniques/net-stitching/materials/net-stitching-02.webp',
-          alt: 'Strong parachute thread used for stitching reinforced sports net borders | Cereburum Sports',
+          alt: 'Two spools of white parachute thread used for stitching reinforced sports net borders',
         },
         {
           url: '/images/guides/02-installation-and-techniques/net-stitching/materials/net-stitching-03.webp',
-          alt: 'Wooden netting needle used to stitch and join reinforced sports net borders | Cereburum Sports',
+          alt: 'Wooden netting needle wound with white thread for stitching and joining sports net borders',
         },
       ],
     },
@@ -889,12 +889,12 @@ const rawGuides = [
     title: 'How We Prepare Sports Netting Before Installation',
     category: 'installation-and-techniques',
     image: '/images/guides/02-installation-and-techniques/pre-installation-setup/gallery/pre-installation-setup-01.webp',
-    imageAlt: 'Sports netting installation site with steel support poles, overhead wires, and scaffolding prepared for net installation | Cereburum Sports',
+    imageAlt: 'Black steel sports enclosure frame at night with overhead support wires, workers, and mobile scaffolding',
     desc: 'See how we prepare sports nets before installation at cricket practice facilities, football grounds, and sports arenas. Our preparation process includes checking the supporting structure, verifying measurements, carefully unfolding netting, arranging reinforced borders, and preparing installation materials. Explore real images and videos showing how our team organizes large sports nets before lifting and securing them to the enclosure.',
     images: [
       {
         url: '/images/guides/02-installation-and-techniques/pre-installation-setup/gallery/pre-installation-setup-01.webp',
-        alt: 'Steel sports net enclosure with overhead support wires and scaffolding ready for net installation | Cereburum Sports',
+        alt: 'Black steel sports enclosure frame at night with overhead support wires, workers, and mobile scaffolding',
       },
       {
         type: 'video',
@@ -910,7 +910,7 @@ const rawGuides = [
       },
       {
         url: '/images/guides/02-installation-and-techniques/pre-installation-setup/gallery/pre-installation-setup-04.webp',
-        alt: 'Worker carefully spreading white sports netting on the ground before installation at a sports facility | Cereburum Sports',
+        alt: 'Worker spreads a large white sports net on the grass beside a brick wall before installation',
       },
       {
         type: 'video',
@@ -926,7 +926,7 @@ const rawGuides = [
       },
       {
         url: '/images/guides/02-installation-and-techniques/pre-installation-setup/gallery/pre-installation-setup-07.webp',
-        alt: 'White sports netting with black reinforced borders unfolded and arranged on the ground for installation | Cereburum Sports',
+        alt: 'White sports net with black reinforced borders piled on a path beside a floodlit sports enclosure',
       },
       {
         type: 'video',
@@ -978,27 +978,27 @@ const rawGuides = [
       images: [
         {
           url: '/images/guides/02-installation-and-techniques/pre-installation-setup/materials/pre-installation-setup-01.webp',
-          alt: 'Reinforced parachute border stitched along the edge of sports netting | Cereburum Sports',
+          alt: 'Close-up of a black reinforced parachute border stitched along the edge of white sports netting',
         },
         {
           url: '/images/guides/02-installation-and-techniques/pre-installation-setup/materials/pre-installation-setup-02.webp',
-          alt: 'Strong nylon rope used to tie and secure sports netting sections during installation | Cereburum Sports',
+          alt: 'Coil of blue twisted rope used to tie and secure sports netting sections during installation',
         },
         {
           url: '/images/guides/02-installation-and-techniques/pre-installation-setup/materials/pre-installation-setup-03.webp',
-          alt: 'Parachute thread used for stitching and securing reinforced sports net borders | Cereburum Sports',
+          alt: 'Two spools of white parachute thread used for stitching reinforced sports net borders',
         },
         {
           url: '/images/guides/02-installation-and-techniques/pre-installation-setup/materials/pre-installation-setup-04.webp',
-          alt: 'Wooden netting needle used for joining and repairing sports netting sections | Cereburum Sports',
+          alt: 'Wooden netting needle wound with white thread for joining and repairing sports netting sections',
         },
         {
           url: '/images/guides/02-installation-and-techniques/pre-installation-setup/materials/pre-installation-setup-05.webp',
-          alt: 'Measuring tape used to verify sports net dimensions before installation | Cereburum Sports',
+          alt: 'Black 100-foot fiberglass measuring tape unspooled to check sports net dimensions before installation',
         },
         {
           url: '/images/guides/02-installation-and-techniques/pre-installation-setup/materials/pre-installation-setup-06.webp',
-          alt: 'Cable ties used to secure reinforced net borders to supporting poles | Cereburum Sports',
+          alt: 'Bundle of white cable ties used to secure reinforced sports net borders to supporting poles',
         },
       ],
     },
@@ -1032,36 +1032,36 @@ const rawGuides = [
     title: 'How Metal Rings Make Sports Nets Foldable and Adjustable',
     category: 'installation-and-techniques',
     image: '/images/guides/02-installation-and-techniques/rings/gallery/rings-01.webp',
-    imageAlt: 'Metal rings installed along reinforced sports net borders for adjustable and foldable netting | Cereburum Sports',
+    imageAlt: 'Hand holding a spring carabiner clipped through a metal grommet in a green net\'s black border',
     desc: 'Discover how metal rings make sports nets easier to fold, adjust, open, and close. We install strong metal rings along reinforced parachute borders to create convenient attachment points for ropes, hooks, and clips. These rings allow suitable netting sections to slide, gather, or be repositioned when needed. Explore real images and videos showing how rings improve the flexibility and usability of cricket practice nets, football enclosures, and sports arenas.',
     images: [
       {
         url: '/images/guides/02-installation-and-techniques/rings/gallery/rings-01.webp',
-        alt: 'Green sports netting with metal rings fitted along a black reinforced border for adjustable installation | Cereburum Sports',
+        alt: 'Hand holding a spring carabiner clipped through a metal grommet in a green net\'s black border',
       },
       {
         url: '/images/guides/02-installation-and-techniques/rings/gallery/rings-02.webp',
-        alt: 'Close-up of a metal ring and spring clip used to attach and adjust sports netting | Cereburum Sports',
+        alt: 'Callout labeling a metal grommet in a black net border with a spring carabiner attached through it',
       },
       {
         url: '/images/guides/02-installation-and-techniques/rings/gallery/rings-03.webp',
-        alt: 'Metal rings arranged along a reinforced black net border to support flexible net positioning | Cereburum Sports',
+        alt: 'Green sports net with two metal grommets in the black border and a spring carabiner at the corner',
       },
       {
         url: '/images/guides/02-installation-and-techniques/rings/gallery/rings-04.webp',
-        alt: 'Metal ring attached to green sports netting for convenient opening and closing | Cereburum Sports',
+        alt: 'Hand holding the corner of a green sports net with metal grommets set in the black border',
       },
       {
         url: '/images/guides/02-installation-and-techniques/rings/gallery/rings-05.webp',
-        alt: 'Close-up of a metal ring securely fitted into a reinforced sports net border | Cereburum Sports',
+        alt: 'Hand holding a spring carabiner on a metal ring passed through a green net\'s black border',
       },
       {
         url: '/images/guides/02-installation-and-techniques/rings/gallery/rings-06.webp',
-        alt: 'Ring placement along sports netting border for adjustable attachment and positioning | Cereburum Sports',
+        alt: 'Hand holding a black net-border swatch with a grommet and a hanging spring carabiner hook',
       },
       {
         url: '/images/guides/02-installation-and-techniques/rings/gallery/rings-07.webp',
-        alt: 'Sports net border fitted with metal rings for folding, adjustment, and easy removal | Cereburum Sports',
+        alt: 'Workers handle a white sports net with a blue border fitted with metal grommets on the ground',
       },
       {
         type: 'video',
@@ -1098,15 +1098,15 @@ const rawGuides = [
       images: [
         {
           url: '/images/guides/02-installation-and-techniques/rings/materials/rings-01.webp',
-          alt: 'Metal rings fitted into reinforced sports net borders for flexible attachment | Cereburum Sports',
+          alt: 'Pile of loose silver metal grommets used as rings in reinforced sports net borders',
         },
         {
           url: '/images/guides/02-installation-and-techniques/rings/materials/rings-02.webp',
-          alt: 'Reinforced parachute border stitched along sports netting for secure ring installation | Cereburum Sports',
+          alt: 'Close-up of a black reinforced parachute border stitched along the edge of white sports netting',
         },
         {
           url: '/images/guides/02-installation-and-techniques/rings/materials/rings-03.webp',
-          alt: 'Ring installation tool with yellow and black handles used to secure metal rings into net borders | Cereburum Sports',
+          alt: 'Yellow-and-black grommet pliers with metal dies and loose rings for installing net-border grommets',
         },
       ],
     },
@@ -1139,12 +1139,12 @@ const rawGuides = [
     title: 'How We Install Roof Netting for Cricket Nets and Sports Arenas',
     category: 'installation-and-techniques',
     image: '/images/guides/02-installation-and-techniques/roof-installation/gallery/roof-installation-01.webp',
-    imageAlt: 'Our installation team lifting white roof netting onto a sports enclosure using scaffolding and support ropes | Cereburum Sports',
+    imageAlt: 'White sports roof net being lifted up a tall green scaffolding tower during night installation',
     desc: 'See how we install roof netting for cricket practice cages, sports arenas, and outdoor net enclosures. Our installation process includes preparing the roof net, lifting it with support ropes, securing all four corners, and stitching the reinforced borders to the supporting structure. Explore real images and videos showing how our team installs overhead sports netting to provide secure coverage and a neat finish.',
     images: [
       {
         url: '/images/guides/02-installation-and-techniques/roof-installation/gallery/roof-installation-01.webp',
-        alt: 'White sports roof net being lifted and positioned using scaffolding during installation | Cereburum Sports',
+        alt: 'White sports roof net being lifted up a tall green scaffolding tower during night installation',
       },
       {
         type: 'video',
@@ -1166,7 +1166,7 @@ const rawGuides = [
       },
       {
         url: '/images/guides/02-installation-and-techniques/roof-installation/gallery/roof-installation-05.webp',
-        alt: 'White roof netting spread across the overhead support structure of a cricket practice enclosure | Cereburum Sports',
+        alt: 'Sagging white roof netting hangs over a floodlit cricket enclosure during roof installation',
       },
       {
         type: 'video',
@@ -1235,23 +1235,23 @@ const rawGuides = [
       images: [
         {
           url: '/images/guides/02-installation-and-techniques/roof-installation/materials/roof-installation-01.webp',
-          alt: 'Strong nylon rope used to lift and secure roof netting to the supporting structure | Cereburum Sports',
+          alt: 'Coil of blue twisted rope used to lift and secure roof netting to the supporting structure',
         },
         {
           url: '/images/guides/02-installation-and-techniques/roof-installation/materials/roof-installation-02.webp',
-          alt: 'Cable ties used to attach reinforced roof net borders to supporting poles | Cereburum Sports',
+          alt: 'Bundle of white cable ties used to attach reinforced roof net borders to supporting poles',
         },
         {
           url: '/images/guides/02-installation-and-techniques/roof-installation/materials/roof-installation-03.webp',
-          alt: 'Strong parachute thread used to stitch roof net borders to supporting connections | Cereburum Sports',
+          alt: 'Two spools of white parachute thread used to stitch roof net borders to supporting connections',
         },
         {
           url: '/images/guides/02-installation-and-techniques/roof-installation/materials/roof-installation-04.webp',
-          alt: 'Wooden netting needle used for stitching and securing sports roof netting | Cereburum Sports',
+          alt: 'Wooden netting needle wound with white thread for stitching and securing sports roof netting',
         },
         {
           url: '/images/guides/02-installation-and-techniques/roof-installation/materials/roof-installation-05.webp',
-          alt: 'Scaffolding used by our installation team to access and secure overhead sports netting | Cereburum Sports',
+          alt: 'Tall black wheeled scaffolding tower used to access and secure overhead sports netting',
         },
       ],
     },
@@ -1285,28 +1285,28 @@ const rawGuides = [
     title: 'How Border Ropes Keep Sports Nets in Shape During Installation',
     category: 'installation-and-techniques',
     image: '/images/guides/02-installation-and-techniques/rope-in-border/gallery/rope-in-border-01.webp',
-    imageAlt: 'Reinforced sports net border with rope that helps maintain net shape during installation | Cereburum Sports',
+    imageAlt: 'Hand holding a white sports net with a stitched fabric border and red rope at the corner',
     desc: 'Learn how ropes inside the borders of sports nets help maintain their shape during installation. Border ropes provide extra strength, distribute tension evenly, prevent uneven stretching, and make it easier to align and secure cricket nets, football nets, and sports arena enclosures.',
     images: [
       {
         url: '/images/guides/02-installation-and-techniques/rope-in-border/gallery/rope-in-border-01.webp',
-        alt: 'White sports net with reinforced border rope for maintaining net shape | Cereburum Sports',
+        alt: 'Hand holding a white sports net with a stitched fabric border and red rope at the corner',
       },
       {
         url: '/images/guides/02-installation-and-techniques/rope-in-border/gallery/rope-in-border-02.webp',
-        alt: 'Close-up of rope inside a stitched sports net border for additional support | Cereburum Sports',
+        alt: 'Hand holding a white sports net with a callout highlighting red rope inside the border',
       },
       {
         url: '/images/guides/02-installation-and-techniques/rope-in-border/gallery/rope-in-border-03.webp',
-        alt: 'Reinforced sports net border designed to maintain shape during installation | Cereburum Sports',
+        alt: 'Installer holding a white sports net corner with a fabric border and hanging red border rope',
       },
       {
         url: '/images/guides/02-installation-and-techniques/rope-in-border/gallery/rope-in-border-04.webp',
-        alt: 'Border rope reinforcement supporting the edges of sports netting | Cereburum Sports',
+        alt: 'Hand pulling a knotted red rope through the open sleeve of a white sports net border',
       },
       {
         url: '/images/guides/02-installation-and-techniques/rope-in-border/gallery/rope-in-border-05.webp',
-        alt: 'Sports net corner with reinforced border and rope for maintaining proper alignment | Cereburum Sports',
+        alt: 'White sports net corner with a fabric border and neon yellow rope tied through the edge',
       },
       {
         type: 'video',
@@ -1346,11 +1346,11 @@ const rawGuides = [
       images: [
         { 
           url: '/images/guides/02-installation-and-techniques/rope-in-border/materials/rope-in-border-01.webp', 
-          alt: 'Reinforced sports net border designed to maintain shape during installation | Cereburum Sports' 
+          alt: 'Close-up of black woven fabric border tape stitched along a white square-mesh sports net'
         },
         { 
           url: '/images/guides/02-installation-and-techniques/rope-in-border/materials/rope-in-border-02.webp', 
-          alt: 'Strong border rope used to maintain net shape during installation | Cereburum Sports' 
+          alt: 'Coiled roll of bright blue twisted synthetic rope used to reinforce sports net borders'
         },
       ],
     },
@@ -1378,20 +1378,20 @@ const rawGuides = [
     title: 'Why Straight Net Joints Are Weak in Sports Netting',
     category: 'installation-and-techniques',
     image: '/images/guides/02-installation-and-techniques/straight-net-joint/gallery/straight-net-joint-01.webp',
-    imageAlt: 'Straight net joint highlighted as a weak connection in a sports netting enclosure | Cereburum Sports',
+    imageAlt: 'Night view of an indoor sports net enclosure with floodlights and a roof of black netting',
     desc: 'Learn why straight net joints can create weak points in cricket nets, football nets, and sports enclosures. This guide explains how poorly connected net sections can separate under tension, affect net strength, and increase the risk of damage during regular use.',
     images: [
       {
         url: '/images/guides/02-installation-and-techniques/straight-net-joint/gallery/straight-net-joint-01.webp',
-        alt: 'Straight joint between two sections of sports netting | Cereburum Sports',
+        alt: 'Night view of an indoor sports net enclosure with floodlights and a roof of black netting',
       },
       {
         url: '/images/guides/02-installation-and-techniques/straight-net-joint/gallery/straight-net-joint-02.webp',
-        alt: 'Highlighted straight net joint showing a potentially weak connection in an installed sports arena net | Cereburum Sports',
+        alt: 'Indoor sports net enclosure with a red line marking a straight roof joint labeled as weak',
       },
       {
         url: '/images/guides/02-installation-and-techniques/straight-net-joint/gallery/straight-net-joint-03.webp',
-        alt: 'Example of a straight net joint in sports netting that may become weak under tension | Cereburum Sports',
+        alt: 'Indoor netted sports arena with green turf, a chain-link fence, and people on the field',
       },
       {
         type: 'video',
@@ -1425,11 +1425,11 @@ const rawGuides = [
       images: [
         { 
           url: '/images/guides/02-installation-and-techniques/straight-net-joint/materials/straight-net-joint-01.webp', 
-          alt: 'Thread used for straight net joints | Cereburum Sports' 
+          alt: 'Two spools of white braided thread used to stitch straight joints in sports netting'
         },
         { 
           url: '/images/guides/02-installation-and-techniques/straight-net-joint/materials/straight-net-joint-02.webp', 
-          alt: 'Wooden netting needle used to join the nets | Cereburum Sports' 
+          alt: 'Wooden netting needle wound with white thread for stitching straight sports net joints'
         },
       ],
     },
@@ -1457,20 +1457,20 @@ const rawGuides = [
     title: 'Uses and Benefits of Aluminium Ladders in Sports Net Installation',
     category: 'scaffolding-and-equipment',
     image: '/images/guides/03-scaffolding-and-equipment/aluminium-ladder/gallery/aluminium-ladder-01.webp',
-    imageAlt: 'Aluminium ladder used for accessing elevated areas during sports netting installation | Cereburum Sports',
+    imageAlt: 'Aluminium A-frame stepladder standing inside a concrete sports enclosure with wall and roof netting',
     desc: 'Learn when and why aluminium ladders are used during cricket net and sports arena installation. These lightweight, portable ladders help workers reach elevated areas for attaching net borders, securing ropes, adjusting netting, and performing maintenance on sports enclosures.',
     images: [
       {
         url: '/images/guides/03-scaffolding-and-equipment/aluminium-ladder/gallery/aluminium-ladder-01.webp',
-        alt: 'Aluminium ladder used during sports netting installation | Cereburum Sports',
+        alt: 'Aluminium A-frame stepladder standing inside a concrete sports enclosure with wall and roof netting',
       },
       {
         url: '/images/guides/03-scaffolding-and-equipment/aluminium-ladder/gallery/aluminium-ladder-02.webp',
-        alt: 'Portable aluminium ladder for accessing elevated sports netting structures | Cereburum Sports',
+        alt: 'Aluminium stepladder inside a netted sports enclosure supported by tall vertical poles',
       },
       {
         url: '/images/guides/03-scaffolding-and-equipment/aluminium-ladder/gallery/aluminium-ladder-03.webp',
-        alt: 'Aluminium ladder equipment used for sports arena net installation and maintenance | Cereburum Sports',
+        alt: 'Tall aluminium platform stepladder standing against a yellow wall beside a bucket and mop',
       },
       {
         type: 'video',
@@ -1523,20 +1523,20 @@ const rawGuides = [
     title: 'Custom-Made Scaffolding for Sports Netting and Ground Maintenance',
     category: 'scaffolding-and-equipment',
     image: '/images/guides/03-scaffolding-and-equipment/custom-scaffolding/gallery/custom-scaffolding-01.webp',
-    imageAlt: 'Custom-made mobile scaffolding designed for sports ground netting and lighting maintenance | Cereburum Sports',
+    imageAlt: 'Tall black wheeled scaffolding tower with a grated top platform inside an outdoor sports net enclosure',
     desc: 'Learn how custom-made scaffolding is used inside cricket grounds and sports arenas for regular maintenance. These specially designed structures provide access to elevated nets, lights, and support wires. Equipped with wheels for easy movement, they can remain inside the sports enclosure for future repairs and adjustments.',
     images: [
       {
         url: '/images/guides/03-scaffolding-and-equipment/custom-scaffolding/gallery/custom-scaffolding-01.webp',
-        alt: 'Custom-made scaffolding structure used inside a sports netting enclosure | Cereburum Sports',
+        alt: 'Tall black wheeled scaffolding tower with a grated top platform inside an outdoor sports net enclosure',
       },
       {
         url: '/images/guides/03-scaffolding-and-equipment/custom-scaffolding/gallery/custom-scaffolding-02.webp',
-        alt: 'Custom scaffolding designed for accessing elevated sports netting | Cereburum Sports',
+        alt: 'Highlighted black wheeled scaffolding tower labeled as custom-made for sports ground maintenance',
       },
       {
         url: '/images/guides/03-scaffolding-and-equipment/custom-scaffolding/gallery/custom-scaffolding-03.webp',
-        alt: 'Mobile custom scaffolding for sports ground maintenance and net repairs | Cereburum Sports',
+        alt: 'Close view of a tall black wheeled scaffolding tower with a slatted top platform in a netted enclosure',
       },
       {
         type: 'video',
@@ -1564,11 +1564,11 @@ const rawGuides = [
       },
       {
         url: '/images/guides/03-scaffolding-and-equipment/custom-scaffolding/gallery/custom-scaffolding-08.webp',
-        alt: 'Custom-made scaffolding for reaching elevated areas of a sports enclosure | Cereburum Sports',
+        alt: 'Very tall narrow black scaffolding tower with a caged top platform inside a steel sports frame',
       },
       {
         url: '/images/guides/03-scaffolding-and-equipment/custom-scaffolding/gallery/custom-scaffolding-09.webp',
-        alt: 'Custom scaffolding designed for netting and lighting maintenance | Cereburum Sports',
+        alt: 'Tall black scaffolding tower with a top light standing inside a completed netted sports enclosure',
       },
       {
         type: 'video',
@@ -1602,7 +1602,7 @@ const rawGuides = [
       },
       {
         url: '/images/guides/03-scaffolding-and-equipment/custom-scaffolding/gallery/custom-scaffolding-15.webp',
-        alt: 'Custom scaffolding structure for sports arena maintenance | Cereburum Sports',
+        alt: 'Workers lay paving at a sports site while a person stands on a tall scaffolding tower among steel poles',
       },
       {
         type: 'video',
@@ -1618,7 +1618,7 @@ const rawGuides = [
       },
       {
         url: '/images/guides/03-scaffolding-and-equipment/custom-scaffolding/gallery/custom-scaffolding-18.webp',
-        alt: 'Custom-made mobile scaffolding designed for sports ground access | Cereburum Sports',
+        alt: 'Black metal scaffolding tower standing at night against a concrete wall and black sports netting',
       },
       {
         type: 'video',
@@ -1677,16 +1677,16 @@ const rawGuides = [
     title: 'Fixed Scaffolding for Cricket Boxes and Sports Net Installation',
     category: 'scaffolding-and-equipment',
     image: '/images/guides/03-scaffolding-and-equipment/fix-scaffolding/gallery/fix-scaffolding-01.webp',
-    imageAlt: 'Heavy-duty fixed steel scaffolding for cricket box and sports netting installation | Cereburum Sports',
+    imageAlt: 'Rusty A-frame stepladder in an indoor cricket enclosure while green artificial turf is being laid',
     desc: 'Learn how fixed scaffolding is used for installing and maintaining nets in small to medium-sized sports structures and cricket practice boxes. These heavy steel structures provide elevated working access but do not have wheels, making them difficult to reposition compared to mobile scaffolding.',
     images: [
       {
         url: '/images/guides/03-scaffolding-and-equipment/fix-scaffolding/gallery/fix-scaffolding-01.webp',
-        alt: 'Fixed steel scaffolding structure used for cricket practice net installation | Cereburum Sports',
+        alt: 'Rusty A-frame stepladder in an indoor cricket enclosure while green artificial turf is being laid',
       },
       {
         url: '/images/guides/03-scaffolding-and-equipment/fix-scaffolding/gallery/fix-scaffolding-02.webp',
-        alt: 'Heavy-duty fixed scaffolding for accessing elevated sports netting | Cereburum Sports',
+        alt: 'Rusted fixed steel scaffolding tower highlighted on a sports frame construction site',
       },
       {
         type: 'video',
@@ -1696,11 +1696,11 @@ const rawGuides = [
       },
       {
         url: '/images/guides/03-scaffolding-and-equipment/fix-scaffolding/gallery/fix-scaffolding-04.webp',
-        alt: 'Steel fixed scaffolding for small and medium-sized sports structures | Cereburum Sports',
+        alt: 'Tall rusted fixed steel scaffolding standing at night against a brick wall with netting on the grass',
       },
       {
         url: '/images/guides/03-scaffolding-and-equipment/fix-scaffolding/gallery/fix-scaffolding-05.webp',
-        alt: 'Tall fixed steel scaffolding with working platform and cross bracing for cricket net installation | Cereburum Sports',
+        alt: 'Tall fixed steel scaffolding with a top platform and cross bracing beside sports netting and a brick wall',
       },
       {
         type: 'video',
@@ -1753,20 +1753,20 @@ const rawGuides = [
     title: 'Mobile Crane for Sports Net Installation',
     category: 'scaffolding-and-equipment',
     image: '/images/guides/03-scaffolding-and-equipment/mobile-crane/gallery/mobile-crane-01.webp',
-    imageAlt: 'Mobile crane with elevated worker basket installing roof netting on a large sports structure | Cereburum Sports',
+    imageAlt: 'Yellow truck-mounted crane holds a worker in a basket installing roof netting at a floodlit sports site',
     desc: 'Learn how mobile cranes help workers reach high areas during sports net installation and maintenance. They are especially useful for large cricket grounds, sports enclosures, and tall netting structures where ordinary ladders and scaffolding may not provide sufficient access.',
     images: [
       {
         url: '/images/guides/03-scaffolding-and-equipment/mobile-crane/gallery/mobile-crane-01.webp',
-        alt: 'Truck-mounted mobile crane lifting workers in a basket for roof net installation | Cereburum Sports',
+        alt: 'Yellow truck-mounted crane holds a worker in a basket installing roof netting at a floodlit sports site',
       },
       {
         url: '/images/guides/03-scaffolding-and-equipment/mobile-crane/gallery/mobile-crane-02.webp',
-        alt: 'Mobile crane equipment used for high-level sports netting installation | Cereburum Sports',
+        alt: 'Yellow truck-mounted crane parked under sagging roof netting at a floodlit sports enclosure',
       },
       {
         url: '/images/guides/03-scaffolding-and-equipment/mobile-crane/gallery/mobile-crane-03.webp',
-        alt: 'Mobile crane providing elevated access for installing sports enclosure nets | Cereburum Sports',
+        alt: 'Wide night view of a truck-mounted crane and scaffolding inside a floodlit sports enclosure under roof netting',
       },
       {
         type: 'video',
@@ -1835,16 +1835,16 @@ const rawGuides = [
     title: 'Mobile Scissor Lift for Sports Net Installation',
     category: 'scaffolding-and-equipment',
     image: '/images/guides/03-scaffolding-and-equipment/mobile-scissor-lift/gallery/mobile-scissor-lift-01.webp',
-    imageAlt: 'Mobile scissor lift providing elevated access for sports net installation and maintenance | Cereburum Sports',
+    imageAlt: 'Raised blue scissor lift with a worker on the platform beside a sports net enclosure',
     desc: 'Learn how mobile scissor lifts help workers safely reach elevated areas during sports net installation and maintenance. These machines provide a stable working platform for attaching nets, adjusting supporting wires, and repairing netting in cricket boxes and sports enclosures.',
     images: [
       {
         url: '/images/guides/03-scaffolding-and-equipment/mobile-scissor-lift/gallery/mobile-scissor-lift-01.webp',
-        alt: 'Mobile scissor lift used for elevated sports net installation | Cereburum Sports',
+        alt: 'Raised blue scissor lift with a worker on the platform beside a sports net enclosure',
       },
       {
         url: '/images/guides/03-scaffolding-and-equipment/mobile-scissor-lift/gallery/mobile-scissor-lift-02.webp',
-        alt: 'Worker on elevated scissor lift installing netting around a cricket enclosure | Cereburum Sports',
+        alt: 'Worker on a raised blue scissor lift highlighted for safe access during sports net installation',
       },
       {
         type: 'video',
@@ -1916,16 +1916,16 @@ const rawGuides = [
     title: 'Portable Scaffolding for Sports Net Installation',
     category: 'scaffolding-and-equipment',
     image: '/images/guides/03-scaffolding-and-equipment/portable-scaffolding/gallery/portable-scaffolding-01.webp',
-    imageAlt: 'Detachable portable scaffolding used for cricket net installation and maintenance | Cereburum Sports',
+    imageAlt: 'Rusted portable scaffolding towers standing inside a steel sports frame under construction',
     desc: 'Learn how portable scaffolding helps workers install and maintain sports nets at different heights. Its detachable sections make it easy to transport, assemble, and adjust according to the structure. Portable scaffolding is also available with wheels and can be rented for temporary installation work.',    
     images: [
       {
         url: '/images/guides/03-scaffolding-and-equipment/portable-scaffolding/gallery/portable-scaffolding-01.webp',
-        alt: 'Portable metal scaffolding used for sports net installation',
+        alt: 'Rusted portable scaffolding towers standing inside a steel sports frame under construction',
       },
       {
         url: '/images/guides/03-scaffolding-and-equipment/portable-scaffolding/gallery/portable-scaffolding-02.webp',
-        alt: 'Tall portable scaffolding assembled inside a cricket practice ground',
+        alt: 'Highlighted rusted portable scaffolding tower labeled as detachable for sports ground maintenance',
       },
       {
         type: 'video',
@@ -1939,7 +1939,7 @@ const rawGuides = [
       },
       {
         url: '/images/guides/03-scaffolding-and-equipment/portable-scaffolding/gallery/portable-scaffolding-05.webp',
-        alt: 'Detachable metal scaffolding structure for sports ground maintenance',
+        alt: 'Green portable scaffolding tower at night with white sports netting draped down from the top',
       },
       {
         type: 'video',
@@ -1963,15 +1963,15 @@ const rawGuides = [
       },
       {
         url: '/images/guides/03-scaffolding-and-equipment/portable-scaffolding/gallery/portable-scaffolding-10.webp',
-        alt: 'Portable scaffolding with detachable metal frames at a cricket ground',
+        alt: 'Tall silver wheeled scaffolding with wooden plank platforms inside a netted sports enclosure',
       },
       {
         url: '/images/guides/03-scaffolding-and-equipment/portable-scaffolding/gallery/portable-scaffolding-11.webp',
-        alt: 'Metal scaffolding tower for elevated net installation and repair',
+        alt: 'Worker on a tall wheeled scaffolding tower reaches the roof net at night while a helper stands below',
       },
       {
         url: '/images/guides/03-scaffolding-and-equipment/portable-scaffolding/gallery/portable-scaffolding-12.webp',
-        alt: 'Portable scaffolding structure with adjustable working platforms',
+        alt: 'Person climbs a tall metal scaffolding tower inside a netted enclosure while helpers steady the base',
       },
       {
         type: 'video',
@@ -1980,7 +1980,7 @@ const rawGuides = [
       },
       {
         url: '/images/guides/03-scaffolding-and-equipment/portable-scaffolding/gallery/portable-scaffolding-14.webp',
-        alt: 'Portable metal scaffolding positioned beside a cricket net enclosure',
+        alt: 'Rusted portable scaffolding with a wooden top platform standing in a floodlit sports frame at night',
       },
       {
         type: 'video',
@@ -1989,7 +1989,7 @@ const rawGuides = [
       },
       {
         url: '/images/guides/03-scaffolding-and-equipment/portable-scaffolding/gallery/portable-scaffolding-16.webp',
-        alt: 'Tall portable scaffolding tower inside a sports net enclosure at night',
+        alt: 'Tall metal scaffolding tower with a wooden top plank standing under black sports netting at night',
       },
       {
         type: 'video',
@@ -2003,23 +2003,23 @@ const rawGuides = [
       },
       {
         url: '/images/guides/03-scaffolding-and-equipment/portable-scaffolding/gallery/portable-scaffolding-19.webp',
-        alt: 'Adjustable metal scaffolding for cricket ground net maintenance',
+        alt: 'Workers stand on a tall metal scaffolding tower inside a black-netted sports enclosure at night',
       },
       {
         url: '/images/guides/03-scaffolding-and-equipment/portable-scaffolding/gallery/portable-scaffolding-20.webp',
-        alt: 'Portable scaffolding assembled for high roof net installation',
+        alt: 'Empty wheeled metal scaffolding tower with wooden plank platforms inside a black-netted sports enclosure',
       },
       {
         url: '/images/guides/03-scaffolding-and-equipment/portable-scaffolding/gallery/portable-scaffolding-21.webp',
-        alt: 'Detachable scaffolding frame used in sports facility maintenance',
+        alt: 'Black portable scaffolding with wooden platforms standing on a grassy cricket ground inside a netted enclosure',
       },
       {
         url: '/images/guides/03-scaffolding-and-equipment/portable-scaffolding/gallery/portable-scaffolding-22.webp',
-        alt: 'Portable scaffolding tower with working platforms and support braces',
+        alt: 'Highlighted black portable scaffolding on a grassy cricket ground, labeled as easy to detach and shift',
       },
       {
         url: '/images/guides/03-scaffolding-and-equipment/portable-scaffolding/gallery/portable-scaffolding-23.webp',
-        alt: 'Metal scaffolding equipment for installation of cricket enclosure nets',
+        alt: 'Empty silver metal scaffolding frame standing at night beside a chain-link fence and sports netting',
       },
       {
         type: 'video',
@@ -2080,16 +2080,16 @@ const rawGuides = [
     title: 'How to Measure Height for Sports Net Installation',
     category: 'measurement-and-planning',
     image: '/images/guides/04-measurement-and-planning/height-measurement/gallery/height-measurement-01.webp',
-    imageAlt: 'Measuring the height of a steel pole for sports net installation | Cereburum Sports',
+    imageAlt: 'Red measuring tape runs up a tall grey steel pole beside a rusted sports net frame under blue sky',
     desc: 'Learn how to measure the correct height for cricket cages and sports netting enclosures. Measure from the top of the pole to the ground and keep extra margin for proper net fall and coverage.',
     images: [
       {
         url: '/images/guides/04-measurement-and-planning/height-measurement/gallery/height-measurement-01.webp',
-        alt: 'Measuring tape extended along a tall steel pole to measure sports net installation height | Cereburum Sports',
+        alt: 'Red measuring tape runs up a tall grey steel pole beside a rusted sports net frame under blue sky',
       },
       {
         url: '/images/guides/04-measurement-and-planning/height-measurement/gallery/height-measurement-02.webp',
-        alt: 'Height measurement guide showing the measuring direction from the top of the pole to the ground and extra margin for net fall | Cereburum Sports',
+        alt: 'Height guide overlay on a steel pole with a red arrow and steps to measure from the top and allow net fall',
       },
       {
         type: 'video',
@@ -2133,7 +2133,7 @@ const rawGuides = [
       images: [
         { 
           url: '/images/guides/04-measurement-and-planning/height-measurement/materials/height-measurement-01.webp', 
-          alt: 'Measuring tape extended along a tall steel pole to measure sports net installation height | Cereburum Sports' 
+          alt: 'Black 100-foot fiberglass measuring tape reel with the white blade extended on a dark background'
         }
       ],
     },
@@ -2161,16 +2161,16 @@ const rawGuides = [
     title: 'How to Measure Length for Sports Net Installation',
     category: 'measurement-and-planning',
     image: '/images/guides/04-measurement-and-planning/length-measurement/gallery/length-measurement-01.webp',
-    imageAlt: 'Measuring the distance between corner poles of a sports net enclosure using a measuring tape | Cereburum Sports',
+    imageAlt: 'Red measuring tape stretched between two black steel poles across a grassy sports ground',
     desc: 'Learn how to measure the correct length for cricket practice nets, football enclosures, and sports arenas. Measure from one corner pole to the opposite corner while keeping the measuring tape slightly loose. This helps provide enough net material for proper fitting and natural sag during installation.',
     images: [
       {
         url: '/images/guides/04-measurement-and-planning/length-measurement/gallery/length-measurement-01.webp',
-        alt: 'Measuring tape stretched between two steel poles across a grassy sports ground to measure net length | Cereburum Sports',
+        alt: 'Red measuring tape stretched between two black steel poles across a grassy sports ground',
       },
       {
         url: '/images/guides/04-measurement-and-planning/length-measurement/gallery/length-measurement-02.webp',
-        alt: 'Annotated length measurement guide showing corner poles, measuring direction, and slightly loose tape for net fitting | Cereburum Sports',
+        alt: 'Length guide overlay on a red tape between corner poles, with labels to start at the pole and keep the tape loose',
       },
       {
         type: 'video',
@@ -2192,11 +2192,11 @@ const rawGuides = [
       },
       {
         url: '/images/guides/04-measurement-and-planning/length-measurement/gallery/length-measurement-06.webp',
-        alt: 'Sports net enclosure length measurement reference showing the distance along the supporting structure | Cereburum Sports',
+        alt: 'Pink measuring tape runs from a black steel pole along a brick wall topped with razor wire toward distant frame poles',
       },
       {
         url: '/images/guides/04-measurement-and-planning/length-measurement/gallery/length-measurement-07.webp',
-        alt: 'Annotated sports net length measurement along a brick boundary wall showing the starting pole, final pole, and loose measuring tape | Cereburum Sports',
+        alt: 'Length guide overlay along a brick wall, labeling the start pole, final pole, and a slightly loose measuring tape',
       },
       {
         type: 'video',
@@ -2234,7 +2234,7 @@ const rawGuides = [
       images: [
         {
           url: '/images/guides/04-measurement-and-planning/length-measurement/materials/length-measurement-01.webp',
-          alt: 'Measuring tape used to measure the distance between corner poles for sports net installation | Cereburum Sports',
+          alt: 'Black 100-foot fiberglass measuring tape reel with the white blade extended on a dark background',
         },
       ],
     },
@@ -2262,24 +2262,24 @@ const rawGuides = [
     title: 'Good vs Bad Pole Alignment in Sports Net Structures',
     category: 'measurement-and-planning',
     image: '/images/guides/04-measurement-and-planning/poles-alignment/gallery/poles-alignment-01.webp',
-    imageAlt: 'Comparison of original and annotated sports net support poles showing poor alignment | Cereburum Sports',
+    imageAlt: 'Night view of a steel sports net frame with green arrows labeling well-aligned length and width, workers on a concrete pad',
     desc: 'See real examples of properly aligned and badly aligned poles in sports net structures. Poles should follow a straight line along the length and width of the enclosure. These images highlight correct alignment in green and incorrect alignment in red, helping you understand how pole positioning affects the overall structure and net fitting.',
     images: [
       {
         url: '/images/guides/04-measurement-and-planning/poles-alignment/gallery/poles-alignment-01.webp',
-        alt: 'Original and annotated comparison showing badly aligned support poles in a sports net enclosure | Cereburum Sports',
+        alt: 'Night view of a steel sports net frame with green arrows labeling well-aligned length and width, workers on a concrete pad',
       },
       {
         url: '/images/guides/04-measurement-and-planning/poles-alignment/gallery/poles-alignment-02.webp',
-        alt: 'Sports net structure showing green lines for properly aligned poles and a red line highlighting incorrect alignment | Cereburum Sports',
+        alt: 'Night view of a completed mesh sports enclosure with green arrows marking well-aligned length and width',
       },
       {
         url: '/images/guides/04-measurement-and-planning/poles-alignment/gallery/poles-alignment-03.webp',
-        alt: 'Night view of a sports net enclosure with green lines showing correctly aligned length and width supports | Cereburum Sports',
+        alt: 'Side-by-side night photos of sports net poles, with the annotated side marking aligned and not-aligned tops',
       },
       {
         url: '/images/guides/04-measurement-and-planning/poles-alignment/gallery/poles-alignment-04.webp',
-        alt: 'Completed sports net enclosure at night showing straight and properly aligned upper support lines | Cereburum Sports',
+        alt: 'Daytime side-by-side of a mesh sports court fence with green checks marking a straight line of black poles',
       },
       {
         type: 'video',
@@ -2289,7 +2289,7 @@ const rawGuides = [
       },
       {
         url: '/images/guides/04-measurement-and-planning/poles-alignment/gallery/poles-alignment-06.webp',
-        alt: 'Side-by-side night photographs with numbered poles and green and red lines showing aligned and misaligned sections | Cereburum Sports',
+        alt: 'Side-by-side close-up of steel sports-net poles labeled aligned, badly aligned, and very badly aligned',
       },
       {
         type: 'video',
@@ -2299,7 +2299,7 @@ const rawGuides = [
       },
       {
         url: '/images/guides/04-measurement-and-planning/poles-alignment/gallery/poles-alignment-08.webp',
-        alt: 'Original and annotated close-up showing aligned, badly aligned, and very badly aligned sports net support poles | Cereburum Sports',
+        alt: 'Side-by-side close-up of steel poles with a red curve marking bad alignment against a pale sky',
       },
       {
         type: 'video',
@@ -2309,23 +2309,23 @@ const rawGuides = [
       },
       {
         url: '/images/guides/04-measurement-and-planning/poles-alignment/gallery/poles-alignment-10.webp',
-        alt: 'Original and annotated comparison showing a curved red line highlighting badly aligned poles | Cereburum Sports',
+        alt: 'Steel sports-net frame under a blue sky with green aligned lines and a red mark where one pole is out of line',
       },
       {
         url: '/images/guides/04-measurement-and-planning/poles-alignment/gallery/poles-alignment-11.webp',
-        alt: 'Sports net enclosure showing the positioning of support poles for alignment comparison | Cereburum Sports',
+        alt: 'Low-angle view of a black mesh sports enclosure corner with a scaffolding tower standing inside',
       },
       {
         url: '/images/guides/04-measurement-and-planning/poles-alignment/gallery/poles-alignment-12.webp',
-        alt: 'Reference photograph showing vertical sports net poles for checking their alignment and straightness | Cereburum Sports',
+        alt: 'Mesh sports enclosure with green arrows along the top edges and a label that the poles are well aligned',
       },
       {
         url: '/images/guides/04-measurement-and-planning/poles-alignment/gallery/poles-alignment-13.webp',
-        alt: 'Sports net structure showing the arrangement of supporting poles along the enclosure boundary | Cereburum Sports',
+        alt: 'Black steel sports-net frame rising behind a red brick wall, with a worker on scaffolding near a blue gate',
       },
       {
         url: '/images/guides/04-measurement-and-planning/poles-alignment/gallery/poles-alignment-14.webp',
-        alt: 'Pole alignment reference showing support pole positions in a sports net enclosure | Cereburum Sports',
+        alt: 'Steel sports-net frame behind a brick wall, overlaid with green checks and a label that the structure is well aligned',
       },
     ],
     features: {
@@ -2372,16 +2372,16 @@ const rawGuides = [
     title: 'Sports Net Size Verification and Final Packing',
     category: 'measurement-and-planning',
     image: '/images/guides/04-measurement-and-planning/size-checking/gallery/size-checking-01.webp',
-    imageAlt: 'Sports net bundles with size and quality tags after final verification and packing | Cereburum Sports',
+    imageAlt: 'Three white sports net bundles tied with blue rope and size tags, with a note that sizes are rechecked and packed',
     desc: 'See how we verify the dimensions and quality of every sports net before final packing. Each net is carefully rechecked, folded, and packed separately with an identification tag showing its size and installation section. This process ensures that all net packets are properly identified, organized, and ready for delivery and installation.',
     images: [
       {
         url: '/images/guides/04-measurement-and-planning/size-checking/gallery/size-checking-01.webp',
-        alt: 'Three white sports net packets secured with blue ropes and labeled with size and quality identification tags | Cereburum Sports',
+        alt: 'Three white sports net bundles tied with blue rope and size tags, with a note that sizes are rechecked and packed',
       },
       {
         url: '/images/guides/04-measurement-and-planning/size-checking/gallery/size-checking-02.webp',
-        alt: 'Close-up of folded sports net packets showing handwritten dimensions and installation side labels attached to each bundle | Cereburum Sports',
+        alt: 'Three white sports net bundles stacked on a concrete floor, tied with blue rope and handwritten size and side tags',
       },
       {
         type: 'video',
@@ -2427,7 +2427,7 @@ const rawGuides = [
       images: [
         {
           url: '/images/guides/04-measurement-and-planning/size-checking/materials/size-checking-01.webp',
-          alt: 'Measuring tape used to verify sports net dimensions before final packing | Cereburum Sports',
+          alt: 'Black 100-foot fiberglass measuring tape reel with the white blade extended on a dark background',
         },
       ],
     },
@@ -2455,16 +2455,16 @@ const rawGuides = [
     title: 'Center Doors for Sports Net Enclosures: Types, Uses and Benefits',
     category: 'doors-and-access',
     image: '/images/guides/05-doors-and-access/center-door/gallery/center-door-01.webp',
-    imageAlt: 'Center entrance door with steel frame and netting in a sports enclosure | Cereburum Sports',
+    imageAlt: 'Black steel center door frame set into white sports netting, with a brick wall and work materials behind it',
     desc: 'Explore different center door designs used in cricket practice nets, football enclosures, and sports arenas. Center doors provide a convenient entrance and exit without requiring people to move or lift the surrounding netting. This guide shows real examples of center doors, their construction, benefits, and where they are commonly used.',
     images: [
       {
         url: '/images/guides/05-doors-and-access/center-door/gallery/center-door-01.webp',
-        alt: 'Front view of a center door integrated into white sports netting with a black steel support frame | Cereburum Sports',
+        alt: 'Black steel center door frame set into white sports netting, with a brick wall and work materials behind it',
       },
       {
         url: '/images/guides/05-doors-and-access/center-door/gallery/center-door-02.webp',
-        alt: 'Open center entrance door with rectangular steel frame and white netting attached to the door | Cereburum Sports',
+        alt: 'Open black steel center door with white netting stretched across the frame on a sandy sports ground',
       },
       {
         type: 'video',
@@ -2480,11 +2480,11 @@ const rawGuides = [
       },
       {
         url: '/images/guides/05-doors-and-access/center-door/gallery/center-door-05.webp',
-        alt: 'Black steel center door with chain-link mesh opening into an enclosed football playing area | Cereburum Sports',
+        alt: 'Open black steel center door with chain-link mesh leading onto a lit green sports field at night',
       },
       {
         url: '/images/guides/05-doors-and-access/center-door/gallery/center-door-06.webp',
-        alt: 'Center access door with black steel frame and chain-link mesh in an outdoor sports enclosure | Cereburum Sports',
+        alt: 'Open black chain-link center door in a sports enclosure at night, with people and motorcycles on the path outside',
       },
       {
         type: 'video',
@@ -2506,7 +2506,7 @@ const rawGuides = [
       },
       {
         url: '/images/guides/05-doors-and-access/center-door/gallery/center-door-10.webp',
-        alt: 'Center door design reference for convenient entrance and exit in a sports net enclosure | Cereburum Sports',
+        alt: 'Black steel center gate in a mesh sports enclosure, slightly open, with a motorcycle parked in front',
       },
     ],
     features: {
@@ -2536,23 +2536,23 @@ const rawGuides = [
       images: [
         {
           url: '/images/guides/05-doors-and-access/center-door/materials/center-door-01.webp',
-          alt: 'Material reference for center door construction in sports net enclosures | Cereburum Sports',
+          alt: 'Two large spools of white netting thread for stitching sports nets onto a center door frame',
         },
         {
           url: '/images/guides/05-doors-and-access/center-door/materials/center-door-02.webp',
-          alt: 'Material used for preparing and securing center doors in sports netting structures | Cereburum Sports',
+          alt: 'Pair of white netting thread spools standing side by side on a patterned cloth surface',
         },
         {
           url: '/images/guides/05-doors-and-access/center-door/materials/center-door-03.webp',
-          alt: 'Iron rods used to secure the center door frame to the supporting pole | Cereburum Sports',
+          alt: 'Stack of rusted and black-painted steel pipes used for sports net center door frames',
         },
         {
           url: '/images/guides/05-doors-and-access/center-door/materials/center-door-04.webp',
-          alt: 'Hinges used to attach the center door frame to the supporting pole | Cereburum Sports',
+          alt: 'Black steel butt hinge with three screw holes on each leaf, shown against a dark background',
         },
         {
           url: '/images/guides/05-doors-and-access/center-door/materials/center-door-05.webp',
-          alt: 'Anti-rust coating applied to the steel door frame | Cereburum Sports',
+          alt: 'Can of anti-rust paint and a brush used to coat steel frames for sports net center doors',
         },
       ],
     },
@@ -2582,16 +2582,16 @@ const rawGuides = [
     title: 'Corner Doors for Sports Net Enclosures: Types, Uses and Benefits',
     category: 'doors-and-access',
     image: '/images/guides/05-doors-and-access/corner-door/gallery/corner-door-01.webp',
-    imageAlt: 'Corner entrance door with black steel frame and white sports netting in a cricket practice enclosure | Cereburum Sports',
+    imageAlt: 'Small black steel corner door standing open at the base of a lit white mesh sports enclosure at night',
     desc: 'Explore corner door designs used in cricket practice nets, football enclosures, and sports arenas. Corner doors provide convenient entry and exit at the edge of a netting structure without disturbing the surrounding net. This guide shows real examples of corner doors, their construction, benefits, and situations where corner entrances are a practical choice.',
     images: [
       {
         url: '/images/guides/05-doors-and-access/corner-door/gallery/corner-door-01.webp',
-        alt: 'Corner door reference showing a steel entrance frame integrated into the netting of a sports enclosure | Cereburum Sports',
+        alt: 'Small black steel corner door standing open at the base of a lit white mesh sports enclosure at night',
       },
       {
         url: '/images/guides/05-doors-and-access/corner-door/gallery/corner-door-02.webp',
-        alt: 'Open corner entrance door with black tubular steel frame and white netting secured around its edges | Cereburum Sports',
+        alt: 'Open black tubular steel corner door with white netting tied around the frame in a sports enclosure',
       },
       {
         type: 'video',
@@ -2607,11 +2607,11 @@ const rawGuides = [
       },
       {
         url: '/images/guides/05-doors-and-access/corner-door/gallery/corner-door-05.webp',
-        alt: 'Corner entrance opening in a tall outdoor cricket net enclosure with black steel posts and white protective netting | Cereburum Sports',
+        alt: 'Open corner door in a tall black mesh sports enclosure at night, with people visible behind the netting',
       },
       {
         url: '/images/guides/05-doors-and-access/corner-door/gallery/corner-door-06.webp',
-        alt: 'Corner door design reference showing the entrance position and surrounding netting structure | Cereburum Sports',
+        alt: 'Open corner door in a black mesh sports enclosure at night, with a brown chair beside the entrance',
       },
     ],
     features: {
@@ -2642,23 +2642,23 @@ const rawGuides = [
       images: [
         {
           url: '/images/guides/05-doors-and-access/corner-door/materials/cornerr-door-01.webp',
-          alt: 'Material reference for constructing and securing a corner entrance door in a sports net enclosure | Cereburum Sports',
+          alt: 'Two large spools of white netting thread for stitching sports nets onto a corner door frame',
         },
         {
           url: '/images/guides/05-doors-and-access/corner-door/materials/corner-door-02.webp',
-          alt: 'Material reference for attaching sports netting to a steel corner door frame | Cereburum Sports',
+          alt: 'Pair of white netting thread spools standing side by side on a patterned cloth surface',
         },
         {
           url: '/images/guides/05-doors-and-access/corner-door/materials/cornerr-door-03.webp',
-          alt: 'Iron rods used to secure the corner door frame to the supporting pole | Cereburum Sports',
+          alt: 'Stack of rusted and black-painted steel pipes used for sports net corner door frames',
         },
         {
           url: '/images/guides/05-doors-and-access/corner-door/materials/cornerr-door-04.webp',
-          alt: 'Hinges used to attach the corner door frame to the supporting pole | Cereburum Sports',
+          alt: 'Black steel butt hinge with three screw holes on each leaf, shown against a dark background',
         },
         {
           url: '/images/guides/05-doors-and-access/corner-door/materials/cornerr-door-05.webp',
-          alt: 'Anti-rust coating applied to the steel door frame | Cereburum Sports',
+          alt: 'Can of anti-rust paint and a brush used to coat steel frames for sports net corner doors',
         },
       ],
     },
@@ -2689,16 +2689,16 @@ const rawGuides = [
     title: 'Sports Netting Age: New vs Old Net Comparison',
     category: 'maintenance-and-issues',
     image: '/images/guides/06-maintenance-and-issues/netting-age/gallery/netting-age-01.webp',
-    imageAlt: 'Comparison of new white netting thread and four-year-old thread showing visible aging and discoloration | Cereburum Sports',
+    imageAlt: 'Gloved hand holds bright white sports net thread next to faded beige old netting against a grass background',
     desc: 'See how sports netting changes after years of outdoor use. This guide compares newly installed netting with older netting, including a four-year-old thread example. Real images and videos highlight differences in thread color, surface condition, knots, and signs of wear. Learn how to recognize aging netting and understand when maintenance, repair, or replacement may be required.',
     images: [
       {
         url: '/images/guides/06-maintenance-and-issues/netting-age/gallery/netting-age-01.webp',
-        alt: 'Close-up comparison of newly installed white netting thread and four-year-old discolored thread | Cereburum Sports',
+        alt: 'Gloved hand holds bright white sports net thread next to faded beige old netting against a grass background',
       },
       {
         url: '/images/guides/06-maintenance-and-issues/netting-age/gallery/netting-age-02.webp',
-        alt: 'Sports netting thread comparison showing differences between fresh white thread and older weathered thread | Cereburum Sports',
+        alt: 'Labeled close-up of a gloved hand comparing new white sports net thread with four-year-old beige thread',
       },
       {
         type: 'video',
@@ -2714,11 +2714,11 @@ const rawGuides = [
       },
       {
         url: '/images/guides/06-maintenance-and-issues/netting-age/gallery/netting-age-05.webp',
-        alt: 'Close-up view of tangled and weathered old sports netting showing thread discoloration and signs of extended use | Cereburum Sports',
+        alt: 'Hand holds a tangled pile of dirty grey weathered sports netting resting on grass',
       },
       {
         url: '/images/guides/06-maintenance-and-issues/netting-age/gallery/netting-age-06.webp',
-        alt: 'Close-up inspection of an old sports net border showing worn fabric edging and weathered netting threads | Cereburum Sports',
+        alt: 'Gloved hand lifts a worn fabric border from a tangled pile of weathered grey sports netting',
       },
       {
         type: 'video',
@@ -2782,36 +2782,36 @@ const rawGuides = [
     title: 'Pole Bending in Sports Netting Structures: Causes and Examples',
     category: 'maintenance-and-issues',
     image: '/images/guides/06-maintenance-and-issues/pole-bending/gallery/pole-bending-01.webp',
-    imageAlt: 'Sports net enclosure showing a bent corner support pole highlighted with a red vertical reference line | Cereburum Sports',
+    imageAlt: 'Wide sports net enclosure on a concrete pad, with a red dashed line marking a bent corner support pole',
     desc: 'Learn how to identify bent poles in cricket practice nets, football enclosures, and sports arenas. This guide uses real photographs and videos to show how supporting poles can bend or lean away from their original position. Understand possible causes, including excessive net tension, wind pressure, and structural weaknesses, and learn why bent poles should be inspected and corrected to maintain a safe and properly supported netting structure.',
     images: [
       {
         url: '/images/guides/06-maintenance-and-issues/pole-bending/gallery/pole-bending-01.webp',
-        alt: 'Wide view of a sports net enclosure with a red dashed vertical line highlighting bending in a tall corner support pole | Cereburum Sports',
+        alt: 'Wide sports net enclosure on a concrete pad, with a red dashed line marking a bent corner support pole',
       },
       {
         url: '/images/guides/06-maintenance-and-issues/pole-bending/gallery/pole-bending-02.webp',
-        alt: 'Reference photograph showing pole bending and positioning in a sports netting support structure | Cereburum Sports',
+        alt: 'Sports net enclosure with a red dashed line and Pole bending label on the far-right corner support pole',
       },
       {
         url: '/images/guides/06-maintenance-and-issues/pole-bending/gallery/pole-bending-03.webp',
-        alt: 'Close-up of a tall white and green sports net support pole bending away from a straight red vertical reference line | Cereburum Sports',
+        alt: 'White and green sports net pole bending away from a straight red vertical line labeled Pole bending',
       },
       {
         url: '/images/guides/06-maintenance-and-issues/pole-bending/gallery/pole-bending-04.webp',
-        alt: 'Sports net enclosure support pole reference showing visible bending or deviation from its intended position | Cereburum Sports',
+        alt: 'White sports net support pole bending toward the net, marked with a red line beside a straight thicker pole',
       },
       {
         url: '/images/guides/06-maintenance-and-issues/pole-bending/gallery/pole-bending-05.webp',
-        alt: 'Example of pole positioning and bending in a sports netting enclosure | Cereburum Sports',
+        alt: 'White and green sports net support pole beside hanging mesh, with a slack white border rope over a concrete court',
       },
       {
         url: '/images/guides/06-maintenance-and-issues/pole-bending/gallery/pole-bending-06.webp',
-        alt: 'Sports enclosure pole condition reference for identifying structural bending and misalignment | Cereburum Sports',
+        alt: 'Row of white and green sports net poles, with the nearest pole visibly leaning inward toward the mesh',
       },
       {
         url: '/images/guides/06-maintenance-and-issues/pole-bending/gallery/pole-bending-07.webp',
-        alt: 'Reference image showing the condition of supporting poles in a sports netting structure | Cereburum Sports',
+        alt: 'Night view of a black sports net pole leaning off a straight red vertical line beside white mesh and floodlights',
       },
       {
         type: 'video',
@@ -2821,7 +2821,7 @@ const rawGuides = [
       },
       {
         url: '/images/guides/06-maintenance-and-issues/pole-bending/gallery/pole-bending-09.webp',
-        alt: 'Night view of a sports net enclosure showing a bent vertical support pole highlighted against a straight red reference line | Cereburum Sports',
+        alt: 'Night view of a sports net support pole bending off a straight red line labeled Pole bending, beside a side path',
       },
       {
         type: 'video',
@@ -2831,7 +2831,7 @@ const rawGuides = [
       },
       {
         url: '/images/guides/06-maintenance-and-issues/pole-bending/gallery/pole-bending-11.webp',
-        alt: 'Additional sports netting support pole reference for examining bending and structural positioning | Cereburum Sports',
+        alt: 'Night interior of a mesh sports enclosure with roof netting over a dirt cricket pitch and patchy grass',
       },
     ],
     features: {
