@@ -21,6 +21,7 @@ Still needed for:
 - sports-complex-mardan
 - house-roof-top-net-sialkot
 - cricket-pitch-bharth-sialkot
+- k-cricket-arena-sialkot
 */
 
 const rawProjects = [
@@ -404,6 +405,33 @@ const rawProjects = [
       { type: 'image', url: '/images/works/cricket-pitch-bharth-sialkot/cricket-pitch-bharth-sialkot-5.webp', alt: 'Bowling-end view of the 42 ft practice lane — open iron-frame enclosure with Parachute 36 side and roof netting — net maker Bharth, Sialkot' },
       { type: 'image', url: '/images/works/cricket-pitch-bharth-sialkot/cricket-pitch-bharth-sialkot-6.webp', alt: 'Length view of the completed cricket pitch at night — custom iron frame and Parachute 36 enclosure in a residential courtyard — net installation Bharth, Sialkot' },
       { type: 'image', url: '/images/works/cricket-pitch-bharth-sialkot/cricket-pitch-bharth-sialkot-7.webp', alt: 'Close side view of Parachute 36 mesh on the iron frame — black steel poles beside the cricket practice lane — custom net manufacturer Bharth, Sialkot' },
+    ]
+  },
+  {
+    id: 'k-cricket-arena-sialkot',
+    title: 'K Cricket Arena, Sialkot',
+    category: 'Sports Arena',
+    type: 'Sports Arena',
+    location: 'Sialkot, Pakistan',
+    desc: 'A 100 ft by 50 ft cricket arena in Sialkot, enclosed to a height of 30 ft over natural grass. The court is built on a strong iron frame, with Parachute 36 netting on the sides and Parachute 24 mesh across the roof.',
+    highlights: ['Parachute 36 Sides, Parachute 24 Roof', 'Strong Iron Frame', '30-ft Height Clearance', '100-ft × 50-ft Natural Grass'],
+    netSpec: 'Parachute 36 sides, Parachute 24 roof',
+    frame: 'Strong iron frame',
+    year: '2026',
+    badge: 'Custom',
+    gradient: 'linear-gradient(135deg, rgba(26,24,112,0.7), rgba(7,5,26,0.95))',
+    coverImage: '/images/works/k-cricket-arena-sialkot/k-cricket-arena-cover.webp',
+    coverImageAlt: 'Floodlit cricket arena on a strong iron frame over natural grass in Sialkot — Parachute net manufacturer Pakistan | Cereburum Sports',
+    media: [
+      { type: 'image', url: '/images/works/k-cricket-arena-sialkot/k-cricket-arena-cover.webp', alt: 'Night exterior of K Cricket Arena — black iron frame with Parachute side netting over a natural grass court in Sialkot, Pakistan' },
+      { type: 'image', url: '/images/works/k-cricket-arena-sialkot/k-cricket-arena-1.webp', alt: 'Corner view of the 100 ft cricket arena at night — Parachute 36 mesh on the iron frame above natural grass — net installation Sialkot' },
+      { type: 'image', url: '/images/works/k-cricket-arena-sialkot/k-cricket-arena-2.webp', alt: 'Iron frame of the cricket arena before the roof net — floodlit pole structure over the grass court — sports arena installation Sialkot' },
+      { type: 'image', url: '/images/works/k-cricket-arena-sialkot/k-cricket-arena-3.webp', alt: 'Wide night view along the iron roof grid — 30 ft high cricket arena frame with side netting and natural grass — net maker Sialkot' },
+      { type: 'image', url: '/images/works/k-cricket-arena-sialkot/k-cricket-arena-4.webp', alt: 'Interior of the grass cricket court — Parachute 24 roof mesh and Parachute 36 side walls on the iron frame — cricket arena Sialkot, Pakistan' },
+      { type: 'image', url: '/images/works/k-cricket-arena-sialkot/k-cricket-arena-5.webp', alt: 'Length view inside K Cricket Arena — natural grass under the roof net with side mesh on tall iron poles — custom net installation Sialkot' },
+      { type: 'video', url: '/images/works/k-cricket-arena-sialkot/k-cricket-arena-6.mp4', alt: 'Night walkthrough of K Cricket Arena — iron frame, Parachute netting, and natural grass court in Sialkot, Pakistan' },
+      { type: 'video', url: '/images/works/k-cricket-arena-sialkot/k-cricket-arena-7.mp4', alt: 'Floodlit cricket arena exterior at night — Parachute 36 sides on the strong iron frame — net installation video Sialkot' },
+      { type: 'video', url: '/images/works/k-cricket-arena-sialkot/k-cricket-arena-8.mp4', alt: 'Interior view of the 100 ft by 50 ft grass court under the Parachute 24 roof — cricket arena walkthrough Sialkot, Pakistan' },
     ]
   }
 ];
