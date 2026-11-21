@@ -24,6 +24,7 @@ Still needed for:
 - k-cricket-arena-sialkot
 - futsal-ground-fast-islamabad
 - home-roof-top-net-sialkot
+- sports-complex-nowshera
 */
 
 const rawProjects = [
@@ -490,6 +491,36 @@ const rawProjects = [
       { type: 'image', url: '/images/works/home-roof-top-net-sialkot/home-roof-top-net-sialkot-5.webp', alt: 'Close view of a bamboo pole holding Parachute 36 side and roof netting — cost-effective home rooftop net Sialkot, Pakistan' },
       { type: 'video', url: '/images/works/home-roof-top-net-sialkot/VID_20260925_234739972.mp4', alt: 'Walkthrough of the home rooftop net in Sialkot — Parachute 36 mesh on bamboo poles over a residential terrace' },
       { type: 'video', url: '/images/works/home-roof-top-net-sialkot/VID_20260925_235922162.mp4', alt: 'Interior view of the 40 ft by 23 ft home rooftop enclosure — 11 ft Parachute 36 netting on bamboo supports — Sialkot, Pakistan' },
+    ]
+  },
+  {
+    id: 'sports-complex-nowshera',
+    title: 'Sports Complex, Nowshera',
+    category: 'Sports Complex',
+    type: 'Sports Complex',
+    location: 'Nowshera, Pakistan',
+    desc: 'A six-in-one sports complex in Nowshera. Each court is 80 ft by 40 ft and enclosed to 30 ft on a strong iron structure, with Parachute 36 netting on the sides and roof. Floodlights and the open mesh keep every court usable by day and by night.',
+    highlights: ['Six Courts, One Iron Structure', 'Parachute 36 Netting', '80-ft × 40-ft Courts, 30-ft High', 'Open Day and Night'],
+    netSpec: 'Parachute 36',
+    frame: 'Strong iron structure',
+    year: '2026',
+    badge: 'Custom',
+    gradient: 'linear-gradient(135deg, rgba(26,24,112,0.7), rgba(7,5,26,0.95))',
+    coverImage: '/images/works/sports-complex-nowshera/sports-complex-nowshera-cover.webp',
+    coverImageAlt: 'Floodlit sports complex in Nowshera — six courts under Parachute 36 mesh on a 30 ft iron frame | Cereburum Sports',
+    media: [
+      { type: 'image', url: '/images/works/sports-complex-nowshera/sports-complex-nowshera-cover.webp', alt: 'Night interior of the Nowshera sports complex — Parachute 36 side and roof mesh on a tall iron frame over a concrete court' },
+      { type: 'image', url: '/images/works/sports-complex-nowshera/sports-complex-nowshera-1.webp', alt: 'Iron frame of the six-court complex at night — 30 ft poles and roof trusses before the mesh is closed in — sports complex Nowshera' },
+      { type: 'image', url: '/images/works/sports-complex-nowshera/sports-complex-nowshera-2.webp', alt: 'Inside one 80 ft court at night — Parachute 36 mesh on the iron bays with the next court visible through the net — net installation Nowshera' },
+      { type: 'image', url: '/images/works/sports-complex-nowshera/sports-complex-nowshera-3.webp', alt: 'Wide night view across the complex — repeated iron bays with Parachute 36 walls and roof over the concrete courts — net maker Nowshera, Pakistan' },
+      { type: 'image', url: '/images/works/sports-complex-nowshera/sports-complex-nowshera-4.webp', alt: 'Overhead night view of the six courts — floodlit iron structure with Parachute 36 mesh — sports complex Nowshera' },
+      { type: 'image', url: '/images/works/sports-complex-nowshera/sports-complex-nowshera-7.webp', alt: 'Daytime court at sunset — Parachute 36 roof and side netting on the iron frame — sports complex Nowshera, Pakistan' },
+      { type: 'image', url: '/images/works/sports-complex-nowshera/sports-complex-nowshera-8.webp', alt: 'Length view of the six-in-one complex in daylight — 80 ft courts in a row under Parachute 36 mesh on iron poles — net installation Nowshera' },
+      { type: 'video', url: '/images/works/sports-complex-nowshera/sports-complex-nowshera-5.mp4', alt: 'Walkthrough of the Nowshera sports complex — Parachute 36 netting on the 30 ft iron frame' },
+      { type: 'video', url: '/images/works/sports-complex-nowshera/sports-complex-nowshera-6.mp4', alt: 'View along the six courts — strong iron structure and Parachute 36 enclosure in Nowshera, Pakistan' },
+      { type: 'video', url: '/images/works/sports-complex-nowshera/sports-complex-nowshera-9.mp4', alt: 'Court interior at the Nowshera sports complex — 80 ft by 40 ft bay under Parachute 36 mesh' },
+      { type: 'video', url: '/images/works/sports-complex-nowshera/sports-complex-nowshera-10.mp4', alt: 'Perimeter view of the six-court complex — iron frame and side netting in Nowshera' },
+      { type: 'video', url: '/images/works/sports-complex-nowshera/sports-complex-nowshera-11.mp4', alt: 'Wide view of the sports complex — courts open day and night under the Parachute 36 roof — Nowshera, Pakistan' },
     ]
   }
 ];

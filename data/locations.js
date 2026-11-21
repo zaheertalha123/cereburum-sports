@@ -6,7 +6,7 @@ export const locations = [
   { slug: 'sialkot', city: 'Sialkot', region: 'Punjab', projectIds: ['roof-top-net-sialkot', 'roof-top-net-sialkot-daska-road', 'house-roof-top-net-sialkot', 'home-roof-top-net-sialkot'] },
   { slug: 'gujranwala', city: 'Gujranwala', region: 'Punjab', projectIds: ['sports-arena-gujranwala', 'practice-ground-gujranwala'] },
   { slug: 'peshawar', city: 'Peshawar', region: 'Khyber Pakhtunkhwa', projectIds: ['sports-complex-peshawar'] },
-  { slug: 'nowshera', city: 'Nowshera', region: 'Khyber Pakhtunkhwa', projectIds: ['cricket-arena-nowshera'] },
+  { slug: 'nowshera', city: 'Nowshera', region: 'Khyber Pakhtunkhwa', projectIds: ['cricket-arena-nowshera', 'sports-complex-nowshera'] },
   { slug: 'sahiwal', city: 'Sahiwal', region: 'Punjab', projectIds: ['sports-complex-sahiwal'] },
   { slug: 'mardan', city: 'Mardan', region: 'Khyber Pakhtunkhwa', projectIds: ['sports-complex-mardan'] },
   { slug: 'mirpur', city: 'Mirpur', region: 'Azad Kashmir', projectIds: ['cricket-arena-mirpur'] },
