@@ -20,6 +20,7 @@ Still needed for:
 - bloomfield-hall-school-khariyan
 - sports-complex-mardan
 - house-roof-top-net-sialkot
+- cricket-pitch-bharth-sialkot
 */
 
 const rawProjects = [
@@ -377,6 +378,32 @@ const rawProjects = [
       { type: 'image', url: '/images/works/house-roof-top-net-sialkot/house-roof-top-net-sialkot-3.webp', alt: 'Rooftop cricket net box night view — Wide L-shaped white mesh cage with bamboo poles and urban skyline — custom net installation Sialkot Pakistan' },
       { type: 'image', url: '/images/works/house-roof-top-net-sialkot/house-roof-top-net-sialkot-4.webp', alt: 'Rooftop net ceiling interior at night — Low angle along Parachute 60 overhead mesh toward enclosed playing area — sports net manufacturer Sialkot Punjab' },
       { type: 'video', url: '/images/works/house-roof-top-net-sialkot/house-roof-top-net-sialkot-5.mp4', alt: 'House rooftop net installation walkthrough — Parachute 60 mesh deployment on residential roof with completed interior corner view — deployment video Sialkot Pakistan' }
+    ]
+  },
+  {
+    id: 'cricket-pitch-bharth-sialkot',
+    title: 'Cricket Pitch, Bharth, Sialkot',
+    category: 'Cricket Pitch',
+    type: 'Cricket Pitch',
+    location: 'Bharth, Sialkot, Pakistan',
+    desc: 'A single-lane cricket practice pitch in Bharth, Sialkot, measuring 42 ft long, 14 ft wide, and 12 ft high. The enclosure is built on a custom-designed iron frame for long-term life and fitted with quality Parachute 36 netting, giving local athletes a durable professional-grade practice lane.',
+    highlights: ['Quality Parachute 36 Netting', 'Custom-Designed Iron Frame', '42-ft × 14-ft × 12-ft Lane'],
+    netSpec: 'Parachute 36',
+    frame: 'Custom-designed iron frame',
+    year: '2026',
+    badge: 'Custom',
+    gradient: 'linear-gradient(135deg, rgba(26,24,112,0.7), rgba(7,5,26,0.95))',
+    coverImage: '/images/works/cricket-pitch-bharth-sialkot/cricket-pitch-bharth-sialkot-cover.webp',
+    coverImageAlt: 'Night view of a 42 ft cricket practice pitch on a custom iron frame in Bharth, Sialkot — Parachute 36 net manufacturer Pakistan | Cereburum Sports',
+    media: [
+      { type: 'image', url: '/images/works/cricket-pitch-bharth-sialkot/cricket-pitch-bharth-sialkot-cover.webp', alt: 'Cricket practice pitch at night — 42 ft Parachute 36 enclosure on a black iron frame beside a residential house in Bharth, Sialkot, Pakistan' },
+      { type: 'image', url: '/images/works/cricket-pitch-bharth-sialkot/cricket-pitch-bharth-sialkot-1.webp', alt: 'Interior of the cricket practice lane — Parachute 36 side and roof mesh on iron poles over a dirt pitch — net installation Bharth, Sialkot' },
+      { type: 'image', url: '/images/works/cricket-pitch-bharth-sialkot/cricket-pitch-bharth-sialkot-2.webp', alt: 'Long side wall of the cricket cage — Parachute 36 mesh tied to a custom iron pole frame — sports net maker Bharth, Sialkot' },
+      { type: 'image', url: '/images/works/cricket-pitch-bharth-sialkot/cricket-pitch-bharth-sialkot-3.webp', alt: 'Front of the 14 ft wide cricket lane — iron frame with Parachute 36 walls and roof net over the practice strip — custom net installation Bharth, Sialkot' },
+      { type: 'image', url: '/images/works/cricket-pitch-bharth-sialkot/cricket-pitch-bharth-sialkot-4.webp', alt: 'Installation team in front of the completed Parachute 36 cricket net at night — cricket pitch netting Bharth, Sialkot, Pakistan' },
+      { type: 'image', url: '/images/works/cricket-pitch-bharth-sialkot/cricket-pitch-bharth-sialkot-5.webp', alt: 'Bowling-end view of the 42 ft practice lane — open iron-frame enclosure with Parachute 36 side and roof netting — net maker Bharth, Sialkot' },
+      { type: 'image', url: '/images/works/cricket-pitch-bharth-sialkot/cricket-pitch-bharth-sialkot-6.webp', alt: 'Length view of the completed cricket pitch at night — custom iron frame and Parachute 36 enclosure in a residential courtyard — net installation Bharth, Sialkot' },
+      { type: 'image', url: '/images/works/cricket-pitch-bharth-sialkot/cricket-pitch-bharth-sialkot-7.webp', alt: 'Close side view of Parachute 36 mesh on the iron frame — black steel poles beside the cricket practice lane — custom net manufacturer Bharth, Sialkot' },
     ]
   }
 ];
