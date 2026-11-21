@@ -22,6 +22,7 @@ Still needed for:
 - house-roof-top-net-sialkot
 - cricket-pitch-bharth-sialkot
 - k-cricket-arena-sialkot
+- futsal-ground-fast-islamabad
 */
 
 const rawProjects = [
@@ -432,6 +433,35 @@ const rawProjects = [
       { type: 'video', url: '/images/works/k-cricket-arena-sialkot/k-cricket-arena-6.mp4', alt: 'Night walkthrough of K Cricket Arena — iron frame, Parachute netting, and natural grass court in Sialkot, Pakistan' },
       { type: 'video', url: '/images/works/k-cricket-arena-sialkot/k-cricket-arena-7.mp4', alt: 'Floodlit cricket arena exterior at night — Parachute 36 sides on the strong iron frame — net installation video Sialkot' },
       { type: 'video', url: '/images/works/k-cricket-arena-sialkot/k-cricket-arena-8.mp4', alt: 'Interior view of the 100 ft by 50 ft grass court under the Parachute 24 roof — cricket arena walkthrough Sialkot, Pakistan' },
+    ]
+  },
+  {
+    id: 'futsal-ground-fast-islamabad',
+    title: 'Futsal Ground, FAST Islamabad',
+    category: 'Sports Arena',
+    type: 'Sports Arena',
+    location: 'Islamabad, Pakistan',
+    desc: 'A futsal ground at FAST Islamabad, measuring 130 ft by 98 ft and enclosed to a height of 25 ft. The court is wrapped in Parachute 24 netting, with a steel fence along the bottom of the enclosure.',
+    highlights: ['Parachute 24 Netting', 'Steel Fence Along the Bottom', '25-ft Height Clearance', '130-ft × 98-ft Court'],
+    clientType: 'University',
+    netSpec: 'Parachute 24',
+    frame: 'Steel fence along the bottom',
+    year: '2026',
+    badge: 'Custom',
+    gradient: 'linear-gradient(135deg, rgba(26,24,112,0.7), rgba(7,5,26,0.95))',
+    coverImage: '/images/works/futsal-ground-fast-islamabad/futsal-ground-fast-islamabad-cover.webp',
+    coverImageAlt: 'Floodlit futsal ground at FAST Islamabad with Parachute 24 netting above a steel fence — sports net manufacturer Pakistan | Cereburum Sports',
+    media: [
+      { type: 'image', url: '/images/works/futsal-ground-fast-islamabad/futsal-ground-fast-islamabad-cover.webp', alt: 'Night view of the FAST Islamabad futsal ground — high Parachute 24 net above a steel fence around the green court' },
+      { type: 'image', url: '/images/works/futsal-ground-fast-islamabad/futsal-ground-fast-islamabad-1.webp', alt: 'Daytime exterior of the futsal enclosure — black mesh on tall poles over a steel fence — net installation Islamabad, Pakistan' },
+      { type: 'image', url: '/images/works/futsal-ground-fast-islamabad/futsal-ground-fast-islamabad-2.webp', alt: 'Floodlit artificial-turf futsal court at night — Parachute 24 perimeter net and goals at FAST-NUCES Islamabad' },
+      { type: 'image', url: '/images/works/futsal-ground-fast-islamabad/futsal-ground-fast-islamabad-3.webp', alt: 'Wide daytime view down the 130 ft futsal court — Parachute 24 side netting and steel fence — sports arena Islamabad' },
+      { type: 'image', url: '/images/works/futsal-ground-fast-islamabad/futsal-ground-fast-islamabad-4.webp', alt: 'Sideline night view of the FAST futsal ground — striped turf, dugout, and high perimeter net beside the NUCES building' },
+      { type: 'image', url: '/images/works/futsal-ground-fast-islamabad/futsal-ground-fast-islamabad-5.webp', alt: 'Corner of the futsal court in daylight — steel fence with Parachute 24 mesh above the touchline — net maker Islamabad' },
+      { type: 'image', url: '/images/works/futsal-ground-fast-islamabad/futsal-ground-fast-islamabad-6.webp', alt: 'Goal end of the futsal ground at night — blue goal, steel fence, and draped Parachute 24 net — custom net installation Islamabad' },
+      { type: 'video', url: '/images/works/futsal-ground-fast-islamabad/futsal-ground-fast-islamabad-7.mp4', alt: 'Walkthrough of the FAST Islamabad futsal ground — Parachute 24 netting above the steel fence' },
+      { type: 'video', url: '/images/works/futsal-ground-fast-islamabad/futsal-ground-fast-islamabad-8.mp4', alt: 'Floodlit futsal court at FAST Islamabad — 130 ft by 98 ft enclosure with Parachute 24 mesh' },
+      { type: 'video', url: '/images/works/futsal-ground-fast-islamabad/futsal-ground-fast-islamabad-9.mp4', alt: 'Perimeter view of the futsal arena — steel fence along the bottom and 25 ft Parachute 24 netting above' },
     ]
   }
 ];
