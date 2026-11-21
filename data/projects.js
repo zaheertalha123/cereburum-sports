@@ -23,6 +23,7 @@ Still needed for:
 - cricket-pitch-bharth-sialkot
 - k-cricket-arena-sialkot
 - futsal-ground-fast-islamabad
+- home-roof-top-net-sialkot
 */
 
 const rawProjects = [
@@ -462,6 +463,33 @@ const rawProjects = [
       { type: 'video', url: '/images/works/futsal-ground-fast-islamabad/futsal-ground-fast-islamabad-7.mp4', alt: 'Walkthrough of the FAST Islamabad futsal ground — Parachute 24 netting above the steel fence' },
       { type: 'video', url: '/images/works/futsal-ground-fast-islamabad/futsal-ground-fast-islamabad-8.mp4', alt: 'Floodlit futsal court at FAST Islamabad — 130 ft by 98 ft enclosure with Parachute 24 mesh' },
       { type: 'video', url: '/images/works/futsal-ground-fast-islamabad/futsal-ground-fast-islamabad-9.mp4', alt: 'Perimeter view of the futsal arena — steel fence along the bottom and 25 ft Parachute 24 netting above' },
+    ]
+  },
+  {
+    id: 'home-roof-top-net-sialkot',
+    title: 'Home Roof Top Net, Sialkot',
+    category: 'Rooftop Net',
+    type: 'Rooftop Net',
+    location: 'Sialkot, Pakistan',
+    desc: 'A home rooftop net in Sialkot, sized for everyday practice at 40 ft by 23 ft with 11 ft of height. The enclosure is made from quality Parachute 36 netting and supported on bamboo poles, a cost-effective frame that still keeps balls inside the terrace.',
+    highlights: ['Quality Parachute 36 Netting', 'Bamboo Support', 'Cost-Effective Home Net', '40-ft × 23-ft × 11-ft Roof'],
+    clientType: 'Home',
+    netSpec: 'Parachute 36',
+    frame: 'Bamboo poles',
+    year: '2026',
+    badge: 'Custom',
+    gradient: 'linear-gradient(135deg, rgba(26,24,112,0.7), rgba(7,5,26,0.95))',
+    coverImage: '/images/works/home-roof-top-net-sialkot/home-roof-top-net-sialkot-cover.webp',
+    coverImageAlt: 'Home rooftop net on a residential terrace in Sialkot — Parachute 36 mesh on bamboo poles | Cereburum Sports',
+    media: [
+      { type: 'image', url: '/images/works/home-roof-top-net-sialkot/home-roof-top-net-sialkot-cover.webp', alt: 'Overhead night view of a home rooftop net in Sialkot — Parachute 36 mesh on bamboo poles around a 40 ft by 23 ft terrace' },
+      { type: 'image', url: '/images/works/home-roof-top-net-sialkot/home-roof-top-net-sialkot-1.webp', alt: 'High angle of the completed home rooftop enclosure — black Parachute 36 side netting on bamboo poles — net installation Sialkot, Pakistan' },
+      { type: 'image', url: '/images/works/home-roof-top-net-sialkot/home-roof-top-net-sialkot-2.webp', alt: 'Length view down the 40 ft rooftop net — Parachute 36 mesh along both walls of a residential terrace — home net Sialkot' },
+      { type: 'image', url: '/images/works/home-roof-top-net-sialkot/home-roof-top-net-sialkot-3.webp', alt: 'Interior of the 11 ft home rooftop cage — Parachute 36 ceiling and side mesh on bamboo poles — custom net installation Sialkot' },
+      { type: 'image', url: '/images/works/home-roof-top-net-sialkot/home-roof-top-net-sialkot-4.webp', alt: 'Far end of the home rooftop net — overhead Parachute 36 mesh and bamboo supports against the parapet — net maker Sialkot' },
+      { type: 'image', url: '/images/works/home-roof-top-net-sialkot/home-roof-top-net-sialkot-5.webp', alt: 'Close view of a bamboo pole holding Parachute 36 side and roof netting — cost-effective home rooftop net Sialkot, Pakistan' },
+      { type: 'video', url: '/images/works/home-roof-top-net-sialkot/VID_20260925_234739972.mp4', alt: 'Walkthrough of the home rooftop net in Sialkot — Parachute 36 mesh on bamboo poles over a residential terrace' },
+      { type: 'video', url: '/images/works/home-roof-top-net-sialkot/VID_20260925_235922162.mp4', alt: 'Interior view of the 40 ft by 23 ft home rooftop enclosure — 11 ft Parachute 36 netting on bamboo supports — Sialkot, Pakistan' },
     ]
   }
 ];
