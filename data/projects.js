@@ -25,6 +25,7 @@ Still needed for:
 - futsal-ground-fast-islamabad
 - home-roof-top-net-sialkot
 - sports-complex-nowshera
+- cricket-arena-sialkot-cant
 */
 
 const rawProjects = [
@@ -521,6 +522,32 @@ const rawProjects = [
       { type: 'video', url: '/images/works/sports-complex-nowshera/sports-complex-nowshera-9.mp4', alt: 'Court interior at the Nowshera sports complex — 80 ft by 40 ft bay under Parachute 36 mesh' },
       { type: 'video', url: '/images/works/sports-complex-nowshera/sports-complex-nowshera-10.mp4', alt: 'Perimeter view of the six-court complex — iron frame and side netting in Nowshera' },
       { type: 'video', url: '/images/works/sports-complex-nowshera/sports-complex-nowshera-11.mp4', alt: 'Wide view of the sports complex — courts open day and night under the Parachute 36 roof — Nowshera, Pakistan' },
+    ]
+  },
+  {
+    id: 'cricket-arena-sialkot-cant',
+    title: 'Cricket Arena, Sialkot Cantt',
+    category: 'Sports Arena',
+    type: 'Sports Arena',
+    location: 'Sialkot Cantt, Pakistan',
+    desc: 'A cricket arena in Sialkot Cantt, measuring 122 ft by 62 ft and enclosed to 30 ft. The court is finished entirely in Parachute 24, carried on straight iron poles with rope support across the top.',
+    highlights: ['Parachute 24 Throughout', 'Straight Iron Poles', 'Rope Support at the Top', '122-ft × 62-ft Court, 30-ft High'],
+    netSpec: 'Parachute 24',
+    frame: 'Straight iron poles with rope support at the top',
+    year: '2026',
+    badge: 'Custom',
+    gradient: 'linear-gradient(135deg, rgba(26,24,112,0.7), rgba(7,5,26,0.95))',
+    coverImage: '/images/works/cricket-arena-sialkot-cant/cricket-arena-sialkot-cant-cover.webp',
+    coverImageAlt: 'Cricket arena in Sialkot Cantt — Parachute 24 mesh on straight iron poles with rope support across the top | Cereburum Sports',
+    media: [
+      { type: 'image', url: '/images/works/cricket-arena-sialkot-cant/cricket-arena-sialkot-cant-cover.webp', alt: 'Exterior of the Sialkot Cantt cricket arena — 30 ft straight iron poles and Parachute 24 side mesh along a concrete court' },
+      { type: 'image', url: '/images/works/cricket-arena-sialkot-cant/cricket-arena-sialkot-cant-1.webp', alt: 'Length view of the 122 ft cricket arena — Parachute 24 enclosure on straight iron poles beside the outfield — net installation Sialkot Cantt' },
+      { type: 'image', url: '/images/works/cricket-arena-sialkot-cant/cricket-arena-sialkot-cant-2.webp', alt: 'Inside the 62 ft wide court — rope support tying the pole tops, with Parachute 24 side and roof mesh — cricket arena Sialkot Cantt' },
+      { type: 'image', url: '/images/works/cricket-arena-sialkot-cant/cricket-arena-sialkot-cant-3.webp', alt: 'Side elevation of the arena — tall straight iron poles, rope along the top, and Parachute 24 mesh — net maker Sialkot Cantt, Pakistan' },
+      { type: 'video', url: '/images/works/cricket-arena-sialkot-cant/cricket-arena-sialkot-cant-4.mp4', alt: 'Walkthrough of the Sialkot Cantt cricket arena — Parachute 24 on straight iron poles' },
+      { type: 'video', url: '/images/works/cricket-arena-sialkot-cant/cricket-arena-sialkot-cant-5.mp4', alt: 'Length view of the 122 ft by 62 ft court — rope support across the top of the iron poles — Sialkot Cantt' },
+      { type: 'video', url: '/images/works/cricket-arena-sialkot-cant/cricket-arena-sialkot-cant-6.mp4', alt: 'Interior of the cricket arena — 30 ft Parachute 24 enclosure on straight iron poles — Sialkot Cantt, Pakistan' },
+      { type: 'video', url: '/images/works/cricket-arena-sialkot-cant/cricket-arena-sialkot-cant-7.mp4', alt: 'Perimeter view of the cricket arena — Parachute 24 mesh and rope-supported iron poles in Sialkot Cantt' },
     ]
   }
 ];
