@@ -10,6 +10,7 @@ export const locations = [
   { slug: 'sahiwal', city: 'Sahiwal', region: 'Punjab', projectIds: ['sports-complex-sahiwal'] },
   { slug: 'mardan', city: 'Mardan', region: 'Khyber Pakhtunkhwa', projectIds: ['sports-complex-mardan'] },
   { slug: 'mirpur', city: 'Mirpur', region: 'Azad Kashmir', projectIds: ['cricket-arena-mirpur'] },
+  { slug: 'barnala', city: 'Barnala', region: 'Azad Kashmir', projectIds: ['cricket-arena-barnala'] },
   { slug: 'kharian', city: 'Kharian', region: 'Punjab', projectIds: ['bloomfield-hall-school-khariyan', 'sports-arena-khariyan'] },
   { slug: 'wazirabad', city: 'Wazirabad', region: 'Punjab', projectIds: ['sports-arena-wazirabad'] },
   { slug: 'layyah', city: 'Layyah', region: 'Punjab', projectIds: ['cricket-pitch-layyah'] },

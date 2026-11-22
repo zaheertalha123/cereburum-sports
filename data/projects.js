@@ -26,6 +26,7 @@ Still needed for:
 - home-roof-top-net-sialkot
 - sports-complex-nowshera
 - cricket-arena-sialkot-cant
+- cricket-arena-barnala
 */
 
 const rawProjects = [
@@ -548,6 +549,32 @@ const rawProjects = [
       { type: 'video', url: '/images/works/cricket-arena-sialkot-cant/cricket-arena-sialkot-cant-5.mp4', alt: 'Length view of the 122 ft by 62 ft court — rope support across the top of the iron poles — Sialkot Cantt' },
       { type: 'video', url: '/images/works/cricket-arena-sialkot-cant/cricket-arena-sialkot-cant-6.mp4', alt: 'Interior of the cricket arena — 30 ft Parachute 24 enclosure on straight iron poles — Sialkot Cantt, Pakistan' },
       { type: 'video', url: '/images/works/cricket-arena-sialkot-cant/cricket-arena-sialkot-cant-7.mp4', alt: 'Perimeter view of the cricket arena — Parachute 24 mesh and rope-supported iron poles in Sialkot Cantt' },
+    ]
+  },
+  {
+    id: 'cricket-arena-barnala',
+    title: 'Sports Complex, Barnala, Azad Kashmir',
+    category: 'Sports Complex',
+    type: 'Sports Complex',
+    location: 'Barnala, Azad Kashmir',
+    desc: 'A two-in-one sports complex in Barnala, Azad Kashmir, measuring 100 ft by 90 ft and enclosed to 26 ft on a full iron frame. Parachute 36 covers the sides and Parachute 12 covers the roof, with a foldable center net that splits the ground into two courts.',
+    highlights: ['Two Courts, One Iron Frame', 'Foldable Center Net', 'Parachute 36 Sides, Parachute 12 Roof', '100-ft × 90-ft Court, 26-ft High'],
+    netSpec: 'Parachute 36 sides, Parachute 12 roof',
+    frame: 'Full iron frame',
+    year: '2026',
+    badge: 'Custom',
+    gradient: 'linear-gradient(135deg, rgba(26,24,112,0.7), rgba(7,5,26,0.95))',
+    coverImage: '/images/works/cricket-arena-barnala/cricket-arena-barnala-cover.webp',
+    coverImageAlt: 'Night view of the Barnala sports complex — full iron frame with Parachute 36 sides and a Parachute 12 roof | Cereburum Sports',
+    media: [
+      { type: 'image', url: '/images/works/cricket-arena-barnala/cricket-arena-barnala-cover.webp', alt: 'Night exterior of the Barnala cricket arena — 26 ft iron frame with Parachute 36 side mesh and a white roof net' },
+      { type: 'image', url: '/images/works/cricket-arena-barnala/cricket-arena-barnala-1.webp', alt: 'Corner night view of the two-in-one arena — full iron frame and Parachute mesh over the court in Barnala, Azad Kashmir' },
+      { type: 'image', url: '/images/works/cricket-arena-barnala/cricket-arena-barnala-2.webp', alt: 'Interior beside the center partition — foldable white net dividing the 100 ft by 90 ft court under the Parachute 12 roof — cricket arena Barnala' },
+      { type: 'image', url: '/images/works/cricket-arena-barnala/cricket-arena-barnala-3.webp', alt: 'Inside one bay of the arena — Parachute 36 side mesh on the iron frame with the center net gathered aside — net installation Barnala' },
+      { type: 'image', url: '/images/works/cricket-arena-barnala/cricket-arena-barnala-5.webp', alt: 'Corner of the iron frame — Parachute 36 mesh on the tall poles of the Barnala cricket arena — net maker Azad Kashmir' },
+      { type: 'video', url: '/images/works/cricket-arena-barnala/cricket-arena-barnala-6.mp4', alt: 'Walkthrough of the Barnala cricket arena — Parachute 36 sides and Parachute 12 roof on a full iron frame' },
+      { type: 'video', url: '/images/works/cricket-arena-barnala/cricket-arena-barnala-7.mp4', alt: 'Interior of the two-in-one court — foldable center net in the 100 ft by 90 ft arena — Barnala, Azad Kashmir' },
+      { type: 'video', url: '/images/works/cricket-arena-barnala/cricket-arena-barnala-8.mp4', alt: 'Night exterior of the 26 ft cricket arena — iron frame and Parachute mesh in Barnala, Azad Kashmir' },
     ]
   }
 ];
