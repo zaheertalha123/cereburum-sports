@@ -27,6 +27,7 @@ Still needed for:
 - sports-complex-nowshera
 - cricket-arena-sialkot-cant
 - cricket-arena-barnala
+- nizam-sons-sialkot
 */
 
 const rawProjects = [
@@ -575,6 +576,33 @@ const rawProjects = [
       { type: 'video', url: '/images/works/cricket-arena-barnala/cricket-arena-barnala-6.mp4', alt: 'Walkthrough of the Barnala cricket arena — Parachute 36 sides and Parachute 12 roof on a full iron frame' },
       { type: 'video', url: '/images/works/cricket-arena-barnala/cricket-arena-barnala-7.mp4', alt: 'Interior of the two-in-one court — foldable center net in the 100 ft by 90 ft arena — Barnala, Azad Kashmir' },
       { type: 'video', url: '/images/works/cricket-arena-barnala/cricket-arena-barnala-8.mp4', alt: 'Night exterior of the 26 ft cricket arena — iron frame and Parachute mesh in Barnala, Azad Kashmir' },
+    ]
+  },
+  {
+    id: 'nizam-sons-sialkot',
+    title: 'Nizam Sons, Sialkot',
+    category: 'Sports Arena',
+    type: 'Sports Arena',
+    location: 'Sialkot, Pakistan',
+    desc: 'A sports arena at Nizam Sons, Sialkot, measuring 80 ft by 90 ft and enclosed to 20 ft. The court is finished in Parachute 24, carried on steel rods with plastic-coated wire for support.',
+    highlights: ['Parachute 24 Netting', 'Steel Rods', 'Plastic-Coated Wire Support', '80-ft × 90-ft Court, 20-ft High'],
+    netSpec: 'Parachute 24',
+    frame: 'Steel rods with plastic-coated wire support',
+    year: '2026',
+    badge: 'Custom',
+    gradient: 'linear-gradient(135deg, rgba(26,24,112,0.7), rgba(7,5,26,0.95))',
+    coverImage: '/images/works/nizam-sons-sialkot/nizam-sons-sialkot-cover.webp',
+    coverImageAlt: 'Nizam Sons sports arena in Sialkot — Parachute 24 roof net on steel rods with plastic-coated wire | Cereburum Sports',
+    media: [
+      { type: 'image', url: '/images/works/nizam-sons-sialkot/nizam-sons-sialkot-cover.webp', alt: 'Night interior of the Nizam Sons court in Sialkot — Parachute 24 roof net over a checkered tiled floor, 20 ft high' },
+      { type: 'image', url: '/images/works/nizam-sons-sialkot/nizam-sons-sialkot-1.webp', alt: 'Wide view under the roof net — Parachute 24 mesh held on steel rods and plastic-coated wire across the 80 ft by 90 ft court' },
+      { type: 'image', url: '/images/works/nizam-sons-sialkot/nizam-sons-sialkot-2.webp', alt: 'Length of the arena at night — Parachute 24 roof between the support wires — sports arena Nizam Sons, Sialkot' },
+      { type: 'image', url: '/images/works/nizam-sons-sialkot/nizam-sons-sialkot-3.webp', alt: 'Floodlit tiled court — Parachute 24 overhead mesh on the steel-rod frame — net installation Sialkot' },
+      { type: 'image', url: '/images/works/nizam-sons-sialkot/nizam-sons-sialkot-4.webp', alt: 'Corner of the court — roof net and side mesh meeting the wall — Parachute 24 sports arena Nizam Sons, Sialkot' },
+      { type: 'image', url: '/images/works/nizam-sons-sialkot/nizam-sons-sialkot-5.webp', alt: 'Close view of the Parachute 24 border and the line tying the roof net — Nizam Sons, Sialkot' },
+      { type: 'video', url: '/images/works/nizam-sons-sialkot/nizam-sons-sialkot-6.mp4', alt: 'Walkthrough of the Nizam Sons arena — Parachute 24 on steel rods with plastic-coated wire — Sialkot' },
+      { type: 'video', url: '/images/works/nizam-sons-sialkot/nizam-sons-sialkot-7.mp4', alt: 'Interior of the 80 ft by 90 ft court under the 20 ft Parachute 24 roof — Nizam Sons, Sialkot' },
+      { type: 'video', url: '/images/works/nizam-sons-sialkot/nizam-sons-sialkot-8.mp4', alt: 'Wide view of the sports arena — steel rods, plastic-coated wire, and Parachute 24 mesh in Sialkot' },
     ]
   }
 ];
