@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import { PriceTable } from '@/components/PriceNote';
 import styles from './buyer.module.css';
@@ -75,9 +76,23 @@ export function CatalogList({ products }) {
     <ul className={styles.catalog}>
       {products.map((product) => {
         const dimensions = product.specs?.find((spec) => spec.label === 'Dimensions')?.value;
+        const imageAlt =
+          product.imageAlt ||
+          `${product.title} - ${product.subtitle || product.filterGroup || 'Sports Netting'} Manufacturer Pakistan | Cereburum Sports`;
         return (
           <li key={product.id}>
             <Link href={`/products/${product.id}`} className={styles.card}>
+              {product.image ? (
+                <span className={styles.cardImage}>
+                  <Image
+                    src={product.image}
+                    alt={imageAlt}
+                    fill
+                    sizes="(max-width: 599px) 100vw, (max-width: 1200px) 50vw, 280px"
+                    className={styles.cardPhoto}
+                  />
+                </span>
+              ) : null}
               <strong>{product.title}</strong>
               <span>{product.subtitle}</span>
               {dimensions ? <span>{dimensions}</span> : null}

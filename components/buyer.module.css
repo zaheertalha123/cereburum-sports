@@ -12,6 +12,8 @@
 .faq dd { margin-top: 6px; }
 .catalog { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 16px; padding: 0; margin-top: 18px; }
 .card { display: grid; gap: 6px; align-content: start; min-height: 100%; padding: 16px; border: 1px solid var(--line); border-radius: var(--radius-md); background: var(--surface-1); }
+.cardImage { position: relative; display: block; aspect-ratio: 4 / 3; overflow: hidden; border-radius: calc(var(--radius-md) - 2px); background: var(--surface-0); }
+.cardPhoto { object-fit: cover; }
 .card strong { font-family: var(--font-editorial); font-size: 1.45rem; font-weight: 400; }
 .card span { color: var(--gray-400); font-size: .85rem; }
 .tableWrap { overflow-x: auto; }
